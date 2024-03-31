@@ -1,5 +1,13 @@
+pip==24.0
+
 pylint==3.0.0
 pytest==7.4.2
 pytest-cov==4.1.0
 black==23.9.1
 #ipython==8.17.2
+
+streamlit==1.32.2
+watchdog==4.0.0
+pandas==2.2.1
+
+pyperclip==1.8.2
