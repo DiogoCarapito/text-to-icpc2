@@ -9,7 +9,7 @@ format:
 	black . src/frontend/*.py
 
 lint:
-	pylint --disable=R,C src/frontend/*.py
+	pylint --disable=R,C,E0401 src/frontend/*.py
     
 #container-lint:
 #	docker run -rm -i hadolint/hadolint < Dockerfile

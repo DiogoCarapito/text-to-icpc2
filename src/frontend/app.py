@@ -1,18 +1,31 @@
 import streamlit as st
+import pyperclip
+
+import sys
+from transformers import AutoTokenizer, BertForSequenceClassification
+
+import icd10
 from utils.style import titulo, descricao, resposta
 
-titulo("text-to-ICPC2")
+sys.path.insert(0, "src/frontend")
 
-descricao("Insira o texto e obtenha o código ICPC2 correspondente")
-
-if "response" not in st.session_state:
-    st.session_state["response"] = []
-
-if "input" not in st.session_state:
-    st.session_state["input"] = ""
+titulo("text-to-ICPC2 (mas para teste com ICD-10)")
+descricao(
+    "O objetivo é converter um diagnóstico em texto clínico converter o código ICPC2 correspondente. Para já, pequeno teste com modelo já desenvolvido para ICD-10"
+)
 
 
-def process_request(text):
+def process_request_icd10(text):
+    encoded_input = tokenizer(text, return_tensors="pt")
+    output = model(**encoded_input)
+
+    results = output.logits.detach().cpu().numpy()[0].argsort()[::-1][:10]
+    final_results = [config.id2label[ids] for ids in results]
+
+    return final_results
+
+
+def process_request_icpc2(text):
     result = {
         "input": text,
         "icpc2": "T90",
@@ -23,25 +36,99 @@ def process_request(text):
     st.session_state["response"].append(result)
 
 
-col_text_input_1, col_text_input_2 = st.columns([3, 1])
+if "input_icd10" not in st.session_state:
+    st.session_state["input_icd10"] = ""
 
-with col_text_input_1:
-    st.session_state["input"] = st.text_input(
-        "Colocar o texto aqui:",
-        label_visibility="collapsed",
-        # on_change=process_request(st.session_state["input"]),
+if "output_icd10" not in st.session_state:
+    st.session_state["output_icd10"] = []
+
+if "response_icpc2" not in st.session_state:
+    st.session_state["response_icpc2"] = []
+
+if "input_icpc2" not in st.session_state:
+    st.session_state["input_icpc2"] = ""
+
+tab_icd10, tab_icpc2 = st.tabs(["ICD-10", "ICPC2"])
+
+with tab_icd10:
+    tokenizer = AutoTokenizer.from_pretrained("AkshatSurolia/ICD-10-Code-Prediction")
+    model = BertForSequenceClassification.from_pretrained(
+        "AkshatSurolia/ICD-10-Code-Prediction"
+    )
+    config = model.config
+
+    col_text_input_1, col_text_input_2 = st.columns([3, 1])
+
+    with col_text_input_1:
+        st.session_state["input_icd10"] = st.text_input(
+            "Colocar o texto aqui:",
+            label_visibility="collapsed",
+            # on_change=process_request(st.session_state["input"]),
+            value="diabetes mellitus",
+            key="inputicd10",
+        )
+
+    with col_text_input_2:
+        if st.button("Submeter", key="submeter_icd10"):
+            # st.session_state["response"] = []
+            # process_request(st.session_state["input"])
+            st.session_state["output_icd10"] = process_request_icd10(
+                st.session_state["input_icd10"]
+            )
+
+    if st.session_state["input_icd10"]:
+        st.write("")
+        for each in st.session_state["output_icd10"]:
+            col_1, col_2, col_3, col_4 = st.columns([1, 3, 1, 1])
+            code = icd10.find(each).description
+
+            with col_1:
+                st.write(each)
+            with col_2:
+                st.write(code)
+
+            with col_3:
+                if st.button("Copiar código", type="primary", key=f"code_{each}"):
+                    pyperclip.copy(each)
+
+            with col_4:
+                if st.button(
+                    "Copiar descrição", type="primary", key=f"description_{each}"
+                ):
+                    pyperclip.copy(code)
+            # st.markdown(f"https://www.icd10data.com/search?s={each}")
+
+    st.divider()
+    st.markdown(
+        "Modelo utilizado: **AkshatSurolia/ICD-10-Code-Prediction** disponível em [Hugging Face](https://huggingface.co/AkshatSurolia/ICD-10-Code-Prediction)"
+    )
+    st.markdown(
+        "Código fonte disponível em [https://github.com/DiogoCarapito/text-to-icpc2](https://github.com/DiogoCarapito/text-to-icpc2)"
     )
 
-with col_text_input_2:
-    if st.button("Submeter"):
-        st.session_state["response"] = []
-        process_request(st.session_state["input"])
+with tab_icpc2:
+    # descricao("Insira o texto e obtenha o código ICPC2 correspondente")
 
+    col_text_input_1, col_text_input_2 = st.columns([3, 1])
 
-if st.session_state["input"]:
-    st.write("")
-    for each in st.session_state["response"]:
-        resposta(each)
+    with col_text_input_1:
+        st.session_state["input_icpc2"] = st.text_input(
+            "Colocar o texto aqui:",
+            label_visibility="collapsed",
+            # on_change=process_request(st.session_state["input"]),
+            key="inputicpc2",
+        )
+
+    with col_text_input_2:
+        if st.button("Submeter", key="submeter_icpc2"):
+            st.session_state["response_icpc2"] = []
+            process_request_icpc2(st.session_state["input_icpc2"])
+
+    if st.session_state["input_icpc2"]:
+        st.write("")
+        for each in st.session_state["response_icpc2"]:
+            resposta(each)
+
 
 def main():
     return None
