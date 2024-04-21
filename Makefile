@@ -3,13 +3,13 @@ install:
 		pip install -r requirements.txt
 
 test:
-	pytest -vv --cov=src src/frontend/tests/test_*.py
+	pytest --cov=app --cov=etl --cov=utils tests/*.py
 
 format:
-	black . src/frontend/*.py
+	black . *.py utils/*.py tests/*.py
 
 lint:
-	pylint --disable=R,C,E0401 src/frontend/*.py
+	pylint --disable=R,C *.py
     
 #container-lint:
 #	docker run -rm -i hadolint/hadolint < Dockerfile

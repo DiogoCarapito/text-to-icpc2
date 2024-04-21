@@ -9,13 +9,10 @@ ipython==8.17.2
 streamlit==1.32.2
 watchdog==4.0.0
 pandas==2.2.1
-
-pyperclip==1.8.2
-
-transformers==4.39.3
+openpyxl==3.1.2
 numpy==1.26.4
-
+transformers==4.39.3
 torch==2.2.2
 
-
-icd10-cm
+pyperclip==1.8.2
+icd10-cm==0.0.5
