@@ -9,7 +9,7 @@ from utils.style import titulo, descricao, resposta
 
 sys.path.insert(0, "src/frontend")
 
-titulo("text-to-ICPC2 (mas para teste com ICD-10)")
+titulo("text-to-ICPC2 (mas para já, teste com ICD-10)")
 descricao(
     "O objetivo é converter um diagnóstico em texto clínico converter o código ICPC2 correspondente. Para já, pequeno teste com modelo já desenvolvido para ICD-10"
 )
