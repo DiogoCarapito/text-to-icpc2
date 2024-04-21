@@ -21,7 +21,6 @@ NLP project to transform clinical diagnosis into ICPC-2 codes for Portuguese Pri
 - **basic_model_test.py** - ICD-10 prototipe
 
 
-
 ## cheat sheet
 
 ### venv
