@@ -4,10 +4,10 @@ import requests
 import numpy as np
 import io
 
+
 def download_excel(url, filename, force=False):
     file_path = "data/" + filename
     filename_csv = file_path.replace(".xlsx", ".csv")
-
 
     if force or not os.path.exists(filename_csv):
         r = requests.get(url, allow_redirects=True)
