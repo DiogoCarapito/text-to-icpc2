@@ -1,11 +1,8 @@
 import streamlit as st
+from utils.etl_utils import load_ipcp2
 
-# import pandas as pd
 
-from utils.etl_utils import load_icpc2_excel
+df = load_ipcp2()
 
 st.title("ICPC-2 ETL")
-
-df_icpc2 = load_icpc2_excel()
-
-st.write(df_icpc2)
+st.write(df)

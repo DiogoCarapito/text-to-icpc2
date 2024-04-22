@@ -3,7 +3,7 @@ install:
 		pip install -r requirements.txt
 
 test:
-	pytest --cov=app --cov=etl --cov=utils tests/*.py
+	pytest --cov=app --cov=etl --cov=utils --cov=pages tests/*.py
 
 format:
 	black . *.py utils/*.py tests/*.py
