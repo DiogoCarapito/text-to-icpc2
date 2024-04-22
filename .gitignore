@@ -161,3 +161,6 @@ cython_debug/
 
 #macOS files
 .DS_Store
+
+# large files
+data/TodasVersoesICD10CMPCS_2017_2024_v1_caracteres_03_04_2024.csv

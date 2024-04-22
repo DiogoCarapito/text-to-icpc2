@@ -2,19 +2,16 @@ import pandas as pd
 import os
 import requests
 import numpy as np
-
+import io
 
 def download_excel(url, filename, force=False):
     file_path = "data/" + filename
-
-    if force or not os.path.exists(file_path):
-        r = requests.get(url, allow_redirects=True)
-        open(file_path, "wb").write(r.content)
-
     filename_csv = file_path.replace(".xlsx", ".csv")
 
+
     if force or not os.path.exists(filename_csv):
-        df = pd.read_excel(file_path)
+        r = requests.get(url, allow_redirects=True)
+        df = pd.read_excel(io.BytesIO(r.content))
         df.to_csv(filename_csv, index=False)
         return df
 
