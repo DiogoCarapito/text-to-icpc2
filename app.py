@@ -3,6 +3,9 @@ from transformers import AutoTokenizer, BertForSequenceClassification
 import icd10
 import pyperclip
 
+import pandas as pd
+import txtai
+
 from utils.style import titulo, descricao, resposta
 
 
@@ -26,16 +29,36 @@ def process_request_icd10(text, tokenizer, model, config):
 
     return final_results
 
+def load_embeddings():
+    
+    df = pd.read_csv('data/icpc2_processed.csv')
+    
+    index_test = df["index_seach"].dropna().values
+    
+    embeddings = txtai.Embeddings({
+        'path': 'sentence-transformers/all-MiniLM-L6-v2',
+    })
+    
+    embeddings.load('embeddings.tar.gz')
+    
+    return index_test, embeddings
 
-def process_request_icpc2(text):
-    result = {
-        "input": text,
-        "icpc2": "T90",
-        "description": "Diabetes mellitus",
-        "rating": 0.9,
-    }
 
-    st.session_state["response"].append(result)
+def process_request_icpc2(query):
+    # result = {
+    #     "input": text,
+    #     "icpc2": "T90",
+    #     "description": "Diabetes mellitus",
+    #     "rating": 0.9,
+    # }
+    
+    index_test, embeddings = st.cache_data(load_embeddings)()
+    
+    result = embeddings. search (query, 5)
+    
+    actual_results = [index_test[x[0]] for x in result]
+    
+    return actual_results
 
 
 def main():
@@ -121,7 +144,7 @@ def main():
         )
 
     with tab_icpc2:
-        # descricao("Insira o texto e obtenha o código ICPC2 correspondente")
+        descricao("Insira o texto e obtenha o código ICPC2 correspondente")
 
         col_text_input_1, col_text_input_2 = st.columns([3, 1])
 
@@ -132,16 +155,20 @@ def main():
                 # on_change=process_request(st.session_state["input"]),
                 key="inputicpc2",
             )
-
+        
         with col_text_input_2:
             if st.button("Submeter", key="submeter_icpc2"):
                 st.session_state["response_icpc2"] = []
-                process_request_icpc2(st.session_state["input_icpc2"])
+                resultados = process_request_icpc2(st.session_state["input_icpc2"])
+                
+                for each in resultados:
+                    st.write(each)
+        
 
-        if st.session_state["input_icpc2"]:
-            st.write("")
-            for each in st.session_state["response_icpc2"]:
-                resposta(each)
+        # if st.session_state["input_icpc2"]:
+        #     st.write("")
+        #     for each in st.session_state["response_icpc2"]:
+        #         resposta(each)
 
     return None
 

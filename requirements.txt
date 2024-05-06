@@ -4,7 +4,7 @@ pylint==3.0.0
 pytest==7.4.2
 pytest-cov==4.1.0
 black==23.9.1
-ipython==8.17.2
+#ipython==8.17.2
 
 streamlit==1.32.2
 watchdog==4.0.0
@@ -16,3 +16,5 @@ torch==2.2.2
 
 pyperclip==1.8.2
 icd10-cm==0.0.5
+
+txtai

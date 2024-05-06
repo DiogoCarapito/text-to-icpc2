@@ -4,13 +4,25 @@ import requests
 import numpy as np
 import io
 
+# import streamlit as st
 
-def download_excel(url, filename, force=False):
+
+def download_excel(url, filename, force=False) -> pd.DataFrame:
+    """_summary_
+
+    Args:
+        url (_type_): _description_
+        filename (_type_): _description_
+        force (bool, optional): _description_. Defaults to False.
+
+    Returns:
+        _type_: _description_
+    """
     file_path = "data/" + filename
     filename_csv = file_path.replace(".xlsx", ".csv")
 
     if force or not os.path.exists(filename_csv):
-        r = requests.get(url, allow_redirects=True)
+        r = requests.get(url, allow_redirects=True, timeout=100)
         df = pd.read_excel(io.BytesIO(r.content))
         df.to_csv(filename_csv, index=False)
         return df
@@ -19,63 +31,8 @@ def download_excel(url, filename, force=False):
         return pd.read_csv(filename_csv)
 
 
-# # @st.cache_data
-# def download_icpc2_excel():
-#     # check if the file is already downloaded as csv
-#     # download the file from ACSS website and save in data folder
-#     import requests
-
-#     # get the url from the data/data_sources.csv file
-#     data_sources = pd.read_csv("data/data_sources.csv")
-
-#     # get the url cell of the row that has in its id 1
-#     url = data_sources[data_sources["id"] == 1]["url"].values[0]
-
-#     st.write(url)
-
-#     r = requests.get(url, allow_redirects=True)
-
-#     open("data/ICPC_2.xlsx", "wb").write(r.content)
-
-
-# # @st.cache_data
-# def download_icd10_excel():
-#     # download the file from ACSS website and save in data folder
-#     import requests
-
-#     # get the url from the data/data_sources.csv file
-#     data_sources = pd.read_csv("data/data_sources.csv")
-
-#     # get the url cell of the row that has in its id 1
-#     url = data_sources[data_sources["id"] == 5]["url"].values[0]
-
-#     st.write(url)
-
-#     r = requests.get(url, allow_redirects=True)
-
-#     open("data/ICD_10.xlsx", "wb").write(r.content)
-
-
-# # @st.cache_data
-# def load_icpc2_excel():
-#     # check if the file is already downloaded
-#     if not os.path.exists("data/ICPC_2.xlsx"):
-#         download_icpc2_excel()
-
-#     return pd.read_excel("data/ICPC_2.xlsx")
-
-
-# # @st.cache_data
-# def load_icd10_excel():
-#     # check if the file is already downloaded
-#     if not os.path.exists("data/ICD_10.xlsx"):
-#         download_icd10_excel()
-
-#     return pd.read_excel("data/ICD_10.xlsx")
-
-
 # @st.cache_data
-def etl_icpc2(df):
+def etl_icpc2(df) -> pd.DataFrame:
     # drop componente
     df.drop("componente", axis=1, inplace=True)
 
@@ -94,7 +51,7 @@ def etl_icpc2(df):
 
 
 # @st.cache_data
-def etl_icd10(df):
+def etl_icd10(df) -> pd.DataFrame:
     # st.write(df.columns())
     df = df[
         [
@@ -109,13 +66,14 @@ def etl_icd10(df):
 
 
 # @st.cache_data
-def etl(icpc2, icd10):
+def etl(icpc2, icd10) -> pd.DataFrame:
     # individual ETLs
     df_icpc2 = etl_icpc2(icpc2)
     df_icd10 = etl_icd10(icd10)
 
     # create a new column and add an empty list to each row
     df_icpc2["ICD_10_list_description"] = [[] for _ in range(len(df_icpc2))]
+    df_icpc2["ICD_10_list_description_join"] = ""
 
     for index, row in df_icpc2.iterrows():
         # st.subheader(row["cod"])
@@ -132,39 +90,60 @@ def etl(icpc2, icd10):
                     # st.write(description)
                     # add the description to the list to the current row
                     df_icpc2.at[index, "ICD_10_list_description"].append(description[0])
-                # else:
-                # st.write(f"ICD 10 not found")
-        # else:
-        # st.write(f"No ICD 10")
 
-    # st.write(df_icd10.head(50))
+    # create a new column that comibines the list of descriptions into a single string
+    for index, row in df_icpc2.iterrows():
+        df_icpc2.at[index, "ICD_10_list_description_join"] = "; ".join(
+            row["ICD_10_list_description"]
+        )
 
-    df = df_icpc2
+    # a concatenation of all the columns that will be used for the search
+    df_icpc2["index_seach"] = (
+        df_icpc2["cod"].astype(str)
+        + " "
+        + df_icpc2["nome"]
+        + " "
+        + df_icpc2["incl"].fillna("") # None was causing an error
+        + " "
+        + df_icpc2["ICD_10_list_description_join"]
+    )
 
-    return df
+    return df_icpc2
 
 
-def load_ipcp2(force=False):
+def load_ipcp2(force=True):
     if not os.path.exists("data/icpc2_processed.csv") or force:
         # download the data from the source and process it
         data_sources = pd.read_csv("data/data_sources.csv")
 
+        # get the urls and filenames
+        # ICPC-2
         icpc2_url = data_sources[data_sources["id"] == 1]["url"].values[0]
         icpc2_filename = data_sources[data_sources["id"] == 1]["name"].values[0]
 
+        # ICD-10
         icd10_url = data_sources[data_sources["id"] == 2]["url"].values[0]
         icd10_filename = data_sources[data_sources["id"] == 2]["name"].values[0]
 
+        # download the data into dataframes
         df_icpc2, df_icd10 = (
             download_excel(icpc2_url, icpc2_filename, force=force),
             download_excel(icd10_url, icd10_filename, force=force),
         )
 
+        # process the data
         df = etl(df_icpc2, df_icd10)
 
+        # save the processed data
         df.to_csv("data/icpc2_processed.csv", index=False)
 
     else:
+        # load the processed data that is already saved if force is False
         df = pd.read_csv("data/icpc2_processed.csv")
 
     return df
+
+
+if "__name__" == "__main__":
+    # run the ETL process if the script is run directly
+    load_ipcp2(force=True)

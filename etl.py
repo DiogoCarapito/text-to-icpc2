@@ -4,12 +4,11 @@ from utils.etl_utils import load_ipcp2
 
 st.set_page_config(page_title="ICPC-2 ETL", page_icon=":bar_chart:", layout="wide")
 
-df = load_ipcp2()
+df = load_ipcp2(force=True)
 
 st.title("ICPC-2 ETL")
 
 st.subheader("Tabela com códicos ICPC-2 já processada")
-
 
 st.write("")
 
