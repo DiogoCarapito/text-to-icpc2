@@ -9,11 +9,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-<<<<<<< HEAD
     - name: Set up Python 3.12.3
-=======
-    - name: Set up Python 3.9.19
->>>>>>> 00436fb319d3d08c43610bb37003fbe41a196758
       uses: actions/setup-python@v5
       with:
         python-version: 3.12.3

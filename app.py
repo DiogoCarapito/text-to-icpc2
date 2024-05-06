@@ -6,7 +6,7 @@ import pyperclip
 import pandas as pd
 import txtai
 
-from utils.style import titulo, descricao, resposta
+from utils.style import titulo, descricao #, resposta
 
 
 # def load_model():
