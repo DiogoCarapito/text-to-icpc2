@@ -8,11 +8,11 @@ NLP project to transform clinical diagnosis into ICPC-2 codes for Portuguese Pri
 ## Plan
 1. Simple prototipe wiht a model for ICD-10 from Huggingface
 2. ETL
-3. Selectin a pretrained model
-4. Traingin model with specific data
+3. Select a pretrained model
+4. Train a model with specific data
 5. Model evaluation
 6. Model deployment wiht Streamlit
-7. Model improvement wiht usage data
+7. Model improvement with usage data
 
 
 ## Project scructure
