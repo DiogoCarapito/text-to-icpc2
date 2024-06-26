@@ -20,8 +20,6 @@ NLP project to transform clinical diagnosis into ICPC-2 codes for Portuguese Pri
 - **etl.py** - Extration, Transform and Load data
 - **basic_model_test.py** - ICD-10 prototipe
 
-
-
 [https://www.youtube.com/watch?v=H-Cgag672nU](https://www.youtube.com/watch?v=H-Cgag672nU) 
 
 ## cheat sheet

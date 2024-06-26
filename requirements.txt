@@ -1,4 +1,4 @@
-pip==24.0
+pip==24.1
 
 pylint==3.0.0
 pytest==7.4.2

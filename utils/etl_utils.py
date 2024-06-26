@@ -8,16 +8,6 @@ import io
 
 
 def download_excel(url, filename, force=False) -> pd.DataFrame:
-    """_summary_
-
-    Args:
-        url (_type_): _description_
-        filename (_type_): _description_
-        force (bool, optional): _description_. Defaults to False.
-
-    Returns:
-        _type_: _description_
-    """
     file_path = "data/" + filename
     filename_csv = file_path.replace(".xlsx", ".csv")
 
@@ -103,7 +93,7 @@ def etl(icpc2, icd10) -> pd.DataFrame:
         + " "
         + df_icpc2["nome"]
         + " "
-        + df_icpc2["incl"].fillna("") # None was causing an error
+        + df_icpc2["incl"].fillna("")  # None was causing an error
         + " "
         + df_icpc2["ICD_10_list_description_join"]
     )
