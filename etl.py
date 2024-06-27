@@ -49,6 +49,11 @@ if filter_origin:
 
 st.dataframe(df_pre_train, use_container_width=True, hide_index=True)
 
+list_codes = df_pre_train["code"].unique().tolist()
+
+for each in list_codes:
+    st.write(f"{each} - {df[df['cod'] == each]['nome'].values[0]}")
+
 st.divider()
 
 st.subheader("Fontes")
