@@ -2,8 +2,9 @@ import click
 from huggingface_hub import create_repo
 from huggingface_hub import HfApi
 
+
 @click.command()
-#@click.option("--new", help="Create a new repository")
+# @click.option("--new", help="Create a new repository")
 @click.option("--name", help="Name of the repository")
 @click.option("-t", "--type", help="dataset, model or space")
 def create_repo_cli(name="text-to-icpc2", type="dataset"):
@@ -19,6 +20,7 @@ def upload_files_cli():
         repo_type="dataset",
     )
 
+
 if __name__ == "__main__":
     upload_files_cli()
-    #create_repo_cli()
+    # create_repo_cli()

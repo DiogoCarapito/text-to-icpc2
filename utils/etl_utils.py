@@ -4,8 +4,6 @@ import requests
 import numpy as np
 import io
 
-# import streamlit as st
-
 
 def download_excel(url, filename, force=False) -> pd.DataFrame:
     file_path = "data/" + filename
