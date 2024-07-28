@@ -1,5 +1,6 @@
 import pandas as pd
-import streamlit as st
+import click
+from datasets import Dataset, Features, ClassLabel, Value, DatasetDict
 
 
 def semicolon_colon_split(df, string_split, column_name):
@@ -81,10 +82,10 @@ def pre_train_prep(force=True):
         data_icd10 = semicolon_colon_split(data_icd10, "; ", "icd10_description")
 
         # Assuming data_icpc2_1, data_icpc2_2, and data_icd10 are slices from other DataFrames
-        data_icpc2_1.loc[:, "origin"] = "icpc2_description"
-        data_icpc2_2.loc[:, "origin"] = "icpc2_short"
-        data_icpc2_3.loc[:, "origin"] = "icpc2_inclusion"
-        data_icd10.loc[:, "origin"] = "icd10_description"
+        data_icpc2_1["origin"] = "icpc2_description"
+        data_icpc2_2["origin"] = "icpc2_short"
+        data_icpc2_3["origin"] = "icpc2_inclusion"
+        data_icd10["origin"] = "icd10_description"
 
         # change the name of the columns
         data_icpc2_1 = data_icpc2_1.rename(columns={"icpc2_description": "text"})
@@ -98,8 +99,79 @@ def pre_train_prep(force=True):
         # reset index
         data = data.reset_index(drop=True)
 
+        data["label"] = data["code"].astype("category").cat.codes
+
         # save the data
         data.to_csv("data/data_pre_train.csv", index=False)
+
+        # create a jsonl file
+        data.to_json(
+            "data/data_pre_train.jsonl", orient="records", lines=True, force_ascii=False
+        )
+
+        # ClassLable creation
+        list_codes = data["code"].unique().tolist()
+        n_codes = len(list_codes)
+
+        class_labels = ClassLabel(
+            num_classes=n_codes,
+            names=list_codes,
+        )
+
+        # Define the features
+        features = Features(
+            {
+                "code": Value("string"),
+                "text": Value("string"),
+                "origin": Value("string"),
+                "label": class_labels,
+            }
+        )
+
+        # # split dataset into train and test
+        # data_train = data[data["origin"] != "icpc2_short"]
+        # data_test = data[data["origin"] == "icpc2_short"]
+
+        # # # Print the columns of the split DataFrames
+        # print("Columns in data_train:", data_train.columns)
+        # print("Columns in data_test:", data_test.columns)
+
+        # print(data_train.shape)
+        # print(data_test.shape)
+
+        # Create Hugging Face datasets from pandas DataFrames
+        # train_dataset = Dataset.from_pandas(
+        #     data_train[["code", "text", "origin", "label"]],
+        #     features=features)
+        # print(train_dataset.features)
+
+        # test_dataset = Dataset.from_pandas(
+        #     data_test[["code", "text", "origin", "label"]],
+        #     features=features)
+
+        # # Combine into a DatasetDict
+        # dataset = DatasetDict({
+        #     "train": train_dataset,
+        #     "test": test_dataset,
+        # })
+
+        # create a huggingface dataset
+        dataset = Dataset.from_pandas(
+            data[["code", "text", "origin", "label"]], features=features
+        )
+
+        train_test_split = dataset.train_test_split(
+            test_size=0.2, seed=42, stratify_by_column="label"
+        )
+
+        dataset_dict = DatasetDict(
+            {"train": train_test_split["train"], "test": train_test_split["test"]}
+        )
+
+        dataset_dict.save_to_disk("data/data_pre_train_hf")
+        dataset_dict.push_to_hub(
+            repo_id="diogocarapito/text-to-icpc2",
+        )
 
         return data
 
@@ -107,6 +179,11 @@ def pre_train_prep(force=True):
         return pd.read_csv("data/data_pre_train.csv")
 
 
+# @click.command()
+# @click.option("--force", default=True, help="Force the data processing")
+def main():
+    data = pre_train_prep(force=True)
+
+
 if __name__ == "__main__":
-    df = pre_train_prep(force=False)
-    st.write(df)
+    main()

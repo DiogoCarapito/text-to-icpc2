@@ -2,7 +2,6 @@ import streamlit as st
 from transformers import AutoTokenizer, BertForSequenceClassification
 import icd10
 import pyperclip
-
 import pandas as pd
 import txtai
 
