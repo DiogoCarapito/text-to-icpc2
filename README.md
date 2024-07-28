@@ -14,6 +14,8 @@ NLP project to transform clinical diagnosis into ICPC-2 codes for Portuguese Pri
 6. Model deployment wiht Streamlit
 7. Model improvement with usage data
 
+## Hugging Face
+dataset avalilabe at [https://huggingface.co/datasets/diogocarapito/text-to-icpc2](https://huggingface.co/datasets/diogocarapito/text-to-icpc2)
 
 ## Project scructure
 - **app.py** - front end
