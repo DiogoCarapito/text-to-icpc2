@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/diogocarapito/Programac%CC%A7a%CC%83o/text-to-icpc2/mlruns/213614042694584499/464f38994532412eae762b8d874809a8/artifacts
+end_time: 1723369124543
+entry_point_name: ''
+experiment_id: '213614042694584499'
+lifecycle_stage: active
+run_id: 464f38994532412eae762b8d874809a8
+run_name: placid-wasp-490
+run_uuid: 464f38994532412eae762b8d874809a8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1723368978445
+status: 3
+tags: []
+user_id: diogocarapito

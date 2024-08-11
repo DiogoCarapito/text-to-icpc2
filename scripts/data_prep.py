@@ -96,6 +96,9 @@ def pre_train_prep(force=True):
         # merge the dataframes
         data = pd.concat([data_icpc2_1, data_icpc2_2, data_icpc2_3, data_icd10])
 
+        # create a new column with the chapter of the code
+        data["chapter"] = data["code"].str[0]
+
         # reset index
         data = data.reset_index(drop=True)
 
@@ -124,6 +127,7 @@ def pre_train_prep(force=True):
                 "code": Value("string"),
                 "text": Value("string"),
                 "origin": Value("string"),
+                "chapter": Value("string"),
                 "label": class_labels,
             }
         )
@@ -157,7 +161,7 @@ def pre_train_prep(force=True):
 
         # create a huggingface dataset
         dataset = Dataset.from_pandas(
-            data[["code", "text", "origin", "label"]], features=features
+            data[["code", "text", "origin", "chapter", "label"]], features=features
         )
 
         train_test_split = dataset.train_test_split(

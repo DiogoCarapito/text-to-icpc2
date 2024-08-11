@@ -1,36 +1,37 @@
+# CD/CI libraries
 pip
-
 pylint==3.0.0
 pytest==7.4.2
 pytest-cov==4.1.0
 black==23.9.1
 #ipython==8.17.2
 
+# support libraries
+setuptools==71.1.0
+pyperclip==1.8.2
+
+# Visualization libraries
 streamlit==1.37.0
 watchdog==4.0.0
+
+# Data manipulation libraries
 pandas==2.2.1
 openpyxl==3.1.2
-numpy==1.26.4
-#transformers==4.39.3
-#torch==2.2.2
-setuptools==71.1.0
 
-pyperclip==1.8.2
 icd10-cm==0.0.5
 
+# Machine learning libraries
+numpy==1.26.4
+scikit-learn
+#transformers==4.42.4 # transformers integration with mlflow seems to be working up to version 4.42.4
+transformers>=4.43 # transformers version that works with apple silicon 'mps'
+torch
+mlflow
 huggingface
 huggingface_hub
 datasets
-
-torch
-torchvision
-tensorflow
+evaluate
 accelerate>=0.21.0
-#torchvision
-scikit-learn
-mlflow
-transformers[onnx]
-onnxruntime
-txtai
 
-tqdm>=4.66.1
+sentencepiece
+txtai

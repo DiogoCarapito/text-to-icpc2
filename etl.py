@@ -60,6 +60,8 @@ if filter_text:
 if filter_origin:
     df_pre_train = df_pre_train[df_pre_train["origin"].isin(filter_origin)]
 
+st.metric("Total de registros", df_pre_train.shape[0])
+
 # show filtered dataset
 st.dataframe(df_pre_train, use_container_width=True, hide_index=True)
 

@@ -18,10 +18,10 @@ dataset = load_dataset("diogocarapito/text-to-icpc2")
 # dataset = load_dataset("emotion")
 logging.info("dataset loaded")
 
-# # get the distribution of the labels
+# get the distribution of the labels
 features = dataset["train"].features
 
-# # get the distribution of the labels as a dictionary id : label
+# get the distribution of the labels as a dictionary id : label
 id2label = {idx: features["label"].int2str(idx) for idx in range(726)}
 # id2label = {idx:features["label"].int2str(idx) for idx in range(6)} # for the emotion dataset
 # print(id2label)
