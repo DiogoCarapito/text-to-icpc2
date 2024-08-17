@@ -2,7 +2,7 @@
 import click
 import mlflow.pyfunc
 from typing import List
-
+import pandas as pd
 
 # Define the inference function
 def run_inference(model_uri: str, input_data: List[str]) -> List[str]:
@@ -21,7 +21,7 @@ def run_inference(model_uri: str, input_data: List[str]) -> List[str]:
     type=str,
     required=False,
     help="The URI of the model in MLflow.",
-    default="1808d4cf1012490986d3d14e603dfb9c",
+    default="b315798cd6804664811f539447d5a563",
 )
 @click.option(
     "--input_data",
@@ -29,7 +29,7 @@ def run_inference(model_uri: str, input_data: List[str]) -> List[str]:
     multiple=True,
     required=False,
     help="Input data for inference.",
-    default=["Hipertensão arterial"],
+    default=["k99"],
 )
 def main(runid: str, input_data: tuple[str]):
     # Replace with your model URI
@@ -42,16 +42,19 @@ def main(runid: str, input_data: tuple[str]):
     # for inp, (pred, score) in zip(input_data, predictions):
     #     print(f"{inp} - {pred} ({score})")
 
+    # import icpc2 codes and descriptions from data/icpc2_processed.csv
+    df_icpc2 = pd.read_csv("data/icpc2_processed.csv")
+    icpc2_dict = dict(zip(df_icpc2['cod'], df_icpc2['nome']))
+
     # Print input data and predictions neatly
-    for inp, top_5_predictions in zip(input_data, predictions):
+    for inp, top_5_predictions in zip(input_data, predictions):   
         print(f"{inp}")
         for pred, score in top_5_predictions:
-            print(f"  {pred} ({score:.4f})")
+            print(f"  {pred} - {score:.4f} ({icpc2_dict[pred]})")
 
 
-# Example usage
 if __name__ == "__main__":
     main()
 
 # Run the script
-# python inference_train_mlflow.py --input_data "enfarte agudo do miocardio" --input_data "acv"
+# python inference.py --input_data "enfarte agudo do miocardio" --input_data "hipertensão arterial"
