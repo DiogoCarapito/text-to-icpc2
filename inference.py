@@ -4,6 +4,7 @@ import mlflow.pyfunc
 from typing import List
 import pandas as pd
 
+
 # Define the inference function
 def run_inference(model_uri: str, input_data: List[str]) -> List[str]:
     # Load the model from MLflow
@@ -44,10 +45,10 @@ def main(runid: str, input_data: tuple[str]):
 
     # import icpc2 codes and descriptions from data/icpc2_processed.csv
     df_icpc2 = pd.read_csv("data/icpc2_processed.csv")
-    icpc2_dict = dict(zip(df_icpc2['cod'], df_icpc2['nome']))
+    icpc2_dict = dict(zip(df_icpc2["cod"], df_icpc2["nome"]))
 
     # Print input data and predictions neatly
-    for inp, top_5_predictions in zip(input_data, predictions):   
+    for inp, top_5_predictions in zip(input_data, predictions):
         print(f"{inp}")
         for pred, score in top_5_predictions:
             print(f"  {pred} - {score:.4f} ({icpc2_dict[pred]})")

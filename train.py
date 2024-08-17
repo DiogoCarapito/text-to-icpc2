@@ -58,9 +58,9 @@ with mlflow.start_run() as run:
     lable2id = {v: k for k, v in id2label.items()}
 
     # model name
-    #model_name = "distilbert-base-uncased"
-    #model_name = "microsoft/Multilingual-MiniLM-L12-H384"
-    #model_name = "FacebookAI/xlm-roberta-base"
+    # model_name = "distilbert-base-uncased"
+    # model_name = "microsoft/Multilingual-MiniLM-L12-H384"
+    # model_name = "FacebookAI/xlm-roberta-base"
     model_name = "bert-base-uncased"
 
     logging.info("Using the model '%s'", model_name)
