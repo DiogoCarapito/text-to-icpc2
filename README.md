@@ -2,7 +2,6 @@
 
 [![Github Actions Workflow](https://github.com/DiogoCarapito/text-to-icpc2/actions/workflows/main.yaml/badge.svg)](https://github.com/DiogoCarapito/text-to-icpc2/actions/workflows/main.yaml)
 
-
 ## Project description
 
 NLP project to transform clinical diagnosis into ICPC-2 codes for Portuguese Primary Care
@@ -28,7 +27,7 @@ dataset avalilabe at [https://huggingface.co/datasets/diogocarapito/text-to-icpc
 - **inference.py** - cli inference
 - **st-inference.py** - streamlit based inferece api
 
-[https://www.youtube.com/watch?v=H-Cgag672nU](https://www.youtube.com/watch?v=H-Cgag672nU) 
+[https://www.youtube.com/watch?v=H-Cgag672nU](https://www.youtube.com/watch?v=H-Cgag672nU)
 
 ## cheat sheet
 
