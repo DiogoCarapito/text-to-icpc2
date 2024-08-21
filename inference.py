@@ -1,6 +1,6 @@
 # pilepine for inference on trained model that was saved in mlflow
 import click
-import mlflow.pyfunc
+import mlflow
 from typing import List
 import pandas as pd
 
@@ -30,7 +30,7 @@ def run_inference(model_uri: str, input_data: List[str]) -> List[str]:
     multiple=True,
     required=False,
     help="Input data for inference.",
-    default=["k99"],
+    default=["hipertensão arterial", "enfarte agudo do miocardio"],
 )
 def main(runid: str, input_data: tuple[str]):
     # Replace with your model URI
@@ -39,9 +39,6 @@ def main(runid: str, input_data: tuple[str]):
     # Run inference
     predictions = run_inference(model_uri, list(input_data))
 
-    # # Print input data and predictions neatly
-    # for inp, (pred, score) in zip(input_data, predictions):
-    #     print(f"{inp} - {pred} ({score})")
 
     # import icpc2 codes and descriptions from data/icpc2_processed.csv
     df_icpc2 = pd.read_csv("data/icpc2_processed.csv")
@@ -58,4 +55,4 @@ if __name__ == "__main__":
     main()
 
 # Run the script
-# python inference.py --input_data "enfarte agudo do miocardio" --input_data "hipertensão arterial"
+# python inference.py --runid b315798cd6804664811f539447d5a563 --input_data "enfarte agudo do miocardio" --input_data "hipertensão arterial"

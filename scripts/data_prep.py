@@ -167,10 +167,21 @@ def pre_train_prep(force=True):
         train_test_split = dataset.train_test_split(
             test_size=0.2, seed=42, stratify_by_column="label"
         )
+        
+        validation_data = data[["code", "text", "origin", "chapter", "label"]]
+        
+        #validation data is only the data where the origin is icpc2_description
+        validation_data = validation_data[validation_data["origin"] == "icpc2_description"]
+        
+        validation_dataset = Dataset.from_pandas(
+            data[["code", "text", "origin", "chapter", "label"]],
+            features=features)
 
-        dataset_dict = DatasetDict(
-            {"train": train_test_split["train"], "test": train_test_split["test"]}
-        )
+        dataset_dict = DatasetDict({
+            "train": train_test_split["train"],
+            "test": train_test_split["test"],
+            "validation": validation_dataset
+            })
 
         dataset_dict.save_to_disk("data/data_pre_train_hf")
         dataset_dict.push_to_hub(

@@ -5,7 +5,7 @@ from transformers import (
     AutoModelForSequenceClassification,
     TrainingArguments,
     Trainer,
-    # pipeline,
+    pipeline,
 )
 import mlflow
 import mlflow.pyfunc
@@ -23,10 +23,8 @@ logging.basicConfig(
 
 # seting up the device cuda, mps or cpu
 device = torch.device(
-    "cuda"
-    if torch.cuda.is_available()
-    else "mps"
-    if torch.backends.mps.is_available()
+    "cuda" if torch.cuda.is_available()
+    else "mps" if torch.backends.mps.is_available()
     else "cpu"
 )
 logging.info("Using the device '%s'", device)
@@ -40,6 +38,7 @@ with mlflow.start_run() as run:
     # Load the dataset
     logging.info("Loading dataset")
     dataset = load_dataset("diogocarapito/text-to-icpc2")
+    #dataset = load_dataset("diogocarapito/text-to-icpc2-nano")
 
     logging.info("Getting the distribution of the labels")
     # get the distribution of the labels
@@ -153,10 +152,10 @@ with mlflow.start_run() as run:
     # Define a custom PythonModel class for MLflow
     class MyModel(mlflow.pyfunc.PythonModel):
         def load_context(self, context):
-            from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
             self.model = AutoModelForSequenceClassification.from_pretrained(model_dir)
             self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+            self.pipeline = pipeline("text-classification", model=self.model, tokenizer=self.tokenizer)
 
         def predict(
             self, context, model_input: List[str]
@@ -184,6 +183,7 @@ with mlflow.start_run() as run:
     model_info = mlflow.pyfunc.log_model(
         artifact_path="model",
         python_model=MyModel(),
+        registered_model_name="bert_text_to_icpc2",
     )
 
 # Load the model and test prediction

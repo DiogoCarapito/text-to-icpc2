@@ -23,6 +23,7 @@ dataset avalilabe at [https://huggingface.co/datasets/diogocarapito/text-to-icpc
 ## Project scructure
 
 - **etl.py** - Extration, Transform and Load data
+- **st-etl.py** - streamlit based dataset exploration
 - **train.py** - train script
 - **inference.py** - cli inference
 - **st-inference.py** - streamlit based inferece api
