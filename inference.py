@@ -22,7 +22,7 @@ def run_inference(model_uri: str, input_data: List[str]) -> List[str]:
     type=str,
     required=False,
     help="The URI of the model in MLflow.",
-    default="b315798cd6804664811f539447d5a563",
+    default="c2c9c0adbab34a0cbf7fbcc2dddc6f4e",
 )
 @click.option(
     "--input_data",
@@ -38,7 +38,6 @@ def main(runid: str, input_data: tuple[str]):
 
     # Run inference
     predictions = run_inference(model_uri, list(input_data))
-
 
     # import icpc2 codes and descriptions from data/icpc2_processed.csv
     df_icpc2 = pd.read_csv("data/icpc2_processed.csv")

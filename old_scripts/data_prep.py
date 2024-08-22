@@ -96,12 +96,16 @@ def pre_train_prep(force=True):
         # merge the dataframes
         data = pd.concat([data_icpc2_1, data_icpc2_2, data_icpc2_3, data_icd10])
 
+        # substitute "-" by "A" in codes that start with "-"
+        data["code"] = data["code"].str.replace("-", "A")
+
         # create a new column with the chapter of the code
         data["chapter"] = data["code"].str[0]
 
         # reset index
         data = data.reset_index(drop=True)
 
+        # create a new column with the label
         data["label"] = data["code"].astype("category").cat.codes
 
         # save the data
@@ -132,57 +136,48 @@ def pre_train_prep(force=True):
             }
         )
 
-        # # split dataset into train and test
-        # data_train = data[data["origin"] != "icpc2_short"]
-        # data_test = data[data["origin"] == "icpc2_short"]
-
-        # # # Print the columns of the split DataFrames
-        # print("Columns in data_train:", data_train.columns)
-        # print("Columns in data_test:", data_test.columns)
-
-        # print(data_train.shape)
-        # print(data_test.shape)
-
-        # Create Hugging Face datasets from pandas DataFrames
-        # train_dataset = Dataset.from_pandas(
-        #     data_train[["code", "text", "origin", "label"]],
-        #     features=features)
-        # print(train_dataset.features)
-
-        # test_dataset = Dataset.from_pandas(
-        #     data_test[["code", "text", "origin", "label"]],
-        #     features=features)
-
-        # # Combine into a DatasetDict
-        # dataset = DatasetDict({
-        #     "train": train_dataset,
-        #     "test": test_dataset,
-        # })
-
         # create a huggingface dataset
         dataset = Dataset.from_pandas(
             data[["code", "text", "origin", "chapter", "label"]], features=features
         )
 
-        train_test_split = dataset.train_test_split(
-            test_size=0.2, seed=42, stratify_by_column="label"
-        )
-        
-        validation_data = data[["code", "text", "origin", "chapter", "label"]]
-        
-        #validation data is only the data where the origin is icpc2_description
-        validation_data = validation_data[validation_data["origin"] == "icpc2_description"]
-        
-        validation_dataset = Dataset.from_pandas(
-            data[["code", "text", "origin", "chapter", "label"]],
-            features=features)
+        # train_test_split = dataset.train_test_split(
+        #     test_size=0.2,
+        #     seed=42,
+        #     stratify_by_column="label",
+        # )
 
-        dataset_dict = DatasetDict({
-            "train": train_test_split["train"],
-            "test": train_test_split["test"],
-            "validation": validation_dataset
-            })
+        # list_codes_val = validation_data["code"].unique().tolist()
+        # n_codes_val = len(list_codes_val)
 
+        # print(list_codes_val)
+        # print(n_codes_val)
+        
+        # class_labels_val = ClassLabel(
+        #     num_classes=n_codes_val,
+        #     names=list_codes_val,
+        # )
+        # features_val = Features(
+        #     {
+        #         "code": Value("string"),
+        #         "text": Value("string"),
+        #         "origin": Value("string"),
+        #         "chapter": Value("string"),
+        #         "label": class_labels_val,
+        #     }
+        # )
+    
+        # dataset_dict = DatasetDict(
+        #     {
+        #         "train": train_test_split["train"],
+        #         "test": train_test_split["test"],
+        #         "validation": validation_dataset,
+        #     }
+        # )
+
+        dataset_dict = dataset
+
+        print(dataset_dict)
         dataset_dict.save_to_disk("data/data_pre_train_hf")
         dataset_dict.push_to_hub(
             repo_id="diogocarapito/text-to-icpc2",

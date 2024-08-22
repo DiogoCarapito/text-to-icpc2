@@ -1,93 +1,199 @@
-# app to show the dataset after the ETL process
-
-import streamlit as st
 import pandas as pd
-from utils.etl_utils import load_ipcp2
-from scripts.data_prep import pre_train_prep
-
-# streamlit config
-st.set_page_config(page_title="ICPC-2 ETL", page_icon=":bar_chart:", layout="wide")
-
-# load the dataset
-df = load_ipcp2(force=False)
-
-# title
-st.title("ICPC-2 ETL")
-
-# subheader
-st.subheader("Tabela com códicos ICPC-2 já processada")
-
-# show the original dataset
-st.write(df)
-st.write(
-    "Inclui o processamento dos códigos ICD-10 (coluna 'ICD_10_new') e a lista de diagnósticos correspondentesm proveniente do ICD-10 (coluna 'ICD_10_list_description')"
-)
-
-st.divider()
-
-# pos-processed dataset
-st.title("Processamento pré-treino")
-
-# load the pos-processed dataset
-df_pre_train = pre_train_prep(force=False)
-
-# filter section for exploration
-col_1, col_2, col_3 = st.columns(3)
-with col_1:
-    # filter by code
-    filter_code = st.text_input("Filtrar por código")
-
-with col_2:
-    # filter by text/description
-    filter_text = st.text_input("Filtrar por texto/descrição")
-
-with col_3:
-    # filter by origin
-    filter_origin = st.multiselect(
-        "Filtrar por origem", df_pre_train.origin.unique(), default=None
-    )
-
-# logic to filter the dataset
-if filter_code:
-    df_pre_train = df_pre_train[
-        df_pre_train["code"].str.contains(filter_code, case=False)
-    ]
-
-if filter_text:
-    df_pre_train = df_pre_train[
-        df_pre_train["text"].str.contains(filter_text, case=False)
-    ]
-if filter_origin:
-    df_pre_train = df_pre_train[df_pre_train["origin"].isin(filter_origin)]
-
-st.metric("Total de registros", df_pre_train.shape[0])
-
-# show filtered dataset
-st.dataframe(df_pre_train, use_container_width=True, hide_index=True)
-
-# list of unique codes in the filtered dataset
-list_codes = df_pre_train["code"].unique().tolist()
-
-# for each in list_codes:
-#     st.write(f"{each} - {df[df['cod'] == each]['nome'].values[0]}")
+import click
+from datasets import Dataset, Features, ClassLabel, Value, DatasetDict
 
 
-st.divider()
+def semicolon_colon_split(df, string_split, column_name):
+    # Assuming 'df' is your DataFrame, 'column_name' is the name of the column to split,
+    # and 'string_split' is the delimiter to split the string by.
 
-# data sources
-st.subheader("Fontes")
-data_sources = pd.read_csv("data/data_sources.csv")
+    # Drop NA values
+    df = df.dropna()
 
-icpc2_url = data_sources[data_sources["id"] == 1]["url"].values[0]
-st.markdown(f"[{icpc2_url}]({icpc2_url})")
+    # Optional: Rename columns if needed
+    # df = df.rename(columns={old_column_name: 'new_column_name'})
 
-icd10_url = data_sources[data_sources["id"] == 2]["url"].values[0]
-st.markdown(f"[{icd10_url}]({icd10_url})")
+    # Initialize a list to collect new rows
+    rows_to_append = []
 
-st.divider()
+    # Iterate over each row in the DataFrame
+    for each in df.itertuples():
+        # Check if the delimiter exists in the column of interest
+        if string_split in getattr(each, column_name):
+            # Split the string in the specified column by the delimiter
+            for part in getattr(each, column_name).split(string_split):
+                # Create a new row for each part of the split string and append it to the list
+                rows_to_append.append({"code": each.code, column_name: part})
 
-# github link
-st.subheader("Github")
-st.markdown(
-    "[https://github.com/DiogoCarapito/text-to-icpc2](https://github.com/DiogoCarapito/text-to-icpc2)"
-)
+    # Create a new DataFrame from the list of dictionaries
+    new_df = pd.DataFrame(rows_to_append)
+
+    return new_df
+
+
+def pre_train_prep(force=True):
+    if force:
+        # import data icpc2_preprocessed.csv
+        data = pd.read_csv("data/icpc2_processed.csv")
+
+        # drop columns
+        data = data.drop(
+            columns=[
+                "excl",
+                "crit",
+                "cons",
+                "nota",
+                "icd10",
+                "ICD_10_new",
+                "ICD_10_list_description",
+                "index_seach",
+            ]
+        )
+
+        # rename columns
+        data = data.rename(
+            columns={
+                "cod": "code",
+                "nome": "icpc2_description",
+                "nome_curto": "icpc2_short",
+                "incl": "icpc2_inclusion",
+                "ICD_10_list_description_join": "icd10_description",
+            }
+        )
+
+        # split each column in a new dataframe
+
+        data_icpc2_1 = data[["code", "icpc2_description"]]
+        data_icpc2_2 = data[["code", "icpc2_short"]]
+        data_icpc2_3 = data[["code", "icpc2_inclusion"]]
+        data_icd10 = data[["code", "icd10_description"]]
+
+        ## Process icpc2_description
+
+        # split icpc2_description strings by "/" into multiple rows so that each split string is in a new row with the same code
+
+        # for each in data_icpc2_1.itertuples():
+        #     if '/' in each.icd10_description:
+
+        # process icpc2_description
+        data_icpc2_3 = semicolon_colon_split(data_icpc2_3, "; ", "icpc2_inclusion")
+
+        # Process ICD10
+        data_icd10 = semicolon_colon_split(data_icd10, "; ", "icd10_description")
+
+        # Assuming data_icpc2_1, data_icpc2_2, and data_icd10 are slices from other DataFrames
+        data_icpc2_1["origin"] = "icpc2_description"
+        data_icpc2_2["origin"] = "icpc2_short"
+        data_icpc2_3["origin"] = "icpc2_inclusion"
+        data_icd10["origin"] = "icd10_description"
+
+        # change the name of the columns
+        data_icpc2_1 = data_icpc2_1.rename(columns={"icpc2_description": "text"})
+        data_icpc2_2 = data_icpc2_2.rename(columns={"icpc2_short": "text"})
+        data_icpc2_3 = data_icpc2_3.rename(columns={"icpc2_inclusion": "text"})
+        data_icd10 = data_icd10.rename(columns={"icd10_description": "text"})
+
+        # merge the dataframes
+        data = pd.concat([data_icpc2_1, data_icpc2_2, data_icpc2_3, data_icd10])
+
+        # substitute "-" by "A" in codes that start with "-"
+        data["code"] = data["code"].str.replace("-", "A")
+
+        # create a new column with the chapter of the code
+        data["chapter"] = data["code"].str[0]
+
+        # reset index
+        data = data.reset_index(drop=True)
+
+        # create a new column with the label
+        data["label"] = data["code"].astype("category").cat.codes
+
+        # save the data
+        data.to_csv("data/data_pre_train.csv", index=False)
+
+        # create a jsonl file
+        data.to_json(
+            "data/data_pre_train.jsonl", orient="records", lines=True, force_ascii=False
+        )
+
+        # ClassLable creation
+        list_codes = data["code"].unique().tolist()
+        n_codes = len(list_codes)
+
+        class_labels = ClassLabel(
+            num_classes=n_codes,
+            names=list_codes,
+        )
+
+        # Define the features
+        features = Features(
+            {
+                "code": Value("string"),
+                "text": Value("string"),
+                "origin": Value("string"),
+                "chapter": Value("string"),
+                "label": class_labels,
+            }
+        )
+
+        # create a huggingface dataset
+        dataset = Dataset.from_pandas(
+            data[["code", "text", "origin", "chapter", "label"]], features=features
+        )
+
+        # train_test_split = dataset.train_test_split(
+        #     test_size=0.2,
+        #     seed=42,
+        #     stratify_by_column="label",
+        # )
+
+        # list_codes_val = validation_data["code"].unique().tolist()
+        # n_codes_val = len(list_codes_val)
+
+        # print(list_codes_val)
+        # print(n_codes_val)
+        
+        # class_labels_val = ClassLabel(
+        #     num_classes=n_codes_val,
+        #     names=list_codes_val,
+        # )
+        # features_val = Features(
+        #     {
+        #         "code": Value("string"),
+        #         "text": Value("string"),
+        #         "origin": Value("string"),
+        #         "chapter": Value("string"),
+        #         "label": class_labels_val,
+        #     }
+        # )
+    
+        # dataset_dict = DatasetDict(
+        #     {
+        #         "train": train_test_split["train"],
+        #         "test": train_test_split["test"],
+        #         "validation": validation_dataset,
+        #     }
+        # )
+
+        dataset_dict = dataset
+
+        print(dataset_dict)
+        dataset_dict.save_to_disk("data/data_pre_train_hf")
+        dataset_dict.push_to_hub(
+            repo_id="diogocarapito/text-to-icpc2",
+        )
+
+        return data
+
+    else:
+        return pd.read_csv("data/data_pre_train.csv")
+
+
+# @click.command()
+# @click.option("--force", default=True, help="Force the data processing")
+def main():
+    data = pre_train_prep(force=True)
+
+
+if __name__ == "__main__":
+    main()

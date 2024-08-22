@@ -1,34 +1,112 @@
+# app to show the dataset after the ETL process
+
 import streamlit as st
-#import pandas as pd
-from datasets import load_dataset
-import matplotlib.pyplot as plt
+import pandas as pd
+from utils.etl_utils import load_ipcp2
+from scripts.data_prep import pre_train_prep
 
-df = load_dataset("diogocarapito/text-to-icpc2")
+# streamlit config
+st.set_page_config(page_title="ICPC-2 ETL", page_icon=":bar_chart:", layout="wide")
 
-df_train = df["train"].to_pandas()
-df_test = df["test"].to_pandas()
+# load the dataset
+df = load_ipcp2(force=False)
 
-st.write(df_train.shape[0])
+# title
+st.title("ICPC-2 ETL")
 
-# distribution of labels in a bar graph
-label_counts = df_train["code"].value_counts()
+# subheader
+st.subheader("Tabela com códicos ICPC-2 já processada")
 
-plt.figure(figsize=(10, 6))
-plt.bar(label_counts.index, label_counts.values)
-plt.xlabel("Label")
-plt.ylabel("Count")
-plt.title("Distribution of Labels")
-plt.xticks(rotation=45)
+# show the original dataset
+st.write(df)
+st.write(
+    "Inclui o processamento dos códigos ICD-10 (coluna 'ICD_10_new') e a lista de diagnósticos correspondentesm proveniente do ICD-10 (coluna 'ICD_10_list_description')"
+)
 
-st.pyplot(plt)
+st.divider()
 
-# calculate skewness of the labels
-skewness = label_counts.skew()
-st.write(f"The skewness of the labels is {skewness}")
+# pos-processed dataset
+st.title("Processamento pré-treino")
 
-# print the top 20 labels
-st.write(label_counts.head(20))
+# load the pos-processed dataset
+df_pre_train = pre_train_prep(force=False)
 
-# print the labels with less than 10 samples and get the description of the labels
-st.write("Labels with less than 5 samples")
-st.write(label_counts[label_counts < 5])
+# filter section for exploration
+col_1, col_2, col_3, col_4 = st.columns(4)
+with col_1:
+    # filter by code
+    filter_code = st.text_input("Filtrar por código")
+
+with col_2:
+    # filter by text/description
+    filter_text = st.text_input("Filtrar por texto/descrição")
+
+with col_3:
+    # filter by chapter
+    filter_chapter = st.multiselect(
+        "Filtrar por capítulo", df_pre_train["chapter"].unique(), default=None
+    )
+
+with col_4:
+    # filter by origin
+    filter_origin = st.multiselect(
+        "Filtrar por origem", df_pre_train.origin.unique(), default=None
+    )
+
+# logic to filter the dataset
+if filter_code:
+    df_pre_train = df_pre_train[
+        df_pre_train["code"].str.contains(filter_code, case=False)
+    ]
+
+if filter_text:
+    df_pre_train = df_pre_train[
+        df_pre_train["text"].str.contains(filter_text, case=False)
+    ]
+if filter_chapter:
+    df_pre_train = df_pre_train[df_pre_train["chapter"].isin(filter_chapter)]
+    
+if filter_origin:
+    df_pre_train = df_pre_train[df_pre_train["origin"].isin(filter_origin)]
+
+st.metric("Total de registros", df_pre_train.shape[0])
+
+# show filtered dataset
+st.dataframe(df_pre_train, use_container_width=True, hide_index=True)
+
+# show barchart of the distribution of the codes ordered by the most frequent
+st.subheader("Distribuição dos códigos")
+frequency_table = df_pre_train["code"].value_counts()
+# sort the frequency table descending
+frequency_table = frequency_table.sort_values(ascending=False)
+
+st.bar_chart(frequency_table)
+
+
+# show the skewness of the codes
+skewness = df_pre_train["code"].value_counts().skew()
+st.metric("Assimetria dos códigos", skewness)
+
+# for each in list_codes:
+#     st.write(f"{each} - {df[df['cod'] == each]['nome'].values[0]}")
+
+
+st.divider()
+
+# data sources
+st.subheader("Fontes")
+data_sources = pd.read_csv("data/data_sources.csv")
+
+icpc2_url = data_sources[data_sources["id"] == 1]["url"].values[0]
+st.markdown(f"[{icpc2_url}]({icpc2_url})")
+
+icd10_url = data_sources[data_sources["id"] == 2]["url"].values[0]
+st.markdown(f"[{icd10_url}]({icd10_url})")
+
+st.divider()
+
+# github link
+st.subheader("Github")
+st.markdown(
+    "[https://github.com/DiogoCarapito/text-to-icpc2](https://github.com/DiogoCarapito/text-to-icpc2)"
+)

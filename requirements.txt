@@ -24,13 +24,15 @@ icd10-cm==0.0.5
 numpy==1.26.4
 scikit-learn
 #transformers==4.42.4 # transformers integration with mlflow seems to be working up to version 4.42.4
-transformers>=4.43 # transformers version that works with apple silicon 'mps'
+#transformers>=4.43 # transformers version that works with apple silicon 'mps'
+transformers==4.44.0
 torch
 mlflow
 huggingface
 datasets
 evaluate
 accelerate>=0.21.0
+ray[tune]
 
 # huggingface API
 Jinja2

@@ -1,5 +1,5 @@
 import numpy as np
-from datasets import load_dataset
+from datasets import load_dataset, Dataset
 from transformers import (
     AutoTokenizer,
     AutoModelForSequenceClassification,
@@ -12,18 +12,19 @@ import mlflow.pyfunc
 import evaluate
 import logging
 import torch
+from sklearn.model_selection import KFold
 from typing import List, Tuple
 import click
 
 def exp_size(t):
     if t == "small":
-        return "text_to_icpc2_small"
+        return "text_to_icpc2_cv_small"
     elif t == "medium":
-        return "text_to_icpc2_medium"
+        return "text_to_icpc2_cv_medium"
     elif t == "full":
         return "text_to_icpc2"
     else:
-        return "text_to_icpc2_small"
+        return "text_to_icpc2_cv_small"
 
 @click.command()
 @click.option(
@@ -34,14 +35,14 @@ def exp_size(t):
 def main(t):
     
     experiment_name = exp_size(t)
-        
+    
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s - %(levelname)s - %(message)s",
         datefmt="%Y-%m-%d %H:%M:%S",
     )
 
-    # seting up the device cuda, mps or cpu
+    # Set up the device: cuda, mps, or cpu
     device = torch.device(
         "cuda"
         if torch.cuda.is_available()
@@ -55,42 +56,8 @@ def main(t):
     logging.info("Setting up MLFlow")
     mlflow.set_experiment(experiment_name)
 
-
-    with mlflow.start_run() as run:
-        # Load the dataset
-        logging.info("Loading dataset")
-        
-        # Load the dataset
-        logging.info("Loading dataset")
-        if t == "small":
-            dataset = load_dataset("diogocarapito/text-to-icpc2-nano")
-        elif t == "medium" or t == "full":
-            dataset = load_dataset("diogocarapito/text-to-icpc2")
-        
-        logging.info("Getting the distribution of the labels")
-        # get the distribution of the labels
-        features = dataset["train"].features
-
-        number_of_labels = len(features["label"].names)
-
-        logging.info(
-            "Getting the distribution of the labels as a dictionary id : label and label : id"
-        )
-        # get the distribution of the labels as a dictionary id : label
-        id2label = {idx: features["label"].int2str(idx) for idx in range(number_of_labels)}
-        # id2label = {idx:features["label"].int2str(idx) for idx in range(6)} # for the emotion dataset
-
-        # get the distribution of the labels as a dictionary label : id
-        lable2id = {v: k for k, v in id2label.items()}
-
-        # model name
-        # model_name = "distilbert-base-uncased"
-        # model_name = "microsoft/Multilingual-MiniLM-L12-H384"
-        # model_name = "FacebookAI/xlm-roberta-base"
-        model_name = "bert-base-uncased"
-
-        logging.info("Using the model '%s'", model_name)
-
+    # Define a function to train and evaluate the model
+    def train_and_evaluate(train_dataset, val_dataset, model_name, id2label, label2id, number_of_labels):
         # Load the tokenizer
         logging.info("Loading the tokenizer")
         tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -107,30 +74,8 @@ def main(t):
 
         # Tokenize the data
         logging.info("Tokenize the data")
-        tokenized_datasets = dataset.map(tokenize_function, batched=True)
-
-        # Define the filter function
-        logging.info("Applying the filter function for smaller size dataset")
-
-        def filter_chapter(example):
-            # return example["code"] == "T90" or example["code"] == "K86"
-            if t == "medium":
-                return example["chapter"] == "K"
-            elif t == "small" or t == "full":
-                return example
-
-        # Select a small subset of the data
-        small_dataset = tokenized_datasets["train"].filter(filter_chapter)
-        
-        # Split the dataset into training and evaluation
-        small_dataset_split = small_dataset.train_test_split(test_size=0.2, seed=42)
-        small_eval_dataset = small_dataset_split["test"]
-        small_train_dataset = small_dataset_split["train"]
-        
-        logging.info("The size of the training dataset is %s", len(small_train_dataset))
-        logging.info("The size of the evaluation dataset is %s", len(small_eval_dataset))
-        
-        
+        tokenized_train_dataset = train_dataset.map(tokenize_function, batched=True)
+        tokenized_val_dataset = val_dataset.map(tokenize_function, batched=True)
 
         # Load the model
         logging.info("Loading the model")
@@ -138,7 +83,7 @@ def main(t):
             model_name,
             num_labels=number_of_labels,
             id2label=id2label,
-            label2id=lable2id,
+            label2id=label2id,
         )
 
         # Define the target optimization metric
@@ -170,8 +115,8 @@ def main(t):
         trainer = Trainer(
             model=model,
             args=training_args,
-            train_dataset=small_train_dataset,
-            eval_dataset=small_eval_dataset,
+            train_dataset=tokenized_train_dataset,
+            eval_dataset=tokenized_val_dataset,
             compute_metrics=compute_metrics,
         )
 
@@ -179,15 +124,72 @@ def main(t):
         logging.info("Training the model")
         trainer.train()
 
-        # Save the model to a directory
-        logging.info("Saving the model")
-        model_dir = "/tmp/saved_model"
-        trainer.save_model(model_dir)
+        # Evaluate the model
+        logging.info("Evaluating the model")
+        eval_result = trainer.evaluate()
+        return eval_result
+
+    with mlflow.start_run() as run:
+        # Load the dataset
+        logging.info("Loading dataset")
+        if t == "small":
+            dataset = load_dataset("diogocarapito/text-to-icpc2-nano")
+        elif t == "medium":
+            dataset = load_dataset("diogocarapito/text-to-icpc2")
+            # filter the dataset to get a smaller dataset for faster training: only chapter "K"
+            dataset = dataset.filter(lambda x: x["chapter"] == "K")
+            
+        elif t == "full":
+            dataset = load_dataset("diogocarapito/text-to-icpc2")
+
+        logging.info("Getting the distribution of the labels")
+        # Get the distribution of the labels
+        features = dataset["train"].features
+        number_of_labels = len(features["label"].names)
+
+        logging.info(
+            "Getting the distribution of the labels as a dictionary id : label and label : id"
+        )
+        # Get the distribution of the labels as a dictionary id : label
+        id2label = {idx: features["label"].int2str(idx) for idx in range(number_of_labels)}
+        # Get the distribution of the labels as a dictionary label : id
+        label2id = {v: k for k, v in id2label.items()}
+
+        # Model name
+        model_name = "bert-base-uncased"
+        logging.info("Using the model '%s'", model_name)
+
+        # Convert the dataset to a pandas DataFrame for easier manipulation
+        df = dataset["train"].to_pandas()
+
+        # Initialize a list to store the results
+        results = []
+
+        # Prepare the dataset for cross-validation
+        logging.info("Preparing dataset for cross-validation")
+        kf = KFold(n_splits=5, shuffle=True, random_state=42)
+
+        # Perform cross-validation
+        for train_index, val_index in kf.split(df):
+            train_df = df.iloc[train_index]
+            val_df = df.iloc[val_index]
+
+            # Convert back to Hugging Face Dataset
+            train_dataset = Dataset.from_pandas(train_df)
+            val_dataset = Dataset.from_pandas(val_df)
+
+            # Train and evaluate the model
+            result = train_and_evaluate(train_dataset, val_dataset, model_name, id2label, label2id, number_of_labels)
+            results.append(result["eval_accuracy"])
+
+        # Aggregate results
+        average_result = sum(results) / len(results)
+        logging.info(f"Average cross-validation result: {average_result}")
 
         # Define a custom PythonModel class for MLflow
         class MyModel(mlflow.pyfunc.PythonModel):
-            def load_context(self, context):
-                self.model = AutoModelForSequenceClassification.from_pretrained(model_dir)
+            def load_context(self, context):                
+                self.model = AutoModelForSequenceClassification.from_pretrained(model_name)
                 self.tokenizer = AutoTokenizer.from_pretrained(model_name)
                 self.pipeline = pipeline(
                     "text-classification",
