@@ -3,7 +3,9 @@
 import streamlit as st
 import pandas as pd
 from utils.etl_utils import load_ipcp2
-from scripts.data_prep import pre_train_prep
+from etl import pre_train_prep
+import plotly.express as px
+import numpy as np
 
 # streamlit config
 st.set_page_config(page_title="ICPC-2 ETL", page_icon=":bar_chart:", layout="wide")
@@ -65,7 +67,7 @@ if filter_text:
     ]
 if filter_chapter:
     df_pre_train = df_pre_train[df_pre_train["chapter"].isin(filter_chapter)]
-    
+
 if filter_origin:
     df_pre_train = df_pre_train[df_pre_train["origin"].isin(filter_origin)]
 
@@ -77,10 +79,59 @@ st.dataframe(df_pre_train, use_container_width=True, hide_index=True)
 # show barchart of the distribution of the codes ordered by the most frequent
 st.subheader("Distribuição dos códigos")
 frequency_table = df_pre_train["code"].value_counts()
-# sort the frequency table descending
-frequency_table = frequency_table.sort_values(ascending=False)
 
-st.bar_chart(frequency_table)
+# transform the series into a dataframe
+frequency_table = pd.DataFrame(frequency_table)
+
+#order by "code"
+frequency_table = frequency_table.sort_values(by=['code']).reset_index()
+
+# log the count base 2
+#frequency_table['count'] = frequency_table['code'].apply(lambda x: np.log2(x))
+
+# load correct predictions
+correct_prediction = pd.read_csv("correct_predictions_text_to_icpc2.csv")
+
+
+# Create a list of codes that are present in correct_prediction
+correct_codes = correct_prediction['code']
+correct_codes = pd.DataFrame(correct_codes)
+
+# fill a new column with True in all rows
+correct_codes['is_correct'] = True
+
+# merge frequency_table with correct_prediction
+frequency_table = frequency_table.merge(correct_codes, on='code', how='left')
+
+# Assuming correct_codes has a column indicating correctness, e.g., 'is_correct'
+frequency_table['is_correct'] = frequency_table['is_correct'].fillna(False)
+
+# metric with the number of correct predictions and percentage
+col_1_1, col_1_2 = st.columns(2)
+num_correct = frequency_table[frequency_table['is_correct'] == True].shape[0]
+num_codes = frequency_table.shape[0]
+percentage_correct = round(100*num_correct / num_codes, 2)
+with col_1_1:
+    st.metric("Número de previsões corretas", num_correct)
+with col_1_2:
+    st.metric("Porcentagem de previsões corretas", f"{percentage_correct}%")
+
+# Create a bar chart with Plotly
+fig = px.bar(
+    frequency_table,
+    x='code',
+    y='count',
+    color='is_correct',
+    color_discrete_map={True: 'green', False: 'red'},
+    title='Frequency of Codes'
+)
+
+# Sort the x-axis alphabetically
+fig.update_layout(xaxis={'categoryorder':'category ascending'})
+
+
+# Display the Plotly chart in Streamlit
+st.plotly_chart(fig)
 
 
 # show the skewness of the codes

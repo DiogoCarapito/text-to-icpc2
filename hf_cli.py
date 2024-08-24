@@ -124,21 +124,21 @@ def upload_files():
     )
     print("Files uploaded to Hugging Face")
 
+
 def upload_model(model_name):
     import mlflow.pyfunc
     import tempfile
     from huggingface_hub import HfApi, Repository
-    
-    #model_uri = f"runs:/{model_name}/model"
+
+    # model_uri = f"runs:/{model_name}/model"
     model_uri = f"models:/{model_name}/latest"
     model = mlflow.pyfunc.load_model(model_uri=model_uri)
-    
+
     # Create a temporary directory
     with tempfile.TemporaryDirectory() as temp_dir:
         # Save the model to this temporary directory
-        #mlflow.pyfunc.save_model(artifact_path=temp_dir, python_model=model)
+        # mlflow.pyfunc.save_model(artifact_path=temp_dir, python_model=model)
         mlflow.pyfunc.save_model(path=temp_dir, python_model=model)
-
 
         # Define your repository name on Hugging Face
         repo_name = "diogocarapito/text-to-icpc2"
@@ -148,12 +148,12 @@ def upload_model(model_name):
 
         # Upload the model to Hugging Face
         repo.push_to_hub(commit_message="Upload MLflow PyFunc model to Hugging Face")
-    
+
         print("Model uploaded to Hugging Face Hub")
-    
+
     # with tempfile.TemporaryDirectory() as tmpdirname:
     #     local_model_path = f"{tmpdirname}/model"
-        
+
     #     # Save the model artifacts
     #     mlflow.pyfunc.save_model(model_uri=model_uri, path=local_model_path)
     #     print(f"Model saved locally at {local_model_path}")
@@ -194,16 +194,16 @@ def upload_model(model_name):
 #             repo_type="model",
 #         )
 #         print("Model uploaded to Hugging Face hub")
-    
-    # model_uri = f"runs:/{runid}/model"
-    # model = mlflow.pyfunc.load_model(model_uri=model_uri)
-    # # Create a temporary directory to save the model
-    # with tempfile.TemporaryDirectory() as tmpdirname:
-    #     local_model_path = f"{tmpdirname}/model"
-    #     mlflow.pyfunc.save_model(model, path=local_model_path)
 
-    #     # Push the model to the Hugging Face hub
-    #     model.push_to_hub(local_model_path, "text-to-icpc2")
+# model_uri = f"runs:/{runid}/model"
+# model = mlflow.pyfunc.load_model(model_uri=model_uri)
+# # Create a temporary directory to save the model
+# with tempfile.TemporaryDirectory() as tmpdirname:
+#     local_model_path = f"{tmpdirname}/model"
+#     mlflow.pyfunc.save_model(model, path=local_model_path)
+
+#     # Push the model to the Hugging Face hub
+#     model.push_to_hub(local_model_path, "text-to-icpc2")
 
 
 @click.command()

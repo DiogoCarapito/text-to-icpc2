@@ -13,6 +13,7 @@ pyperclip==1.8.2
 # Visualization libraries
 streamlit==1.37.0
 watchdog==4.0.0
+plotly
 
 # Data manipulation libraries
 pandas==2.2.1

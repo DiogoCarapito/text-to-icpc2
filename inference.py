@@ -22,7 +22,7 @@ def run_inference(model_uri: str, input_data: List[str]) -> List[str]:
     type=str,
     required=False,
     help="The URI of the model in MLflow.",
-    default="c2c9c0adbab34a0cbf7fbcc2dddc6f4e",
+    default="ea30c97b19ad4921990f3011a7a7bd15",
 )
 @click.option(
     "--input_data",

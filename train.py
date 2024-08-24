@@ -15,6 +15,7 @@ import torch
 from typing import List, Tuple
 import click
 
+
 def exp_size(t):
     if t == "small":
         return "text_to_icpc2_small"
@@ -25,16 +26,14 @@ def exp_size(t):
     else:
         return "text_to_icpc2_small"
 
+
 @click.command()
 @click.option(
-    "-t",
-    default="small",
-    help="size of the dataset to be used",
-    required=False)
+    "-t", default="small", help="size of the dataset to be used", required=False
+)
 def main(t):
-    
     experiment_name = exp_size(t)
-        
+
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s - %(levelname)s - %(message)s",
@@ -55,18 +54,17 @@ def main(t):
     logging.info("Setting up MLFlow")
     mlflow.set_experiment(experiment_name)
 
+    # Load the dataset
+    logging.info("Loading dataset")
+
+    # Load the dataset
+    logging.info("Loading dataset")
+    if t == "small":
+        dataset = load_dataset("diogocarapito/text-to-icpc2-nano")
+    elif t == "medium" or t == "full":
+        dataset = load_dataset("diogocarapito/text-to-icpc2")
 
     with mlflow.start_run() as run:
-        # Load the dataset
-        logging.info("Loading dataset")
-        
-        # Load the dataset
-        logging.info("Loading dataset")
-        if t == "small":
-            dataset = load_dataset("diogocarapito/text-to-icpc2-nano")
-        elif t == "medium" or t == "full":
-            dataset = load_dataset("diogocarapito/text-to-icpc2")
-        
         logging.info("Getting the distribution of the labels")
         # get the distribution of the labels
         features = dataset["train"].features
@@ -77,7 +75,9 @@ def main(t):
             "Getting the distribution of the labels as a dictionary id : label and label : id"
         )
         # get the distribution of the labels as a dictionary id : label
-        id2label = {idx: features["label"].int2str(idx) for idx in range(number_of_labels)}
+        id2label = {
+            idx: features["label"].int2str(idx) for idx in range(number_of_labels)
+        }
         # id2label = {idx:features["label"].int2str(idx) for idx in range(6)} # for the emotion dataset
 
         # get the distribution of the labels as a dictionary label : id
@@ -121,16 +121,19 @@ def main(t):
 
         # Select a small subset of the data
         small_dataset = tokenized_datasets["train"].filter(filter_chapter)
-        
+
         # Split the dataset into training and evaluation
-        small_dataset_split = small_dataset.train_test_split(test_size=0.2, seed=42)
+        small_dataset_split = small_dataset.train_test_split(
+            test_size=0.2,
+            stratify_by_column="label",
+            seed=42)
         small_eval_dataset = small_dataset_split["test"]
         small_train_dataset = small_dataset_split["train"]
-        
+
         logging.info("The size of the training dataset is %s", len(small_train_dataset))
-        logging.info("The size of the evaluation dataset is %s", len(small_eval_dataset))
-        
-        
+        logging.info(
+            "The size of the evaluation dataset is %s", len(small_eval_dataset)
+        )
 
         # Load the model
         logging.info("Loading the model")
@@ -162,7 +165,7 @@ def main(t):
             per_device_train_batch_size=8,
             per_device_eval_batch_size=8,
             logging_steps=64,
-            num_train_epochs=3,
+            num_train_epochs=5,
         )
 
         # Instantiate a `Trainer` instance that will be used to initiate a training run.
@@ -187,12 +190,15 @@ def main(t):
         # Define a custom PythonModel class for MLflow
         class MyModel(mlflow.pyfunc.PythonModel):
             def load_context(self, context):
-                self.model = AutoModelForSequenceClassification.from_pretrained(model_dir)
+                self.model = AutoModelForSequenceClassification.from_pretrained(
+                    model_dir
+                )
                 self.tokenizer = AutoTokenizer.from_pretrained(model_name)
                 self.pipeline = pipeline(
                     "text-classification",
                     model=self.model,
                     tokenizer=self.tokenizer,
+                    device= 0 if torch.cuda.is_available() else -1
                 )
 
             def predict(
@@ -226,7 +232,42 @@ def main(t):
 
     # Load the model and test prediction
     loaded_model = mlflow.pyfunc.load_model(model_uri=model_info.model_uri)
-    print(loaded_model.predict(["Hipertensão", "Diabetes"]))  # Example prediction
+
+    # if t == "small":
+    #     #load dataset and build a custom validation dataset to make inferences and get a score
+    #     val_dataset = load_dataset("diogocarapito/text-to-icpc2").to_pandas()
+    #     print(val_dataset)
+    # else:
+    # transform to pandas DataFrame
+    val_dataset = dataset["train"].to_pandas()
+
+    # filter only to origin icpc2_description
+    val_dataset = val_dataset[val_dataset["origin"] == "icpc2_description"]
+
+    # make predictions
+    predictions = loaded_model.predict(val_dataset["text"])
+
+    # get the top prediction and add to the val_dataset
+    def get_top_prediction(predictions):
+        return [pred[0][0] for pred in predictions]
+
+    val_dataset["top_prediction"] = get_top_prediction(predictions)
+
+    # Calculate the accuracy using vectorized operations
+    accuracy = (val_dataset["top_prediction"] == val_dataset["code"]).mean()
+
+    # logging accuracy
+    logging.info("Accuracy: %.2f%%", accuracy * 100)
+    # logging number of correct matches
+
+    # show witch ones are correct
+    correct = val_dataset[val_dataset["top_prediction"] == val_dataset["code"]]
+    print(correct)
+    # save the correct predictions
+    correct.to_csv(f"correct_predictions_{experiment_name}.csv", index=False)
+
+    # print(loaded_model.predict(["Hipertensão", "Diabetes"]))  # Example prediction
+
 
 if __name__ == "__main__":
     main()

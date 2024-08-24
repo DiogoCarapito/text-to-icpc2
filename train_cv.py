@@ -16,6 +16,7 @@ from sklearn.model_selection import KFold
 from typing import List, Tuple
 import click
 
+
 def exp_size(t):
     if t == "small":
         return "text_to_icpc2_cv_small"
@@ -26,16 +27,14 @@ def exp_size(t):
     else:
         return "text_to_icpc2_cv_small"
 
+
 @click.command()
 @click.option(
-    "-t",
-    default="small",
-    help="size of the dataset to be used",
-    required=False)
+    "-t", default="small", help="size of the dataset to be used", required=False
+)
 def main(t):
-    
     experiment_name = exp_size(t)
-    
+
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s - %(levelname)s - %(message)s",
@@ -57,7 +56,9 @@ def main(t):
     mlflow.set_experiment(experiment_name)
 
     # Define a function to train and evaluate the model
-    def train_and_evaluate(train_dataset, val_dataset, model_name, id2label, label2id, number_of_labels):
+    def train_and_evaluate(
+        train_dataset, val_dataset, model_name, id2label, label2id, number_of_labels
+    ):
         # Load the tokenizer
         logging.info("Loading the tokenizer")
         tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -138,7 +139,7 @@ def main(t):
             dataset = load_dataset("diogocarapito/text-to-icpc2")
             # filter the dataset to get a smaller dataset for faster training: only chapter "K"
             dataset = dataset.filter(lambda x: x["chapter"] == "K")
-            
+
         elif t == "full":
             dataset = load_dataset("diogocarapito/text-to-icpc2")
 
@@ -151,7 +152,9 @@ def main(t):
             "Getting the distribution of the labels as a dictionary id : label and label : id"
         )
         # Get the distribution of the labels as a dictionary id : label
-        id2label = {idx: features["label"].int2str(idx) for idx in range(number_of_labels)}
+        id2label = {
+            idx: features["label"].int2str(idx) for idx in range(number_of_labels)
+        }
         # Get the distribution of the labels as a dictionary label : id
         label2id = {v: k for k, v in id2label.items()}
 
@@ -179,7 +182,14 @@ def main(t):
             val_dataset = Dataset.from_pandas(val_df)
 
             # Train and evaluate the model
-            result = train_and_evaluate(train_dataset, val_dataset, model_name, id2label, label2id, number_of_labels)
+            result = train_and_evaluate(
+                train_dataset,
+                val_dataset,
+                model_name,
+                id2label,
+                label2id,
+                number_of_labels,
+            )
             results.append(result["eval_accuracy"])
 
         # Aggregate results
@@ -188,8 +198,10 @@ def main(t):
 
         # Define a custom PythonModel class for MLflow
         class MyModel(mlflow.pyfunc.PythonModel):
-            def load_context(self, context):                
-                self.model = AutoModelForSequenceClassification.from_pretrained(model_name)
+            def load_context(self, context):
+                self.model = AutoModelForSequenceClassification.from_pretrained(
+                    model_name
+                )
                 self.tokenizer = AutoTokenizer.from_pretrained(model_name)
                 self.pipeline = pipeline(
                     "text-classification",
@@ -229,6 +241,7 @@ def main(t):
     # Load the model and test prediction
     loaded_model = mlflow.pyfunc.load_model(model_uri=model_info.model_uri)
     print(loaded_model.predict(["Hipertensão", "Diabetes"]))  # Example prediction
+
 
 if __name__ == "__main__":
     main()
