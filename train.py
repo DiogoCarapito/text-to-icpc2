@@ -12,7 +12,7 @@ import mlflow.pyfunc
 import evaluate
 import logging
 import torch
-from typing import List, Tuple
+#from typing import List, Tuple
 import click
 
 
@@ -230,43 +230,7 @@ def main(t):
             registered_model_name=f"bert_{experiment_name}",
         )
 
-    # Load the model and test prediction
-    loaded_model = mlflow.pyfunc.load_model(model_uri=model_info.model_uri)
-
-    # if t == "small":
-    #     #load dataset and build a custom validation dataset to make inferences and get a score
-    #     val_dataset = load_dataset("diogocarapito/text-to-icpc2").to_pandas()
-    #     print(val_dataset)
-    # else:
-    # transform to pandas DataFrame
-    val_dataset = dataset["train"].to_pandas()
-
-    # filter only to origin icpc2_description
-    val_dataset = val_dataset[val_dataset["origin"] == "icpc2_description"]
-
-    # make predictions
-    predictions = loaded_model.predict(val_dataset["text"])
-
-    # get the top prediction and add to the val_dataset
-    def get_top_prediction(predictions):
-        return [pred[0][0] for pred in predictions]
-
-    val_dataset["top_prediction"] = get_top_prediction(predictions)
-
-    # Calculate the accuracy using vectorized operations
-    accuracy = (val_dataset["top_prediction"] == val_dataset["code"]).mean()
-
-    # logging accuracy
-    logging.info("Accuracy: %.2f%%", accuracy * 100)
-    # logging number of correct matches
-
-    # show witch ones are correct
-    correct = val_dataset[val_dataset["top_prediction"] == val_dataset["code"]]
-    print(correct)
-    # save the correct predictions
-    correct.to_csv(f"correct_predictions_{experiment_name}.csv", index=False)
-
-    # print(loaded_model.predict(["Hipertensão", "Diabetes"]))  # Example prediction
+    validation()
 
 
 if __name__ == "__main__":

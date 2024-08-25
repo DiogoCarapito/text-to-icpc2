@@ -1,0 +1,122 @@
+code,text,origin,chapter,label,top_prediction
+A70,Tuberculose,icpc2_description,A,62,A70
+A73,Malária,icpc2_description,A,65,A73
+A77,Doença viral outra/NE,icpc2_description,A,69,A77
+A78,Outra doença infecciosa/NE,icpc2_description,A,70,A78
+A80,Traumatismo/ferimento NE,icpc2_description,A,72,A80
+A84,Intoxicação por medicamento,icpc2_description,A,75,A84
+A86,Efeito tóxico de uma substância não-medicinal,icpc2_description,A,77,A86
+A87,Complicação de tratamento médico,icpc2_description,A,78,A87
+A88,Efeito adverso por factor físico,icpc2_description,A,79,A88
+A89,Efeito de uma prótese,icpc2_description,A,80,A89
+A91,Investigação com resultado anormal NE,icpc2_description,A,82,A91
+A94,Morbilidade perinatal outra,icpc2_description,A,85,A94
+A97,Sem doença,icpc2_description,A,88,A97
+A98,Manutenção de saúde/medicina preventiva,icpc2_description,A,89,A98
+A99,Doença/condição de natureza/localização não especificada,icpc2_description,A,90,A99
+B26,Medo de cancro do sangue/linfático,icpc2_description,B,94,B26
+B70,Linfadenite aguda,icpc2_description,B,98,B70
+B71,Linfadenite crónica/inespecífica,icpc2_description,B,99,B71
+B72,Doença de Hodgkin/linfoma,icpc2_description,B,100,B72
+B82,Anemia outra/não especificada,icpc2_description,B,110,B82
+D01,Dor/cólica abdominal generalizada,icpc2_description,D,116,D01
+D06,Dor abdominal localizada outra,icpc2_description,D,121,D06
+D28,Limitação funcional/incapacidade (D),icpc2_description,D,142,D28
+D70,Infecção gastrointestinal,icpc2_description,D,144,D70
+D71,Papeira/parotidite epidémica,icpc2_description,D,145,D71
+D72,Hepatite viral,icpc2_description,D,146,D72
+D77,Neoplasia digestiva maligna outra/NE,icpc2_description,D,151,D77
+D78,Neoplasia do sistema digestivo benigna/não especificada,icpc2_description,D,152,D78
+D79,Corpo estranho no sistema digestivo,icpc2_description,D,153,D79
+D81,Malformação congénita do sistema digestivo,icpc2_description,D,155,D81
+D82,Doença dos dentes/gengiva,icpc2_description,D,156,D82
+D86,Úlcera péptica outra,icpc2_description,D,160,D86
+D91,Hérnia abdominal outra,icpc2_description,D,165,D91
+D96,Lombrigas/outros parasitas,icpc2_description,D,170,D96
+D97,Doença de fígado NE,icpc2_description,D,171,D97
+D98,Colecistite/colelitíase,icpc2_description,D,172,D98
+D99,Doença do sistema digestivo outra,icpc2_description,D,173,D99
+F03,Secreção ocular,icpc2_description,F,176,F03
+F70,Conjuntivite infecciosa,icpc2_description,F,188,F70
+F86,Tracoma,icpc2_description,F,202,F86
+F92,Catarata,icpc2_description,F,204,F92
+F93,Glaucoma,icpc2_description,F,205,F93
+F99,Doença ocular/anexos outra,icpc2_description,F,208,F99
+H71,Otite média aguda/miringite,icpc2_description,H,220,H71
+H83,Otoesclerose,icpc2_description,H,232,H83
+H86,Surdez,icpc2_description,H,235,H86
+K01,Dor do coração,icpc2_description,K,237,K01
+K02,Pressão/aperto do coração,icpc2_description,K,238,K02
+K71,Febre/doença cardíaca reumática,icpc2_description,K,251,K71
+K73,Malformação congénita cardiovascular,icpc2_description,K,253,K73
+K75,Enfarte agudo do miocárdio,icpc2_description,K,255,K75
+K84,Doença cardíaca outra,icpc2_description,K,264,K84
+K90,Trombose/acidente vascular cerebral,icpc2_description,K,270,K90
+K99,Doença do aparelho circulatório outra,icpc2_description,K,277,K99
+L10,Sintoma/queixa do cotovelo,icpc2_description,L,286,L10
+L76,Fractura: outra,icpc2_description,L,307,L76
+L78,Entorse/distensão do joelho,icpc2_description,L,309,L78
+L79,Entorse/distensão de articulação NE,icpc2_description,L,310,L79
+L80,Luxação/subluxação,icpc2_description,L,311,L80
+L81,Traumatismo músculo-esquelético NE,icpc2_description,L,312,L81
+L82,Malformação congénita músculo-esquelética,icpc2_description,L,313,L82
+L87,Bursite/tendinite/sinovite NE,icpc2_description,L,318,L87
+L91,Osteoartrose outra,icpc2_description,L,322,L91
+L94,Osteocondrose,icpc2_description,L,325,L94
+L99,Doença do aparelho músculo-esquelético outra,icpc2_description,L,330,L99
+N07,Convulsão/ataque,icpc2_description,N,336,N07
+N08,Movimentos involuntários anormais,icpc2_description,N,337,N08
+N71,Meningite/encefalite,icpc2_description,N,347,N71
+N81,Lesão do sistema nervoso outra,icpc2_description,N,355,N81
+N94,Nevrite/neuropatia periférica,icpc2_description,N,365,N94
+N99,Doença do sistema neurológico outra,icpc2_description,N,367,N99
+P19,Abuso de droga,icpc2_description,P,385,P19
+P29,Sintoma/queixa psicológico outro,icpc2_description,P,393,P29
+P72,Esquizofrenia,icpc2_description,P,396,P72
+P73,Psicose afectiva,icpc2_description,P,397,P73
+P76,Perturbação depressiva,icpc2_description,P,400,P76
+P86,Anorexia nervosa/bulimia,icpc2_description,P,408,P86
+R06,Hemorragia nasal/epistáxis,icpc2_description,R,416,R06
+R23,Sintoma/queixa da voz,icpc2_description,R,421,R23
+R71,Tosse convulsa,icpc2_description,R,428,R71
+R75,Sinusite aguda/crónica,icpc2_description,R,432,R75
+R78,Bronquite/bronquiolite aguda,icpc2_description,R,435,R78
+R81,Pneumonia,icpc2_description,R,438,R81
+R87,Corpo estranho no nariz/laringe/brônquio,icpc2_description,R,444,R87
+R97,Rinite alérgica,icpc2_description,R,451,R97
+R99,Doença respiratória outra,icpc2_description,R,453,R99
+S10,Furúnculo/antraz,icpc2_description,S,463,S10
+S14,Queimadura/escaldão,icpc2_description,S,467,S14
+S70,Herpes zoster,icpc2_description,S,482,S70
+S73,Pediculose/infestação da pele outra,icpc2_description,S,485,S73
+S74,Dermatofitose,icpc2_description,S,486,S74
+S88,Dermatite de contacto/alérgica,icpc2_description,S,500,S88
+S99,Doença da pele outra,icpc2_description,S,511,S99
+T03,Perda de apetite,icpc2_description,T,514,T03
+T08,Perda de peso,icpc2_description,T,518,T08
+T73,Neoplasia endócrina não especificada/outra,icpc2_description,T,528,T73
+T82,Obesidade,icpc2_description,T,532,T82
+T90,Diabetes não insulino-dependente,icpc2_description,T,538,T90
+T91,Deficiência vitamínica/nutricional,icpc2_description,T,539,T91
+T92,Gota,icpc2_description,T,540,T92
+U04,Incontinência urinária,icpc2_description,U,545,U04
+U88,Glomerulonefrite/nefrose,icpc2_description,U,566,U88
+U99,Doença urinária outra,icpc2_description,U,570,U99
+W10,Contracepção pós-coital,icpc2_description,W,575,W10
+W18,Sintoma/queixa do pós-parto outro,icpc2_description,W,582,W18
+W27,Medo de complicações da gravidez,icpc2_description,W,585,W27
+W28,Limitação funcional/incapacidade (W),icpc2_description,W,586,W28
+W81,Toxémia da gravidez,icpc2_description,W,597,W81
+W84,Gravidez de alto risco,icpc2_description,W,600,W84
+W93,Parto com complicações de nado morto,icpc2_description,W,605,W93
+X07,Menstruação irregular/frequente,icpc2_description,X,616,X07
+X12,Hemorragia pós-menopausa,icpc2_description,X,621,X12
+X70,Sífilis feminina,icpc2_description,X,639,X70
+X99,Doença genital feminino outra,icpc2_description,X,662,X99
+Y13,Esterilização masculina,icpc2_description,Y,672,Y13
+Y73,Prostatite/vesiculite seminal,icpc2_description,Y,684,Y73
+Y82,Hipospádias,icpc2_description,Y,693,Y82
+Y83,Testículo não descido,icpc2_description,Y,694,Y83
+Y86,Hidrocelo,icpc2_description,Y,697,Y86
+Z14,Problema por doença do parceiro,icpc2_description,Z,712,Z14
+Z29,Problema social NE,icpc2_description,Z,725,Z29

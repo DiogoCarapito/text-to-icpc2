@@ -28,7 +28,6 @@ dataset avalilabe at [https://huggingface.co/datasets/diogocarapito/text-to-icpc
 - **inference.py** - cli inference to test predictions
 - **st-inference.py** - streamlit based inferece api
 - **hf_cli.py** - hugging face interface
-###
 
 ## cheat sheet
 
