@@ -2,32 +2,88 @@ import numpy as np
 from datasets import load_dataset
 import click
 import mlflow.pyfunc
+import torch
+import logging
 
-
-@click.command()
-@click.option(
-    "--runid",
-    default="b315798cd6804664811f539447d5a563",
-    help="The run id of the model to be validated",
-    required=False,
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
 )
-def validation(runid):
+    
+def validation(runid: str):
+    
+    logging.info("Starting validation")
+    
+    logging.info("Loading dataset")
+    
     # Load the dataset
     dataset = load_dataset("diogocarapito/text-to-icpc2")
-
+    
+    # transform to pandas DataFrame
+    dataset = dataset["train"].to_pandas()
+    
+    # filter only to origin icpc2_description
+    val_dataset = dataset[dataset["origin"] == "icpc2_description"]
+    
+    logging.info("Loading model")
+    logging.info(f"Using the run id '{runid}'")
+    
     # model name
     model_uri = f"runs:/{runid}/model"
 
     # Load the model from MLflow
     loaded_model = mlflow.pyfunc.load_model(model_uri=model_uri)
 
-    # perform inference in all validation dataset
-    predictions = loaded_model.predict(dataset["text"])
+    # # seting up the device cuda, mps or cpu
+    # device = torch.device(
+    #     "cuda"
+    #     if torch.cuda.is_available()
+    #     else "mps"
+    #     if torch.backends.mps.is_available()
+    #     else "cpu"
+    # )
 
-    # get the accuracy of the model
-    accuracy = np.mean(predictions == dataset["label"])
-    print(f"The accuracy of the model is {accuracy}")
+    logging.info("Performing inference")
+
+    # perform inference in all validation dataset
+    predictions = loaded_model.predict(val_dataset["text"])
+
+
+    logging.info("Calculating accuracy")
     
+    # get the top prediction and add to the val_dataset
+    def get_top_prediction(predictions):
+        return [pred[0][0] for pred in predictions]
+
+    # get the top prediction and add to the val_dataset
+    val_dataset["top_prediction"] = get_top_prediction(predictions)
+    
+    # Get the accuracy of the model
+    accuracy = np.mean(np.array(val_dataset["top_prediction"]) == np.array(val_dataset["code"]))
+
+    # Count the number of correct predictions
+    num_correct_predictions = np.sum(np.array(val_dataset["top_prediction"]) == np.array(val_dataset["code"]))
+    
+    print("")
+    print(f"The number of correct predictions is {num_correct_predictions}/{len(val_dataset)}")
+    print(f"The accuracy of the model is {accuracy * 100:.2f}%")
+    print("")
+    
+    # show the correct predictions
+    correct = val_dataset[val_dataset["top_prediction"] == val_dataset["code"]]
+    #print(correct[["code", "text", "origin", "top_prediction"]])
+    
+    # create a list of correct code predictions
+    correct_list = correct["code"].tolist()
+    print(correct_list)
+    
+    return {
+        "accuracy": accuracy,
+        "num_correct_predictions": num_correct_predictions,
+        "correct_predictions_list": correct_list
+    }
+        
     
     # # Load the model and test prediction
     # loaded_model = mlflow.pyfunc.load_model(model_uri=model_info.model_uri)
@@ -68,8 +124,18 @@ def validation(runid):
     # # print(loaded_model.predict(["Hipertensão", "Diabetes"]))  # Example prediction
     
 
-    return predictions
+    #return predictions
 
+
+@click.command()
+@click.option(
+    "--runid",
+    default="b315798cd6804664811f539447d5a563",
+    help="The run id of the model to be validated",
+    required=False,
+)
+def main(runid: str):
+    return validation(runid)
 
 if __name__ == "__main__":
-    validation()
+    main()

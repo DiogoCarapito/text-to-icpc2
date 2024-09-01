@@ -12,11 +12,11 @@ import mlflow.pyfunc
 import evaluate
 import logging
 import torch
-#from typing import List, Tuple
+from typing import List, Tuple
 import click
+from validation import validation
 
-
-def exp_size(t):
+def experiment_size(t):
     if t == "small":
         return "text_to_icpc2_small"
     elif t == "medium":
@@ -29,10 +29,24 @@ def exp_size(t):
 
 @click.command()
 @click.option(
-    "-t", default="small", help="size of the dataset to be used", required=False
+    "-t", default="small",
+    help="size of the dataset to be used",
+    required=False
 )
-def main(t):
-    experiment_name = exp_size(t)
+@click.option(
+    "--hf",
+    default=False,
+    help="publish to huggingface model",
+    required=False
+)
+@click.option(
+    "--val",
+    default=False,
+    help="perform validation",
+    required=False
+)
+def main(t, hf, val):
+    experiment_name = experiment_size(t)
 
     logging.basicConfig(
         level=logging.INFO,
@@ -52,7 +66,7 @@ def main(t):
 
     # Pick a name that you like and reflects the nature of the runs that you will be recording to the experiment.
     logging.info("Setting up MLFlow")
-    mlflow.set_experiment(experiment_name)
+    mlflow.set_experiment("text-to-icpc2")
 
     # Load the dataset
     logging.info("Loading dataset")
@@ -158,14 +172,15 @@ def main(t):
 
         # Checkpoints will be output to this `training_output_dir`.
         logging.info("Defining the training arguments")
-        training_output_dir = "/tmp/text_to_icpc2"
+        training_output_dir = "/tmp/text-to-icpc2"
         training_args = TrainingArguments(
             output_dir=training_output_dir,
-            evaluation_strategy="epoch",
+            eval_strategy="epoch",
             per_device_train_batch_size=8,
             per_device_eval_batch_size=8,
             logging_steps=64,
-            num_train_epochs=5,
+            seed=42,
+            num_train_epochs=6,
         )
 
         # Instantiate a `Trainer` instance that will be used to initiate a training run.
@@ -186,6 +201,7 @@ def main(t):
         logging.info("Saving the model")
         model_dir = "/tmp/saved_model"
         trainer.save_model(model_dir)
+
 
         # Define a custom PythonModel class for MLflow
         class MyModel(mlflow.pyfunc.PythonModel):
@@ -224,13 +240,22 @@ def main(t):
 
         # Log the model using mlflow.pyfunc.log_model
         logging.info("Logging the model to MLflow")
-        model_info = mlflow.pyfunc.log_model(
+        mlflow.pyfunc.log_model(
             artifact_path="model",
             python_model=MyModel(),
             registered_model_name=f"bert_{experiment_name}",
         )
+        
+        # push the model to huggingface
+        if hf:
+            trainer.push_to_hub()
 
-    validation()
+        # perform a simple validation based on the validation.py script (using only )
+        if val:
+            validation(run.info.run_id)
+        
+        # log the validation artifacts
+        #mlflow.log_artifacts(validation_artifacts, artifact_path="validation")
 
 
 if __name__ == "__main__":

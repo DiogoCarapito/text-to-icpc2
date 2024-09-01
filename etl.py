@@ -97,7 +97,7 @@ def pre_train_prep(force=True):
         data = pd.concat([data_icpc2_1, data_icpc2_2, data_icpc2_3, data_icd10])
 
         # substitute "-" by "A" in codes that start with "-"
-        data["code"] = data["code"].str.replace("-", "A")
+        #data["code"] = data["code"].str.replace("-", "A")
 
         # create a new column with the chapter of the code
         data["chapter"] = data["code"].str[0]

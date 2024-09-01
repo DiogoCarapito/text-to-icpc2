@@ -126,18 +126,20 @@ def upload_files():
 
 
 def upload_model(model_name):
+
     import mlflow.pyfunc
     import tempfile
     from huggingface_hub import HfApi, Repository
 
-    # model_uri = f"runs:/{model_name}/model"
+    # Define the model URI in the MLflow model registry
     model_uri = f"models:/{model_name}/latest"
+    
+    # Load the model from the MLflow model registry
     model = mlflow.pyfunc.load_model(model_uri=model_uri)
 
     # Create a temporary directory
     with tempfile.TemporaryDirectory() as temp_dir:
         # Save the model to this temporary directory
-        # mlflow.pyfunc.save_model(artifact_path=temp_dir, python_model=model)
         mlflow.pyfunc.save_model(path=temp_dir, python_model=model)
 
         # Define your repository name on Hugging Face
@@ -213,7 +215,7 @@ def upload_model(model_name):
     required=True,
     # options=["create_repo", "delete_repo", "delete_file", "upload_files", "upload_model"],
 )
-@click.option("--runid", help="The URI of the model in MLflow.", required=False)
+@click.option("--runid", help="The URI of the model in MLflow.", required=False, default="bert_text_to_icpc2_small")
 def main(cmd, runid):
     if cmd == "create_repo_dataset":
         create_repo_dataset()
