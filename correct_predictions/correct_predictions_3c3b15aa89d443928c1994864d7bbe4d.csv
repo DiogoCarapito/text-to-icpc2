@@ -1,0 +1,12 @@
+code,text,origin,chapter,label,top_prediction
+K71,Febre/doença cardíaca reumática,icpc2_description,K,251,K71
+K73,Malformação congénita cardiovascular,icpc2_description,K,253,K73
+K74,Doença cardiaca isquémica com angina,icpc2_description,K,254,K74
+K75,Enfarte agudo do miocárdio,icpc2_description,K,255,K75
+K83,Doença valvular cardíaca NE,icpc2_description,K,263,K83
+K84,Doença cardíaca outra,icpc2_description,K,264,K84
+K87,Hipertensão com complicações,icpc2_description,K,267,K87
+K90,Trombose/acidente vascular cerebral,icpc2_description,K,270,K90
+K91,Doença vascular cerebral,icpc2_description,K,271,K91
+K94,Flebite/tromboflebite,icpc2_description,K,274,K94
+K99,Doença do aparelho circulatório outra,icpc2_description,K,277,K99

@@ -1,0 +1,4 @@
+code,text,origin,chapter,label,top_prediction
+P76,Perturbação depressiva,icpc2_description,P,400,P76
+R97,Rinite alérgica,icpc2_description,R,451,R97
+T90,Diabetes não insulino-dependente,icpc2_description,T,538,T90

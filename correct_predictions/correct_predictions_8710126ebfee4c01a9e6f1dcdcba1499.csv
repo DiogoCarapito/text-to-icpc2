@@ -1,0 +1,113 @@
+code,text,origin,chapter,label,top_prediction
+-41,Radiologia/imagiologia diagnóstica,icpc2_description,-,11,-41
+-61,Resultado de exame/teste/registo/carta de outro prestador,icpc2_description,-,31,-61
+A23,Factor de risco NE,icpc2_description,A,56,A23
+A70,Tuberculose,icpc2_description,A,62,A70
+A71,Sarampo,icpc2_description,A,63,A71
+A73,Malária,icpc2_description,A,65,A73
+A74,Rubéola,icpc2_description,A,66,A74
+A77,Doença viral outra/NE,icpc2_description,A,69,A77
+A78,Outra doença infecciosa/NE,icpc2_description,A,70,A78
+A80,Traumatismo/ferimento NE,icpc2_description,A,72,A80
+A84,Intoxicação por medicamento,icpc2_description,A,75,A84
+A86,Efeito tóxico de uma substância não-medicinal,icpc2_description,A,77,A86
+A87,Complicação de tratamento médico,icpc2_description,A,78,A87
+A88,Efeito adverso por factor físico,icpc2_description,A,79,A88
+A89,Efeito de uma prótese,icpc2_description,A,80,A89
+A91,Investigação com resultado anormal NE,icpc2_description,A,82,A91
+A94,Morbilidade perinatal outra,icpc2_description,A,85,A94
+A98,Manutenção de saúde/medicina preventiva,icpc2_description,A,89,A98
+A99,Doença/condição de natureza/localização não especificada,icpc2_description,A,90,A99
+B26,Medo de cancro do sangue/linfático,icpc2_description,B,94,B26
+B70,Linfadenite aguda,icpc2_description,B,98,B70
+B72,Doença de Hodgkin/linfoma,icpc2_description,B,100,B72
+B73,Leucemia,icpc2_description,B,101,B73
+B82,Anemia outra/não especificada,icpc2_description,B,110,B82
+B99,Doença do sangue/linfa/baço outra,icpc2_description,B,115,B99
+D07,Dispepsia/indigestão,icpc2_description,D,122,D07
+D09,Náusea,icpc2_description,D,124,D09
+D11,Diarreia,icpc2_description,D,126,D11
+D71,Papeira/parotidite epidémica,icpc2_description,D,145,D71
+D77,Neoplasia digestiva maligna outra/NE,icpc2_description,D,151,D77
+D78,Neoplasia do sistema digestivo benigna/não especificada,icpc2_description,D,152,D78
+D79,Corpo estranho no sistema digestivo,icpc2_description,D,153,D79
+D82,Doença dos dentes/gengiva,icpc2_description,D,156,D82
+D86,Úlcera péptica outra,icpc2_description,D,160,D86
+D91,Hérnia abdominal outra,icpc2_description,D,165,D91
+D93,Síndrome do cólon irritável,icpc2_description,D,167,D93
+D96,Lombrigas/outros parasitas,icpc2_description,D,170,D96
+D97,Doença de fígado NE,icpc2_description,D,171,D97
+D99,Doença do sistema digestivo outra,icpc2_description,D,173,D99
+F01,Dor no olho,icpc2_description,F,174,F01
+F70,Conjuntivite infecciosa,icpc2_description,F,188,F70
+F83,Retinopatia,icpc2_description,F,199,F83
+F92,Catarata,icpc2_description,F,204,F92
+F99,Doença ocular/anexos outra,icpc2_description,F,208,F99
+H72,Otite média serosa,icpc2_description,H,221,H72
+H74,Otite média crónica,icpc2_description,H,223,H74
+H83,Otoesclerose,icpc2_description,H,232,H83
+H86,Surdez,icpc2_description,H,235,H86
+K71,Febre/doença cardíaca reumática,icpc2_description,K,251,K71
+K75,Enfarte agudo do miocárdio,icpc2_description,K,255,K75
+K83,Doença valvular cardíaca NE,icpc2_description,K,263,K83
+K84,Doença cardíaca outra,icpc2_description,K,264,K84
+K88,Hipotensão postural,icpc2_description,K,268,K88
+K90,Trombose/acidente vascular cerebral,icpc2_description,K,270,K90
+K94,Flebite/tromboflebite,icpc2_description,K,274,K94
+L08,Sintoma/queixa do ombro,icpc2_description,L,284,L08
+L76,Fractura: outra,icpc2_description,L,307,L76
+L79,Entorse/distensão de articulação NE,icpc2_description,L,310,L79
+L80,Luxação/subluxação,icpc2_description,L,311,L80
+L81,Traumatismo músculo-esquelético NE,icpc2_description,L,312,L81
+L82,Malformação congénita músculo-esquelética,icpc2_description,L,313,L82
+L88,Artrite reumatóide/seropositiva,icpc2_description,L,319,L88
+L94,Osteocondrose,icpc2_description,L,325,L94
+L99,Doença do aparelho músculo-esquelético outra,icpc2_description,L,330,L99
+N07,Convulsão/ataque,icpc2_description,N,336,N07
+N71,Meningite/encefalite,icpc2_description,N,347,N71
+N81,Lesão do sistema nervoso outra,icpc2_description,N,355,N81
+N87,Parkinsonismo,icpc2_description,N,358,N87
+N89,Enxaqueca,icpc2_description,N,360,N89
+N94,Nevrite/neuropatia periférica,icpc2_description,N,365,N94
+N99,Doença do sistema neurológico outra,icpc2_description,N,367,N99
+P06,Perturbação do sono,icpc2_description,P,373,P06
+P19,Abuso de droga,icpc2_description,P,385,P19
+P73,Psicose afectiva,icpc2_description,P,397,P73
+P76,Perturbação depressiva,icpc2_description,P,400,P76
+P78,Neurastenia/surmenage,icpc2_description,P,402,P78
+R06,Hemorragia nasal/epistáxis,icpc2_description,R,416,R06
+R71,Tosse convulsa,icpc2_description,R,428,R71
+R73,Abcesso/furúnculo no nariz,icpc2_description,R,430,R73
+R75,Sinusite aguda/crónica,icpc2_description,R,432,R75
+R78,Bronquite/bronquiolite aguda,icpc2_description,R,435,R78
+R81,Pneumonia,icpc2_description,R,438,R81
+R83,Infecção respiratória outra,icpc2_description,R,440,R83
+R99,Doença respiratória outra,icpc2_description,R,453,R99
+S03,Verrugas,icpc2_description,S,456,S03
+S14,Queimadura/escaldão,icpc2_description,S,467,S14
+S18,Laceração/corte,icpc2_description,S,471,S18
+S78,Lipoma,icpc2_description,S,490,S78
+S82,Nevo/sinal da pele,icpc2_description,S,494,S82
+S88,Dermatite de contacto/alérgica,icpc2_description,S,500,S88
+S91,Psoríase,icpc2_description,S,503,S91
+S99,Doença da pele outra,icpc2_description,S,511,S99
+T90,Diabetes não insulino-dependente,icpc2_description,T,538,T90
+T91,Deficiência vitamínica/nutricional,icpc2_description,T,539,T91
+T92,Gota,icpc2_description,T,540,T92
+T99,Doença endócrina/metabólica/nutricional outra,icpc2_description,T,542,T99
+U04,Incontinência urinária,icpc2_description,U,545,U04
+U71,Cistite/infecção urinária outra,icpc2_description,U,557,U71
+U88,Glomerulonefrite/nefrose,icpc2_description,U,566,U88
+U99,Doença urinária outra,icpc2_description,U,570,U99
+W84,Gravidez de alto risco,icpc2_description,W,600,W84
+W92,Parto com complicações de nado vivo,icpc2_description,W,604,W92
+X07,Menstruação irregular/frequente,icpc2_description,X,616,X07
+X16,Sintoma/queixa da vulva,icpc2_description,X,625,X16
+X20,Sintoma/queixa do mamilo feminino,icpc2_description,X,629,X20
+X70,Sífilis feminina,icpc2_description,X,639,X70
+X90,Herpes genital feminino,icpc2_description,X,659,X90
+X99,Doença genital feminino outra,icpc2_description,X,662,X99
+Y83,Testículo não descido,icpc2_description,Y,694,Y83
+Y86,Hidrocelo,icpc2_description,Y,697,Y86
+Z04,Problema sócio-cultural,icpc2_description,Z,702,Z04
+Z29,Problema social NE,icpc2_description,Z,725,Z29

@@ -83,51 +83,55 @@ frequency_table = df_pre_train["code"].value_counts()
 # transform the series into a dataframe
 frequency_table = pd.DataFrame(frequency_table)
 
-#order by "code"
-frequency_table = frequency_table.sort_values(by=['code']).reset_index()
+# order by "code"
+frequency_table = frequency_table.sort_values(by=["code"]).reset_index()
 
 # log the count base 2
-#frequency_table['count'] = frequency_table['code'].apply(lambda x: np.log2(x))
+# frequency_table['count'] = frequency_table['code'].apply(lambda x: np.log2(x))
 
 # load correct predictions
-correct_prediction = pd.read_csv("correct_predictions_text_to_icpc2.csv")
+correct_prediction = pd.read_csv("correct_predictions/correct_predictions_862e53bb1e7a4c05ab8a049c5a97a257.csv")
 
 
 # Create a list of codes that are present in correct_prediction
-correct_codes = correct_prediction['code']
+correct_codes = correct_prediction["code"]
 correct_codes = pd.DataFrame(correct_codes)
 
 # fill a new column with True in all rows
-correct_codes['is_correct'] = True
+correct_codes["is_correct"] = True
 
 # merge frequency_table with correct_prediction
-frequency_table = frequency_table.merge(correct_codes, on='code', how='left')
+frequency_table = frequency_table.merge(correct_codes, on="code", how="left")
 
 # Assuming correct_codes has a column indicating correctness, e.g., 'is_correct'
-frequency_table['is_correct'] = frequency_table['is_correct'].fillna(False)
+frequency_table["is_correct"] = frequency_table["is_correct"].fillna(False)
+
+# add a sqrt count to the frequency_table["count"] to make visualization easier
+frequency_table["count_log2"] = np.log2(frequency_table["count"])#.astype(int)
 
 # metric with the number of correct predictions and percentage
 col_1_1, col_1_2 = st.columns(2)
-num_correct = frequency_table[frequency_table['is_correct'] == True].shape[0]
+num_correct = frequency_table[frequency_table["is_correct"] == True].shape[0]
 num_codes = frequency_table.shape[0]
-percentage_correct = round(100*num_correct / num_codes, 2)
+percentage_correct = round(100 * num_correct / num_codes, 2)
 with col_1_1:
     st.metric("Número de previsões corretas", num_correct)
 with col_1_2:
     st.metric("Porcentagem de previsões corretas", f"{percentage_correct}%")
 
+
 # Create a bar chart with Plotly
 fig = px.bar(
     frequency_table,
-    x='code',
-    y='count',
-    color='is_correct',
-    color_discrete_map={True: 'green', False: 'red'},
-    title='Frequency of Codes'
+    x="code",
+    y="count_log2",
+    color="is_correct",
+    color_discrete_map={True: "green", False: "red"},
+    title="Frequency of Codes",
 )
 
 # Sort the x-axis alphabetically
-fig.update_layout(xaxis={'categoryorder':'category ascending'})
+fig.update_layout(xaxis={"categoryorder": "category ascending"})
 
 
 # Display the Plotly chart in Streamlit
@@ -135,8 +139,8 @@ st.plotly_chart(fig)
 
 
 # show the skewness of the codes
-skewness = df_pre_train["code"].value_counts().skew()
-st.metric("Assimetria dos códigos", skewness)
+# skewness = df_pre_train["code"].value_counts().skew()
+# st.metric("Assimetria dos códigos", skewness)
 
 # for each in list_codes:
 #     st.write(f"{each} - {df[df['cod'] == each]['nome'].values[0]}")

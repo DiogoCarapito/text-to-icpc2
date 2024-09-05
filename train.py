@@ -16,6 +16,7 @@ from typing import List, Tuple
 import click
 from validation import validation
 
+
 def experiment_size(t):
     if t == "small":
         return "text_to_icpc2_small"
@@ -29,22 +30,12 @@ def experiment_size(t):
 
 @click.command()
 @click.option(
-    "-t", default="small",
-    help="size of the dataset to be used",
-    required=False
+    "-t", default="small", help="size of the dataset to be used", required=False
 )
 @click.option(
-    "--hf",
-    default=False,
-    help="publish to huggingface model",
-    required=False
+    "--hf", default=False, help="publish to huggingface model", required=False
 )
-@click.option(
-    "--val",
-    default=False,
-    help="perform validation",
-    required=False
-)
+@click.option("--val", default=False, help="perform validation", required=False)
 def main(t, hf, val):
     experiment_name = experiment_size(t)
 
@@ -67,9 +58,6 @@ def main(t, hf, val):
     # Pick a name that you like and reflects the nature of the runs that you will be recording to the experiment.
     logging.info("Setting up MLFlow")
     mlflow.set_experiment("text-to-icpc2")
-
-    # Load the dataset
-    logging.info("Loading dataset")
 
     # Load the dataset
     logging.info("Loading dataset")
@@ -102,6 +90,8 @@ def main(t, hf, val):
         # model_name = "microsoft/Multilingual-MiniLM-L12-H384"
         # model_name = "FacebookAI/xlm-roberta-base"
         model_name = "bert-base-uncased"
+        # model_name = "dmis-lab/biobert-base-cased-v1.1"
+        # model_name = "nlpie/compact-biobert"
 
         logging.info("Using the model '%s'", model_name)
 
@@ -138,9 +128,8 @@ def main(t, hf, val):
 
         # Split the dataset into training and evaluation
         small_dataset_split = small_dataset.train_test_split(
-            test_size=0.2,
-            stratify_by_column="label",
-            seed=42)
+            test_size=0.2, stratify_by_column="label", seed=42
+        )
         small_eval_dataset = small_dataset_split["test"]
         small_train_dataset = small_dataset_split["train"]
 
@@ -170,9 +159,14 @@ def main(t, hf, val):
             predictions = np.argmax(logits, axis=-1)
             return metric.compute(predictions=predictions, references=labels)
 
+        logging.info("Setting up the training output directory")
+        if t == "full" and hf:
+            training_output_dir = "/tmp/text-to-icpc2"
+        else:
+            training_output_dir = f"/tmp/text-to-icpc2-{t}"
+
         # Checkpoints will be output to this `training_output_dir`.
         logging.info("Defining the training arguments")
-        training_output_dir = "/tmp/text-to-icpc2"
         training_args = TrainingArguments(
             output_dir=training_output_dir,
             eval_strategy="epoch",
@@ -180,7 +174,7 @@ def main(t, hf, val):
             per_device_eval_batch_size=8,
             logging_steps=64,
             seed=42,
-            num_train_epochs=6,
+            num_train_epochs=12,
         )
 
         # Instantiate a `Trainer` instance that will be used to initiate a training run.
@@ -202,7 +196,6 @@ def main(t, hf, val):
         model_dir = "/tmp/saved_model"
         trainer.save_model(model_dir)
 
-
         # Define a custom PythonModel class for MLflow
         class MyModel(mlflow.pyfunc.PythonModel):
             def load_context(self, context):
@@ -214,7 +207,7 @@ def main(t, hf, val):
                     "text-classification",
                     model=self.model,
                     tokenizer=self.tokenizer,
-                    device= 0 if torch.cuda.is_available() else -1
+                    device=0 if torch.cuda.is_available() else -1,
                 )
 
             def predict(
@@ -245,7 +238,7 @@ def main(t, hf, val):
             python_model=MyModel(),
             registered_model_name=f"bert_{experiment_name}",
         )
-        
+
         # push the model to huggingface
         if hf:
             trainer.push_to_hub()
@@ -253,9 +246,9 @@ def main(t, hf, val):
         # perform a simple validation based on the validation.py script (using only )
         if val:
             validation(run.info.run_id)
-        
+
         # log the validation artifacts
-        #mlflow.log_artifacts(validation_artifacts, artifact_path="validation")
+        # mlflow.log_artifacts(validation_artifacts, artifact_path="validation")
 
 
 if __name__ == "__main__":

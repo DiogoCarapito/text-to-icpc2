@@ -6,7 +6,7 @@ import pandas as pd
 st.title("text_to_icpc2")
 
 # model selection
-runid = st.text_input("Model URI", "21ba34b2067a4cc69c0fb19d4bde3c87")
+runid = st.text_input("Model URI", "8710126ebfee4c01a9e6f1dcdcba1499")
 
 inference_input = st.text_input("Input data for inference", "Hipertensão arterial")
 

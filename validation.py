@@ -10,25 +10,25 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
 )
-    
+
+
 def validation(runid: str):
-    
     logging.info("Starting validation")
-    
+
     logging.info("Loading dataset")
-    
+
     # Load the dataset
     dataset = load_dataset("diogocarapito/text-to-icpc2")
-    
+
     # transform to pandas DataFrame
     dataset = dataset["train"].to_pandas()
-    
+
     # filter only to origin icpc2_description
     val_dataset = dataset[dataset["origin"] == "icpc2_description"]
-    
+
     logging.info("Loading model")
     logging.info(f"Using the run id '{runid}'")
-    
+
     # model name
     model_uri = f"runs:/{runid}/model"
 
@@ -49,42 +49,47 @@ def validation(runid: str):
     # perform inference in all validation dataset
     predictions = loaded_model.predict(val_dataset["text"])
 
-
     logging.info("Calculating accuracy")
-    
+
     # get the top prediction and add to the val_dataset
     def get_top_prediction(predictions):
         return [pred[0][0] for pred in predictions]
 
     # get the top prediction and add to the val_dataset
     val_dataset["top_prediction"] = get_top_prediction(predictions)
-    
+
     # Get the accuracy of the model
-    accuracy = np.mean(np.array(val_dataset["top_prediction"]) == np.array(val_dataset["code"]))
+    accuracy = np.mean(
+        np.array(val_dataset["top_prediction"]) == np.array(val_dataset["code"])
+    )
 
     # Count the number of correct predictions
-    num_correct_predictions = np.sum(np.array(val_dataset["top_prediction"]) == np.array(val_dataset["code"]))
-    
+    num_correct_predictions = np.sum(
+        np.array(val_dataset["top_prediction"]) == np.array(val_dataset["code"])
+    )
+
     print("")
-    print(f"The number of correct predictions is {num_correct_predictions}/{len(val_dataset)}")
+    print(
+        f"The number of correct predictions is {num_correct_predictions}/{len(val_dataset)}"
+    )
     print(f"The accuracy of the model is {accuracy * 100:.2f}%")
     print("")
-    
+
     # show the correct predictions
     correct = val_dataset[val_dataset["top_prediction"] == val_dataset["code"]]
-    #print(correct[["code", "text", "origin", "top_prediction"]])
-    
+    # print(correct[["code", "text", "origin", "top_prediction"]])
+
     # create a list of correct code predictions
     correct_list = correct["code"].tolist()
     print(correct_list)
-    
+    correct.to_csv(f"correct_predictions/correct_predictions_{runid}.csv", index=False)
+
     return {
         "accuracy": accuracy,
         "num_correct_predictions": num_correct_predictions,
-        "correct_predictions_list": correct_list
+        "correct_predictions_list": correct_list,
     }
-        
-    
+
     # # Load the model and test prediction
     # loaded_model = mlflow.pyfunc.load_model(model_uri=model_info.model_uri)
 
@@ -122,9 +127,8 @@ def validation(runid: str):
     # correct.to_csv(f"correct_predictions_{experiment_name}.csv", index=False)
 
     # # print(loaded_model.predict(["Hipertensão", "Diabetes"]))  # Example prediction
-    
 
-    #return predictions
+    # return predictions
 
 
 @click.command()
@@ -136,6 +140,7 @@ def validation(runid: str):
 )
 def main(runid: str):
     return validation(runid)
+
 
 if __name__ == "__main__":
     main()
