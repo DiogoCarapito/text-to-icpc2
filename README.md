@@ -76,20 +76,24 @@ docker build -t main:latest .
     cd text-to-icpc2
     ```
 
-3. execute the setup_cuda.sh
+3. Create a virtual environment (python3.11)
+
+    ```bash
+    python3 -m venv .venv
+    source .venv/bin/activate
+    ```
+
+4. execute the setup_cuda.sh
 
     ```bash
     chmod +x setup_cuda.sh
-    ```
-
-    ```bash
     ./setup_cuda.sh
     ```
 
 install blinker manualy if it gives error
 
 ```bash
-ip install --upgrade --ignore-installed blinker
+pip install --upgrade --ignore-installed blinker
 pip show blinker
 ```
 

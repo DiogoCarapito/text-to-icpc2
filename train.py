@@ -37,7 +37,7 @@ def experiment_size(t):
     "--hf", default=False, help="publish to huggingface model", required=False
 )
 @click.option("--val", default=False, help="perform validation", required=False)
-def main(t, hf, val):
+def main(t="small", hf=False, val=False):
     experiment_name = experiment_size(t)
 
     logging.basicConfig(
@@ -129,9 +129,7 @@ def main(t, hf, val):
 
         # Split the dataset into training and evaluation
         small_dataset_split = small_dataset.train_test_split(
-            test_size=0.2,
-            stratify_by_column="label",
-            seed=42
+            test_size=0.2, stratify_by_column="label", seed=42
         )
         small_eval_dataset = small_dataset_split["test"]
         small_train_dataset = small_dataset_split["train"]
@@ -180,7 +178,6 @@ def main(t, hf, val):
             seed=42,
             num_train_epochs=10,
             logging_dir="./logs",
-            
         )
 
         # Instantiate a `Trainer` instance that will be used to initiate a training run.
@@ -204,25 +201,31 @@ def main(t, hf, val):
 
         # Define a custom PythonModel class for MLflow
         class MyModel(mlflow.pyfunc.PythonModel):
+            def __init__(self):
+                super().__init__()
+                self.model_classification = None
+                self.tokenizer_classification = None
+                self.pipeline_classification = None
+
             def load_context(self, context):
-                self.model = AutoModelForSequenceClassification.from_pretrained(
+                self.model_classification = AutoModelForSequenceClassification.from_pretrained(
                     model_dir
                 )
-                self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-                self.pipeline = pipeline(
+                self.tokenizer_classification = AutoTokenizer.from_pretrained(model_name)
+                self.pipeline_classification = pipeline(
                     "text-classification",
-                    model=self.model,
-                    tokenizer=self.tokenizer,
+                    model=self.model_classification,
+                    tokenizer=self.tokenizer_classification,
                     device=0 if torch.cuda.is_available() else -1,
                 )
 
             def predict(
                 self, context, model_input: List[str]
             ) -> List[List[Tuple[str, float]]]:
-                inputs = self.tokenizer(
+                inputs = self.tokenizer_classification(
                     model_input, return_tensors="pt", padding=True, truncation=True
                 )
-                outputs = self.model(**inputs)
+                outputs = self.model_classification(**inputs)
                 logits = outputs.logits.detach().numpy()
 
                 # Get the top 5 predictions and their scores

@@ -1,6 +1,5 @@
 import pandas as pd
-import click
-from datasets import Dataset, Features, ClassLabel, Value, DatasetDict
+from datasets import Dataset, Features, ClassLabel, Value#, DatasetDict
 
 
 def semicolon_colon_split(df, string_split, column_name):
@@ -193,7 +192,7 @@ def pre_train_prep(force=True):
 # @click.option("--force", default=True, help="Force the data processing")
 def main():
     data = pre_train_prep(force=True)
-
+    print(data)
 
 if __name__ == "__main__":
     main()

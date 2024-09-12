@@ -87,7 +87,7 @@ frequency_table = pd.DataFrame(frequency_table)
 frequency_table = frequency_table.sort_values(by=["code"]).reset_index()
 
 # log the count base 2
-frequency_table["count"] = frequency_table["code"].apply(lambda x: np.log2(x))
+frequency_table["count"] = np.log2(frequency_table["code"])
 
 # load correct predictions
 correct_prediction = pd.read_csv(

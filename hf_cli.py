@@ -1,5 +1,14 @@
 import click
 from huggingface_hub import HfApi
+#from huggingface_hub import create_repo
+from huggingface_hub import ModelCard, ModelCardData
+from huggingface_hub import DatasetCard, DatasetCardData
+# from huggingface_hub import delete_repo
+# from huggingface_hub import delete_file
+#from huggingface_hub import upload_folder
+import mlflow.pyfunc
+import tempfile
+from huggingface_hub import Repository
 
 # import tempfile
 # import shutil
@@ -10,24 +19,18 @@ from huggingface_hub import HfApi
 # @click.option("--name", default="text-to-icpc2", help="Name of the repository")
 # @click.option("--repotype", default="dataset", help="dataset, model or space")
 def create_repo_dataset():
-    from huggingface_hub import create_repo
-
     api = HfApi()
     api.create_repo(repo_id="text-to-icpc2", repo_type="dataset")
     print("Dataset repository created")
 
 
 def create_repo_model():
-    from huggingface_hub import create_repo
-
     api = HfApi()
     api.create_repo(repo_id="text-to-icpc2", repo_type="model")
     print("Model repository created")
 
 
 def card_repo_model():
-    from huggingface_hub import ModelCard, ModelCardData
-
     card_data = ModelCardData(
         language="pt",
         license="apache-2.0",
@@ -47,8 +50,6 @@ def card_repo_model():
 
 
 def card_repo_dataset():
-    from huggingface_hub import DatasetCard, DatasetCardData
-
     card_data = DatasetCardData(
         language="pt",
         license="apache-2.0",
@@ -92,17 +93,14 @@ def card_repo_dataset():
     # )
 
 
-def delete_repo():
-    from huggingface_hub import delete_repo
-
+def delete_repo_hf():
     api = HfApi()
     api.delete_repo(repo_id="diogocarapito/text-to-icpc2", repo_type="dataset")
     print("Dataset repository deleted")
 
 
-def delete_file():
+def delete_file_hf():
     api = HfApi()
-    from huggingface_hub import delete_file
 
     api.delete_file(
         path_in_repo="data.csv",
@@ -113,8 +111,6 @@ def delete_file():
 
 
 def upload_files():
-    from huggingface_hub import upload_folder
-
     api = HfApi()
     api.upload_folder(
         folder_path="data/data_pre_train_hf",
@@ -126,10 +122,6 @@ def upload_files():
 
 
 def upload_model(model_name):
-    import mlflow.pyfunc
-    import tempfile
-    from huggingface_hub import HfApi, Repository
-
     # Define the model URI in the MLflow model registry
     model_uri = f"models:/{model_name}/latest"
 
@@ -210,7 +202,7 @@ def upload_model(model_name):
 @click.command()
 @click.option(
     "--cmd",
-    help="Command to run, e.g. 'create_repo', 'delete_repo', 'delete_file', 'upload_files', 'upload_model'",
+    help="Command to run, e.g. 'create_repo', 'delete_repo_hf', 'delete_file_hf', 'upload_files', 'upload_model'",
     required=True,
     # options=["create_repo", "delete_repo", "delete_file", "upload_files", "upload_model"],
 )
@@ -220,7 +212,7 @@ def upload_model(model_name):
     required=False,
     default="bert_text_to_icpc2_small",
 )
-def main(cmd, runid):
+def main(cmd="create_repo", runid="bert_text_to_icpc2_small"):
     if cmd == "create_repo_dataset":
         create_repo_dataset()
     elif cmd == "create_repo_model":
@@ -229,10 +221,10 @@ def main(cmd, runid):
         card_repo_model()
     elif cmd == "card_repo_dataset":
         card_repo_dataset()
-    elif cmd == "delete_repo":
-        delete_repo()
-    elif cmd == "delete_file":
-        delete_file()
+    elif cmd == "delete_repo_hf":
+        delete_repo_hf()
+    elif cmd == "delete_file_hf":
+        delete_file_hf()
     elif cmd == "upload_files":
         upload_files()
     elif cmd == "upload_model":

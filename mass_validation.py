@@ -17,7 +17,7 @@ def mass_validation(experiment):
     mlflow.set_experiment(experiment)
     list_models = mlflow.search_runs()
 
-    logging.info(f"Found {len(list_models)} models to be validated")
+    logging.info("Found %d models to be validated", len(list_models))
 
     logging.info("Starting validation")
     for _, run in list_models.iterrows():
@@ -27,9 +27,9 @@ def mass_validation(experiment):
 
         try:
             data = validation(runid)
-        except Exception as e:
-            logging.error(f"Error in validation of run id {runid}")
-            logging.error(e)
+        except FileNotFoundError as fnfe:
+            logging.error("FileNotFoundError occurred: %s", fnfe)
+    
             data = {
                 "accuracy": None,
                 "num_correct_predictions": None,
@@ -40,7 +40,7 @@ def mass_validation(experiment):
         print(f"Accuracy: {data['accuracy']}")
 
         # log the results of the validation into a new row of a csv file
-        with open("results_mass_validation.csv", "a") as f:
+        with open("results_mass_validation.csv", "a", encoding="utf-8") as f:
             f.write(
                 f"{experiment},{run_name},{runid},{data['accuracy']},{data['num_correct_predictions']},{data['correct_predictions_list']}\n"
             )
@@ -54,7 +54,7 @@ def mass_validation(experiment):
     help="select the experiment to be validated",
     required=True,
 )
-def main(exp):
+def main(exp="text-to-icpc2"):
     mass_validation(exp)
 
 

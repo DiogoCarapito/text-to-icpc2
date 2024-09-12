@@ -22,7 +22,7 @@ def run_inference(model_uri: str, input_data: List[str]) -> List[str]:
     type=str,
     required=False,
     help="The URI of the model in MLflow.",
-    default="ea30c97b19ad4921990f3011a7a7bd15",
+    default="862e53bb1e7a4c05ab8a049c5a97a257",
 )
 @click.option(
     "--input_data",
@@ -32,7 +32,7 @@ def run_inference(model_uri: str, input_data: List[str]) -> List[str]:
     help="Input data for inference.",
     default=["hipertensão arterial", "enfarte agudo do miocardio"],
 )
-def main(runid: str, input_data: tuple[str]):
+def main(runid: str = "862e53bb1e7a4c05ab8a049c5a97a257", input_data: tuple[str] = ("hipertensão arterial", "enfarte agudo do miocardio")):
     # Replace with your model URI
     model_uri = f"runs:/{runid}/model"
 

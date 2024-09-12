@@ -13,7 +13,7 @@ logging.basicConfig(
 )
 
 
-def validation(runid: str):
+def validation(runid: str = "862e53bb1e7a4c05ab8a049c5a97a257"):
     logging.info("Starting validation")
 
     logging.info("Loading dataset")
@@ -25,10 +25,10 @@ def validation(runid: str):
     val_dataset = dataset["train"].to_pandas()
 
     # filter only to origin icpc2_description
-    #val_dataset = val_dataset[val_dataset["origin"] == "icpc2_description"]
+    # val_dataset = val_dataset[val_dataset["origin"] == "icpc2_description"]
 
     logging.info("Loading model")
-    logging.info(f"Using the run id '{runid}'")
+    logging.info("Using the run id '%s'", runid)
 
     # model name
     model_uri = f"runs:/{runid}/model"
@@ -135,11 +135,11 @@ def validation(runid: str):
 @click.command()
 @click.option(
     "--runid",
-    default="b315798cd6804664811f539447d5a563",
+    default="862e53bb1e7a4c05ab8a049c5a97a257",
     help="The run id of the model to be validated",
     required=False,
 )
-def main(runid: str):
+def main(runid: str = "862e53bb1e7a4c05ab8a049c5a97a257"):
     return validation(runid)
 
 
