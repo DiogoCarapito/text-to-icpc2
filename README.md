@@ -83,7 +83,7 @@ docker build -t main:latest .
     ```
 
     ```bash
-    ./setup.sh
+    ./setup_cuda.sh
     ```
 
 install blinker manualy if it gives error
