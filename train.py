@@ -208,10 +208,12 @@ def main(t="small", hf=False, val=False):
                 self.pipeline_classification = None
 
             def load_context(self, context):
-                self.model_classification = AutoModelForSequenceClassification.from_pretrained(
-                    model_dir
+                self.model_classification = (
+                    AutoModelForSequenceClassification.from_pretrained(model_dir)
                 )
-                self.tokenizer_classification = AutoTokenizer.from_pretrained(model_name)
+                self.tokenizer_classification = AutoTokenizer.from_pretrained(
+                    model_name
+                )
                 self.pipeline_classification = pipeline(
                     "text-classification",
                     model=self.model_classification,

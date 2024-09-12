@@ -29,7 +29,7 @@ def mass_validation(experiment):
             data = validation(runid)
         except FileNotFoundError as fnfe:
             logging.error("FileNotFoundError occurred: %s", fnfe)
-    
+
             data = {
                 "accuracy": None,
                 "num_correct_predictions": None,
