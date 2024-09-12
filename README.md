@@ -61,17 +61,30 @@ build docker image
 docker build -t main:latest .
 ```
 
-### paperspace setup with cuda
+### Paperspace setup with cuda
 
-How to start:
+1. Remove all files
 
-```bash
-chmod +x setup_cuda.sh
-```
+    ```bash
+    rm -rf *
+    ```
 
-```bash
-./setup.sh
-```
+2. Clone git repo
+
+    ```bash
+    git clone https://github.com/DiogoCarapito/text-to-icpc2
+    cd text-to-icpc2
+    ```
+
+3. execute the setup_cuda.sh
+
+    ```bash
+    chmod +x setup_cuda.sh
+    ```
+
+    ```bash
+    ./setup.sh
+    ```
 
 install blinker manualy if it gives error
 

@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Remove all files
-rm -rf *
-
-# Clone git repo
-git clone https://github.com/DiogoCarapito/text-to-icpc2
-cd text-to-icpc2
 
 # Create a virtual environment (python3.11)
 python3 -m venv .venv
