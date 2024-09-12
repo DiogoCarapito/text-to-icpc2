@@ -89,7 +89,7 @@ docker build -t main:latest .
 install blinker manualy if it gives error
 
 ```bash
-pip install --upgrade blinker
+ip install --upgrade --ignore-installed blinker
 pip show blinker
 ```
 

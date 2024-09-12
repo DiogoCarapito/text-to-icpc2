@@ -173,11 +173,14 @@ def main(t, hf, val):
         training_args = TrainingArguments(
             output_dir=training_output_dir,
             eval_strategy="epoch",
+            run_name="text-to-icpc2",
             per_device_train_batch_size=8,
             per_device_eval_batch_size=8,
             logging_steps=64,
             seed=42,
             num_train_epochs=10,
+            logging_dir="./logs",
+            
         )
 
         # Instantiate a `Trainer` instance that will be used to initiate a training run.

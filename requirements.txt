@@ -28,7 +28,8 @@ numpy==1.26.4
 scikit-learn
 #transformers==4.42.4 # transformers integration with mlflow seems to be working up to version 4.42.4
 #transformers>=4.43 # transformers version that works with apple silicon 'mps'
-transformers==4.44.0
+#transformers==4.44.0  # transformers version that works with apple silicon 'mps'
+transformers==4.44.2 # transformers version that works with cuda
 torch
 torchvision
 torchaudio
@@ -36,7 +37,8 @@ mlflow
 huggingface
 datasets
 evaluate
-accelerate>=0.21.0
+#accelerate>=0.21.0 # accelerate version that works with apple silicon 'mps'
+accelerate==0.34.2 # accelerate version that works with cuda
 ray[tune]
 
 # huggingface API
