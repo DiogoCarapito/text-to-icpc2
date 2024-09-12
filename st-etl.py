@@ -87,10 +87,12 @@ frequency_table = pd.DataFrame(frequency_table)
 frequency_table = frequency_table.sort_values(by=["code"]).reset_index()
 
 # log the count base 2
-# frequency_table['count'] = frequency_table['code'].apply(lambda x: np.log2(x))
+frequency_table["count"] = frequency_table["code"].apply(lambda x: np.log2(x))
 
 # load correct predictions
-correct_prediction = pd.read_csv("correct_predictions/correct_predictions_862e53bb1e7a4c05ab8a049c5a97a257.csv")
+correct_prediction = pd.read_csv(
+    "correct_predictions/correct_predictions_862e53bb1e7a4c05ab8a049c5a97a257.csv"
+)
 
 
 # Create a list of codes that are present in correct_prediction
@@ -107,7 +109,7 @@ frequency_table = frequency_table.merge(correct_codes, on="code", how="left")
 frequency_table["is_correct"] = frequency_table["is_correct"].fillna(False)
 
 # add a sqrt count to the frequency_table["count"] to make visualization easier
-frequency_table["count_log2"] = np.log2(frequency_table["count"])#.astype(int)
+frequency_table["count_log2"] = np.log2(frequency_table["count"])  # .astype(int)
 
 # metric with the number of correct predictions and percentage
 col_1_1, col_1_2 = st.columns(2)

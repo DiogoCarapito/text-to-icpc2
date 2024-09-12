@@ -2,7 +2,8 @@ import numpy as np
 from datasets import load_dataset
 import click
 import mlflow.pyfunc
-import torch
+
+# import torch
 import logging
 
 logging.basicConfig(
@@ -21,10 +22,10 @@ def validation(runid: str):
     dataset = load_dataset("diogocarapito/text-to-icpc2")
 
     # transform to pandas DataFrame
-    dataset = dataset["train"].to_pandas()
+    val_dataset = dataset["train"].to_pandas()
 
     # filter only to origin icpc2_description
-    val_dataset = dataset[dataset["origin"] == "icpc2_description"]
+    #val_dataset = val_dataset[val_dataset["origin"] == "icpc2_description"]
 
     logging.info("Loading model")
     logging.info(f"Using the run id '{runid}'")

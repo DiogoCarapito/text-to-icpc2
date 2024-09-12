@@ -14,6 +14,7 @@ import logging
 import torch
 from typing import List, Tuple
 import click
+
 from validation import validation
 
 
@@ -128,7 +129,9 @@ def main(t, hf, val):
 
         # Split the dataset into training and evaluation
         small_dataset_split = small_dataset.train_test_split(
-            test_size=0.2, stratify_by_column="label", seed=42
+            test_size=0.2,
+            stratify_by_column="label",
+            seed=42
         )
         small_eval_dataset = small_dataset_split["test"]
         small_train_dataset = small_dataset_split["train"]
@@ -174,7 +177,7 @@ def main(t, hf, val):
             per_device_eval_batch_size=8,
             logging_steps=64,
             seed=42,
-            num_train_epochs=12,
+            num_train_epochs=10,
         )
 
         # Instantiate a `Trainer` instance that will be used to initiate a training run.

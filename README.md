@@ -60,3 +60,70 @@ build docker image
 ```bash
 docker build -t main:latest .
 ```
+
+### paperspace setup with cuda
+
+How to start:
+
+- remove all files
+
+```bash
+rm -rf *
+```
+
+- clone git repo
+
+```bash
+git clone https://github.com/DiogoCarapito/text-to-icpc2
+cd text-to-icpc2
+````
+
+- create a venv (python3.11)
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+- install blinker manualy
+
+```bash
+pip install --upgrade blinker
+pip show blinker
+```
+
+- uninstall torch libraries
+
+```bash
+pip uninstall torch torchvision torchaudio
+```
+
+- check which gpu is available
+
+```bash
+nvcc --version
+```
+
+- install torch for the available gpu
+
+```bash
+pip install torch==1.13.0+cu117 torchvision==0.14.0+cu117 torchaudio==0.13.0+cu117 -f https://download.pytorch.org/whl/torch_stable.html
+````
+
+- final check if torch is working properly
+
+```bash
+python
+```
+
+```bash
+python -c "import torch; print(torch.__version__)"
+```
+
+### CUDA
+
+check NVidea processes
+
+```bash
+nvidia-smi
+```
