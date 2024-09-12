@@ -99,8 +99,13 @@ pip show blinker
 
 ### CUDA
 
-check NVidea processes
+NVIDEA monitor
 
 ```bash
 nvidia-smi
+```
+
+```bash
+chmod +x monitor_gpu.sh
+./monitor_gpu.sh
 ```
