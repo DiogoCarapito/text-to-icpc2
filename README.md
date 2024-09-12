@@ -85,7 +85,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-- install blinker manualy
+- install blinker manualy if it gives error
 
 ```bash
 pip install --upgrade blinker

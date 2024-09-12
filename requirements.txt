@@ -30,6 +30,8 @@ scikit-learn
 #transformers>=4.43 # transformers version that works with apple silicon 'mps'
 transformers==4.44.0
 torch
+torchvision
+torchaudio
 mlflow
 huggingface
 datasets
