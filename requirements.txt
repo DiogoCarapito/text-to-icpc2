@@ -37,9 +37,13 @@ transformers==4.44.2 # transformers version that works with cuda
 # torchaudio
 
 # torch for cuda
-torch==2.1.1+cu121 -f https://download.pytorch.org/whl/torch_stable.html
-torchaudio==2.1.1+cu121 -f https://download.pytorch.org/whl/torch_stable.html
-torchvision==0.16.1+cu121 -f https://download.pytorch.org/whl/torch_stable.html
+# torch==2.1.1+cu121 -f https://download.pytorch.org/whl/torch_stable.html
+# torchaudio==2.1.1+cu121 -f https://download.pytorch.org/whl/torch_stable.html
+# torchvision==0.16.1+cu121 -f https://download.pytorch.org/whl/torch_stable.html
+
+https://download.pytorch.org/whl/cu121/torch-2.1.1%2Bcu121-cp39-cp39-linux_x86_64.whl
+https://download.pytorch.org/whl/cu121/torchaudio-2.1.1%2Bcu121-cp39-cp39-linux_x86_64.whl
+https://download.pytorch.org/whl/cu121/torchvision-0.16.1%2Bcu121-cp39-cp39-linux_x86_64.whl
 
 mlflow
 huggingface

@@ -99,7 +99,7 @@ pip show blinker
 
 ### CUDA
 
-NVIDEA monitor
+NVIDIA monitor
 
 ```bash
 nvidia-smi
