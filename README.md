@@ -63,34 +63,47 @@ docker build -t main:latest .
 
 ### Paperspace setup with cuda
 
-1. Remove all files
+Remove all files
 
-    ```bash
-    rm -rf *
-    ```
+```bash
+rm -rf *
+```
 
-2. Clone git repo
+Clone git repo
 
-    ```bash
-    git clone https://github.com/DiogoCarapito/text-to-icpc2
-    cd text-to-icpc2
-    ```
+```bash
+git clone https://github.com/DiogoCarapito/text-to-icpc2
+cd text-to-icpc2
+```
 
-3. Create a virtual environment (python3.11)
+Create a virtual environment (python3.11)
 
-    ```bash
-    python3 -m venv .venv
-    source .venv/bin/activate
-    ```
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
 
-4. execute the setup_cuda.sh
+make all
 
-    ```bash
-    chmod +x setup_cuda.sh
-    ./setup_cuda.sh
-    ```
+```bash
+make all
+```
 
-install blinker manualy if it gives error
+reinstall torch
+
+```bash
+pip uninstall -y torch torchvision torchaudio
+pip install torch==2.1.1+cu121 torchaudio==2.1.1+cu121 torchvision==0.16.1+cu121 -f https://download.pytorch.org/whl/torch_stable.html
+```
+
+optional setup
+
+```bash
+chmod +x setup_cuda.sh
+./setup_cuda.sh
+```
+
+Install blinker manualy if it gives error
 
 ```bash
 pip install --upgrade --ignore-installed blinker
@@ -99,11 +112,19 @@ pip show blinker
 
 ### CUDA
 
+Check torch instalation
+
+```bash
+python -c "import torch; print(torch.__version__)"
+```
+
 NVIDIA monitor
 
 ```bash
 nvidia-smi
 ```
+
+Continuous NVIDIA monitor
 
 ```bash
 chmod +x monitor_gpu.sh
