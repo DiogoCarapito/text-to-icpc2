@@ -5,12 +5,12 @@ from transformers import (
     AutoModelForSequenceClassification,
     TrainingArguments,
     Trainer,
-    pipeline,
+    #pipeline,
 )
 import evaluate
 import logging
 import torch
-from typing import List, Tuple
+#from typing import List, Tuple
 import click
 import wandb
 
