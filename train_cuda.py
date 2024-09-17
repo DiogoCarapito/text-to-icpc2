@@ -78,7 +78,8 @@ def main(t="small", hf=False, val=False):
     lable2id = {v: k for k, v in id2label.items()}
 
     # model name
-    model_name = "bert-base-uncased"
+    # model_name = "bert-base-uncased"
+    model_name = "distilbert-base-uncased"
 
     logging.info("Using the model '%s'", model_name)
 
@@ -185,7 +186,7 @@ def main(t="small", hf=False, val=False):
 
     # Log the model using W&B
     logging.info("Logging the model to W&B")
-    artifact = wandb.Artifact(name=f"bert_{experiment_name}", type="model")
+    artifact = wandb.Artifact(name=f"distilbert_{experiment_name}", type="model")
     artifact.add_dir(model_dir)
     wandb.log_artifact(artifact)
 
