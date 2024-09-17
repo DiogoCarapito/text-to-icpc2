@@ -5,16 +5,18 @@ from transformers import (
     AutoModelForSequenceClassification,
     TrainingArguments,
     Trainer,
-    #pipeline,
+    # pipeline,
 )
 import evaluate
 import logging
 import torch
-#from typing import List, Tuple
+
+# from typing import List, Tuple
 import click
 import wandb
 
-from validation import validation
+# from validation import validation
+
 
 def experiment_size(t):
     if t == "small":
@@ -25,6 +27,7 @@ def experiment_size(t):
         return "text_to_icpc2"
     else:
         return "text_to_icpc2_small"
+
 
 @click.command()
 @click.option(
@@ -48,7 +51,7 @@ def main(t="small", hf=False, val=False):
 
     # seting up the device cuda, mps or cpu
     device = torch.device("cuda")
-    
+
     logging.info("Using the device '%s'", device)
 
     # Load the dataset
@@ -68,9 +71,7 @@ def main(t="small", hf=False, val=False):
         "Getting the distribution of the labels as a dictionary id : label and label : id"
     )
     # get the distribution of the labels as a dictionary id : label
-    id2label = {
-        idx: features["label"].int2str(idx) for idx in range(number_of_labels)
-    }
+    id2label = {idx: features["label"].int2str(idx) for idx in range(number_of_labels)}
     # id2label = {idx:features["label"].int2str(idx) for idx in range(6)} # for the emotion dataset
 
     # get the distribution of the labels as a dictionary label : id
@@ -78,7 +79,7 @@ def main(t="small", hf=False, val=False):
 
     # model name
     model_name = "bert-base-uncased"
-    
+
     logging.info("Using the model '%s'", model_name)
 
     # Load the tokenizer
@@ -119,9 +120,7 @@ def main(t="small", hf=False, val=False):
     small_train_dataset = small_dataset_split["train"]
 
     logging.info("The size of the training dataset is %s", len(small_train_dataset))
-    logging.info(
-        "The size of the evaluation dataset is %s", len(small_eval_dataset)
-    )
+    logging.info("The size of the evaluation dataset is %s", len(small_eval_dataset))
 
     # Load the model
     logging.info("Loading the model")
@@ -196,10 +195,12 @@ def main(t="small", hf=False, val=False):
 
     # perform a simple validation based on the validation.py script (using only )
     if val:
-        validation(run.info.run_id)
+        # validation(run.info.run_id)
+        pass
 
     # log the validation artifacts
     # wandb.log_artifacts(validation_artifacts, artifact_path="validation")
+
 
 if __name__ == "__main__":
     main()
