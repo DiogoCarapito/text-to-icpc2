@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Create a .venv in python 3.11
-python3.11 -m venv .venv
-echo "Created .venv"
+# python3.11 -m venv .venv
+# echo "Created .venv"
 
 # Activate the virtual environment
-source .venv/bin/activate
+# source .venv/bin/activate
 echo "Activated .venv"
 
 # install requirements with make

@@ -33,14 +33,12 @@ transformers==4.44.2 # transformers version that works with cuda
 
 
 # torch for cuda
-torch==2.1.1+cu121 -f https://download.pytorch.org/whl/torch_stable.html
-torchaudio==2.1.1+cu121 -f https://download.pytorch.org/whl/torch_stable.html
-torchvision==0.16.1+cu121 -f https://download.pytorch.org/whl/torch_stable.html
-
-
-wandb
+torch #==2.1.1+cu121 -f https://download.pytorch.org/whl/torch_stable.html
+torchaudio #==2.1.1+cu121 -f https://download.pytorch.org/whl/torch_stable.html
+torchvision #==0.16.1+cu121 -f https://download.pytorch.org/whl/torch_stable.html
 
 # mlflow
+wandb
 huggingface
 datasets
 evaluate
