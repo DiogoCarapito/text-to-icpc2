@@ -18,15 +18,15 @@ import wandb
 # from validation import validation
 
 
-def experiment_size(t):
+def experiment_size(name, t):
     if t == "small":
-        return "text_to_icpc2_small"
+        return f"text_to_icpc2_small_{name}"
     elif t == "medium":
-        return "text_to_icpc2_medium"
+        return f"text_to_icpc2_medium_{name}"
     elif t == "full":
-        return "text_to_icpc2"
+        return f"text_to_icpc2_{name}"
     else:
-        return "text_to_icpc2_small"
+        return f"text_to_icpc2_small_{name}"
 
 
 @click.command()
@@ -37,8 +37,9 @@ def experiment_size(t):
     "--hf", default=False, help="publish to huggingface model", required=False
 )
 @click.option("--val", default=False, help="perform validation", required=False)
-def main(t="small", hf=False, val=False):
-    experiment_name = experiment_size(t)
+@click.option("--name", default="bert", help="model_name", required=False)
+def main(t="small", hf=False, val=False, name="bert"):
+    experiment_name = experiment_size(name, t)
 
     logging.basicConfig(
         level=logging.INFO,

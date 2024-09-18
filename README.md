@@ -96,18 +96,19 @@ pip uninstall -y torch torchvision torchaudio
 pip install torch==2.1.1+cu121 torchaudio==2.1.1+cu121 torchvision==0.16.1+cu121 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 
-optional setup
-
-```bash
-chmod +x setup_cuda.sh
-./setup_cuda.sh
-```
 
 Install blinker manualy if it gives error
 
 ```bash
 pip install --upgrade --ignore-installed blinker
 pip show blinker
+```
+
+.sh file (not working right now)
+
+```bash
+chmod +x setup_cuda.sh
+source setup_cuda.sh
 ```
 
 ### CUDA
