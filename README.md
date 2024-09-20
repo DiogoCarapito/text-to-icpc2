@@ -79,7 +79,7 @@ cd text-to-icpc2
 Create a virtual environment (python3.11)
 
 ```bash
-python3.11 -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 ```
 
@@ -100,8 +100,8 @@ pip install torch==2.1.1+cu121 torchaudio==2.1.1+cu121 torchvision==0.16.1+cu121
 Install blinker manualy if it gives error
 
 ```bash
-# pip install --upgrade --ignore-installed blinker
-# pip show blinker
+pip install --upgrade --ignore-installed blinker
+pip show blinker
 ```
 
 .sh file (not working right now)
@@ -129,5 +129,5 @@ Continuous NVIDIA monitor
 
 ```bash
 chmod +x monitor_gpu.sh
-source monitor_gpu.sh
+./monitor_gpu.sh
 ```
