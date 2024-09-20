@@ -1,0 +1,32 @@
+{
+  "os":  "macOS-14.6.1-x86_64-i386-64bit",
+  "python":  "3.11.9",
+  "startedAt":  "2024-09-20T07:41:46.557141Z",
+  "program":  "/Users/diogocarapito/Programação/text-to-icpc2/wandb_inference.py",
+  "codePath":  "wandb_inference.py",
+  "git":  {
+    "remote":  "https://github.com/DiogoCarapito/text-to-icpc2",
+    "commit":  "dca4082c99c4a594bf99ec10a4b6501803626958"
+  },
+  "email":  "diogo.carapito@icloud.com",
+  "root":  "/Users/diogocarapito/Programação/text-to-icpc2",
+  "host":  "MacBook-Pro.local",
+  "username":  "diogocarapito",
+  "executable":  "/Users/diogocarapito/Programação/text-to-icpc2/.venv/bin/python",
+  "codePathLocal":  "wandb_inference.py",
+  "cpu_count":  11,
+  "cpu_count_logical":  11,
+  "disk":  {
+    "/":  {
+      "total":  "494384795648",
+      "used":  "409517436928"
+    }
+  },
+  "memory":  {
+    "total":  "19327352832"
+  },
+  "cpu":  {
+    "count":  11,
+    "countLogical":  11
+  }
+}

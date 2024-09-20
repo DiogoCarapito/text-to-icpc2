@@ -8,6 +8,8 @@ ipython==8.17.2
 
 blinker==1.8.2
 
+python-dotenv
+
 # support libraries
 setuptools==71.1.0
 pyperclip==1.8.2
