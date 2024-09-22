@@ -7,7 +7,7 @@ black==23.9.1
 ipython==8.17.2
 
 # support libraries
-setuptools==71.1.0
+#setuptools==71.1.0
 python-dotenv
 pyperclip==1.8.2
 blinker==1.8.2

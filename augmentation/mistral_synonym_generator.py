@@ -1,5 +1,5 @@
 import torch
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer, pipeline
+from transformers import AutoTokenizer, AutoModelForCausalLM
 import click
 import logging
 
@@ -17,7 +17,7 @@ def device_cuda_cpu():
     "--model_name",
     help="select the model to be used",
     required=False,
-    default="google/flan-t5-base",
+    default="mistralai/Mistral-7B-Instruct-v0.3",
 )
 @click.option(
     "--prompt",
@@ -27,25 +27,24 @@ def device_cuda_cpu():
     # default="dá-me 5 sinonimos para hipertensão arterial",
     default="give me a synonym for high blood pressure",
 )
-def flan_t5_synonym_generator(
-    model_name="google/flan-t5-base",
-    # prompt="dá-me 5 sinónimos novos que não constam nesta lista de palavras: hipertensão, hipertensão arterial, pressão alta, tensão alta, tensão arterial elevada",
+def mistral_synonym_generator(
+    model_name="mistralai/Mistral-7B-Instruct-v0.3",
+    prompt="dá-me 5 sinónimos novos que não constam nesta lista de palavras: hipertensão, hipertensão arterial, pressão alta, tensão alta, tensão arterial elevada",
     # prompt="dá-me 5 sinonimos para hipertensão arterial",
-    prompt="give me a synonym for high blood pressure",
 ):
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s - %(levelname)s - %(message)s",
         datefmt="%Y-%m-%d %H:%M:%S",
     )
-
+    
     # device check
     device = device_cuda_cpu()
     logging.info("Using the device '%s'", device)
 
     # load the model
     logging.info("Loading the pipeline %s", model_name)
-    model = AutoModelForSeq2SeqLM.from_pretrained(model_name).to(device)
+    model = AutoModelForCausalLM.from_pretrained(model_name).to(device)
 
     # load the tokenizer
     logging.info("Loading the tokenizer %s", model_name)
@@ -59,10 +58,12 @@ def flan_t5_synonym_generator(
 
     # generate the synonyms
     logging.info("Generating the synonyms")
-    print(pipe(prompt))
+    output = pipe(prompt)
+    
+    print(output)
 
-    return pipe(prompt)
+    return output
 
 
 if __name__ == "__main__":
-    flan_t5_synonym_generator()
+    mistral_synonym_generator()

@@ -89,7 +89,7 @@ make all
 make all
 ```
 
-reinstall torch
+reinstall torch compatible with available gpu
 
 ```bash
 pip uninstall -y torch torchvision torchaudio
