@@ -1,5 +1,5 @@
 import streamlit as st
-from inference import run_inference
+from inference.inference import run_inference
 import pandas as pd
 
 # Title

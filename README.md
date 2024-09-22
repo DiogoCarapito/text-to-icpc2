@@ -20,28 +20,28 @@ NLP project to transform clinical diagnosis into ICPC-2 codes for Portuguese Pri
 
 dataset avalilabe at [https://huggingface.co/datasets/diogocarapito/text-to-icpc2](https://huggingface.co/datasets/diogocarapito/text-to-icpc2)
 
+## Demo
+
+demo available att [https://text-to-icpc2demo.streamlit.app](https://text-to-icpc2demo.streamlit.app)
+
 ## Project scructure
 
-- **etl.py** - Extration, Transform and Load data script
-- **st-etl.py** - streamlit based dataset exploration
-- **train.py** - training script
-- **inference.py** - cli inference to test predictions
-- **st-inference.py** - streamlit based inferece api
-- **hf_cli.py** - hugging face interface
+- **data/** - starter datasets
+- **dataset/** - creation of training dataset, from original tables to generated labels
+- **train/** - training algorithms for mps and cuda
+- **inference/** - interaction with the model
+- **validation/** - validation algorithms for acessing model performance
+- **augmentation/** - data augmentation scrips and streamlit interface
+- **utils/** - supporting scripts
 
 ## cheat sheet
 
 ### venv
 
-create venv
+create and activate .venv
 
 ```bash
-python3 -m venv .venv
-```
-
-activate venv
-
-```bash
+python3.11 -m venv .venv
 source .venv/bin/activate
 ```
 
@@ -96,18 +96,17 @@ pip uninstall -y torch torchvision torchaudio
 pip install torch==2.1.1+cu121 torchaudio==2.1.1+cu121 torchvision==0.16.1+cu121 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 
-
-Install blinker manualy if it gives error
+manually upgrade blinker if it gives error
 
 ```bash
 pip install --upgrade --ignore-installed blinker
 pip show blinker
 ```
 
-.sh file (not working right now)
+.sh file for setup automation (not working right now)
 
 ```bash
-chmod +x setup_cuda.sh
+chmod +x train/setup_cuda.sh
 source setup_cuda.sh
 ```
 
@@ -128,6 +127,6 @@ nvidia-smi
 Continuous NVIDIA monitor
 
 ```bash
-chmod +x monitor_gpu.sh
+chmod +x train/monitor_gpu.sh
 ./monitor_gpu.sh
 ```

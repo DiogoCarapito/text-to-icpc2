@@ -1,4 +1,4 @@
-from validation import validation
+from validation.validation import validation
 import mlflow
 import logging
 import click

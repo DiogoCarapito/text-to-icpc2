@@ -3,7 +3,7 @@
 import streamlit as st
 import pandas as pd
 from utils.etl_utils import load_ipcp2
-from etl import pre_train_prep
+from etl.etl import pre_train_prep
 import plotly.express as px
 import numpy as np
 

@@ -6,14 +6,11 @@ pytest-cov==4.1.0
 black==23.9.1
 ipython==8.17.2
 
-blinker==1.8.2
-
-
-
 # support libraries
 setuptools==71.1.0
 python-dotenv
 pyperclip==1.8.2
+blinker==1.8.2
 
 # Visualization libraries
 streamlit==1.37.0
@@ -23,35 +20,35 @@ plotly
 # Data manipulation libraries
 pandas==2.2.1
 openpyxl==3.1.2
-
 # icd10-cm==0.0.5
 
 # Machine learning libraries
 numpy==1.26.4
 scikit-learn
 transformers==4.44.2 # transformers version that works with cuda
-#transformers==4.42.4 # transformers integration with mlflow seems to be working up to version 4.42.4
-#transformers>=4.43 # transformers version that works with apple silicon 'mps'
 #transformers==4.44.0  # transformers version that works with apple silicon 'mps'
-
 
 # torch for cuda
 torch #==2.1.1+cu121 -f https://download.pytorch.org/whl/torch_stable.html
 torchaudio #==2.1.1+cu121 -f https://download.pytorch.org/whl/torch_stable.html
 torchvision #==0.16.1+cu121 -f https://download.pytorch.org/whl/torch_stable.html
 
-# mlflow
-wandb
-huggingface
-datasets
 evaluate
-#accelerate>=0.21.0 # accelerate version that works with apple silicon 'mps'
+# accelerate>=0.21.0 # accelerate version that works with apple silicon 'mps'
 accelerate==0.34.2 # accelerate version that works with cuda
 ray[tune]
 
-# huggingface API
-Jinja2
-huggingface_hub
 
+# MLOps libraries
+mlflow # used in local trains
+wandb # used in cloud's gpu powerd trains
+
+# huggingface API
+huggingface
+huggingface_hub
+datasets
+
+# Other
+Jinja2
 sentencepiece
 txtai

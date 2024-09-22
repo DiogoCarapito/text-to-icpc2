@@ -15,7 +15,8 @@ import torch
 from typing import List, Tuple
 import click
 
-from validation import validation
+from validation.validation import validation
+from utils.utils import device_cuda_mps_cpu
 
 
 def experiment_size(t):
@@ -46,14 +47,7 @@ def main(t="small", hf=False, val=False):
         datefmt="%Y-%m-%d %H:%M:%S",
     )
 
-    # seting up the device cuda, mps or cpu
-    device = torch.device(
-        "cuda"
-        if torch.cuda.is_available()
-        else "mps"
-        if torch.backends.mps.is_available()
-        else "cpu"
-    )
+    device = device_cuda_mps_cpu()
     logging.info("Using the device '%s'", device)
 
     # Pick a name that you like and reflects the nature of the runs that you will be recording to the experiment.
