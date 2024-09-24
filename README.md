@@ -79,21 +79,21 @@ cd text-to-icpc2
 Create a virtual environment (python3.11)
 
 ```bash
-python3 -m venv .venv
+python3.11 -m venv .venv
 source .venv/bin/activate
 ```
 
-make all
-
-```bash
-make all
-```
-
-reinstall torch compatible with available gpu
+install torch compatible with available gpu before make all
 
 ```bash
 pip uninstall -y torch torchvision torchaudio
 pip install torch==2.1.1+cu121 torchaudio==2.1.1+cu121 torchvision==0.16.1+cu121 -f https://download.pytorch.org/whl/torch_stable.html
+```
+
+make all
+
+```bash
+make all
 ```
 
 manually upgrade blinker if it gives error
