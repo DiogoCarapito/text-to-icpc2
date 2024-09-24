@@ -202,7 +202,7 @@ def main(t="small", hf=False, val=False, name="bert"):
         )
     run.link_artifact(   
         artifact=logged_artifact,  
-        target_path="diogocarapito-uls-amadora-sintra-org/wandb-registry-model/text-to-icpc2"
+        target_path="diogoc/wandb-registry-model/{experiment_name}"
         )
     
     run.finish()
