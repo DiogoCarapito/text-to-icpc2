@@ -116,8 +116,8 @@ def main(t="small", hf=False, val=False, name="bert"):
     seed = 42
     tokenized_dataset_split = tokenized_dataset.train_test_split(
         test_size=test_size,
+        stratify_by_column=stratify_by_column,
         seed=seed,
-        stratify=stratify_by_column
     )
     
     # Get the training and evaluation datasets separately
