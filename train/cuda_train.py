@@ -49,7 +49,7 @@ def main(t="small", hf=False, val=False, name="bert"):
 
     # Initialize W&B
     logging.info("Initializing W&B")
-    #wandb.init(project="text-to-icpc2", name=experiment_name)
+    # wandb.init(project="text-to-icpc2", name=experiment_name)
     run = wandb.init(project="text-to-icpc2")
 
     # seting up the device cuda, mps or cpu
@@ -63,7 +63,7 @@ def main(t="small", hf=False, val=False, name="bert"):
     elif t == "medium" or t == "full":
         dataset = load_dataset("diogocarapito/text-to-icpc2")
     logging.info("Getting the distribution of the labels")
-    
+
     # get the distribution of the labels
     features = dataset["train"].features
 
@@ -101,13 +101,13 @@ def main(t="small", hf=False, val=False, name="bert"):
 
     # Define the filter function
     logging.info("Applying the filter function for smaller size dataset")
-    
+
     def filter_chapter(example):
         return example["chapter"] == "K"
-    
+
     if t == "medium":
         tokenized_dataset = tokenized_dataset["train"].filter(filter_chapter)
-            
+
     elif t == "small" or t == "full":
         pass
 
@@ -124,13 +124,17 @@ def main(t="small", hf=False, val=False, name="bert"):
         stratify_by_column=stratify_by_column,
         seed=seed,
     )
-    
+
     # Get the training and evaluation datasets separately
     tokenized_dataset_split_train = tokenized_dataset_split["train"]
     tokenized_dataset_split_test = tokenized_dataset_split["test"]
 
-    logging.info("The size of the training dataset is %s", len(tokenized_dataset_split_train))
-    logging.info("The size of the evaluation dataset is %s", len(tokenized_dataset_split_test))
+    logging.info(
+        "The size of the training dataset is %s", len(tokenized_dataset_split_train)
+    )
+    logging.info(
+        "The size of the evaluation dataset is %s", len(tokenized_dataset_split_test)
+    )
 
     # Load the model
     logging.info("Loading the model")
@@ -196,19 +200,17 @@ def main(t="small", hf=False, val=False, name="bert"):
     # Log the model using W&B
     logging.info("Logging the model to W&B")
     logged_artifact = run.log_artifact(
-        artifact_or_path=model_dir,
-        name=experiment_name,
-        type="model"
-        )
-    run.link_artifact(   
-        artifact=logged_artifact,  
-        target_path="diogoc/wandb-registry-model/{experiment_name}"
-        )
-    
+        artifact_or_path=model_dir, name=experiment_name, type="model"
+    )
+    run.link_artifact(
+        artifact=logged_artifact,
+        target_path="diogoc/wandb-registry-model/{experiment_name}",
+    )
+
     run.finish()
     logging.info("Model Logged to W&B")
     logging.info("Training Finished Successfully!!")
-    
+
     # artifact = wandb.Artifact(
     #     name=experiment_name,
     #     type="model")
