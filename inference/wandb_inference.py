@@ -1,32 +1,41 @@
 import wandb
 import torch
-
 import os
 from dotenv import load_dotenv
+import click
 
-load_dotenv()
+@click.command()
+@click.option("--i_input", type=str, required=False)
+def wandb_inference(i_input="Hipertensão arterial"):
+    load_dotenv()
 
-wandb_api_key = os.getenv("WANDB_API_KEY")
+    wandb_api_key = os.getenv("WANDB_API_KEY")
 
-wandb.login(key=wandb_api_key)
+    wandb.login(key=wandb_api_key)
 
-wandb.init(project="text-to-icpc2")
+    wandb.init(project="text-to-icpc2")
 
-artifact = wandb.use_artifact(
-    "diogocarapito-uls-amadora-sintra/text-to-icpc2/distilbert_text_to_icpc2_medium_bert:v0",
-    type="model",
-)
+    artifact = wandb.use_artifact(
+        "diogocarapito-uls-amadora-sintra/text-to-icpc2/distilbert_text_to_icpc2_medium_bert:v0",
+        type="model",
+    )
 
-artifact_dir = artifact.download()
+    artifact_dir = artifact.download()
 
-model_path = f"{artifact_dir}/model"
 
-model = torch.load(model_path)
+    model_path = f"{artifact_dir}/model"
 
-model.eval()
+    # load model
+    model = torch.load(model_path)
 
-inference_input = "Hipertensão arterial"
+    # put model in inference mode
+    model.eval()
 
-predictions = model.predict([inference_input])
+    # make inference
+    predictions = model.predict([i_input])
 
-print(predictions)
+    # print predictions
+    print(predictions)
+
+if "__main__" == __name__:
+    wandb_inference()

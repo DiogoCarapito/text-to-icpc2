@@ -20,13 +20,13 @@ import wandb
 
 def experiment_size(name, t):
     if t == "small":
-        return f"text_to_icpc2_small_{name}"
+        return f"text_to_icpc2_small-{name}"
     elif t == "medium":
-        return f"text_to_icpc2_medium_{name}"
+        return f"text_to_icpc2_medium-{name}"
     elif t == "full":
-        return f"text_to_icpc2_{name}"
+        return f"text_to_icpc2-{name}"
     else:
-        return f"text_to_icpc2_small_{name}"
+        return f"text_to_icpc2_small-{name}"
 
 
 @click.command()
@@ -37,7 +37,7 @@ def experiment_size(name, t):
     "--hf", default=False, help="publish to huggingface model", required=False
 )
 @click.option("--val", default=False, help="perform validation", required=False)
-@click.option("--name", default="bert", help="model_name", required=False)
+@click.option("--name", default="bert", help="model name", required=False)
 def main(t="small", hf=False, val=False, name="bert"):
     experiment_name = experiment_size(name, t)
 
@@ -48,11 +48,11 @@ def main(t="small", hf=False, val=False, name="bert"):
     )
 
     # Initialize W&B
+    logging.info("Initializing W&B")
     wandb.init(project="text-to-icpc2", name=experiment_name)
 
     # seting up the device cuda, mps or cpu
     device = torch.device("cuda")
-
     logging.info("Using the device '%s'", device)
 
     # Load the dataset
@@ -61,8 +61,8 @@ def main(t="small", hf=False, val=False, name="bert"):
         dataset = load_dataset("diogocarapito/text-to-icpc2-nano")
     elif t == "medium" or t == "full":
         dataset = load_dataset("diogocarapito/text-to-icpc2")
-
     logging.info("Getting the distribution of the labels")
+    
     # get the distribution of the labels
     features = dataset["train"].features
 
@@ -71,17 +71,13 @@ def main(t="small", hf=False, val=False, name="bert"):
     logging.info(
         "Getting the distribution of the labels as a dictionary id : label and label : id"
     )
-    # get the distribution of the labels as a dictionary id : label
+    # get the distribution of the labels as a dictionary id : label and  label : id
     id2label = {idx: features["label"].int2str(idx) for idx in range(number_of_labels)}
-    # id2label = {idx:features["label"].int2str(idx) for idx in range(6)} # for the emotion dataset
-
-    # get the distribution of the labels as a dictionary label : id
     lable2id = {v: k for k, v in id2label.items()}
 
     # model name
     # model_name = "bert-base-uncased"
     model_name = "distilbert-base-uncased"
-
     logging.info("Using the model '%s'", model_name)
 
     # Load the tokenizer
@@ -100,11 +96,10 @@ def main(t="small", hf=False, val=False, name="bert"):
 
     # Tokenize the data
     logging.info("Tokenize the data")
-    tokenized_datasets = dataset.map(tokenize_function, batched=True)
+    tokenized_dataset = dataset.map(tokenize_function, batched=True)
 
     # Define the filter function
     logging.info("Applying the filter function for smaller size dataset")
-
     def filter_chapter(example):
         if t == "medium":
             return example["chapter"] == "K"
@@ -112,17 +107,25 @@ def main(t="small", hf=False, val=False, name="bert"):
             return example
 
     # Select a small subset of the data
-    small_dataset = tokenized_datasets["train"].filter(filter_chapter)
+    tokenized_dataset = tokenized_dataset["train"].filter(filter_chapter)
 
     # Split the dataset into training and evaluation
-    small_dataset_split = small_dataset.train_test_split(
-        test_size=0.2, stratify_by_column="label", seed=42
+    logging.info("Splitting the dataset into training and evaluation")
+    test_size = 0.2
+    stratify_by_column = "label"
+    seed = 42
+    tokenized_dataset_split = tokenized_dataset.train_test_split(
+        test_size=test_size,
+        seed=seed,
+        stratify=stratify_by_column
     )
-    small_eval_dataset = small_dataset_split["test"]
-    small_train_dataset = small_dataset_split["train"]
+    
+    # Get the training and evaluation datasets separately
+    tokenized_dataset_split_train = tokenized_dataset_split["train"]
+    tokenized_dataset_split_test = tokenized_dataset_split["test"]
 
-    logging.info("The size of the training dataset is %s", len(small_train_dataset))
-    logging.info("The size of the evaluation dataset is %s", len(small_eval_dataset))
+    logging.info("The size of the training dataset is %s", len(tokenized_dataset_split_train))
+    logging.info("The size of the evaluation dataset is %s", len(tokenized_dataset_split_test))
 
     # Load the model
     logging.info("Loading the model")
@@ -146,17 +149,17 @@ def main(t="small", hf=False, val=False, name="bert"):
         return metric.compute(predictions=predictions, references=labels)
 
     logging.info("Setting up the training output directory")
-    if t == "full" and hf:
-        training_output_dir = "/tmp/text-to-icpc2"
-    else:
-        training_output_dir = f"/tmp/text-to-icpc2-{t}"
+    # if t == "full" and hf:
+    #     training_output_dir = "/tmp/text-to-icpc2"
+    # else:
+    training_output_dir = f"/tmp/{experiment_name}"
 
     # Checkpoints will be output to this `training_output_dir`.
     logging.info("Defining the training arguments")
     training_args = TrainingArguments(
         output_dir=training_output_dir,
         eval_strategy="epoch",
-        run_name="text-to-icpc2",
+        run_name=experiment_name,
         per_device_train_batch_size=8,
         per_device_eval_batch_size=8,
         logging_steps=64,
@@ -171,8 +174,8 @@ def main(t="small", hf=False, val=False, name="bert"):
     trainer = Trainer(
         model=model,
         args=training_args,
-        train_dataset=small_train_dataset,
-        eval_dataset=small_eval_dataset,
+        train_dataset=tokenized_dataset_split_train,
+        eval_dataset=tokenized_dataset_split_test,
         compute_metrics=compute_metrics,
     )
 
@@ -187,7 +190,9 @@ def main(t="small", hf=False, val=False, name="bert"):
 
     # Log the model using W&B
     logging.info("Logging the model to W&B")
-    artifact = wandb.Artifact(name=f"distilbert_{experiment_name}", type="model")
+    artifact = wandb.Artifact(
+        name=experiment_name,
+        type="model")
     artifact.add_dir(model_dir)
     wandb.log_artifact(artifact)
 
