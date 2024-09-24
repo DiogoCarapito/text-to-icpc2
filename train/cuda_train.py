@@ -49,7 +49,8 @@ def main(t="small", hf=False, val=False, name="bert"):
 
     # Initialize W&B
     logging.info("Initializing W&B")
-    wandb.init(project="text-to-icpc2", name=experiment_name)
+    #wandb.init(project="text-to-icpc2", name=experiment_name)
+    run = wandb.init(project="text-to-icpc2")
 
     # seting up the device cuda, mps or cpu
     device = torch.device("cuda")
@@ -100,11 +101,15 @@ def main(t="small", hf=False, val=False, name="bert"):
 
     # Define the filter function
     logging.info("Applying the filter function for smaller size dataset")
+    
     def filter_chapter(example):
-        if t == "medium":
-            return example["chapter"] == "K"
-        elif t == "small" or t == "full":
-            return example
+        return example["chapter"] == "K"
+    
+    if t == "medium":
+        tokenized_dataset = tokenized_dataset["train"].filter(filter_chapter)
+            
+    elif t == "small" or t == "full":
+        pass
 
     # Select a small subset of the data
     tokenized_dataset = tokenized_dataset["train"].filter(filter_chapter)
@@ -190,11 +195,25 @@ def main(t="small", hf=False, val=False, name="bert"):
 
     # Log the model using W&B
     logging.info("Logging the model to W&B")
-    artifact = wandb.Artifact(
+    logged_artifact = run.log_artifact(
+        artifact_or_path=model_dir,
         name=experiment_name,
-        type="model")
-    artifact.add_dir(model_dir)
-    wandb.log_artifact(artifact)
+        type="model"
+        )
+    run.link_artifact(   
+        artifact=logged_artifact,  
+        target_path="diogocarapito-uls-amadora-sintra-org/wandb-registry-model/text-to-icpc2"
+        )
+    
+    run.finish()
+    logging.info("Model Logged to W&B")
+    logging.info("Training Finished Successfully!!")
+    
+    # artifact = wandb.Artifact(
+    #     name=experiment_name,
+    #     type="model")
+    # artifact.add_dir(model_dir)
+    # wandb.log_artifact(artifact)
 
     # push the model to huggingface
     if hf:
