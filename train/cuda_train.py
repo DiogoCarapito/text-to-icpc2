@@ -199,7 +199,10 @@ def main(t="small", hf=False, val=False, name="bert"):
 
     # Log the model using W&B
     logging.info("Logging the model to W&B")
-    run.link_model(model_dir)
+    run.link_model(
+        path=model_dir,
+        registered_model_name=experiment_name,
+        )
     
     # logged_artifact = run.log_artifact(
     #     artifact_or_path=model_dir, name=experiment_name, type="model"
