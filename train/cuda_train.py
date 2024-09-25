@@ -199,13 +199,15 @@ def main(t="small", hf=False, val=False, name="bert"):
 
     # Log the model using W&B
     logging.info("Logging the model to W&B")
-    logged_artifact = run.log_artifact(
-        artifact_or_path=model_dir, name=experiment_name, type="model"
-    )
-    run.link_artifact(
-        artifact=logged_artifact,
-        target_path="diogoc/wandb-registry-model/{experiment_name}",
-    )
+    run.link_model(model_dir)
+    
+    # logged_artifact = run.log_artifact(
+    #     artifact_or_path=model_dir, name=experiment_name, type="model"
+    # )
+    # run.link_artifact(
+    #     artifact=logged_artifact,
+    #     target_path="diogoc/wandb-registry-model/{experiment_name}",
+    # )
 
     run.finish()
     logging.info("Model Logged to W&B")
