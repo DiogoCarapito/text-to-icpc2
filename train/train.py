@@ -40,7 +40,7 @@ def experiment_size(size, model_name):
 )
 @click.option(
     "--dev",
-    # default="cuda",
+    default="cuda",
     required=True,
     help="device to be used",
 )
@@ -205,6 +205,9 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
     # Train the model
     logging.info("Training the model")
     trainer.train()
+    
+    model_dir = "/tmp/saved_model"
+    trainer.save_model(model_dir)
 
     # Evaluate the model by using on the full tokenized_dataset
     logging.info("Evaluating the model")
@@ -239,11 +242,11 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
 
     # Save the model to a directory as ONNX
     logging.info("Saving the model as ONNX")
-    model_dir = "/tmp/saved_model"
+    
     onnx_model_path = f"{model_dir}/model.onnx"
-    dummy_model_input = tokenizer("Hipertensão Arterial", return_tensors="pt").to(
-        device
-    )
+    dummy_model_input = tokenizer(
+        "Hipertensão Arterial",
+        return_tensors="pt").to(device)
 
     torch.onnx.export(
         model,
