@@ -192,24 +192,83 @@ def main(t="small", hf=False, val=False, name="bert"):
     logging.info("Training the model")
     trainer.train()
 
-    # Save the model to a directory
+
+    # Evaluate the model by using on the full tokenized_dataset
+    logging.info("Evaluating the model")
+    eval_results = trainer.evaluate(tokenized_dataset)
+    wandb.log(eval_results)
+    logging.info("Evaluation results: %s", eval_results)
+    
+    
+    
+    # # Define a class for the inference model
+    # class ModelInference:
+    #     def __init__(self, model_dir):
+    #         # Load the tokenizer and model
+    #         self.tokenizer = AutoTokenizer.from_pretrained(model_dir)
+    #         self.model = AutoModelForSequenceClassification.from_pretrained(model_dir)
+    #         self.model.eval()  # Set the model to evaluation mode
+
+    #     def predict(self, text, top_k=5):
+    #         # Tokenize the input text
+    #         inputs = self.tokenizer(text, return_tensors="pt")
+
+    #         # Perform inference
+    #         with torch.no_grad():
+    #             outputs = self.model(**inputs)
+    #             probabilities = torch.nn.functional.softmax(outputs.logits, dim=-1)
+    #             topk_values, topk_indices = torch.topk(probabilities, k=top_k, dim=-1)
+
+    #         # Convert indices to labels
+    #         topk_labels = [self.model.config.id2label[idx.item()] for idx in topk_indices[0]]
+
+    #         return topk_values[0], topk_labels
+
+
+    # Save the model to a directory as onnx
     logging.info("Saving the model")
     model_dir = "/tmp/saved_model"
-    trainer.save_model(model_dir)
-
-    # Log the model using W&B
+    onnx_model_path = f"{model_dir}/model.onnx"
+    torch.onnx.export(
+        model,
+        (torch.randn(1, 512).to(device),),
+        onnx_model_path,
+        input_names=["input"],
+        output_names=["output"],
+    )
+    
+    
+    
+    # # Log the model using W&B
     logging.info("Logging the model to W&B")
-
-    # Log the model artifact
-    artifact = wandb.Artifact(name=experiment_name, type="model")
-    artifact.add_dir(model_dir)
+    artifact = wandb.Artifact(name="my_model", type="model")
+    artifact.add_file(onnx_model_path)
     run.log_artifact(artifact)
 
-    # Link the artifact to the run
+    # Link the artifact to the model registry
     run.link_artifact(
         artifact=artifact,
-        target_path=f"diogoc/wandb-registry-text-to-icpc2/{experiment_name}",
+        target_path=f"diogoc/text-to-icpc2/{experiment_name}:latest",
     )
+
+    logging.info("Model logged to W&B model registry")
+    
+    
+    # logging.info("Saving the model")
+    # model_dir = "/tmp/saved_model"
+    # trainer.save_model(model_dir)
+
+
+    # # Log the model artifact
+    # artifact = wandb.Artifact(name=experiment_name, type="model")
+    # artifact.add_dir(model_dir)
+    # run.log_artifact(artifact)
+
+    # # Link the artifact to the run
+    # run.link_artifact(
+    #     artifact=artifact,
+    #     target_path=f"diogoc/wandb-registry-text-to-icpc2/{experiment_name}",
+    # )
 
     # logged_artifact = run.log_artifact(model_dir, experiment_name, type="model")
 
