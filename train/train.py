@@ -19,6 +19,7 @@ import wandb
 
 
 def experiment_size(size, model_name):
+    model_name = model_name.split("/")[-1]
     if size == "full":
         return f"text-to-icpc2-{model_name}"
     else:
