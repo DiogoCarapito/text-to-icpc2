@@ -122,7 +122,8 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
         if size == "medium":
             return example["chapter"] == "K"
         else:
-            pass
+            return example
+        
 
     # Select a small subset of the data
     tokenized_dataset = tokenized_dataset["train"].filter(filter_chapter)
