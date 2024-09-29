@@ -215,7 +215,8 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
 
     # Evaluate the model by using on the full tokenized_dataset
     logging.info("Evaluating the model")
-    eval_results = trainer.evaluate(tokenized_dataset["train"])
+    print(tokenized_dataset)
+    eval_results = trainer.evaluate(tokenized_dataset)
     wandb.log(eval_results)
     logging.info("Accuracy: %s", eval_results["eval_accuracy"])
 
