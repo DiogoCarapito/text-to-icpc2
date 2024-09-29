@@ -128,7 +128,7 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
         pass
 
     # Select a small subset of the data
-    tokenized_dataset = tokenized_dataset["train"].filter(filter_chapter)
+    # tokenized_dataset = tokenized_dataset["train"].filter(filter_chapter)
 
     # Split the dataset into training and evaluation
     logging.info("Splitting the dataset into training and evaluation")

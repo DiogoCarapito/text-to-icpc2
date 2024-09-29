@@ -1,11 +1,11 @@
 import wandb
 import torch
-#import onnxruntime as ort
+
+# import onnxruntime as ort
 import os
 from dotenv import load_dotenv
 import click
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
-from typing import List
 
 
 @click.command()
@@ -15,54 +15,53 @@ def wandb_inference(i_input="Hipertensão arterial", model_name="text-to-icpc2:v
     load_dotenv()
     wandb_api_key = os.getenv("WANDB_API_KEY")
     wandb.login(key=wandb_api_key)
-    #wandb.init(project="text-to-icpc2")
+    # wandb.init(project="text-to-icpc2")
 
     run = wandb.init()
-    artifact = run.use_artifact('diogo-carapito/wandb-registry-model/text-to-icpc2:v2', type='model')
+    artifact = run.use_artifact(
+        "diogo-carapito/wandb-registry-model/text-to-icpc2:v2", type="model"
+    )
     artifact_dir = artifact.download()
     print(artifact_dir)
 
     # load with pytorch and inference´
     model_path = f"{artifact_dir}/model.pth"
-    
+
     # Define the model architecture with the correct number of classes
     num_labels = 5  # Change this to the correct number of classes
     model_name = "distilbert-base-uncased"
-    model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=num_labels)
-
+    model = AutoModelForSequenceClassification.from_pretrained(
+        model_name, num_labels=num_labels
+    )
 
     # Load the state dictionary from the .pth file with map_location to CPU
-    state_dict = torch.load(model_path, map_location=torch.device('cpu'))
+    state_dict = torch.load(model_path, map_location=torch.device("cpu"))
 
     # Load the state dictionary into the model
     model.load_state_dict(state_dict)
 
     # Set the model to evaluation mode
     model.eval()
-    
+
     # Load the tokenizer
     tokenizer = AutoTokenizer.from_pretrained(model_name)
-    
+
     # Prepare input data
     list_inputs = [str(i_input)]  # Convert the input to a list
     inputs = tokenizer(list_inputs, return_tensors="pt")
-    
+
     # Perform inference
     with torch.no_grad():
         outputs = model(**inputs)
         probabilities = torch.nn.functional.softmax(outputs.logits, dim=-1)
         topk_values, topk_indices = torch.topk(probabilities, k=5, dim=-1)
-    
+
     # Get the top 5 predictions
-    topk_labels = [
-        model.config.id2label[idx.item()] for idx in topk_indices[0]
-    ]
-    
+    topk_labels = [model.config.id2label[idx.item()] for idx in topk_indices[0]]
+
     # Print the top 5 predictions
     print("Top 5 values:", topk_values)
     print("Top 5 labels:", topk_labels)
-    
-    
 
     # model_path = f"{artifact_dir}/model.onnx"
 
