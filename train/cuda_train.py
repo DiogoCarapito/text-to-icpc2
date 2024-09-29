@@ -264,14 +264,14 @@ def main(t="small", hf=False, val=False, name="bert"):
 
     # Log the ONNX model using W&B
     logging.info("Logging the model to W&B")
-    artifact = wandb.Artifact(name="my_model", type="model")
+    artifact = wandb.Artifact(name=experiment_name, type="model")
     artifact.add_file(onnx_model_path)
     run.log_artifact(artifact)
 
     # Link the artifact to the model registry
     run.link_artifact(
         artifact=artifact,
-        target_path=f"diogoc/your_project_name/my_model:latest",
+        target_path=f"diogoc/text-to-icpc2/{experiment_name}:latest",
     )
 
     logging.info("Model logged to W&B model registry")
