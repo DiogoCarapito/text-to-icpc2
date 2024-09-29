@@ -225,17 +225,12 @@ def main(t="small", hf=False, val=False, name="bert"):
     logging.info("Saving the model")
     model_dir = "/tmp/saved_model"
     onnx_model_path = f"{model_dir}/model.onnx"
+    dummy_model_input=tokenizer("Hipertensão Arterial", return_tensors="pt")
     torch.onnx.export(
         model,
-        (inputs["input_ids"], inputs["attention_mask"]),
-        onnx_model_path,
-        input_names=["input_ids", "attention_mask"],
-        # output_names=["output"],
-        # dynamic_axes={
-        #     "input_ids": {0: "batch_size", 1: "sequence_length"},
-        #     "attention_mask": {0: "batch_size", 1: "sequence_length"},
-        #     "output": {0: "batch_size"},
-        # },
+        tuple(dummy_model_input.values()),
+        f=onnx_model_path,  
+        input_names=['input_ids', 'attention_mask'], 
         output_names=['logits'], 
         dynamic_axes={'input_ids': {0: 'batch_size', 1: 'sequence'}, 
                     'attention_mask': {0: 'batch_size', 1: 'sequence'}, 
@@ -246,7 +241,7 @@ def main(t="small", hf=False, val=False, name="bert"):
 
     # # Log the model using W&B
     logging.info("Logging the model to W&B")
-    artifact = wandb.Artifact(name="my_model", type="model")
+    artifact = wandb.Artifact(name=experiment_name, type="model")
     artifact.add_file(onnx_model_path)
     run.log_artifact(artifact)
 
