@@ -183,6 +183,11 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
     # else:
     training_output_dir = f"/tmp/{experiment_name}"
 
+    if size == "small":
+        n_epochs = 3
+    else:
+        n_epochs = 10
+
     # Checkpoints will be output to this `training_output_dir`.
     logging.info("Defining the training arguments")
     training_args = TrainingArguments(
@@ -193,7 +198,7 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
         per_device_eval_batch_size=8,
         logging_steps=200,
         seed=42,
-        num_train_epochs=10,
+        num_train_epochs=n_epochs,
         # torch_compile=True,
         logging_dir="./logs",
         report_to="wandb",  # Report to W&B
