@@ -19,7 +19,7 @@ import wandb
 
 
 def experiment_size(size, model_name):
-    #remove the path from the model name
+    # remove the path from the model name
     model_name = model_name.split("/")[-1]
     if size == "full":
         return f"text-to-icpc2-{model_name}"
@@ -208,11 +208,6 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
     # Train the model
     logging.info("Training the model")
     trainer.train()
-    
-    # Save the model
-    model_dir = "/tmp/saved_model"
-    trainer.save_model(model_dir)
-    
 
     # Evaluate the model by using on the full tokenized_dataset
     logging.info("Evaluating the model")
@@ -220,17 +215,29 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
     wandb.log(eval_results)
     logging.info("Accuracy: %s", eval_results["eval_accuracy"])
 
-    # save the model as a pytorch model
+    # Save the model
+    model_dir = "/tmp/saved_model"
+    trainer.save_model(model_dir)
+
+    # Save the model as a PyTorch model
     logging.info("Saving the model as PyTorch")
-    
     pt_model_path = f"{model_dir}/model.pt"
-    
-    torch.save(trainer.state_dict(), pt_model_path)
-    
-    # # model must be created again with parameters
-    # model = Model(*args, **kwargs)
-    # model. load_state_dict(torch. load (PATH) )
-    # model.eval ()
+    torch.save(trainer.model.state_dict(), pt_model_path)
+
+    # # Log the model using W&B
+
+    logging.info("Logging the model to W&B")
+    artifact = wandb.Artifact(name=experiment_name, type="model")
+    artifact.add_dir(pt_model_path)
+    run.log_artifact(artifact)
+
+    # # Link the artifact to the model registry
+    run.link_artifact(
+        artifact=artifact,
+        target_path=f"mgf_nlp/{experiment_name}/text-to-icpc2:latest",
+        aliases=[model_name, size],
+    )
+    logging.info("Model logged to W&B model registry")
 
     # # Define a class for the inference model
     # class ModelInference:
@@ -256,32 +263,10 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
     #         ]
 
     #         return topk_values[0], topk_labels
-    
-    # Save the model as safe tensors
-    # logging.info("Saving the model as SafeTensors")
-    # model.save_pretrained(model_dir)
-    
-    # # Log the model using W&B
-    
-    # logging.info("Logging the model to W&B")
-    artifact = wandb.Artifact(name=experiment_name, type="model")
-    artifact.add_dir(pt_model_path)
-    run.log_artifact(artifact)
-    
-    # # Link the artifact to the model registry
-    run.link_artifact(
-        artifact=artifact,
-        target_path=f"mgf_nlp/{experiment_name}/text-to-icpc2:latest",
-        aliases=[model_name, size],
-    )
-    
-    # save save as pytorch model
-    # logging.info("Saving the model as PyTorch")
-    
-        
+
     # # Save the model to a directory as ONNX
     # logging.info("Saving the model as ONNX")
-    
+
     # onnx_model_path = f"{model_dir}/model.onnx"
     # dummy_model_input = tokenizer(
     #     "Hipertensão Arterial",
@@ -314,7 +299,6 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
     #     aliases=[model_name, size],
     # )
 
-    logging.info("Model logged to W&B model registry")
     run.finish()
     logging.info("Training Finished Successfully!!")
 

@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 import click
 from transformers import AutoTokenizer
 
+
 @click.command()
 @click.option("--i_input", type=str, required=False)
 @click.option("--model_name", type=str, required=False)
@@ -16,12 +17,14 @@ def wandb_inference(i_input="Hipertensão arterial", model_name="text-to-icpc2:v
     wandb.init(project="text-to-icpc2")
 
     run = wandb.init()
-    artifact = run.use_artifact('diogo-carapito/wandb-registry-model/text-to-icpc2:v1', type='model')
+    artifact = run.use_artifact(
+        "diogo-carapito/wandb-registry-model/text-to-icpc2:v1", type="model"
+    )
     artifact_dir = artifact.download()
     print(artifact_dir)
-    
+
     model_path = f"{artifact_dir}/model.onnx"
-    
+
     # Load the tokenizer
     tokenizer = AutoTokenizer.from_pretrained("distilbert/distilbert-base-uncased")
 
@@ -37,7 +40,9 @@ def wandb_inference(i_input="Hipertensão arterial", model_name="text-to-icpc2:v
     attention_mask = inputs["attention_mask"].numpy()
 
     # Perform inference
-    outputs = ort_session.run(None, {"input_ids": input_ids, "attention_mask": attention_mask})
+    outputs = ort_session.run(
+        None, {"input_ids": input_ids, "attention_mask": attention_mask}
+    )
 
     # Get the output tensor
     output = outputs[0]
@@ -48,9 +53,9 @@ def wandb_inference(i_input="Hipertensão arterial", model_name="text-to-icpc2:v
     # Print the top 5 predictions
     print("Top 5 values:", topk_values)
     print("Top 5 indices:", topk_indices)
-    
+
     return topk_values, topk_indices
-    
+
 
 if "__main__" == __name__:
     wandb_inference()
