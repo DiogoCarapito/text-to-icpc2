@@ -221,37 +221,93 @@ def main(t="small", hf=False, val=False, name="bert"):
 
     #         return topk_values[0], topk_labels
 
-    # Save the model to a directory as onnx
-    logging.info("Saving the model")
+    # Define a class for the inference model
+    class ModelInference:
+        def __init__(self, model_dir):
+            # Load the tokenizer and model
+            self.tokenizer = AutoTokenizer.from_pretrained(model_dir)
+            self.model = AutoModelForSequenceClassification.from_pretrained(model_dir)
+            self.model.eval()  # Set the model to evaluation mode
+
+        def predict(self, text, top_k=5):
+            # Tokenize the input text
+            inputs = self.tokenizer(text, return_tensors="pt")
+
+            # Perform inference
+            with torch.no_grad():
+                outputs = self.model(**inputs)
+                probabilities = torch.nn.functional.softmax(outputs.logits, dim=-1)
+                topk_values, topk_indices = torch.topk(probabilities, k=top_k, dim=-1)
+
+            # Convert indices to labels
+            topk_labels = [self.model.config.id2label[idx.item()] for idx in topk_indices[0]]
+
+            return topk_values[0], topk_labels
+
+    # Save the model to a directory as ONNX
+    logging.info("Saving the model as ONNX")
     model_dir = "/tmp/saved_model"
     onnx_model_path = f"{model_dir}/model.onnx"
-    dummy_model_input=tokenizer("Hipertensão Arterial", return_tensors="pt")
+    dummy_model_input = tokenizer("Hipertensão Arterial", return_tensors="pt").to(device)
+
     torch.onnx.export(
         model,
         tuple(dummy_model_input.values()),
-        f=onnx_model_path,  
-        input_names=['input_ids', 'attention_mask'], 
-        output_names=['logits'], 
-        dynamic_axes={'input_ids': {0: 'batch_size', 1: 'sequence'}, 
-                    'attention_mask': {0: 'batch_size', 1: 'sequence'}, 
-                    'logits': {0: 'batch_size', 1: 'sequence'}}, 
-        do_constant_folding=True, 
-        opset_version=13, 
+        f=onnx_model_path,
+        input_names=['input_ids', 'attention_mask'],
+        output_names=['logits'],
+        dynamic_axes={'input_ids': {0: 'batch_size', 1: 'sequence_length'},
+                    'attention_mask': {0: 'batch_size', 1: 'sequence_length'},
+                    'logits': {0: 'batch_size'}},
+        opset_version=11,
     )
 
-    # # Log the model using W&B
+    # Log the ONNX model using W&B
     logging.info("Logging the model to W&B")
-    artifact = wandb.Artifact(name=experiment_name, type="model")
+    artifact = wandb.Artifact(name="my_model", type="model")
     artifact.add_file(onnx_model_path)
     run.log_artifact(artifact)
 
     # Link the artifact to the model registry
     run.link_artifact(
         artifact=artifact,
-        target_path=f"diogoc/text-to-icpc2/{experiment_name}:latest",
+        target_path=f"diogoc/your_project_name/my_model:latest",
     )
 
     logging.info("Model logged to W&B model registry")
+
+    # # Save the model to a directory as onnx
+    # logging.info("Saving the model as onnx")
+    # model_dir = "/tmp/saved_model"
+    # onnx_model_path = f"{model_dir}/model.onnx"
+    # dummy_model_input=tokenizer("Hipertensão Arterial", return_tensors="pt").to_device(device)
+    
+    # torch.onnx.export(
+    #     model,
+    #     tuple(dummy_model_input.values()),
+    #     f=onnx_model_path,  
+    #     input_names=['input_ids', 'attention_mask'], 
+    #     output_names=['logits'], 
+    #     dynamic_axes={'input_ids': {0: 'batch_size', 1: 'sequence'}, 
+    #                 'attention_mask': {0: 'batch_size', 1: 'sequence'}, 
+    #                 'logits': {0: 'batch_size', 1: 'sequence'}}, 
+    #     do_constant_folding=True, 
+    #     opset_version=13, 
+    # )
+
+    # # # Log the model using W&B
+    # logging.info("Logging the model to W&B")
+    # artifact = wandb.Artifact(name=experiment_name, type="model")
+    # artifact.add_file(onnx_model_path)
+    # run.log_artifact(artifact)
+
+    # # Link the artifact to the model registry
+    # run.link_artifact(
+    #     artifact=artifact,
+    #     target_path=f"diogoc/text-to-icpc2/{experiment_name}:latest",
+    # )
+
+    # logging.info("Model logged to W&B model registry")
 
     # logging.info("Saving the model")
     # model_dir = "/tmp/saved_model"
