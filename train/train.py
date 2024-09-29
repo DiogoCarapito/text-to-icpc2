@@ -52,7 +52,14 @@ def experiment_size(size, model_name):
 # @click.option("--val", default=False, help="perform validation", required=False)
 def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
     # distilbert/distilbert-base-uncased
+    # distilbert/distilbert-base-multilingual-cased
+
     # google-bert/bert-base-uncased
+    # google-bert/bert-base-cased
+    # google-bert/bert-base-multilingual-uncased
+    # google-bert/bert-base-multilingual-cased
+    # google-bert/bert-large-uncased
+    # google-bert/bert-large-cased
 
     experiment_name = experiment_size(size, model_name=model)
     model_name = model
@@ -123,7 +130,6 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
             return example["chapter"] == "K"
         else:
             return example
-        
 
     # Select a small subset of the data
     tokenized_dataset = tokenized_dataset["train"].filter(filter_chapter)
@@ -209,13 +215,23 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
 
     # Evaluate the model by using on the full tokenized_dataset
     logging.info("Evaluating the model")
-    eval_results = trainer.evaluate(tokenized_dataset)
+    eval_results = trainer.evaluate(tokenized_dataset["train"])
     wandb.log(eval_results)
     logging.info("Accuracy: %s", eval_results["eval_accuracy"])
 
     # Save the model
     model_dir = "/tmp/saved_model"
     trainer.save_model(model_dir)
+    
+    #show the model saved in model_dir
+    logging.info("Model saved in %s", model_dir)
+
+    #log the model as an artifact to W&B
+    logging.info("Logging the model as an artifact to W&B")
+    artifact = wandb.Artifact(name=experiment_name, type="model")
+    artifact.add_dir(f"{model_dir}/model.safetensors")
+    run.log_artifact(artifact)
+    
 
     # Save the model as a PyTorch model
     logging.info("Saving the model as PyTorch")

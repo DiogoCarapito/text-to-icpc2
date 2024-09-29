@@ -11,18 +11,16 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 @click.command()
 @click.option("--i_input", type=str, required=False)
 @click.option("--model_name", type=str, required=False)
-def wandb_inference(i_input="Hipertensão arterial", model_name="text-to-icpc2:v1"):
+def wandb_inference(i_input="Hipertensão arterial", model_name=""):
+    # Load the W&B API key from the environment
     load_dotenv()
     wandb_api_key = os.getenv("WANDB_API_KEY")
     wandb.login(key=wandb_api_key)
-    # wandb.init(project="text-to-icpc2")
-
-    run = wandb.init()
-    artifact = run.use_artifact(
-        "diogo-carapito/wandb-registry-model/text-to-icpc2:v2", type="model"
-    )
+    
+    # Use the W&B API to download the artifact without creating a new run
+    api = wandb.Api()
+    artifact = api.artifact("diogo-carapito/wandb-registry-model/text-to-icpc2:v0", type="model")
     artifact_dir = artifact.download()
-    print(artifact_dir)
 
     # load with pytorch and inference´
     model_path = f"{artifact_dir}/model.pth"
