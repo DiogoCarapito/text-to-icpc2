@@ -208,7 +208,7 @@ def main(t="small", hf=False, val=False, name="bert"):
     # Link the artifact to the run
     run.link_artifact(
         artifact=artifact,
-        target_path=f"diogoc/wandb-registry-model/{experiment_name}",
+        target_path=f"diogoc/text-to-icpc2/{experiment_name}",
     )
 
     # logged_artifact = run.log_artifact(model_dir, experiment_name, type="model")
