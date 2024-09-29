@@ -1,6 +1,5 @@
 import wandb
-
-# import torch
+import torch
 import os
 from dotenv import load_dotenv
 import click
@@ -23,7 +22,16 @@ def wandb_inference(i_input="Hipertensão arterial", model_name="text-to-icpc2:v
 
     artifact_dir = artifact.download()
 
-    print(artifact_dir)
+    pth ="artifacts/text_to_icpc2_small-bert:v3/model.model.onnx"
+    
+    # load the model
+    model = torch.load(pth)
+    
+    # inference
+    input_tensor = torch.tensor(i_input)
+    output = model(input_tensor)
+    
+    print(output)
 
 
 if "__main__" == __name__:

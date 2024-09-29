@@ -28,25 +28,32 @@ def experiment_size(size, model_name):
 @click.command()
 @click.option(
     "--size",
-    # default="small",
+    default="small",
     help="size of the dataset to be used",
     required=False,
 )
 @click.option(
     "--model",
-    # default="bert",
+    default="distilbert/distilbert-base-uncased",
     help="model name",
     required=False,
+)
+@click.option(
+    "--dev",
+    # default="cuda",
+    required=True,
+    help="device to be used",
 )
 # @click.option(
 #     "--hf", default=False, help="publish to huggingface model", required=False
 # )
 # @click.option("--val", default=False, help="perform validation", required=False)
-def main(size="small", model="distilbert/distilbert-base-uncased"):
+def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
     # distilbert/distilbert-base-uncased
     # google-bert/bert-base-uncased
 
     experiment_name = experiment_size(size, model_name=model)
+    model_name = model
 
     logging.basicConfig(
         level=logging.INFO,
@@ -60,7 +67,7 @@ def main(size="small", model="distilbert/distilbert-base-uncased"):
     run = wandb.init(project="text-to-icpc2")
 
     # seting up the device cuda, mps or cpu
-    device = torch.device("mps")
+    device = torch.device(device=dev)
     logging.info("Using the device '%s'", device)
 
     # Load the dataset
@@ -85,7 +92,7 @@ def main(size="small", model="distilbert/distilbert-base-uncased"):
 
     # model name
     # model_name = "bert-base-uncased"
-    model_name = "distilbert-base-uncased"
+    # model_name = "distilbert-base-uncased"
     logging.info("Using the model '%s'", model_name)
 
     # Load the tokenizer
