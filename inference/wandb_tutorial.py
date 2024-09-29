@@ -2,6 +2,7 @@ import torch
 from safetensors.torch import load_file
 import wandb
 
+
 # Define your model architecture (example)
 class MyModel(torch.nn.Module):
     def __init__(self, input_size=10, output_size=10):
@@ -17,11 +18,14 @@ class MyModel(torch.nn.Module):
         x = self.softmax(x)
         return x
 
+
 # Initialize W&B
 run = wandb.init(project="text-to-icpc2")
 
 # Correctly specify the artifact reference
-artifact = run.use_artifact('diogo-carapito/wandb-registry-model/text-to-icpc2:v1', type='model')
+artifact = run.use_artifact(
+    "diogo-carapito/wandb-registry-model/text-to-icpc2:v1", type="model"
+)
 
 # Download the artifact
 artifact_dir = artifact.download()
