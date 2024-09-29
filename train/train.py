@@ -119,16 +119,13 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
     logging.info("Applying the filter function for smaller size dataset")
 
     def filter_chapter(example):
-        return example["chapter"] == "K"
-
-    if size == "medium":
-        tokenized_dataset = tokenized_dataset["train"].filter(filter_chapter)
-
-    elif size == "small" or size == "full":
-        pass
+        if size == "medium":
+            return example["chapter"] == "K"
+        else:
+            pass
 
     # Select a small subset of the data
-    # tokenized_dataset = tokenized_dataset["train"].filter(filter_chapter)
+    tokenized_dataset = tokenized_dataset["train"].filter(filter_chapter)
 
     # Split the dataset into training and evaluation
     logging.info("Splitting the dataset into training and evaluation")
