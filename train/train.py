@@ -190,7 +190,7 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
         logging_steps=200,
         seed=42,
         num_train_epochs=10,
-        torch_compile=True,
+        #torch_compile=True,
         logging_dir="./logs",
         report_to="wandb",  # Report to W&B
     )
