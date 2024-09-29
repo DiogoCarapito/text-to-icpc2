@@ -187,9 +187,10 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
         run_name=experiment_name,
         per_device_train_batch_size=8,
         per_device_eval_batch_size=8,
-        logging_steps=64,
+        logging_steps=200,
         seed=42,
         num_train_epochs=10,
+        torch_compile=True,
         logging_dir="./logs",
         report_to="wandb",  # Report to W&B
     )
@@ -208,14 +209,28 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
     logging.info("Training the model")
     trainer.train()
     
+    # Save the model
     model_dir = "/tmp/saved_model"
     trainer.save_model(model_dir)
+    
 
     # Evaluate the model by using on the full tokenized_dataset
     logging.info("Evaluating the model")
     eval_results = trainer.evaluate(tokenized_dataset)
     wandb.log(eval_results)
     logging.info("Accuracy: %s", eval_results["eval_accuracy"])
+
+    # save the model as a pytorch model
+    logging.info("Saving the model as PyTorch")
+    
+    pt_model_path = f"{model_dir}/model.pt"
+    
+    torch.save(trainer.state_dict(), pt_model_path)
+    
+    # # model must be created again with parameters
+    # model = Model(*args, **kwargs)
+    # model. load_state_dict(torch. load (PATH) )
+    # model.eval ()
 
     # # Define a class for the inference model
     # class ModelInference:
@@ -241,40 +256,63 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
     #         ]
 
     #         return topk_values[0], topk_labels
-
-    # Save the model to a directory as ONNX
-    logging.info("Saving the model as ONNX")
     
-    onnx_model_path = f"{model_dir}/model.onnx"
-    dummy_model_input = tokenizer(
-        "Hipertensão Arterial",
-        return_tensors="pt").to(device)
-
-    torch.onnx.export(
-        model,
-        tuple(dummy_model_input.values()),
-        f=onnx_model_path,
-        input_names=["input_ids", "attention_mask"],
-        output_names=["logits"],
-        dynamic_axes={
-            "input_ids": {0: "batch_size", 1: "sequence_length"},
-            "attention_mask": {0: "batch_size", 1: "sequence_length"},
-            "logits": {0: "batch_size"},
-        },
-        opset_version=11,
-    )
-
-    # Log the ONNX model using W&B
-    logging.info("Logging the model to W&B")
+    # Save the model as safe tensors
+    # logging.info("Saving the model as SafeTensors")
+    # model.save_pretrained(model_dir)
+    
+    # # Log the model using W&B
+    
+    # logging.info("Logging the model to W&B")
     artifact = wandb.Artifact(name=experiment_name, type="model")
-    artifact.add_file(onnx_model_path)
+    artifact.add_dir(pt_model_path)
     run.log_artifact(artifact)
-
-    # Link the artifact to the model registry
+    
+    # # Link the artifact to the model registry
     run.link_artifact(
         artifact=artifact,
         target_path=f"mgf_nlp/{experiment_name}/text-to-icpc2:latest",
+        aliases=[model_name, size],
     )
+    
+    # save save as pytorch model
+    # logging.info("Saving the model as PyTorch")
+    
+        
+    # # Save the model to a directory as ONNX
+    # logging.info("Saving the model as ONNX")
+    
+    # onnx_model_path = f"{model_dir}/model.onnx"
+    # dummy_model_input = tokenizer(
+    #     "Hipertensão Arterial",
+    #     return_tensors="pt").to(device)
+
+    # torch.onnx.export(
+    #     model,
+    #     tuple(dummy_model_input.values()),
+    #     f=onnx_model_path,
+    #     input_names=["input_ids", "attention_mask"],
+    #     output_names=["logits"],
+    #     dynamic_axes={
+    #         "input_ids": {0: "batch_size", 1: "sequence_length"},
+    #         "attention_mask": {0: "batch_size", 1: "sequence_length"},
+    #         "logits": {0: "batch_size"},
+    #     },
+    #     opset_version=11,
+    # )
+
+    # # Log the ONNX model using W&B
+    # logging.info("Logging the model to W&B")
+    # artifact = wandb.Artifact(name=experiment_name, type="model")
+    # artifact.add_file(onnx_model_path)
+    # run.log_artifact(artifact)
+
+    # # Link the artifact to the model registry
+    # run.link_artifact(
+    #     artifact=artifact,
+    #     target_path=f"mgf_nlp/{experiment_name}/text-to-icpc2:latest",
+    #     aliases=[model_name, size],
+    # )
 
     logging.info("Model logged to W&B model registry")
     run.finish()

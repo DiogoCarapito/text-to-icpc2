@@ -1,6 +1,5 @@
 import wandb
 import torch
-import onnx
 import onnxruntime as ort
 import os
 from dotenv import load_dotenv
@@ -10,14 +9,14 @@ from transformers import AutoTokenizer
 @click.command()
 @click.option("--i_input", type=str, required=False)
 @click.option("--model_name", type=str, required=False)
-def wandb_inference(i_input="Hipertensão arterial", model_name="text-to-icpc2:v0"):
+def wandb_inference(i_input="Hipertensão arterial", model_name="text-to-icpc2:v1"):
     load_dotenv()
     wandb_api_key = os.getenv("WANDB_API_KEY")
     wandb.login(key=wandb_api_key)
     wandb.init(project="text-to-icpc2")
 
     run = wandb.init()
-    artifact = run.use_artifact('diogo-carapito/wandb-registry-model/text-to-icpc2:v0', type='model')
+    artifact = run.use_artifact('diogo-carapito/wandb-registry-model/text-to-icpc2:v1', type='model')
     artifact_dir = artifact.download()
     print(artifact_dir)
     
@@ -30,7 +29,7 @@ def wandb_inference(i_input="Hipertensão arterial", model_name="text-to-icpc2:v
     ort_session = ort.InferenceSession(model_path)
 
     # Prepare input data
-    sample_text = "This is a sample input text for DistilBERT."  # Replace with actual input text
+    sample_text = "Hipertensão arterial"  # Replace with actual input text
     inputs = tokenizer(sample_text, return_tensors="pt")
 
     # Convert input tensors to numpy arrays
