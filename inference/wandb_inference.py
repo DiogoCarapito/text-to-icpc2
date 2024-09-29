@@ -1,5 +1,6 @@
 import wandb
-import torch
+
+# import torch
 import os
 from dotenv import load_dotenv
 import click
@@ -15,11 +16,14 @@ def wandb_inference(i_input="Hipertensão arterial", model_name="text-to-icpc2:v
     wandb.init(project="text-to-icpc2")
 
     run = wandb.init()
-    
-    artifact = run.use_artifact('diogo-carapito/wandb-registry-model/text-to-icpc2:v2', type='model')
-    
+
+    artifact = run.use_artifact(
+        "diogo-carapito/wandb-registry-model/text-to-icpc2:v2", type="model"
+    )
+
     artifact_dir = artifact.download()
-        
+
+    print(artifact_dir)
 
 
 if "__main__" == __name__:

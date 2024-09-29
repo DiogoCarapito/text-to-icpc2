@@ -18,28 +18,35 @@ import wandb
 # from validation import validation
 
 
-def experiment_size(name, t):
-    if t == "small":
-        return f"text_to_icpc2_small-{name}"
-    elif t == "medium":
-        return f"text_to_icpc2_medium-{name}"
-    elif t == "full":
-        return f"text_to_icpc2-{name}"
+def experiment_size(size, model_name):
+    if size == "full":
+        return f"text-to-icpc2-{model_name}"
     else:
-        return f"text_to_icpc2_small-{name}"
+        return f"text-to-icpc2-{size}-{model_name}"
 
 
 @click.command()
 @click.option(
-    "-t", default="small", help="size of the dataset to be used", required=False
+    "--size",
+    # default="small",
+    help="size of the dataset to be used",
+    required=False,
 )
 @click.option(
-    "--hf", default=False, help="publish to huggingface model", required=False
+    "--model",
+    # default="bert",
+    help="model name",
+    required=False,
 )
-@click.option("--val", default=False, help="perform validation", required=False)
-@click.option("--name", default="bert", help="model name", required=False)
-def main(t="small", hf=False, val=False, name="bert"):
-    experiment_name = experiment_size(name, t)
+# @click.option(
+#     "--hf", default=False, help="publish to huggingface model", required=False
+# )
+# @click.option("--val", default=False, help="perform validation", required=False)
+def main(size="small", model="distilbert/distilbert-base-uncased"):
+    # distilbert/distilbert-base-uncased
+    # google-bert/bert-base-uncased
+
+    experiment_name = experiment_size(size, model_name=model)
 
     logging.basicConfig(
         level=logging.INFO,
@@ -58,9 +65,9 @@ def main(t="small", hf=False, val=False, name="bert"):
 
     # Load the dataset
     logging.info("Loading dataset")
-    if t == "small":
+    if size == "small":
         dataset = load_dataset("diogocarapito/text-to-icpc2-nano")
-    elif t == "medium" or t == "full":
+    elif size == "medium" or size == "full":
         dataset = load_dataset("diogocarapito/text-to-icpc2")
     logging.info("Getting the distribution of the labels")
 
@@ -105,10 +112,10 @@ def main(t="small", hf=False, val=False, name="bert"):
     def filter_chapter(example):
         return example["chapter"] == "K"
 
-    if t == "medium":
+    if size == "medium":
         tokenized_dataset = tokenized_dataset["train"].filter(filter_chapter)
 
-    elif t == "small" or t == "full":
+    elif size == "small" or size == "full":
         pass
 
     # Select a small subset of the data
@@ -217,48 +224,31 @@ def main(t="small", hf=False, val=False, name="bert"):
     #             topk_values, topk_indices = torch.topk(probabilities, k=top_k, dim=-1)
 
     #         # Convert indices to labels
-    #         topk_labels = [self.model.config.id2label[idx.item()] for idx in topk_indices[0]]
+    #         topk_labels = [
+    #             self.model.config.id2label[idx.item()] for idx in topk_indices[0]
+    #         ]
 
     #         return topk_values[0], topk_labels
-
-    # Define a class for the inference model
-    class ModelInference:
-        def __init__(self, model_dir):
-            # Load the tokenizer and model
-            self.tokenizer = AutoTokenizer.from_pretrained(model_dir)
-            self.model = AutoModelForSequenceClassification.from_pretrained(model_dir)
-            self.model.eval()  # Set the model to evaluation mode
-
-        def predict(self, text, top_k=5):
-            # Tokenize the input text
-            inputs = self.tokenizer(text, return_tensors="pt")
-
-            # Perform inference
-            with torch.no_grad():
-                outputs = self.model(**inputs)
-                probabilities = torch.nn.functional.softmax(outputs.logits, dim=-1)
-                topk_values, topk_indices = torch.topk(probabilities, k=top_k, dim=-1)
-
-            # Convert indices to labels
-            topk_labels = [self.model.config.id2label[idx.item()] for idx in topk_indices[0]]
-
-            return topk_values[0], topk_labels
 
     # Save the model to a directory as ONNX
     logging.info("Saving the model as ONNX")
     model_dir = "/tmp/saved_model"
     onnx_model_path = f"{model_dir}/model.onnx"
-    dummy_model_input = tokenizer("Hipertensão Arterial", return_tensors="pt").to(device)
+    dummy_model_input = tokenizer("Hipertensão Arterial", return_tensors="pt").to(
+        device
+    )
 
     torch.onnx.export(
         model,
         tuple(dummy_model_input.values()),
         f=onnx_model_path,
-        input_names=['input_ids', 'attention_mask'],
-        output_names=['logits'],
-        dynamic_axes={'input_ids': {0: 'batch_size', 1: 'sequence_length'},
-                    'attention_mask': {0: 'batch_size', 1: 'sequence_length'},
-                    'logits': {0: 'batch_size'}},
+        input_names=["input_ids", "attention_mask"],
+        output_names=["logits"],
+        dynamic_axes={
+            "input_ids": {0: "batch_size", 1: "sequence_length"},
+            "attention_mask": {0: "batch_size", 1: "sequence_length"},
+            "logits": {0: "batch_size"},
+        },
         opset_version=11,
     )
 
@@ -271,95 +261,12 @@ def main(t="small", hf=False, val=False, name="bert"):
     # Link the artifact to the model registry
     run.link_artifact(
         artifact=artifact,
-        target_path=f"diogoc/{experiment_name}/{experiment_name}:latest",
+        target_path=f"diogoc/{experiment_name}/text-to-icpc2:latest",
     )
 
     logging.info("Model logged to W&B model registry")
-
-    # # Save the model to a directory as onnx
-    # logging.info("Saving the model as onnx")
-    # model_dir = "/tmp/saved_model"
-    # onnx_model_path = f"{model_dir}/model.onnx"
-    # dummy_model_input=tokenizer("Hipertensão Arterial", return_tensors="pt").to_device(device)
-    
-    # torch.onnx.export(
-    #     model,
-    #     tuple(dummy_model_input.values()),
-    #     f=onnx_model_path,  
-    #     input_names=['input_ids', 'attention_mask'], 
-    #     output_names=['logits'], 
-    #     dynamic_axes={'input_ids': {0: 'batch_size', 1: 'sequence'}, 
-    #                 'attention_mask': {0: 'batch_size', 1: 'sequence'}, 
-    #                 'logits': {0: 'batch_size', 1: 'sequence'}}, 
-    #     do_constant_folding=True, 
-    #     opset_version=13, 
-    # )
-
-    # # # Log the model using W&B
-    # logging.info("Logging the model to W&B")
-    # artifact = wandb.Artifact(name=experiment_name, type="model")
-    # artifact.add_file(onnx_model_path)
-    # run.log_artifact(artifact)
-
-    # # Link the artifact to the model registry
-    # run.link_artifact(
-    #     artifact=artifact,
-    #     target_path=f"diogoc/text-to-icpc2/{experiment_name}:latest",
-    # )
-
-    # logging.info("Model logged to W&B model registry")
-
-    # logging.info("Saving the model")
-    # model_dir = "/tmp/saved_model"
-    # trainer.save_model(model_dir)
-
-    # # Log the model artifact
-    # artifact = wandb.Artifact(name=experiment_name, type="model")
-    # artifact.add_dir(model_dir)
-    # run.log_artifact(artifact)
-
-    # # Link the artifact to the run
-    # run.link_artifact(
-    #     artifact=artifact,
-    #     target_path=f"diogoc/wandb-registry-text-to-icpc2/{experiment_name}",
-    # )
-
-    # logged_artifact = run.log_artifact(model_dir, experiment_name, type="model")
-
-    # run.link_model(
-    #     path=model_dir,
-    #     registered_model_name=experiment_name,
-    # )
-
-    # logged_artifact = run.log_artifact(
-    #     artifact_or_path=model_dir, name=experiment_name, type="model"
-    # )
-    # run.link_artifact(
-    #     artifact=logged_artifact,
-    #     target_path="diogoc/wandb-registry-model/{experiment_name}",
-    # )
-
     run.finish()
-    logging.info("Model Logged to W&B")
     logging.info("Training Finished Successfully!!")
-
-    # artifact = wandb.Artifact(
-    #     name=experiment_name,
-    #     type="model")
-    # artifact.add_dir(model_dir)
-    # wandb.log_artifact(artifact)
-
-    # push the model to huggingface
-    if hf:
-        trainer.push_to_hub()
-
-    # perform a simple validation based on the validation.py script (using only )
-    if val:
-        # validation(run.info.run_id)
-        pass
-
-    # log the validation artifacts
-    # wandb.log_artifacts(validation_artifacts, artifact_path="validation")
 
 
 if __name__ == "__main__":
