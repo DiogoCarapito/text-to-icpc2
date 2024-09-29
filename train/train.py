@@ -19,6 +19,7 @@ import wandb
 
 
 def experiment_size(size, model_name):
+    #remove the path from the model name
     model_name = model_name.split("/")[-1]
     if size == "full":
         return f"text-to-icpc2-{model_name}"
@@ -272,7 +273,7 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
     # Link the artifact to the model registry
     run.link_artifact(
         artifact=artifact,
-        target_path=f"diogoc/{experiment_name}/text-to-icpc2:latest",
+        target_path=f"mgf_nlp/{experiment_name}/text-to-icpc2:latest",
     )
 
     logging.info("Model logged to W&B model registry")
