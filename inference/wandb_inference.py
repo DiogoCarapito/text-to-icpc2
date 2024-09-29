@@ -8,31 +8,18 @@ import click
 @click.command()
 @click.option("--i_input", type=str, required=False)
 @click.option("--model_name", type=str, required=False)
-def wandb_inference(i_input="Hipertensão arterial", model_name="text-to-icpc2:v1"):
+def wandb_inference(i_input="Hipertensão arterial", model_name="text-to-icpc2:v2"):
     load_dotenv()
     wandb_api_key = os.getenv("WANDB_API_KEY")
     wandb.login(key=wandb_api_key)
     wandb.init(project="text-to-icpc2")
 
     run = wandb.init()
-    artifact = run.use_artifact(
-        "diogo-carapito/wandb-registry-model/text-to-icpc2:v1", type="model"
-    )
+    
+    artifact = run.use_artifact('diogo-carapito/wandb-registry-model/text-to-icpc2:v2', type='model')
+    
     artifact_dir = artifact.download()
-
-    model_path = f"{artifact_dir}/model"
-
-    # load model
-    model = torch.load(model_path)
-
-    # put model in inference mode
-    model.eval()
-
-    # make inference
-    predictions = model.predict([i_input])
-
-    # print predictions
-    print(predictions)
+        
 
 
 if "__main__" == __name__:

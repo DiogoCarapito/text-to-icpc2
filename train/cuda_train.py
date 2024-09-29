@@ -271,7 +271,7 @@ def main(t="small", hf=False, val=False, name="bert"):
     # Link the artifact to the model registry
     run.link_artifact(
         artifact=artifact,
-        target_path=f"diogoc/text-to-icpc2/{experiment_name}:latest",
+        target_path=f"diogoc/{experiment_name}/{experiment_name}:latest",
     )
 
     logging.info("Model logged to W&B model registry")
