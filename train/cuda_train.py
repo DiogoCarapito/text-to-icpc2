@@ -227,10 +227,21 @@ def main(t="small", hf=False, val=False, name="bert"):
     onnx_model_path = f"{model_dir}/model.onnx"
     torch.onnx.export(
         model,
-        (torch.randn(1, 512).to(device),),
+        (inputs["input_ids"], inputs["attention_mask"]),
         onnx_model_path,
-        input_names=["input"],
-        output_names=["output"],
+        input_names=["input_ids", "attention_mask"],
+        # output_names=["output"],
+        # dynamic_axes={
+        #     "input_ids": {0: "batch_size", 1: "sequence_length"},
+        #     "attention_mask": {0: "batch_size", 1: "sequence_length"},
+        #     "output": {0: "batch_size"},
+        # },
+        output_names=['logits'], 
+        dynamic_axes={'input_ids': {0: 'batch_size', 1: 'sequence'}, 
+                    'attention_mask': {0: 'batch_size', 1: 'sequence'}, 
+                    'logits': {0: 'batch_size', 1: 'sequence'}}, 
+        do_constant_folding=True, 
+        opset_version=13, 
     )
 
     # # Log the model using W&B
