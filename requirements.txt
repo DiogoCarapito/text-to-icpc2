@@ -37,7 +37,8 @@ evaluate
 # accelerate>=0.21.0 # accelerate version that works with apple silicon 'mps'
 accelerate==0.34.2 # accelerate version that works with cuda
 ray[tune]
-
+onnx
+onnxruntime
 
 # MLOps libraries
 mlflow # used in local trains

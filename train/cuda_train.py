@@ -192,15 +192,12 @@ def main(t="small", hf=False, val=False, name="bert"):
     logging.info("Training the model")
     trainer.train()
 
-
     # Evaluate the model by using on the full tokenized_dataset
     logging.info("Evaluating the model")
     eval_results = trainer.evaluate(tokenized_dataset)
     wandb.log(eval_results)
-    logging.info("Evaluation results: %s", eval_results)
-    
-    
-    
+    logging.info("Accuracy: %s", eval_results["eval_accuracy"])
+
     # # Define a class for the inference model
     # class ModelInference:
     #     def __init__(self, model_dir):
@@ -224,7 +221,6 @@ def main(t="small", hf=False, val=False, name="bert"):
 
     #         return topk_values[0], topk_labels
 
-
     # Save the model to a directory as onnx
     logging.info("Saving the model")
     model_dir = "/tmp/saved_model"
@@ -236,9 +232,7 @@ def main(t="small", hf=False, val=False, name="bert"):
         input_names=["input"],
         output_names=["output"],
     )
-    
-    
-    
+
     # # Log the model using W&B
     logging.info("Logging the model to W&B")
     artifact = wandb.Artifact(name="my_model", type="model")
@@ -252,12 +246,10 @@ def main(t="small", hf=False, val=False, name="bert"):
     )
 
     logging.info("Model logged to W&B model registry")
-    
-    
+
     # logging.info("Saving the model")
     # model_dir = "/tmp/saved_model"
     # trainer.save_model(model_dir)
-
 
     # # Log the model artifact
     # artifact = wandb.Artifact(name=experiment_name, type="model")
