@@ -190,7 +190,7 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
         logging_steps=200,
         seed=42,
         num_train_epochs=10,
-        #torch_compile=True,
+        # torch_compile=True,
         logging_dir="./logs",
         report_to="wandb",  # Report to W&B
     )
@@ -221,14 +221,13 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
 
     # Save the model as a PyTorch model
     logging.info("Saving the model as PyTorch")
-    pt_model_path = f"{model_dir}/model.pt"
+    pt_model_path = f"{model_dir}/model.pth"
     torch.save(trainer.model.state_dict(), pt_model_path)
 
-    # # Log the model using W&B
-
+    # Log the model using W&B
     logging.info("Logging the model to W&B")
     artifact = wandb.Artifact(name=experiment_name, type="model")
-    artifact.add_dir(pt_model_path)
+    artifact.add_file(pt_model_path)
     run.log_artifact(artifact)
 
     # # Link the artifact to the model registry
