@@ -139,6 +139,7 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
     test_size = 0.2
     stratify_by_column = "label"
     seed = 42
+    
     tokenized_dataset_split = tokenized_dataset.train_test_split(
         test_size=test_size,
         stratify_by_column=stratify_by_column,
@@ -220,7 +221,7 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
 
     # Evaluate the model by using on the full tokenized_dataset
     logging.info("Evaluating the model")
-    print(tokenized_dataset)
+    #print(tokenized_dataset)
     eval_results = trainer.evaluate(tokenized_dataset)
     wandb.log(eval_results)
     logging.info("Accuracy: %s", eval_results["eval_accuracy"])

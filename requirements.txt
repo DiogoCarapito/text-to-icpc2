@@ -53,3 +53,4 @@ datasets
 Jinja2
 sentencepiece
 txtai
+openai
