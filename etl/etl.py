@@ -96,7 +96,10 @@ def pre_train_prep(force=True):
         data = pd.concat([data_icpc2_1, data_icpc2_2, data_icpc2_3, data_icd10])
 
         # substitute "-" by "A" in codes that start with "-"
-        # data["code"] = data["code"].str.replace("-", "A")
+        data["code"] = data["code"].str.replace(r"^-", "A", regex=True)
+        
+        # Remove duplicates where text is the same and origin is icpc2_short if icpc2_description exists
+        data = data[~((data.duplicated(subset=["text"], keep=False)) & (data["origin"] == "icpc2_short"))]
 
         # create a new column with the chapter of the code
         data["chapter"] = data["code"].str[0]
@@ -139,6 +142,8 @@ def pre_train_prep(force=True):
         dataset = Dataset.from_pandas(
             data[["code", "text", "origin", "chapter", "label"]], features=features
         )
+        
+        
 
         # train_test_split = dataset.train_test_split(
         #     test_size=0.2,
@@ -176,7 +181,7 @@ def pre_train_prep(force=True):
 
         dataset_dict = dataset
 
-        print(dataset_dict)
+        #print(dataset_dict)
         dataset_dict.save_to_disk("data/data_pre_train_hf")
         dataset_dict.push_to_hub(
             repo_id="diogocarapito/text-to-icpc2",

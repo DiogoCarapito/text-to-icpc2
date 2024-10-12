@@ -1,66 +1,66 @@
 code,text,origin,chapter,label
--30,Exame médico/avaliação de saúde-completo,icpc2_description,-,0
--31,Exame médico/avaliação de saúde-parcial,icpc2_description,-,1
--32,Teste de sensibilidade,icpc2_description,-,2
--33,Teste microbiológico/imunológico,icpc2_description,-,3
--34,Análise de sangue,icpc2_description,-,4
--35,Análise de urina,icpc2_description,-,5
--36,Análise de fezes,icpc2_description,-,6
--37,Citologia esfoliativa/histologia,icpc2_description,-,7
--38,Outra análise laboratorial NE,icpc2_description,-,8
--39,Teste de função física,icpc2_description,-,9
--40,Endoscopia diagnóstica,icpc2_description,-,10
--41,Radiologia/imagiologia diagnóstica,icpc2_description,-,11
--42,Traçado eléctrico,icpc2_description,-,12
--43,Outros procedimentos diagnósticos,icpc2_description,-,13
--44,Vacinação/medicação preventiva,icpc2_description,-,14
--45,Observação/educação para a saúde/conselho/dieta,icpc2_description,-,15
--46,Consulta com prestador de cuidados primários,icpc2_description,-,16
--47,Consulta com especialista,icpc2_description,-,17
--48,Clarificação/discussão do motivo de consulta/pedido do doente,icpc2_description,-,18
--49,Outros procedimentos preventivos,icpc2_description,-,19
--50,Medicação/prescrição/renovação/injecção,icpc2_description,-,20
--51,Incisão/drenagem/limpeza/aspiração/remoção de líquidos corporais (exclui cateterização - 53),icpc2_description,-,21
--52,Excisão/exerése/biopsia/destruição/desbridamento/cauterização,icpc2_description,-,22
--53,Instrumentação/cateterização/intubação/dilatação,icpc2_description,-,23
--54,Reparação/fixação-sutura/gesso/prótese (aplicação/remoção),icpc2_description,-,24
--55,Injecção local/infiltração,icpc2_description,-,25
--56,Penso/ligadura/compressão/tamponamento,icpc2_description,-,26
--57,Medicina física/reabilitação,icpc2_description,-,27
--58,Aconselhamento/escuta terapêutica,icpc2_description,-,28
--59,Outro procedimento terapêutico/pequena cirurgia NE,icpc2_description,-,29
--60,Resultado de teste/procedimento,icpc2_description,-,30
--61,Resultado de exame/teste/registo/carta de outro prestador,icpc2_description,-,31
--62,Procedimento administrativo,icpc2_description,-,32
--63,Consulta de seguimento não especificada,icpc2_description,-,33
--64,Consulta/problema iniciado pelo técnico de saúde,icpc2_description,-,34
--65,Consulta/problema iniciado por outra pessoa que não o doente/técnico,icpc2_description,-,35
--66,Referenciação para outro técnico de saúde/enfermeiro/terapeuta/assistente social,icpc2_description,-,36
--67,Referenciação para médico/especialista/clínica/hospital,icpc2_description,-,37
--68,Outra referenciação NE,icpc2_description,-,38
--69,Outro motivo de consulta NE,icpc2_description,-,39
-A01,Dor generalizada/múltiplos locais,icpc2_description,A,40
-A02,Arrepios,icpc2_description,A,41
-A03,Febre,icpc2_description,A,42
-A04,Debilidade/cansaço geral,icpc2_description,A,43
-A05,Sentir-se doente,icpc2_description,A,44
-A06,Desmaio/síncope,icpc2_description,A,45
-A07,Coma,icpc2_description,A,46
-A08,Inchaço,icpc2_description,A,47
-A09,Problema de sudorese,icpc2_description,A,48
-A10,Sangramento/hemorragia NE,icpc2_description,A,49
-A11,Dor torácica NE,icpc2_description,A,50
-A13,Preocupação com/medo de tratamento médico,icpc2_description,A,51
-A16,Bebé irritavél,icpc2_description,A,52
-A18,Preocupação com a aparência,icpc2_description,A,53
-A20,Pedido/discussão da eutanásia,icpc2_description,A,54
-A21,Factor de risco para malignidade,icpc2_description,A,55
-A23,Factor de risco NE,icpc2_description,A,56
-A25,Medo da morte/de morrer,icpc2_description,A,57
-A26,"Medo de cancro, NE",icpc2_description,A,58
-A27,Medo de outra doença NE,icpc2_description,A,59
-A28,Limitação funcional/incapacidade NE,icpc2_description,A,60
-A29,Sintoma/queixa geral outro,icpc2_description,A,61
+A30,Exame médico/avaliação de saúde-completo,icpc2_description,A,22
+A31,Exame médico/avaliação de saúde-parcial,icpc2_description,A,23
+A32,Teste de sensibilidade,icpc2_description,A,24
+A33,Teste microbiológico/imunológico,icpc2_description,A,25
+A34,Análise de sangue,icpc2_description,A,26
+A35,Análise de urina,icpc2_description,A,27
+A36,Análise de fezes,icpc2_description,A,28
+A37,Citologia esfoliativa/histologia,icpc2_description,A,29
+A38,Outra análise laboratorial NE,icpc2_description,A,30
+A39,Teste de função física,icpc2_description,A,31
+A40,Endoscopia diagnóstica,icpc2_description,A,32
+A41,Radiologia/imagiologia diagnóstica,icpc2_description,A,33
+A42,Traçado eléctrico,icpc2_description,A,34
+A43,Outros procedimentos diagnósticos,icpc2_description,A,35
+A44,Vacinação/medicação preventiva,icpc2_description,A,36
+A45,Observação/educação para a saúde/conselho/dieta,icpc2_description,A,37
+A46,Consulta com prestador de cuidados primários,icpc2_description,A,38
+A47,Consulta com especialista,icpc2_description,A,39
+A48,Clarificação/discussão do motivo de consulta/pedido do doente,icpc2_description,A,40
+A49,Outros procedimentos preventivos,icpc2_description,A,41
+A50,Medicação/prescrição/renovação/injecção,icpc2_description,A,42
+A51,Incisão/drenagem/limpeza/aspiração/remoção de líquidos corporais (exclui cateterização - 53),icpc2_description,A,43
+A52,Excisão/exerése/biopsia/destruição/desbridamento/cauterização,icpc2_description,A,44
+A53,Instrumentação/cateterização/intubação/dilatação,icpc2_description,A,45
+A54,Reparação/fixação-sutura/gesso/prótese (aplicação/remoção),icpc2_description,A,46
+A55,Injecção local/infiltração,icpc2_description,A,47
+A56,Penso/ligadura/compressão/tamponamento,icpc2_description,A,48
+A57,Medicina física/reabilitação,icpc2_description,A,49
+A58,Aconselhamento/escuta terapêutica,icpc2_description,A,50
+A59,Outro procedimento terapêutico/pequena cirurgia NE,icpc2_description,A,51
+A60,Resultado de teste/procedimento,icpc2_description,A,52
+A61,Resultado de exame/teste/registo/carta de outro prestador,icpc2_description,A,53
+A62,Procedimento administrativo,icpc2_description,A,54
+A63,Consulta de seguimento não especificada,icpc2_description,A,55
+A64,Consulta/problema iniciado pelo técnico de saúde,icpc2_description,A,56
+A65,Consulta/problema iniciado por outra pessoa que não o doente/técnico,icpc2_description,A,57
+A66,Referenciação para outro técnico de saúde/enfermeiro/terapeuta/assistente social,icpc2_description,A,58
+A67,Referenciação para médico/especialista/clínica/hospital,icpc2_description,A,59
+A68,Outra referenciação NE,icpc2_description,A,60
+A69,Outro motivo de consulta NE,icpc2_description,A,61
+A01,Dor generalizada/múltiplos locais,icpc2_description,A,0
+A02,Arrepios,icpc2_description,A,1
+A03,Febre,icpc2_description,A,2
+A04,Debilidade/cansaço geral,icpc2_description,A,3
+A05,Sentir-se doente,icpc2_description,A,4
+A06,Desmaio/síncope,icpc2_description,A,5
+A07,Coma,icpc2_description,A,6
+A08,Inchaço,icpc2_description,A,7
+A09,Problema de sudorese,icpc2_description,A,8
+A10,Sangramento/hemorragia NE,icpc2_description,A,9
+A11,Dor torácica NE,icpc2_description,A,10
+A13,Preocupação com/medo de tratamento médico,icpc2_description,A,11
+A16,Bebé irritavél,icpc2_description,A,12
+A18,Preocupação com a aparência,icpc2_description,A,13
+A20,Pedido/discussão da eutanásia,icpc2_description,A,14
+A21,Factor de risco para malignidade,icpc2_description,A,15
+A23,Factor de risco NE,icpc2_description,A,16
+A25,Medo da morte/de morrer,icpc2_description,A,17
+A26,"Medo de cancro, NE",icpc2_description,A,18
+A27,Medo de outra doença NE,icpc2_description,A,19
+A28,Limitação funcional/incapacidade NE,icpc2_description,A,20
+A29,Sintoma/queixa geral outro,icpc2_description,A,21
 A70,Tuberculose,icpc2_description,A,62
 A71,Sarampo,icpc2_description,A,63
 A72,Varicela,icpc2_description,A,64
@@ -725,635 +725,108 @@ Z25,Problema por agressão/acontecimento violento,icpc2_description,Z,722
 Z27,Medo de problema social,icpc2_description,Z,723
 Z28,Limitação funcional/incapacidade (Z),icpc2_description,Z,724
 Z29,Problema social NE,icpc2_description,Z,725
--30,Ex médico/avaliação saúde completo,icpc2_short,-,0
--31,Ex médico/avaliação saúde parcial,icpc2_short,-,1
--32,Teste de sensibilidade,icpc2_short,-,2
--33,Teste microbiológico/imunológico,icpc2_short,-,3
--34,Análise de sangue,icpc2_short,-,4
--35,Análise de Urina,icpc2_short,-,5
--36,Análise de fezes,icpc2_short,-,6
--37,Citologia exfoliativa/histologia,icpc2_short,-,7
--38,Outra análise laboratorial NE,icpc2_short,-,8
--39,Teste de função física,icpc2_short,-,9
--40,Endoscopia diagnóstica,icpc2_short,-,10
--41,Radiologia/imagiologia diagnóstica,icpc2_short,-,11
--42,Traçado eléctrico,icpc2_short,-,12
--43,Outros procedimentos diagnósticos,icpc2_short,-,13
--44,Vacinação/medicação preventiva,icpc2_short,-,14
--45,Observação/educação saúde/conselhos/dieta,icpc2_short,-,15
--46,Consulta com prestador de CSP,icpc2_short,-,16
--47,Consulta com especialista,icpc2_short,-,17
--48,Clarific/discuss mot cons/pedido dte,icpc2_short,-,18
--49,Outros procedimentos preventivos,icpc2_short,-,19
--50,Medicação/prescriç/renovação/injec,icpc2_short,-,20
--51,Inc/dren/limp/aspir/remoção líquidos,icpc2_short,-,21
--52,Excis/exerés/bióps/destru/desbr/caut,icpc2_short,-,22
--53,Instrument/cateteriz/intubaç/dilataç,icpc2_short,-,23
--54,Reparação/fixaç-sutura/gesso/prótese,icpc2_short,-,24
--55,Injecção local/infiltração,icpc2_short,-,25
--56,Penso/ligadura/compressão/tamponam,icpc2_short,-,26
--57,Medicina física/reabilitação,icpc2_short,-,27
--58,Aconselhamento/escuta terapêutica,icpc2_short,-,28
--59,Outro procedi terap/pequena cirur NE,icpc2_short,-,29
--60,Resultado de teste/procedimento,icpc2_short,-,30
--61,Result exa/teste/regis/carta prestad,icpc2_short,-,31
--62,Procedimento administrativo,icpc2_short,-,32
--63,Consulta seguimento não especificada,icpc2_short,-,33
--64,Consul/probl iniciado p/ técn saúde,icpc2_short,-,34
--65,Consul/prob inic out q/ não dte/técn,icpc2_short,-,35
--66,Referenc para prestador não médico,icpc2_short,-,36
--67,Referenc p/ méd/espec/clínica/hospit,icpc2_short,-,37
--68,Outra referenciação NE,icpc2_short,-,38
--69,Outro motivo de consulta NE,icpc2_short,-,39
-A01,Dor generalizada/múltiplos locais,icpc2_short,A,40
-A02,Arrepios,icpc2_short,A,41
-A03,Febre,icpc2_short,A,42
-A04,Debilidade/cansaço geral,icpc2_short,A,43
-A05,Sentir-se doente,icpc2_short,A,44
-A06,Desmaio/síncope,icpc2_short,A,45
-A07,Coma,icpc2_short,A,46
-A08,Inchaço,icpc2_short,A,47
-A09,Problema de sudorese,icpc2_short,A,48
-A10,Sangramento/hemorragia NE,icpc2_short,A,49
-A11,Dor torácica NE,icpc2_short,A,50
-A13,Preocupação com/medo tratam médico,icpc2_short,A,51
-A16,Bebé irritavél,icpc2_short,A,52
-A18,Preocupação com a aparência,icpc2_short,A,53
-A20,Pedido/discussão da eutanásia,icpc2_short,A,54
-A21,Factor de risco para malignidade,icpc2_short,A,55
-A23,Factor de risco NE,icpc2_short,A,56
-A25,Medo de morrer/da morte,icpc2_short,A,57
-A26,Medo de cancro NE,icpc2_short,A,58
-A27,Medo de outra doença NE,icpc2_short,A,59
-A28,Limitação funcional/incapacidade NE,icpc2_short,A,60
-A29,Sintoma/queixa geral outro,icpc2_short,A,61
-A70,Tuberculose,icpc2_short,A,62
-A71,Sarampo,icpc2_short,A,63
-A72,Varicela,icpc2_short,A,64
-A73,Malária,icpc2_short,A,65
-A74,Rubéola,icpc2_short,A,66
-A75,Mononucleose infecciosa,icpc2_short,A,67
-A76,Exantema viral outro,icpc2_short,A,68
+A30,Ex médico/avaliação saúde completo,icpc2_short,A,22
+A31,Ex médico/avaliação saúde parcial,icpc2_short,A,23
+A35,Análise de Urina,icpc2_short,A,27
+A37,Citologia exfoliativa/histologia,icpc2_short,A,29
+A45,Observação/educação saúde/conselhos/dieta,icpc2_short,A,37
+A46,Consulta com prestador de CSP,icpc2_short,A,38
+A48,Clarific/discuss mot cons/pedido dte,icpc2_short,A,40
+A50,Medicação/prescriç/renovação/injec,icpc2_short,A,42
+A51,Inc/dren/limp/aspir/remoção líquidos,icpc2_short,A,43
+A52,Excis/exerés/bióps/destru/desbr/caut,icpc2_short,A,44
+A53,Instrument/cateteriz/intubaç/dilataç,icpc2_short,A,45
+A54,Reparação/fixaç-sutura/gesso/prótese,icpc2_short,A,46
+A56,Penso/ligadura/compressão/tamponam,icpc2_short,A,48
+A59,Outro procedi terap/pequena cirur NE,icpc2_short,A,51
+A61,Result exa/teste/regis/carta prestad,icpc2_short,A,53
+A63,Consulta seguimento não especificada,icpc2_short,A,55
+A64,Consul/probl iniciado p/ técn saúde,icpc2_short,A,56
+A65,Consul/prob inic out q/ não dte/técn,icpc2_short,A,57
+A66,Referenc para prestador não médico,icpc2_short,A,58
+A67,Referenc p/ méd/espec/clínica/hospit,icpc2_short,A,59
+A13,Preocupação com/medo tratam médico,icpc2_short,A,11
+A25,Medo de morrer/da morte,icpc2_short,A,17
+A26,Medo de cancro NE,icpc2_short,A,18
 A77,Outra doença viral/NE,icpc2_short,A,69
-A78,Outra doença infecciosa/NE,icpc2_short,A,70
-A79,Neoplasia maligna NE,icpc2_short,A,71
-A80,Traumatismo/ferimento NE,icpc2_short,A,72
-A81,Traumatismos/ferimentos múltiplos,icpc2_short,A,73
-A82,Efeito secundário de traumatismo,icpc2_short,A,74
-A84,Intoxicação por medicamento,icpc2_short,A,75
-A85,Efeito adverso de um medicamento,icpc2_short,A,76
 A86,Efeito tóxico de subst não-medicinal,icpc2_short,A,77
-A87,Complicação de tratamento médico,icpc2_short,A,78
-A88,Efeito adverso por factor físico,icpc2_short,A,79
-A89,Efeito de uma prótese,icpc2_short,A,80
-A90,Malformação congénita NE/múltipla,icpc2_short,A,81
 A91,Investigação c/ resultado anormal NE,icpc2_short,A,82
-A92,Alergia/reacção alérgica NE,icpc2_short,A,83
-A93,Recém-nascido prematuro,icpc2_short,A,84
-A94,Morbilidade perinatal outra,icpc2_short,A,85
-A95,Mortalidade perinatal,icpc2_short,A,86
-A96,Morte,icpc2_short,A,87
-A97,Sem doença,icpc2_short,A,88
 A98,Manutenção saúde/medicina preventiva,icpc2_short,A,89
 A99,Doença/condição natureza/localiz NE,icpc2_short,A,90
 B02,Gânglio linfático aumentado/doloroso,icpc2_short,B,91
-B04,Sintoma/queixa do sangue,icpc2_short,B,92
-B25,Medo de SIDA/VIH,icpc2_short,B,93
-B26,Medo de cancro do sangue/linfático,icpc2_short,B,94
 B27,Medo outra doença sangue/linfática,icpc2_short,B,95
-B28,Limitação funcional/incapacidade (B),icpc2_short,B,96
 B29,Sinto/queixa linfát/mecan imun outro,icpc2_short,B,97
-B70,Linfadenite aguda,icpc2_short,B,98
-B71,Linfadenite crónica/inespecífica,icpc2_short,B,99
 B72,Doença de hodgkin/linfoma,icpc2_short,B,100
-B73,Leucemia,icpc2_short,B,101
-B74,Neoplasia maligna do sangue outra,icpc2_short,B,102
 B75,Neoplasia benigna/NE do sangue ,icpc2_short,B,103
-B76,Rotura do baço traumática,icpc2_short,B,104
-B77,Lesão do sangue/linfa/baço outra,icpc2_short,B,105
-B78,Anemia hemolítica hereditária,icpc2_short,B,106
 B79,Malform congén sangue/linfát outra,icpc2_short,B,107
-B80,Anemia por deficiência de ferro,icpc2_short,B,108
 B81,Anemia deficiênc de vit B12/folatos,icpc2_short,B,109
-B82,Anemia outra/não especificada,icpc2_short,B,110
-B83,Púrpura/defeito de coagulação,icpc2_short,B,111
 B84,Glóbulos brancos anorm inexplicados,icpc2_short,B,112
-B87,Esplenomegália,icpc2_short,B,113
-B90,Infecção VIH/SIDA,icpc2_short,B,114
-B99,Doença do sangue/linfa/baço outra,icpc2_short,B,115
-D01,Dor/cólica abdominal generalizada,icpc2_short,D,116
-D02,Dor abdominal epigástrica,icpc2_short,D,117
-D03,Azia,icpc2_short,D,118
-D04,Dor anal/rectal,icpc2_short,D,119
-D05,Irritação perianal,icpc2_short,D,120
-D06,Dor abdominal localizada outra,icpc2_short,D,121
-D07,Dispepsia/indigestão,icpc2_short,D,122
-D08,Flatulência/gases/eructação,icpc2_short,D,123
-D09,Náusea,icpc2_short,D,124
 D10,Vómitos,icpc2_short,D,125
-D11,Diarreia,icpc2_short,D,126
-D12,Obstipação,icpc2_short,D,127
-D13,Icterícia,icpc2_short,D,128
-D14,Hematemese/vómito de sangue,icpc2_short,D,129
-D15,Melena,icpc2_short,D,130
-D16,Hemorragia rectal,icpc2_short,D,131
-D17,Incontinência intestinal,icpc2_short,D,132
 D18,Alteração nas fezes/movimentos intes,icpc2_short,D,133
-D19,Sintoma/queixa dos dentes/gengivas,icpc2_short,D,134
-D20,Sintoma/queixa da boca/língua/lábio,icpc2_short,D,135
-D21,Problema de deglutição,icpc2_short,D,136
-D23,Hepatomegália,icpc2_short,D,137
 D24,Massa abdominal NE,icpc2_short,D,138
-D25,Distensão abdominal,icpc2_short,D,139
-D26,Medo de cancro do sistema digestivo,icpc2_short,D,140
 D27,Medo doença sistema digestivo outra,icpc2_short,D,141
-D28,Limitação funcional/incapacidade (D),icpc2_short,D,142
-D29,Sintoma/queixa digestivo outro,icpc2_short,D,143
-D70,Infecção gastrointestinal,icpc2_short,D,144
-D71,Papeira/parotidite epidémica,icpc2_short,D,145
-D72,Hepatite viral,icpc2_short,D,146
 D73,Gastroenterite c/ infecção presum,icpc2_short,D,147
-D74,Neoplasia maligna do estômago,icpc2_short,D,148
-D75,Neoplasia maligna do cólon/recto,icpc2_short,D,149
-D76,Neoplasia maligna do pâncreas,icpc2_short,D,150
-D77,Neoplasia digestiva maligna outra/NE,icpc2_short,D,151
 D78,Neoplasia sistema digest benigna/NE,icpc2_short,D,152
-D79,Corpo estranho no sistema digestivo,icpc2_short,D,153
-D80,Lesão do sistema digestivo outra,icpc2_short,D,154
 D81,Malformação congén sistema digestivo,icpc2_short,D,155
 D82,Doença dos dentes/gengivas,icpc2_short,D,156
-D83,Doença da boca/lingua/lábio,icpc2_short,D,157
-D84,Doença do esófago,icpc2_short,D,158
-D85,Úlcera duodenal,icpc2_short,D,159
-D86,Úlcera péptica outra,icpc2_short,D,160
-D87,Alteração funcional do estômago,icpc2_short,D,161
-D88,Apendicite,icpc2_short,D,162
-D89,Hérnia inguinal,icpc2_short,D,163
-D90,Hérnia do hiato,icpc2_short,D,164
-D91,Hérnia abdominal outra,icpc2_short,D,165
-D92,Doença diverticular,icpc2_short,D,166
-D93,Síndrome do cólon irritável,icpc2_short,D,167
-D94,Enterite crónica/colite ulcerosa,icpc2_short,D,168
-D95,Fissura anal/abcesso perianal,icpc2_short,D,169
-D96,Lombrigas/outros parasitas,icpc2_short,D,170
-D97,Doença de fígado NE,icpc2_short,D,171
-D98,Colecistite/colelitíase,icpc2_short,D,172
-D99,Doença do sistema digestivo outra,icpc2_short,D,173
-F01,Dor no olho,icpc2_short,F,174
-F02,Olho vermelho,icpc2_short,F,175
-F03,Secreção ocular,icpc2_short,F,176
-F04,Moscas volantes/manchas visuais,icpc2_short,F,177
-F05,Perturbação visual outra,icpc2_short,F,178
-F13,Sensação ocular anormal,icpc2_short,F,179
-F14,Movimentos oculares anormais,icpc2_short,F,180
-F15,Aparência anormal do olho,icpc2_short,F,181
-F16,Sintoma/queixa da pálpebra,icpc2_short,F,182
 F17,Sintoma/queixa relacion com óculos,icpc2_short,F,183
 F18,Sintoma/queixa relaci c/ lentes cont,icpc2_short,F,184
-F27,Medo de doença do olho,icpc2_short,F,185
-F28,Limitação funcional/incapacidade (F),icpc2_short,F,186
-F29,Sintoma/queixa ocular outro,icpc2_short,F,187
-F70,Conjuntivite infecciosa,icpc2_short,F,188
-F71,Conjuntivite alérgica,icpc2_short,F,189
-F72,Blefarite/treçolho/calázio,icpc2_short,F,190
-F73,Infecção/inflamação ocular outra,icpc2_short,F,191
-F74,Neoplasia do olho/anexos,icpc2_short,F,192
-F75,Contusão/hemorragia ocular,icpc2_short,F,193
-F76,Corpo estranho ocular,icpc2_short,F,194
-F79,Lesão traumática ocular outra,icpc2_short,F,195
 F80,Obstrução do canal lacrimal criança,icpc2_short,F,196
-F81,Malformação congénita do olho outra,icpc2_short,F,197
-F82,Descolamento da retina,icpc2_short,F,198
-F83,Retinopatia,icpc2_short,F,199
-F84,Degenerescência macular,icpc2_short,F,200
-F85,Úlcera da córnea,icpc2_short,F,201
-F86,Tracoma,icpc2_short,F,202
-F91,Erro de refracção,icpc2_short,F,203
-F92,Catarata,icpc2_short,F,204
-F93,Glaucoma,icpc2_short,F,205
-F94,Cegueira,icpc2_short,F,206
-F95,Estrabismo,icpc2_short,F,207
-F99,Doença ocular/anexos outra,icpc2_short,F,208
-H01,Dor do ouvido,icpc2_short,H,209
-H02,Queixa de audição,icpc2_short,H,210
-H03,"Acufeno, zumbido/ruído no ouvido",icpc2_short,H,211
-H04,Secreção do ouvido,icpc2_short,H,212
-H05,Hemorragia do ouvido,icpc2_short,H,213
-H13,Sensação de ouvido tapado,icpc2_short,H,214
 H15,Preocupação com aparência orelhas,icpc2_short,H,215
-H27,Medo de doença do ouvido,icpc2_short,H,216
-H28,Limitação funcional/incapacidade (H),icpc2_short,H,217
-H29,Sintoma/queixa do ouvido outro,icpc2_short,H,218
-H70,Otite externa,icpc2_short,H,219
-H71,Otite média aguda/miringite,icpc2_short,H,220
-H72,Otite média serosa,icpc2_short,H,221
-H73,Inflamação da trompa de eustáquio,icpc2_short,H,222
-H74,Otite média crónica,icpc2_short,H,223
-H75,Neoplasia do ouvido,icpc2_short,H,224
-H76,Corpo estranho no ouvido,icpc2_short,H,225
-H77,Perfuração do tímpano,icpc2_short,H,226
-H78,Traumatismo superficial do ouvido,icpc2_short,H,227
-H79,Traumatismo do ouvido outro,icpc2_short,H,228
-H80,Malformação congénita do ouvido,icpc2_short,H,229
-H81,Cerumen no ouvido em excesso,icpc2_short,H,230
-H82,Síndrome vertiginosa,icpc2_short,H,231
-H83,Otoesclerose,icpc2_short,H,232
-H84,Presbiacusia,icpc2_short,H,233
-H85,Lesão acústica,icpc2_short,H,234
-H86,Surdez,icpc2_short,H,235
-H99,Doença do ouvido/mastóide outra,icpc2_short,H,236
-K01,Dor do coração,icpc2_short,K,237
-K02,Pressão/aperto do coração,icpc2_short,K,238
-K03,Dor cardiovascular NE,icpc2_short,K,239
-K04,Palpitações/percepção do coração,icpc2_short,K,240
 K05,Irregularidade batim cardíaco outra,icpc2_short,K,241
-K06,Veias proeminentes,icpc2_short,K,242
-K07,Tornozelos inchados/edema,icpc2_short,K,243
-K22,Factor de risco para doença cardiovascular,icpc2_short,K,244
-K24,Medo de doença cardíaca,icpc2_short,K,245
 K25,Medo de hipertensâo,icpc2_short,K,246
-K27,Medo de doença cardiovascular outra,icpc2_short,K,247
-K28,Limitação funcional/incapacidade (K),icpc2_short,K,248
-K29,Sintoma/queixa cardiovascular outro,icpc2_short,K,249
-K70,Infecção do aparelho circulatório,icpc2_short,K,250
-K71,Febre/doença cardíaca reumática,icpc2_short,K,251
-K72,Neoplasia cardiovascular,icpc2_short,K,252
-K73,Malformação congénita cardiovascular,icpc2_short,K,253
 K74,Doença cardíaca isquémica com angina,icpc2_short,K,254
-K75,Enfarte agudo do miocárdio,icpc2_short,K,255
-K76,Doença cardíaca isquémica sem angina,icpc2_short,K,256
-K77,Insuficiência cardíaca,icpc2_short,K,257
-K78,Fibrilhação/flutter auricular,icpc2_short,K,258
-K79,Taquicardia paroxística,icpc2_short,K,259
-K80,Arritmia cardíaca NE,icpc2_short,K,260
-K81,Sopro cardíaco/arterial NE,icpc2_short,K,261
-K82,Doença cardíaca pulmonar,icpc2_short,K,262
-K83,Doença valvular cardíaca NE,icpc2_short,K,263
-K84,Doença cardíaca outra,icpc2_short,K,264
-K85,Pressão arterial elevada,icpc2_short,K,265
-K86,Hipertensão sem complicações,icpc2_short,K,266
 K87,Hipertensâo com complicações,icpc2_short,K,267
-K88,Hipotensão postural,icpc2_short,K,268
-K89,Isquémia cerebral transitória,icpc2_short,K,269
-K90,Trombose/acidente vascular cerebral,icpc2_short,K,270
-K91,Doença vascular cerebral,icpc2_short,K,271
-K92,Aterosclerose/doença vascular periférica,icpc2_short,K,272
-K93,Embolia pulmonar,icpc2_short,K,273
-K94,Flebite/tromboflebite,icpc2_short,K,274
-K95,Veias varicosas da perna,icpc2_short,K,275
-K96,Hemorróidas,icpc2_short,K,276
-K99,Doença do aparelho circulatório outra,icpc2_short,K,277
-L01,Sintoma/queixa do pescoço,icpc2_short,L,278
-L02,Sintoma/queixa da região dorsal,icpc2_short,L,279
-L03,Sintoma/queixa da região lombar,icpc2_short,L,280
-L04,Sintoma/queixa do tórax,icpc2_short,L,281
-L05,Sintoma/queixa do flanco/axila,icpc2_short,L,282
-L07,Sintoma/queixa da mandíbula,icpc2_short,L,283
-L08,Sintoma/queixa do ombro,icpc2_short,L,284
-L09,Sintoma/queixa do braço,icpc2_short,L,285
-L10,Sintoma/queixa do cotovelo,icpc2_short,L,286
-L11,Sintoma/queixa do punho,icpc2_short,L,287
-L12,Sintoma/queixa da mão/dedo da mão,icpc2_short,L,288
-L13,Sintoma/queixa da anca,icpc2_short,L,289
-L14,Sintoma/queixa da perna/coxa,icpc2_short,L,290
-L15,Sintoma/queixa do joelho,icpc2_short,L,291
-L16,Sintoma/queixa do tornozelo,icpc2_short,L,292
-L17,Sintoma/queixa do pé/dedo do pé,icpc2_short,L,293
-L18,Dor muscular,icpc2_short,L,294
-L19,Sintoma/queixa muscular NE,icpc2_short,L,295
-L20,Sintoma/queixa de articulação NE,icpc2_short,L,296
-L26,Medo de cancro músculo-esquelético,icpc2_short,L,297
 L27,Medo doença músculo-esquelét outra,icpc2_short,L,298
-L28,Limitação funcional/incapacidade (L),icpc2_short,L,299
 L29,Sintoma/queixa músculo-esquel outro,icpc2_short,L,300
 L70,Infecção sistema músculo-esquelético,icpc2_short,L,301
 L71,Neoplasia maligna músculo-esquelét,icpc2_short,L,302
-L72,Fractura: rádio/cúbito,icpc2_short,L,303
-L73,Fractura: tíbia/peróneo,icpc2_short,L,304
-L74,Fractura: osso da mão/pé,icpc2_short,L,305
-L75,Fractura: fémur,icpc2_short,L,306
-L76,Fractura: outra,icpc2_short,L,307
-L77,Entorse/distensão do tornozelo,icpc2_short,L,308
-L78,Entorse/distensão do joelho,icpc2_short,L,309
-L79,Entorse/distensão de articulação NE,icpc2_short,L,310
-L80,Luxação/subluxação,icpc2_short,L,311
-L81,Traumatismo músculo-esquelético NE,icpc2_short,L,312
 L82,Malformação congénita músculo-esquel,icpc2_short,L,313
-L83,Síndrome do pescoço,icpc2_short,L,314
-L84,Síndrome da coluna sem irradiação de dor,icpc2_short,L,315
-L85,Deformação adquirida da coluna,icpc2_short,L,316
 L86,Síndrome coluna c/ irradiação de dor,icpc2_short,L,317
-L87,Bursite/tendinite/sinovite NE,icpc2_short,L,318
-L88,Artrite reumatóide/seropositiva,icpc2_short,L,319
-L89,Osteoartrose da anca,icpc2_short,L,320
-L90,Osteoartrose do joelho,icpc2_short,L,321
-L91,Osteoartrose outra,icpc2_short,L,322
-L92,Síndrome do ombro doloroso,icpc2_short,L,323
-L93,Cotovelo de tenista,icpc2_short,L,324
-L94,Osteocondrose,icpc2_short,L,325
-L95,Osteoporose,icpc2_short,L,326
-L96,Lesão interna aguda do joelho,icpc2_short,L,327
 L97,Neoplasia músculo-esquel benigna/NE,icpc2_short,L,328
-L98,Malformação adquirida de um membro,icpc2_short,L,329
 L99,Doença aparelho músculo-esquel outra,icpc2_short,L,330
-N01,Cefaleia,icpc2_short,N,331
-N03,Dor da face,icpc2_short,N,332
-N04,Pernas inquietas,icpc2_short,N,333
-N05,Formigueiro nos dedos/mãos/pés,icpc2_short,N,334
-N06,Alteração da sensibilidade outra,icpc2_short,N,335
-N07,Convulsão/ataque,icpc2_short,N,336
-N08,Movimentos involuntários anormais,icpc2_short,N,337
-N16,Alteração do olfacto/gosto,icpc2_short,N,338
-N17,Vertigem/tontura,icpc2_short,N,339
-N18,Paralisia/fraqueza,icpc2_short,N,340
-N19,Perturbação do discurso,icpc2_short,N,341
 N26,Medo de cancro sistema neurológico,icpc2_short,N,342
-N27,Medo de doença neurológica outra,icpc2_short,N,343
-N28,Limitação funcional/incapacidade (N),icpc2_short,N,344
-N29,Sintoma/queixa neurológico outro,icpc2_short,N,345
-N70,Poliomielite,icpc2_short,N,346
-N71,Meningite/encefalite,icpc2_short,N,347
-N72,Tétano,icpc2_short,N,348
-N73,Infecção neurológica outra,icpc2_short,N,349
-N74,Neoplasia maligna do sistema nervoso,icpc2_short,N,350
-N75,Neoplasia benigna do sistema nervoso,icpc2_short,N,351
 N76,Neoplasia NE sistema nervoso,icpc2_short,N,352
-N79,Concussão,icpc2_short,N,353
-N80,Lesão craniana outra,icpc2_short,N,354
-N81,Lesão do sistema nervoso outra,icpc2_short,N,355
-N85,Malformação congénita neurológica,icpc2_short,N,356
-N86,Esclerose múltipla,icpc2_short,N,357
-N87,Parkinsonismo,icpc2_short,N,358
-N88,Epilepsia,icpc2_short,N,359
-N89,Enxaqueca,icpc2_short,N,360
-N90,Cefaleia em cluster,icpc2_short,N,361
-N91,Paralisia facial/paralisia de Bell,icpc2_short,N,362
-N92,Nevralgia do trigémio,icpc2_short,N,363
-N93,Síndrome do canal cárpico,icpc2_short,N,364
-N94,Nevrite/neuropatia periférica,icpc2_short,N,365
-N95,Cefaleia de tensão,icpc2_short,N,366
-N99,Doença do sistema neurológico outra,icpc2_short,N,367
-P01,Sensação de ansiedade/nervosismo/tensão,icpc2_short,P,368
-P02,Reacção aguda ao stress,icpc2_short,P,369
-P03,Sensação de depressão,icpc2_short,P,370
 P04,Sentir-se/compor forma irrit/zangada,icpc2_short,P,371
 P05,"Senilid, sentir-se/compor como velho",icpc2_short,P,372
-P06,Perturbação do sono,icpc2_short,P,373
-P07,Diminuição do desejo sexual,icpc2_short,P,374
-P08,Diminuição da satisfação sexual,icpc2_short,P,375
-P09,Preocupação com a preferência sexual,icpc2_short,P,376
-P10,Gaguejar/balbuciar/tique,icpc2_short,P,377
-P11,Problema de alimentação da criança,icpc2_short,P,378
-P12,Molhar a cama/enurese,icpc2_short,P,379
 P13,Encoprese/problema treino intestino,icpc2_short,P,380
-P15,Abuso crónico do álcool,icpc2_short,P,381
-P16,Abuso agudo do álcool,icpc2_short,P,382
-P17,Abuso do tabaco,icpc2_short,P,383
-P18,Abuso de medicação,icpc2_short,P,384
-P19,Abuso de droga,icpc2_short,P,385
-P20,Alteração da memória,icpc2_short,P,386
 P22,Sintoma/queixa comportamento criança,icpc2_short,P,387
 P23,Sintoma/queixa comportam adolescente,icpc2_short,P,388
-P24,Dificuldade específica de aprendizagem,icpc2_short,P,389
-P25,Problema numa fase da vida de um adulto,icpc2_short,P,390
-P27,Medo de perturbação mental,icpc2_short,P,391
-P28,Limitação funcional/incapacidade (P),icpc2_short,P,392
-P29,Sintoma/queixa psicológico outro,icpc2_short,P,393
-P70,Demência,icpc2_short,P,394
-P71,Psicose orgânica outra,icpc2_short,P,395
-P72,Esquizofrenia,icpc2_short,P,396
-P73,Psicose afectiva,icpc2_short,P,397
-P74,Distúrbio ansioso/estado de ansiedade,icpc2_short,P,398
-P75,Somatização,icpc2_short,P,399
-P76,Perturbação depressiva,icpc2_short,P,400
-P77,Suicídio/tentativa de suicídio,icpc2_short,P,401
-P78,Neurastenia/surmenage,icpc2_short,P,402
-P79,Fobia/perturbação compulsiva,icpc2_short,P,403
-P80,Perturbação da personalidade,icpc2_short,P,404
-P81,Perturbação hipercinética,icpc2_short,P,405
-P82,Perturbação de stress pós-traumático,icpc2_short,P,406
-P85,Atraso mental,icpc2_short,P,407
-P86,Anorexia nervosa/bulimia,icpc2_short,P,408
-P98,Psicose NE/outra,icpc2_short,P,409
-P99,Perturbação psicológica outra,icpc2_short,P,410
-R01,Dor aparelho respiratório,icpc2_short,R,411
-R02,Dificuldade respiratória/dispneia,icpc2_short,R,412
-R03,Pieira,icpc2_short,R,413
-R04,Problema respiratório outro,icpc2_short,R,414
-R05,Tosse,icpc2_short,R,415
-R06,Hemorragia nasal/epistáxis,icpc2_short,R,416
-R07,Espirro/congestão nasal,icpc2_short,R,417
-R08,Sintoma/queixa nasal outro,icpc2_short,R,418
-R09,Sintoma/queixa dos seios perinasais,icpc2_short,R,419
-R21,Sinal/queixa da garganta,icpc2_short,R,420
-R23,Sintoma/queixa da voz,icpc2_short,R,421
-R24,Hemoptise,icpc2_short,R,422
-R25,Expectoração/mucosidade anormal,icpc2_short,R,423
-R26,Medo de cancro do sistema respiratório,icpc2_short,R,424
-R27,Medo de doença respiratória outra,icpc2_short,R,425
-R28,Limitação funcional/incapacidade (R),icpc2_short,R,426
 R29,Sintoma/queixa aparelho respir outro,icpc2_short,R,427
-R71,Tosse convulsa,icpc2_short,R,428
-R72,Infecção estreptocócica da garganta,icpc2_short,R,429
-R73,Abcesso/furúnculo no nariz,icpc2_short,R,430
-R74,Infecção respiratória superior aguda,icpc2_short,R,431
 R75,Sinusite crónica/aguda,icpc2_short,R,432
-R76,Amigdalite aguda,icpc2_short,R,433
-R77,Laringite/traqueíte aguda,icpc2_short,R,434
-R78,Bronquite/bronquiolite aguda,icpc2_short,R,435
-R79,Bronquite crónica,icpc2_short,R,436
-R80,Gripe,icpc2_short,R,437
-R81,Pneumonia,icpc2_short,R,438
-R82,Pleurisia/derrame pleural,icpc2_short,R,439
 R83,"Infecção respiratória, outra",icpc2_short,R,440
-R84,Neoplasia maligna do brônquio/pulmão,icpc2_short,R,441
-R85,Neoplasia respiratória maligna outra,icpc2_short,R,442
-R86,Neoplasia respiratória benigna,icpc2_short,R,443
 R87,Corpo estranho nariz/laringe/brônqui,icpc2_short,R,444
-R88,Lesão respiratória outra,icpc2_short,R,445
-R89,Malformação congénita respiratória,icpc2_short,R,446
-R90,Hipertrofia das amígdalas/adenóides,icpc2_short,R,447
 R92,Neoplasia respiratória NE,icpc2_short,R,448
-R95,Doença pulmonar obstrutiva crónica,icpc2_short,R,449
-R96,Asma,icpc2_short,R,450
-R97,Rinite alérgica,icpc2_short,R,451
-R98,Sindrome de hiperventilação,icpc2_short,R,452
-R99,Doença respiratória outra,icpc2_short,R,453
-S01,Dor/sensibilidade dolorosa da pele,icpc2_short,S,454
-S02,Prurido,icpc2_short,S,455
-S03,Verrugas,icpc2_short,S,456
-S04,Tumor/massa localizada,icpc2_short,S,457
-S05,Tumores/inchaços generalizados,icpc2_short,S,458
-S06,Erupção cutânea localizada,icpc2_short,S,459
-S07,Erupção cutânea generalizada,icpc2_short,S,460
-S08,Alteração da cor da pele,icpc2_short,S,461
 S09,Infecção de dedo da mão/pé,icpc2_short,S,462
-S10,Furúnculo/antraz,icpc2_short,S,463
-S11,Infecção pós-traumática da pele,icpc2_short,S,464
-S12,Picada/mordedura de insecto,icpc2_short,S,465
-S13,Mordedura animal/humana,icpc2_short,S,466
-S14,Queimadura/escaldão,icpc2_short,S,467
-S15,Corpo estranho na pele,icpc2_short,S,468
-S16,Traumatismo/contusão,icpc2_short,S,469
-S17,Abrasão/arranhão/bolha,icpc2_short,S,470
-S18,Laceração/corte,icpc2_short,S,471
-S19,Lesão cutânea outra,icpc2_short,S,472
-S20,Calo/calosidade,icpc2_short,S,473
-S21,Sintoma/queixa da textura da pele,icpc2_short,S,474
-S22,Sintoma/queixa da unha,icpc2_short,S,475
-S23,Queda de cabelo/calvície,icpc2_short,S,476
 S24,Sintoma/queixa cabelo/c cabelu outro,icpc2_short,S,477
-S26,Medo de cancro da pele,icpc2_short,S,478
-S27,Medo de doença da pele outra,icpc2_short,S,479
-S28,Limitação funcional/incapacidade (S),icpc2_short,S,480
-S29,Sintoma/queixa da pele outro,icpc2_short,S,481
-S70,Herpes zoster,icpc2_short,S,482
 S71,Herpes simples,icpc2_short,S,483
-S72,Escabiose/outra acaríase,icpc2_short,S,484
 S73,Pediculose/outra infestação da pele,icpc2_short,S,485
-S74,Dermatofitose,icpc2_short,S,486
-S75,Monilíase/candidíase da pele,icpc2_short,S,487
-S76,Infecção da pele outra,icpc2_short,S,488
-S77,Neoplasia maligna da pele,icpc2_short,S,489
-S78,Lipoma,icpc2_short,S,490
 S79,Neoplasia cutânea benigna/NE,icpc2_short,S,491
-S80,Queratose/queimadura solar,icpc2_short,S,492
-S81,Hemangioma/linfangioma,icpc2_short,S,493
-S82,Nevo/sinal da pele,icpc2_short,S,494
-S83,Lesão congénita da pele outra,icpc2_short,S,495
-S84,Impetigo,icpc2_short,S,496
-S85,Quisto/fístula pilonidal,icpc2_short,S,497
-S86,Dermatite seborreica,icpc2_short,S,498
-S87,Dermatite/eczema atópico,icpc2_short,S,499
-S88,Dermatite de contacto/alérgica,icpc2_short,S,500
-S89,Eritema das fraldas,icpc2_short,S,501
-S90,Pitiríase rosada,icpc2_short,S,502
-S91,Psoríase,icpc2_short,S,503
-S92,Doença das glândulas sudoríparas,icpc2_short,S,504
-S93,Quisto sebáceo,icpc2_short,S,505
-S94,Unha encravada,icpc2_short,S,506
-S95,Molusco contagioso,icpc2_short,S,507
-S96,Acne,icpc2_short,S,508
-S97,Úlcera crónica da pele,icpc2_short,S,509
-S98,Urticária,icpc2_short,S,510
 S99,"Doença da pele, outra",icpc2_short,S,511
-T01,Sede excessiva,icpc2_short,T,512
-T02,Apetite excessivo,icpc2_short,T,513
-T03,Perda de apetite,icpc2_short,T,514
 T04,Problema alimentar lactente/criança,icpc2_short,T,515
-T05,Problema alimentar do adulto,icpc2_short,T,516
-T07,Aumento de peso,icpc2_short,T,517
-T08,Perda de peso,icpc2_short,T,518
-T10,Atraso de crescimento,icpc2_short,T,519
-T11,Desidratação,icpc2_short,T,520
-T26,Medo de cancro do sistema endócrino,icpc2_short,T,521
 T27,Medo doença endócrina/metaból outra,icpc2_short,T,522
-T28,Limitação funcional/incapacidade (T),icpc2_short,T,523
 T29,Sintoma/queixa do sistema (T) outro,icpc2_short,T,524
-T70,Infecção endócrina,icpc2_short,T,525
-T71,Neoplasia maligna da tiróide,icpc2_short,T,526
-T72,Neoplasia benigna da tiróide,icpc2_short,T,527
 T73,Neoplasia endócrina NE/outra,icpc2_short,T,528
-T78,Quisto/canal tireoglosso,icpc2_short,T,529
 T80,Malformação congénita endócr/metab,icpc2_short,T,530
-T81,Bócio,icpc2_short,T,531
-T82,Obesidade,icpc2_short,T,532
-T83,Excesso de peso,icpc2_short,T,533
-T85,Hipertiroidismo/tirotoxicose,icpc2_short,T,534
-T86,Hipotiroidismo/mixedema,icpc2_short,T,535
-T87,Hipoglicémia,icpc2_short,T,536
-T89,Diabetes insulino-dependente,icpc2_short,T,537
-T90,Diabetes não insulino-dependente,icpc2_short,T,538
-T91,Deficiência vitamínica/nutricional,icpc2_short,T,539
-T92,Gota,icpc2_short,T,540
 T93,Alteração do metabolismo dos lípidos,icpc2_short,T,541
 T99,Doença endoc/metab/nutricion outra,icpc2_short,T,542
-U01,Disúria/micção dolorosa,icpc2_short,U,543
-U02,Micção frequente/urgente,icpc2_short,U,544
-U04,Incontinência urinária,icpc2_short,U,545
-U05,Problema com a micção outro,icpc2_short,U,546
-U06,Hematúria,icpc2_short,U,547
-U07,Sintoma/queixa da urina outro,icpc2_short,U,548
-U08,Retenção urinária,icpc2_short,U,549
-U13,Sintoma/queixa da bexiga outro,icpc2_short,U,550
-U14,Sintoma/queixa do rim,icpc2_short,U,551
-U26,Medo de cancro do aparelho urinário,icpc2_short,U,552
 U27,Medo de outra doença urinária,icpc2_short,U,553
-U28,Limitação funcional/incapacidade (U),icpc2_short,U,554
 U29,Sintoma/queixa aparelho urinár outro,icpc2_short,U,555
-U70,Pielonefrite/pielite,icpc2_short,U,556
-U71,Cistite/infecção urinária outra,icpc2_short,U,557
-U72,Uretrite,icpc2_short,U,558
-U75,Neoplasia maligna do rim,icpc2_short,U,559
-U76,Neoplasia maligna da bexiga,icpc2_short,U,560
 U77,Neoplas malig aparelho urinár outra,icpc2_short,U,561
 U78,Neoplasia benigna aparelho urinário,icpc2_short,U,562
 U79,Neoplasia do aparelho urinário NE,icpc2_short,U,563
-U80,Lesão traumática do aparelho urinário,icpc2_short,U,564
 U85,Malformação congén aparelho urinár,icpc2_short,U,565
-U88,Glomerulonefrite/nefrose,icpc2_short,U,566
-U90,Albuminúria/proteinúria ortostática,icpc2_short,U,567
-U95,Cálculo urinário,icpc2_short,U,568
-U98,Análise de urina anormal NE,icpc2_short,U,569
-U99,Doença urinária outra,icpc2_short,U,570
-W01,Suspeita de gravidez,icpc2_short,W,571
-W02,Medo de estar grávida,icpc2_short,W,572
-W03,Hemorragia antes do parto,icpc2_short,W,573
 W05,Vómitos/náuseas durante a gravidez,icpc2_short,W,574
-W10,Contracepção pós-coital,icpc2_short,W,575
-W11,Contracepção oral,icpc2_short,W,576
-W12,Contracepção intra-uterina,icpc2_short,W,577
-W13,Esterilização feminina,icpc2_short,W,578
-W14,Contracepção feminina outra,icpc2_short,W,579
-W15,Infertilidade/subfertilidade feminina,icpc2_short,W,580
-W17,Hemorragia pós-parto,icpc2_short,W,581
-W18,Sintoma/queixa do pós-parto outro,icpc2_short,W,582
-W19,Sintoma/queixa da lactação,icpc2_short,W,583
 W21,Preocup imagem corporal na gravidez,icpc2_short,W,584
-W27,Medo de complicações da gravidez,icpc2_short,W,585
-W28,Limitação funcional/incapacidade (W),icpc2_short,W,586
-W29,Sintoma/queixa da gravidez outro,icpc2_short,W,587
-W70,Sépsis/infecção puerperal,icpc2_short,W,588
 W71,Infecção complica gravid/puerp outra,icpc2_short,W,589
 W72,Neopl maligna relacion com gravidez,icpc2_short,W,590
 W73,Neopl benig/incerta relacio com grav,icpc2_short,W,591
 W75,Lesão traumat que complica gravidez,icpc2_short,W,592
 W76,Malform congén que complica gravidez,icpc2_short,W,593
-W78,Gravidez,icpc2_short,W,594
-W79,Gravidez não desejada,icpc2_short,W,595
-W80,Gravidez ectópica,icpc2_short,W,596
-W81,Toxémia da gravidez,icpc2_short,W,597
-W82,Aborto espontâneo,icpc2_short,W,598
-W83,Aborto provocado,icpc2_short,W,599
-W84,Gravidez de alto risco,icpc2_short,W,600
 W85,Diabetes gestational,icpc2_short,W,601
-W90,Parto sem complicações de nado vivo,icpc2_short,W,602
-W91,Parto sem complicações de nado morto,icpc2_short,W,603
-W92,Parto com complicações de nado vivo,icpc2_short,W,604
-W93,Parto com complicações de nado morto,icpc2_short,W,605
-W94,Mastite puerperal,icpc2_short,W,606
 W95,Probl mama durante grav/puerp outro,icpc2_short,W,607
-W96,Complicação do puerpério outra,icpc2_short,W,608
-W99,Problema da gravidez/parto outro,icpc2_short,W,609
-X01,Dor genital feminina,icpc2_short,X,610
-X02,Dor menstrual,icpc2_short,X,611
-X03,Dor intermenstrual,icpc2_short,X,612
 X04,Relação sexual dolorosa na mulher,icpc2_short,X,613
-X05,Menstruação escassa/ausente,icpc2_short,X,614
-X06,Menstruação excessiva,icpc2_short,X,615
-X07,Menstruação irregular/frequente,icpc2_short,X,616
-X08,Hemorragia inter-menstrual,icpc2_short,X,617
-X09,Sintoma/queixa pré-menstrual,icpc2_short,X,618
 X10,Desejo de alterar data da menstruaç,icpc2_short,X,619
-X11,Sintoma/queixa da menopausa,icpc2_short,X,620
-X12,Hemorragia pós-menopausa,icpc2_short,X,621
-X13,Hemorragia pós-coito,icpc2_short,X,622
-X14,Secreção vaginal,icpc2_short,X,623
-X15,Sintoma/queixa da vagina outro,icpc2_short,X,624
-X16,Sintoma/queixa da vulva,icpc2_short,X,625
-X17,Sintoma/queixa da pélvis feminina,icpc2_short,X,626
-X18,Dor na mama feminina,icpc2_short,X,627
-X19,Tumor/nódulo da mama feminina,icpc2_short,X,628
 X20,Sintoma/queixa do mamilo na mulher,icpc2_short,X,629
 X21,Sintoma/queixa mama feminina outro,icpc2_short,X,630
 X22,Preocupação com aparência mama femin,icpc2_short,X,631
@@ -1362,120 +835,67 @@ X24,Medo de disfunção sexual na mulher,icpc2_short,X,633
 X25,Medo de cancro genital na mulher,icpc2_short,X,634
 X26,Medo de cancro da mama na mulher,icpc2_short,X,635
 X27,Medo de outra doença (X),icpc2_short,X,636
-X28,Limitação funcional/incapacidade (X),icpc2_short,X,637
 X29,Sintoma/queixa apar genit fem outro,icpc2_short,X,638
-X70,Sífilis feminina,icpc2_short,X,639
-X71,Gonorreia feminina,icpc2_short,X,640
 X72,Candidíase genital na mulher,icpc2_short,X,641
 X73,Tricomoníase genital na mulher,icpc2_short,X,642
-X74,Doença inflamatória pélvica,icpc2_short,X,643
-X75,Neoplasia maligna do colo,icpc2_short,X,644
-X76,Neoplasia maligna da mama feminina,icpc2_short,X,645
 X77,Neopl maligna genital femin outra,icpc2_short,X,646
-X78,Fibromioma do útero,icpc2_short,X,647
-X79,Neoplasia benigna da mama feminina,icpc2_short,X,648
-X80,Neoplasia benigna genital feminina,icpc2_short,X,649
 X81,Neopl genit fem natur incerta outra,icpc2_short,X,650
 X82,Lesão traumática genital feminino,icpc2_short,X,651
 X83,Malformação congénita genital,icpc2_short,X,652
-X84,Vaginite/vulvite NE,icpc2_short,X,653
-X85,Doença do colo NE,icpc2_short,X,654
 X86,Esfregaço de papanicolau anormal,icpc2_short,X,655
-X87,Prolapso útero-vaginal,icpc2_short,X,656
-X88,Doença fibroquística da mama,icpc2_short,X,657
-X89,Síndrome de tensão pré-menstrual,icpc2_short,X,658
-X90,Herpes genital feminino,icpc2_short,X,659
-X91,Condiloma acuminado feminino,icpc2_short,X,660
-X92,Infecção genital por chlamydia,icpc2_short,X,661
-X99,Doença genital feminino outra,icpc2_short,X,662
-Y01,Dor no pénis,icpc2_short,Y,663
 Y02,Dor no escroto/testículos,icpc2_short,Y,664
-Y03,Corrimento uretral,icpc2_short,Y,665
-Y04,Sintoma/queixa do pénis outro,icpc2_short,Y,666
 Y05,Sintoma/queixa escroto/testíc outro,icpc2_short,Y,667
-Y06,Sintoma/queixa da próstata,icpc2_short,Y,668
-Y07,Impotência NE,icpc2_short,Y,669
 Y08,Sintoma/queixa função sexual mascul,icpc2_short,Y,670
 Y10,Infertilidade/subfertilidade mascul,icpc2_short,Y,671
-Y13,Esterilização masculina,icpc2_short,Y,672
-Y14,Planeamento familiar no homem outro,icpc2_short,Y,673
-Y16,Sintoma/queixa da mama masculina,icpc2_short,Y,674
 Y24,Medo de disfunção sexual no homem,icpc2_short,Y,675
 Y25,Medo doença sexualm transmis homem,icpc2_short,Y,676
-Y26,Medo de cancro genital masculino,icpc2_short,Y,677
 Y27,Medo de outra doença genital mascul,icpc2_short,Y,678
-Y28,Limitação funcional/incapacidade (Y),icpc2_short,Y,679
 Y29,Sintoma/queixa genital mascul outro,icpc2_short,Y,680
-Y70,Sífilis masculina,icpc2_short,Y,681
-Y71,Gonorreia masculina,icpc2_short,Y,682
 Y72,Herpes genital no homem,icpc2_short,Y,683
-Y73,Prostatite/vesiculite seminal,icpc2_short,Y,684
-Y74,Orquite/epididimite,icpc2_short,Y,685
-Y75,Balanite,icpc2_short,Y,686
 Y76,Condiloma acuminado,icpc2_short,Y,687
-Y77,Neoplasia maligna da próstata,icpc2_short,Y,688
 Y78,Neoplasia maligna genit mascul outro,icpc2_short,Y,689
 Y79,Neoplasia benig/incerta genit mascul,icpc2_short,Y,690
 Y80,Traumatismo genital masculino outro,icpc2_short,Y,691
-Y81,Fimose/prepúcio redundante,icpc2_short,Y,692
-Y82,Hipospádias,icpc2_short,Y,693
-Y83,Testículo não descido,icpc2_short,Y,694
 Y84,Malformação congén genit homem outra,icpc2_short,Y,695
-Y85,Hipertrofia prostática benigna,icpc2_short,Y,696
-Y86,Hidrocelo,icpc2_short,Y,697
 Y99,Doença genital masculino outra,icpc2_short,Y,698
-Z01,Pobreza/problema económico,icpc2_short,Z,699
 Z02,Probl relacion com água/alimentação,icpc2_short,Z,700
-Z03,Problema de habitação/vizinhança,icpc2_short,Z,701
-Z04,Problema sócio-cultural,icpc2_short,Z,702
 Z05,Problema relacionado com o trabalho,icpc2_short,Z,703
-Z06,Problema de desemprego,icpc2_short,Z,704
 Z07,Problema relacionado com a educação,icpc2_short,Z,705
 Z08,Probl relacion com sist segur social,icpc2_short,Z,706
-Z09,Problema legal,icpc2_short,Z,707
 Z10,Probl relacion com sistema de saúde,icpc2_short,Z,708
 Z11,Problema com o estar doente,icpc2_short,Z,709
-Z12,Problema relacional com o parceiro,icpc2_short,Z,710
-Z13,Problema comportamental do parceiro,icpc2_short,Z,711
-Z14,Problema por doença do parceiro,icpc2_short,Z,712
 Z15,Perda ou falecimento do parceiro,icpc2_short,Z,713
-Z16,Problema relacional com uma criança,icpc2_short,Z,714
-Z18,Problema com uma criança doente,icpc2_short,Z,715
 Z19,Perda ou falecimento de uma criança,icpc2_short,Z,716
 Z20,Problema relacion com pai/mãe/famili,icpc2_short,Z,717
 Z21,Problema comport pai/mãe/membro fam,icpc2_short,Z,718
 Z22,Problema doença pai/mãe/membro fam,icpc2_short,Z,719
 Z23,Perda/falecimento pai/mãe/membro fam,icpc2_short,Z,720
-Z24,Problema relacional com amigo,icpc2_short,Z,721
 Z25,Acto/acontecimento violento,icpc2_short,Z,722
-Z27,Medo de problema social,icpc2_short,Z,723
-Z28,Limitação funcional/incapacidade (Z),icpc2_short,Z,724
-Z29,Problema social NE,icpc2_short,Z,725
-A01,dor crónica generalizada,icpc2_inclusion,A,40
-A01,dores múltiplas,icpc2_inclusion,A,40
-A02,calafrios,icpc2_inclusion,A,41
-A02,tremores,icpc2_inclusion,A,41
-A04,síndrome de fadiga crónica,icpc2_inclusion,A,43
-A04,exaustão,icpc2_inclusion,A,43
-A04,fadiga,icpc2_inclusion,A,43
-A04,lassidão,icpc2_inclusion,A,43
-A04,letargia,icpc2_inclusion,A,43
-A04,fadiga pós-viral,icpc2_inclusion,A,43
-A06,perda momentânea da consciência,icpc2_inclusion,A,45
-A06,colapso,icpc2_inclusion,A,45
-A06,crise vasovagal,icpc2_inclusion,A,45
-A08,alto,icpc2_inclusion,A,47
-A08,massa NE,icpc2_inclusion,A,47
-A21,outro factor de risco para malignidade,icpc2_inclusion,A,55
-A21,tratamento anterior de malignidade,icpc2_inclusion,A,55
-A21,história pessoal/familiar de malignidade,icpc2_inclusion,A,55
-A23,contacto com doença infecciosa,icpc2_inclusion,A,56
-A23,outro factor de risco para outra doença,icpc2_inclusion,A,56
-A23,história pessoal/familiar de outra doença,icpc2_inclusion,A,56
-A23,episódio anterior de outra doença,icpc2_inclusion,A,56
-A29,inépcia,icpc2_inclusion,A,61
-A29,quedas,icpc2_inclusion,A,61
-A29,sonolência,icpc2_inclusion,A,61
+A01,dor crónica generalizada,icpc2_inclusion,A,0
+A01,dores múltiplas,icpc2_inclusion,A,0
+A02,calafrios,icpc2_inclusion,A,1
+A02,tremores,icpc2_inclusion,A,1
+A04,síndrome de fadiga crónica,icpc2_inclusion,A,3
+A04,exaustão,icpc2_inclusion,A,3
+A04,fadiga,icpc2_inclusion,A,3
+A04,lassidão,icpc2_inclusion,A,3
+A04,letargia,icpc2_inclusion,A,3
+A04,fadiga pós-viral,icpc2_inclusion,A,3
+A06,perda momentânea da consciência,icpc2_inclusion,A,5
+A06,colapso,icpc2_inclusion,A,5
+A06,crise vasovagal,icpc2_inclusion,A,5
+A08,alto,icpc2_inclusion,A,7
+A08,massa NE,icpc2_inclusion,A,7
+A21,outro factor de risco para malignidade,icpc2_inclusion,A,15
+A21,tratamento anterior de malignidade,icpc2_inclusion,A,15
+A21,história pessoal/familiar de malignidade,icpc2_inclusion,A,15
+A23,contacto com doença infecciosa,icpc2_inclusion,A,16
+A23,outro factor de risco para outra doença,icpc2_inclusion,A,16
+A23,história pessoal/familiar de outra doença,icpc2_inclusion,A,16
+A23,episódio anterior de outra doença,icpc2_inclusion,A,16
+A29,inépcia,icpc2_inclusion,A,21
+A29,quedas,icpc2_inclusion,A,21
+A29,sonolência,icpc2_inclusion,A,21
 A70,efeito tardio da tuberculose,icpc2_inclusion,A,62
 A70,infecção por tuberculose em qualquer local do corpo,icpc2_inclusion,A,62
 A75,febre glandular,icpc2_inclusion,A,67
@@ -2575,126 +1995,126 @@ Z25,vítima de violação,icpc2_inclusion,Z,722
 Z25,vítima de ataque sexual,icpc2_inclusion,Z,722
 Z29,problemas com o meio ambiente,icpc2_inclusion,Z,725
 Z29,simulação de doença,icpc2_inclusion,Z,725
-A03,Outra febre especificada,icd10_description,A,42
-A03,"Febre, sem outra especificação",icd10_description,A,42
-A04,Síndrome de fadiga pós-viral,icd10_description,A,43
-A04,"Mal estar, fadiga",icd10_description,A,43
-A07,Sonolência,icd10_description,A,46
-A07,Estupor,icd10_description,A,46
-A07,Coma,icd10_description,A,46
-A21,História familiar de neoplasia maligna de órgãos digestivos,icd10_description,A,55
-A21,"História familiar de neoplasia maligna da traqueia, brônquios e pulmões",icd10_description,A,55
-A21,História familiar de neoplasia maligna de outros órgãos respiratórios e intratorácicos,icd10_description,A,55
-A21,História familiar de neoplasia maligna da mama,icd10_description,A,55
-A21,História familiar de neoplasia maligna de órgãos genitais,icd10_description,A,55
-A21,História familiar de neoplasia maligna do trato urinário,icd10_description,A,55
-A21,História familiar de leucemia,icd10_description,A,55
-A21,"História familiar de outras neoplasias malignas do tecido linfático, hemotopoiético e tecidos relacionados",icd10_description,A,55
-A21,História familiar de neoplasia maligna de outros órgãos ou aparelhos,icd10_description,A,55
-A21,"História familiar de neoplasia maligna, sem outra especificação",icd10_description,A,55
-A21,História pessoal de neoplasia maligna de órgãos digestivos,icd10_description,A,55
-A21,"História pessoal de neoplasia maligna de traqueia, brônquio e pulmão",icd10_description,A,55
-A21,História pessoal de neoplasia maligna de outros órgãos do aparelho respiratório e intratorácicos,icd10_description,A,55
-A21,História pessoal de neoplasia maligna da mama,icd10_description,A,55
-A21,História pessoal de neoplasia maligna de órgãos genitais,icd10_description,A,55
-A21,História pessoal de neoplasia maligna do trato urinário,icd10_description,A,55
-A21,História pessoal de leucemia,icd10_description,A,55
-A21,"História pessoal de outra neoplasia maligna de tecido linfóide, hematopoiético e outros tecidos relacionados",icd10_description,A,55
-A21,História pessoal de neoplasias malignas de outros órgãos e aparelhos,icd10_description,A,55
-A21,"História pessoal de neoplasia maligna, sem outra especificação",icd10_description,A,55
-A23,Contacto com e exposição (suspeita) a doenças infecciosas do intestino,icd10_description,A,56
-A23,Contacto com e exposição (suspeita) a tuberculose,icd10_description,A,56
-A23,Contacto com e exposição (suspeita) a Infeções com um modo de transmissão predominantemente sexual,icd10_description,A,56
-A23,Contacto com e exposição (suspeita) a raiva,icd10_description,A,56
-A23,Contacto com e exposição (suspeita) a rubéola,icd10_description,A,56
-A23,Contacto com e exposição (suspeita) a hepatite viral,icd10_description,A,56
-A23,Contacto com e exposição (suspeita) a vírus da imunodeficiência humana [VIH],icd10_description,A,56
-A23,"Contacto com e exposição (suspeita) a pediculose [piolhos], acaríase [ácaros] e outras infestações",icd10_description,A,56
-A23,Contacto com  e exposicao (suspeita) a outras doenças transmissíveis,icd10_description,A,56
-A23,"Contacto com e exposição (suspeita) a doença transmissível, sem outra especificação",icd10_description,A,56
-A23,Imunização não realizada por contra-Indicação,icd10_description,A,56
-A23,Vacinacão não realizada por causa de motivos religiosos,icd10_description,A,56
-A23,Imunização não realizada por decisão do doente devida a razões outras e às não especificadas,icd10_description,A,56
-A23,Vacinação não realizada por outra razão,icd10_description,A,56
-A23,Vacinacão não realizada por razao não especificada,icd10_description,A,56
-A23,Uso de tabaco,icd10_description,A,56
-A23,Falta de exercício fisico,icd10_description,A,56
-A23,Hábitos alimentares e dieta inadequados,icd10_description,A,56
-A23,Comportamento sexual de alto risco,icd10_description,A,56
-A23,Falta de repouso e de lazer,icd10_description,A,56
-A23,História familiar de deficiências intelectuais,icd10_description,A,56
-A23,História familiar de abuso de álcool e dependência,icd10_description,A,56
-A23,História familiar de abuso e dependência de tabaco,icd10_description,A,56
-A23,História familiar de abuso e dependência de outra substância psicoativa,icd10_description,A,56
-A23,História familiar de abuso e dependência de outra substância,icd10_description,A,56
-A23,História familiar de outras patologias mentais e do comportamento,icd10_description,A,56
-A23,História familiar de epilepsia e outras doenças do sistema nervoso,icd10_description,A,56
-A23,História familiar de amaurose e perda da visão,icd10_description,A,56
-A23,História familiar de surdez e perda da audição,icd10_description,A,56
-A23,História familiar de asma e outras doenças respiratórias inferiores crónicas,icd10_description,A,56
-A23,História familiar de artrite e outras doenças do aparelho musculoesqueléctico e do tecido conjuntivo,icd10_description,A,56
-A23,História familiar de malformações e deformações congénitas e anomalias cromossómicas,icd10_description,A,56
-A23,"História familiar de outras incapacidades e doenças crónicas que levam a incapacidade, não classificadas noutra parte",icd10_description,A,56
-A23,História familiar de doença pelo vírus da imunodeficiência humana [VIH],icd10_description,A,56
-A23,História familiar de outras doenças infecciosas e parasitárias,icd10_description,A,56
-A23,História familiar de doenças do sangue e dos órgãos hematopoiéticos e certas patologias que inflenciam o mecanismo imunitário,icd10_description,A,56
-A23,História familiar de Diabetes mellitus,icd10_description,A,56
-A23,"História familiar de outras doenças endócrinas, nutricionais e metabólicas",icd10_description,A,56
-A23,História familiar de patologias do olho e do ouvido,icd10_description,A,56
-A23,História familiar de outras doenças do aparelho respiratório,icd10_description,A,56
-A23,História familiar de doenças do aparelho digestivo,icd10_description,A,56
-A23,História familiar de doenças da pele e do tecido subcutâneo,icd10_description,A,56
-A23,História familiar de patologias do rim e ureter,icd10_description,A,56
-A23,História familiar de outras doenças do aparelho genitourinário,icd10_description,A,56
-A23,História familiar de consanguinidade,icd10_description,A,56
-A23,História familiar de outras condições especificadas,icd10_description,A,56
-A23,História pessoal de neoplasias in situ e benignas e neoplasias de comportamento incerto,icd10_description,A,56
-A23,História pessoal de doenças infecciosas e parasitárias,icd10_description,A,56
-A23,História pessoal de doenças do sangue e dos órgãos hematopoéticos e algumas patologias envolvendo o mecanismo imunitário,icd10_description,A,56
-A23,"História pessoal de doenças endócrinas, nutricionais e metabólicas",icd10_description,A,56
-A23,História pessoal de distúrbios mentais e comportamentais,icd10_description,A,56
-A23,História pessoal de doenças do sistema nervoso e dos órgãos sensitivos,icd10_description,A,56
-A23,História pessoal de doenças do aparelho respiratório,icd10_description,A,56
-A23,História pessoal de doenças do aparelho digestivo,icd10_description,A,56
-A23,História pessoal de doenças da pele e do tecido subcutâneo,icd10_description,A,56
-A23,História pessoal de doenças do aparelho musculoesquelético e tecido conjuntivo,icd10_description,A,56
-A23,História pessoal de doenças do aparelho genitourinário,icd10_description,A,56
-A23,"História pessoal de complicações da gravidez, parto e puerpério",icd10_description,A,56
-A23,História pessoal de determinadas condições (corrigidas) que surgiram no período perinatal,icd10_description,A,56
-A23,História pessoal de malformações congénitas (corrigidas),icd10_description,A,56
-A23,História pessoal de outras doenças especificadas,icd10_description,A,56
-A23,Historia pessoal de alergia a penicilina,icd10_description,A,56
-A23,História pessoal de alergia a outros antibióticos,icd10_description,A,56
-A23,Historia pessoal de alergia a sulfonamidas,icd10_description,A,56
-A23,Historia pessoal de alergia a agentes anti-infecciosos NCOP,icd10_description,A,56
-A23,Historia pessoal de alergia a anestésicos,icd10_description,A,56
-A23,Historia pessoal de alergia a narcóticos,icd10_description,A,56
-A23,Historia pessoal de alergia a analgésicos,icd10_description,A,56
-A23,Historia pessoal de alergia a soros ou vacinas,icd10_description,A,56
-A23,"História pessoal de alergia a outros fármacos, medicamentos e a substâncias biológicas",icd10_description,A,56
-A23,"História pessoal de alergia a fármacos, medicamentos e a substâncias biológicas, SOE",icd10_description,A,56
-A23,História pessoal de alergia exceto a drogas e a substâncias biológicas,icd10_description,A,56
-A23,Doente sem adesão ao tratamento e regime médicos,icd10_description,A,56
-A23,História pessoal de trauma psicológico não classificado noutra parte,icd10_description,A,56
-A23,História pessoal de auto-agressão,icd10_description,A,56
-A23,"História pessoal de outros fatores de risco especificados, não classificados noutra parte",icd10_description,A,56
-A23,História pessoal de contraceção,icd10_description,A,56
-A23,História pessoal de terapêutica farmacológica,icd10_description,A,56
-A23,História pessoal de irradiação,icd10_description,A,56
-A23,História pessoal de outro tratamento médico,icd10_description,A,56
-A28,"Tendência a queda, não classificada em outra parte",icd10_description,A,60
-A28,Limites impostos às atividades por invalidez,icd10_description,A,60
-A28,Mobilidade reduzida,icd10_description,A,60
-A28,Necessidade ajuda nas atividades de vida diária,icd10_description,A,60
-A28,"Necessidade de ajuda no domicílio, sendo que nenhum coabitante pode assegurar os cuidados",icd10_description,A,60
-A28,Necessidade de supervisão contínua,icd10_description,A,60
-A28,Outros problemas relacionados com a dependência de pessoa que oferece cuidados de saúde,icd10_description,A,60
-A28,Problema não especificado relacionado com a dependência de pessoa que oferece cuidados de saúde,icd10_description,A,60
-A28,Dependência de aspirador de secreções,icd10_description,A,60
-A28,Dependência de cadeira de rodas,icd10_description,A,60
-A28,Dependência de outras máquinas e aparelhos capacitantes,icd10_description,A,60
-A29,"Hipotermia, não associada a baixa temperatura ambiental",icd10_description,A,61
-A29,Outros sintomas e sinais gerais,icd10_description,A,61
+A03,Outra febre especificada,icd10_description,A,2
+A03,"Febre, sem outra especificação",icd10_description,A,2
+A04,Síndrome de fadiga pós-viral,icd10_description,A,3
+A04,"Mal estar, fadiga",icd10_description,A,3
+A07,Sonolência,icd10_description,A,6
+A07,Estupor,icd10_description,A,6
+A07,Coma,icd10_description,A,6
+A21,História familiar de neoplasia maligna de órgãos digestivos,icd10_description,A,15
+A21,"História familiar de neoplasia maligna da traqueia, brônquios e pulmões",icd10_description,A,15
+A21,História familiar de neoplasia maligna de outros órgãos respiratórios e intratorácicos,icd10_description,A,15
+A21,História familiar de neoplasia maligna da mama,icd10_description,A,15
+A21,História familiar de neoplasia maligna de órgãos genitais,icd10_description,A,15
+A21,História familiar de neoplasia maligna do trato urinário,icd10_description,A,15
+A21,História familiar de leucemia,icd10_description,A,15
+A21,"História familiar de outras neoplasias malignas do tecido linfático, hemotopoiético e tecidos relacionados",icd10_description,A,15
+A21,História familiar de neoplasia maligna de outros órgãos ou aparelhos,icd10_description,A,15
+A21,"História familiar de neoplasia maligna, sem outra especificação",icd10_description,A,15
+A21,História pessoal de neoplasia maligna de órgãos digestivos,icd10_description,A,15
+A21,"História pessoal de neoplasia maligna de traqueia, brônquio e pulmão",icd10_description,A,15
+A21,História pessoal de neoplasia maligna de outros órgãos do aparelho respiratório e intratorácicos,icd10_description,A,15
+A21,História pessoal de neoplasia maligna da mama,icd10_description,A,15
+A21,História pessoal de neoplasia maligna de órgãos genitais,icd10_description,A,15
+A21,História pessoal de neoplasia maligna do trato urinário,icd10_description,A,15
+A21,História pessoal de leucemia,icd10_description,A,15
+A21,"História pessoal de outra neoplasia maligna de tecido linfóide, hematopoiético e outros tecidos relacionados",icd10_description,A,15
+A21,História pessoal de neoplasias malignas de outros órgãos e aparelhos,icd10_description,A,15
+A21,"História pessoal de neoplasia maligna, sem outra especificação",icd10_description,A,15
+A23,Contacto com e exposição (suspeita) a doenças infecciosas do intestino,icd10_description,A,16
+A23,Contacto com e exposição (suspeita) a tuberculose,icd10_description,A,16
+A23,Contacto com e exposição (suspeita) a Infeções com um modo de transmissão predominantemente sexual,icd10_description,A,16
+A23,Contacto com e exposição (suspeita) a raiva,icd10_description,A,16
+A23,Contacto com e exposição (suspeita) a rubéola,icd10_description,A,16
+A23,Contacto com e exposição (suspeita) a hepatite viral,icd10_description,A,16
+A23,Contacto com e exposição (suspeita) a vírus da imunodeficiência humana [VIH],icd10_description,A,16
+A23,"Contacto com e exposição (suspeita) a pediculose [piolhos], acaríase [ácaros] e outras infestações",icd10_description,A,16
+A23,Contacto com  e exposicao (suspeita) a outras doenças transmissíveis,icd10_description,A,16
+A23,"Contacto com e exposição (suspeita) a doença transmissível, sem outra especificação",icd10_description,A,16
+A23,Imunização não realizada por contra-Indicação,icd10_description,A,16
+A23,Vacinacão não realizada por causa de motivos religiosos,icd10_description,A,16
+A23,Imunização não realizada por decisão do doente devida a razões outras e às não especificadas,icd10_description,A,16
+A23,Vacinação não realizada por outra razão,icd10_description,A,16
+A23,Vacinacão não realizada por razao não especificada,icd10_description,A,16
+A23,Uso de tabaco,icd10_description,A,16
+A23,Falta de exercício fisico,icd10_description,A,16
+A23,Hábitos alimentares e dieta inadequados,icd10_description,A,16
+A23,Comportamento sexual de alto risco,icd10_description,A,16
+A23,Falta de repouso e de lazer,icd10_description,A,16
+A23,História familiar de deficiências intelectuais,icd10_description,A,16
+A23,História familiar de abuso de álcool e dependência,icd10_description,A,16
+A23,História familiar de abuso e dependência de tabaco,icd10_description,A,16
+A23,História familiar de abuso e dependência de outra substância psicoativa,icd10_description,A,16
+A23,História familiar de abuso e dependência de outra substância,icd10_description,A,16
+A23,História familiar de outras patologias mentais e do comportamento,icd10_description,A,16
+A23,História familiar de epilepsia e outras doenças do sistema nervoso,icd10_description,A,16
+A23,História familiar de amaurose e perda da visão,icd10_description,A,16
+A23,História familiar de surdez e perda da audição,icd10_description,A,16
+A23,História familiar de asma e outras doenças respiratórias inferiores crónicas,icd10_description,A,16
+A23,História familiar de artrite e outras doenças do aparelho musculoesqueléctico e do tecido conjuntivo,icd10_description,A,16
+A23,História familiar de malformações e deformações congénitas e anomalias cromossómicas,icd10_description,A,16
+A23,"História familiar de outras incapacidades e doenças crónicas que levam a incapacidade, não classificadas noutra parte",icd10_description,A,16
+A23,História familiar de doença pelo vírus da imunodeficiência humana [VIH],icd10_description,A,16
+A23,História familiar de outras doenças infecciosas e parasitárias,icd10_description,A,16
+A23,História familiar de doenças do sangue e dos órgãos hematopoiéticos e certas patologias que inflenciam o mecanismo imunitário,icd10_description,A,16
+A23,História familiar de Diabetes mellitus,icd10_description,A,16
+A23,"História familiar de outras doenças endócrinas, nutricionais e metabólicas",icd10_description,A,16
+A23,História familiar de patologias do olho e do ouvido,icd10_description,A,16
+A23,História familiar de outras doenças do aparelho respiratório,icd10_description,A,16
+A23,História familiar de doenças do aparelho digestivo,icd10_description,A,16
+A23,História familiar de doenças da pele e do tecido subcutâneo,icd10_description,A,16
+A23,História familiar de patologias do rim e ureter,icd10_description,A,16
+A23,História familiar de outras doenças do aparelho genitourinário,icd10_description,A,16
+A23,História familiar de consanguinidade,icd10_description,A,16
+A23,História familiar de outras condições especificadas,icd10_description,A,16
+A23,História pessoal de neoplasias in situ e benignas e neoplasias de comportamento incerto,icd10_description,A,16
+A23,História pessoal de doenças infecciosas e parasitárias,icd10_description,A,16
+A23,História pessoal de doenças do sangue e dos órgãos hematopoéticos e algumas patologias envolvendo o mecanismo imunitário,icd10_description,A,16
+A23,"História pessoal de doenças endócrinas, nutricionais e metabólicas",icd10_description,A,16
+A23,História pessoal de distúrbios mentais e comportamentais,icd10_description,A,16
+A23,História pessoal de doenças do sistema nervoso e dos órgãos sensitivos,icd10_description,A,16
+A23,História pessoal de doenças do aparelho respiratório,icd10_description,A,16
+A23,História pessoal de doenças do aparelho digestivo,icd10_description,A,16
+A23,História pessoal de doenças da pele e do tecido subcutâneo,icd10_description,A,16
+A23,História pessoal de doenças do aparelho musculoesquelético e tecido conjuntivo,icd10_description,A,16
+A23,História pessoal de doenças do aparelho genitourinário,icd10_description,A,16
+A23,"História pessoal de complicações da gravidez, parto e puerpério",icd10_description,A,16
+A23,História pessoal de determinadas condições (corrigidas) que surgiram no período perinatal,icd10_description,A,16
+A23,História pessoal de malformações congénitas (corrigidas),icd10_description,A,16
+A23,História pessoal de outras doenças especificadas,icd10_description,A,16
+A23,Historia pessoal de alergia a penicilina,icd10_description,A,16
+A23,História pessoal de alergia a outros antibióticos,icd10_description,A,16
+A23,Historia pessoal de alergia a sulfonamidas,icd10_description,A,16
+A23,Historia pessoal de alergia a agentes anti-infecciosos NCOP,icd10_description,A,16
+A23,Historia pessoal de alergia a anestésicos,icd10_description,A,16
+A23,Historia pessoal de alergia a narcóticos,icd10_description,A,16
+A23,Historia pessoal de alergia a analgésicos,icd10_description,A,16
+A23,Historia pessoal de alergia a soros ou vacinas,icd10_description,A,16
+A23,"História pessoal de alergia a outros fármacos, medicamentos e a substâncias biológicas",icd10_description,A,16
+A23,"História pessoal de alergia a fármacos, medicamentos e a substâncias biológicas, SOE",icd10_description,A,16
+A23,História pessoal de alergia exceto a drogas e a substâncias biológicas,icd10_description,A,16
+A23,Doente sem adesão ao tratamento e regime médicos,icd10_description,A,16
+A23,História pessoal de trauma psicológico não classificado noutra parte,icd10_description,A,16
+A23,História pessoal de auto-agressão,icd10_description,A,16
+A23,"História pessoal de outros fatores de risco especificados, não classificados noutra parte",icd10_description,A,16
+A23,História pessoal de contraceção,icd10_description,A,16
+A23,História pessoal de terapêutica farmacológica,icd10_description,A,16
+A23,História pessoal de irradiação,icd10_description,A,16
+A23,História pessoal de outro tratamento médico,icd10_description,A,16
+A28,"Tendência a queda, não classificada em outra parte",icd10_description,A,20
+A28,Limites impostos às atividades por invalidez,icd10_description,A,20
+A28,Mobilidade reduzida,icd10_description,A,20
+A28,Necessidade ajuda nas atividades de vida diária,icd10_description,A,20
+A28,"Necessidade de ajuda no domicílio, sendo que nenhum coabitante pode assegurar os cuidados",icd10_description,A,20
+A28,Necessidade de supervisão contínua,icd10_description,A,20
+A28,Outros problemas relacionados com a dependência de pessoa que oferece cuidados de saúde,icd10_description,A,20
+A28,Problema não especificado relacionado com a dependência de pessoa que oferece cuidados de saúde,icd10_description,A,20
+A28,Dependência de aspirador de secreções,icd10_description,A,20
+A28,Dependência de cadeira de rodas,icd10_description,A,20
+A28,Dependência de outras máquinas e aparelhos capacitantes,icd10_description,A,20
+A29,"Hipotermia, não associada a baixa temperatura ambiental",icd10_description,A,21
+A29,Outros sintomas e sinais gerais,icd10_description,A,21
 A70,Tuberculose pulmonar,icd10_description,A,62
 A70,Tuberculose dos nódulos linfáticos intratorácicos,icd10_description,A,62
 A70,"Tuberculose da laringe, da traqueia e dos brônquios",icd10_description,A,62
