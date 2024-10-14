@@ -100,7 +100,7 @@ def main(force=True, hf=True):
         data = pd.concat([data_icpc2_1, data_icpc2_2, data_icpc2_3, data_icd10])
 
         # substitute "-" by "A" in codes that start with "-"
-        data["code"] = data["code"].str.replace(r"^-", "A", regex=True)
+        #data["code"] = data["code"].str.replace(r"^-", "A", regex=True)
 
         # add data from data augmentation csv
         data_aug = pd.read_csv("data/data_augmentation.csv")
