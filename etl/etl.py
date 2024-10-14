@@ -5,12 +5,10 @@ import click
 
 
 def semicolon_colon_split(df, string_split, column_name):
-    
     # Drop NA values
     df = df.dropna()
 
     print(df.head(50))
-    
 
     # Optional: Rename columns if needed
     # df = df.rename(columns={old_column_name: 'new_column_name'})
@@ -22,7 +20,9 @@ def semicolon_colon_split(df, string_split, column_name):
     for each in df.itertuples():
         # check if each has split_string in column_name. if not append it to rows_to_append
         if string_split not in getattr(each, column_name):
-            rows_to_append.append({"code": each.code, column_name: getattr(each, column_name)})
+            rows_to_append.append(
+                {"code": each.code, column_name: getattr(each, column_name)}
+            )
             continue
         # Check if the delimiter exists in the column of interest
         if string_split in getattr(each, column_name):
@@ -31,14 +31,8 @@ def semicolon_colon_split(df, string_split, column_name):
                 # Create a new row for each part of the split string and append it to the list
                 rows_to_append.append({"code": each.code, column_name: part})
                 # print(f"rows to append: {rows_to_append}")
+    
     # Create a new DataFrame from the list of dictionaries
-    
-    print("each", each)
-    print("string_split", string_split)
-    print("column_name", column_name)
-    print("part", part)
-    #print(rows_to_append)
-    
     new_df = pd.DataFrame(rows_to_append)
 
     return new_df
@@ -104,14 +98,21 @@ def main(force=True, hf=True):
         data_icpc2_3 = data_icpc2_3.rename(columns={"icpc2_inclusion": "text"})
         data_icd10 = data_icd10.rename(columns={"icd10_description": "text"})
 
-
-        
-
         # merge the dataframes
         data = pd.concat([data_icpc2_1, data_icpc2_2, data_icpc2_3, data_icd10])
 
         # substitute "-" by "A" in codes that start with "-"
         data["code"] = data["code"].str.replace(r"^-", "A", regex=True)
+
+        # add data from data augmentation csv
+        data_aug = pd.read_csv("data/data_augmentation.csv")
+        data_aug = data_aug[data_aug["include"] == True]
+
+        # drop include column
+        data_aug = data_aug.drop(columns=["include"])
+
+        # concatenate the data
+        data = pd.concat([data, data_aug])
 
         # Remove duplicates where text is the same and origin is icpc2_short if icpc2_description exists
         data = data[
@@ -120,9 +121,6 @@ def main(force=True, hf=True):
                 & (data["origin"] == "icpc2_short")
             )
         ]
-
-        # add data from data augmentation csv
-        # data_aug = pd.read_csv("data/data_augmentation.csv")
 
         # create a new column with the chapter of the code
         data["chapter"] = data["code"].str[0]
@@ -143,19 +141,19 @@ def main(force=True, hf=True):
 
         # ClassLable creation
         list_codes = data["code"].unique().tolist()
-        
-        #sort by code
+
+        # sort by code
         list_codes.sort()
-        
+
         # get the number of codes
         n_codes = len(list_codes)
-        
+
         # class labels
         class_labels = ClassLabel(
             num_classes=n_codes,
             names=list_codes,
         )
-        
+
         # Define the features
         features = Features(
             {
@@ -207,8 +205,8 @@ def main(force=True, hf=True):
         # )
 
         dataset_dict = dataset
-        
-        #sort by code
+
+        # sort by code
         dataset_dict = dataset_dict.sort("code")
 
         if hf:
