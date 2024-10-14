@@ -116,7 +116,7 @@ def main(force=True, hf=True):
         data = data[
             ~(
                 (data.duplicated(subset=["text"], keep=False))
-                & (data["origin"].isin(["icpc2_short", "icd10_description"]))
+                & (data["origin"].isin(["icpc2_short"])) #, "icd10_description"
             )
         ]
         
