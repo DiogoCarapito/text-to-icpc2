@@ -8,8 +8,6 @@ def semicolon_colon_split(df, string_split, column_name):
     # Drop NA values
     df = df.dropna()
 
-    print(df.head(50))
-
     # Optional: Rename columns if needed
     # df = df.rename(columns={old_column_name: 'new_column_name'})
 
@@ -118,9 +116,14 @@ def main(force=True, hf=True):
         data = data[
             ~(
                 (data.duplicated(subset=["text"], keep=False))
-                & (data["origin"] == "icpc2_short")
+                & (data["origin"].isin(["icpc2_short", "icd10_description"]))
             )
         ]
+        
+        # oder by code and reset index
+        data = data.sort_values(by=["code"]).reset_index(drop=True)
+        
+        print(data.head(50))
 
         # create a new column with the chapter of the code
         data["chapter"] = data["code"].str[0]
@@ -142,8 +145,8 @@ def main(force=True, hf=True):
         # ClassLable creation
         list_codes = data["code"].unique().tolist()
 
-        # sort by code
-        list_codes.sort()
+        # # sort by code
+        # list_codes.sort()
 
         # get the number of codes
         n_codes = len(list_codes)
@@ -206,8 +209,8 @@ def main(force=True, hf=True):
 
         dataset_dict = dataset
 
-        # sort by code
-        dataset_dict = dataset_dict.sort("code")
+        # # sort by code
+        # dataset_dict = dataset_dict.sort("code")
 
         if hf:
             # print(dataset_dict)
