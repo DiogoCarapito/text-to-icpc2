@@ -1,12 +1,16 @@
 import streamlit as st
 import pandas as pd
 import os
+import dotenv
+from openai import OpenAI
+import numpy as np
+import re
 
 # Set the page layout to wide mode
 st.set_page_config(layout="wide")
 
 
-def load_dataset(filter_count=None):
+def load_dataset():
     # load the dataset from "data/data_pre_train.csv"
     original_dataset = pd.read_csv("data/data_pre_train.csv")
 
@@ -19,9 +23,9 @@ def load_dataset(filter_count=None):
     ordered_dataset = original_dataset.sort_values(
         by=["count", "code"], ascending=[True, True]
     )
-
-    if filter_count:
-        ordered_dataset = ordered_dataset[ordered_dataset["count"] <= filter_count]
+    
+    #remove codes that start with "-"
+    ordered_dataset = ordered_dataset[~ordered_dataset["code"].str.startswith("-")]
 
     return ordered_dataset
 
@@ -46,39 +50,100 @@ def update_dataset(new_data):
     data_augmentation.to_csv("data/data_augmentation.csv", index=False)
 
     # run etl.py to update the dataset
-    os.system("python etl/etl.py --hf True")
+    os.system("python etl/etl.py --hf True")    
 
     # show a success message
     st.toast("Data updated!", icon="🎉")
 
 
+def process_icpc2_description_text(text):
+    if str(text) ==  "nan":
+        return ""
+    else:
+        # Remove the matched codes from the text
+        cleaned_text = re.sub(r'\b[A-Z]\d{2}\b', '', text)
+        # remove "; se o doente tem a doença, codifique-a" if it exists
+        cleaned_text = re.sub(r' ; se o doente tem a doença, codifique-a', '', cleaned_text)
+        cleaned_text = re.sub(r' ; ', '; ', cleaned_text)
+        
+        return cleaned_text
+    
+
 def prompt_design(code):
-    text = """id,description,instruction
-1,regular_instruction,"O teu objetivo é encontrar sinónimos de para a seguinte doença ou problema de saúde em português de Portugal. Os resultados deverão ser entregues numa lista separada por ;"
-2,complex_instruction,"Estou a fazer um processo de Data Augmentarion e preciso de encontrar sinónimos para a seguinte doença ou problema de saúde em português de Portugal. Vou te dar as expressões que já tenho, encontra-me variações que sejam sinónimos. Os resultados deverão ser entregues numa lista separada por ;"
-3,repeat_instruction,"Preciso de mais sinónimos para além dos que já tenho:"
-4,ne_instruction,"Estou a fazer um processo de Data Augmentarion e preciso de encontrar sinónimos para a seguinte doença ou problema de saúde em português de Portugal. Vou te dar as expressões que já tenho, encontra-me variações que sejam sinónimos, sendo que NE significa Não Especificado. Os resultados deverão ser entregues numa lista separada por ;"
-5,slash_instruction,"Estou a fazer um processo de Data Augmentarion e preciso de encontrar sinónimos para a seguinte doença ou problema de saúde em português de Portugal. Vou te dar as expressões que já tenho, encontra-me variações que sejam sinónimos, sendo que / pode ser. Os resultados deverão ser entregues numa lista separada por ;"    
-    """
+    
+    text = f"Estou a fazer um processo de Data Augmentation e preciso de encontrar sinónimos para a seguinte doença ou problema de saúde em português de Portugal. Vou te dar as expressões que já tenho, encontra-me variações que sejam sinónimos ou outras formas de expressão similares . Dá-me entre 10 e 50 resultados. 'NE' significa não especificado. Devlove apenas a lista de expressões separadas por ';'"
+
     # get all the labels that are related to the code
-    full_dataframe = pd.read_csv("data/data_pre_train.csv")
+    full_dataframe = pd.read_csv("data/icpc2_processed.csv")
 
-    labels = full_dataframe[full_dataframe["code"] == code]["text"].values
+    labels = full_dataframe[full_dataframe["cod"] == code]["nome"].values
+    inlui = process_icpc2_description_text(full_dataframe[full_dataframe["cod"] == code]["incl"].values[0])
+    exclui = process_icpc2_description_text(full_dataframe[full_dataframe["cod"] == code]["excl"].values[0])
+    icd10 = process_icpc2_description_text(full_dataframe[full_dataframe["cod"] == code]["ICD_10_list_description_join"].values[0])
 
-    st.write(labels)
+    #covert labels into strings separated by; 
+    labels = "; ".join(labels)
 
-    # # if label include a "/"
-    # if label.find("/") != -1:
-    #     st.write("has /")
-    # if label.find("NE") != -1:
-    #     st.write("has NE")
+    
+    st.write(text)
+    
+    if inlui != "":
+        inclui = f"; {inlui}, "
+    else:
+        inclui = ""
+        
+    if icd10 != "":
+        icd10 = f"{icd10}"
+    else:
+        icd10 = ""
+    
+    if exclui != "":
+        exclui = f". Exclui: {exclui}"
+    else:
+        exclui = ""
+    
+    prompt = f"{labels}{inclui}{icd10}{exclui}"
+    st.write(prompt)
+    
 
-    prompt = ""
 
-    return prompt
+    # load the environment variables
+    dotenv.load_dotenv()
+
+    # get the openai client with api key and project id
+    client = OpenAI(
+        project=os.getenv("OPENAI_PROJECT_ID"), api_key=os.getenv("OPENAI_API_KEY")
+    )
+
+    # send the request to the openai api
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {
+                "role": "system",
+                "content": text,
+            },
+            {
+                "role": "user",
+                "content": prompt,
+            },
+        ],
+        temperature=0.1,
+        max_tokens=64,
+        top_p=1,
+    )
+    result = response.choices[0].message.content
+
+    return result
 
 
 def card_display(label):
+
+    # converter labels que tem - em stringss
+    if label is int:
+        label = f"{str(label)}"
+
+    
     labels_dataframe = pd.read_csv("data/icpc2_processed.csv")
 
     description = labels_dataframe[labels_dataframe["cod"] == label]["nome"].values[0]
@@ -101,32 +166,45 @@ def card_display(label):
     st.write(criteria)
 
     st.write("### ICD-10")
-    icd_10_code = (
-        labels_dataframe[labels_dataframe["cod"] == label]["ICD_10_new"]
-        .values[0]
-        .split(",")
-    )
-    # remove all [, ] and ' from the list
-    icd_10_code = [
-        x.replace("[", "").replace("]", "").replace("'", "").replace(" ", "")
-        for x in icd_10_code
-    ]
-    icd_10_description = (
-        labels_dataframe[labels_dataframe["cod"] == label]["ICD_10_list_description"]
-        .values[0]
-        .split("',")
-    )
-    icd_10_description = [
-        x.replace("['", "").replace("']", "").replace(" '", "")
-        for x in icd_10_description
-    ]
+    
+    icd_10_description = labels_dataframe[labels_dataframe["cod"] == label]["ICD_10_list_description_join"].values[0]
+    
+    st.write(icd_10_description)
+    # icd_10_code = (
+    #     labels_dataframe[labels_dataframe["cod"] == label]["ICD_10_new"]
+    #     .values[0]
+    #     .split(",")
+    # )
+    # # remove all [, ] and ' from the list
+    # icd_10_code = [
+    #     x.replace("[", "").replace("]", "").replace("'", "").replace(" ", "")
+    #     for x in icd_10_code
+    # ]
+    # icd_10_description = (
+    #     labels_dataframe[labels_dataframe["cod"] == label]["ICD_10_list_description"]
+    #     .values[0]
+    #     .split("',")
+    # )
+    # icd_10_description = [
+    #     x.replace("['", "").replace("']", "").replace(" '", "")
+    #     for x in icd_10_description
+    # ]
 
-    for each in zip(icd_10_code, icd_10_description):
-        st.write(f"{each[0]} - *{each[1]}*")
+    # for each in zip(icd_10_code, icd_10_description):
+    #     st.write(f"{each[0]} - *{each[1]}*")
 
 
 if "dataset" not in st.session_state:
     st.session_state["dataset"] = load_dataset()
+    
+#Initialize session state if not already done
+if "new_data" not in st.session_state:
+    st.session_state["new_data"] = pd.DataFrame(
+        columns=["code", "text", "origin", "include"]
+    )
+
+if "working_dataset" not in st.session_state:
+    st.session_state["working_dataset"] = st.session_state["dataset"]
 
 # if "new_data" not in st.session_state:
 #     st.session_state["new_data"] = pd.DataFrame(
@@ -143,32 +221,39 @@ st.divider()
 
 # st.write("The current dataset, ordered by code and count")
 
+
 filter_by_cound = st.slider("Filter by count", 0, 100, 10)
 
-working_dataset = filter_dataset(st.session_state["dataset"], filter_by_cound)
+# Strip any leading or trailing whitespace from the 'code' column
+
+
+# Exclude codes that start with a hyphen
+st.session_state["working_dataset"] = st.session_state["working_dataset"][~st.session_state["working_dataset"]["code"].str.startswith("-")]
+
+st.session_state["working_dataset"] = filter_dataset(st.session_state["dataset"], filter_by_cound)
 
 
 col_11, col_1space, col_12 = st.columns([2, 1, 6])
 
 with col_11:
-    count = working_dataset["code"].nunique()
+    count = st.session_state["working_dataset"]["code"].nunique()
     st.metric("Nº códigos", count, delta=f"{round(-100*count/726,1)}%")
 
     st.divider()
 
     sleected_code = st.selectbox(
-        "Select a code to augment", working_dataset["code"].unique()
+        "Select a code to augment", st.session_state["working_dataset"]["code"].unique()
     )
     # count the number of times the code appears
     st.metric(
         "Nº descrições",
-        f"{working_dataset[working_dataset['code'] == sleected_code].shape[0]}",
+        f"{st.session_state['working_dataset'][st.session_state['working_dataset']['code'] == sleected_code].shape[0]}",
     )
 
 with col_1space:
     st.write("")
 with col_12:
-    st.dataframe(working_dataset, height=350)
+    st.dataframe(st.session_state["working_dataset"], height=350)
 
 st.divider()
 
@@ -179,40 +264,27 @@ with col_21:
     card_display(sleected_code)
 
 with col_22:
-    st.write("augmenttion interface")
+    if st.button("Gerar Sinónimos", type="primary"):
     
-    prompt_design(sleected_code)
-    
-    # Initialize session state if not already done
-    if "new_data" not in st.session_state:
-        st.session_state["new_data"] = pd.DataFrame(
-            [["A01", "Dor em múltiplos locais", "human_dc", True]],
-            columns=["code", "text", "origin", "include"]
-        )
+        resultados = prompt_design(sleected_code)
+        
+        print(resultados)
+        
+        # create list of the results where each element is separated by ;
+        resultados = resultados.split(";")
+        
+        st.session_state["new_data"]["code"] = sleected_code
+        st.session_state["new_data"]["text"] = resultados
+        st.session_state["new_data"]["origin"] = "gpt-4o-mini"
+        st.session_state["new_data"]["include"] = True
+        
+        #st.write(resultados)
+        data_to_upload = st.data_editor(st.session_state["new_data"])
 
-    # Display the DataFrame
-    
+
+
+        if st.button("Push new data to the dataset and update it!", type="primary"):
+            update_dataset(data_to_upload)
 
     st.divider()
     
-    
-    # if st.button("Add!", type="primary"):
-    #     st.session_state["new_data"] = st.session_state["new_data"].append(
-    #         working_dataset[working_dataset["code"] == sleected_code]
-    #     )
-
-
-st.divider()
-
-data_to_upload = st.data_editor(st.session_state["new_data"])
-
-# {
-#     "code":"A01",
-#     "text": "Dor em múltiplos locais",
-#     "origin": "human_dc",
-#     "include": True
-# }
-
-
-if st.button("Push new data to the dataset and update it!", type="primary"):
-    update_dataset(data_to_upload)
