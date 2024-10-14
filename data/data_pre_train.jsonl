@@ -874,17 +874,24 @@
 {"code":"A01","text":"dores múltiplas","origin":"icpc2_inclusion","chapter":"A","label":0}
 {"code":"A02","text":"calafrios","origin":"icpc2_inclusion","chapter":"A","label":1}
 {"code":"A02","text":"tremores","origin":"icpc2_inclusion","chapter":"A","label":1}
+{"code":"A03","text":"pirexia","origin":"icpc2_inclusion","chapter":"A","label":2}
 {"code":"A04","text":"síndrome de fadiga crónica","origin":"icpc2_inclusion","chapter":"A","label":3}
 {"code":"A04","text":"exaustão","origin":"icpc2_inclusion","chapter":"A","label":3}
 {"code":"A04","text":"fadiga","origin":"icpc2_inclusion","chapter":"A","label":3}
 {"code":"A04","text":"lassidão","origin":"icpc2_inclusion","chapter":"A","label":3}
 {"code":"A04","text":"letargia","origin":"icpc2_inclusion","chapter":"A","label":3}
 {"code":"A04","text":"fadiga pós-viral","origin":"icpc2_inclusion","chapter":"A","label":3}
+{"code":"A05","text":"mal-estar","origin":"icpc2_inclusion","chapter":"A","label":4}
 {"code":"A06","text":"perda momentânea da consciência","origin":"icpc2_inclusion","chapter":"A","label":5}
 {"code":"A06","text":"colapso","origin":"icpc2_inclusion","chapter":"A","label":5}
 {"code":"A06","text":"crise vasovagal","origin":"icpc2_inclusion","chapter":"A","label":5}
+{"code":"A07","text":"estupor","origin":"icpc2_inclusion","chapter":"A","label":6}
 {"code":"A08","text":"alto","origin":"icpc2_inclusion","chapter":"A","label":7}
 {"code":"A08","text":"massa NE","origin":"icpc2_inclusion","chapter":"A","label":7}
+{"code":"A09","text":"hiperhidrose, difusa e localizada","origin":"icpc2_inclusion","chapter":"A","label":8}
+{"code":"A10","text":"sangramento\/hemorragia de mais de um local\/órgão","origin":"icpc2_inclusion","chapter":"A","label":9}
+{"code":"A13","text":"preocupação com\/medo das consequências da medicação\/de tratamento médico","origin":"icpc2_inclusion","chapter":"A","label":11}
+{"code":"A16","text":"choro excessivo\/bebé agitado","origin":"icpc2_inclusion","chapter":"A","label":12}
 {"code":"A21","text":"outro factor de risco para malignidade","origin":"icpc2_inclusion","chapter":"A","label":15}
 {"code":"A21","text":"tratamento anterior de malignidade","origin":"icpc2_inclusion","chapter":"A","label":15}
 {"code":"A21","text":"história pessoal\/familiar de malignidade","origin":"icpc2_inclusion","chapter":"A","label":15}
@@ -897,6 +904,10 @@
 {"code":"A29","text":"sonolência","origin":"icpc2_inclusion","chapter":"A","label":21}
 {"code":"A70","text":"efeito tardio da tuberculose","origin":"icpc2_inclusion","chapter":"A","label":62}
 {"code":"A70","text":"infecção por tuberculose em qualquer local do corpo","origin":"icpc2_inclusion","chapter":"A","label":62}
+{"code":"A71","text":"complicações de sarampo","origin":"icpc2_inclusion","chapter":"A","label":63}
+{"code":"A72","text":"complicações de varicela","origin":"icpc2_inclusion","chapter":"A","label":64}
+{"code":"A73","text":"complicações de malária","origin":"icpc2_inclusion","chapter":"A","label":65}
+{"code":"A74","text":"complicações da rubéola","origin":"icpc2_inclusion","chapter":"A","label":66}
 {"code":"A75","text":"febre glandular","origin":"icpc2_inclusion","chapter":"A","label":67}
 {"code":"A75","text":"doença de Pfeiffer","origin":"icpc2_inclusion","chapter":"A","label":67}
 {"code":"A76","text":"varíola bovina","origin":"icpc2_inclusion","chapter":"A","label":68}
@@ -921,8 +932,12 @@
 {"code":"A78","text":"toxoplasmose","origin":"icpc2_inclusion","chapter":"A","label":70}
 {"code":"A79","text":"carcinomatose (localização primária desconhecida)","origin":"icpc2_inclusion","chapter":"A","label":71}
 {"code":"A79","text":"neoplasia secundária\/metastática com localização primária desconhecida","origin":"icpc2_inclusion","chapter":"A","label":71}
+{"code":"A80","text":"acidente de viação","origin":"icpc2_inclusion","chapter":"A","label":72}
+{"code":"A81","text":"ferimentos internos múltiplos NE","origin":"icpc2_inclusion","chapter":"A","label":73}
 {"code":"A82","text":"deformidade\/cicatriz resultante de ferimento anterior","origin":"icpc2_inclusion","chapter":"A","label":74}
 {"code":"A82","text":"amputação anterior","origin":"icpc2_inclusion","chapter":"A","label":74}
+{"code":"A84","text":"efeito tóxico de overdose de agente medicinal","origin":"icpc2_inclusion","chapter":"A","label":75}
+{"code":"A85","text":"efeito adverso\/alergia\/anafilaxia devido a medicação em dose correcta","origin":"icpc2_inclusion","chapter":"A","label":76}
 {"code":"A86","text":"efeito tóxico geral\/local de monóxido de carbono","origin":"icpc2_inclusion","chapter":"A","label":77}
 {"code":"A86","text":"efeito tóxico geral\/local de materiais industriais","origin":"icpc2_inclusion","chapter":"A","label":77}
 {"code":"A86","text":"efeito tóxico geral\/local de chumbo","origin":"icpc2_inclusion","chapter":"A","label":77}
@@ -936,6 +951,8 @@
 {"code":"A88","text":"frieiras","origin":"icpc2_inclusion","chapter":"A","label":79}
 {"code":"A88","text":"afogamento","origin":"icpc2_inclusion","chapter":"A","label":79}
 {"code":"A88","text":"jet lag (cansaço e distúrbios causados pela diferença de fuso horário)","origin":"icpc2_inclusion","chapter":"A","label":79}
+{"code":"A89","text":"desconforto\/incapacidade\/deficiência\/dor\/limitação da função resultante da instalação\/utilização de um dispositivo para fornecer\/corrigir deficiências: catéter, colostomia, gastrostomia, válvula cardíaca, prótese articular, transplante de órgão, pacemaker","origin":"icpc2_inclusion","chapter":"A","label":80}
+{"code":"A90","text":"anomalia cromossómica e outras anomalias congénitas sistémicas não classificadas noutro local.","origin":"icpc2_inclusion","chapter":"A","label":81}
 {"code":"A91","text":"perturbação electrolítica inexplicada","origin":"icpc2_inclusion","chapter":"A","label":82}
 {"code":"A91","text":"hiperglicémia inexplicada","origin":"icpc2_inclusion","chapter":"A","label":82}
 {"code":"A91","text":"patologia\/imagiologia anormal e inexplicada","origin":"icpc2_inclusion","chapter":"A","label":82}
@@ -943,10 +960,16 @@
 {"code":"A92","text":"choque anafilático","origin":"icpc2_inclusion","chapter":"A","label":83}
 {"code":"A92","text":"edema angioneurótico","origin":"icpc2_inclusion","chapter":"A","label":83}
 {"code":"A92","text":"alergia alimentar","origin":"icpc2_inclusion","chapter":"A","label":83}
+{"code":"A97","text":"nenhuma doença\/afecção abordada durante a consulta","origin":"icpc2_inclusion","chapter":"A","label":88}
+{"code":"A98","text":"procedimento\/aconselhamento médico com intuito preventivo, incluindo aconselhamento genético","origin":"icpc2_inclusion","chapter":"A","label":89}
 {"code":"A99","text":"portador de doença NE","origin":"icpc2_inclusion","chapter":"A","label":90}
 {"code":"A99","text":"vigilância de problema continuado NE","origin":"icpc2_inclusion","chapter":"A","label":90}
 {"code":"B02","text":"linfadenopatia com\/sem dor\/sensibilidade","origin":"icpc2_inclusion","chapter":"B","label":91}
 {"code":"B02","text":"outro sintoma\/queixa do(s) gânglio(s) linfático(s)","origin":"icpc2_inclusion","chapter":"B","label":91}
+{"code":"B28","text":"incapacidade provocada por problemas de perda de sangue","origin":"icpc2_inclusion","chapter":"B","label":96}
+{"code":"B70","text":"abcesso de gânglio linfático","origin":"icpc2_inclusion","chapter":"B","label":98}
+{"code":"B71","text":"linfadenite mesentérica","origin":"icpc2_inclusion","chapter":"B","label":99}
+{"code":"B73","text":"todos os tipos de leucemia","origin":"icpc2_inclusion","chapter":"B","label":101}
 {"code":"B74","text":"mieloma múltiplo","origin":"icpc2_inclusion","chapter":"B","label":102}
 {"code":"B74","text":"doença mieloproliferativa","origin":"icpc2_inclusion","chapter":"B","label":102}
 {"code":"B75","text":"neoplasia benigna do sangue","origin":"icpc2_inclusion","chapter":"B","label":103}
@@ -956,6 +979,8 @@
 {"code":"B78","text":"anemia de células falciformes","origin":"icpc2_inclusion","chapter":"B","label":106}
 {"code":"B78","text":"esferocitose","origin":"icpc2_inclusion","chapter":"B","label":106}
 {"code":"B78","text":"talassémia","origin":"icpc2_inclusion","chapter":"B","label":106}
+{"code":"B79","text":"anemia congénita","origin":"icpc2_inclusion","chapter":"B","label":107}
+{"code":"B80","text":"anemia devida a perda de sangue","origin":"icpc2_inclusion","chapter":"B","label":108}
 {"code":"B81","text":"anemia macrocítica","origin":"icpc2_inclusion","chapter":"B","label":109}
 {"code":"B81","text":"anemia perniciosa","origin":"icpc2_inclusion","chapter":"B","label":109}
 {"code":"B82","text":"anemia hemolítica adquirida","origin":"icpc2_inclusion","chapter":"B","label":110}
@@ -990,6 +1015,8 @@
 {"code":"D03","text":"pirose","origin":"icpc2_inclusion","chapter":"D","label":118}
 {"code":"D04","text":"espasmo anal","origin":"icpc2_inclusion","chapter":"D","label":119}
 {"code":"D04","text":"proctalgia fugaz","origin":"icpc2_inclusion","chapter":"D","label":119}
+{"code":"D05","text":"prurido perianal","origin":"icpc2_inclusion","chapter":"D","label":120}
+{"code":"D06","text":"dor do cólon","origin":"icpc2_inclusion","chapter":"D","label":121}
 {"code":"D08","text":"estômago inchado","origin":"icpc2_inclusion","chapter":"D","label":123}
 {"code":"D08","text":"arroto","origin":"icpc2_inclusion","chapter":"D","label":123}
 {"code":"D08","text":"dor provocada por gases","origin":"icpc2_inclusion","chapter":"D","label":123}
@@ -999,6 +1026,11 @@
 {"code":"D10","text":"esforço de vómito","origin":"icpc2_inclusion","chapter":"D","label":125}
 {"code":"D11","text":"evacuação intestinal frequente\/solta","origin":"icpc2_inclusion","chapter":"D","label":126}
 {"code":"D11","text":"fezes líquidas","origin":"icpc2_inclusion","chapter":"D","label":126}
+{"code":"D12","text":"impactação fecal","origin":"icpc2_inclusion","chapter":"D","label":127}
+{"code":"D13","text":"ictérico","origin":"icpc2_inclusion","chapter":"D","label":128}
+{"code":"D15","text":"fezes escuras\/tipo alcatrão","origin":"icpc2_inclusion","chapter":"D","label":130}
+{"code":"D16","text":"sangue fresco nas fezes","origin":"icpc2_inclusion","chapter":"D","label":131}
+{"code":"D17","text":"incontinência fecal","origin":"icpc2_inclusion","chapter":"D","label":132}
 {"code":"D19","text":"problema da dentadura","origin":"icpc2_inclusion","chapter":"D","label":134}
 {"code":"D19","text":"hemorragia gengival","origin":"icpc2_inclusion","chapter":"D","label":134}
 {"code":"D19","text":"erupção dos dentes","origin":"icpc2_inclusion","chapter":"D","label":134}
@@ -1013,14 +1045,20 @@
 {"code":"D20","text":"lábios inchados","origin":"icpc2_inclusion","chapter":"D","label":135}
 {"code":"D21","text":"sensação de sufoco","origin":"icpc2_inclusion","chapter":"D","label":136}
 {"code":"D21","text":"disfagia","origin":"icpc2_inclusion","chapter":"D","label":136}
+{"code":"D24","text":"alto no abdómen","origin":"icpc2_inclusion","chapter":"D","label":138}
+{"code":"D25","text":"abdómen inchado sem massa","origin":"icpc2_inclusion","chapter":"D","label":139}
 {"code":"D29","text":"ascite","origin":"icpc2_inclusion","chapter":"D","label":143}
 {"code":"D29","text":"ranger dos dentes","origin":"icpc2_inclusion","chapter":"D","label":143}
+{"code":"D70","text":"infecção gastrointestinal\/disenteria com organismos especificados incluindo campylobacter, giardia, salmonella, shigella, febre tifoide, cólera","origin":"icpc2_inclusion","chapter":"D","label":144}
+{"code":"D71","text":"meningite\/orquite\/pancreatite por papeira","origin":"icpc2_inclusion","chapter":"D","label":145}
 {"code":"D72","text":"todas as hepatites de presumível etiologia viral","origin":"icpc2_inclusion","chapter":"D","label":146}
 {"code":"D72","text":"hepatite crónica activa","origin":"icpc2_inclusion","chapter":"D","label":146}
 {"code":"D73","text":"diarreia\/vómitos presumivelmente infecciosos","origin":"icpc2_inclusion","chapter":"D","label":147}
 {"code":"D73","text":"disenteria NE","origin":"icpc2_inclusion","chapter":"D","label":147}
 {"code":"D73","text":"intoxicação alimentar","origin":"icpc2_inclusion","chapter":"D","label":147}
 {"code":"D73","text":"gripe gástrica","origin":"icpc2_inclusion","chapter":"D","label":147}
+{"code":"D74","text":"carcinoma do estômago","origin":"icpc2_inclusion","chapter":"D","label":148}
+{"code":"D76","text":"carcinoma do pâncreas","origin":"icpc2_inclusion","chapter":"D","label":150}
 {"code":"D77","text":"todas as outras neoplasias malignas primárias do sistema digestivo","origin":"icpc2_inclusion","chapter":"D","label":151}
 {"code":"D77","text":"cancro da vesícula","origin":"icpc2_inclusion","chapter":"D","label":151}
 {"code":"D77","text":"cancro do fígado","origin":"icpc2_inclusion","chapter":"D","label":151}
@@ -1030,6 +1068,7 @@
 {"code":"D78","text":"pólipo do duodeno","origin":"icpc2_inclusion","chapter":"D","label":152}
 {"code":"D78","text":"pólipo do recto","origin":"icpc2_inclusion","chapter":"D","label":152}
 {"code":"D78","text":"pólipo do estômago","origin":"icpc2_inclusion","chapter":"D","label":152}
+{"code":"D79","text":"corpo estranho engolido\/no tubo digestivo, incluindo boca, esófago, recto","origin":"icpc2_inclusion","chapter":"D","label":153}
 {"code":"D80","text":"traumatismo de órgão abdominal","origin":"icpc2_inclusion","chapter":"D","label":154}
 {"code":"D80","text":"traumatismo dos dentes","origin":"icpc2_inclusion","chapter":"D","label":154}
 {"code":"D80","text":"traumatismo da língua","origin":"icpc2_inclusion","chapter":"D","label":154}
@@ -1061,12 +1100,17 @@
 {"code":"D84","text":"esofagite","origin":"icpc2_inclusion","chapter":"D","label":158}
 {"code":"D84","text":"ulceração esofágica","origin":"icpc2_inclusion","chapter":"D","label":158}
 {"code":"D84","text":"refluxo","origin":"icpc2_inclusion","chapter":"D","label":158}
+{"code":"D85","text":"hemorragia\/obstrução\/perfuração de úlcera","origin":"icpc2_inclusion","chapter":"D","label":159}
 {"code":"D86","text":"erosão aguda","origin":"icpc2_inclusion","chapter":"D","label":160}
 {"code":"D86","text":"úlcera gástrica\/gastrojejunal\/marginal","origin":"icpc2_inclusion","chapter":"D","label":160}
 {"code":"D86","text":"síndrome de Zollinger-Ellison","origin":"icpc2_inclusion","chapter":"D","label":160}
 {"code":"D87","text":"dilatação aguda do estômago","origin":"icpc2_inclusion","chapter":"D","label":161}
 {"code":"D87","text":"duodenite","origin":"icpc2_inclusion","chapter":"D","label":161}
 {"code":"D87","text":"gastrite","origin":"icpc2_inclusion","chapter":"D","label":161}
+{"code":"D88","text":"abcesso\/perfuração do apêndice","origin":"icpc2_inclusion","chapter":"D","label":162}
+{"code":"D90","text":"hérnia diafragmática","origin":"icpc2_inclusion","chapter":"D","label":164}
+{"code":"D91","text":"hérnia femural\/umbilical\/ventral","origin":"icpc2_inclusion","chapter":"D","label":165}
+{"code":"D92","text":"diverticulite\/diverticulose do intestino","origin":"icpc2_inclusion","chapter":"D","label":166}
 {"code":"D93","text":"colite mucosa","origin":"icpc2_inclusion","chapter":"D","label":167}
 {"code":"D93","text":"colite espástica","origin":"icpc2_inclusion","chapter":"D","label":167}
 {"code":"D94","text":"doença de Crohn","origin":"icpc2_inclusion","chapter":"D","label":168}
@@ -1103,8 +1147,10 @@
 {"code":"D99","text":"peritonite","origin":"icpc2_inclusion","chapter":"D","label":173}
 {"code":"D99","text":"megacólon secundário","origin":"icpc2_inclusion","chapter":"D","label":173}
 {"code":"D99","text":"espru","origin":"icpc2_inclusion","chapter":"D","label":173}
+{"code":"F02","text":"olhos congestionados\/inflamados","origin":"icpc2_inclusion","chapter":"F","label":175}
 {"code":"F03","text":"lacrimejo","origin":"icpc2_inclusion","chapter":"F","label":176}
 {"code":"F03","text":"secreção purulenta","origin":"icpc2_inclusion","chapter":"F","label":176}
+{"code":"F04","text":"pontos fixos\/flutuantes no campo visual","origin":"icpc2_inclusion","chapter":"F","label":177}
 {"code":"F05","text":"visão desfocada","origin":"icpc2_inclusion","chapter":"F","label":178}
 {"code":"F05","text":"dificuldade em ler","origin":"icpc2_inclusion","chapter":"F","label":178}
 {"code":"F05","text":"diplopia","origin":"icpc2_inclusion","chapter":"F","label":178}
@@ -1114,13 +1160,20 @@
 {"code":"F05","text":"cegueira temporária NE","origin":"icpc2_inclusion","chapter":"F","label":178}
 {"code":"F05","text":"perda de visão","origin":"icpc2_inclusion","chapter":"F","label":178}
 {"code":"F05","text":"vista cansada","origin":"icpc2_inclusion","chapter":"F","label":178}
+{"code":"F13","text":"ardor\/secura\/prurido no olho","origin":"icpc2_inclusion","chapter":"F","label":179}
+{"code":"F14","text":"nistagmo","origin":"icpc2_inclusion","chapter":"F","label":180}
 {"code":"F15","text":"alteração da cor do olho","origin":"icpc2_inclusion","chapter":"F","label":181}
 {"code":"F15","text":"olho inchado","origin":"icpc2_inclusion","chapter":"F","label":181}
 {"code":"F16","text":"pestanejo anormal","origin":"icpc2_inclusion","chapter":"F","label":182}
 {"code":"F16","text":"ptose palpebral","origin":"icpc2_inclusion","chapter":"F","label":182}
+{"code":"F17","text":"problemas devido aos óculos afectando a estrutura, função ou sensações do(s) olho(s)","origin":"icpc2_inclusion","chapter":"F","label":183}
+{"code":"F18","text":"problemas devido às lentes de contacto afectando a estrutura, função ou sensações do(s) olho(s)","origin":"icpc2_inclusion","chapter":"F","label":184}
+{"code":"F27","text":"medo de cegueira","origin":"icpc2_inclusion","chapter":"F","label":185}
+{"code":"F28","text":"cegueira de um olho","origin":"icpc2_inclusion","chapter":"F","label":186}
 {"code":"F70","text":"conjuntivite bacteriana","origin":"icpc2_inclusion","chapter":"F","label":188}
 {"code":"F70","text":"conjuntivite NE","origin":"icpc2_inclusion","chapter":"F","label":188}
 {"code":"F70","text":"conjuntivite viral","origin":"icpc2_inclusion","chapter":"F","label":188}
+{"code":"F71","text":"conjuntivite alérgica com\/sem rinorreia","origin":"icpc2_inclusion","chapter":"F","label":189}
 {"code":"F72","text":"dermatite\/dermatose das pálpebras","origin":"icpc2_inclusion","chapter":"F","label":190}
 {"code":"F72","text":"infecção da pálpebra","origin":"icpc2_inclusion","chapter":"F","label":190}
 {"code":"F72","text":"hordéolo","origin":"icpc2_inclusion","chapter":"F","label":190}
@@ -1132,12 +1185,14 @@
 {"code":"F73","text":"iridociclite","origin":"icpc2_inclusion","chapter":"F","label":191}
 {"code":"F73","text":"irite","origin":"icpc2_inclusion","chapter":"F","label":191}
 {"code":"F73","text":"queratite","origin":"icpc2_inclusion","chapter":"F","label":191}
+{"code":"F74","text":"neoplasia benigna\/maligna do olho\/anexos","origin":"icpc2_inclusion","chapter":"F","label":192}
 {"code":"F75","text":"olho negro","origin":"icpc2_inclusion","chapter":"F","label":193}
 {"code":"F75","text":"hifema","origin":"icpc2_inclusion","chapter":"F","label":193}
 {"code":"F75","text":"hemorragia subconjuntival","origin":"icpc2_inclusion","chapter":"F","label":193}
 {"code":"F79","text":"escoriação da córnea","origin":"icpc2_inclusion","chapter":"F","label":195}
 {"code":"F79","text":"queimadura por clarão","origin":"icpc2_inclusion","chapter":"F","label":195}
 {"code":"F79","text":"cegueira provocada pela neve","origin":"icpc2_inclusion","chapter":"F","label":195}
+{"code":"F83","text":"retinopatia diabética\/hipertensiva","origin":"icpc2_inclusion","chapter":"F","label":199}
 {"code":"F85","text":"úlcera dendrítica","origin":"icpc2_inclusion","chapter":"F","label":201}
 {"code":"F85","text":"queratite viral","origin":"icpc2_inclusion","chapter":"F","label":201}
 {"code":"F91","text":"astigmatismo","origin":"icpc2_inclusion","chapter":"F","label":203}
@@ -1146,6 +1201,8 @@
 {"code":"F91","text":"miopia","origin":"icpc2_inclusion","chapter":"F","label":203}
 {"code":"F91","text":"presbiopia","origin":"icpc2_inclusion","chapter":"F","label":203}
 {"code":"F91","text":"visão curta","origin":"icpc2_inclusion","chapter":"F","label":203}
+{"code":"F93","text":"aumento da pressão intra-ocular","origin":"icpc2_inclusion","chapter":"F","label":205}
+{"code":"F94","text":"cegueira parcial\/total dos dois olhos","origin":"icpc2_inclusion","chapter":"F","label":206}
 {"code":"F95","text":"olhos cruzados","origin":"icpc2_inclusion","chapter":"F","label":207}
 {"code":"F95","text":"olhos tortos","origin":"icpc2_inclusion","chapter":"F","label":207}
 {"code":"F99","text":"ambliopia","origin":"icpc2_inclusion","chapter":"F","label":208}
@@ -1165,6 +1222,11 @@
 {"code":"H02","text":"perturbação de discriminação auditiva","origin":"icpc2_inclusion","chapter":"H","label":210}
 {"code":"H02","text":"diplacúsia e sensação de perda de audição","origin":"icpc2_inclusion","chapter":"H","label":210}
 {"code":"H02","text":"hiperacúsia","origin":"icpc2_inclusion","chapter":"H","label":210}
+{"code":"H03","text":"eco no ouvido","origin":"icpc2_inclusion","chapter":"H","label":211}
+{"code":"H05","text":"sangue dentro do\/expelido pelo ouvido","origin":"icpc2_inclusion","chapter":"H","label":213}
+{"code":"H13","text":"ouvido obstruído","origin":"icpc2_inclusion","chapter":"H","label":214}
+{"code":"H27","text":"medo de surdez","origin":"icpc2_inclusion","chapter":"H","label":216}
+{"code":"H28","text":"surdez temporária","origin":"icpc2_inclusion","chapter":"H","label":217}
 {"code":"H29","text":"ouvidos a estalar","origin":"icpc2_inclusion","chapter":"H","label":218}
 {"code":"H29","text":"comichão nos ouvidos","origin":"icpc2_inclusion","chapter":"H","label":218}
 {"code":"H29","text":"puxar as orelhas","origin":"icpc2_inclusion","chapter":"H","label":218}
@@ -1176,15 +1238,20 @@
 {"code":"H71","text":"otite média NE","origin":"icpc2_inclusion","chapter":"H","label":220}
 {"code":"H72","text":"glue ear","origin":"icpc2_inclusion","chapter":"H","label":221}
 {"code":"H72","text":"otite média com efusão (OME)","origin":"icpc2_inclusion","chapter":"H","label":221}
+{"code":"H73","text":"bloqueio\/catarro\/disfunção\/salpingite da trompa de Eustáquio","origin":"icpc2_inclusion","chapter":"H","label":222}
 {"code":"H74","text":"colesteatoma","origin":"icpc2_inclusion","chapter":"H","label":223}
 {"code":"H74","text":"mastoidite crónica","origin":"icpc2_inclusion","chapter":"H","label":223}
 {"code":"H74","text":"otite média crónica supurativa","origin":"icpc2_inclusion","chapter":"H","label":223}
+{"code":"H75","text":"neoplasia benigna\/maligna do ouvido","origin":"icpc2_inclusion","chapter":"H","label":224}
+{"code":"H78","text":"traumatismo do meato externo\/pavilhão auricular","origin":"icpc2_inclusion","chapter":"H","label":227}
+{"code":"H79","text":"rotura do tímpano traumática\/por pressão","origin":"icpc2_inclusion","chapter":"H","label":228}
 {"code":"H80","text":"orelha acessória","origin":"icpc2_inclusion","chapter":"H","label":229}
 {"code":"H80","text":"orelhas de morcego","origin":"icpc2_inclusion","chapter":"H","label":229}
 {"code":"H82","text":"vertigem paroxística\/posicional benigna","origin":"icpc2_inclusion","chapter":"H","label":231}
 {"code":"H82","text":"labirintite","origin":"icpc2_inclusion","chapter":"H","label":231}
 {"code":"H82","text":"doença de Meniére","origin":"icpc2_inclusion","chapter":"H","label":231}
 {"code":"H82","text":"neuronite vestibular","origin":"icpc2_inclusion","chapter":"H","label":231}
+{"code":"H85","text":"surdez por ruído","origin":"icpc2_inclusion","chapter":"H","label":234}
 {"code":"H86","text":"surdez congénita","origin":"icpc2_inclusion","chapter":"H","label":235}
 {"code":"H86","text":"surdez de um ouvido","origin":"icpc2_inclusion","chapter":"H","label":235}
 {"code":"H86","text":"surdez parcial\/total de ambos os ouvidos","origin":"icpc2_inclusion","chapter":"H","label":235}
@@ -1192,6 +1259,8 @@
 {"code":"H99","text":"canal externo estreito","origin":"icpc2_inclusion","chapter":"H","label":236}
 {"code":"H99","text":"pólipo do ouvido médio","origin":"icpc2_inclusion","chapter":"H","label":236}
 {"code":"H99","text":"estenose do canal externo","origin":"icpc2_inclusion","chapter":"H","label":236}
+{"code":"K01","text":"dor atribuída ao coração","origin":"icpc2_inclusion","chapter":"K","label":237}
+{"code":"K02","text":"peso no coração","origin":"icpc2_inclusion","chapter":"K","label":238}
 {"code":"K04","text":"bradicardia","origin":"icpc2_inclusion","chapter":"K","label":240}
 {"code":"K04","text":"taquicardia","origin":"icpc2_inclusion","chapter":"K","label":240}
 {"code":"K06","text":"aranha vascular","origin":"icpc2_inclusion","chapter":"K","label":242}
@@ -1202,6 +1271,7 @@
 {"code":"K22","text":"outro factor de risco para doença cardiovascular","origin":"icpc2_inclusion","chapter":"K","label":244}
 {"code":"K22","text":"história pessoal\/familiar de doença cardiovascular","origin":"icpc2_inclusion","chapter":"K","label":244}
 {"code":"K22","text":"episódio anterior de doença cardiovascular","origin":"icpc2_inclusion","chapter":"K","label":244}
+{"code":"K24","text":"medo de ataque cardíaco","origin":"icpc2_inclusion","chapter":"K","label":245}
 {"code":"K29","text":"problema cardíaco","origin":"icpc2_inclusion","chapter":"K","label":249}
 {"code":"K29","text":"pressão arterial baixa","origin":"icpc2_inclusion","chapter":"K","label":249}
 {"code":"K29","text":"coração fraco","origin":"icpc2_inclusion","chapter":"K","label":249}
@@ -1211,6 +1281,7 @@
 {"code":"K70","text":"pericardite","origin":"icpc2_inclusion","chapter":"K","label":250}
 {"code":"K71","text":"coreia","origin":"icpc2_inclusion","chapter":"K","label":251}
 {"code":"K71","text":"estenose mitral","origin":"icpc2_inclusion","chapter":"K","label":251}
+{"code":"K72","text":"neoplasia cardiovascular benigna\/maligna","origin":"icpc2_inclusion","chapter":"K","label":252}
 {"code":"K73","text":"defeito do septo auricular\/ventricular","origin":"icpc2_inclusion","chapter":"K","label":253}
 {"code":"K73","text":"tetralogia de Fallot","origin":"icpc2_inclusion","chapter":"K","label":253}
 {"code":"K73","text":"canal arterial persistente","origin":"icpc2_inclusion","chapter":"K","label":253}
@@ -1219,6 +1290,7 @@
 {"code":"K74","text":"angina com espasmo","origin":"icpc2_inclusion","chapter":"K","label":254}
 {"code":"K74","text":"dor torácica isquémica","origin":"icpc2_inclusion","chapter":"K","label":254}
 {"code":"K74","text":"angina instável","origin":"icpc2_inclusion","chapter":"K","label":254}
+{"code":"K75","text":"enfarte do miocárdio especificado como tendo sido agudo ou até 4 semanas (28 dias) após o começo","origin":"icpc2_inclusion","chapter":"K","label":255}
 {"code":"K76","text":"aneurisma cardíaco","origin":"icpc2_inclusion","chapter":"K","label":256}
 {"code":"K76","text":"doença cardíaca arteriosclerótica\/aterosclerótica","origin":"icpc2_inclusion","chapter":"K","label":256}
 {"code":"K76","text":"doença coronária","origin":"icpc2_inclusion","chapter":"K","label":256}
@@ -1231,6 +1303,7 @@
 {"code":"K77","text":"insuficiência cardíaca NE","origin":"icpc2_inclusion","chapter":"K","label":257}
 {"code":"K77","text":"insuficiência ventricular esquerda","origin":"icpc2_inclusion","chapter":"K","label":257}
 {"code":"K77","text":"insuficiência ventricular direita","origin":"icpc2_inclusion","chapter":"K","label":257}
+{"code":"K79","text":"taquicardia supraventricular\/ventricular","origin":"icpc2_inclusion","chapter":"K","label":259}
 {"code":"K80","text":"batimentos prematuros auriculares\/juncionais\/ventriculares","origin":"icpc2_inclusion","chapter":"K","label":260}
 {"code":"K80","text":"bigeminia","origin":"icpc2_inclusion","chapter":"K","label":260}
 {"code":"K80","text":"batimentos ectópicos","origin":"icpc2_inclusion","chapter":"K","label":260}
@@ -1259,6 +1332,8 @@
 {"code":"K86","text":"hipertensão essencial","origin":"icpc2_inclusion","chapter":"K","label":266}
 {"code":"K86","text":"hipertensão NE","origin":"icpc2_inclusion","chapter":"K","label":266}
 {"code":"K86","text":"hipertensão idiopática","origin":"icpc2_inclusion","chapter":"K","label":266}
+{"code":"K87","text":"hipertensão maligna","origin":"icpc2_inclusion","chapter":"K","label":267}
+{"code":"K88","text":"hipotensão idiopática\/ortostática","origin":"icpc2_inclusion","chapter":"K","label":268}
 {"code":"K89","text":"insuficiência basilar","origin":"icpc2_inclusion","chapter":"K","label":269}
 {"code":"K89","text":"\"drop attacks\"","origin":"icpc2_inclusion","chapter":"K","label":269}
 {"code":"K89","text":"amnésia global transitória","origin":"icpc2_inclusion","chapter":"K","label":269}
@@ -1301,12 +1376,18 @@
 {"code":"K99","text":"poliarterite nodosa","origin":"icpc2_inclusion","chapter":"K","label":277}
 {"code":"K99","text":"veias varicosas noutras partes do corpo para além das extremidades inferiores","origin":"icpc2_inclusion","chapter":"K","label":277}
 {"code":"K99","text":"vasculite","origin":"icpc2_inclusion","chapter":"K","label":277}
+{"code":"L01","text":"dor atribuída à coluna\/sistema musculosquelético cervical","origin":"icpc2_inclusion","chapter":"L","label":278}
 {"code":"L02","text":"dor de costas NE","origin":"icpc2_inclusion","chapter":"L","label":279}
 {"code":"L02","text":"dor torácica dorsal","origin":"icpc2_inclusion","chapter":"L","label":279}
 {"code":"L03","text":"dor de costas (lombares\/sacroilíacas)","origin":"icpc2_inclusion","chapter":"L","label":280}
 {"code":"L03","text":"coccidinia","origin":"icpc2_inclusion","chapter":"L","label":280}
 {"code":"L03","text":"lumbago","origin":"icpc2_inclusion","chapter":"L","label":280}
 {"code":"L03","text":"lombalgia","origin":"icpc2_inclusion","chapter":"L","label":280}
+{"code":"L04","text":"dor torácica atribuída ao sistema músculo-esquelético","origin":"icpc2_inclusion","chapter":"L","label":281}
+{"code":"L05","text":"dor no quadril","origin":"icpc2_inclusion","chapter":"L","label":282}
+{"code":"L07","text":"sintoma da articulação temporo-mandibular","origin":"icpc2_inclusion","chapter":"L","label":283}
+{"code":"L14","text":"cãibras na perna","origin":"icpc2_inclusion","chapter":"L","label":290}
+{"code":"L17","text":"metatarsalgia","origin":"icpc2_inclusion","chapter":"L","label":293}
 {"code":"L18","text":"fibromialgia","origin":"icpc2_inclusion","chapter":"L","label":294}
 {"code":"L18","text":"fibrosite","origin":"icpc2_inclusion","chapter":"L","label":294}
 {"code":"L18","text":"mialgia","origin":"icpc2_inclusion","chapter":"L","label":294}
@@ -1317,16 +1398,20 @@
 {"code":"L20","text":"artralgia","origin":"icpc2_inclusion","chapter":"L","label":296}
 {"code":"L20","text":"derrame\/edema articular","origin":"icpc2_inclusion","chapter":"L","label":296}
 {"code":"L20","text":"dor\/rigidez\/fraqueza articular","origin":"icpc2_inclusion","chapter":"L","label":296}
+{"code":"L29","text":"dores de crescimento na criança","origin":"icpc2_inclusion","chapter":"L","label":300}
 {"code":"L70","text":"tenossinovite infecciosa","origin":"icpc2_inclusion","chapter":"L","label":301}
 {"code":"L70","text":"osteomielite","origin":"icpc2_inclusion","chapter":"L","label":301}
 {"code":"L70","text":"artrite piogénica","origin":"icpc2_inclusion","chapter":"L","label":301}
 {"code":"L71","text":"fibrosarcoma","origin":"icpc2_inclusion","chapter":"L","label":302}
 {"code":"L71","text":"osteossarcoma","origin":"icpc2_inclusion","chapter":"L","label":302}
+{"code":"L72","text":"fractura de Colles","origin":"icpc2_inclusion","chapter":"L","label":303}
+{"code":"L73","text":"fractura de Pott","origin":"icpc2_inclusion","chapter":"L","label":304}
 {"code":"L74","text":"fractura de osso do carpo\/metacarpo","origin":"icpc2_inclusion","chapter":"L","label":305}
 {"code":"L74","text":"fractura de falange da mão\/do pé","origin":"icpc2_inclusion","chapter":"L","label":305}
 {"code":"L74","text":"fractura de osso do tarso\/metatarso","origin":"icpc2_inclusion","chapter":"L","label":305}
 {"code":"L79","text":"entorse\/distensão de outra articulação\/ligamento","origin":"icpc2_inclusion","chapter":"L","label":310}
 {"code":"L79","text":"traumatismo em chicotada","origin":"icpc2_inclusion","chapter":"L","label":310}
+{"code":"L80","text":"luxação\/subluxação de qualquer localização, incluindo da coluna vertebral","origin":"icpc2_inclusion","chapter":"L","label":311}
 {"code":"L81","text":"corpo estranho profundo","origin":"icpc2_inclusion","chapter":"L","label":312}
 {"code":"L81","text":"amputação traumática","origin":"icpc2_inclusion","chapter":"L","label":312}
 {"code":"L81","text":"hemartrose traumática","origin":"icpc2_inclusion","chapter":"L","label":312}
@@ -1364,6 +1449,8 @@
 {"code":"L87","text":"dedo em gatilho","origin":"icpc2_inclusion","chapter":"L","label":318}
 {"code":"L88","text":"condição associada: espondilite anquilosante","origin":"icpc2_inclusion","chapter":"L","label":319}
 {"code":"L88","text":"condição associada: artrite juvenil","origin":"icpc2_inclusion","chapter":"L","label":319}
+{"code":"L89","text":"osteoartrite da anca secundária a displasia\/traumatismo","origin":"icpc2_inclusion","chapter":"L","label":320}
+{"code":"L90","text":"osteoartrite do joelho secundária a displasia\/traumatismo","origin":"icpc2_inclusion","chapter":"L","label":321}
 {"code":"L91","text":"artrite NE","origin":"icpc2_inclusion","chapter":"L","label":322}
 {"code":"L91","text":"osteoartrite","origin":"icpc2_inclusion","chapter":"L","label":322}
 {"code":"L91","text":"artropatia traumática","origin":"icpc2_inclusion","chapter":"L","label":322}
@@ -1372,11 +1459,14 @@
 {"code":"L92","text":"osteoartrose\/sinovite do ombro","origin":"icpc2_inclusion","chapter":"L","label":323}
 {"code":"L92","text":"síndrome da coifa dos rotadores","origin":"icpc2_inclusion","chapter":"L","label":323}
 {"code":"L92","text":"tendinite abarticular do ombro","origin":"icpc2_inclusion","chapter":"L","label":323}
+{"code":"L93","text":"epicondilite lateral","origin":"icpc2_inclusion","chapter":"L","label":324}
 {"code":"L94","text":"doença de Legg-Calvé-Perthes","origin":"icpc2_inclusion","chapter":"L","label":325}
 {"code":"L94","text":"doença de Osgood-Schlatter","origin":"icpc2_inclusion","chapter":"L","label":325}
 {"code":"L94","text":"osteocondrite dissecante","origin":"icpc2_inclusion","chapter":"L","label":325}
 {"code":"L94","text":"doença de Scheuermann","origin":"icpc2_inclusion","chapter":"L","label":325}
 {"code":"L94","text":"epífise femural deslocada","origin":"icpc2_inclusion","chapter":"L","label":325}
+{"code":"L95","text":"fractura patológica devido a osteoporose","origin":"icpc2_inclusion","chapter":"L","label":326}
+{"code":"L96","text":"lesão aguda do menisco\/ligamentos cruzados","origin":"icpc2_inclusion","chapter":"L","label":327}
 {"code":"L97","text":"neoplasia músculo-esquelética benigna","origin":"icpc2_inclusion","chapter":"L","label":328}
 {"code":"L97","text":"neoplasia músculo-esquelética não especificada como benigna ou maligna\/quando não existe histologia disponível","origin":"icpc2_inclusion","chapter":"L","label":328}
 {"code":"L98","text":"joanete","origin":"icpc2_inclusion","chapter":"L","label":329}
@@ -1417,6 +1507,7 @@
 {"code":"N08","text":"tetania","origin":"icpc2_inclusion","chapter":"N","label":337}
 {"code":"N08","text":"tremor","origin":"icpc2_inclusion","chapter":"N","label":337}
 {"code":"N08","text":"espasmo","origin":"icpc2_inclusion","chapter":"N","label":337}
+{"code":"N16","text":"anosmia","origin":"icpc2_inclusion","chapter":"N","label":338}
 {"code":"N17","text":"sensação de desmaio\/cabeça leve","origin":"icpc2_inclusion","chapter":"N","label":339}
 {"code":"N17","text":"tontura","origin":"icpc2_inclusion","chapter":"N","label":339}
 {"code":"N17","text":"perda de equilíbrio","origin":"icpc2_inclusion","chapter":"N","label":339}
@@ -1439,6 +1530,8 @@
 {"code":"N73","text":"infecção a vírus lento","origin":"icpc2_inclusion","chapter":"N","label":349}
 {"code":"N75","text":"neurinoma do acústico","origin":"icpc2_inclusion","chapter":"N","label":351}
 {"code":"N75","text":"meningioma","origin":"icpc2_inclusion","chapter":"N","label":351}
+{"code":"N76","text":"neoplasia do sistema nervoso não especificada como benigna ou maligna\/quando a histologia não está disponível","origin":"icpc2_inclusion","chapter":"N","label":352}
+{"code":"N79","text":"efeito tardio de concussão","origin":"icpc2_inclusion","chapter":"N","label":353}
 {"code":"N80","text":"contusão cerebral","origin":"icpc2_inclusion","chapter":"N","label":354}
 {"code":"N80","text":"lesão cerebral com\/sem fractura craniana","origin":"icpc2_inclusion","chapter":"N","label":354}
 {"code":"N80","text":"hematoma extradural","origin":"icpc2_inclusion","chapter":"N","label":354}
@@ -1448,6 +1541,7 @@
 {"code":"N81","text":"lesão da espinal medula","origin":"icpc2_inclusion","chapter":"N","label":355}
 {"code":"N85","text":"hidrocefalia","origin":"icpc2_inclusion","chapter":"N","label":356}
 {"code":"N85","text":"espinha bífida","origin":"icpc2_inclusion","chapter":"N","label":356}
+{"code":"N86","text":"esclerose disseminada","origin":"icpc2_inclusion","chapter":"N","label":357}
 {"code":"N87","text":"parkinsonismo induzido pela medicação","origin":"icpc2_inclusion","chapter":"N","label":358}
 {"code":"N87","text":"paralisia agitante","origin":"icpc2_inclusion","chapter":"N","label":358}
 {"code":"N87","text":"doença de Parkinson","origin":"icpc2_inclusion","chapter":"N","label":358}
@@ -1456,6 +1550,8 @@
 {"code":"N88","text":"grande mal","origin":"icpc2_inclusion","chapter":"N","label":359}
 {"code":"N88","text":"pequeno mal","origin":"icpc2_inclusion","chapter":"N","label":359}
 {"code":"N88","text":"estado epiléptico","origin":"icpc2_inclusion","chapter":"N","label":359}
+{"code":"N89","text":"cefaleia vascular com\/sem aura","origin":"icpc2_inclusion","chapter":"N","label":360}
+{"code":"N92","text":"tique doloroso","origin":"icpc2_inclusion","chapter":"N","label":363}
 {"code":"N94","text":"polineuropatia infecciosa aguda","origin":"icpc2_inclusion","chapter":"N","label":365}
 {"code":"N94","text":"neuropatia diabética (codificação dupla com T89, T90)","origin":"icpc2_inclusion","chapter":"N","label":365}
 {"code":"N94","text":"síndrome de Guillain-Barré","origin":"icpc2_inclusion","chapter":"N","label":365}
@@ -1495,6 +1591,9 @@
 {"code":"P15","text":"psicose alcoólica","origin":"icpc2_inclusion","chapter":"P","label":381}
 {"code":"P15","text":"alcoolismo","origin":"icpc2_inclusion","chapter":"P","label":381}
 {"code":"P15","text":"delirium tremens","origin":"icpc2_inclusion","chapter":"P","label":381}
+{"code":"P16","text":"embriaguez","origin":"icpc2_inclusion","chapter":"P","label":382}
+{"code":"P17","text":"problema de fumar","origin":"icpc2_inclusion","chapter":"P","label":383}
+{"code":"P18","text":"abuso de qualquer medicamento prescrito","origin":"icpc2_inclusion","chapter":"P","label":384}
 {"code":"P19","text":"dependência de droga","origin":"icpc2_inclusion","chapter":"P","label":385}
 {"code":"P19","text":"privação de droga","origin":"icpc2_inclusion","chapter":"P","label":385}
 {"code":"P20","text":"amnésia","origin":"icpc2_inclusion","chapter":"P","label":386}
@@ -1505,11 +1604,14 @@
 {"code":"P22","text":"criança super-activa","origin":"icpc2_inclusion","chapter":"P","label":387}
 {"code":"P22","text":"atraso da fala","origin":"icpc2_inclusion","chapter":"P","label":387}
 {"code":"P22","text":"birra","origin":"icpc2_inclusion","chapter":"P","label":387}
+{"code":"P23","text":"delinquência","origin":"icpc2_inclusion","chapter":"P","label":388}
+{"code":"P24","text":"dislexia","origin":"icpc2_inclusion","chapter":"P","label":389}
 {"code":"P25","text":"síndrome do ninho vazio","origin":"icpc2_inclusion","chapter":"P","label":390}
 {"code":"P25","text":"crise de meia-idade","origin":"icpc2_inclusion","chapter":"P","label":390}
 {"code":"P25","text":"problema de reforma","origin":"icpc2_inclusion","chapter":"P","label":390}
 {"code":"P27","text":"preocupação com doença mental","origin":"icpc2_inclusion","chapter":"P","label":391}
 {"code":"P27","text":"medo de tentativa de suicídio","origin":"icpc2_inclusion","chapter":"P","label":391}
+{"code":"P28","text":"baixa auto-estima","origin":"icpc2_inclusion","chapter":"P","label":392}
 {"code":"P29","text":"ilusões","origin":"icpc2_inclusion","chapter":"P","label":393}
 {"code":"P29","text":"problemas em comer NE","origin":"icpc2_inclusion","chapter":"P","label":393}
 {"code":"P29","text":"alucinações","origin":"icpc2_inclusion","chapter":"P","label":393}
@@ -1519,6 +1621,7 @@
 {"code":"P29","text":"desconfiança","origin":"icpc2_inclusion","chapter":"P","label":393}
 {"code":"P70","text":"doença de Alzheimer","origin":"icpc2_inclusion","chapter":"P","label":394}
 {"code":"P70","text":"demência senil","origin":"icpc2_inclusion","chapter":"P","label":394}
+{"code":"P71","text":"delirium","origin":"icpc2_inclusion","chapter":"P","label":395}
 {"code":"P72","text":"todos os tipos de paranóia","origin":"icpc2_inclusion","chapter":"P","label":396}
 {"code":"P72","text":"todos os tipos de esquizofrenia","origin":"icpc2_inclusion","chapter":"P","label":396}
 {"code":"P73","text":"distúrbio bipolar","origin":"icpc2_inclusion","chapter":"P","label":397}
@@ -1543,11 +1646,15 @@
 {"code":"P80","text":"psicopatia","origin":"icpc2_inclusion","chapter":"P","label":404}
 {"code":"P81","text":"perturbação de défice de atenção","origin":"icpc2_inclusion","chapter":"P","label":405}
 {"code":"P81","text":"hiperactividade","origin":"icpc2_inclusion","chapter":"P","label":405}
+{"code":"P82","text":"perturbação de stress pós-traumático crónica","origin":"icpc2_inclusion","chapter":"P","label":406}
+{"code":"P98","text":"psicose aguda\/transitória\/reactiva\/puerperal","origin":"icpc2_inclusion","chapter":"P","label":409}
 {"code":"P99","text":"autismo","origin":"icpc2_inclusion","chapter":"P","label":410}
 {"code":"P99","text":"neurose NE","origin":"icpc2_inclusion","chapter":"P","label":410}
 {"code":"R01","text":"respiração dolorosa","origin":"icpc2_inclusion","chapter":"R","label":411}
 {"code":"R01","text":"dor pleurítica","origin":"icpc2_inclusion","chapter":"R","label":411}
 {"code":"R01","text":"pleurodinia","origin":"icpc2_inclusion","chapter":"R","label":411}
+{"code":"R02","text":"ortopneia","origin":"icpc2_inclusion","chapter":"R","label":412}
+{"code":"R03","text":"roncos","origin":"icpc2_inclusion","chapter":"R","label":413}
 {"code":"R04","text":"respiração anormal","origin":"icpc2_inclusion","chapter":"R","label":414}
 {"code":"R04","text":"apneia","origin":"icpc2_inclusion","chapter":"R","label":414}
 {"code":"R04","text":"interrupção da respiração","origin":"icpc2_inclusion","chapter":"R","label":414}
@@ -1556,6 +1663,7 @@
 {"code":"R04","text":"ressonar","origin":"icpc2_inclusion","chapter":"R","label":414}
 {"code":"R04","text":"estridor","origin":"icpc2_inclusion","chapter":"R","label":414}
 {"code":"R04","text":"taquipneia","origin":"icpc2_inclusion","chapter":"R","label":414}
+{"code":"R05","text":"tosse (seca ou húmida)","origin":"icpc2_inclusion","chapter":"R","label":415}
 {"code":"R07","text":"nariz tapado","origin":"icpc2_inclusion","chapter":"R","label":417}
 {"code":"R07","text":"rinorreia","origin":"icpc2_inclusion","chapter":"R","label":417}
 {"code":"R07","text":"corrimento nasal","origin":"icpc2_inclusion","chapter":"R","label":417}
@@ -1584,12 +1692,15 @@
 {"code":"R29","text":"congestão dos pulmões","origin":"icpc2_inclusion","chapter":"R","label":427}
 {"code":"R71","text":"parapertussis","origin":"icpc2_inclusion","chapter":"R","label":428}
 {"code":"R71","text":"pertussis","origin":"icpc2_inclusion","chapter":"R","label":428}
+{"code":"R72","text":"amigdalite\/faringite estreptocócica confirmada","origin":"icpc2_inclusion","chapter":"R","label":429}
+{"code":"R73","text":"infecção localizada no nariz","origin":"icpc2_inclusion","chapter":"R","label":430}
 {"code":"R74","text":"rinite aguda","origin":"icpc2_inclusion","chapter":"R","label":431}
 {"code":"R74","text":"coriza","origin":"icpc2_inclusion","chapter":"R","label":431}
 {"code":"R74","text":"resfriado","origin":"icpc2_inclusion","chapter":"R","label":431}
 {"code":"R74","text":"nasofaringite","origin":"icpc2_inclusion","chapter":"R","label":431}
 {"code":"R74","text":"faringite","origin":"icpc2_inclusion","chapter":"R","label":431}
 {"code":"R74","text":"infecção do trato respiratório superior\/infecção respiratória superior","origin":"icpc2_inclusion","chapter":"R","label":431}
+{"code":"R75","text":"sinusite que afecte qualquer seio perinasal","origin":"icpc2_inclusion","chapter":"R","label":432}
 {"code":"R76","text":"abcesso peritonsilar","origin":"icpc2_inclusion","chapter":"R","label":433}
 {"code":"R76","text":"esquinência","origin":"icpc2_inclusion","chapter":"R","label":433}
 {"code":"R77","text":"falso crupe","origin":"icpc2_inclusion","chapter":"R","label":434}
@@ -1617,8 +1728,14 @@
 {"code":"R83","text":"infecção respiratória fúngica","origin":"icpc2_inclusion","chapter":"R","label":440}
 {"code":"R83","text":"abcesso pulmonar","origin":"icpc2_inclusion","chapter":"R","label":440}
 {"code":"R83","text":"infecção por protozoário (sem pneumonia)","origin":"icpc2_inclusion","chapter":"R","label":440}
+{"code":"R84","text":"malignidade da traqueia\/brônquio\/pulmão","origin":"icpc2_inclusion","chapter":"R","label":441}
 {"code":"R85","text":"malignidade na laringe\/mediastino\/nariz\/faringe\/pleura\/seio perinasal","origin":"icpc2_inclusion","chapter":"R","label":442}
 {"code":"R85","text":"mesotelioma","origin":"icpc2_inclusion","chapter":"R","label":442}
+{"code":"R87","text":"corpo estranho no pulmão","origin":"icpc2_inclusion","chapter":"R","label":444}
+{"code":"R88","text":"lesão\/traumatismo do nariz\/do aparelho respiratório","origin":"icpc2_inclusion","chapter":"R","label":445}
+{"code":"R89","text":"malformação congénita do nariz\/faringe\/traqueia\/laringe\/brônquios\/pulmões\/pleura","origin":"icpc2_inclusion","chapter":"R","label":446}
+{"code":"R90","text":"amigdalite crónica","origin":"icpc2_inclusion","chapter":"R","label":447}
+{"code":"R92","text":"neoplasia respiratória não especificada quanto à benignidade ou malignidade\/quando a histologia não é conhecida","origin":"icpc2_inclusion","chapter":"R","label":448}
 {"code":"R95","text":"limitação crónica das vias respiratórias","origin":"icpc2_inclusion","chapter":"R","label":449}
 {"code":"R95","text":"obstrução crónica das vias respiratórias","origin":"icpc2_inclusion","chapter":"R","label":449}
 {"code":"R95","text":"doença pulmonar obstrutiva crónica (DPOC)","origin":"icpc2_inclusion","chapter":"R","label":449}
@@ -1644,22 +1761,31 @@
 {"code":"S01","text":"sensação de ardor","origin":"icpc2_inclusion","chapter":"S","label":454}
 {"code":"S01","text":"lesão ou erupção cutânea dolorosa","origin":"icpc2_inclusion","chapter":"S","label":454}
 {"code":"S01","text":"pele dolorida","origin":"icpc2_inclusion","chapter":"S","label":454}
+{"code":"S02","text":"irritação da pele","origin":"icpc2_inclusion","chapter":"S","label":455}
+{"code":"S03","text":"verrugas vulgares","origin":"icpc2_inclusion","chapter":"S","label":456}
+{"code":"S04","text":"pápula","origin":"icpc2_inclusion","chapter":"S","label":457}
+{"code":"S05","text":"pápulas\/tumores\/inchaços em vários locais","origin":"icpc2_inclusion","chapter":"S","label":458}
 {"code":"S06","text":"mancha","origin":"icpc2_inclusion","chapter":"S","label":459}
 {"code":"S06","text":"eritema","origin":"icpc2_inclusion","chapter":"S","label":459}
 {"code":"S06","text":"vermelhidão","origin":"icpc2_inclusion","chapter":"S","label":459}
+{"code":"S07","text":"manchas\/eritema\/vermelhidão em múltiplos locais","origin":"icpc2_inclusion","chapter":"S","label":460}
 {"code":"S08","text":"olheiras","origin":"icpc2_inclusion","chapter":"S","label":461}
 {"code":"S08","text":"cianose","origin":"icpc2_inclusion","chapter":"S","label":461}
 {"code":"S08","text":"rubor","origin":"icpc2_inclusion","chapter":"S","label":461}
 {"code":"S08","text":"sardas","origin":"icpc2_inclusion","chapter":"S","label":461}
 {"code":"S08","text":"palidez","origin":"icpc2_inclusion","chapter":"S","label":461}
+{"code":"S09","text":"peroníquia","origin":"icpc2_inclusion","chapter":"S","label":462}
 {"code":"S10","text":"abcesso","origin":"icpc2_inclusion","chapter":"S","label":463}
 {"code":"S10","text":"furúnculo","origin":"icpc2_inclusion","chapter":"S","label":463}
+{"code":"S11","text":"infecção pós-traumática de uma ferida\/mordedura","origin":"icpc2_inclusion","chapter":"S","label":464}
 {"code":"S14","text":"queimadura\/escaldão de todos os graus","origin":"icpc2_inclusion","chapter":"S","label":467}
 {"code":"S14","text":"queimadura química externa","origin":"icpc2_inclusion","chapter":"S","label":467}
+{"code":"S15","text":"corpo estranho sob a unha","origin":"icpc2_inclusion","chapter":"S","label":468}
 {"code":"S16","text":"equimose","origin":"icpc2_inclusion","chapter":"S","label":469}
 {"code":"S16","text":"hematoma","origin":"icpc2_inclusion","chapter":"S","label":469}
 {"code":"S17","text":"contusão se houver solução de continuidade","origin":"icpc2_inclusion","chapter":"S","label":470}
 {"code":"S17","text":"esfoladela","origin":"icpc2_inclusion","chapter":"S","label":470}
+{"code":"S18","text":"laceração\/corte da pele\/tecidos subcutâneos","origin":"icpc2_inclusion","chapter":"S","label":471}
 {"code":"S19","text":"avulsão da unha","origin":"icpc2_inclusion","chapter":"S","label":472}
 {"code":"S19","text":"picada com uma agulha","origin":"icpc2_inclusion","chapter":"S","label":472}
 {"code":"S19","text":"punctura","origin":"icpc2_inclusion","chapter":"S","label":472}
@@ -1667,6 +1793,8 @@
 {"code":"S21","text":"\"peeling\"","origin":"icpc2_inclusion","chapter":"S","label":474}
 {"code":"S21","text":"escamação","origin":"icpc2_inclusion","chapter":"S","label":474}
 {"code":"S21","text":"rugas","origin":"icpc2_inclusion","chapter":"S","label":474}
+{"code":"S22","text":"dilatação das extremidades dos dedos","origin":"icpc2_inclusion","chapter":"S","label":475}
+{"code":"S23","text":"alopécia","origin":"icpc2_inclusion","chapter":"S","label":476}
 {"code":"S24","text":"couro cabeludo seco","origin":"icpc2_inclusion","chapter":"S","label":477}
 {"code":"S24","text":"hirsutismo","origin":"icpc2_inclusion","chapter":"S","label":477}
 {"code":"S29","text":"celulite","origin":"icpc2_inclusion","chapter":"S","label":481}
@@ -1709,6 +1837,8 @@
 {"code":"S81","text":"mancha cor vinho do Porto","origin":"icpc2_inclusion","chapter":"S","label":493}
 {"code":"S83","text":"marca de nascença","origin":"icpc2_inclusion","chapter":"S","label":495}
 {"code":"S83","text":"ictiose","origin":"icpc2_inclusion","chapter":"S","label":495}
+{"code":"S84","text":"impetigo secundário a outra dermatose","origin":"icpc2_inclusion","chapter":"S","label":496}
+{"code":"S85","text":"abcesso pilonidal","origin":"icpc2_inclusion","chapter":"S","label":497}
 {"code":"S86","text":"crosta láctea","origin":"icpc2_inclusion","chapter":"S","label":498}
 {"code":"S86","text":"caspa","origin":"icpc2_inclusion","chapter":"S","label":498}
 {"code":"S87","text":"dermatite flexural","origin":"icpc2_inclusion","chapter":"S","label":499}
@@ -1734,6 +1864,7 @@
 {"code":"S97","text":"úlcera de decúbito","origin":"icpc2_inclusion","chapter":"S","label":509}
 {"code":"S97","text":"úlcera de pressão","origin":"icpc2_inclusion","chapter":"S","label":509}
 {"code":"S97","text":"úlcera varicosa","origin":"icpc2_inclusion","chapter":"S","label":509}
+{"code":"S98","text":"vergões","origin":"icpc2_inclusion","chapter":"S","label":510}
 {"code":"S99","text":"dermatite artefacta","origin":"icpc2_inclusion","chapter":"S","label":511}
 {"code":"S99","text":"lúpus eritematoso discóide","origin":"icpc2_inclusion","chapter":"S","label":511}
 {"code":"S99","text":"eritema multiforme","origin":"icpc2_inclusion","chapter":"S","label":511}
@@ -1754,12 +1885,20 @@
 {"code":"S99","text":"verruga seborreica ou senil","origin":"icpc2_inclusion","chapter":"S","label":511}
 {"code":"S99","text":"estria atrófica","origin":"icpc2_inclusion","chapter":"S","label":511}
 {"code":"S99","text":"vitíligo","origin":"icpc2_inclusion","chapter":"S","label":511}
+{"code":"T01","text":"polidipsia","origin":"icpc2_inclusion","chapter":"T","label":512}
 {"code":"T02","text":"comer de forma exagerada","origin":"icpc2_inclusion","chapter":"T","label":513}
 {"code":"T02","text":"polifagia","origin":"icpc2_inclusion","chapter":"T","label":513}
+{"code":"T03","text":"anorexia","origin":"icpc2_inclusion","chapter":"T","label":514}
+{"code":"T04","text":"problema em como alimentar um lactente\/criança","origin":"icpc2_inclusion","chapter":"T","label":515}
+{"code":"T05","text":"problema em como alimentar um adulto","origin":"icpc2_inclusion","chapter":"T","label":516}
+{"code":"T08","text":"caquexia","origin":"icpc2_inclusion","chapter":"T","label":518}
 {"code":"T10","text":"criança que não cresce","origin":"icpc2_inclusion","chapter":"T","label":519}
 {"code":"T10","text":"atraso no desenvolvimento fisiológico","origin":"icpc2_inclusion","chapter":"T","label":519}
+{"code":"T11","text":"depleção hídrica","origin":"icpc2_inclusion","chapter":"T","label":520}
+{"code":"T27","text":"medo de diabetes","origin":"icpc2_inclusion","chapter":"T","label":522}
 {"code":"T29","text":"desejo de comer determinado alimento","origin":"icpc2_inclusion","chapter":"T","label":524}
 {"code":"T29","text":"peso inferior ao normal","origin":"icpc2_inclusion","chapter":"T","label":524}
+{"code":"T73","text":"outra neoplasia endócrina\/neoplasia endócrina não especificada como benigna ou maligna\/quando a histologia não está disponível","origin":"icpc2_inclusion","chapter":"T","label":528}
 {"code":"T80","text":"cretinismo","origin":"icpc2_inclusion","chapter":"T","label":530}
 {"code":"T80","text":"nanismo","origin":"icpc2_inclusion","chapter":"T","label":530}
 {"code":"T81","text":"bócio não tóxico","origin":"icpc2_inclusion","chapter":"T","label":531}
@@ -1799,6 +1938,7 @@
 {"code":"T99","text":"glicosuria renal","origin":"icpc2_inclusion","chapter":"T","label":542}
 {"code":"T99","text":"tiroidite","origin":"icpc2_inclusion","chapter":"T","label":542}
 {"code":"T99","text":"ácido úrico elevado","origin":"icpc2_inclusion","chapter":"T","label":542}
+{"code":"U01","text":"micção com ardor","origin":"icpc2_inclusion","chapter":"U","label":543}
 {"code":"U02","text":"noctúria","origin":"icpc2_inclusion","chapter":"U","label":544}
 {"code":"U02","text":"poliúria","origin":"icpc2_inclusion","chapter":"U","label":544}
 {"code":"U04","text":"enurese de origem orgânica","origin":"icpc2_inclusion","chapter":"U","label":545}
@@ -1807,6 +1947,7 @@
 {"code":"U05","text":"anúria","origin":"icpc2_inclusion","chapter":"U","label":546}
 {"code":"U05","text":"micção gotejante","origin":"icpc2_inclusion","chapter":"U","label":546}
 {"code":"U05","text":"oligúria","origin":"icpc2_inclusion","chapter":"U","label":546}
+{"code":"U06","text":"sangue na urina","origin":"icpc2_inclusion","chapter":"U","label":547}
 {"code":"U07","text":"urina com mau odor","origin":"icpc2_inclusion","chapter":"U","label":548}
 {"code":"U07","text":"urina escura","origin":"icpc2_inclusion","chapter":"U","label":548}
 {"code":"U13","text":"dor na bexiga","origin":"icpc2_inclusion","chapter":"U","label":550}
@@ -1830,6 +1971,7 @@
 {"code":"U77","text":"neoplasia maligna da uretra","origin":"icpc2_inclusion","chapter":"U","label":561}
 {"code":"U78","text":"papiloma da bexiga","origin":"icpc2_inclusion","chapter":"U","label":562}
 {"code":"U78","text":"pólipo do aparelho urinário","origin":"icpc2_inclusion","chapter":"U","label":562}
+{"code":"U79","text":"neoplasia da bexiga\/rim\/ureter\/uretra não especificada como benigna ou maligna\/quando a histologia não está disponível","origin":"icpc2_inclusion","chapter":"U","label":563}
 {"code":"U80","text":"contusão do rim","origin":"icpc2_inclusion","chapter":"U","label":564}
 {"code":"U80","text":"corpo estranho no aparelho urinário","origin":"icpc2_inclusion","chapter":"U","label":564}
 {"code":"U85","text":"rim poliquístico congénito","origin":"icpc2_inclusion","chapter":"U","label":565}
@@ -1841,6 +1983,7 @@
 {"code":"U88","text":"nefropatia","origin":"icpc2_inclusion","chapter":"U","label":566}
 {"code":"U88","text":"nefrosclerose","origin":"icpc2_inclusion","chapter":"U","label":566}
 {"code":"U88","text":"síndrome nefrótica","origin":"icpc2_inclusion","chapter":"U","label":566}
+{"code":"U90","text":"proteinúria postural","origin":"icpc2_inclusion","chapter":"U","label":567}
 {"code":"U95","text":"cálculo\/pedra da bexiga\/rim\/ureter","origin":"icpc2_inclusion","chapter":"U","label":568}
 {"code":"U95","text":"urolitíase","origin":"icpc2_inclusion","chapter":"U","label":568}
 {"code":"U98","text":"glicosúria","origin":"icpc2_inclusion","chapter":"U","label":569}
@@ -1858,23 +2001,37 @@
 {"code":"U99","text":"aperto uretral","origin":"icpc2_inclusion","chapter":"U","label":570}
 {"code":"W01","text":"menstruação em atraso","origin":"icpc2_inclusion","chapter":"W","label":571}
 {"code":"W01","text":"sintomas sugestivos de gravidez","origin":"icpc2_inclusion","chapter":"W","label":571}
+{"code":"W02","text":"preocupação com a possibilidade de uma gravidez indesejada","origin":"icpc2_inclusion","chapter":"W","label":572}
+{"code":"W03","text":"ameaça de aborto","origin":"icpc2_inclusion","chapter":"W","label":573}
 {"code":"W05","text":"hiperemese gravídica","origin":"icpc2_inclusion","chapter":"W","label":574}
 {"code":"W05","text":"enjoos matinais numa gravidez confirmada","origin":"icpc2_inclusion","chapter":"W","label":574}
+{"code":"W10","text":"pílula do dia seguinte","origin":"icpc2_inclusion","chapter":"W","label":575}
+{"code":"W11","text":"planeamento familiar em mulheres por meio hormonal oral","origin":"icpc2_inclusion","chapter":"W","label":576}
+{"code":"W12","text":"planeamento familiar por meio de DIU","origin":"icpc2_inclusion","chapter":"W","label":577}
+{"code":"W13","text":"planeamento familiar por esterilização feminina","origin":"icpc2_inclusion","chapter":"W","label":578}
 {"code":"W14","text":"contracepção NE","origin":"icpc2_inclusion","chapter":"W","label":579}
 {"code":"W14","text":"planeamento familiar NE","origin":"icpc2_inclusion","chapter":"W","label":579}
+{"code":"W15","text":"esterilidade primária e secundária","origin":"icpc2_inclusion","chapter":"W","label":580}
 {"code":"W19","text":"galactorreia","origin":"icpc2_inclusion","chapter":"W","label":583}
 {"code":"W19","text":"supressão da lactação","origin":"icpc2_inclusion","chapter":"W","label":583}
 {"code":"W19","text":"desmame","origin":"icpc2_inclusion","chapter":"W","label":583}
+{"code":"W27","text":"receio de malformações congénitas no bebé","origin":"icpc2_inclusion","chapter":"W","label":585}
+{"code":"W28","text":"instabilidade pélvica","origin":"icpc2_inclusion","chapter":"W","label":586}
+{"code":"W29","text":"Sintoma\/queixa sobre o planeamento familiar outro","origin":"icpc2_inclusion","chapter":"W","label":587}
 {"code":"W72","text":"coriocarcinoma","origin":"icpc2_inclusion","chapter":"W","label":590}
 {"code":"W72","text":"corioepitelioma","origin":"icpc2_inclusion","chapter":"W","label":590}
 {"code":"W73","text":"neoplasia benigna relacionada com a gravidez","origin":"icpc2_inclusion","chapter":"W","label":591}
 {"code":"W73","text":"mola hidatiforme","origin":"icpc2_inclusion","chapter":"W","label":591}
 {"code":"W73","text":"neoplasia relacionada com a gravidez não especificada como benigna ou maligna\/quando a histologia não está disponível","origin":"icpc2_inclusion","chapter":"W","label":591}
+{"code":"W75","text":"consequências de traumatismos que interferem com a gravidez","origin":"icpc2_inclusion","chapter":"W","label":592}
+{"code":"W76","text":"malformação materna que pode afectar a gravidez\/o parto","origin":"icpc2_inclusion","chapter":"W","label":593}
 {"code":"W81","text":"eclâmpsia","origin":"icpc2_inclusion","chapter":"W","label":597}
 {"code":"W81","text":"hipertensão na gravidez","origin":"icpc2_inclusion","chapter":"W","label":597}
 {"code":"W81","text":"edema na gravidez","origin":"icpc2_inclusion","chapter":"W","label":597}
 {"code":"W81","text":"pré-eclâmpsia","origin":"icpc2_inclusion","chapter":"W","label":597}
 {"code":"W81","text":"proteinúria na gravidez","origin":"icpc2_inclusion","chapter":"W","label":597}
+{"code":"W82","text":"aborto completo\/incompleto\/retido\/habitual","origin":"icpc2_inclusion","chapter":"W","label":598}
+{"code":"W83","text":"interrupção da gravidez, todo o tipo de complicações","origin":"icpc2_inclusion","chapter":"W","label":599}
 {"code":"W84","text":"primípara com mais idade que o desejável","origin":"icpc2_inclusion","chapter":"W","label":600}
 {"code":"W84","text":"anemia da gravidez","origin":"icpc2_inclusion","chapter":"W","label":600}
 {"code":"W84","text":"diabetes\/outra doença crónica anterior que afecte a gravidez","origin":"icpc2_inclusion","chapter":"W","label":600}
@@ -1886,10 +2043,15 @@
 {"code":"W84","text":"trabalho de parto prematuro","origin":"icpc2_inclusion","chapter":"W","label":600}
 {"code":"W84","text":"cesariana anterior","origin":"icpc2_inclusion","chapter":"W","label":600}
 {"code":"W84","text":"feto pequeno para a idade gestacional","origin":"icpc2_inclusion","chapter":"W","label":600}
+{"code":"W85","text":"diabetes manifestada durante a gravidez","origin":"icpc2_inclusion","chapter":"W","label":601}
+{"code":"W92","text":"nado vivo após parto complicado: extracção assistida, parto pélvico, cesariana, distócia, parto induzido, lesões causadas pelo parto, placenta prévia durante o parto, versão","origin":"icpc2_inclusion","chapter":"W","label":604}
+{"code":"W93","text":"nado morto após parto complicado: extracção assistida, parto pélvico, cesariana, distócia, parto induzido, lesões causadas pelo parto, placenta prévia durante o parto, versão","origin":"icpc2_inclusion","chapter":"W","label":605}
+{"code":"W94","text":"abcesso na mama","origin":"icpc2_inclusion","chapter":"W","label":606}
 {"code":"W95","text":"problema da mama no puerpério","origin":"icpc2_inclusion","chapter":"W","label":607}
 {"code":"W95","text":"mamilo gretado","origin":"icpc2_inclusion","chapter":"W","label":607}
 {"code":"X01","text":"dor pélvica","origin":"icpc2_inclusion","chapter":"X","label":610}
 {"code":"X01","text":"dor vulvar","origin":"icpc2_inclusion","chapter":"X","label":610}
+{"code":"X02","text":"dismenorreia","origin":"icpc2_inclusion","chapter":"X","label":611}
 {"code":"X03","text":"Mittelschmerz","origin":"icpc2_inclusion","chapter":"X","label":612}
 {"code":"X03","text":"ovulação dolorosa","origin":"icpc2_inclusion","chapter":"X","label":612}
 {"code":"X04","text":"dispareunia feminina","origin":"icpc2_inclusion","chapter":"X","label":613}
@@ -1899,6 +2061,7 @@
 {"code":"X05","text":"oligomenorreia","origin":"icpc2_inclusion","chapter":"X","label":614}
 {"code":"X06","text":"menorragia","origin":"icpc2_inclusion","chapter":"X","label":615}
 {"code":"X06","text":"hemorragia na puberdade","origin":"icpc2_inclusion","chapter":"X","label":615}
+{"code":"X07","text":"polimenorreia","origin":"icpc2_inclusion","chapter":"X","label":616}
 {"code":"X08","text":"hemorragia uterina disfuncional","origin":"icpc2_inclusion","chapter":"X","label":617}
 {"code":"X08","text":"metrorragia","origin":"icpc2_inclusion","chapter":"X","label":617}
 {"code":"X08","text":"hemorragia durante a ovulação","origin":"icpc2_inclusion","chapter":"X","label":617}
@@ -1907,10 +2070,14 @@
 {"code":"X11","text":"síndrome da menopausa","origin":"icpc2_inclusion","chapter":"X","label":620}
 {"code":"X11","text":"vaginite senil","origin":"icpc2_inclusion","chapter":"X","label":620}
 {"code":"X11","text":"sintoma\/queixa relacionado com a menopausa","origin":"icpc2_inclusion","chapter":"X","label":620}
+{"code":"X13","text":"hemorragia de contacto","origin":"icpc2_inclusion","chapter":"X","label":622}
 {"code":"X14","text":"secreção vaginal","origin":"icpc2_inclusion","chapter":"X","label":623}
 {"code":"X14","text":"leucorreia","origin":"icpc2_inclusion","chapter":"X","label":623}
+{"code":"X15","text":"secura vaginal","origin":"icpc2_inclusion","chapter":"X","label":624}
 {"code":"X16","text":"secura vulvar","origin":"icpc2_inclusion","chapter":"X","label":625}
 {"code":"X16","text":"prurido vulvar","origin":"icpc2_inclusion","chapter":"X","label":625}
+{"code":"X18","text":"mastodinia","origin":"icpc2_inclusion","chapter":"X","label":627}
+{"code":"X19","text":"mamas inchadas","origin":"icpc2_inclusion","chapter":"X","label":628}
 {"code":"X20","text":"secreção mamilar","origin":"icpc2_inclusion","chapter":"X","label":629}
 {"code":"X20","text":"fissura mamilar","origin":"icpc2_inclusion","chapter":"X","label":629}
 {"code":"X20","text":"dor\/prurido mamilar","origin":"icpc2_inclusion","chapter":"X","label":629}
@@ -1918,9 +2085,14 @@
 {"code":"X21","text":"galactorreia","origin":"icpc2_inclusion","chapter":"X","label":630}
 {"code":"X21","text":"mastite (sem lactação)","origin":"icpc2_inclusion","chapter":"X","label":630}
 {"code":"X21","text":"mastopatia","origin":"icpc2_inclusion","chapter":"X","label":630}
+{"code":"X29","text":"secreção uretral feminina","origin":"icpc2_inclusion","chapter":"X","label":638}
+{"code":"X70","text":"sífilis em qualquer localização","origin":"icpc2_inclusion","chapter":"X","label":639}
+{"code":"X71","text":"gonorreia em qualquer localização","origin":"icpc2_inclusion","chapter":"X","label":640}
+{"code":"X72","text":"infecção monilial da vagina\/colo do útero","origin":"icpc2_inclusion","chapter":"X","label":641}
 {"code":"X74","text":"endometrite","origin":"icpc2_inclusion","chapter":"X","label":643}
 {"code":"X74","text":"ooforite","origin":"icpc2_inclusion","chapter":"X","label":643}
 {"code":"X74","text":"salpingite","origin":"icpc2_inclusion","chapter":"X","label":643}
+{"code":"X76","text":"carcinoma intraductal","origin":"icpc2_inclusion","chapter":"X","label":645}
 {"code":"X77","text":"neoplasia maligna dos anexos","origin":"icpc2_inclusion","chapter":"X","label":646}
 {"code":"X77","text":"neoplasia maligna dos ovários","origin":"icpc2_inclusion","chapter":"X","label":646}
 {"code":"X77","text":"neoplasia maligna do útero","origin":"icpc2_inclusion","chapter":"X","label":646}
@@ -1930,6 +2102,7 @@
 {"code":"X78","text":"fibromioma do colo do útero","origin":"icpc2_inclusion","chapter":"X","label":647}
 {"code":"X78","text":"leiomioma","origin":"icpc2_inclusion","chapter":"X","label":647}
 {"code":"X78","text":"mioma","origin":"icpc2_inclusion","chapter":"X","label":647}
+{"code":"X79","text":"fibroadenoma","origin":"icpc2_inclusion","chapter":"X","label":648}
 {"code":"X81","text":"carcinoma in situ outro","origin":"icpc2_inclusion","chapter":"X","label":650}
 {"code":"X81","text":"neoplasia genital feminina não especificada como benigna ou maligna\/quando a histologia nao está disponível","origin":"icpc2_inclusion","chapter":"X","label":650}
 {"code":"X82","text":"circuncisão feminina","origin":"icpc2_inclusion","chapter":"X","label":651}
@@ -1952,6 +2125,7 @@
 {"code":"X88","text":"fibroadenose quística da mama","origin":"icpc2_inclusion","chapter":"X","label":657}
 {"code":"X88","text":"displasia da mama","origin":"icpc2_inclusion","chapter":"X","label":657}
 {"code":"X88","text":"quisto solitário da mama","origin":"icpc2_inclusion","chapter":"X","label":657}
+{"code":"X90","text":"herpes simplex ano-genital","origin":"icpc2_inclusion","chapter":"X","label":659}
 {"code":"X91","text":"infecção pelo vírus papiloma humano","origin":"icpc2_inclusion","chapter":"X","label":660}
 {"code":"X91","text":"verrugas venéreas","origin":"icpc2_inclusion","chapter":"X","label":660}
 {"code":"X99","text":"Quisto\/abcesso glândula de Bartholin","origin":"icpc2_inclusion","chapter":"X","label":662}
@@ -1959,12 +2133,22 @@
 {"code":"X99","text":"fístula do aparelho genital feminino","origin":"icpc2_inclusion","chapter":"X","label":662}
 {"code":"X99","text":"síndrome da congestão pélvica","origin":"icpc2_inclusion","chapter":"X","label":662}
 {"code":"X99","text":"quisto funcional do ovário","origin":"icpc2_inclusion","chapter":"X","label":662}
+{"code":"Y02","text":"dor no períneo\/pélvis","origin":"icpc2_inclusion","chapter":"Y","label":664}
+{"code":"Y04","text":"sinal\/sintoma do prepúcio","origin":"icpc2_inclusion","chapter":"Y","label":666}
+{"code":"Y05","text":"nódulo no testículo","origin":"icpc2_inclusion","chapter":"Y","label":667}
+{"code":"Y06","text":"prostatismo","origin":"icpc2_inclusion","chapter":"Y","label":668}
+{"code":"Y07","text":"impotência de origem orgânica","origin":"icpc2_inclusion","chapter":"Y","label":669}
 {"code":"Y08","text":"erecção dolorosa","origin":"icpc2_inclusion","chapter":"Y","label":670}
 {"code":"Y08","text":"priapismo","origin":"icpc2_inclusion","chapter":"Y","label":670}
+{"code":"Y13","text":"planeamento familiar envolvendo esterilização masculina","origin":"icpc2_inclusion","chapter":"Y","label":672}
 {"code":"Y14","text":"contracepção NE","origin":"icpc2_inclusion","chapter":"Y","label":673}
 {"code":"Y14","text":"planeamento familiar NE","origin":"icpc2_inclusion","chapter":"Y","label":673}
 {"code":"Y16","text":"ginecomastia","origin":"icpc2_inclusion","chapter":"Y","label":674}
 {"code":"Y16","text":"nódulo na mama masculina","origin":"icpc2_inclusion","chapter":"Y","label":674}
+{"code":"Y70","text":"sífilis qualquer que seja a sua localização","origin":"icpc2_inclusion","chapter":"Y","label":681}
+{"code":"Y71","text":"gonorreia qualquer que seja a sua localização","origin":"icpc2_inclusion","chapter":"Y","label":682}
+{"code":"Y72","text":"herpes anogenital","origin":"icpc2_inclusion","chapter":"Y","label":683}
+{"code":"Y75","text":"candidíase da glande peniana","origin":"icpc2_inclusion","chapter":"Y","label":686}
 {"code":"Y76","text":"infecção pelo vírus papiloma humano","origin":"icpc2_inclusion","chapter":"Y","label":687}
 {"code":"Y76","text":"verrugas venéreas","origin":"icpc2_inclusion","chapter":"Y","label":687}
 {"code":"Y78","text":"carcinoma da mama masculina","origin":"icpc2_inclusion","chapter":"Y","label":689}
@@ -1974,6 +2158,8 @@
 {"code":"Y79","text":"carcinoma in situ","origin":"icpc2_inclusion","chapter":"Y","label":690}
 {"code":"Y79","text":"fibroma","origin":"icpc2_inclusion","chapter":"Y","label":690}
 {"code":"Y79","text":"neoplasia genital não especificada como benigna ou maligna\/quando a histologia não está disponível","origin":"icpc2_inclusion","chapter":"Y","label":690}
+{"code":"Y81","text":"parafimose","origin":"icpc2_inclusion","chapter":"Y","label":692}
+{"code":"Y83","text":"criptorquidia","origin":"icpc2_inclusion","chapter":"Y","label":694}
 {"code":"Y84","text":"hermafroditismo","origin":"icpc2_inclusion","chapter":"Y","label":695}
 {"code":"Y84","text":"testiculo retráctil","origin":"icpc2_inclusion","chapter":"Y","label":695}
 {"code":"Y85","text":"hiperplasia","origin":"icpc2_inclusion","chapter":"Y","label":696}
@@ -1984,23 +2170,39 @@
 {"code":"Y99","text":"outra doença da mama masculina","origin":"icpc2_inclusion","chapter":"Y","label":698}
 {"code":"Y99","text":"espermatocelo","origin":"icpc2_inclusion","chapter":"Y","label":698}
 {"code":"Y99","text":"torção do testículo","origin":"icpc2_inclusion","chapter":"Y","label":698}
+{"code":"Z04","text":"gravidez ilegítima","origin":"icpc2_inclusion","chapter":"Z","label":702}
+{"code":"Z07","text":"analfabetismo","origin":"icpc2_inclusion","chapter":"Z","label":705}
+{"code":"Z11","text":"baixa adesão","origin":"icpc2_inclusion","chapter":"Z","label":709}
+{"code":"Z12","text":"abuso emocional","origin":"icpc2_inclusion","chapter":"Z","label":710}
 {"code":"Z13","text":"infidelidade","origin":"icpc2_inclusion","chapter":"Z","label":711}
 {"code":"Z13","text":"abuso físico","origin":"icpc2_inclusion","chapter":"Z","label":711}
 {"code":"Z15","text":"luto","origin":"icpc2_inclusion","chapter":"Z","label":713}
 {"code":"Z15","text":"divórcio","origin":"icpc2_inclusion","chapter":"Z","label":713}
 {"code":"Z15","text":"separação","origin":"icpc2_inclusion","chapter":"Z","label":713}
+{"code":"Z16","text":"abuso de criança (emocional)","origin":"icpc2_inclusion","chapter":"Z","label":714}
+{"code":"Z20","text":"problema relacional com pais\/irmão adulto\/outro elemento da família","origin":"icpc2_inclusion","chapter":"Z","label":717}
 {"code":"Z25","text":"vítima de abuso físico","origin":"icpc2_inclusion","chapter":"Z","label":722}
 {"code":"Z25","text":"vítima de violação","origin":"icpc2_inclusion","chapter":"Z","label":722}
 {"code":"Z25","text":"vítima de ataque sexual","origin":"icpc2_inclusion","chapter":"Z","label":722}
+{"code":"Z27","text":"preocupação com\/medo de vir a ter um problema social","origin":"icpc2_inclusion","chapter":"Z","label":723}
 {"code":"Z29","text":"problemas com o meio ambiente","origin":"icpc2_inclusion","chapter":"Z","label":725}
 {"code":"Z29","text":"simulação de doença","origin":"icpc2_inclusion","chapter":"Z","label":725}
+{"code":"A02","text":"Outros sintomas e sinais gerais","origin":"icd10_description","chapter":"A","label":1}
 {"code":"A03","text":"Outra febre especificada","origin":"icd10_description","chapter":"A","label":2}
 {"code":"A03","text":"Febre, sem outra especificação","origin":"icd10_description","chapter":"A","label":2}
 {"code":"A04","text":"Síndrome de fadiga pós-viral","origin":"icd10_description","chapter":"A","label":3}
 {"code":"A04","text":"Mal estar, fadiga","origin":"icd10_description","chapter":"A","label":3}
+{"code":"A05","text":"Mal estar, fadiga","origin":"icd10_description","chapter":"A","label":4}
+{"code":"A06","text":"Síncope e colapso","origin":"icd10_description","chapter":"A","label":5}
 {"code":"A07","text":"Sonolência","origin":"icd10_description","chapter":"A","label":6}
 {"code":"A07","text":"Estupor","origin":"icd10_description","chapter":"A","label":6}
 {"code":"A07","text":"Coma","origin":"icd10_description","chapter":"A","label":6}
+{"code":"A08","text":"Outros sintomas e sinais gerais","origin":"icd10_description","chapter":"A","label":7}
+{"code":"A10","text":"Hemorragia, não classificada noutra parte","origin":"icd10_description","chapter":"A","label":9}
+{"code":"A13","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"A","label":11}
+{"code":"A16","text":"Sintomas não específicos peculiares à infância","origin":"icd10_description","chapter":"A","label":12}
+{"code":"A18","text":"Outros sintomas e sinais envolvendo a aparência e o comportamento","origin":"icd10_description","chapter":"A","label":13}
+{"code":"A20","text":"Admissão para aconselhamento especificado NCOP","origin":"icd10_description","chapter":"A","label":14}
 {"code":"A21","text":"História familiar de neoplasia maligna de órgãos digestivos","origin":"icd10_description","chapter":"A","label":15}
 {"code":"A21","text":"História familiar de neoplasia maligna da traqueia, brônquios e pulmões","origin":"icd10_description","chapter":"A","label":15}
 {"code":"A21","text":"História familiar de neoplasia maligna de outros órgãos respiratórios e intratorácicos","origin":"icd10_description","chapter":"A","label":15}
@@ -2101,6 +2303,9 @@
 {"code":"A23","text":"História pessoal de terapêutica farmacológica","origin":"icd10_description","chapter":"A","label":16}
 {"code":"A23","text":"História pessoal de irradiação","origin":"icd10_description","chapter":"A","label":16}
 {"code":"A23","text":"História pessoal de outro tratamento médico","origin":"icd10_description","chapter":"A","label":16}
+{"code":"A25","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"A","label":17}
+{"code":"A26","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"A","label":18}
+{"code":"A27","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"A","label":19}
 {"code":"A28","text":"Tendência a queda, não classificada em outra parte","origin":"icd10_description","chapter":"A","label":20}
 {"code":"A28","text":"Limites impostos às atividades por invalidez","origin":"icd10_description","chapter":"A","label":20}
 {"code":"A28","text":"Mobilidade reduzida","origin":"icd10_description","chapter":"A","label":20}
@@ -3677,6 +3882,8 @@
 {"code":"A94","text":"Complicações no recém-nascido devidas a procedimento intra-uterino (fetal)","origin":"icd10_description","chapter":"A","label":85}
 {"code":"A94","text":"Afecões especificadas com origem no periodo perinatal, NCOP","origin":"icd10_description","chapter":"A","label":85}
 {"code":"A94","text":"Afeções originadas no período perinatal não especificadas","origin":"icd10_description","chapter":"A","label":85}
+{"code":"A95","text":"Morte fetal de causa não especificada","origin":"icd10_description","chapter":"A","label":86}
+{"code":"A96","text":"Outra causa mal definida e não especificada de mortalidade","origin":"icd10_description","chapter":"A","label":87}
 {"code":"A97","text":"Episódio para exame médico geral de adulto","origin":"icd10_description","chapter":"A","label":88}
 {"code":"A97","text":"Episódio para exames a recém-nascido e criança","origin":"icd10_description","chapter":"A","label":88}
 {"code":"A97","text":"Exame no período de crescimento rápido na infância","origin":"icd10_description","chapter":"A","label":88}
@@ -3818,6 +4025,12 @@
 {"code":"B02","text":"Aumento de volume localizado de gânglios linfáticos","origin":"icd10_description","chapter":"B","label":91}
 {"code":"B02","text":"Aumento de volume generalizado de gânglios linfáticos","origin":"icd10_description","chapter":"B","label":91}
 {"code":"B02","text":"Aumento de volume dos gânglios linfáticos, sem outra especificação","origin":"icd10_description","chapter":"B","label":91}
+{"code":"B04","text":"Outros sintomas e sinais gerais","origin":"icd10_description","chapter":"B","label":92}
+{"code":"B25","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"B","label":93}
+{"code":"B26","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"B","label":94}
+{"code":"B27","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"B","label":95}
+{"code":"B28","text":"Limites impostos às atividades por invalidez","origin":"icd10_description","chapter":"B","label":96}
+{"code":"B29","text":"Outros sintomas e sinais gerais","origin":"icd10_description","chapter":"B","label":97}
 {"code":"B70","text":"Linfadenite aguda de face, cabeça e pescoço","origin":"icd10_description","chapter":"B","label":98}
 {"code":"B70","text":"Linfadenite aguda do tronco","origin":"icd10_description","chapter":"B","label":98}
 {"code":"B70","text":"Linfadenite aguda de membro superior","origin":"icd10_description","chapter":"B","label":98}
@@ -3920,6 +4133,8 @@
 {"code":"B75","text":"Trombocitémia essencial (hemorrágica)","origin":"icd10_description","chapter":"B","label":103}
 {"code":"B75","text":"Osteomielofibrose","origin":"icd10_description","chapter":"B","label":103}
 {"code":"B75","text":"Neoplasia de comportamento incerto dos tecidos linfático, hematopoético e tecidos relacionados, sem outra especificação","origin":"icd10_description","chapter":"B","label":103}
+{"code":"B76","text":"Lesão do baço","origin":"icd10_description","chapter":"B","label":104}
+{"code":"B77","text":"Lesão, sem outra especificação","origin":"icd10_description","chapter":"B","label":105}
 {"code":"B78","text":"Talassémia alfa","origin":"icd10_description","chapter":"B","label":106}
 {"code":"B78","text":"Talassémia beta","origin":"icd10_description","chapter":"B","label":106}
 {"code":"B78","text":"Talassémia delta-beta","origin":"icd10_description","chapter":"B","label":106}
@@ -4099,6 +4314,9 @@
 {"code":"B99","text":"Velocidade de sedimentação elevada","origin":"icd10_description","chapter":"B","label":115}
 {"code":"B99","text":"Viscosidade plasmática anormal","origin":"icd10_description","chapter":"B","label":115}
 {"code":"B99","text":"Anomalia dos glóbulos vermelhos","origin":"icd10_description","chapter":"B","label":115}
+{"code":"D01","text":"Abdómen agudo","origin":"icd10_description","chapter":"D","label":116}
+{"code":"D02","text":"Dor localizada no abdómen superior","origin":"icd10_description","chapter":"D","label":117}
+{"code":"D03","text":"Azia","origin":"icd10_description","chapter":"D","label":118}
 {"code":"D04","text":"Espasmo anal (proctalgia fugaz)","origin":"icd10_description","chapter":"D","label":119}
 {"code":"D04","text":"Dor pélvica e perineal","origin":"icd10_description","chapter":"D","label":119}
 {"code":"D04","text":"Dor localizada em outras partes do abdómen inferior","origin":"icd10_description","chapter":"D","label":119}
@@ -4107,10 +4325,19 @@
 {"code":"D06","text":"Dor localizada no abdómen superior","origin":"icd10_description","chapter":"D","label":121}
 {"code":"D06","text":"Dor pélvica e perineal","origin":"icd10_description","chapter":"D","label":121}
 {"code":"D06","text":"Dor localizada em outras partes do abdómen inferior","origin":"icd10_description","chapter":"D","label":121}
+{"code":"D07","text":"Dispepsia funcional","origin":"icd10_description","chapter":"D","label":122}
+{"code":"D08","text":"Flatulência e condições associadas","origin":"icd10_description","chapter":"D","label":123}
+{"code":"D09","text":"Náusea e vómitos","origin":"icd10_description","chapter":"D","label":124}
+{"code":"D10","text":"Náusea e vómitos","origin":"icd10_description","chapter":"D","label":125}
 {"code":"D11","text":"Gastroenterite e colite não-infecciosas, sem outra especificação","origin":"icd10_description","chapter":"D","label":126}
 {"code":"D11","text":"Diarreia funcional","origin":"icd10_description","chapter":"D","label":126}
 {"code":"D12","text":"Oclusão intestinal por empactação, não classificada em outra parte","origin":"icd10_description","chapter":"D","label":127}
 {"code":"D12","text":"Obstipação","origin":"icd10_description","chapter":"D","label":127}
+{"code":"D13","text":"Icterícia, sem outra especificação","origin":"icd10_description","chapter":"D","label":128}
+{"code":"D14","text":"Hematemese","origin":"icd10_description","chapter":"D","label":129}
+{"code":"D15","text":"Sangue nas fezes","origin":"icd10_description","chapter":"D","label":130}
+{"code":"D16","text":"Hemorragia do reto  e do ânus","origin":"icd10_description","chapter":"D","label":131}
+{"code":"D17","text":"Incontinência fecal","origin":"icd10_description","chapter":"D","label":132}
 {"code":"D18","text":"Alteração do hábito intestinal","origin":"icd10_description","chapter":"D","label":133}
 {"code":"D18","text":"Outras anomalias fecais","origin":"icd10_description","chapter":"D","label":133}
 {"code":"D19","text":"Síndrome da erupção dentária","origin":"icd10_description","chapter":"D","label":134}
@@ -4125,8 +4352,14 @@
 {"code":"D20","text":"Glossodinia","origin":"icd10_description","chapter":"D","label":135}
 {"code":"D20","text":"Halitose","origin":"icd10_description","chapter":"D","label":135}
 {"code":"D20","text":"Boca seca, sem outra especificação","origin":"icd10_description","chapter":"D","label":135}
+{"code":"D21","text":"Afagia e disfagia","origin":"icd10_description","chapter":"D","label":136}
 {"code":"D23","text":"Hepatomegalia, não classificada noutra parte","origin":"icd10_description","chapter":"D","label":137}
 {"code":"D23","text":"Hepatomegalia com esplenomegalia, não classificada noutra parte","origin":"icd10_description","chapter":"D","label":137}
+{"code":"D24","text":"Edema, massa ou protuberância abdominal e pélvica","origin":"icd10_description","chapter":"D","label":138}
+{"code":"D25","text":"Edema, massa ou protuberância abdominal e pélvica","origin":"icd10_description","chapter":"D","label":139}
+{"code":"D26","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"D","label":140}
+{"code":"D27","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"D","label":141}
+{"code":"D28","text":"Limites impostos às atividades por invalidez","origin":"icd10_description","chapter":"D","label":142}
 {"code":"D29","text":"Outras doenças especificadas dos tecidos duros dos dentes","origin":"icd10_description","chapter":"D","label":143}
 {"code":"D29","text":"Ascite","origin":"icd10_description","chapter":"D","label":143}
 {"code":"D29","text":"Ruídos intestinais anormais","origin":"icd10_description","chapter":"D","label":143}
@@ -4932,17 +5165,27 @@
 {"code":"D99","text":"Ausência adquirida do estômago (parte de)","origin":"icd10_description","chapter":"D","label":173}
 {"code":"D99","text":"Ausência adquirida de outras partes especificadas do trato digestivo","origin":"icd10_description","chapter":"D","label":173}
 {"code":"D99","text":"Status de bypass e anastomose intestinal","origin":"icd10_description","chapter":"D","label":173}
+{"code":"F01","text":"Dor ocular","origin":"icd10_description","chapter":"F","label":174}
+{"code":"F02","text":"Outras patologias do olho e anexos, não classificadas noutra parte","origin":"icd10_description","chapter":"F","label":175}
+{"code":"F03","text":"Epífora","origin":"icd10_description","chapter":"F","label":176}
+{"code":"F04","text":"Distúrbios visuais subjetivos","origin":"icd10_description","chapter":"F","label":177}
 {"code":"F05","text":"Distúrbios visuais subjetivos","origin":"icd10_description","chapter":"F","label":178}
 {"code":"F05","text":"Diplopia","origin":"icd10_description","chapter":"F","label":178}
 {"code":"F05","text":"Outras patologias da visão binocular","origin":"icd10_description","chapter":"F","label":178}
 {"code":"F05","text":"Outros distúrbios visuais","origin":"icd10_description","chapter":"F","label":178}
 {"code":"F05","text":"Disturbios visuais SOE","origin":"icd10_description","chapter":"F","label":178}
+{"code":"F13","text":"Outras patologias do olho e anexos, não classificadas noutra parte","origin":"icd10_description","chapter":"F","label":179}
+{"code":"F14","text":"Nistagmo e outros movimentos irregulares do olho","origin":"icd10_description","chapter":"F","label":180}
+{"code":"F15","text":"Outras patologias do olho e anexos, não classificadas noutra parte","origin":"icd10_description","chapter":"F","label":181}
 {"code":"F16","text":"Lagoftalmo","origin":"icd10_description","chapter":"F","label":182}
 {"code":"F16","text":"Blefarocalásia","origin":"icd10_description","chapter":"F","label":182}
 {"code":"F16","text":"Ptose da pálpebra","origin":"icd10_description","chapter":"F","label":182}
 {"code":"F16","text":"Outras patologias afetando a função da pálpebra","origin":"icd10_description","chapter":"F","label":182}
 {"code":"F16","text":"Xantelasma da pálpebra","origin":"icd10_description","chapter":"F","label":182}
 {"code":"F16","text":"Outras patologias degenerativas e patologias degenerativas não especificadas da pálpebra e área periocular","origin":"icd10_description","chapter":"F","label":182}
+{"code":"F17","text":"Colocação e ajuste de óculos e lentes de contato","origin":"icd10_description","chapter":"F","label":183}
+{"code":"F18","text":"Colocação e ajuste de óculos e lentes de contato","origin":"icd10_description","chapter":"F","label":184}
+{"code":"F27","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"F","label":185}
 {"code":"F28","text":"Amaurose num olho","origin":"icd10_description","chapter":"F","label":186}
 {"code":"F28","text":"Diminuição acuidade visual, um olho","origin":"icd10_description","chapter":"F","label":186}
 {"code":"F28","text":"Perda de visão não qualificada, num olho","origin":"icd10_description","chapter":"F","label":186}
@@ -4963,6 +5206,7 @@
 {"code":"F70","text":"Blefaroconjuntivite","origin":"icd10_description","chapter":"F","label":188}
 {"code":"F70","text":"Conjuntivite NCOP","origin":"icd10_description","chapter":"F","label":188}
 {"code":"F70","text":"Conjuntivite, sem outra especificação","origin":"icd10_description","chapter":"F","label":188}
+{"code":"F71","text":"Conjuntivite atópica aguda","origin":"icd10_description","chapter":"F","label":189}
 {"code":"F72","text":"Hordéolo (externo) (interno) da pálpebra","origin":"icd10_description","chapter":"F","label":190}
 {"code":"F72","text":"Chalázio","origin":"icd10_description","chapter":"F","label":190}
 {"code":"F72","text":"Blefarite","origin":"icd10_description","chapter":"F","label":190}
@@ -5052,6 +5296,7 @@
 {"code":"F79","text":"Corrosão com resultante rotura e destruição do globo ocular","origin":"icd10_description","chapter":"F","label":195}
 {"code":"F79","text":"Corrosão de outras partes especificadas do olho e anexos","origin":"icd10_description","chapter":"F","label":195}
 {"code":"F79","text":"Corrosão do olho e anexos, parte não especificada","origin":"icd10_description","chapter":"F","label":195}
+{"code":"F80","text":"Estenose e estreitamento congénito do canal lacrimal","origin":"icd10_description","chapter":"F","label":196}
 {"code":"F81","text":"Ptose congénita das palpebras","origin":"icd10_description","chapter":"F","label":197}
 {"code":"F81","text":"Ectrópio congénito","origin":"icd10_description","chapter":"F","label":197}
 {"code":"F81","text":"Entrópio congénito","origin":"icd10_description","chapter":"F","label":197}
@@ -5097,6 +5342,8 @@
 {"code":"F83","text":"Outra retinopatia proliferativa não diabética","origin":"icd10_description","chapter":"F","label":199}
 {"code":"F83","text":"Degenerescência periférica da retina","origin":"icd10_description","chapter":"F","label":199}
 {"code":"F83","text":"Outras patologias da retina em doenças classificadas noutra parte","origin":"icd10_description","chapter":"F","label":199}
+{"code":"F84","text":"Degenerescência da mácula e do polo posterior","origin":"icd10_description","chapter":"F","label":200}
+{"code":"F85","text":"Úlcera da córnea","origin":"icd10_description","chapter":"F","label":201}
 {"code":"F86","text":"Fase inicial do tracoma","origin":"icd10_description","chapter":"F","label":202}
 {"code":"F86","text":"Fase ativa do tracoma","origin":"icd10_description","chapter":"F","label":202}
 {"code":"F86","text":"Tracoma, sem outra especificação","origin":"icd10_description","chapter":"F","label":202}
@@ -5243,6 +5490,15 @@
 {"code":"F99","text":"Outros distúrbios visuais","origin":"icd10_description","chapter":"F","label":208}
 {"code":"F99","text":"Anomalias da função pupilar","origin":"icd10_description","chapter":"F","label":208}
 {"code":"F99","text":"Outras patologias do olho e anexos, não classificadas noutra parte","origin":"icd10_description","chapter":"F","label":208}
+{"code":"H01","text":"Otalgia","origin":"icd10_description","chapter":"H","label":209}
+{"code":"H02","text":"Outras perceções auditivas anormais","origin":"icd10_description","chapter":"H","label":210}
+{"code":"H03","text":"Acufeno","origin":"icd10_description","chapter":"H","label":211}
+{"code":"H04","text":"Otorreia","origin":"icd10_description","chapter":"H","label":212}
+{"code":"H05","text":"Otorragia","origin":"icd10_description","chapter":"H","label":213}
+{"code":"H13","text":"Outras patologias especificadas do ouvido","origin":"icd10_description","chapter":"H","label":214}
+{"code":"H15","text":"Outros sintomas e sinais envolvendo a aparência e o comportamento","origin":"icd10_description","chapter":"H","label":215}
+{"code":"H27","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"H","label":216}
+{"code":"H28","text":"Limites impostos às atividades por invalidez","origin":"icd10_description","chapter":"H","label":217}
 {"code":"H29","text":"Outras patologias especificadas do ouvido","origin":"icd10_description","chapter":"H","label":218}
 {"code":"H29","text":"Patologia, sem outra especificação, do ouvido","origin":"icd10_description","chapter":"H","label":218}
 {"code":"H70","text":"Abcesso do ouvido externo","origin":"icd10_description","chapter":"H","label":219}
@@ -5292,11 +5548,13 @@
 {"code":"H75","text":"Neoplasia benigna do ouvido médio, cavidades nasais e seios acessórios","origin":"icd10_description","chapter":"H","label":224}
 {"code":"H75","text":"Neoplasia benigna do tecido conjuntivo e tecidos moles da cabeça, face e pescoço","origin":"icd10_description","chapter":"H","label":224}
 {"code":"H75","text":"Outra neoplasia benigna da pele da orelha e canal auditivo externo","origin":"icd10_description","chapter":"H","label":224}
+{"code":"H76","text":"Corpo estranho no ouvido","origin":"icd10_description","chapter":"H","label":225}
 {"code":"H77","text":"Perfuração central da membrana do tímpano","origin":"icd10_description","chapter":"H","label":226}
 {"code":"H77","text":"Perfuração ática da membrana do tímpano","origin":"icd10_description","chapter":"H","label":226}
 {"code":"H77","text":"Outras perfurações marginais da membrana do tímpano","origin":"icd10_description","chapter":"H","label":226}
 {"code":"H77","text":"Outras perfurações da membrana do tímpano","origin":"icd10_description","chapter":"H","label":226}
 {"code":"H77","text":"Perfuração, sem outra especificação, da membrana do tímpano","origin":"icd10_description","chapter":"H","label":226}
+{"code":"H78","text":"Escoriação da orelha","origin":"icd10_description","chapter":"H","label":227}
 {"code":"H79","text":"Ferida aberta da orelha","origin":"icd10_description","chapter":"H","label":228}
 {"code":"H79","text":"Lesão por esmagamento de outras partes da cabeça","origin":"icd10_description","chapter":"H","label":228}
 {"code":"H79","text":"Amputação traumática da orelha","origin":"icd10_description","chapter":"H","label":228}
@@ -5317,6 +5575,7 @@
 {"code":"H80","text":"Orelhas proeminentes","origin":"icd10_description","chapter":"H","label":229}
 {"code":"H80","text":"Outras malformações congénitas especificadas da orelha","origin":"icd10_description","chapter":"H","label":229}
 {"code":"H80","text":"Malformação congénita do ouvido SOE","origin":"icd10_description","chapter":"H","label":229}
+{"code":"H81","text":"Rolha de cerume","origin":"icd10_description","chapter":"H","label":230}
 {"code":"H82","text":"Vertigem epidémica","origin":"icd10_description","chapter":"H","label":231}
 {"code":"H82","text":"Doença de Ménière","origin":"icd10_description","chapter":"H","label":231}
 {"code":"H82","text":"Vertigem paroxística benigna","origin":"icd10_description","chapter":"H","label":231}
@@ -5334,6 +5593,8 @@
 {"code":"H83","text":"Otosclerose da cóclea","origin":"icd10_description","chapter":"H","label":232}
 {"code":"H83","text":"Outra otosclerose","origin":"icd10_description","chapter":"H","label":232}
 {"code":"H83","text":"Otosclerose, sem outra especificação","origin":"icd10_description","chapter":"H","label":232}
+{"code":"H84","text":"Presbiacusia","origin":"icd10_description","chapter":"H","label":233}
+{"code":"H85","text":"Efeitos do ruído sobre o ouvido interno","origin":"icd10_description","chapter":"H","label":234}
 {"code":"H86","text":"Surdez de condução, bilateral","origin":"icd10_description","chapter":"H","label":235}
 {"code":"H86","text":"Surdez de condução, unilateral, sem audição limitada no lado contralateral","origin":"icd10_description","chapter":"H","label":235}
 {"code":"H86","text":"Surdez de condução, sem outra especificação","origin":"icd10_description","chapter":"H","label":235}
@@ -5370,9 +5631,13 @@
 {"code":"H99","text":"Patologia, sem outra especificação, do ouvido","origin":"icd10_description","chapter":"H","label":236}
 {"code":"H99","text":"Neurite acústica em doenças infecciosas e parasitárias classificadas noutra parte","origin":"icd10_description","chapter":"H","label":236}
 {"code":"H99","text":"Outras patologias especificadas do ouvido em doenças classificadas noutra parte","origin":"icd10_description","chapter":"H","label":236}
+{"code":"K01","text":"Dor precordial","origin":"icd10_description","chapter":"K","label":237}
+{"code":"K02","text":"Dor precordial","origin":"icd10_description","chapter":"K","label":238}
+{"code":"K03","text":"Outros sintomas e sinais especificados envolvendo os aparelhos circulatório e respiratório","origin":"icd10_description","chapter":"K","label":239}
 {"code":"K04","text":"Taquicardia, sem outra especificação","origin":"icd10_description","chapter":"K","label":240}
 {"code":"K04","text":"Bradicardia, sem outra especificação","origin":"icd10_description","chapter":"K","label":240}
 {"code":"K04","text":"Palpitacões","origin":"icd10_description","chapter":"K","label":240}
+{"code":"K05","text":"Outras anomalias e as não especificadas da frequência cardíaca","origin":"icd10_description","chapter":"K","label":241}
 {"code":"K06","text":"Nevo, não neoplásico","origin":"icd10_description","chapter":"K","label":242}
 {"code":"K06","text":"Outras patologias especificadas das veias","origin":"icd10_description","chapter":"K","label":242}
 {"code":"K07","text":"Edema localizado","origin":"icd10_description","chapter":"K","label":243}
@@ -5381,6 +5646,10 @@
 {"code":"K22","text":"História familiar de crise convulsiva (cerebrovascular)","origin":"icd10_description","chapter":"K","label":244}
 {"code":"K22","text":"História familiar de doença isquémica do coração e outras doenças do aparelho circulatório","origin":"icd10_description","chapter":"K","label":244}
 {"code":"K22","text":"História pessoal de doenças do aparelho circulatório","origin":"icd10_description","chapter":"K","label":244}
+{"code":"K24","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"K","label":245}
+{"code":"K25","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"K","label":246}
+{"code":"K27","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"K","label":247}
+{"code":"K28","text":"Limites impostos às atividades por invalidez","origin":"icd10_description","chapter":"K","label":248}
 {"code":"K29","text":"Medida de pressão arterial baixa não especifica","origin":"icd10_description","chapter":"K","label":249}
 {"code":"K29","text":"Outros sintomas e sinais especificados envolvendo os aparelhos circulatório e respiratório","origin":"icd10_description","chapter":"K","label":249}
 {"code":"K70","text":"Cardite meningocócica","origin":"icd10_description","chapter":"K","label":250}
@@ -5543,6 +5812,7 @@
 {"code":"K76","text":"Doença isquémica crónica do coração, sem outra especificação","origin":"icd10_description","chapter":"K","label":256}
 {"code":"K77","text":"Insuficiência cardíaca esquerda, sem outra especificação","origin":"icd10_description","chapter":"K","label":257}
 {"code":"K77","text":"Insuficiência cardíaca, sem outra especificação","origin":"icd10_description","chapter":"K","label":257}
+{"code":"K78","text":"Flutter e fibrilhação auriculares","origin":"icd10_description","chapter":"K","label":258}
 {"code":"K79","text":"Arritmia ventricular por reentrada","origin":"icd10_description","chapter":"K","label":259}
 {"code":"K79","text":"Taquicardia supraventricular","origin":"icd10_description","chapter":"K","label":259}
 {"code":"K79","text":"Taquicardia ventricular","origin":"icd10_description","chapter":"K","label":259}
@@ -5634,6 +5904,8 @@
 {"code":"K84","text":"Doença mal definida do coração, NCOP","origin":"icd10_description","chapter":"K","label":264}
 {"code":"K84","text":"Doença cardíaca, sem outra especificação","origin":"icd10_description","chapter":"K","label":264}
 {"code":"K84","text":"Cardiomiopatia no puerpério","origin":"icd10_description","chapter":"K","label":264}
+{"code":"K85","text":"Medida de pressão arterial elevada sem o diagnostico de HTA","origin":"icd10_description","chapter":"K","label":265}
+{"code":"K86","text":"Hipertensão essencial (primária)","origin":"icd10_description","chapter":"K","label":266}
 {"code":"K87","text":"Doença cardíaca hipertensiva com insuficiência cardíaca","origin":"icd10_description","chapter":"K","label":267}
 {"code":"K87","text":"Doença cardíaca hipertensiva sem insuficiência cardíaca","origin":"icd10_description","chapter":"K","label":267}
 {"code":"K87","text":"Doença renal crónica hipertensiva com estadio 5 de doença renal crónica ou doença renal terminal","origin":"icd10_description","chapter":"K","label":267}
@@ -5833,6 +6105,8 @@
 {"code":"L03","text":"Patologias sacroccígeos não classificados em outra parte","origin":"icd10_description","chapter":"L","label":280}
 {"code":"L03","text":"Paniculite atingindo regiões do pescoço e do dorso","origin":"icd10_description","chapter":"L","label":280}
 {"code":"L03","text":"Lombalgia","origin":"icd10_description","chapter":"L","label":280}
+{"code":"L04","text":"Outros sintomas e sinais relativos aos sistemas nervoso e osteomuscular e os não especificados","origin":"icd10_description","chapter":"L","label":281}
+{"code":"L05","text":"Outros sintomas e sinais relativos aos sistemas nervoso e osteomuscular e os não especificados","origin":"icd10_description","chapter":"L","label":282}
 {"code":"L07","text":"Derrame articular","origin":"icd10_description","chapter":"L","label":283}
 {"code":"L07","text":"Dor em articulação","origin":"icd10_description","chapter":"L","label":283}
 {"code":"L07","text":"Rigidez articular, não classificado noutra parte","origin":"icd10_description","chapter":"L","label":283}
@@ -5888,6 +6162,8 @@
 {"code":"L20","text":"Rigidez articular, não classificado noutra parte","origin":"icd10_description","chapter":"L","label":296}
 {"code":"L20","text":"Outras patologias articulares especificadas","origin":"icd10_description","chapter":"L","label":296}
 {"code":"L20","text":"Patologia articular, sem outra especificação","origin":"icd10_description","chapter":"L","label":296}
+{"code":"L26","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"L","label":297}
+{"code":"L27","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"L","label":298}
 {"code":"L28","text":"Dificuldade em deambular","origin":"icd10_description","chapter":"L","label":299}
 {"code":"L28","text":"Limites impostos às atividades por invalidez","origin":"icd10_description","chapter":"L","label":299}
 {"code":"L29","text":"Outras anomalias da marcha e da mobilidade e as não especificadas","origin":"icd10_description","chapter":"L","label":300}
@@ -6006,6 +6282,7 @@
 {"code":"L76","text":"Fratura da extremidade distal do úmero","origin":"icd10_description","chapter":"L","label":307}
 {"code":"L76","text":"Fratura da cintura escapular, parte não especificada","origin":"icd10_description","chapter":"L","label":307}
 {"code":"L76","text":"Fratura da rótula [rótula]","origin":"icd10_description","chapter":"L","label":307}
+{"code":"L77","text":"Entorse do tornozelo","origin":"icd10_description","chapter":"L","label":308}
 {"code":"L78","text":"Entorse de ligamento colateral do joelho","origin":"icd10_description","chapter":"L","label":309}
 {"code":"L78","text":"Entorse da articulação tibio-fibular superior e ligamento","origin":"icd10_description","chapter":"L","label":309}
 {"code":"L79","text":"Entorse da mandíbula","origin":"icd10_description","chapter":"L","label":310}
@@ -6472,6 +6749,7 @@
 {"code":"L92","text":"Bursite do ombro","origin":"icd10_description","chapter":"L","label":323}
 {"code":"L92","text":"Outras lesões do ombro","origin":"icd10_description","chapter":"L","label":323}
 {"code":"L92","text":"Lesão do ombro, sem outra especificação","origin":"icd10_description","chapter":"L","label":323}
+{"code":"L93","text":"Epicondilite lateral (cotovelo)","origin":"icd10_description","chapter":"L","label":324}
 {"code":"L94","text":"Osteocondrose juvenil da coluna vertebral","origin":"icd10_description","chapter":"L","label":325}
 {"code":"L94","text":"Osteocondrose vertebral do adulto","origin":"icd10_description","chapter":"L","label":325}
 {"code":"L94","text":"Osteocondrose vertebral, sem outra especificação","origin":"icd10_description","chapter":"L","label":325}
@@ -6716,10 +6994,13 @@
 {"code":"N01","text":"Cefaleia","origin":"icd10_description","chapter":"N","label":331}
 {"code":"N03","text":"Dor atípica da face","origin":"icd10_description","chapter":"N","label":332}
 {"code":"N03","text":"Cefaleia","origin":"icd10_description","chapter":"N","label":332}
+{"code":"N04","text":"Outras patologias especificadas extrapiramidais e dos movimentos","origin":"icd10_description","chapter":"N","label":333}
+{"code":"N05","text":"Parestesias cutâneas","origin":"icd10_description","chapter":"N","label":334}
 {"code":"N06","text":"Anestesia cutânea","origin":"icd10_description","chapter":"N","label":335}
 {"code":"N06","text":"Hipoestesia cutânea","origin":"icd10_description","chapter":"N","label":335}
 {"code":"N06","text":"Hiperestesia","origin":"icd10_description","chapter":"N","label":335}
 {"code":"N06","text":"Outros distúrbios da sensibilidade da pele","origin":"icd10_description","chapter":"N","label":335}
+{"code":"N07","text":"Convulsões febris","origin":"icd10_description","chapter":"N","label":336}
 {"code":"N08","text":"Tremor essencial","origin":"icd10_description","chapter":"N","label":337}
 {"code":"N08","text":"Tremor induzido por fármaco","origin":"icd10_description","chapter":"N","label":337}
 {"code":"N08","text":"Outras formas especificadas de tremor","origin":"icd10_description","chapter":"N","label":337}
@@ -6738,6 +7019,7 @@
 {"code":"N16","text":"Parosmia","origin":"icd10_description","chapter":"N","label":338}
 {"code":"N16","text":"Parageusia","origin":"icd10_description","chapter":"N","label":338}
 {"code":"N16","text":"Outros distúrbios do olfato e do paladar","origin":"icd10_description","chapter":"N","label":338}
+{"code":"N17","text":"Tonturas e vertigens","origin":"icd10_description","chapter":"N","label":339}
 {"code":"N18","text":"Hemiplegia flácida","origin":"icd10_description","chapter":"N","label":340}
 {"code":"N18","text":"Hemiplegia espástica","origin":"icd10_description","chapter":"N","label":340}
 {"code":"N18","text":"Hemiplegia, sem outra especificação","origin":"icd10_description","chapter":"N","label":340}
@@ -6754,6 +7036,9 @@
 {"code":"N19","text":"Disfasia e afasia","origin":"icd10_description","chapter":"N","label":341}
 {"code":"N19","text":"Disartria e anartria","origin":"icd10_description","chapter":"N","label":341}
 {"code":"N19","text":"Outros distúrbios da fala","origin":"icd10_description","chapter":"N","label":341}
+{"code":"N26","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"N","label":342}
+{"code":"N27","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"N","label":343}
+{"code":"N28","text":"Limites impostos às atividades por invalidez","origin":"icd10_description","chapter":"N","label":344}
 {"code":"N29","text":"Nevralgia e neurite não especificadas","origin":"icd10_description","chapter":"N","label":345}
 {"code":"N29","text":"Marcha atáxica","origin":"icd10_description","chapter":"N","label":345}
 {"code":"N29","text":"Marcha parética","origin":"icd10_description","chapter":"N","label":345}
@@ -6885,6 +7170,7 @@
 {"code":"N76","text":"Neoplasia de comportamento incerto da medula espinhal","origin":"icd10_description","chapter":"N","label":352}
 {"code":"N76","text":"Neoplasia de comportamento incerto do sistema nervoso central, sem outra especificação","origin":"icd10_description","chapter":"N","label":352}
 {"code":"N76","text":"Neoplasia de comportamento incerto dos nervos periféricos e do sistema nervoso autónomo","origin":"icd10_description","chapter":"N","label":352}
+{"code":"N79","text":"Contusão","origin":"icd10_description","chapter":"N","label":353}
 {"code":"N80","text":"Fratura da abóbada do crânio","origin":"icd10_description","chapter":"N","label":354}
 {"code":"N80","text":"Fratura da base do crânio","origin":"icd10_description","chapter":"N","label":354}
 {"code":"N80","text":"Fraturas de outros ossos especificados do crânio e da face","origin":"icd10_description","chapter":"N","label":354}
@@ -7015,6 +7301,7 @@
 {"code":"N85","text":"Síndrome de Arnold-Chiari","origin":"icd10_description","chapter":"N","label":356}
 {"code":"N85","text":"Outras malformações congénitas especificadas do sistema nervoso","origin":"icd10_description","chapter":"N","label":356}
 {"code":"N85","text":"Malformação congénita não especificada do sistema nervoso","origin":"icd10_description","chapter":"N","label":356}
+{"code":"N86","text":"Esclerose múltipla","origin":"icd10_description","chapter":"N","label":357}
 {"code":"N87","text":"Doença de Parkinson","origin":"icd10_description","chapter":"N","label":358}
 {"code":"N87","text":"Síndrome maligno neuroléticos ","origin":"icd10_description","chapter":"N","label":358}
 {"code":"N87","text":"Outras formas de parkinsonismo secundário induzido por fármacos","origin":"icd10_description","chapter":"N","label":358}
@@ -7036,6 +7323,7 @@
 {"code":"N89","text":"Outra enxaqueca","origin":"icd10_description","chapter":"N","label":360}
 {"code":"N89","text":"Enxaqueca, sem outra especificação","origin":"icd10_description","chapter":"N","label":360}
 {"code":"N89","text":"Cefaleia vascular, não classificada noutra parte","origin":"icd10_description","chapter":"N","label":360}
+{"code":"N90","text":"Síndrome de \"cluster-headache\"","origin":"icd10_description","chapter":"N","label":361}
 {"code":"N91","text":"Paralisia de Bell","origin":"icd10_description","chapter":"N","label":362}
 {"code":"N91","text":"Ganglionite geniculada","origin":"icd10_description","chapter":"N","label":362}
 {"code":"N91","text":"Síndrome de Melkersson","origin":"icd10_description","chapter":"N","label":362}
@@ -7046,6 +7334,7 @@
 {"code":"N92","text":"Nevralgia do trigémio","origin":"icd10_description","chapter":"N","label":363}
 {"code":"N92","text":"Afecões especificadas do nervo trigémeo, NCOP","origin":"icd10_description","chapter":"N","label":363}
 {"code":"N92","text":"Afecão do nervo trigémeo, não especificada","origin":"icd10_description","chapter":"N","label":363}
+{"code":"N93","text":"Síndrome do túnel cárpico","origin":"icd10_description","chapter":"N","label":364}
 {"code":"N94","text":"Patologias do plexo braquial","origin":"icd10_description","chapter":"N","label":365}
 {"code":"N94","text":"Patologias do plexo lombossagrado","origin":"icd10_description","chapter":"N","label":365}
 {"code":"N94","text":"Patologias das raízes cervicais não classificadas noutra parte","origin":"icd10_description","chapter":"N","label":365}
@@ -7092,6 +7381,7 @@
 {"code":"N94","text":"Polineuropatia não especificada","origin":"icd10_description","chapter":"N","label":365}
 {"code":"N94","text":"Outras patologias do sistema nervoso periférico","origin":"icd10_description","chapter":"N","label":365}
 {"code":"N94","text":"Nevralgia e neurite não especificadas","origin":"icd10_description","chapter":"N","label":365}
+{"code":"N95","text":"Cefaleia de tensão","origin":"icd10_description","chapter":"N","label":366}
 {"code":"N99","text":"Encefalopatia de Wernicke","origin":"icd10_description","chapter":"N","label":367}
 {"code":"N99","text":"Coreia de Huntington","origin":"icd10_description","chapter":"N","label":367}
 {"code":"N99","text":"Ataxia congénita não-progressiva","origin":"icd10_description","chapter":"N","label":367}
@@ -7215,6 +7505,7 @@
 {"code":"N99","text":"Outras patologias especificadas do sistema nervoso em doenças classificadas noutra parte","origin":"icd10_description","chapter":"N","label":367}
 {"code":"N99","text":"Nevralgia e neurite não especificadas","origin":"icd10_description","chapter":"N","label":367}
 {"code":"N99","text":"Presenca de dispositivo para drenagem de liquido cefalorraquidiano","origin":"icd10_description","chapter":"N","label":367}
+{"code":"P01","text":"Nervosismo","origin":"icd10_description","chapter":"P","label":368}
 {"code":"P02","text":"Reação aguda ao stress","origin":"icd10_description","chapter":"P","label":369}
 {"code":"P02","text":"Patologias de ajustamento","origin":"icd10_description","chapter":"P","label":369}
 {"code":"P02","text":"Outras reações ao stress grave","origin":"icd10_description","chapter":"P","label":369}
@@ -7225,6 +7516,7 @@
 {"code":"P04","text":"Irritabilidade e mau humor","origin":"icd10_description","chapter":"P","label":371}
 {"code":"P04","text":"Hostilidade","origin":"icd10_description","chapter":"P","label":371}
 {"code":"P04","text":"Violência física","origin":"icd10_description","chapter":"P","label":371}
+{"code":"P05","text":"Debilidade física devida a idade","origin":"icd10_description","chapter":"P","label":372}
 {"code":"P06","text":"Insónia não devida a substância ou condição fisiológica conhecida","origin":"icd10_description","chapter":"P","label":373}
 {"code":"P06","text":"Hipersónia não devida a substância ou condição fisiológica conhecida","origin":"icd10_description","chapter":"P","label":373}
 {"code":"P06","text":"Sonambulismo","origin":"icd10_description","chapter":"P","label":373}
@@ -7239,6 +7531,7 @@
 {"code":"P06","text":"Narcolepsia e cataplexia","origin":"icd10_description","chapter":"P","label":373}
 {"code":"P06","text":"Outras patologias do sono","origin":"icd10_description","chapter":"P","label":373}
 {"code":"P06","text":"Patologia do sono, não especificado","origin":"icd10_description","chapter":"P","label":373}
+{"code":"P07","text":"Patologia hipoativa do desejo sexual","origin":"icd10_description","chapter":"P","label":374}
 {"code":"P08","text":"Patologia de aversão sexual","origin":"icd10_description","chapter":"P","label":375}
 {"code":"P08","text":"Patologia de excitação sexual","origin":"icd10_description","chapter":"P","label":375}
 {"code":"P08","text":"Disfunção orgásmica","origin":"icd10_description","chapter":"P","label":375}
@@ -7269,10 +7562,13 @@
 {"code":"P10","text":"Patologia da fluência aparecendo na idade adulta","origin":"icd10_description","chapter":"P","label":377}
 {"code":"P11","text":"Distúrbio alimentar na infância","origin":"icd10_description","chapter":"P","label":378}
 {"code":"P11","text":"Pica [alotriofagia] do lactente ou da criança","origin":"icd10_description","chapter":"P","label":378}
+{"code":"P12","text":"Enurese","origin":"icd10_description","chapter":"P","label":379}
+{"code":"P13","text":"Encoprese","origin":"icd10_description","chapter":"P","label":380}
 {"code":"P15","text":"Abuso de álcool","origin":"icd10_description","chapter":"P","label":381}
 {"code":"P15","text":"Dependência de álcool","origin":"icd10_description","chapter":"P","label":381}
 {"code":"P15","text":"Uso de álcool, sem outra especificação","origin":"icd10_description","chapter":"P","label":381}
 {"code":"P15","text":"Degenerescência do sistema nervoso devida ao álcool","origin":"icd10_description","chapter":"P","label":381}
+{"code":"P17","text":"Dependência de nicotina","origin":"icd10_description","chapter":"P","label":383}
 {"code":"P18","text":"Abuso associado a sedativo, hipnótico ou ansiolítico","origin":"icd10_description","chapter":"P","label":384}
 {"code":"P18","text":"Dependência associada a sedativo, hipnótico ou ansiolítico","origin":"icd10_description","chapter":"P","label":384}
 {"code":"P18","text":"Uso, sem outra especificação, associado a sedativo, hipnótico ou ansiolítico","origin":"icd10_description","chapter":"P","label":384}
@@ -7353,6 +7649,9 @@
 {"code":"P24","text":"Agnosia","origin":"icd10_description","chapter":"P","label":389}
 {"code":"P24","text":"Apraxia","origin":"icd10_description","chapter":"P","label":389}
 {"code":"P24","text":"Outras disfunções simbólicas e as não especificadas","origin":"icd10_description","chapter":"P","label":389}
+{"code":"P25","text":"Problemas de adaptação às transições do ciclo de vida","origin":"icd10_description","chapter":"P","label":390}
+{"code":"P27","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"P","label":391}
+{"code":"P28","text":"Limites impostos às atividades por invalidez","origin":"icd10_description","chapter":"P","label":392}
 {"code":"P29","text":"Outros distúrbios alimentares","origin":"icd10_description","chapter":"P","label":393}
 {"code":"P29","text":"Distúrbios alimentares, não especificados","origin":"icd10_description","chapter":"P","label":393}
 {"code":"P29","text":"Tricotilomania","origin":"icd10_description","chapter":"P","label":393}
@@ -7462,6 +7761,7 @@
 {"code":"P76","text":"Perurbação do humor [afetivo] persistente não especificado","origin":"icd10_description","chapter":"P","label":400}
 {"code":"P76","text":"Patologia do humor [afetivo], sem outra especificação","origin":"icd10_description","chapter":"P","label":400}
 {"code":"P76","text":"Depressão pós-parto","origin":"icd10_description","chapter":"P","label":400}
+{"code":"P77","text":"História pessoal de auto-agressão","origin":"icd10_description","chapter":"P","label":401}
 {"code":"P79","text":"Agorafobia","origin":"icd10_description","chapter":"P","label":403}
 {"code":"P79","text":"Fobias sociais","origin":"icd10_description","chapter":"P","label":403}
 {"code":"P79","text":"Fobias específicas (isoladas)","origin":"icd10_description","chapter":"P","label":403}
@@ -7492,6 +7792,7 @@
 {"code":"P81","text":"Patologia de hiperatividade e défice de atenção, tipo predominantemente hiperativo","origin":"icd10_description","chapter":"P","label":405}
 {"code":"P81","text":"Patologia de hiperatividade e défice de atenção, outro tipo","origin":"icd10_description","chapter":"P","label":405}
 {"code":"P81","text":"Patologia de hiperatividade e défice de atenção, tipo não especificado","origin":"icd10_description","chapter":"P","label":405}
+{"code":"P82","text":"Patologia de \"stress\" pós-traumático","origin":"icd10_description","chapter":"P","label":406}
 {"code":"P86","text":"Anorexia nervosa","origin":"icd10_description","chapter":"P","label":408}
 {"code":"P86","text":"Bulimia nervosa","origin":"icd10_description","chapter":"P","label":408}
 {"code":"P98","text":"Psicose, sem outra especificação, não devida a substância ou perturbação psicológica conhecida","origin":"icd10_description","chapter":"P","label":409}
@@ -7510,16 +7811,28 @@
 {"code":"P99","text":"Outras patologias do desenvolvimento psicológico","origin":"icd10_description","chapter":"P","label":410}
 {"code":"P99","text":"Patologia, sem outra especificação, do desenvolvimento psicológico","origin":"icd10_description","chapter":"P","label":410}
 {"code":"P99","text":"Doença mental, não especificado noutra parte","origin":"icd10_description","chapter":"P","label":410}
+{"code":"R01","text":"Dor torácica ao respirar","origin":"icd10_description","chapter":"R","label":411}
+{"code":"R02","text":"Dispneia","origin":"icd10_description","chapter":"R","label":412}
+{"code":"R03","text":"Respiração sibilante","origin":"icd10_description","chapter":"R","label":413}
 {"code":"R04","text":"Estridor","origin":"icd10_description","chapter":"R","label":414}
 {"code":"R04","text":"Respiração de Cheyne-Stokes","origin":"icd10_description","chapter":"R","label":414}
 {"code":"R04","text":"Respiração pela boca","origin":"icd10_description","chapter":"R","label":414}
 {"code":"R04","text":"Outras anomalias e as não especificadas da respiração","origin":"icd10_description","chapter":"R","label":414}
+{"code":"R05","text":"Tosse","origin":"icd10_description","chapter":"R","label":415}
+{"code":"R06","text":"Epistaxis","origin":"icd10_description","chapter":"R","label":416}
+{"code":"R07","text":"Espirro","origin":"icd10_description","chapter":"R","label":417}
+{"code":"R08","text":"Outras patologias especificadas do nariz e seios nasais","origin":"icd10_description","chapter":"R","label":418}
+{"code":"R09","text":"Outras patologias especificadas do nariz e seios nasais","origin":"icd10_description","chapter":"R","label":419}
 {"code":"R21","text":"Dor de garganta","origin":"icd10_description","chapter":"R","label":420}
 {"code":"R21","text":"Outros sintomas e sinais especificados envolvendo os aparelhos circulatório e respiratório","origin":"icd10_description","chapter":"R","label":420}
 {"code":"R23","text":"Disfonia","origin":"icd10_description","chapter":"R","label":421}
 {"code":"R23","text":"Afonia","origin":"icd10_description","chapter":"R","label":421}
 {"code":"R23","text":"Hipernasalidade e hiponasalidade","origin":"icd10_description","chapter":"R","label":421}
 {"code":"R23","text":"Outras patologias da voz e da ressonância","origin":"icd10_description","chapter":"R","label":421}
+{"code":"R24","text":"Hemoptise","origin":"icd10_description","chapter":"R","label":422}
+{"code":"R25","text":"Expectoração anormal","origin":"icd10_description","chapter":"R","label":423}
+{"code":"R26","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"R","label":424}
+{"code":"R27","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"R","label":425}
 {"code":"R28","text":"Limites impostos às atividades por invalidez","origin":"icd10_description","chapter":"R","label":426}
 {"code":"R28","text":"Dependência de ventilador","origin":"icd10_description","chapter":"R","label":426}
 {"code":"R29","text":"Hemorragia da garganta","origin":"icd10_description","chapter":"R","label":427}
@@ -7535,6 +7848,7 @@
 {"code":"R71","text":"Tosse convulsa, espécies não especificadas","origin":"icd10_description","chapter":"R","label":428}
 {"code":"R72","text":"Faringite estreptocócica","origin":"icd10_description","chapter":"R","label":429}
 {"code":"R72","text":"Amigdalite estreptocócica","origin":"icd10_description","chapter":"R","label":429}
+{"code":"R73","text":"Abcesso, furúnculo e antraz do nariz","origin":"icd10_description","chapter":"R","label":430}
 {"code":"R74","text":"Gengivoestomatite e faringoamigdalite pelo vírus Herpes","origin":"icd10_description","chapter":"R","label":431}
 {"code":"R74","text":"Faringite vesícular por enterovírus","origin":"icd10_description","chapter":"R","label":431}
 {"code":"R74","text":"Nasofaringite aguda (constipação comum)","origin":"icd10_description","chapter":"R","label":431}
@@ -7801,9 +8115,11 @@
 {"code":"R95","text":"Doença pulmonar obstrutiva crónica com exacerbação (aguda)","origin":"icd10_description","chapter":"R","label":449}
 {"code":"R95","text":"Outra doença pulmonar obstrutiva crónica especificada","origin":"icd10_description","chapter":"R","label":449}
 {"code":"R95","text":"Doença pulmonar obstrutiva crónica, sem outra especificação","origin":"icd10_description","chapter":"R","label":449}
+{"code":"R96","text":"Asma não especificada","origin":"icd10_description","chapter":"R","label":450}
 {"code":"R97","text":"Rinite vasomotora","origin":"icd10_description","chapter":"R","label":451}
 {"code":"R97","text":"Rinite alérgica devida a pólen","origin":"icd10_description","chapter":"R","label":451}
 {"code":"R97","text":"Outras rinites alérgicas sazonais","origin":"icd10_description","chapter":"R","label":451}
+{"code":"R98","text":"Hiperventilacao","origin":"icd10_description","chapter":"R","label":452}
 {"code":"R99","text":"Pólipo da cavidade nasal","origin":"icd10_description","chapter":"R","label":453}
 {"code":"R99","text":"Degenerescência polipóide dos seios da face","origin":"icd10_description","chapter":"R","label":453}
 {"code":"R99","text":"Outro pólipo dos seios da face","origin":"icd10_description","chapter":"R","label":453}
@@ -7889,8 +8205,10 @@
 {"code":"R99","text":"Outras patologias   respiratórias especificadas","origin":"icd10_description","chapter":"R","label":453}
 {"code":"R99","text":"Doença não especificada do aparelho respiratório","origin":"icd10_description","chapter":"R","label":453}
 {"code":"R99","text":"Ausência adquirida de pulmão (parte de)","origin":"icd10_description","chapter":"R","label":453}
+{"code":"S01","text":"Outros distúrbios da sensibilidade da pele","origin":"icd10_description","chapter":"S","label":454}
 {"code":"S02","text":"Outras formas de prurido","origin":"icd10_description","chapter":"S","label":455}
 {"code":"S02","text":"Prurido, sem outra especificação","origin":"icd10_description","chapter":"S","label":455}
+{"code":"S03","text":"Verruga viral","origin":"icd10_description","chapter":"S","label":456}
 {"code":"S04","text":"Tumor, massa ou protuberância localizadas, cabeça","origin":"icd10_description","chapter":"S","label":457}
 {"code":"S04","text":"Tumor, massa ou protuberância localizadas, pescoço","origin":"icd10_description","chapter":"S","label":457}
 {"code":"S04","text":"Tumor, massa ou protuberância localizadas, tronco","origin":"icd10_description","chapter":"S","label":457}
@@ -7898,6 +8216,7 @@
 {"code":"S04","text":"Tumor, massa ou protuberância localizadas, membro inferior","origin":"icd10_description","chapter":"S","label":457}
 {"code":"S04","text":"Tumor, massa ou protuberância localizadas, sem outra especificação","origin":"icd10_description","chapter":"S","label":457}
 {"code":"S04","text":"Outras alterações da pele e as não especificadas","origin":"icd10_description","chapter":"S","label":457}
+{"code":"S05","text":"Outras alterações da pele e as não especificadas","origin":"icd10_description","chapter":"S","label":458}
 {"code":"S06","text":"Afecões eritematosas SOE","origin":"icd10_description","chapter":"S","label":459}
 {"code":"S06","text":"Eritema e outra erupção não especificada da pele","origin":"icd10_description","chapter":"S","label":459}
 {"code":"S07","text":"Afecões eritematosas SOE","origin":"icd10_description","chapter":"S","label":460}
@@ -7909,6 +8228,7 @@
 {"code":"S08","text":"Cianose","origin":"icd10_description","chapter":"S","label":461}
 {"code":"S08","text":"Palidez","origin":"icd10_description","chapter":"S","label":461}
 {"code":"S08","text":"Flushing facial","origin":"icd10_description","chapter":"S","label":461}
+{"code":"S09","text":"Celulite e linfangite aguda de dedo da mão e do pé","origin":"icd10_description","chapter":"S","label":462}
 {"code":"S10","text":"Abcesso cutâneo, furúnculo e carbúnculo da face","origin":"icd10_description","chapter":"S","label":463}
 {"code":"S10","text":"Abcesso cutâneo, furúnculo e carbúnculo do pescoço","origin":"icd10_description","chapter":"S","label":463}
 {"code":"S10","text":"Abcesso cutâneo, furúnculo e carbúnculo do tronco","origin":"icd10_description","chapter":"S","label":463}
@@ -8140,6 +8460,8 @@
 {"code":"S19","text":"Escoriação, sem outra especificação, do joelho e perna","origin":"icd10_description","chapter":"S","label":472}
 {"code":"S19","text":"Outras escoriações, pé","origin":"icd10_description","chapter":"S","label":472}
 {"code":"S19","text":"Escoriação, sem outra especificação, do tornozelo, pé e dedo do pé","origin":"icd10_description","chapter":"S","label":472}
+{"code":"S20","text":"Calos e calosidades","origin":"icd10_description","chapter":"S","label":473}
+{"code":"S21","text":"Alteracões da textura da pele","origin":"icd10_description","chapter":"S","label":474}
 {"code":"S22","text":"Onicólise","origin":"icd10_description","chapter":"S","label":475}
 {"code":"S22","text":"Linhas de Beau","origin":"icd10_description","chapter":"S","label":475}
 {"code":"S22","text":"Síndrome das unhas amareladas","origin":"icd10_description","chapter":"S","label":475}
@@ -8175,6 +8497,9 @@
 {"code":"S24","text":"Politríquia","origin":"icd10_description","chapter":"S","label":477}
 {"code":"S24","text":"Outras formas de hipertricose","origin":"icd10_description","chapter":"S","label":477}
 {"code":"S24","text":"Hipertricose, não especificada","origin":"icd10_description","chapter":"S","label":477}
+{"code":"S26","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"S","label":478}
+{"code":"S27","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"S","label":479}
+{"code":"S28","text":"Limites impostos às atividades por invalidez","origin":"icd10_description","chapter":"S","label":480}
 {"code":"S29","text":"Equimoses espontâneas","origin":"icd10_description","chapter":"S","label":481}
 {"code":"S29","text":"Outras alterações da pele e as não especificadas","origin":"icd10_description","chapter":"S","label":481}
 {"code":"S70","text":"Encefalite pelo vírus Herpes zoster","origin":"icd10_description","chapter":"S","label":482}
@@ -8222,6 +8547,7 @@
 {"code":"S74","text":"Piedra negra","origin":"icd10_description","chapter":"S","label":486}
 {"code":"S74","text":"Outras micoses superficiais especificadas","origin":"icd10_description","chapter":"S","label":486}
 {"code":"S74","text":"Micose superficial, sem outra especificação","origin":"icd10_description","chapter":"S","label":486}
+{"code":"S75","text":"Candidiase da pele e unhas","origin":"icd10_description","chapter":"S","label":487}
 {"code":"S76","text":"Erisipela","origin":"icd10_description","chapter":"S","label":488}
 {"code":"S76","text":"Lesões iniciais da bouba","origin":"icd10_description","chapter":"S","label":488}
 {"code":"S76","text":"Papilomas múltiplos e bouba plantar húmida","origin":"icd10_description","chapter":"S","label":488}
@@ -8421,6 +8747,8 @@
 {"code":"S88","text":"Intertrigo eritematoso","origin":"icd10_description","chapter":"S","label":500}
 {"code":"S88","text":"Outras dermatites especificadas","origin":"icd10_description","chapter":"S","label":500}
 {"code":"S88","text":"Dermatite não especificada","origin":"icd10_description","chapter":"S","label":500}
+{"code":"S89","text":"Dermatite das fraldas","origin":"icd10_description","chapter":"S","label":501}
+{"code":"S90","text":"Pitiríase rosada","origin":"icd10_description","chapter":"S","label":502}
 {"code":"S91","text":"Psoríase vulgar","origin":"icd10_description","chapter":"S","label":503}
 {"code":"S91","text":"Psoríase pustulosa generalizada","origin":"icd10_description","chapter":"S","label":503}
 {"code":"S91","text":"Acrodermatite contínua","origin":"icd10_description","chapter":"S","label":503}
@@ -8443,6 +8771,9 @@
 {"code":"S92","text":"Doença de Fox-Fordyce","origin":"icd10_description","chapter":"S","label":504}
 {"code":"S92","text":"Outras afeções das glândulas sudoríparas apócrinas","origin":"icd10_description","chapter":"S","label":504}
 {"code":"S92","text":"Patologia de glândulas sudoríparas apócrinas, sem outra especificação","origin":"icd10_description","chapter":"S","label":504}
+{"code":"S93","text":"Quisto triquilemal","origin":"icd10_description","chapter":"S","label":505}
+{"code":"S94","text":"Unha encravada","origin":"icd10_description","chapter":"S","label":506}
+{"code":"S95","text":"Molusco contagioso","origin":"icd10_description","chapter":"S","label":507}
 {"code":"S96","text":"Acne vulgar","origin":"icd10_description","chapter":"S","label":508}
 {"code":"S96","text":"Acne conglobata","origin":"icd10_description","chapter":"S","label":508}
 {"code":"S96","text":"Acne varioliforme","origin":"icd10_description","chapter":"S","label":508}
@@ -8608,8 +8939,23 @@
 {"code":"S99","text":"Outras afeções infiltrativas da pele e do tecido subcutâneo","origin":"icd10_description","chapter":"S","label":511}
 {"code":"S99","text":"Outras patologias especificadas da pele e do tecido subcutâneo","origin":"icd10_description","chapter":"S","label":511}
 {"code":"S99","text":"Afeções da pele e do tecido subcutâneo, não especificados","origin":"icd10_description","chapter":"S","label":511}
+{"code":"T01","text":"Polidipsia","origin":"icd10_description","chapter":"T","label":512}
+{"code":"T02","text":"Polifagia","origin":"icd10_description","chapter":"T","label":513}
+{"code":"T03","text":"Anorexia","origin":"icd10_description","chapter":"T","label":514}
+{"code":"T04","text":"Dificuldades de alimentação","origin":"icd10_description","chapter":"T","label":515}
+{"code":"T05","text":"Dificuldades de alimentação","origin":"icd10_description","chapter":"T","label":516}
+{"code":"T07","text":"Ganho anormal de peso","origin":"icd10_description","chapter":"T","label":517}
 {"code":"T08","text":"Perda de peso anormal","origin":"icd10_description","chapter":"T","label":518}
 {"code":"T08","text":"Caquexia","origin":"icd10_description","chapter":"T","label":518}
+{"code":"T10","text":"Nanismo NCOP","origin":"icd10_description","chapter":"T","label":519}
+{"code":"T11","text":"Depleção de volume","origin":"icd10_description","chapter":"T","label":520}
+{"code":"T26","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"T","label":521}
+{"code":"T27","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"T","label":522}
+{"code":"T28","text":"Limites impostos às atividades por invalidez","origin":"icd10_description","chapter":"T","label":523}
+{"code":"T29","text":"Outros sintomas e sinais relativos a ingestão de alimentos e de líquidos","origin":"icd10_description","chapter":"T","label":524}
+{"code":"T70","text":"Tiroidite aguda","origin":"icd10_description","chapter":"T","label":525}
+{"code":"T71","text":"Neoplasia maligna da glândula tiróide","origin":"icd10_description","chapter":"T","label":526}
+{"code":"T72","text":"Neoplasia benigna da glândula tiróide","origin":"icd10_description","chapter":"T","label":527}
 {"code":"T73","text":"Neoplasia maligna do córtex da suprarrenal","origin":"icd10_description","chapter":"T","label":528}
 {"code":"T73","text":"Neoplasia maligna da medula da suprarrenal","origin":"icd10_description","chapter":"T","label":528}
 {"code":"T73","text":"Neoplasia maligna de parte não especificada de  glândula suprarrenal","origin":"icd10_description","chapter":"T","label":528}
@@ -8640,6 +8986,7 @@
 {"code":"T73","text":"Neoplasia de comportamento incerto do corpo carotídeo","origin":"icd10_description","chapter":"T","label":528}
 {"code":"T73","text":"Neoplasia de comportamento incerto do corpo aórtico e outros paragânglios","origin":"icd10_description","chapter":"T","label":528}
 {"code":"T73","text":"Neoplasia de comportamento incerto de glândula endócrina não especificada","origin":"icd10_description","chapter":"T","label":528}
+{"code":"T78","text":"Malformacoes congénitas de glândulas endocrinas NCOP","origin":"icd10_description","chapter":"T","label":529}
 {"code":"T80","text":"Síndrome da deficiência congénita de iodo do tipo neurológico","origin":"icd10_description","chapter":"T","label":530}
 {"code":"T80","text":"Síndrome da deficiência congénita de iodo do tipo mixedematoso","origin":"icd10_description","chapter":"T","label":530}
 {"code":"T80","text":"Síndrome da deficiência congénita de iodo do tipo misto","origin":"icd10_description","chapter":"T","label":530}
@@ -8982,6 +9329,7 @@
 {"code":"U01","text":"Disúria","origin":"icd10_description","chapter":"U","label":543}
 {"code":"U01","text":"Tenesmo vesical","origin":"icd10_description","chapter":"U","label":543}
 {"code":"U01","text":"Micção dolorosa, sem outra especificação","origin":"icd10_description","chapter":"U","label":543}
+{"code":"U02","text":"Poliúria","origin":"icd10_description","chapter":"U","label":544}
 {"code":"U04","text":"Incontinência de stress (mulher) (homem)","origin":"icd10_description","chapter":"U","label":545}
 {"code":"U04","text":"Outra incontinência urinária especificada","origin":"icd10_description","chapter":"U","label":545}
 {"code":"U04","text":"Incontinência urinária, sem outra especificação","origin":"icd10_description","chapter":"U","label":545}
@@ -8998,10 +9346,16 @@
 {"code":"U06","text":"Hematúria recidivante e persistente - outras","origin":"icd10_description","chapter":"U","label":547}
 {"code":"U06","text":"Hematúria recidivante e persistente - não especificada","origin":"icd10_description","chapter":"U","label":547}
 {"code":"U06","text":"Hematúria","origin":"icd10_description","chapter":"U","label":547}
+{"code":"U07","text":"Outros sintomas e sinais envolvendo o aparelho genitourinário","origin":"icd10_description","chapter":"U","label":548}
+{"code":"U08","text":"Retenção urinária","origin":"icd10_description","chapter":"U","label":549}
 {"code":"U13","text":"Extravazamento de urina","origin":"icd10_description","chapter":"U","label":550}
 {"code":"U13","text":"Outros sintomas e sinais envolvendo o aparelho genitourinário","origin":"icd10_description","chapter":"U","label":550}
+{"code":"U14","text":"Cólica renal, sem outra especificação","origin":"icd10_description","chapter":"U","label":551}
+{"code":"U26","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"U","label":552}
+{"code":"U27","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"U","label":553}
 {"code":"U28","text":"Limites impostos às atividades por invalidez","origin":"icd10_description","chapter":"U","label":554}
 {"code":"U28","text":"Dependência de diálise renal","origin":"icd10_description","chapter":"U","label":554}
+{"code":"U29","text":"Outros sintomas e sinais envolvendo o aparelho genitourinário","origin":"icd10_description","chapter":"U","label":555}
 {"code":"U70","text":"Pielonefrite aguda","origin":"icd10_description","chapter":"U","label":556}
 {"code":"U70","text":"Pielonefrite não obstrutiva crónica associada a refluxo","origin":"icd10_description","chapter":"U","label":556}
 {"code":"U70","text":"Pielonefrite obstrutiva crónica","origin":"icd10_description","chapter":"U","label":556}
@@ -9262,6 +9616,8 @@
 {"code":"U99","text":"Corpo estranho no trato genitourinário, parte não especificada","origin":"icd10_description","chapter":"U","label":570}
 {"code":"U99","text":"Ausência adquirida de rim","origin":"icd10_description","chapter":"U","label":570}
 {"code":"U99","text":"Ausência adquirida de outras partes do aparelho urinário","origin":"icd10_description","chapter":"U","label":570}
+{"code":"W01","text":"Episódio para teste de gravidez","origin":"icd10_description","chapter":"W","label":571}
+{"code":"W02","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"W","label":572}
 {"code":"W03","text":"Ameaça de aborto","origin":"icd10_description","chapter":"W","label":573}
 {"code":"W03","text":"Outras hemorragias no início da gravidez","origin":"icd10_description","chapter":"W","label":573}
 {"code":"W03","text":"Hemorragia no início da gravidez, sem outra especificação","origin":"icd10_description","chapter":"W","label":573}
@@ -9273,6 +9629,8 @@
 {"code":"W05","text":"Vómitos tardios da gravidez","origin":"icd10_description","chapter":"W","label":574}
 {"code":"W05","text":"Outras formas de vómitos complicando a gravidez","origin":"icd10_description","chapter":"W","label":574}
 {"code":"W05","text":"Vómitos da gravidez, sem outra especificação","origin":"icd10_description","chapter":"W","label":574}
+{"code":"W11","text":"Episódio para vigilância de contracetivos","origin":"icd10_description","chapter":"W","label":576}
+{"code":"W13","text":"Episódio para esterilização","origin":"icd10_description","chapter":"W","label":578}
 {"code":"W14","text":"Aconselhamento geral sobre contraceção","origin":"icd10_description","chapter":"W","label":579}
 {"code":"W14","text":"Outro procedimento anticoncepcional","origin":"icd10_description","chapter":"W","label":579}
 {"code":"W14","text":"Procedimentos anticoncepcionais SOE","origin":"icd10_description","chapter":"W","label":579}
@@ -9290,9 +9648,13 @@
 {"code":"W17","text":"Outras hemorragias do pós-parto imédiato","origin":"icd10_description","chapter":"W","label":581}
 {"code":"W17","text":"Hemorragias pós-parto, tardias e secundárias","origin":"icd10_description","chapter":"W","label":581}
 {"code":"W17","text":"Deficiências de coagulação pós-parto","origin":"icd10_description","chapter":"W","label":581}
+{"code":"W18","text":"Complicação do puerpério, sem outra especificação","origin":"icd10_description","chapter":"W","label":582}
 {"code":"W19","text":"Lactação suprimida","origin":"icd10_description","chapter":"W","label":583}
 {"code":"W19","text":"Galactorréia","origin":"icd10_description","chapter":"W","label":583}
 {"code":"W19","text":"Outras patologias da lactação e os não especificados","origin":"icd10_description","chapter":"W","label":583}
+{"code":"W21","text":"Outros sintomas e sinais envolvendo a aparência e o comportamento","origin":"icd10_description","chapter":"W","label":584}
+{"code":"W27","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"W","label":585}
+{"code":"W28","text":"Limites impostos às atividades por invalidez","origin":"icd10_description","chapter":"W","label":586}
 {"code":"W29","text":"Ganho excessivo de peso na gravidez","origin":"icd10_description","chapter":"W","label":587}
 {"code":"W29","text":"Ganho de peso insuficiente na gravidez","origin":"icd10_description","chapter":"W","label":587}
 {"code":"W29","text":"Assistência à gravidez a doente com perda de gravidez recorrente","origin":"icd10_description","chapter":"W","label":587}
@@ -9324,9 +9686,12 @@
 {"code":"W71","text":"Doença pelo vírus da imunodeficiência humana [VIH] complicando a gravidez, o parto e o puerpério","origin":"icd10_description","chapter":"W","label":589}
 {"code":"W71","text":"Outras infeções e doenças parasíticas maternas complicando a gravidez, o parto e o puerpério","origin":"icd10_description","chapter":"W","label":589}
 {"code":"W71","text":"Doenças infecciosas e parasitárias maternas, sem outra especificação, complicando a gravidez, o parto e o puerpério","origin":"icd10_description","chapter":"W","label":589}
+{"code":"W72","text":"Neoplasia maligna da placenta","origin":"icd10_description","chapter":"W","label":590}
 {"code":"W73","text":"Mola hidatiforme clássica","origin":"icd10_description","chapter":"W","label":591}
 {"code":"W73","text":"Mola hidatiforme incompleta ou parcial","origin":"icd10_description","chapter":"W","label":591}
 {"code":"W73","text":"Mola hidatiforme, sem outra especificação","origin":"icd10_description","chapter":"W","label":591}
+{"code":"W75","text":"Lesão, sem outra especificação","origin":"icd10_description","chapter":"W","label":592}
+{"code":"W76","text":"Outras doenças e condições especificadas complicando a gravidez, o parto e o puerpério","origin":"icd10_description","chapter":"W","label":593}
 {"code":"W78","text":"Estado de gravidez","origin":"icd10_description","chapter":"W","label":594}
 {"code":"W78","text":"Episódio para supervisão de primeira gravidez normal","origin":"icd10_description","chapter":"W","label":594}
 {"code":"W78","text":"Episódio para supervisão de outra gravidez normal","origin":"icd10_description","chapter":"W","label":594}
@@ -9339,6 +9704,7 @@
 {"code":"W78","text":"Episódio para teste de Coombs","origin":"icd10_description","chapter":"W","label":594}
 {"code":"W78","text":"Episódio para outros rastreio pré-natal ","origin":"icd10_description","chapter":"W","label":594}
 {"code":"W78","text":"Episódio para rastreio pré-natal, não especificada","origin":"icd10_description","chapter":"W","label":594}
+{"code":"W79","text":"Problemas relacionados com gravidez não desejada","origin":"icd10_description","chapter":"W","label":595}
 {"code":"W80","text":"Gravidez abdominal","origin":"icd10_description","chapter":"W","label":596}
 {"code":"W80","text":"Gravidez tubária","origin":"icd10_description","chapter":"W","label":596}
 {"code":"W80","text":"Gravidez ovárica","origin":"icd10_description","chapter":"W","label":596}
@@ -9457,6 +9823,7 @@
 {"code":"W84","text":"Doenças do aparelho digestivo complicando a gravidez, o parto e o puerpério","origin":"icd10_description","chapter":"W","label":600}
 {"code":"W84","text":"Doenças da pele e tecido subcutâneo complicando a gravidez, o parto e o puerpério","origin":"icd10_description","chapter":"W","label":600}
 {"code":"W84","text":"Outras doenças e condições especificadas complicando a gravidez, o parto e o puerpério","origin":"icd10_description","chapter":"W","label":600}
+{"code":"W85","text":"Diabetes mellitus gestacional","origin":"icd10_description","chapter":"W","label":601}
 {"code":"W90","text":"Parto de criança única nascida viva","origin":"icd10_description","chapter":"W","label":602}
 {"code":"W90","text":"Produto do parto, sem outra especificação","origin":"icd10_description","chapter":"W","label":602}
 {"code":"W90","text":"Criança única, nascida em hospital","origin":"icd10_description","chapter":"W","label":602}
@@ -9727,6 +10094,7 @@
 {"code":"X02","text":"Dismenorreia primária","origin":"icd10_description","chapter":"X","label":611}
 {"code":"X02","text":"Dismenorreia secundária","origin":"icd10_description","chapter":"X","label":611}
 {"code":"X02","text":"Dismenorreia, sem outra especificação","origin":"icd10_description","chapter":"X","label":611}
+{"code":"X03","text":"Ovulação dolorosa (mittelschmerz)","origin":"icd10_description","chapter":"X","label":612}
 {"code":"X04","text":"Dispareunia","origin":"icd10_description","chapter":"X","label":613}
 {"code":"X04","text":"Vaginismo","origin":"icd10_description","chapter":"X","label":613}
 {"code":"X05","text":"Amenorréia primária","origin":"icd10_description","chapter":"X","label":614}
@@ -9745,12 +10113,21 @@
 {"code":"X08","text":"Hemorragia na ovulação","origin":"icd10_description","chapter":"X","label":617}
 {"code":"X08","text":"Outros hemorragias especificadas do útero e da vagina","origin":"icd10_description","chapter":"X","label":617}
 {"code":"X08","text":"Hemorragia anormal do útero e da vagina, não especificada","origin":"icd10_description","chapter":"X","label":617}
+{"code":"X09","text":"Afeções não especificadas associadas com os órgãos genitais femininos e com o ciclo menstrual","origin":"icd10_description","chapter":"X","label":618}
+{"code":"X10","text":"Procedimentos anticoncepcionais SOE","origin":"icd10_description","chapter":"X","label":619}
 {"code":"X11","text":"Estados menopáusicos ou do climatério feminino, sintomáticos","origin":"icd10_description","chapter":"X","label":620}
 {"code":"X11","text":"Vaginite atrófica pós-menopáusica","origin":"icd10_description","chapter":"X","label":620}
 {"code":"X11","text":"Outras patologias especificadas da menopausa e perimenopausa","origin":"icd10_description","chapter":"X","label":620}
 {"code":"X11","text":"Patologia, sem outra especificação, da menopausa e perimenopausa","origin":"icd10_description","chapter":"X","label":620}
+{"code":"X12","text":"Hemorragia genital pós-menopáusica","origin":"icd10_description","chapter":"X","label":621}
+{"code":"X13","text":"Hemorragia pós-coito","origin":"icd10_description","chapter":"X","label":622}
+{"code":"X14","text":"Alteracões não inflamatórias da vagina, NCOP","origin":"icd10_description","chapter":"X","label":623}
+{"code":"X15","text":"Patologia não inflamatória da vagina, não especificada","origin":"icd10_description","chapter":"X","label":624}
 {"code":"X16","text":"Prurido vulvar","origin":"icd10_description","chapter":"X","label":625}
 {"code":"X16","text":"Patologia não inflamatória da vulva e perineo, não especificada","origin":"icd10_description","chapter":"X","label":625}
+{"code":"X17","text":"Afeções não especificadas associadas com os órgãos genitais femininos e com o ciclo menstrual","origin":"icd10_description","chapter":"X","label":626}
+{"code":"X18","text":"Mastodinia (dor na mama)","origin":"icd10_description","chapter":"X","label":627}
+{"code":"X19","text":"Protuberância ou massa na mama","origin":"icd10_description","chapter":"X","label":628}
 {"code":"X20","text":"Fissura e fístula do mamilo","origin":"icd10_description","chapter":"X","label":629}
 {"code":"X20","text":"Sinal ou sintoma na mama, NCOP","origin":"icd10_description","chapter":"X","label":629}
 {"code":"X21","text":"Doença inflamatória da mama","origin":"icd10_description","chapter":"X","label":630}
@@ -9758,6 +10135,12 @@
 {"code":"X21","text":"Galactorreia não associada a amamentacao","origin":"icd10_description","chapter":"X","label":630}
 {"code":"X21","text":"Sinal ou sintoma na mama, NCOP","origin":"icd10_description","chapter":"X","label":630}
 {"code":"X21","text":"Doença da mama não especificada","origin":"icd10_description","chapter":"X","label":630}
+{"code":"X22","text":"Outros sintomas e sinais envolvendo a aparência e o comportamento","origin":"icd10_description","chapter":"X","label":631}
+{"code":"X23","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"X","label":632}
+{"code":"X24","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"X","label":633}
+{"code":"X25","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"X","label":634}
+{"code":"X26","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"X","label":635}
+{"code":"X27","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"X","label":636}
 {"code":"X28","text":"Limites impostos às atividades por invalidez","origin":"icd10_description","chapter":"X","label":637}
 {"code":"X28","text":"Ausência adquirida de órgão(s) genital(is)","origin":"icd10_description","chapter":"X","label":637}
 {"code":"X29","text":"Afeções não especificadas associadas com os órgãos genitais femininos e com o ciclo menstrual","origin":"icd10_description","chapter":"X","label":638}
@@ -9799,6 +10182,7 @@
 {"code":"X71","text":"Infeção gonocócica, não especificada","origin":"icd10_description","chapter":"X","label":640}
 {"code":"X72","text":"Candidiase da vulva e vagina","origin":"icd10_description","chapter":"X","label":641}
 {"code":"X72","text":"Candidiase de outros locais urogenitais","origin":"icd10_description","chapter":"X","label":641}
+{"code":"X73","text":"Tricomoníase urogenital","origin":"icd10_description","chapter":"X","label":642}
 {"code":"X74","text":"Salpingite e ooforite agudas","origin":"icd10_description","chapter":"X","label":643}
 {"code":"X74","text":"Salpingite e ooforite crónicas","origin":"icd10_description","chapter":"X","label":643}
 {"code":"X74","text":"Salpingite e ooforite, sem outra especificação","origin":"icd10_description","chapter":"X","label":643}
@@ -9853,6 +10237,7 @@
 {"code":"X78","text":"Leiomioma intramural do útero","origin":"icd10_description","chapter":"X","label":647}
 {"code":"X78","text":"Leiomioma subseroso do útero","origin":"icd10_description","chapter":"X","label":647}
 {"code":"X78","text":"Leiomioma do útero, sem outra especificação","origin":"icd10_description","chapter":"X","label":647}
+{"code":"X79","text":"Neoplasia benigna da mama","origin":"icd10_description","chapter":"X","label":648}
 {"code":"X80","text":"Outra neoplasia benigna do colo do útero","origin":"icd10_description","chapter":"X","label":649}
 {"code":"X80","text":"Outra neoplasia benigna do corpo do útero","origin":"icd10_description","chapter":"X","label":649}
 {"code":"X80","text":"Outra neoplasia benigna de outras partes do útero","origin":"icd10_description","chapter":"X","label":649}
@@ -9972,9 +10357,11 @@
 {"code":"X88","text":"Ectasia dos ductos mamários","origin":"icd10_description","chapter":"X","label":657}
 {"code":"X88","text":"Outras displasias mamárias benignas","origin":"icd10_description","chapter":"X","label":657}
 {"code":"X88","text":"Displasia mamária benigna, sem outra especificação","origin":"icd10_description","chapter":"X","label":657}
+{"code":"X89","text":"Síndrome de tensão pré-menstrual","origin":"icd10_description","chapter":"X","label":658}
 {"code":"X90","text":"Infeção dos órgãos genitais e do trato genitourinário pelo vírus Herpes","origin":"icd10_description","chapter":"X","label":659}
 {"code":"X90","text":"Infeção da pele perianal e do reto pelo vírus Herpes","origin":"icd10_description","chapter":"X","label":659}
 {"code":"X90","text":"Infeção anogenital pelo vírus Herpes, não especificada","origin":"icd10_description","chapter":"X","label":659}
+{"code":"X91","text":"Verrugas anogenitais (venéreas)","origin":"icd10_description","chapter":"X","label":660}
 {"code":"X92","text":"Infeções por Clamídia do trato genitourinário inferior","origin":"icd10_description","chapter":"X","label":661}
 {"code":"X92","text":"Infeção por Clamídia do pelviperitoneu e de outros órgãos genitourinários","origin":"icd10_description","chapter":"X","label":661}
 {"code":"X92","text":"Infeção por Clamídia do trato genitourinário, não especificada","origin":"icd10_description","chapter":"X","label":661}
@@ -10054,10 +10441,14 @@
 {"code":"X99","text":"Afeções não especificadas associadas com os órgãos genitais femininos e com o ciclo menstrual","origin":"icd10_description","chapter":"X","label":662}
 {"code":"X99","text":"Ausência adquirida de mama e mamilo","origin":"icd10_description","chapter":"X","label":662}
 {"code":"X99","text":"Ausência adquirida de órgão(s) genital(is)","origin":"icd10_description","chapter":"X","label":662}
+{"code":"Y01","text":"Outras patologias especificadas do pénis","origin":"icd10_description","chapter":"Y","label":663}
 {"code":"Y02","text":"Alteracões especificadas dos órgãos genitais masculinos, NCOP","origin":"icd10_description","chapter":"Y","label":664}
 {"code":"Y02","text":"Dor pélvica e perineal","origin":"icd10_description","chapter":"Y","label":664}
+{"code":"Y03","text":"Corrimento uretral","origin":"icd10_description","chapter":"Y","label":665}
+{"code":"Y04","text":"Doenças do pénis SOE","origin":"icd10_description","chapter":"Y","label":666}
 {"code":"Y05","text":"Prurido escrotal","origin":"icd10_description","chapter":"Y","label":667}
 {"code":"Y05","text":"Patologia não especificada dos órgãos genitais masculinos","origin":"icd10_description","chapter":"Y","label":667}
+{"code":"Y06","text":"Afeções da próstata, sem outra especificação","origin":"icd10_description","chapter":"Y","label":668}
 {"code":"Y08","text":"Priapismo","origin":"icd10_description","chapter":"Y","label":670}
 {"code":"Y08","text":"Doenças do pénis SOE","origin":"icd10_description","chapter":"Y","label":670}
 {"code":"Y10","text":"Infertilidade masculina","origin":"icd10_description","chapter":"Y","label":671}
@@ -10066,14 +10457,20 @@
 {"code":"Y10","text":"Aconselhamento geral sobre a procriação","origin":"icd10_description","chapter":"Y","label":671}
 {"code":"Y10","text":"Episódio para outra medida relativa à procriação","origin":"icd10_description","chapter":"Y","label":671}
 {"code":"Y10","text":"Procedimentos relativos a procriacão não especificados","origin":"icd10_description","chapter":"Y","label":671}
+{"code":"Y13","text":"Episódio para esterilização","origin":"icd10_description","chapter":"Y","label":672}
 {"code":"Y14","text":"Aconselhamento geral sobre contraceção","origin":"icd10_description","chapter":"Y","label":673}
 {"code":"Y14","text":"Outro procedimento anticoncepcional","origin":"icd10_description","chapter":"Y","label":673}
 {"code":"Y14","text":"Procedimentos anticoncepcionais SOE","origin":"icd10_description","chapter":"Y","label":673}
 {"code":"Y16","text":"Hipertrofia da mama","origin":"icd10_description","chapter":"Y","label":674}
 {"code":"Y16","text":"Protuberância ou massa na mama","origin":"icd10_description","chapter":"Y","label":674}
 {"code":"Y16","text":"Sinal ou sintoma na mama, NCOP","origin":"icd10_description","chapter":"Y","label":674}
+{"code":"Y24","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"Y","label":675}
+{"code":"Y25","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"Y","label":676}
+{"code":"Y26","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"Y","label":677}
+{"code":"Y27","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"Y","label":678}
 {"code":"Y28","text":"Limites impostos às atividades por invalidez","origin":"icd10_description","chapter":"Y","label":679}
 {"code":"Y28","text":"Ausência adquirida de órgão(s) genital(is)","origin":"icd10_description","chapter":"Y","label":679}
+{"code":"Y29","text":"Patologia não especificada dos órgãos genitais masculinos","origin":"icd10_description","chapter":"Y","label":680}
 {"code":"Y70","text":"Sífilis congénita precoce sintomática","origin":"icd10_description","chapter":"Y","label":681}
 {"code":"Y70","text":"Sífilis congénita precoce latente","origin":"icd10_description","chapter":"Y","label":681}
 {"code":"Y70","text":"Sífilis congénita precoce, não especificada","origin":"icd10_description","chapter":"Y","label":681}
@@ -10120,8 +10517,11 @@
 {"code":"Y73","text":"Outras doenças inflamatórias da próstata","origin":"icd10_description","chapter":"Y","label":684}
 {"code":"Y73","text":"Prostatite, não especificada","origin":"icd10_description","chapter":"Y","label":684}
 {"code":"Y73","text":"Vesiculite seminal","origin":"icd10_description","chapter":"Y","label":684}
+{"code":"Y74","text":"Infeção por Clamídia do pelviperitoneu e de outros órgãos genitourinários","origin":"icd10_description","chapter":"Y","label":685}
 {"code":"Y75","text":"Candidiase de outros locais urogenitais","origin":"icd10_description","chapter":"Y","label":686}
 {"code":"Y75","text":"Balanite","origin":"icd10_description","chapter":"Y","label":686}
+{"code":"Y76","text":"Verrugas anogenitais (venéreas)","origin":"icd10_description","chapter":"Y","label":687}
+{"code":"Y77","text":"Neoplasia maligna da próstata","origin":"icd10_description","chapter":"Y","label":688}
 {"code":"Y78","text":"Neoplasia maligna do mamilo e auréola","origin":"icd10_description","chapter":"Y","label":689}
 {"code":"Y78","text":"Neoplasia maligna da porção central da mama","origin":"icd10_description","chapter":"Y","label":689}
 {"code":"Y78","text":"Neoplasia maligna do quadrante superior interno da mama","origin":"icd10_description","chapter":"Y","label":689}
@@ -10172,6 +10572,7 @@
 {"code":"Y80","text":"Queimadura de órgãos genitourinários internos","origin":"icd10_description","chapter":"Y","label":691}
 {"code":"Y80","text":"Corrosão de órgãos genitourinários internos","origin":"icd10_description","chapter":"Y","label":691}
 {"code":"Y80","text":"Episódio para circuncisão de rotina ou ritual","origin":"icd10_description","chapter":"Y","label":691}
+{"code":"Y81","text":"Hipertrofia do prepúcio, fimose e parafimose","origin":"icd10_description","chapter":"Y","label":692}
 {"code":"Y82","text":"Hipospádia balânica","origin":"icd10_description","chapter":"Y","label":693}
 {"code":"Y82","text":"Hipospádia peniana","origin":"icd10_description","chapter":"Y","label":693}
 {"code":"Y82","text":"Hipospádia penoscrotal","origin":"icd10_description","chapter":"Y","label":693}
@@ -10203,6 +10604,7 @@
 {"code":"Y84","text":"Mamilo supranumerário","origin":"icd10_description","chapter":"Y","label":695}
 {"code":"Y84","text":"Outras malformações congénitas da mama","origin":"icd10_description","chapter":"Y","label":695}
 {"code":"Y84","text":"Malformação congénita não especificada da mama","origin":"icd10_description","chapter":"Y","label":695}
+{"code":"Y85","text":"Hiperplasia benigna da próstata","origin":"icd10_description","chapter":"Y","label":696}
 {"code":"Y86","text":"Hidrocelo enquistado","origin":"icd10_description","chapter":"Y","label":697}
 {"code":"Y86","text":"Hidrocelo infetado","origin":"icd10_description","chapter":"Y","label":697}
 {"code":"Y86","text":"Outro Hidrocelo","origin":"icd10_description","chapter":"Y","label":697}
@@ -10273,6 +10675,7 @@
 {"code":"Z05","text":"Exposição ocupacional a vibração","origin":"icd10_description","chapter":"Z","label":703}
 {"code":"Z05","text":"Exposição ocupacional a outros factores de risco","origin":"icd10_description","chapter":"Z","label":703}
 {"code":"Z05","text":"Exposição ocupacional a fator de risco não especificado","origin":"icd10_description","chapter":"Z","label":703}
+{"code":"Z06","text":"Desemprego, sem outra especificação","origin":"icd10_description","chapter":"Z","label":704}
 {"code":"Z07","text":"Analfabetismo e baixa literacia","origin":"icd10_description","chapter":"Z","label":705}
 {"code":"Z07","text":"Escolarização não disponível e não acessível","origin":"icd10_description","chapter":"Z","label":705}
 {"code":"Z07","text":"Reprovação em exames escolares","origin":"icd10_description","chapter":"Z","label":705}
@@ -10280,6 +10683,7 @@
 {"code":"Z07","text":"Má adaptação escolar e dificuldades com professores e colegas","origin":"icd10_description","chapter":"Z","label":705}
 {"code":"Z07","text":"Outros problemas relacionados com a educação e com a alfabetização","origin":"icd10_description","chapter":"Z","label":705}
 {"code":"Z07","text":"Problemas não especificados relacionados com a educação e com a alfabetização","origin":"icd10_description","chapter":"Z","label":705}
+{"code":"Z08","text":"Seguro social e medidas de bem-estar social insuficientes","origin":"icd10_description","chapter":"Z","label":706}
 {"code":"Z09","text":"Condenação, sem prisão, por tribunal civil ou criminal","origin":"icd10_description","chapter":"Z","label":707}
 {"code":"Z09","text":"Prisão e outro encarceramento","origin":"icd10_description","chapter":"Z","label":707}
 {"code":"Z09","text":"Problemas ligados à libertação de prisão","origin":"icd10_description","chapter":"Z","label":707}
@@ -10304,6 +10708,8 @@
 {"code":"Z12","text":"Negligência ou abandono, confirmado","origin":"icd10_description","chapter":"Z","label":710}
 {"code":"Z12","text":"Abuso psicológico, confirmado","origin":"icd10_description","chapter":"Z","label":710}
 {"code":"Z12","text":"Problemas nas relações com cônjuge ou parceiro","origin":"icd10_description","chapter":"Z","label":710}
+{"code":"Z13","text":"Problemas nas relações com cônjuge ou parceiro","origin":"icd10_description","chapter":"Z","label":711}
+{"code":"Z14","text":"Parente dependente de cuidados, residente no domicílio","origin":"icd10_description","chapter":"Z","label":712}
 {"code":"Z15","text":"Desaparecimento e falecimento de um membro da família","origin":"icd10_description","chapter":"Z","label":713}
 {"code":"Z15","text":"Divisão da família por separação ou divórcio","origin":"icd10_description","chapter":"Z","label":713}
 {"code":"Z16","text":"Negligência ou abandono, confirmado","origin":"icd10_description","chapter":"Z","label":714}
@@ -10316,6 +10722,8 @@
 {"code":"Z16","text":"Outros problemas especificados relacionados com a educação dos filhos","origin":"icd10_description","chapter":"Z","label":714}
 {"code":"Z16","text":"Problema não especificado relacionado com a educação dos filhos","origin":"icd10_description","chapter":"Z","label":714}
 {"code":"Z16","text":"Outros problemas especificados relacionados com o grupo primário de suporte","origin":"icd10_description","chapter":"Z","label":714}
+{"code":"Z18","text":"Parente dependente de cuidados, residente no domicílio","origin":"icd10_description","chapter":"Z","label":715}
+{"code":"Z19","text":"Desaparecimento e falecimento de um membro da família","origin":"icd10_description","chapter":"Z","label":716}
 {"code":"Z20","text":"Negligência ou abandono, confirmado","origin":"icd10_description","chapter":"Z","label":717}
 {"code":"Z20","text":"Problemas nas relações com os pais ou com os sogros","origin":"icd10_description","chapter":"Z","label":717}
 {"code":"Z20","text":"Outros problemas especificados relacionados com o grupo primário de suporte","origin":"icd10_description","chapter":"Z","label":717}
@@ -10323,11 +10731,14 @@
 {"code":"Z21","text":"Problema não especificado relacionado com o grupo primário de suporte","origin":"icd10_description","chapter":"Z","label":718}
 {"code":"Z22","text":"Parente dependente de cuidados, residente no domicílio","origin":"icd10_description","chapter":"Z","label":719}
 {"code":"Z22","text":"Outros acontecimentos difíceis da vida afetando a família e o lar","origin":"icd10_description","chapter":"Z","label":719}
+{"code":"Z23","text":"Desaparecimento e falecimento de um membro da família","origin":"icd10_description","chapter":"Z","label":720}
+{"code":"Z24","text":"Problema não especificado relacionado com o grupo primário de suporte","origin":"icd10_description","chapter":"Z","label":721}
 {"code":"Z25","text":"Abuso físico, confirmado","origin":"icd10_description","chapter":"Z","label":722}
 {"code":"Z25","text":"Abuso sexual, confirmado","origin":"icd10_description","chapter":"Z","label":722}
 {"code":"Z25","text":"Maus tratos, sem outra especificação, confirmados","origin":"icd10_description","chapter":"Z","label":722}
 {"code":"Z25","text":"Vítima de crime e terrorismo","origin":"icd10_description","chapter":"Z","label":722}
 {"code":"Z25","text":"Exposição a catástrofe, guerra e outras hostilidades","origin":"icd10_description","chapter":"Z","label":722}
+{"code":"Z27","text":"Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito","origin":"icd10_description","chapter":"Z","label":723}
 {"code":"Z28","text":"Competências sociais inadequadas não classificadas noutra parte","origin":"icd10_description","chapter":"Z","label":724}
 {"code":"Z28","text":"Limites impostos às atividades por invalidez","origin":"icd10_description","chapter":"Z","label":724}
 {"code":"Z29","text":"Outros problemas relacionados com o ambiente físico","origin":"icd10_description","chapter":"Z","label":725}

@@ -1,13 +1,16 @@
 import pandas as pd
 from datasets import Dataset, Features, ClassLabel, Value  # , DatasetDict
+import logging
+import click
 
 
 def semicolon_colon_split(df, string_split, column_name):
-    # Assuming 'df' is your DataFrame, 'column_name' is the name of the column to split,
-    # and 'string_split' is the delimiter to split the string by.
-
+    
     # Drop NA values
     df = df.dropna()
+
+    print(df.head(50))
+    
 
     # Optional: Rename columns if needed
     # df = df.rename(columns={old_column_name: 'new_column_name'})
@@ -17,20 +20,34 @@ def semicolon_colon_split(df, string_split, column_name):
 
     # Iterate over each row in the DataFrame
     for each in df.itertuples():
+        # check if each has split_string in column_name. if not append it to rows_to_append
+        if string_split not in getattr(each, column_name):
+            rows_to_append.append({"code": each.code, column_name: getattr(each, column_name)})
+            continue
         # Check if the delimiter exists in the column of interest
         if string_split in getattr(each, column_name):
             # Split the string in the specified column by the delimiter
             for part in getattr(each, column_name).split(string_split):
                 # Create a new row for each part of the split string and append it to the list
                 rows_to_append.append({"code": each.code, column_name: part})
-
+                # print(f"rows to append: {rows_to_append}")
     # Create a new DataFrame from the list of dictionaries
+    
+    print("each", each)
+    print("string_split", string_split)
+    print("column_name", column_name)
+    print("part", part)
+    #print(rows_to_append)
+    
     new_df = pd.DataFrame(rows_to_append)
 
     return new_df
 
 
-def pre_train_prep(force=True):
+@click.command()
+@click.option("--force", default=True, help="Force the data processing")
+@click.option("--hf", default=True, help="Save to Huffingface")
+def main(force=True, hf=True):
     if force:
         # import data icpc2_preprocessed.csv
         data = pd.read_csv("data/icpc2_processed.csv")
@@ -69,11 +86,6 @@ def pre_train_prep(force=True):
 
         ## Process icpc2_description
 
-        # split icpc2_description strings by "/" into multiple rows so that each split string is in a new row with the same code
-
-        # for each in data_icpc2_1.itertuples():
-        #     if '/' in each.icd10_description:
-
         # process icpc2_description
         data_icpc2_3 = semicolon_colon_split(data_icpc2_3, "; ", "icpc2_inclusion")
 
@@ -92,14 +104,25 @@ def pre_train_prep(force=True):
         data_icpc2_3 = data_icpc2_3.rename(columns={"icpc2_inclusion": "text"})
         data_icd10 = data_icd10.rename(columns={"icd10_description": "text"})
 
+
+        
+
         # merge the dataframes
         data = pd.concat([data_icpc2_1, data_icpc2_2, data_icpc2_3, data_icd10])
 
         # substitute "-" by "A" in codes that start with "-"
         data["code"] = data["code"].str.replace(r"^-", "A", regex=True)
-        
+
         # Remove duplicates where text is the same and origin is icpc2_short if icpc2_description exists
-        data = data[~((data.duplicated(subset=["text"], keep=False)) & (data["origin"] == "icpc2_short"))]
+        data = data[
+            ~(
+                (data.duplicated(subset=["text"], keep=False))
+                & (data["origin"] == "icpc2_short")
+            )
+        ]
+
+        # add data from data augmentation csv
+        # data_aug = pd.read_csv("data/data_augmentation.csv")
 
         # create a new column with the chapter of the code
         data["chapter"] = data["code"].str[0]
@@ -120,13 +143,19 @@ def pre_train_prep(force=True):
 
         # ClassLable creation
         list_codes = data["code"].unique().tolist()
+        
+        #sort by code
+        list_codes.sort()
+        
+        # get the number of codes
         n_codes = len(list_codes)
-
+        
+        # class labels
         class_labels = ClassLabel(
             num_classes=n_codes,
             names=list_codes,
         )
-
+        
         # Define the features
         features = Features(
             {
@@ -142,8 +171,6 @@ def pre_train_prep(force=True):
         dataset = Dataset.from_pandas(
             data[["code", "text", "origin", "chapter", "label"]], features=features
         )
-        
-        
 
         # train_test_split = dataset.train_test_split(
         #     test_size=0.2,
@@ -180,24 +207,21 @@ def pre_train_prep(force=True):
         # )
 
         dataset_dict = dataset
+        
+        #sort by code
+        dataset_dict = dataset_dict.sort("code")
 
-        #print(dataset_dict)
-        dataset_dict.save_to_disk("data/data_pre_train_hf")
-        dataset_dict.push_to_hub(
-            repo_id="diogocarapito/text-to-icpc2",
-        )
+        if hf:
+            # print(dataset_dict)
+            dataset_dict.save_to_disk("data/data_pre_train_hf")
+            dataset_dict.push_to_hub(
+                repo_id="diogocarapito/text-to-icpc2",
+            )
 
         return data
 
     else:
         return pd.read_csv("data/data_pre_train.csv")
-
-
-# @click.command()
-# @click.option("--force", default=True, help="Force the data processing")
-def main():
-    data = pre_train_prep(force=True)
-    print(data)
 
 
 if __name__ == "__main__":

@@ -875,17 +875,24 @@ A01,dor crónica generalizada,icpc2_inclusion,A,0
 A01,dores múltiplas,icpc2_inclusion,A,0
 A02,calafrios,icpc2_inclusion,A,1
 A02,tremores,icpc2_inclusion,A,1
+A03,pirexia,icpc2_inclusion,A,2
 A04,síndrome de fadiga crónica,icpc2_inclusion,A,3
 A04,exaustão,icpc2_inclusion,A,3
 A04,fadiga,icpc2_inclusion,A,3
 A04,lassidão,icpc2_inclusion,A,3
 A04,letargia,icpc2_inclusion,A,3
 A04,fadiga pós-viral,icpc2_inclusion,A,3
+A05,mal-estar,icpc2_inclusion,A,4
 A06,perda momentânea da consciência,icpc2_inclusion,A,5
 A06,colapso,icpc2_inclusion,A,5
 A06,crise vasovagal,icpc2_inclusion,A,5
+A07,estupor,icpc2_inclusion,A,6
 A08,alto,icpc2_inclusion,A,7
 A08,massa NE,icpc2_inclusion,A,7
+A09,"hiperhidrose, difusa e localizada",icpc2_inclusion,A,8
+A10,sangramento/hemorragia de mais de um local/órgão,icpc2_inclusion,A,9
+A13,preocupação com/medo das consequências da medicação/de tratamento médico,icpc2_inclusion,A,11
+A16,choro excessivo/bebé agitado,icpc2_inclusion,A,12
 A21,outro factor de risco para malignidade,icpc2_inclusion,A,15
 A21,tratamento anterior de malignidade,icpc2_inclusion,A,15
 A21,história pessoal/familiar de malignidade,icpc2_inclusion,A,15
@@ -898,6 +905,10 @@ A29,quedas,icpc2_inclusion,A,21
 A29,sonolência,icpc2_inclusion,A,21
 A70,efeito tardio da tuberculose,icpc2_inclusion,A,62
 A70,infecção por tuberculose em qualquer local do corpo,icpc2_inclusion,A,62
+A71,complicações de sarampo,icpc2_inclusion,A,63
+A72,complicações de varicela,icpc2_inclusion,A,64
+A73,complicações de malária,icpc2_inclusion,A,65
+A74,complicações da rubéola,icpc2_inclusion,A,66
 A75,febre glandular,icpc2_inclusion,A,67
 A75,doença de Pfeiffer,icpc2_inclusion,A,67
 A76,varíola bovina,icpc2_inclusion,A,68
@@ -922,8 +933,12 @@ A78,aftas NE,icpc2_inclusion,A,70
 A78,toxoplasmose,icpc2_inclusion,A,70
 A79,carcinomatose (localização primária desconhecida),icpc2_inclusion,A,71
 A79,neoplasia secundária/metastática com localização primária desconhecida,icpc2_inclusion,A,71
+A80,acidente de viação,icpc2_inclusion,A,72
+A81,ferimentos internos múltiplos NE,icpc2_inclusion,A,73
 A82,deformidade/cicatriz resultante de ferimento anterior,icpc2_inclusion,A,74
 A82,amputação anterior,icpc2_inclusion,A,74
+A84,efeito tóxico de overdose de agente medicinal,icpc2_inclusion,A,75
+A85,efeito adverso/alergia/anafilaxia devido a medicação em dose correcta,icpc2_inclusion,A,76
 A86,efeito tóxico geral/local de monóxido de carbono,icpc2_inclusion,A,77
 A86,efeito tóxico geral/local de materiais industriais,icpc2_inclusion,A,77
 A86,efeito tóxico geral/local de chumbo,icpc2_inclusion,A,77
@@ -937,6 +952,8 @@ A88,efeito adverso de frio/calor/relâmpago/movimento/pressão/radiação,icpc2_
 A88,frieiras,icpc2_inclusion,A,79
 A88,afogamento,icpc2_inclusion,A,79
 A88,jet lag (cansaço e distúrbios causados pela diferença de fuso horário),icpc2_inclusion,A,79
+A89,"desconforto/incapacidade/deficiência/dor/limitação da função resultante da instalação/utilização de um dispositivo para fornecer/corrigir deficiências: catéter, colostomia, gastrostomia, válvula cardíaca, prótese articular, transplante de órgão, pacemaker",icpc2_inclusion,A,80
+A90,anomalia cromossómica e outras anomalias congénitas sistémicas não classificadas noutro local.,icpc2_inclusion,A,81
 A91,perturbação electrolítica inexplicada,icpc2_inclusion,A,82
 A91,hiperglicémia inexplicada,icpc2_inclusion,A,82
 A91,patologia/imagiologia anormal e inexplicada,icpc2_inclusion,A,82
@@ -944,10 +961,16 @@ A92,edema alérgico,icpc2_inclusion,A,83
 A92,choque anafilático,icpc2_inclusion,A,83
 A92,edema angioneurótico,icpc2_inclusion,A,83
 A92,alergia alimentar,icpc2_inclusion,A,83
+A97,nenhuma doença/afecção abordada durante a consulta,icpc2_inclusion,A,88
+A98,"procedimento/aconselhamento médico com intuito preventivo, incluindo aconselhamento genético",icpc2_inclusion,A,89
 A99,portador de doença NE,icpc2_inclusion,A,90
 A99,vigilância de problema continuado NE,icpc2_inclusion,A,90
 B02,linfadenopatia com/sem dor/sensibilidade,icpc2_inclusion,B,91
 B02,outro sintoma/queixa do(s) gânglio(s) linfático(s),icpc2_inclusion,B,91
+B28,incapacidade provocada por problemas de perda de sangue,icpc2_inclusion,B,96
+B70,abcesso de gânglio linfático,icpc2_inclusion,B,98
+B71,linfadenite mesentérica,icpc2_inclusion,B,99
+B73,todos os tipos de leucemia,icpc2_inclusion,B,101
 B74,mieloma múltiplo,icpc2_inclusion,B,102
 B74,doença mieloproliferativa,icpc2_inclusion,B,102
 B75,neoplasia benigna do sangue,icpc2_inclusion,B,103
@@ -957,6 +980,8 @@ B78,traço falciforme,icpc2_inclusion,B,106
 B78,anemia de células falciformes,icpc2_inclusion,B,106
 B78,esferocitose,icpc2_inclusion,B,106
 B78,talassémia,icpc2_inclusion,B,106
+B79,anemia congénita,icpc2_inclusion,B,107
+B80,anemia devida a perda de sangue,icpc2_inclusion,B,108
 B81,anemia macrocítica,icpc2_inclusion,B,109
 B81,anemia perniciosa,icpc2_inclusion,B,109
 B82,anemia hemolítica adquirida,icpc2_inclusion,B,110
@@ -991,6 +1016,8 @@ D03,acidez,icpc2_inclusion,D,118
 D03,pirose,icpc2_inclusion,D,118
 D04,espasmo anal,icpc2_inclusion,D,119
 D04,proctalgia fugaz,icpc2_inclusion,D,119
+D05,prurido perianal,icpc2_inclusion,D,120
+D06,dor do cólon,icpc2_inclusion,D,121
 D08,estômago inchado,icpc2_inclusion,D,123
 D08,arroto,icpc2_inclusion,D,123
 D08,dor provocada por gases,icpc2_inclusion,D,123
@@ -1000,6 +1027,11 @@ D10,hiperemese,icpc2_inclusion,D,125
 D10,esforço de vómito,icpc2_inclusion,D,125
 D11,evacuação intestinal frequente/solta,icpc2_inclusion,D,126
 D11,fezes líquidas,icpc2_inclusion,D,126
+D12,impactação fecal,icpc2_inclusion,D,127
+D13,ictérico,icpc2_inclusion,D,128
+D15,fezes escuras/tipo alcatrão,icpc2_inclusion,D,130
+D16,sangue fresco nas fezes,icpc2_inclusion,D,131
+D17,incontinência fecal,icpc2_inclusion,D,132
 D19,problema da dentadura,icpc2_inclusion,D,134
 D19,hemorragia gengival,icpc2_inclusion,D,134
 D19,erupção dos dentes,icpc2_inclusion,D,134
@@ -1014,14 +1046,20 @@ D20,inflamação da boca,icpc2_inclusion,D,135
 D20,lábios inchados,icpc2_inclusion,D,135
 D21,sensação de sufoco,icpc2_inclusion,D,136
 D21,disfagia,icpc2_inclusion,D,136
+D24,alto no abdómen,icpc2_inclusion,D,138
+D25,abdómen inchado sem massa,icpc2_inclusion,D,139
 D29,ascite,icpc2_inclusion,D,143
 D29,ranger dos dentes,icpc2_inclusion,D,143
+D70,"infecção gastrointestinal/disenteria com organismos especificados incluindo campylobacter, giardia, salmonella, shigella, febre tifoide, cólera",icpc2_inclusion,D,144
+D71,meningite/orquite/pancreatite por papeira,icpc2_inclusion,D,145
 D72,todas as hepatites de presumível etiologia viral,icpc2_inclusion,D,146
 D72,hepatite crónica activa,icpc2_inclusion,D,146
 D73,diarreia/vómitos presumivelmente infecciosos,icpc2_inclusion,D,147
 D73,disenteria NE,icpc2_inclusion,D,147
 D73,intoxicação alimentar,icpc2_inclusion,D,147
 D73,gripe gástrica,icpc2_inclusion,D,147
+D74,carcinoma do estômago,icpc2_inclusion,D,148
+D76,carcinoma do pâncreas,icpc2_inclusion,D,150
 D77,todas as outras neoplasias malignas primárias do sistema digestivo,icpc2_inclusion,D,151
 D77,cancro da vesícula,icpc2_inclusion,D,151
 D77,cancro do fígado,icpc2_inclusion,D,151
@@ -1031,6 +1069,7 @@ D78,pólipo do cólon,icpc2_inclusion,D,152
 D78,pólipo do duodeno,icpc2_inclusion,D,152
 D78,pólipo do recto,icpc2_inclusion,D,152
 D78,pólipo do estômago,icpc2_inclusion,D,152
+D79,"corpo estranho engolido/no tubo digestivo, incluindo boca, esófago, recto",icpc2_inclusion,D,153
 D80,traumatismo de órgão abdominal,icpc2_inclusion,D,154
 D80,traumatismo dos dentes,icpc2_inclusion,D,154
 D80,traumatismo da língua,icpc2_inclusion,D,154
@@ -1062,12 +1101,17 @@ D84,divertículo esofágico,icpc2_inclusion,D,158
 D84,esofagite,icpc2_inclusion,D,158
 D84,ulceração esofágica,icpc2_inclusion,D,158
 D84,refluxo,icpc2_inclusion,D,158
+D85,hemorragia/obstrução/perfuração de úlcera,icpc2_inclusion,D,159
 D86,erosão aguda,icpc2_inclusion,D,160
 D86,úlcera gástrica/gastrojejunal/marginal,icpc2_inclusion,D,160
 D86,síndrome de Zollinger-Ellison,icpc2_inclusion,D,160
 D87,dilatação aguda do estômago,icpc2_inclusion,D,161
 D87,duodenite,icpc2_inclusion,D,161
 D87,gastrite,icpc2_inclusion,D,161
+D88,abcesso/perfuração do apêndice,icpc2_inclusion,D,162
+D90,hérnia diafragmática,icpc2_inclusion,D,164
+D91,hérnia femural/umbilical/ventral,icpc2_inclusion,D,165
+D92,diverticulite/diverticulose do intestino,icpc2_inclusion,D,166
 D93,colite mucosa,icpc2_inclusion,D,167
 D93,colite espástica,icpc2_inclusion,D,167
 D94,doença de Crohn,icpc2_inclusion,D,168
@@ -1104,8 +1148,10 @@ D99,doença pancreática,icpc2_inclusion,D,173
 D99,peritonite,icpc2_inclusion,D,173
 D99,megacólon secundário,icpc2_inclusion,D,173
 D99,espru,icpc2_inclusion,D,173
+F02,olhos congestionados/inflamados,icpc2_inclusion,F,175
 F03,lacrimejo,icpc2_inclusion,F,176
 F03,secreção purulenta,icpc2_inclusion,F,176
+F04,pontos fixos/flutuantes no campo visual,icpc2_inclusion,F,177
 F05,visão desfocada,icpc2_inclusion,F,178
 F05,dificuldade em ler,icpc2_inclusion,F,178
 F05,diplopia,icpc2_inclusion,F,178
@@ -1115,13 +1161,20 @@ F05,escotoma e ofuscamento quando os sintomas são confinados aos olhos,icpc2_in
 F05,cegueira temporária NE,icpc2_inclusion,F,178
 F05,perda de visão,icpc2_inclusion,F,178
 F05,vista cansada,icpc2_inclusion,F,178
+F13,ardor/secura/prurido no olho,icpc2_inclusion,F,179
+F14,nistagmo,icpc2_inclusion,F,180
 F15,alteração da cor do olho,icpc2_inclusion,F,181
 F15,olho inchado,icpc2_inclusion,F,181
 F16,pestanejo anormal,icpc2_inclusion,F,182
 F16,ptose palpebral,icpc2_inclusion,F,182
+F17,"problemas devido aos óculos afectando a estrutura, função ou sensações do(s) olho(s)",icpc2_inclusion,F,183
+F18,"problemas devido às lentes de contacto afectando a estrutura, função ou sensações do(s) olho(s)",icpc2_inclusion,F,184
+F27,medo de cegueira,icpc2_inclusion,F,185
+F28,cegueira de um olho,icpc2_inclusion,F,186
 F70,conjuntivite bacteriana,icpc2_inclusion,F,188
 F70,conjuntivite NE,icpc2_inclusion,F,188
 F70,conjuntivite viral,icpc2_inclusion,F,188
+F71,conjuntivite alérgica com/sem rinorreia,icpc2_inclusion,F,189
 F72,dermatite/dermatose das pálpebras,icpc2_inclusion,F,190
 F72,infecção da pálpebra,icpc2_inclusion,F,190
 F72,hordéolo,icpc2_inclusion,F,190
@@ -1133,12 +1186,14 @@ F73,inflamação da órbita,icpc2_inclusion,F,191
 F73,iridociclite,icpc2_inclusion,F,191
 F73,irite,icpc2_inclusion,F,191
 F73,queratite,icpc2_inclusion,F,191
+F74,neoplasia benigna/maligna do olho/anexos,icpc2_inclusion,F,192
 F75,olho negro,icpc2_inclusion,F,193
 F75,hifema,icpc2_inclusion,F,193
 F75,hemorragia subconjuntival,icpc2_inclusion,F,193
 F79,escoriação da córnea,icpc2_inclusion,F,195
 F79,queimadura por clarão,icpc2_inclusion,F,195
 F79,cegueira provocada pela neve,icpc2_inclusion,F,195
+F83,retinopatia diabética/hipertensiva,icpc2_inclusion,F,199
 F85,úlcera dendrítica,icpc2_inclusion,F,201
 F85,queratite viral,icpc2_inclusion,F,201
 F91,astigmatismo,icpc2_inclusion,F,203
@@ -1147,6 +1202,8 @@ F91,visão longa,icpc2_inclusion,F,203
 F91,miopia,icpc2_inclusion,F,203
 F91,presbiopia,icpc2_inclusion,F,203
 F91,visão curta,icpc2_inclusion,F,203
+F93,aumento da pressão intra-ocular,icpc2_inclusion,F,205
+F94,cegueira parcial/total dos dois olhos,icpc2_inclusion,F,206
 F95,olhos cruzados,icpc2_inclusion,F,207
 F95,olhos tortos,icpc2_inclusion,F,207
 F99,ambliopia,icpc2_inclusion,F,208
@@ -1166,6 +1223,11 @@ F99,esclerite,icpc2_inclusion,F,208
 H02,perturbação de discriminação auditiva,icpc2_inclusion,H,210
 H02,diplacúsia e sensação de perda de audição,icpc2_inclusion,H,210
 H02,hiperacúsia,icpc2_inclusion,H,210
+H03,eco no ouvido,icpc2_inclusion,H,211
+H05,sangue dentro do/expelido pelo ouvido,icpc2_inclusion,H,213
+H13,ouvido obstruído,icpc2_inclusion,H,214
+H27,medo de surdez,icpc2_inclusion,H,216
+H28,surdez temporária,icpc2_inclusion,H,217
 H29,ouvidos a estalar,icpc2_inclusion,H,218
 H29,comichão nos ouvidos,icpc2_inclusion,H,218
 H29,puxar as orelhas,icpc2_inclusion,H,218
@@ -1177,15 +1239,20 @@ H71,timpanite aguda,icpc2_inclusion,H,220
 H71,otite média NE,icpc2_inclusion,H,220
 H72,glue ear,icpc2_inclusion,H,221
 H72,otite média com efusão (OME),icpc2_inclusion,H,221
+H73,bloqueio/catarro/disfunção/salpingite da trompa de Eustáquio,icpc2_inclusion,H,222
 H74,colesteatoma,icpc2_inclusion,H,223
 H74,mastoidite crónica,icpc2_inclusion,H,223
 H74,otite média crónica supurativa,icpc2_inclusion,H,223
+H75,neoplasia benigna/maligna do ouvido,icpc2_inclusion,H,224
+H78,traumatismo do meato externo/pavilhão auricular,icpc2_inclusion,H,227
+H79,rotura do tímpano traumática/por pressão,icpc2_inclusion,H,228
 H80,orelha acessória,icpc2_inclusion,H,229
 H80,orelhas de morcego,icpc2_inclusion,H,229
 H82,vertigem paroxística/posicional benigna,icpc2_inclusion,H,231
 H82,labirintite,icpc2_inclusion,H,231
 H82,doença de Meniére,icpc2_inclusion,H,231
 H82,neuronite vestibular,icpc2_inclusion,H,231
+H85,surdez por ruído,icpc2_inclusion,H,234
 H86,surdez congénita,icpc2_inclusion,H,235
 H86,surdez de um ouvido,icpc2_inclusion,H,235
 H86,surdez parcial/total de ambos os ouvidos,icpc2_inclusion,H,235
@@ -1193,6 +1260,8 @@ H99,constrição do canal externo,icpc2_inclusion,H,236
 H99,canal externo estreito,icpc2_inclusion,H,236
 H99,pólipo do ouvido médio,icpc2_inclusion,H,236
 H99,estenose do canal externo,icpc2_inclusion,H,236
+K01,dor atribuída ao coração,icpc2_inclusion,K,237
+K02,peso no coração,icpc2_inclusion,K,238
 K04,bradicardia,icpc2_inclusion,K,240
 K04,taquicardia,icpc2_inclusion,K,240
 K06,aranha vascular,icpc2_inclusion,K,242
@@ -1203,6 +1272,7 @@ K07,pés/pernas inchados,icpc2_inclusion,K,243
 K22,outro factor de risco para doença cardiovascular,icpc2_inclusion,K,244
 K22,história pessoal/familiar de doença cardiovascular,icpc2_inclusion,K,244
 K22,episódio anterior de doença cardiovascular,icpc2_inclusion,K,244
+K24,medo de ataque cardíaco,icpc2_inclusion,K,245
 K29,problema cardíaco,icpc2_inclusion,K,249
 K29,pressão arterial baixa,icpc2_inclusion,K,249
 K29,coração fraco,icpc2_inclusion,K,249
@@ -1212,6 +1282,7 @@ K70,miocardite,icpc2_inclusion,K,250
 K70,pericardite,icpc2_inclusion,K,250
 K71,coreia,icpc2_inclusion,K,251
 K71,estenose mitral,icpc2_inclusion,K,251
+K72,neoplasia cardiovascular benigna/maligna,icpc2_inclusion,K,252
 K73,defeito do septo auricular/ventricular,icpc2_inclusion,K,253
 K73,tetralogia de Fallot,icpc2_inclusion,K,253
 K73,canal arterial persistente,icpc2_inclusion,K,253
@@ -1220,6 +1291,7 @@ K74,angina de peito,icpc2_inclusion,K,254
 K74,angina com espasmo,icpc2_inclusion,K,254
 K74,dor torácica isquémica,icpc2_inclusion,K,254
 K74,angina instável,icpc2_inclusion,K,254
+K75,enfarte do miocárdio especificado como tendo sido agudo ou até 4 semanas (28 dias) após o começo,icpc2_inclusion,K,255
 K76,aneurisma cardíaco,icpc2_inclusion,K,256
 K76,doença cardíaca arteriosclerótica/aterosclerótica,icpc2_inclusion,K,256
 K76,doença coronária,icpc2_inclusion,K,256
@@ -1232,6 +1304,7 @@ K77,doença cardíaca/insuficiência cardíaca com edema pulmonar,icpc2_inclusio
 K77,insuficiência cardíaca NE,icpc2_inclusion,K,257
 K77,insuficiência ventricular esquerda,icpc2_inclusion,K,257
 K77,insuficiência ventricular direita,icpc2_inclusion,K,257
+K79,taquicardia supraventricular/ventricular,icpc2_inclusion,K,259
 K80,batimentos prematuros auriculares/juncionais/ventriculares,icpc2_inclusion,K,260
 K80,bigeminia,icpc2_inclusion,K,260
 K80,batimentos ectópicos,icpc2_inclusion,K,260
@@ -1260,6 +1333,8 @@ K85,hipertensão transitória/lábil,icpc2_inclusion,K,265
 K86,hipertensão essencial,icpc2_inclusion,K,266
 K86,hipertensão NE,icpc2_inclusion,K,266
 K86,hipertensão idiopática,icpc2_inclusion,K,266
+K87,hipertensão maligna,icpc2_inclusion,K,267
+K88,hipotensão idiopática/ortostática,icpc2_inclusion,K,268
 K89,insuficiência basilar,icpc2_inclusion,K,269
 K89,"""drop attacks""",icpc2_inclusion,K,269
 K89,amnésia global transitória,icpc2_inclusion,K,269
@@ -1302,12 +1377,18 @@ K99,outro aneurisma,icpc2_inclusion,K,277
 K99,poliarterite nodosa,icpc2_inclusion,K,277
 K99,veias varicosas noutras partes do corpo para além das extremidades inferiores,icpc2_inclusion,K,277
 K99,vasculite,icpc2_inclusion,K,277
+L01,dor atribuída à coluna/sistema musculosquelético cervical,icpc2_inclusion,L,278
 L02,dor de costas NE,icpc2_inclusion,L,279
 L02,dor torácica dorsal,icpc2_inclusion,L,279
 L03,dor de costas (lombares/sacroilíacas),icpc2_inclusion,L,280
 L03,coccidinia,icpc2_inclusion,L,280
 L03,lumbago,icpc2_inclusion,L,280
 L03,lombalgia,icpc2_inclusion,L,280
+L04,dor torácica atribuída ao sistema músculo-esquelético,icpc2_inclusion,L,281
+L05,dor no quadril,icpc2_inclusion,L,282
+L07,sintoma da articulação temporo-mandibular,icpc2_inclusion,L,283
+L14,cãibras na perna,icpc2_inclusion,L,290
+L17,metatarsalgia,icpc2_inclusion,L,293
 L18,fibromialgia,icpc2_inclusion,L,294
 L18,fibrosite,icpc2_inclusion,L,294
 L18,mialgia,icpc2_inclusion,L,294
@@ -1318,16 +1399,20 @@ L19,rigidez/tensão muscular,icpc2_inclusion,L,295
 L20,artralgia,icpc2_inclusion,L,296
 L20,derrame/edema articular,icpc2_inclusion,L,296
 L20,dor/rigidez/fraqueza articular,icpc2_inclusion,L,296
+L29,dores de crescimento na criança,icpc2_inclusion,L,300
 L70,tenossinovite infecciosa,icpc2_inclusion,L,301
 L70,osteomielite,icpc2_inclusion,L,301
 L70,artrite piogénica,icpc2_inclusion,L,301
 L71,fibrosarcoma,icpc2_inclusion,L,302
 L71,osteossarcoma,icpc2_inclusion,L,302
+L72,fractura de Colles,icpc2_inclusion,L,303
+L73,fractura de Pott,icpc2_inclusion,L,304
 L74,fractura de osso do carpo/metacarpo,icpc2_inclusion,L,305
 L74,fractura de falange da mão/do pé,icpc2_inclusion,L,305
 L74,fractura de osso do tarso/metatarso,icpc2_inclusion,L,305
 L79,entorse/distensão de outra articulação/ligamento,icpc2_inclusion,L,310
 L79,traumatismo em chicotada,icpc2_inclusion,L,310
+L80,"luxação/subluxação de qualquer localização, incluindo da coluna vertebral",icpc2_inclusion,L,311
 L81,corpo estranho profundo,icpc2_inclusion,L,312
 L81,amputação traumática,icpc2_inclusion,L,312
 L81,hemartrose traumática,icpc2_inclusion,L,312
@@ -1365,6 +1450,8 @@ L87,tenossinovite,icpc2_inclusion,L,318
 L87,dedo em gatilho,icpc2_inclusion,L,318
 L88,condição associada: espondilite anquilosante,icpc2_inclusion,L,319
 L88,condição associada: artrite juvenil,icpc2_inclusion,L,319
+L89,osteoartrite da anca secundária a displasia/traumatismo,icpc2_inclusion,L,320
+L90,osteoartrite do joelho secundária a displasia/traumatismo,icpc2_inclusion,L,321
 L91,artrite NE,icpc2_inclusion,L,322
 L91,osteoartrite,icpc2_inclusion,L,322
 L91,artropatia traumática,icpc2_inclusion,L,322
@@ -1373,11 +1460,14 @@ L92,ombro congelado,icpc2_inclusion,L,323
 L92,osteoartrose/sinovite do ombro,icpc2_inclusion,L,323
 L92,síndrome da coifa dos rotadores,icpc2_inclusion,L,323
 L92,tendinite abarticular do ombro,icpc2_inclusion,L,323
+L93,epicondilite lateral,icpc2_inclusion,L,324
 L94,doença de Legg-Calvé-Perthes,icpc2_inclusion,L,325
 L94,doença de Osgood-Schlatter,icpc2_inclusion,L,325
 L94,osteocondrite dissecante,icpc2_inclusion,L,325
 L94,doença de Scheuermann,icpc2_inclusion,L,325
 L94,epífise femural deslocada,icpc2_inclusion,L,325
+L95,fractura patológica devido a osteoporose,icpc2_inclusion,L,326
+L96,lesão aguda do menisco/ligamentos cruzados,icpc2_inclusion,L,327
 L97,neoplasia músculo-esquelética benigna,icpc2_inclusion,L,328
 L97,neoplasia músculo-esquelética não especificada como benigna ou maligna/quando não existe histologia disponível,icpc2_inclusion,L,328
 L98,joanete,icpc2_inclusion,L,329
@@ -1418,6 +1508,7 @@ N08,sacudidela,icpc2_inclusion,N,337
 N08,tetania,icpc2_inclusion,N,337
 N08,tremor,icpc2_inclusion,N,337
 N08,espasmo,icpc2_inclusion,N,337
+N16,anosmia,icpc2_inclusion,N,338
 N17,sensação de desmaio/cabeça leve,icpc2_inclusion,N,339
 N17,tontura,icpc2_inclusion,N,339
 N17,perda de equilíbrio,icpc2_inclusion,N,339
@@ -1440,6 +1531,8 @@ N73,abcesso cerebral,icpc2_inclusion,N,349
 N73,infecção a vírus lento,icpc2_inclusion,N,349
 N75,neurinoma do acústico,icpc2_inclusion,N,351
 N75,meningioma,icpc2_inclusion,N,351
+N76,neoplasia do sistema nervoso não especificada como benigna ou maligna/quando a histologia não está disponível,icpc2_inclusion,N,352
+N79,efeito tardio de concussão,icpc2_inclusion,N,353
 N80,contusão cerebral,icpc2_inclusion,N,354
 N80,lesão cerebral com/sem fractura craniana,icpc2_inclusion,N,354
 N80,hematoma extradural,icpc2_inclusion,N,354
@@ -1449,6 +1542,7 @@ N81,lesão de nervo,icpc2_inclusion,N,355
 N81,lesão da espinal medula,icpc2_inclusion,N,355
 N85,hidrocefalia,icpc2_inclusion,N,356
 N85,espinha bífida,icpc2_inclusion,N,356
+N86,esclerose disseminada,icpc2_inclusion,N,357
 N87,parkinsonismo induzido pela medicação,icpc2_inclusion,N,358
 N87,paralisia agitante,icpc2_inclusion,N,358
 N87,doença de Parkinson,icpc2_inclusion,N,358
@@ -1457,6 +1551,8 @@ N88,crises generalizadas,icpc2_inclusion,N,359
 N88,grande mal,icpc2_inclusion,N,359
 N88,pequeno mal,icpc2_inclusion,N,359
 N88,estado epiléptico,icpc2_inclusion,N,359
+N89,cefaleia vascular com/sem aura,icpc2_inclusion,N,360
+N92,tique doloroso,icpc2_inclusion,N,363
 N94,polineuropatia infecciosa aguda,icpc2_inclusion,N,365
 N94,"neuropatia diabética (codificação dupla com T89, T90)",icpc2_inclusion,N,365
 N94,síndrome de Guillain-Barré,icpc2_inclusion,N,365
@@ -1496,6 +1592,9 @@ P15,síndromes alcoólicas do cérebro,icpc2_inclusion,P,381
 P15,psicose alcoólica,icpc2_inclusion,P,381
 P15,alcoolismo,icpc2_inclusion,P,381
 P15,delirium tremens,icpc2_inclusion,P,381
+P16,embriaguez,icpc2_inclusion,P,382
+P17,problema de fumar,icpc2_inclusion,P,383
+P18,abuso de qualquer medicamento prescrito,icpc2_inclusion,P,384
 P19,dependência de droga,icpc2_inclusion,P,385
 P19,privação de droga,icpc2_inclusion,P,385
 P20,amnésia,icpc2_inclusion,P,386
@@ -1506,11 +1605,14 @@ P22,ciúme,icpc2_inclusion,P,387
 P22,criança super-activa,icpc2_inclusion,P,387
 P22,atraso da fala,icpc2_inclusion,P,387
 P22,birra,icpc2_inclusion,P,387
+P23,delinquência,icpc2_inclusion,P,388
+P24,dislexia,icpc2_inclusion,P,389
 P25,síndrome do ninho vazio,icpc2_inclusion,P,390
 P25,crise de meia-idade,icpc2_inclusion,P,390
 P25,problema de reforma,icpc2_inclusion,P,390
 P27,preocupação com doença mental,icpc2_inclusion,P,391
 P27,medo de tentativa de suicídio,icpc2_inclusion,P,391
+P28,baixa auto-estima,icpc2_inclusion,P,392
 P29,ilusões,icpc2_inclusion,P,393
 P29,problemas em comer NE,icpc2_inclusion,P,393
 P29,alucinações,icpc2_inclusion,P,393
@@ -1520,6 +1622,7 @@ P29,comportamentos estranhos,icpc2_inclusion,P,393
 P29,desconfiança,icpc2_inclusion,P,393
 P70,doença de Alzheimer,icpc2_inclusion,P,394
 P70,demência senil,icpc2_inclusion,P,394
+P71,delirium,icpc2_inclusion,P,395
 P72,todos os tipos de paranóia,icpc2_inclusion,P,396
 P72,todos os tipos de esquizofrenia,icpc2_inclusion,P,396
 P73,distúrbio bipolar,icpc2_inclusion,P,397
@@ -1544,11 +1647,15 @@ P80,síndrome de Munchhausen,icpc2_inclusion,P,404
 P80,psicopatia,icpc2_inclusion,P,404
 P81,perturbação de défice de atenção,icpc2_inclusion,P,405
 P81,hiperactividade,icpc2_inclusion,P,405
+P82,perturbação de stress pós-traumático crónica,icpc2_inclusion,P,406
+P98,psicose aguda/transitória/reactiva/puerperal,icpc2_inclusion,P,409
 P99,autismo,icpc2_inclusion,P,410
 P99,neurose NE,icpc2_inclusion,P,410
 R01,respiração dolorosa,icpc2_inclusion,R,411
 R01,dor pleurítica,icpc2_inclusion,R,411
 R01,pleurodinia,icpc2_inclusion,R,411
+R02,ortopneia,icpc2_inclusion,R,412
+R03,roncos,icpc2_inclusion,R,413
 R04,respiração anormal,icpc2_inclusion,R,414
 R04,apneia,icpc2_inclusion,R,414
 R04,interrupção da respiração,icpc2_inclusion,R,414
@@ -1557,6 +1664,7 @@ R04,dificuldade respiratória,icpc2_inclusion,R,414
 R04,ressonar,icpc2_inclusion,R,414
 R04,estridor,icpc2_inclusion,R,414
 R04,taquipneia,icpc2_inclusion,R,414
+R05,tosse (seca ou húmida),icpc2_inclusion,R,415
 R07,nariz tapado,icpc2_inclusion,R,417
 R07,rinorreia,icpc2_inclusion,R,417
 R07,corrimento nasal,icpc2_inclusion,R,417
@@ -1585,12 +1693,15 @@ R29,soluços,icpc2_inclusion,R,427
 R29,congestão dos pulmões,icpc2_inclusion,R,427
 R71,parapertussis,icpc2_inclusion,R,428
 R71,pertussis,icpc2_inclusion,R,428
+R72,amigdalite/faringite estreptocócica confirmada,icpc2_inclusion,R,429
+R73,infecção localizada no nariz,icpc2_inclusion,R,430
 R74,rinite aguda,icpc2_inclusion,R,431
 R74,coriza,icpc2_inclusion,R,431
 R74,resfriado,icpc2_inclusion,R,431
 R74,nasofaringite,icpc2_inclusion,R,431
 R74,faringite,icpc2_inclusion,R,431
 R74,infecção do trato respiratório superior/infecção respiratória superior,icpc2_inclusion,R,431
+R75,sinusite que afecte qualquer seio perinasal,icpc2_inclusion,R,432
 R76,abcesso peritonsilar,icpc2_inclusion,R,433
 R76,esquinência,icpc2_inclusion,R,433
 R77,falso crupe,icpc2_inclusion,R,434
@@ -1618,8 +1729,14 @@ R83,epiglotite,icpc2_inclusion,R,440
 R83,infecção respiratória fúngica,icpc2_inclusion,R,440
 R83,abcesso pulmonar,icpc2_inclusion,R,440
 R83,infecção por protozoário (sem pneumonia),icpc2_inclusion,R,440
+R84,malignidade da traqueia/brônquio/pulmão,icpc2_inclusion,R,441
 R85,malignidade na laringe/mediastino/nariz/faringe/pleura/seio perinasal,icpc2_inclusion,R,442
 R85,mesotelioma,icpc2_inclusion,R,442
+R87,corpo estranho no pulmão,icpc2_inclusion,R,444
+R88,lesão/traumatismo do nariz/do aparelho respiratório,icpc2_inclusion,R,445
+R89,malformação congénita do nariz/faringe/traqueia/laringe/brônquios/pulmões/pleura,icpc2_inclusion,R,446
+R90,amigdalite crónica,icpc2_inclusion,R,447
+R92,neoplasia respiratória não especificada quanto à benignidade ou malignidade/quando a histologia não é conhecida,icpc2_inclusion,R,448
 R95,limitação crónica das vias respiratórias,icpc2_inclusion,R,449
 R95,obstrução crónica das vias respiratórias,icpc2_inclusion,R,449
 R95,doença pulmonar obstrutiva crónica (DPOC),icpc2_inclusion,R,449
@@ -1645,22 +1762,31 @@ R99,insuficiência respiratória,icpc2_inclusion,R,453
 S01,sensação de ardor,icpc2_inclusion,S,454
 S01,lesão ou erupção cutânea dolorosa,icpc2_inclusion,S,454
 S01,pele dolorida,icpc2_inclusion,S,454
+S02,irritação da pele,icpc2_inclusion,S,455
+S03,verrugas vulgares,icpc2_inclusion,S,456
+S04,pápula,icpc2_inclusion,S,457
+S05,pápulas/tumores/inchaços em vários locais,icpc2_inclusion,S,458
 S06,mancha,icpc2_inclusion,S,459
 S06,eritema,icpc2_inclusion,S,459
 S06,vermelhidão,icpc2_inclusion,S,459
+S07,manchas/eritema/vermelhidão em múltiplos locais,icpc2_inclusion,S,460
 S08,olheiras,icpc2_inclusion,S,461
 S08,cianose,icpc2_inclusion,S,461
 S08,rubor,icpc2_inclusion,S,461
 S08,sardas,icpc2_inclusion,S,461
 S08,palidez,icpc2_inclusion,S,461
+S09,peroníquia,icpc2_inclusion,S,462
 S10,abcesso,icpc2_inclusion,S,463
 S10,furúnculo,icpc2_inclusion,S,463
+S11,infecção pós-traumática de uma ferida/mordedura,icpc2_inclusion,S,464
 S14,queimadura/escaldão de todos os graus,icpc2_inclusion,S,467
 S14,queimadura química externa,icpc2_inclusion,S,467
+S15,corpo estranho sob a unha,icpc2_inclusion,S,468
 S16,equimose,icpc2_inclusion,S,469
 S16,hematoma,icpc2_inclusion,S,469
 S17,contusão se houver solução de continuidade,icpc2_inclusion,S,470
 S17,esfoladela,icpc2_inclusion,S,470
+S18,laceração/corte da pele/tecidos subcutâneos,icpc2_inclusion,S,471
 S19,avulsão da unha,icpc2_inclusion,S,472
 S19,picada com uma agulha,icpc2_inclusion,S,472
 S19,punctura,icpc2_inclusion,S,472
@@ -1668,6 +1794,8 @@ S21,pele seca,icpc2_inclusion,S,474
 S21,"""peeling""",icpc2_inclusion,S,474
 S21,escamação,icpc2_inclusion,S,474
 S21,rugas,icpc2_inclusion,S,474
+S22,dilatação das extremidades dos dedos,icpc2_inclusion,S,475
+S23,alopécia,icpc2_inclusion,S,476
 S24,couro cabeludo seco,icpc2_inclusion,S,477
 S24,hirsutismo,icpc2_inclusion,S,477
 S29,celulite,icpc2_inclusion,S,481
@@ -1710,6 +1838,8 @@ S81,marca de nascimento angiomatosa,icpc2_inclusion,S,493
 S81,mancha cor vinho do Porto,icpc2_inclusion,S,493
 S83,marca de nascença,icpc2_inclusion,S,495
 S83,ictiose,icpc2_inclusion,S,495
+S84,impetigo secundário a outra dermatose,icpc2_inclusion,S,496
+S85,abcesso pilonidal,icpc2_inclusion,S,497
 S86,crosta láctea,icpc2_inclusion,S,498
 S86,caspa,icpc2_inclusion,S,498
 S87,dermatite flexural,icpc2_inclusion,S,499
@@ -1735,6 +1865,7 @@ S97,escara,icpc2_inclusion,S,509
 S97,úlcera de decúbito,icpc2_inclusion,S,509
 S97,úlcera de pressão,icpc2_inclusion,S,509
 S97,úlcera varicosa,icpc2_inclusion,S,509
+S98,vergões,icpc2_inclusion,S,510
 S99,dermatite artefacta,icpc2_inclusion,S,511
 S99,lúpus eritematoso discóide,icpc2_inclusion,S,511
 S99,eritema multiforme,icpc2_inclusion,S,511
@@ -1755,12 +1886,20 @@ S99,cicatriz,icpc2_inclusion,S,511
 S99,verruga seborreica ou senil,icpc2_inclusion,S,511
 S99,estria atrófica,icpc2_inclusion,S,511
 S99,vitíligo,icpc2_inclusion,S,511
+T01,polidipsia,icpc2_inclusion,T,512
 T02,comer de forma exagerada,icpc2_inclusion,T,513
 T02,polifagia,icpc2_inclusion,T,513
+T03,anorexia,icpc2_inclusion,T,514
+T04,problema em como alimentar um lactente/criança,icpc2_inclusion,T,515
+T05,problema em como alimentar um adulto,icpc2_inclusion,T,516
+T08,caquexia,icpc2_inclusion,T,518
 T10,criança que não cresce,icpc2_inclusion,T,519
 T10,atraso no desenvolvimento fisiológico,icpc2_inclusion,T,519
+T11,depleção hídrica,icpc2_inclusion,T,520
+T27,medo de diabetes,icpc2_inclusion,T,522
 T29,desejo de comer determinado alimento,icpc2_inclusion,T,524
 T29,peso inferior ao normal,icpc2_inclusion,T,524
+T73,outra neoplasia endócrina/neoplasia endócrina não especificada como benigna ou maligna/quando a histologia não está disponível,icpc2_inclusion,T,528
 T80,cretinismo,icpc2_inclusion,T,530
 T80,nanismo,icpc2_inclusion,T,530
 T81,bócio não tóxico,icpc2_inclusion,T,531
@@ -1800,6 +1939,7 @@ T99,pseudo gota,icpc2_inclusion,T,542
 T99,glicosuria renal,icpc2_inclusion,T,542
 T99,tiroidite,icpc2_inclusion,T,542
 T99,ácido úrico elevado,icpc2_inclusion,T,542
+U01,micção com ardor,icpc2_inclusion,U,543
 U02,noctúria,icpc2_inclusion,U,544
 U02,poliúria,icpc2_inclusion,U,544
 U04,enurese de origem orgânica,icpc2_inclusion,U,545
@@ -1808,6 +1948,7 @@ U04,incontinência de esforço,icpc2_inclusion,U,545
 U05,anúria,icpc2_inclusion,U,546
 U05,micção gotejante,icpc2_inclusion,U,546
 U05,oligúria,icpc2_inclusion,U,546
+U06,sangue na urina,icpc2_inclusion,U,547
 U07,urina com mau odor,icpc2_inclusion,U,548
 U07,urina escura,icpc2_inclusion,U,548
 U13,dor na bexiga,icpc2_inclusion,U,550
@@ -1831,6 +1972,7 @@ U77,neoplasia maligna do ureter,icpc2_inclusion,U,561
 U77,neoplasia maligna da uretra,icpc2_inclusion,U,561
 U78,papiloma da bexiga,icpc2_inclusion,U,562
 U78,pólipo do aparelho urinário,icpc2_inclusion,U,562
+U79,neoplasia da bexiga/rim/ureter/uretra não especificada como benigna ou maligna/quando a histologia não está disponível,icpc2_inclusion,U,563
 U80,contusão do rim,icpc2_inclusion,U,564
 U80,corpo estranho no aparelho urinário,icpc2_inclusion,U,564
 U85,rim poliquístico congénito,icpc2_inclusion,U,565
@@ -1842,6 +1984,7 @@ U88,nefrite,icpc2_inclusion,U,566
 U88,nefropatia,icpc2_inclusion,U,566
 U88,nefrosclerose,icpc2_inclusion,U,566
 U88,síndrome nefrótica,icpc2_inclusion,U,566
+U90,proteinúria postural,icpc2_inclusion,U,567
 U95,cálculo/pedra da bexiga/rim/ureter,icpc2_inclusion,U,568
 U95,urolitíase,icpc2_inclusion,U,568
 U98,glicosúria,icpc2_inclusion,U,569
@@ -1859,23 +2002,37 @@ U99,carúnculo uretral,icpc2_inclusion,U,570
 U99,aperto uretral,icpc2_inclusion,U,570
 W01,menstruação em atraso,icpc2_inclusion,W,571
 W01,sintomas sugestivos de gravidez,icpc2_inclusion,W,571
+W02,preocupação com a possibilidade de uma gravidez indesejada,icpc2_inclusion,W,572
+W03,ameaça de aborto,icpc2_inclusion,W,573
 W05,hiperemese gravídica,icpc2_inclusion,W,574
 W05,enjoos matinais numa gravidez confirmada,icpc2_inclusion,W,574
+W10,pílula do dia seguinte,icpc2_inclusion,W,575
+W11,planeamento familiar em mulheres por meio hormonal oral,icpc2_inclusion,W,576
+W12,planeamento familiar por meio de DIU,icpc2_inclusion,W,577
+W13,planeamento familiar por esterilização feminina,icpc2_inclusion,W,578
 W14,contracepção NE,icpc2_inclusion,W,579
 W14,planeamento familiar NE,icpc2_inclusion,W,579
+W15,esterilidade primária e secundária,icpc2_inclusion,W,580
 W19,galactorreia,icpc2_inclusion,W,583
 W19,supressão da lactação,icpc2_inclusion,W,583
 W19,desmame,icpc2_inclusion,W,583
+W27,receio de malformações congénitas no bebé,icpc2_inclusion,W,585
+W28,instabilidade pélvica,icpc2_inclusion,W,586
+W29,Sintoma/queixa sobre o planeamento familiar outro,icpc2_inclusion,W,587
 W72,coriocarcinoma,icpc2_inclusion,W,590
 W72,corioepitelioma,icpc2_inclusion,W,590
 W73,neoplasia benigna relacionada com a gravidez,icpc2_inclusion,W,591
 W73,mola hidatiforme,icpc2_inclusion,W,591
 W73,neoplasia relacionada com a gravidez não especificada como benigna ou maligna/quando a histologia não está disponível,icpc2_inclusion,W,591
+W75,consequências de traumatismos que interferem com a gravidez,icpc2_inclusion,W,592
+W76,malformação materna que pode afectar a gravidez/o parto,icpc2_inclusion,W,593
 W81,eclâmpsia,icpc2_inclusion,W,597
 W81,hipertensão na gravidez,icpc2_inclusion,W,597
 W81,edema na gravidez,icpc2_inclusion,W,597
 W81,pré-eclâmpsia,icpc2_inclusion,W,597
 W81,proteinúria na gravidez,icpc2_inclusion,W,597
+W82,aborto completo/incompleto/retido/habitual,icpc2_inclusion,W,598
+W83,"interrupção da gravidez, todo o tipo de complicações",icpc2_inclusion,W,599
 W84,primípara com mais idade que o desejável,icpc2_inclusion,W,600
 W84,anemia da gravidez,icpc2_inclusion,W,600
 W84,diabetes/outra doença crónica anterior que afecte a gravidez,icpc2_inclusion,W,600
@@ -1887,10 +2044,15 @@ W84,placenta prévia,icpc2_inclusion,W,600
 W84,trabalho de parto prematuro,icpc2_inclusion,W,600
 W84,cesariana anterior,icpc2_inclusion,W,600
 W84,feto pequeno para a idade gestacional,icpc2_inclusion,W,600
+W85,diabetes manifestada durante a gravidez,icpc2_inclusion,W,601
+W92,"nado vivo após parto complicado: extracção assistida, parto pélvico, cesariana, distócia, parto induzido, lesões causadas pelo parto, placenta prévia durante o parto, versão",icpc2_inclusion,W,604
+W93,"nado morto após parto complicado: extracção assistida, parto pélvico, cesariana, distócia, parto induzido, lesões causadas pelo parto, placenta prévia durante o parto, versão",icpc2_inclusion,W,605
+W94,abcesso na mama,icpc2_inclusion,W,606
 W95,problema da mama no puerpério,icpc2_inclusion,W,607
 W95,mamilo gretado,icpc2_inclusion,W,607
 X01,dor pélvica,icpc2_inclusion,X,610
 X01,dor vulvar,icpc2_inclusion,X,610
+X02,dismenorreia,icpc2_inclusion,X,611
 X03,Mittelschmerz,icpc2_inclusion,X,612
 X03,ovulação dolorosa,icpc2_inclusion,X,612
 X04,dispareunia feminina,icpc2_inclusion,X,613
@@ -1900,6 +2062,7 @@ X05,atraso menstrual,icpc2_inclusion,X,614
 X05,oligomenorreia,icpc2_inclusion,X,614
 X06,menorragia,icpc2_inclusion,X,615
 X06,hemorragia na puberdade,icpc2_inclusion,X,615
+X07,polimenorreia,icpc2_inclusion,X,616
 X08,hemorragia uterina disfuncional,icpc2_inclusion,X,617
 X08,metrorragia,icpc2_inclusion,X,617
 X08,hemorragia durante a ovulação,icpc2_inclusion,X,617
@@ -1908,10 +2071,14 @@ X11,vaginite atrófica,icpc2_inclusion,X,620
 X11,síndrome da menopausa,icpc2_inclusion,X,620
 X11,vaginite senil,icpc2_inclusion,X,620
 X11,sintoma/queixa relacionado com a menopausa,icpc2_inclusion,X,620
+X13,hemorragia de contacto,icpc2_inclusion,X,622
 X14,secreção vaginal,icpc2_inclusion,X,623
 X14,leucorreia,icpc2_inclusion,X,623
+X15,secura vaginal,icpc2_inclusion,X,624
 X16,secura vulvar,icpc2_inclusion,X,625
 X16,prurido vulvar,icpc2_inclusion,X,625
+X18,mastodinia,icpc2_inclusion,X,627
+X19,mamas inchadas,icpc2_inclusion,X,628
 X20,secreção mamilar,icpc2_inclusion,X,629
 X20,fissura mamilar,icpc2_inclusion,X,629
 X20,dor/prurido mamilar,icpc2_inclusion,X,629
@@ -1919,9 +2086,14 @@ X20,retracção mamilar,icpc2_inclusion,X,629
 X21,galactorreia,icpc2_inclusion,X,630
 X21,mastite (sem lactação),icpc2_inclusion,X,630
 X21,mastopatia,icpc2_inclusion,X,630
+X29,secreção uretral feminina,icpc2_inclusion,X,638
+X70,sífilis em qualquer localização,icpc2_inclusion,X,639
+X71,gonorreia em qualquer localização,icpc2_inclusion,X,640
+X72,infecção monilial da vagina/colo do útero,icpc2_inclusion,X,641
 X74,endometrite,icpc2_inclusion,X,643
 X74,ooforite,icpc2_inclusion,X,643
 X74,salpingite,icpc2_inclusion,X,643
+X76,carcinoma intraductal,icpc2_inclusion,X,645
 X77,neoplasia maligna dos anexos,icpc2_inclusion,X,646
 X77,neoplasia maligna dos ovários,icpc2_inclusion,X,646
 X77,neoplasia maligna do útero,icpc2_inclusion,X,646
@@ -1931,6 +2103,7 @@ X78,útero fibróide,icpc2_inclusion,X,647
 X78,fibromioma do colo do útero,icpc2_inclusion,X,647
 X78,leiomioma,icpc2_inclusion,X,647
 X78,mioma,icpc2_inclusion,X,647
+X79,fibroadenoma,icpc2_inclusion,X,648
 X81,carcinoma in situ outro,icpc2_inclusion,X,650
 X81,neoplasia genital feminina não especificada como benigna ou maligna/quando a histologia nao está disponível,icpc2_inclusion,X,650
 X82,circuncisão feminina,icpc2_inclusion,X,651
@@ -1953,6 +2126,7 @@ X88,doença fibroquística crónica da mama,icpc2_inclusion,X,657
 X88,fibroadenose quística da mama,icpc2_inclusion,X,657
 X88,displasia da mama,icpc2_inclusion,X,657
 X88,quisto solitário da mama,icpc2_inclusion,X,657
+X90,herpes simplex ano-genital,icpc2_inclusion,X,659
 X91,infecção pelo vírus papiloma humano,icpc2_inclusion,X,660
 X91,verrugas venéreas,icpc2_inclusion,X,660
 X99,Quisto/abcesso glândula de Bartholin,icpc2_inclusion,X,662
@@ -1960,12 +2134,22 @@ X99,endometriose,icpc2_inclusion,X,662
 X99,fístula do aparelho genital feminino,icpc2_inclusion,X,662
 X99,síndrome da congestão pélvica,icpc2_inclusion,X,662
 X99,quisto funcional do ovário,icpc2_inclusion,X,662
+Y02,dor no períneo/pélvis,icpc2_inclusion,Y,664
+Y04,sinal/sintoma do prepúcio,icpc2_inclusion,Y,666
+Y05,nódulo no testículo,icpc2_inclusion,Y,667
+Y06,prostatismo,icpc2_inclusion,Y,668
+Y07,impotência de origem orgânica,icpc2_inclusion,Y,669
 Y08,erecção dolorosa,icpc2_inclusion,Y,670
 Y08,priapismo,icpc2_inclusion,Y,670
+Y13,planeamento familiar envolvendo esterilização masculina,icpc2_inclusion,Y,672
 Y14,contracepção NE,icpc2_inclusion,Y,673
 Y14,planeamento familiar NE,icpc2_inclusion,Y,673
 Y16,ginecomastia,icpc2_inclusion,Y,674
 Y16,nódulo na mama masculina,icpc2_inclusion,Y,674
+Y70,sífilis qualquer que seja a sua localização,icpc2_inclusion,Y,681
+Y71,gonorreia qualquer que seja a sua localização,icpc2_inclusion,Y,682
+Y72,herpes anogenital,icpc2_inclusion,Y,683
+Y75,candidíase da glande peniana,icpc2_inclusion,Y,686
 Y76,infecção pelo vírus papiloma humano,icpc2_inclusion,Y,687
 Y76,verrugas venéreas,icpc2_inclusion,Y,687
 Y78,carcinoma da mama masculina,icpc2_inclusion,Y,689
@@ -1975,6 +2159,8 @@ Y79,neoplasia benigna da mama masculina,icpc2_inclusion,Y,690
 Y79,carcinoma in situ,icpc2_inclusion,Y,690
 Y79,fibroma,icpc2_inclusion,Y,690
 Y79,neoplasia genital não especificada como benigna ou maligna/quando a histologia não está disponível,icpc2_inclusion,Y,690
+Y81,parafimose,icpc2_inclusion,Y,692
+Y83,criptorquidia,icpc2_inclusion,Y,694
 Y84,hermafroditismo,icpc2_inclusion,Y,695
 Y84,testiculo retráctil,icpc2_inclusion,Y,695
 Y85,hiperplasia,icpc2_inclusion,Y,696
@@ -1985,23 +2171,39 @@ Y99,quisto do epidídimo,icpc2_inclusion,Y,698
 Y99,outra doença da mama masculina,icpc2_inclusion,Y,698
 Y99,espermatocelo,icpc2_inclusion,Y,698
 Y99,torção do testículo,icpc2_inclusion,Y,698
+Z04,gravidez ilegítima,icpc2_inclusion,Z,702
+Z07,analfabetismo,icpc2_inclusion,Z,705
+Z11,baixa adesão,icpc2_inclusion,Z,709
+Z12,abuso emocional,icpc2_inclusion,Z,710
 Z13,infidelidade,icpc2_inclusion,Z,711
 Z13,abuso físico,icpc2_inclusion,Z,711
 Z15,luto,icpc2_inclusion,Z,713
 Z15,divórcio,icpc2_inclusion,Z,713
 Z15,separação,icpc2_inclusion,Z,713
+Z16,abuso de criança (emocional),icpc2_inclusion,Z,714
+Z20,problema relacional com pais/irmão adulto/outro elemento da família,icpc2_inclusion,Z,717
 Z25,vítima de abuso físico,icpc2_inclusion,Z,722
 Z25,vítima de violação,icpc2_inclusion,Z,722
 Z25,vítima de ataque sexual,icpc2_inclusion,Z,722
+Z27,preocupação com/medo de vir a ter um problema social,icpc2_inclusion,Z,723
 Z29,problemas com o meio ambiente,icpc2_inclusion,Z,725
 Z29,simulação de doença,icpc2_inclusion,Z,725
+A02,Outros sintomas e sinais gerais,icd10_description,A,1
 A03,Outra febre especificada,icd10_description,A,2
 A03,"Febre, sem outra especificação",icd10_description,A,2
 A04,Síndrome de fadiga pós-viral,icd10_description,A,3
 A04,"Mal estar, fadiga",icd10_description,A,3
+A05,"Mal estar, fadiga",icd10_description,A,4
+A06,Síncope e colapso,icd10_description,A,5
 A07,Sonolência,icd10_description,A,6
 A07,Estupor,icd10_description,A,6
 A07,Coma,icd10_description,A,6
+A08,Outros sintomas e sinais gerais,icd10_description,A,7
+A10,"Hemorragia, não classificada noutra parte",icd10_description,A,9
+A13,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,A,11
+A16,Sintomas não específicos peculiares à infância,icd10_description,A,12
+A18,Outros sintomas e sinais envolvendo a aparência e o comportamento,icd10_description,A,13
+A20,Admissão para aconselhamento especificado NCOP,icd10_description,A,14
 A21,História familiar de neoplasia maligna de órgãos digestivos,icd10_description,A,15
 A21,"História familiar de neoplasia maligna da traqueia, brônquios e pulmões",icd10_description,A,15
 A21,História familiar de neoplasia maligna de outros órgãos respiratórios e intratorácicos,icd10_description,A,15
@@ -2102,6 +2304,9 @@ A23,História pessoal de contraceção,icd10_description,A,16
 A23,História pessoal de terapêutica farmacológica,icd10_description,A,16
 A23,História pessoal de irradiação,icd10_description,A,16
 A23,História pessoal de outro tratamento médico,icd10_description,A,16
+A25,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,A,17
+A26,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,A,18
+A27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,A,19
 A28,"Tendência a queda, não classificada em outra parte",icd10_description,A,20
 A28,Limites impostos às atividades por invalidez,icd10_description,A,20
 A28,Mobilidade reduzida,icd10_description,A,20
@@ -3678,6 +3883,8 @@ A94,Suturas cranianas amplas no recém-nascido,icd10_description,A,85
 A94,Complicações no recém-nascido devidas a procedimento intra-uterino (fetal),icd10_description,A,85
 A94,"Afecões especificadas com origem no periodo perinatal, NCOP",icd10_description,A,85
 A94,Afeções originadas no período perinatal não especificadas,icd10_description,A,85
+A95,Morte fetal de causa não especificada,icd10_description,A,86
+A96,Outra causa mal definida e não especificada de mortalidade,icd10_description,A,87
 A97,Episódio para exame médico geral de adulto,icd10_description,A,88
 A97,Episódio para exames a recém-nascido e criança,icd10_description,A,88
 A97,Exame no período de crescimento rápido na infância,icd10_description,A,88
@@ -3819,6 +4026,12 @@ A99,Outros estados especificados pós-procedimento,icd10_description,A,90
 B02,Aumento de volume localizado de gânglios linfáticos,icd10_description,B,91
 B02,Aumento de volume generalizado de gânglios linfáticos,icd10_description,B,91
 B02,"Aumento de volume dos gânglios linfáticos, sem outra especificação",icd10_description,B,91
+B04,Outros sintomas e sinais gerais,icd10_description,B,92
+B25,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,B,93
+B26,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,B,94
+B27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,B,95
+B28,Limites impostos às atividades por invalidez,icd10_description,B,96
+B29,Outros sintomas e sinais gerais,icd10_description,B,97
 B70,"Linfadenite aguda de face, cabeça e pescoço",icd10_description,B,98
 B70,Linfadenite aguda do tronco,icd10_description,B,98
 B70,Linfadenite aguda de membro superior,icd10_description,B,98
@@ -3921,6 +4134,8 @@ B75,Gamopatia monoclonal,icd10_description,B,103
 B75,Trombocitémia essencial (hemorrágica),icd10_description,B,103
 B75,Osteomielofibrose,icd10_description,B,103
 B75,"Neoplasia de comportamento incerto dos tecidos linfático, hematopoético e tecidos relacionados, sem outra especificação",icd10_description,B,103
+B76,Lesão do baço,icd10_description,B,104
+B77,"Lesão, sem outra especificação",icd10_description,B,105
 B78,Talassémia alfa,icd10_description,B,106
 B78,Talassémia beta,icd10_description,B,106
 B78,Talassémia delta-beta,icd10_description,B,106
@@ -4100,6 +4315,9 @@ B99,"Patologia não infecciosa dos vasos e gânglios linfáticos, sem outra espe
 B99,Velocidade de sedimentação elevada,icd10_description,B,115
 B99,Viscosidade plasmática anormal,icd10_description,B,115
 B99,Anomalia dos glóbulos vermelhos,icd10_description,B,115
+D01,Abdómen agudo,icd10_description,D,116
+D02,Dor localizada no abdómen superior,icd10_description,D,117
+D03,Azia,icd10_description,D,118
 D04,Espasmo anal (proctalgia fugaz),icd10_description,D,119
 D04,Dor pélvica e perineal,icd10_description,D,119
 D04,Dor localizada em outras partes do abdómen inferior,icd10_description,D,119
@@ -4108,10 +4326,19 @@ D05,"Prurido anogenital, não especificado",icd10_description,D,120
 D06,Dor localizada no abdómen superior,icd10_description,D,121
 D06,Dor pélvica e perineal,icd10_description,D,121
 D06,Dor localizada em outras partes do abdómen inferior,icd10_description,D,121
+D07,Dispepsia funcional,icd10_description,D,122
+D08,Flatulência e condições associadas,icd10_description,D,123
+D09,Náusea e vómitos,icd10_description,D,124
+D10,Náusea e vómitos,icd10_description,D,125
 D11,"Gastroenterite e colite não-infecciosas, sem outra especificação",icd10_description,D,126
 D11,Diarreia funcional,icd10_description,D,126
 D12,"Oclusão intestinal por empactação, não classificada em outra parte",icd10_description,D,127
 D12,Obstipação,icd10_description,D,127
+D13,"Icterícia, sem outra especificação",icd10_description,D,128
+D14,Hematemese,icd10_description,D,129
+D15,Sangue nas fezes,icd10_description,D,130
+D16,Hemorragia do reto  e do ânus,icd10_description,D,131
+D17,Incontinência fecal,icd10_description,D,132
 D18,Alteração do hábito intestinal,icd10_description,D,133
 D18,Outras anomalias fecais,icd10_description,D,133
 D19,Síndrome da erupção dentária,icd10_description,D,134
@@ -4126,8 +4353,14 @@ D20,Língua pregueada,icd10_description,D,135
 D20,Glossodinia,icd10_description,D,135
 D20,Halitose,icd10_description,D,135
 D20,"Boca seca, sem outra especificação",icd10_description,D,135
+D21,Afagia e disfagia,icd10_description,D,136
 D23,"Hepatomegalia, não classificada noutra parte",icd10_description,D,137
 D23,"Hepatomegalia com esplenomegalia, não classificada noutra parte",icd10_description,D,137
+D24,"Edema, massa ou protuberância abdominal e pélvica",icd10_description,D,138
+D25,"Edema, massa ou protuberância abdominal e pélvica",icd10_description,D,139
+D26,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,D,140
+D27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,D,141
+D28,Limites impostos às atividades por invalidez,icd10_description,D,142
 D29,Outras doenças especificadas dos tecidos duros dos dentes,icd10_description,D,143
 D29,Ascite,icd10_description,D,143
 D29,Ruídos intestinais anormais,icd10_description,D,143
@@ -4933,17 +5166,27 @@ D99,"Doença do aparelho digestivo, sem outra especificação",icd10_description
 D99,Ausência adquirida do estômago (parte de),icd10_description,D,173
 D99,Ausência adquirida de outras partes especificadas do trato digestivo,icd10_description,D,173
 D99,Status de bypass e anastomose intestinal,icd10_description,D,173
+F01,Dor ocular,icd10_description,F,174
+F02,"Outras patologias do olho e anexos, não classificadas noutra parte",icd10_description,F,175
+F03,Epífora,icd10_description,F,176
+F04,Distúrbios visuais subjetivos,icd10_description,F,177
 F05,Distúrbios visuais subjetivos,icd10_description,F,178
 F05,Diplopia,icd10_description,F,178
 F05,Outras patologias da visão binocular,icd10_description,F,178
 F05,Outros distúrbios visuais,icd10_description,F,178
 F05,Disturbios visuais SOE,icd10_description,F,178
+F13,"Outras patologias do olho e anexos, não classificadas noutra parte",icd10_description,F,179
+F14,Nistagmo e outros movimentos irregulares do olho,icd10_description,F,180
+F15,"Outras patologias do olho e anexos, não classificadas noutra parte",icd10_description,F,181
 F16,Lagoftalmo,icd10_description,F,182
 F16,Blefarocalásia,icd10_description,F,182
 F16,Ptose da pálpebra,icd10_description,F,182
 F16,Outras patologias afetando a função da pálpebra,icd10_description,F,182
 F16,Xantelasma da pálpebra,icd10_description,F,182
 F16,Outras patologias degenerativas e patologias degenerativas não especificadas da pálpebra e área periocular,icd10_description,F,182
+F17,Colocação e ajuste de óculos e lentes de contato,icd10_description,F,183
+F18,Colocação e ajuste de óculos e lentes de contato,icd10_description,F,184
+F27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,F,185
 F28,Amaurose num olho,icd10_description,F,186
 F28,"Diminuição acuidade visual, um olho",icd10_description,F,186
 F28,"Perda de visão não qualificada, num olho",icd10_description,F,186
@@ -4964,6 +5207,7 @@ F70,Conjuntivite crónica,icd10_description,F,188
 F70,Blefaroconjuntivite,icd10_description,F,188
 F70,Conjuntivite NCOP,icd10_description,F,188
 F70,"Conjuntivite, sem outra especificação",icd10_description,F,188
+F71,Conjuntivite atópica aguda,icd10_description,F,189
 F72,Hordéolo (externo) (interno) da pálpebra,icd10_description,F,190
 F72,Chalázio,icd10_description,F,190
 F72,Blefarite,icd10_description,F,190
@@ -5053,6 +5297,7 @@ F79,Corrosão da córnea e do saco conjuntival,icd10_description,F,195
 F79,Corrosão com resultante rotura e destruição do globo ocular,icd10_description,F,195
 F79,Corrosão de outras partes especificadas do olho e anexos,icd10_description,F,195
 F79,"Corrosão do olho e anexos, parte não especificada",icd10_description,F,195
+F80,Estenose e estreitamento congénito do canal lacrimal,icd10_description,F,196
 F81,Ptose congénita das palpebras,icd10_description,F,197
 F81,Ectrópio congénito,icd10_description,F,197
 F81,Entrópio congénito,icd10_description,F,197
@@ -5098,6 +5343,8 @@ F83,Retinopatia da prematuridade,icd10_description,F,199
 F83,Outra retinopatia proliferativa não diabética,icd10_description,F,199
 F83,Degenerescência periférica da retina,icd10_description,F,199
 F83,Outras patologias da retina em doenças classificadas noutra parte,icd10_description,F,199
+F84,Degenerescência da mácula e do polo posterior,icd10_description,F,200
+F85,Úlcera da córnea,icd10_description,F,201
 F86,Fase inicial do tracoma,icd10_description,F,202
 F86,Fase ativa do tracoma,icd10_description,F,202
 F86,"Tracoma, sem outra especificação",icd10_description,F,202
@@ -5244,6 +5491,15 @@ F99,Cegueira noturna,icd10_description,F,208
 F99,Outros distúrbios visuais,icd10_description,F,208
 F99,Anomalias da função pupilar,icd10_description,F,208
 F99,"Outras patologias do olho e anexos, não classificadas noutra parte",icd10_description,F,208
+H01,Otalgia,icd10_description,H,209
+H02,Outras perceções auditivas anormais,icd10_description,H,210
+H03,Acufeno,icd10_description,H,211
+H04,Otorreia,icd10_description,H,212
+H05,Otorragia,icd10_description,H,213
+H13,Outras patologias especificadas do ouvido,icd10_description,H,214
+H15,Outros sintomas e sinais envolvendo a aparência e o comportamento,icd10_description,H,215
+H27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,H,216
+H28,Limites impostos às atividades por invalidez,icd10_description,H,217
 H29,Outras patologias especificadas do ouvido,icd10_description,H,218
 H29,"Patologia, sem outra especificação, do ouvido",icd10_description,H,218
 H70,Abcesso do ouvido externo,icd10_description,H,219
@@ -5293,11 +5549,13 @@ H75,Carcinoma in situ da pele da orelha e canal auditivo externo,icd10_descripti
 H75,"Neoplasia benigna do ouvido médio, cavidades nasais e seios acessórios",icd10_description,H,224
 H75,"Neoplasia benigna do tecido conjuntivo e tecidos moles da cabeça, face e pescoço",icd10_description,H,224
 H75,Outra neoplasia benigna da pele da orelha e canal auditivo externo,icd10_description,H,224
+H76,Corpo estranho no ouvido,icd10_description,H,225
 H77,Perfuração central da membrana do tímpano,icd10_description,H,226
 H77,Perfuração ática da membrana do tímpano,icd10_description,H,226
 H77,Outras perfurações marginais da membrana do tímpano,icd10_description,H,226
 H77,Outras perfurações da membrana do tímpano,icd10_description,H,226
 H77,"Perfuração, sem outra especificação, da membrana do tímpano",icd10_description,H,226
+H78,Escoriação da orelha,icd10_description,H,227
 H79,Ferida aberta da orelha,icd10_description,H,228
 H79,Lesão por esmagamento de outras partes da cabeça,icd10_description,H,228
 H79,Amputação traumática da orelha,icd10_description,H,228
@@ -5318,6 +5576,7 @@ H80,Posição anómala da orelha,icd10_description,H,229
 H80,Orelhas proeminentes,icd10_description,H,229
 H80,Outras malformações congénitas especificadas da orelha,icd10_description,H,229
 H80,Malformação congénita do ouvido SOE,icd10_description,H,229
+H81,Rolha de cerume,icd10_description,H,230
 H82,Vertigem epidémica,icd10_description,H,231
 H82,Doença de Ménière,icd10_description,H,231
 H82,Vertigem paroxística benigna,icd10_description,H,231
@@ -5335,6 +5594,8 @@ H83,"Otosclerose que compromete a janela oval, obliterante",icd10_description,H,
 H83,Otosclerose da cóclea,icd10_description,H,232
 H83,Outra otosclerose,icd10_description,H,232
 H83,"Otosclerose, sem outra especificação",icd10_description,H,232
+H84,Presbiacusia,icd10_description,H,233
+H85,Efeitos do ruído sobre o ouvido interno,icd10_description,H,234
 H86,"Surdez de condução, bilateral",icd10_description,H,235
 H86,"Surdez de condução, unilateral, sem audição limitada no lado contralateral",icd10_description,H,235
 H86,"Surdez de condução, sem outra especificação",icd10_description,H,235
@@ -5371,9 +5632,13 @@ H99,Outras patologias especificadas do ouvido,icd10_description,H,236
 H99,"Patologia, sem outra especificação, do ouvido",icd10_description,H,236
 H99,Neurite acústica em doenças infecciosas e parasitárias classificadas noutra parte,icd10_description,H,236
 H99,Outras patologias especificadas do ouvido em doenças classificadas noutra parte,icd10_description,H,236
+K01,Dor precordial,icd10_description,K,237
+K02,Dor precordial,icd10_description,K,238
+K03,Outros sintomas e sinais especificados envolvendo os aparelhos circulatório e respiratório,icd10_description,K,239
 K04,"Taquicardia, sem outra especificação",icd10_description,K,240
 K04,"Bradicardia, sem outra especificação",icd10_description,K,240
 K04,Palpitacões,icd10_description,K,240
+K05,Outras anomalias e as não especificadas da frequência cardíaca,icd10_description,K,241
 K06,"Nevo, não neoplásico",icd10_description,K,242
 K06,Outras patologias especificadas das veias,icd10_description,K,242
 K07,Edema localizado,icd10_description,K,243
@@ -5382,6 +5647,10 @@ K07,"Edema, sem outra especificação",icd10_description,K,243
 K22,História familiar de crise convulsiva (cerebrovascular),icd10_description,K,244
 K22,História familiar de doença isquémica do coração e outras doenças do aparelho circulatório,icd10_description,K,244
 K22,História pessoal de doenças do aparelho circulatório,icd10_description,K,244
+K24,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,K,245
+K25,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,K,246
+K27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,K,247
+K28,Limites impostos às atividades por invalidez,icd10_description,K,248
 K29,Medida de pressão arterial baixa não especifica,icd10_description,K,249
 K29,Outros sintomas e sinais especificados envolvendo os aparelhos circulatório e respiratório,icd10_description,K,249
 K70,Cardite meningocócica,icd10_description,K,250
@@ -5544,6 +5813,7 @@ K76,Outras formas de doença isquémica crónica do coração,icd10_description,
 K76,"Doença isquémica crónica do coração, sem outra especificação",icd10_description,K,256
 K77,"Insuficiência cardíaca esquerda, sem outra especificação",icd10_description,K,257
 K77,"Insuficiência cardíaca, sem outra especificação",icd10_description,K,257
+K78,Flutter e fibrilhação auriculares,icd10_description,K,258
 K79,Arritmia ventricular por reentrada,icd10_description,K,259
 K79,Taquicardia supraventricular,icd10_description,K,259
 K79,Taquicardia ventricular,icd10_description,K,259
@@ -5635,6 +5905,8 @@ K84,Cardiomegalia,icd10_description,K,264
 K84,"Doença mal definida do coração, NCOP",icd10_description,K,264
 K84,"Doença cardíaca, sem outra especificação",icd10_description,K,264
 K84,Cardiomiopatia no puerpério,icd10_description,K,264
+K85,Medida de pressão arterial elevada sem o diagnostico de HTA,icd10_description,K,265
+K86,Hipertensão essencial (primária),icd10_description,K,266
 K87,Doença cardíaca hipertensiva com insuficiência cardíaca,icd10_description,K,267
 K87,Doença cardíaca hipertensiva sem insuficiência cardíaca,icd10_description,K,267
 K87,Doença renal crónica hipertensiva com estadio 5 de doença renal crónica ou doença renal terminal,icd10_description,K,267
@@ -5834,6 +6106,8 @@ L02,Dorsalgia não especificada,icd10_description,L,279
 L03,Patologias sacroccígeos não classificados em outra parte,icd10_description,L,280
 L03,Paniculite atingindo regiões do pescoço e do dorso,icd10_description,L,280
 L03,Lombalgia,icd10_description,L,280
+L04,Outros sintomas e sinais relativos aos sistemas nervoso e osteomuscular e os não especificados,icd10_description,L,281
+L05,Outros sintomas e sinais relativos aos sistemas nervoso e osteomuscular e os não especificados,icd10_description,L,282
 L07,Derrame articular,icd10_description,L,283
 L07,Dor em articulação,icd10_description,L,283
 L07,"Rigidez articular, não classificado noutra parte",icd10_description,L,283
@@ -5889,6 +6163,8 @@ L20,Dor em articulação,icd10_description,L,296
 L20,"Rigidez articular, não classificado noutra parte",icd10_description,L,296
 L20,Outras patologias articulares especificadas,icd10_description,L,296
 L20,"Patologia articular, sem outra especificação",icd10_description,L,296
+L26,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,L,297
+L27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,L,298
 L28,Dificuldade em deambular,icd10_description,L,299
 L28,Limites impostos às atividades por invalidez,icd10_description,L,299
 L29,Outras anomalias da marcha e da mobilidade e as não especificadas,icd10_description,L,300
@@ -6007,6 +6283,7 @@ L76,Fratura da diáfise do úmero,icd10_description,L,307
 L76,Fratura da extremidade distal do úmero,icd10_description,L,307
 L76,"Fratura da cintura escapular, parte não especificada",icd10_description,L,307
 L76,Fratura da rótula [rótula],icd10_description,L,307
+L77,Entorse do tornozelo,icd10_description,L,308
 L78,Entorse de ligamento colateral do joelho,icd10_description,L,309
 L78,Entorse da articulação tibio-fibular superior e ligamento,icd10_description,L,309
 L79,Entorse da mandíbula,icd10_description,L,310
@@ -6473,6 +6750,7 @@ L92,Síndrome de colisão do ombro,icd10_description,L,323
 L92,Bursite do ombro,icd10_description,L,323
 L92,Outras lesões do ombro,icd10_description,L,323
 L92,"Lesão do ombro, sem outra especificação",icd10_description,L,323
+L93,Epicondilite lateral (cotovelo),icd10_description,L,324
 L94,Osteocondrose juvenil da coluna vertebral,icd10_description,L,325
 L94,Osteocondrose vertebral do adulto,icd10_description,L,325
 L94,"Osteocondrose vertebral, sem outra especificação",icd10_description,L,325
@@ -6717,10 +6995,13 @@ N01,Outras síndromes de cefaleia especificadas,icd10_description,N,331
 N01,Cefaleia,icd10_description,N,331
 N03,Dor atípica da face,icd10_description,N,332
 N03,Cefaleia,icd10_description,N,332
+N04,Outras patologias especificadas extrapiramidais e dos movimentos,icd10_description,N,333
+N05,Parestesias cutâneas,icd10_description,N,334
 N06,Anestesia cutânea,icd10_description,N,335
 N06,Hipoestesia cutânea,icd10_description,N,335
 N06,Hiperestesia,icd10_description,N,335
 N06,Outros distúrbios da sensibilidade da pele,icd10_description,N,335
+N07,Convulsões febris,icd10_description,N,336
 N08,Tremor essencial,icd10_description,N,337
 N08,Tremor induzido por fármaco,icd10_description,N,337
 N08,Outras formas especificadas de tremor,icd10_description,N,337
@@ -6739,6 +7020,7 @@ N16,Anosmia,icd10_description,N,338
 N16,Parosmia,icd10_description,N,338
 N16,Parageusia,icd10_description,N,338
 N16,Outros distúrbios do olfato e do paladar,icd10_description,N,338
+N17,Tonturas e vertigens,icd10_description,N,339
 N18,Hemiplegia flácida,icd10_description,N,340
 N18,Hemiplegia espástica,icd10_description,N,340
 N18,"Hemiplegia, sem outra especificação",icd10_description,N,340
@@ -6755,6 +7037,9 @@ N18,Outras patologias do sistema nervoso não classificados em outra parte,icd10
 N19,Disfasia e afasia,icd10_description,N,341
 N19,Disartria e anartria,icd10_description,N,341
 N19,Outros distúrbios da fala,icd10_description,N,341
+N26,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,N,342
+N27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,N,343
+N28,Limites impostos às atividades por invalidez,icd10_description,N,344
 N29,Nevralgia e neurite não especificadas,icd10_description,N,345
 N29,Marcha atáxica,icd10_description,N,345
 N29,Marcha parética,icd10_description,N,345
@@ -6886,6 +7171,7 @@ N76,Neoplasia de comportamento incerto dos nervos cranianos,icd10_description,N,
 N76,Neoplasia de comportamento incerto da medula espinhal,icd10_description,N,352
 N76,"Neoplasia de comportamento incerto do sistema nervoso central, sem outra especificação",icd10_description,N,352
 N76,Neoplasia de comportamento incerto dos nervos periféricos e do sistema nervoso autónomo,icd10_description,N,352
+N79,Contusão,icd10_description,N,353
 N80,Fratura da abóbada do crânio,icd10_description,N,354
 N80,Fratura da base do crânio,icd10_description,N,354
 N80,Fraturas de outros ossos especificados do crânio e da face,icd10_description,N,354
@@ -7016,6 +7302,7 @@ N85,Malformação congénita não especificada da medula espinal,icd10_descripti
 N85,Síndrome de Arnold-Chiari,icd10_description,N,356
 N85,Outras malformações congénitas especificadas do sistema nervoso,icd10_description,N,356
 N85,Malformação congénita não especificada do sistema nervoso,icd10_description,N,356
+N86,Esclerose múltipla,icd10_description,N,357
 N87,Doença de Parkinson,icd10_description,N,358
 N87,Síndrome maligno neuroléticos ,icd10_description,N,358
 N87,Outras formas de parkinsonismo secundário induzido por fármacos,icd10_description,N,358
@@ -7037,6 +7324,7 @@ N89,Enxaqueca com aura,icd10_description,N,360
 N89,Outra enxaqueca,icd10_description,N,360
 N89,"Enxaqueca, sem outra especificação",icd10_description,N,360
 N89,"Cefaleia vascular, não classificada noutra parte",icd10_description,N,360
+N90,"Síndrome de ""cluster-headache""",icd10_description,N,361
 N91,Paralisia de Bell,icd10_description,N,362
 N91,Ganglionite geniculada,icd10_description,N,362
 N91,Síndrome de Melkersson,icd10_description,N,362
@@ -7047,6 +7335,7 @@ N91,"Patologia do nervo facial, sem outra especificação",icd10_description,N,3
 N92,Nevralgia do trigémio,icd10_description,N,363
 N92,"Afecões especificadas do nervo trigémeo, NCOP",icd10_description,N,363
 N92,"Afecão do nervo trigémeo, não especificada",icd10_description,N,363
+N93,Síndrome do túnel cárpico,icd10_description,N,364
 N94,Patologias do plexo braquial,icd10_description,N,365
 N94,Patologias do plexo lombossagrado,icd10_description,N,365
 N94,Patologias das raízes cervicais não classificadas noutra parte,icd10_description,N,365
@@ -7093,6 +7382,7 @@ N94,Outras polineuropatias especificadas,icd10_description,N,365
 N94,Polineuropatia não especificada,icd10_description,N,365
 N94,Outras patologias do sistema nervoso periférico,icd10_description,N,365
 N94,Nevralgia e neurite não especificadas,icd10_description,N,365
+N95,Cefaleia de tensão,icd10_description,N,366
 N99,Encefalopatia de Wernicke,icd10_description,N,367
 N99,Coreia de Huntington,icd10_description,N,367
 N99,Ataxia congénita não-progressiva,icd10_description,N,367
@@ -7216,6 +7506,7 @@ N99,Mielopatia em doenças classificadas noutra parte,icd10_description,N,367
 N99,Outras patologias especificadas do sistema nervoso em doenças classificadas noutra parte,icd10_description,N,367
 N99,Nevralgia e neurite não especificadas,icd10_description,N,367
 N99,Presenca de dispositivo para drenagem de liquido cefalorraquidiano,icd10_description,N,367
+P01,Nervosismo,icd10_description,P,368
 P02,Reação aguda ao stress,icd10_description,P,369
 P02,Patologias de ajustamento,icd10_description,P,369
 P02,Outras reações ao stress grave,icd10_description,P,369
@@ -7226,6 +7517,7 @@ P04,Inquietação e agitação,icd10_description,P,371
 P04,Irritabilidade e mau humor,icd10_description,P,371
 P04,Hostilidade,icd10_description,P,371
 P04,Violência física,icd10_description,P,371
+P05,Debilidade física devida a idade,icd10_description,P,372
 P06,Insónia não devida a substância ou condição fisiológica conhecida,icd10_description,P,373
 P06,Hipersónia não devida a substância ou condição fisiológica conhecida,icd10_description,P,373
 P06,Sonambulismo,icd10_description,P,373
@@ -7240,6 +7532,7 @@ P06,Apneia do sono,icd10_description,P,373
 P06,Narcolepsia e cataplexia,icd10_description,P,373
 P06,Outras patologias do sono,icd10_description,P,373
 P06,"Patologia do sono, não especificado",icd10_description,P,373
+P07,Patologia hipoativa do desejo sexual,icd10_description,P,374
 P08,Patologia de aversão sexual,icd10_description,P,375
 P08,Patologia de excitação sexual,icd10_description,P,375
 P08,Disfunção orgásmica,icd10_description,P,375
@@ -7270,10 +7563,13 @@ P10,Patologia de movimento estereotipado,icd10_description,P,377
 P10,Patologia da fluência aparecendo na idade adulta,icd10_description,P,377
 P11,Distúrbio alimentar na infância,icd10_description,P,378
 P11,Pica [alotriofagia] do lactente ou da criança,icd10_description,P,378
+P12,Enurese,icd10_description,P,379
+P13,Encoprese,icd10_description,P,380
 P15,Abuso de álcool,icd10_description,P,381
 P15,Dependência de álcool,icd10_description,P,381
 P15,"Uso de álcool, sem outra especificação",icd10_description,P,381
 P15,Degenerescência do sistema nervoso devida ao álcool,icd10_description,P,381
+P17,Dependência de nicotina,icd10_description,P,383
 P18,"Abuso associado a sedativo, hipnótico ou ansiolítico",icd10_description,P,384
 P18,"Dependência associada a sedativo, hipnótico ou ansiolítico",icd10_description,P,384
 P18,"Uso, sem outra especificação, associado a sedativo, hipnótico ou ansiolítico",icd10_description,P,384
@@ -7354,6 +7650,9 @@ P24,Dislexia e alexia,icd10_description,P,389
 P24,Agnosia,icd10_description,P,389
 P24,Apraxia,icd10_description,P,389
 P24,Outras disfunções simbólicas e as não especificadas,icd10_description,P,389
+P25,Problemas de adaptação às transições do ciclo de vida,icd10_description,P,390
+P27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,P,391
+P28,Limites impostos às atividades por invalidez,icd10_description,P,392
 P29,Outros distúrbios alimentares,icd10_description,P,393
 P29,"Distúrbios alimentares, não especificados",icd10_description,P,393
 P29,Tricotilomania,icd10_description,P,393
@@ -7463,6 +7762,7 @@ P76,Outras perturbações do humor [afetivas] persistentes,icd10_description,P,4
 P76,Perurbação do humor [afetivo] persistente não especificado,icd10_description,P,400
 P76,"Patologia do humor [afetivo], sem outra especificação",icd10_description,P,400
 P76,Depressão pós-parto,icd10_description,P,400
+P77,História pessoal de auto-agressão,icd10_description,P,401
 P79,Agorafobia,icd10_description,P,403
 P79,Fobias sociais,icd10_description,P,403
 P79,Fobias específicas (isoladas),icd10_description,P,403
@@ -7493,6 +7793,7 @@ P81,"Patologia de hiperatividade e défice de atenção, tipo predominantemente 
 P81,"Patologia de hiperatividade e défice de atenção, tipo predominantemente hiperativo",icd10_description,P,405
 P81,"Patologia de hiperatividade e défice de atenção, outro tipo",icd10_description,P,405
 P81,"Patologia de hiperatividade e défice de atenção, tipo não especificado",icd10_description,P,405
+P82,"Patologia de ""stress"" pós-traumático",icd10_description,P,406
 P86,Anorexia nervosa,icd10_description,P,408
 P86,Bulimia nervosa,icd10_description,P,408
 P98,"Psicose, sem outra especificação, não devida a substância ou perturbação psicológica conhecida",icd10_description,P,409
@@ -7511,16 +7812,28 @@ P99,"Patologia persistente do desenvolvimento, sem outra especificação",icd10_
 P99,Outras patologias do desenvolvimento psicológico,icd10_description,P,410
 P99,"Patologia, sem outra especificação, do desenvolvimento psicológico",icd10_description,P,410
 P99,"Doença mental, não especificado noutra parte",icd10_description,P,410
+R01,Dor torácica ao respirar,icd10_description,R,411
+R02,Dispneia,icd10_description,R,412
+R03,Respiração sibilante,icd10_description,R,413
 R04,Estridor,icd10_description,R,414
 R04,Respiração de Cheyne-Stokes,icd10_description,R,414
 R04,Respiração pela boca,icd10_description,R,414
 R04,Outras anomalias e as não especificadas da respiração,icd10_description,R,414
+R05,Tosse,icd10_description,R,415
+R06,Epistaxis,icd10_description,R,416
+R07,Espirro,icd10_description,R,417
+R08,Outras patologias especificadas do nariz e seios nasais,icd10_description,R,418
+R09,Outras patologias especificadas do nariz e seios nasais,icd10_description,R,419
 R21,Dor de garganta,icd10_description,R,420
 R21,Outros sintomas e sinais especificados envolvendo os aparelhos circulatório e respiratório,icd10_description,R,420
 R23,Disfonia,icd10_description,R,421
 R23,Afonia,icd10_description,R,421
 R23,Hipernasalidade e hiponasalidade,icd10_description,R,421
 R23,Outras patologias da voz e da ressonância,icd10_description,R,421
+R24,Hemoptise,icd10_description,R,422
+R25,Expectoração anormal,icd10_description,R,423
+R26,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,R,424
+R27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,R,425
 R28,Limites impostos às atividades por invalidez,icd10_description,R,426
 R28,Dependência de ventilador,icd10_description,R,426
 R29,Hemorragia da garganta,icd10_description,R,427
@@ -7536,6 +7849,7 @@ R71,Tosse convulsa por outras espécies de Bordetella,icd10_description,R,428
 R71,"Tosse convulsa, espécies não especificadas",icd10_description,R,428
 R72,Faringite estreptocócica,icd10_description,R,429
 R72,Amigdalite estreptocócica,icd10_description,R,429
+R73,"Abcesso, furúnculo e antraz do nariz",icd10_description,R,430
 R74,Gengivoestomatite e faringoamigdalite pelo vírus Herpes,icd10_description,R,431
 R74,Faringite vesícular por enterovírus,icd10_description,R,431
 R74,Nasofaringite aguda (constipação comum),icd10_description,R,431
@@ -7802,9 +8116,11 @@ R95,Doença pulmonar obstrutiva crónica com infeção respiratória aguda do tr
 R95,Doença pulmonar obstrutiva crónica com exacerbação (aguda),icd10_description,R,449
 R95,Outra doença pulmonar obstrutiva crónica especificada,icd10_description,R,449
 R95,"Doença pulmonar obstrutiva crónica, sem outra especificação",icd10_description,R,449
+R96,Asma não especificada,icd10_description,R,450
 R97,Rinite vasomotora,icd10_description,R,451
 R97,Rinite alérgica devida a pólen,icd10_description,R,451
 R97,Outras rinites alérgicas sazonais,icd10_description,R,451
+R98,Hiperventilacao,icd10_description,R,452
 R99,Pólipo da cavidade nasal,icd10_description,R,453
 R99,Degenerescência polipóide dos seios da face,icd10_description,R,453
 R99,Outro pólipo dos seios da face,icd10_description,R,453
@@ -7890,8 +8206,10 @@ R99,Patologias do diafragma,icd10_description,R,453
 R99,Outras patologias   respiratórias especificadas,icd10_description,R,453
 R99,Doença não especificada do aparelho respiratório,icd10_description,R,453
 R99,Ausência adquirida de pulmão (parte de),icd10_description,R,453
+S01,Outros distúrbios da sensibilidade da pele,icd10_description,S,454
 S02,Outras formas de prurido,icd10_description,S,455
 S02,"Prurido, sem outra especificação",icd10_description,S,455
+S03,Verruga viral,icd10_description,S,456
 S04,"Tumor, massa ou protuberância localizadas, cabeça",icd10_description,S,457
 S04,"Tumor, massa ou protuberância localizadas, pescoço",icd10_description,S,457
 S04,"Tumor, massa ou protuberância localizadas, tronco",icd10_description,S,457
@@ -7899,6 +8217,7 @@ S04,"Tumor, massa ou protuberância localizadas, membro superior",icd10_descript
 S04,"Tumor, massa ou protuberância localizadas, membro inferior",icd10_description,S,457
 S04,"Tumor, massa ou protuberância localizadas, sem outra especificação",icd10_description,S,457
 S04,Outras alterações da pele e as não especificadas,icd10_description,S,457
+S05,Outras alterações da pele e as não especificadas,icd10_description,S,458
 S06,Afecões eritematosas SOE,icd10_description,S,459
 S06,Eritema e outra erupção não especificada da pele,icd10_description,S,459
 S07,Afecões eritematosas SOE,icd10_description,S,460
@@ -7910,6 +8229,7 @@ S08,Manchas café-com-leite,icd10_description,S,461
 S08,Cianose,icd10_description,S,461
 S08,Palidez,icd10_description,S,461
 S08,Flushing facial,icd10_description,S,461
+S09,Celulite e linfangite aguda de dedo da mão e do pé,icd10_description,S,462
 S10,"Abcesso cutâneo, furúnculo e carbúnculo da face",icd10_description,S,463
 S10,"Abcesso cutâneo, furúnculo e carbúnculo do pescoço",icd10_description,S,463
 S10,"Abcesso cutâneo, furúnculo e carbúnculo do tronco",icd10_description,S,463
@@ -8141,6 +8461,8 @@ S19,"Outras escoriações, perna",icd10_description,S,472
 S19,"Escoriação, sem outra especificação, do joelho e perna",icd10_description,S,472
 S19,"Outras escoriações, pé",icd10_description,S,472
 S19,"Escoriação, sem outra especificação, do tornozelo, pé e dedo do pé",icd10_description,S,472
+S20,Calos e calosidades,icd10_description,S,473
+S21,Alteracões da textura da pele,icd10_description,S,474
 S22,Onicólise,icd10_description,S,475
 S22,Linhas de Beau,icd10_description,S,475
 S22,Síndrome das unhas amareladas,icd10_description,S,475
@@ -8176,6 +8498,9 @@ S24,Hipertricose localizada,icd10_description,S,477
 S24,Politríquia,icd10_description,S,477
 S24,Outras formas de hipertricose,icd10_description,S,477
 S24,"Hipertricose, não especificada",icd10_description,S,477
+S26,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,S,478
+S27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,S,479
+S28,Limites impostos às atividades por invalidez,icd10_description,S,480
 S29,Equimoses espontâneas,icd10_description,S,481
 S29,Outras alterações da pele e as não especificadas,icd10_description,S,481
 S70,Encefalite pelo vírus Herpes zoster,icd10_description,S,482
@@ -8223,6 +8548,7 @@ S74,Tinha alba,icd10_description,S,486
 S74,Piedra negra,icd10_description,S,486
 S74,Outras micoses superficiais especificadas,icd10_description,S,486
 S74,"Micose superficial, sem outra especificação",icd10_description,S,486
+S75,Candidiase da pele e unhas,icd10_description,S,487
 S76,Erisipela,icd10_description,S,488
 S76,Lesões iniciais da bouba,icd10_description,S,488
 S76,Papilomas múltiplos e bouba plantar húmida,icd10_description,S,488
@@ -8422,6 +8748,8 @@ S88,Dermatite infetada,icd10_description,S,500
 S88,Intertrigo eritematoso,icd10_description,S,500
 S88,Outras dermatites especificadas,icd10_description,S,500
 S88,Dermatite não especificada,icd10_description,S,500
+S89,Dermatite das fraldas,icd10_description,S,501
+S90,Pitiríase rosada,icd10_description,S,502
 S91,Psoríase vulgar,icd10_description,S,503
 S91,Psoríase pustulosa generalizada,icd10_description,S,503
 S91,Acrodermatite contínua,icd10_description,S,503
@@ -8444,6 +8772,9 @@ S92,Cromidrose,icd10_description,S,504
 S92,Doença de Fox-Fordyce,icd10_description,S,504
 S92,Outras afeções das glândulas sudoríparas apócrinas,icd10_description,S,504
 S92,"Patologia de glândulas sudoríparas apócrinas, sem outra especificação",icd10_description,S,504
+S93,Quisto triquilemal,icd10_description,S,505
+S94,Unha encravada,icd10_description,S,506
+S95,Molusco contagioso,icd10_description,S,507
 S96,Acne vulgar,icd10_description,S,508
 S96,Acne conglobata,icd10_description,S,508
 S96,Acne varioliforme,icd10_description,S,508
@@ -8609,8 +8940,23 @@ S99,Mucinose da pele,icd10_description,S,511
 S99,Outras afeções infiltrativas da pele e do tecido subcutâneo,icd10_description,S,511
 S99,Outras patologias especificadas da pele e do tecido subcutâneo,icd10_description,S,511
 S99,"Afeções da pele e do tecido subcutâneo, não especificados",icd10_description,S,511
+T01,Polidipsia,icd10_description,T,512
+T02,Polifagia,icd10_description,T,513
+T03,Anorexia,icd10_description,T,514
+T04,Dificuldades de alimentação,icd10_description,T,515
+T05,Dificuldades de alimentação,icd10_description,T,516
+T07,Ganho anormal de peso,icd10_description,T,517
 T08,Perda de peso anormal,icd10_description,T,518
 T08,Caquexia,icd10_description,T,518
+T10,Nanismo NCOP,icd10_description,T,519
+T11,Depleção de volume,icd10_description,T,520
+T26,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,T,521
+T27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,T,522
+T28,Limites impostos às atividades por invalidez,icd10_description,T,523
+T29,Outros sintomas e sinais relativos a ingestão de alimentos e de líquidos,icd10_description,T,524
+T70,Tiroidite aguda,icd10_description,T,525
+T71,Neoplasia maligna da glândula tiróide,icd10_description,T,526
+T72,Neoplasia benigna da glândula tiróide,icd10_description,T,527
 T73,Neoplasia maligna do córtex da suprarrenal,icd10_description,T,528
 T73,Neoplasia maligna da medula da suprarrenal,icd10_description,T,528
 T73,Neoplasia maligna de parte não especificada de  glândula suprarrenal,icd10_description,T,528
@@ -8641,6 +8987,7 @@ T73,Neoplasia de comportamento incerto da glândula pineal,icd10_description,T,5
 T73,Neoplasia de comportamento incerto do corpo carotídeo,icd10_description,T,528
 T73,Neoplasia de comportamento incerto do corpo aórtico e outros paragânglios,icd10_description,T,528
 T73,Neoplasia de comportamento incerto de glândula endócrina não especificada,icd10_description,T,528
+T78,Malformacoes congénitas de glândulas endocrinas NCOP,icd10_description,T,529
 T80,Síndrome da deficiência congénita de iodo do tipo neurológico,icd10_description,T,530
 T80,Síndrome da deficiência congénita de iodo do tipo mixedematoso,icd10_description,T,530
 T80,Síndrome da deficiência congénita de iodo do tipo misto,icd10_description,T,530
@@ -8983,6 +9330,7 @@ T99,"Osteomalácia do adulto, não especificada",icd10_description,T,542
 U01,Disúria,icd10_description,U,543
 U01,Tenesmo vesical,icd10_description,U,543
 U01,"Micção dolorosa, sem outra especificação",icd10_description,U,543
+U02,Poliúria,icd10_description,U,544
 U04,Incontinência de stress (mulher) (homem),icd10_description,U,545
 U04,Outra incontinência urinária especificada,icd10_description,U,545
 U04,"Incontinência urinária, sem outra especificação",icd10_description,U,545
@@ -8999,10 +9347,16 @@ U06,Hematúria recidivante e persistente - glomerulonefrite difusa em crescente,
 U06,Hematúria recidivante e persistente - outras,icd10_description,U,547
 U06,Hematúria recidivante e persistente - não especificada,icd10_description,U,547
 U06,Hematúria,icd10_description,U,547
+U07,Outros sintomas e sinais envolvendo o aparelho genitourinário,icd10_description,U,548
+U08,Retenção urinária,icd10_description,U,549
 U13,Extravazamento de urina,icd10_description,U,550
 U13,Outros sintomas e sinais envolvendo o aparelho genitourinário,icd10_description,U,550
+U14,"Cólica renal, sem outra especificação",icd10_description,U,551
+U26,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,U,552
+U27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,U,553
 U28,Limites impostos às atividades por invalidez,icd10_description,U,554
 U28,Dependência de diálise renal,icd10_description,U,554
+U29,Outros sintomas e sinais envolvendo o aparelho genitourinário,icd10_description,U,555
 U70,Pielonefrite aguda,icd10_description,U,556
 U70,Pielonefrite não obstrutiva crónica associada a refluxo,icd10_description,U,556
 U70,Pielonefrite obstrutiva crónica,icd10_description,U,556
@@ -9263,6 +9617,8 @@ U99,Corpo estranho em outras partes do trato genitourinário,icd10_description,U
 U99,"Corpo estranho no trato genitourinário, parte não especificada",icd10_description,U,570
 U99,Ausência adquirida de rim,icd10_description,U,570
 U99,Ausência adquirida de outras partes do aparelho urinário,icd10_description,U,570
+W01,Episódio para teste de gravidez,icd10_description,W,571
+W02,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,W,572
 W03,Ameaça de aborto,icd10_description,W,573
 W03,Outras hemorragias no início da gravidez,icd10_description,W,573
 W03,"Hemorragia no início da gravidez, sem outra especificação",icd10_description,W,573
@@ -9274,6 +9630,8 @@ W05,Hiperêmese gravídica com distúrbio metabólico,icd10_description,W,574
 W05,Vómitos tardios da gravidez,icd10_description,W,574
 W05,Outras formas de vómitos complicando a gravidez,icd10_description,W,574
 W05,"Vómitos da gravidez, sem outra especificação",icd10_description,W,574
+W11,Episódio para vigilância de contracetivos,icd10_description,W,576
+W13,Episódio para esterilização,icd10_description,W,578
 W14,Aconselhamento geral sobre contraceção,icd10_description,W,579
 W14,Outro procedimento anticoncepcional,icd10_description,W,579
 W14,Procedimentos anticoncepcionais SOE,icd10_description,W,579
@@ -9291,9 +9649,13 @@ W17,Hemorragia do terceiro estadio,icd10_description,W,581
 W17,Outras hemorragias do pós-parto imédiato,icd10_description,W,581
 W17,"Hemorragias pós-parto, tardias e secundárias",icd10_description,W,581
 W17,Deficiências de coagulação pós-parto,icd10_description,W,581
+W18,"Complicação do puerpério, sem outra especificação",icd10_description,W,582
 W19,Lactação suprimida,icd10_description,W,583
 W19,Galactorréia,icd10_description,W,583
 W19,Outras patologias da lactação e os não especificados,icd10_description,W,583
+W21,Outros sintomas e sinais envolvendo a aparência e o comportamento,icd10_description,W,584
+W27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,W,585
+W28,Limites impostos às atividades por invalidez,icd10_description,W,586
 W29,Ganho excessivo de peso na gravidez,icd10_description,W,587
 W29,Ganho de peso insuficiente na gravidez,icd10_description,W,587
 W29,Assistência à gravidez a doente com perda de gravidez recorrente,icd10_description,W,587
@@ -9325,9 +9687,12 @@ W71,"Doenças por protozoários complicando a gravidez, o parto e o puerpério",
 W71,"Doença pelo vírus da imunodeficiência humana [VIH] complicando a gravidez, o parto e o puerpério",icd10_description,W,589
 W71,"Outras infeções e doenças parasíticas maternas complicando a gravidez, o parto e o puerpério",icd10_description,W,589
 W71,"Doenças infecciosas e parasitárias maternas, sem outra especificação, complicando a gravidez, o parto e o puerpério",icd10_description,W,589
+W72,Neoplasia maligna da placenta,icd10_description,W,590
 W73,Mola hidatiforme clássica,icd10_description,W,591
 W73,Mola hidatiforme incompleta ou parcial,icd10_description,W,591
 W73,"Mola hidatiforme, sem outra especificação",icd10_description,W,591
+W75,"Lesão, sem outra especificação",icd10_description,W,592
+W76,"Outras doenças e condições especificadas complicando a gravidez, o parto e o puerpério",icd10_description,W,593
 W78,Estado de gravidez,icd10_description,W,594
 W78,Episódio para supervisão de primeira gravidez normal,icd10_description,W,594
 W78,Episódio para supervisão de outra gravidez normal,icd10_description,W,594
@@ -9340,6 +9705,7 @@ W78,Episódio para rastreio pré-natal para restrição do crescimento fetal,icd
 W78,Episódio para teste de Coombs,icd10_description,W,594
 W78,Episódio para outros rastreio pré-natal ,icd10_description,W,594
 W78,"Episódio para rastreio pré-natal, não especificada",icd10_description,W,594
+W79,Problemas relacionados com gravidez não desejada,icd10_description,W,595
 W80,Gravidez abdominal,icd10_description,W,596
 W80,Gravidez tubária,icd10_description,W,596
 W80,Gravidez ovárica,icd10_description,W,596
@@ -9458,6 +9824,7 @@ W84,"Doenças do aparelho respiratório complicando a gravidez, o parto e o puer
 W84,"Doenças do aparelho digestivo complicando a gravidez, o parto e o puerpério",icd10_description,W,600
 W84,"Doenças da pele e tecido subcutâneo complicando a gravidez, o parto e o puerpério",icd10_description,W,600
 W84,"Outras doenças e condições especificadas complicando a gravidez, o parto e o puerpério",icd10_description,W,600
+W85,Diabetes mellitus gestacional,icd10_description,W,601
 W90,Parto de criança única nascida viva,icd10_description,W,602
 W90,"Produto do parto, sem outra especificação",icd10_description,W,602
 W90,"Criança única, nascida em hospital",icd10_description,W,602
@@ -9728,6 +10095,7 @@ X01,Dor pélvica e perineal,icd10_description,X,610
 X02,Dismenorreia primária,icd10_description,X,611
 X02,Dismenorreia secundária,icd10_description,X,611
 X02,"Dismenorreia, sem outra especificação",icd10_description,X,611
+X03,Ovulação dolorosa (mittelschmerz),icd10_description,X,612
 X04,Dispareunia,icd10_description,X,613
 X04,Vaginismo,icd10_description,X,613
 X05,Amenorréia primária,icd10_description,X,614
@@ -9746,12 +10114,21 @@ X07,"Menstruação irregular, não especificada",icd10_description,X,616
 X08,Hemorragia na ovulação,icd10_description,X,617
 X08,Outros hemorragias especificadas do útero e da vagina,icd10_description,X,617
 X08,"Hemorragia anormal do útero e da vagina, não especificada",icd10_description,X,617
+X09,Afeções não especificadas associadas com os órgãos genitais femininos e com o ciclo menstrual,icd10_description,X,618
+X10,Procedimentos anticoncepcionais SOE,icd10_description,X,619
 X11,"Estados menopáusicos ou do climatério feminino, sintomáticos",icd10_description,X,620
 X11,Vaginite atrófica pós-menopáusica,icd10_description,X,620
 X11,Outras patologias especificadas da menopausa e perimenopausa,icd10_description,X,620
 X11,"Patologia, sem outra especificação, da menopausa e perimenopausa",icd10_description,X,620
+X12,Hemorragia genital pós-menopáusica,icd10_description,X,621
+X13,Hemorragia pós-coito,icd10_description,X,622
+X14,"Alteracões não inflamatórias da vagina, NCOP",icd10_description,X,623
+X15,"Patologia não inflamatória da vagina, não especificada",icd10_description,X,624
 X16,Prurido vulvar,icd10_description,X,625
 X16,"Patologia não inflamatória da vulva e perineo, não especificada",icd10_description,X,625
+X17,Afeções não especificadas associadas com os órgãos genitais femininos e com o ciclo menstrual,icd10_description,X,626
+X18,Mastodinia (dor na mama),icd10_description,X,627
+X19,Protuberância ou massa na mama,icd10_description,X,628
 X20,Fissura e fístula do mamilo,icd10_description,X,629
 X20,"Sinal ou sintoma na mama, NCOP",icd10_description,X,629
 X21,Doença inflamatória da mama,icd10_description,X,630
@@ -9759,6 +10136,12 @@ X21,Hipertrofia da mama,icd10_description,X,630
 X21,Galactorreia não associada a amamentacao,icd10_description,X,630
 X21,"Sinal ou sintoma na mama, NCOP",icd10_description,X,630
 X21,Doença da mama não especificada,icd10_description,X,630
+X22,Outros sintomas e sinais envolvendo a aparência e o comportamento,icd10_description,X,631
+X23,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,X,632
+X24,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,X,633
+X25,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,X,634
+X26,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,X,635
+X27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,X,636
 X28,Limites impostos às atividades por invalidez,icd10_description,X,637
 X28,Ausência adquirida de órgão(s) genital(is),icd10_description,X,637
 X29,Afeções não especificadas associadas com os órgãos genitais femininos e com o ciclo menstrual,icd10_description,X,638
@@ -9800,6 +10183,7 @@ X71,Outras infeções gonocócicas,icd10_description,X,640
 X71,"Infeção gonocócica, não especificada",icd10_description,X,640
 X72,Candidiase da vulva e vagina,icd10_description,X,641
 X72,Candidiase de outros locais urogenitais,icd10_description,X,641
+X73,Tricomoníase urogenital,icd10_description,X,642
 X74,Salpingite e ooforite agudas,icd10_description,X,643
 X74,Salpingite e ooforite crónicas,icd10_description,X,643
 X74,"Salpingite e ooforite, sem outra especificação",icd10_description,X,643
@@ -9854,6 +10238,7 @@ X78,Leiomioma submucoso do útero,icd10_description,X,647
 X78,Leiomioma intramural do útero,icd10_description,X,647
 X78,Leiomioma subseroso do útero,icd10_description,X,647
 X78,"Leiomioma do útero, sem outra especificação",icd10_description,X,647
+X79,Neoplasia benigna da mama,icd10_description,X,648
 X80,Outra neoplasia benigna do colo do útero,icd10_description,X,649
 X80,Outra neoplasia benigna do corpo do útero,icd10_description,X,649
 X80,Outra neoplasia benigna de outras partes do útero,icd10_description,X,649
@@ -9973,9 +10358,11 @@ X88,Fibrosclerose da mama,icd10_description,X,657
 X88,Ectasia dos ductos mamários,icd10_description,X,657
 X88,Outras displasias mamárias benignas,icd10_description,X,657
 X88,"Displasia mamária benigna, sem outra especificação",icd10_description,X,657
+X89,Síndrome de tensão pré-menstrual,icd10_description,X,658
 X90,Infeção dos órgãos genitais e do trato genitourinário pelo vírus Herpes,icd10_description,X,659
 X90,Infeção da pele perianal e do reto pelo vírus Herpes,icd10_description,X,659
 X90,"Infeção anogenital pelo vírus Herpes, não especificada",icd10_description,X,659
+X91,Verrugas anogenitais (venéreas),icd10_description,X,660
 X92,Infeções por Clamídia do trato genitourinário inferior,icd10_description,X,661
 X92,Infeção por Clamídia do pelviperitoneu e de outros órgãos genitourinários,icd10_description,X,661
 X92,"Infeção por Clamídia do trato genitourinário, não especificada",icd10_description,X,661
@@ -10055,10 +10442,14 @@ X99,Outras condições especificadas associadas aos órgãos genitais femininos 
 X99,Afeções não especificadas associadas com os órgãos genitais femininos e com o ciclo menstrual,icd10_description,X,662
 X99,Ausência adquirida de mama e mamilo,icd10_description,X,662
 X99,Ausência adquirida de órgão(s) genital(is),icd10_description,X,662
+Y01,Outras patologias especificadas do pénis,icd10_description,Y,663
 Y02,"Alteracões especificadas dos órgãos genitais masculinos, NCOP",icd10_description,Y,664
 Y02,Dor pélvica e perineal,icd10_description,Y,664
+Y03,Corrimento uretral,icd10_description,Y,665
+Y04,Doenças do pénis SOE,icd10_description,Y,666
 Y05,Prurido escrotal,icd10_description,Y,667
 Y05,Patologia não especificada dos órgãos genitais masculinos,icd10_description,Y,667
+Y06,"Afeções da próstata, sem outra especificação",icd10_description,Y,668
 Y08,Priapismo,icd10_description,Y,670
 Y08,Doenças do pénis SOE,icd10_description,Y,670
 Y10,Infertilidade masculina,icd10_description,Y,671
@@ -10067,14 +10458,20 @@ Y10,Investigação e testes em relação com procriação,icd10_description,Y,67
 Y10,Aconselhamento geral sobre a procriação,icd10_description,Y,671
 Y10,Episódio para outra medida relativa à procriação,icd10_description,Y,671
 Y10,Procedimentos relativos a procriacão não especificados,icd10_description,Y,671
+Y13,Episódio para esterilização,icd10_description,Y,672
 Y14,Aconselhamento geral sobre contraceção,icd10_description,Y,673
 Y14,Outro procedimento anticoncepcional,icd10_description,Y,673
 Y14,Procedimentos anticoncepcionais SOE,icd10_description,Y,673
 Y16,Hipertrofia da mama,icd10_description,Y,674
 Y16,Protuberância ou massa na mama,icd10_description,Y,674
 Y16,"Sinal ou sintoma na mama, NCOP",icd10_description,Y,674
+Y24,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,Y,675
+Y25,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,Y,676
+Y26,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,Y,677
+Y27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,Y,678
 Y28,Limites impostos às atividades por invalidez,icd10_description,Y,679
 Y28,Ausência adquirida de órgão(s) genital(is),icd10_description,Y,679
+Y29,Patologia não especificada dos órgãos genitais masculinos,icd10_description,Y,680
 Y70,Sífilis congénita precoce sintomática,icd10_description,Y,681
 Y70,Sífilis congénita precoce latente,icd10_description,Y,681
 Y70,"Sífilis congénita precoce, não especificada",icd10_description,Y,681
@@ -10121,8 +10518,11 @@ Y73,Prostatocistite,icd10_description,Y,684
 Y73,Outras doenças inflamatórias da próstata,icd10_description,Y,684
 Y73,"Prostatite, não especificada",icd10_description,Y,684
 Y73,Vesiculite seminal,icd10_description,Y,684
+Y74,Infeção por Clamídia do pelviperitoneu e de outros órgãos genitourinários,icd10_description,Y,685
 Y75,Candidiase de outros locais urogenitais,icd10_description,Y,686
 Y75,Balanite,icd10_description,Y,686
+Y76,Verrugas anogenitais (venéreas),icd10_description,Y,687
+Y77,Neoplasia maligna da próstata,icd10_description,Y,688
 Y78,Neoplasia maligna do mamilo e auréola,icd10_description,Y,689
 Y78,Neoplasia maligna da porção central da mama,icd10_description,Y,689
 Y78,Neoplasia maligna do quadrante superior interno da mama,icd10_description,Y,689
@@ -10173,6 +10573,7 @@ Y80,Amputação traumática de órgãos genitais externos,icd10_description,Y,69
 Y80,Queimadura de órgãos genitourinários internos,icd10_description,Y,691
 Y80,Corrosão de órgãos genitourinários internos,icd10_description,Y,691
 Y80,Episódio para circuncisão de rotina ou ritual,icd10_description,Y,691
+Y81,"Hipertrofia do prepúcio, fimose e parafimose",icd10_description,Y,692
 Y82,Hipospádia balânica,icd10_description,Y,693
 Y82,Hipospádia peniana,icd10_description,Y,693
 Y82,Hipospádia penoscrotal,icd10_description,Y,693
@@ -10204,6 +10605,7 @@ Y84,Ausência de mamilo,icd10_description,Y,695
 Y84,Mamilo supranumerário,icd10_description,Y,695
 Y84,Outras malformações congénitas da mama,icd10_description,Y,695
 Y84,Malformação congénita não especificada da mama,icd10_description,Y,695
+Y85,Hiperplasia benigna da próstata,icd10_description,Y,696
 Y86,Hidrocelo enquistado,icd10_description,Y,697
 Y86,Hidrocelo infetado,icd10_description,Y,697
 Y86,Outro Hidrocelo,icd10_description,Y,697
@@ -10274,6 +10676,7 @@ Z05,Exposição ocupacional a temperaturas extremas,icd10_description,Z,703
 Z05,Exposição ocupacional a vibração,icd10_description,Z,703
 Z05,Exposição ocupacional a outros factores de risco,icd10_description,Z,703
 Z05,Exposição ocupacional a fator de risco não especificado,icd10_description,Z,703
+Z06,"Desemprego, sem outra especificação",icd10_description,Z,704
 Z07,Analfabetismo e baixa literacia,icd10_description,Z,705
 Z07,Escolarização não disponível e não acessível,icd10_description,Z,705
 Z07,Reprovação em exames escolares,icd10_description,Z,705
@@ -10281,6 +10684,7 @@ Z07,Maus resultados escolares,icd10_description,Z,705
 Z07,Má adaptação escolar e dificuldades com professores e colegas,icd10_description,Z,705
 Z07,Outros problemas relacionados com a educação e com a alfabetização,icd10_description,Z,705
 Z07,Problemas não especificados relacionados com a educação e com a alfabetização,icd10_description,Z,705
+Z08,Seguro social e medidas de bem-estar social insuficientes,icd10_description,Z,706
 Z09,"Condenação, sem prisão, por tribunal civil ou criminal",icd10_description,Z,707
 Z09,Prisão e outro encarceramento,icd10_description,Z,707
 Z09,Problemas ligados à libertação de prisão,icd10_description,Z,707
@@ -10305,6 +10709,8 @@ Z11,Problema não especificado relacionado com facilidades médicas e com outros
 Z12,"Negligência ou abandono, confirmado",icd10_description,Z,710
 Z12,"Abuso psicológico, confirmado",icd10_description,Z,710
 Z12,Problemas nas relações com cônjuge ou parceiro,icd10_description,Z,710
+Z13,Problemas nas relações com cônjuge ou parceiro,icd10_description,Z,711
+Z14,"Parente dependente de cuidados, residente no domicílio",icd10_description,Z,712
 Z15,Desaparecimento e falecimento de um membro da família,icd10_description,Z,713
 Z15,Divisão da família por separação ou divórcio,icd10_description,Z,713
 Z16,"Negligência ou abandono, confirmado",icd10_description,Z,714
@@ -10317,6 +10723,8 @@ Z16,Pressão parental inapropriada (excessiva),icd10_description,Z,714
 Z16,Outros problemas especificados relacionados com a educação dos filhos,icd10_description,Z,714
 Z16,Problema não especificado relacionado com a educação dos filhos,icd10_description,Z,714
 Z16,Outros problemas especificados relacionados com o grupo primário de suporte,icd10_description,Z,714
+Z18,"Parente dependente de cuidados, residente no domicílio",icd10_description,Z,715
+Z19,Desaparecimento e falecimento de um membro da família,icd10_description,Z,716
 Z20,"Negligência ou abandono, confirmado",icd10_description,Z,717
 Z20,Problemas nas relações com os pais ou com os sogros,icd10_description,Z,717
 Z20,Outros problemas especificados relacionados com o grupo primário de suporte,icd10_description,Z,717
@@ -10324,11 +10732,14 @@ Z21,Problemas nas relações com os pais ou com os sogros,icd10_description,Z,71
 Z21,Problema não especificado relacionado com o grupo primário de suporte,icd10_description,Z,718
 Z22,"Parente dependente de cuidados, residente no domicílio",icd10_description,Z,719
 Z22,Outros acontecimentos difíceis da vida afetando a família e o lar,icd10_description,Z,719
+Z23,Desaparecimento e falecimento de um membro da família,icd10_description,Z,720
+Z24,Problema não especificado relacionado com o grupo primário de suporte,icd10_description,Z,721
 Z25,"Abuso físico, confirmado",icd10_description,Z,722
 Z25,"Abuso sexual, confirmado",icd10_description,Z,722
 Z25,"Maus tratos, sem outra especificação, confirmados",icd10_description,Z,722
 Z25,Vítima de crime e terrorismo,icd10_description,Z,722
 Z25,"Exposição a catástrofe, guerra e outras hostilidades",icd10_description,Z,722
+Z27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,Z,723
 Z28,Competências sociais inadequadas não classificadas noutra parte,icd10_description,Z,724
 Z28,Limites impostos às atividades por invalidez,icd10_description,Z,724
 Z29,Outros problemas relacionados com o ambiente físico,icd10_description,Z,725
