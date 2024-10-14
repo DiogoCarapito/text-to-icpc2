@@ -1,7 +1,8 @@
 import pandas as pd
 from datasets import Dataset, Features, ClassLabel, Value  # , DatasetDict
-import logging
 import click
+
+# import logging
 
 
 def semicolon_colon_split(df, string_split, column_name):
@@ -29,7 +30,7 @@ def semicolon_colon_split(df, string_split, column_name):
                 # Create a new row for each part of the split string and append it to the list
                 rows_to_append.append({"code": each.code, column_name: part})
                 # print(f"rows to append: {rows_to_append}")
-    
+
     # Create a new DataFrame from the list of dictionaries
     new_df = pd.DataFrame(rows_to_append)
 
@@ -38,7 +39,7 @@ def semicolon_colon_split(df, string_split, column_name):
 
 @click.command()
 @click.option("--force", default=True, help="Force the data processing")
-@click.option("--hf", default=True, help="Save to Huffingface")
+@click.option("--hf", default=True, help="Save to Huggingface")
 def main(force=True, hf=True):
     if force:
         # import data icpc2_preprocessed.csv
@@ -100,7 +101,7 @@ def main(force=True, hf=True):
         data = pd.concat([data_icpc2_1, data_icpc2_2, data_icpc2_3, data_icd10])
 
         # substitute "-" by "A" in codes that start with "-"
-        #data["code"] = data["code"].str.replace(r"^-", "A", regex=True)
+        # data["code"] = data["code"].str.replace(r"^-", "A", regex=True)
 
         # add data from data augmentation csv
         data_aug = pd.read_csv("data/data_augmentation.csv")
@@ -116,13 +117,13 @@ def main(force=True, hf=True):
         data = data[
             ~(
                 (data.duplicated(subset=["text"], keep=False))
-                & (data["origin"].isin(["icpc2_short"])) #, "icd10_description"
+                & (data["origin"].isin(["icpc2_short"]))  # , "icd10_description"
             )
         ]
-        
+
         # oder by code and reset index
         data = data.sort_values(by=["code"]).reset_index(drop=True)
-        
+
         print(data.head(50))
 
         # create a new column with the chapter of the code

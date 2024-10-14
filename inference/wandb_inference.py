@@ -16,10 +16,12 @@ def wandb_inference(i_input="Hipertensão arterial", model_name=""):
     load_dotenv()
     wandb_api_key = os.getenv("WANDB_API_KEY")
     wandb.login(key=wandb_api_key)
-    
+
     # Use the W&B API to download the artifact without creating a new run
     api = wandb.Api()
-    artifact = api.artifact("diogo-carapito/wandb-registry-model/text-to-icpc2:v0", type="model")
+    artifact = api.artifact(
+        "diogo-carapito/wandb-registry-model/text-to-icpc2:v0", type="model"
+    )
     artifact_dir = artifact.download()
 
     # load with pytorch and inference´

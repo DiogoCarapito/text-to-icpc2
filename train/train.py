@@ -139,7 +139,7 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
     test_size = 0.2
     stratify_by_column = "label"
     seed = 42
-    
+
     tokenized_dataset_split = tokenized_dataset.train_test_split(
         test_size=test_size,
         stratify_by_column=stratify_by_column,
@@ -221,7 +221,7 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
 
     # Evaluate the model by using on the full tokenized_dataset
     logging.info("Evaluating the model")
-    #print(tokenized_dataset)
+    # print(tokenized_dataset)
     eval_results = trainer.evaluate(tokenized_dataset)
     wandb.log(eval_results)
     logging.info("Accuracy: %s", eval_results["eval_accuracy"])
@@ -229,16 +229,15 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
     # Save the model
     model_dir = "/tmp/saved_model"
     trainer.save_model(model_dir)
-    
-    #show the model saved in model_dir
+
+    # show the model saved in model_dir
     logging.info("Model saved in %s", model_dir)
 
-    #log the model as an artifact to W&B
+    # log the model as an artifact to W&B
     logging.info("Logging the model as an artifact to W&B")
     artifact = wandb.Artifact(name=experiment_name, type="model")
     artifact.add_dir(f"{model_dir}/model.safetensors")
     run.log_artifact(artifact)
-    
 
     # Save the model as a PyTorch model
     logging.info("Saving the model as PyTorch")
