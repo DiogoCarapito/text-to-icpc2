@@ -34,12 +34,12 @@ def filter_dataset(dataset, filter_count):
 
 
 def update_dataset(new_data_to_uplaod):
-    print(new_data_to_uplaod)
+    #print(new_data_to_uplaod)
 
     # load data/data_augmentation.csv
     data_augmentation = pd.read_csv("data/data_augmentation.csv")
 
-    print(data_augmentation)
+    #print(data_augmentation)
 
     # append the new data
     data_augmentation = pd.concat(
@@ -57,6 +57,8 @@ def update_dataset(new_data_to_uplaod):
 
     # show a success message
     st.toast("Data updated!", icon="🎉")
+    
+    print("Data updated!")
 
 
 def process_icpc2_description_text(text):
@@ -150,7 +152,7 @@ def prompt_design(code):
     # full prompt
     prompt_text = f"{labels}{inclui}{icd10}{criterios}{exclui}"
 
-    context_text = f"Estou a fazer um processo de Data Augmentation e preciso de encontrar sinónimos para a seguinte doença ou problema de saúde em português de Portugal. Vou te dar as expressões que já tenho, encontra-me variações que sejam sinónimos ou outras formas de expressão similares . Dá-me entre 10 e 50 resultados. Devlove apenas a lista de expressões separadas por ';'"
+    context_text = "Estou a fazer um processo de Data Augmentation e preciso de encontrar sinónimos para a seguinte doença ou problema de saúde em português de Portugal. Vou te dar as expressões que já tenho, encontra-me variações que sejam sinónimos ou outras formas de expressão similares . Dá-me entre 10 e 50 resultados. Devlove apenas a lista de expressões separadas por ';'"
 
     return prompt_text, context_text
 
@@ -348,4 +350,41 @@ with col_22:
             )
             new_data = None
 
-    st.divider()
+st.divider()
+
+st.write("### Data Augmentation Dataset Analysis")
+
+augmented_dataset = pd.read_csv("data/data_augmentation.csv")
+
+col_31, col_32 = st.columns(2)
+col_41, col_42 = st.columns(2)
+
+# number of different codes
+codes_augmented = augmented_dataset["code"].nunique()
+number_of_descriptions = augmented_dataset.shape[0]
+accepted = augmented_dataset[augmented_dataset["include"] == True].shape[0]
+
+with col_31:
+    st.metric("Number of codes",codes_augmented)
+
+# number of descriptions per code
+with col_32:
+    st.metric("Number of descriptions per code", round(number_of_descriptions/codes_augmented,1))
+
+# number of descriptions
+with col_41:
+    st.metric("Number of descriptions", number_of_descriptions)
+
+# number of accepted descriptions
+with col_42:
+    st.metric("Number of accepted descriptions", accepted)
+
+
+
+
+st.write(augmented_dataset)
+
+# % of acceptance of gpt-4o-mini
+# acceptance = augmented_dataset[augmented_dataset["origin"] == "gpt-4o-mini"].shape[0]/number_of_descriptions
+# st.metric("Acceptance of gpt-4o-mini", f"{round(acceptance*100, 1)}%")
+

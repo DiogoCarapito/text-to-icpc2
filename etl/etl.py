@@ -86,10 +86,10 @@ def main(force=True, hf=True):
         data_icd10 = semicolon_colon_split(data_icd10, "; ", "icd10_description")
 
         # Assuming data_icpc2_1, data_icpc2_2, and data_icd10 are slices from other DataFrames
-        data_icpc2_1["origin"] = "icpc2_description"
-        data_icpc2_2["origin"] = "icpc2_short"
-        data_icpc2_3["origin"] = "icpc2_inclusion"
-        data_icd10["origin"] = "icd10_description"
+        data_icpc2_1["origin"] = ["icpc2_description"] * len(data_icpc2_1)
+        data_icpc2_2["origin"] = ["icpc2_short"] * len(data_icpc2_2)
+        data_icpc2_3["origin"] = ["icpc2_inclusion"] * len(data_icpc2_3)
+        data_icd10["origin"] = ["icd10_description"] * len(data_icd10)
 
         # change the name of the columns
         data_icpc2_1 = data_icpc2_1.rename(columns={"icpc2_description": "text"})
@@ -124,7 +124,7 @@ def main(force=True, hf=True):
         # oder by code and reset index
         data = data.sort_values(by=["code"]).reset_index(drop=True)
 
-        print(data.head(50))
+        #print(data.head(50))
 
         # create a new column with the chapter of the code
         data["chapter"] = data["code"].str[0]
