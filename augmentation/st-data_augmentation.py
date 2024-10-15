@@ -242,6 +242,8 @@ st.write(
     "#### Data augmentation by using *gpt-4o-mini* model by synonim and acronym search"
 )
 
+st.write("[https://huggingface.co/datasets/diogocarapito/text-to-icpc2](https://huggingface.co/datasets/diogocarapito/text-to-icpc2)")
+
 st.divider()
 
 # st.write("The current dataset, ordered by code and count")
