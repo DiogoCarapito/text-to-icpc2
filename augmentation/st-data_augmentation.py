@@ -21,7 +21,7 @@ def load_dataset():
 
     # order by code and count
     ordered_dataset = original_dataset.sort_values(
-        by=["count", "code"], ascending=[True, True]
+        by=["code"], ascending=[True] #"count", #, True
     )
 
     # remove codes that start with "-"
@@ -247,7 +247,7 @@ st.divider()
 # st.write("The current dataset, ordered by code and count")
 
 
-filter_by_cound = st.slider("Filter by count", 0, 100, 10)
+filter_by_cound = st.slider("Filter by count", 0, 100, 7)
 
 # Strip any leading or trailing whitespace from the 'code' column
 
