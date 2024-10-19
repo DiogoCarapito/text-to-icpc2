@@ -40,7 +40,7 @@ def semicolon_colon_split(df, string_split, column_name):
 @click.command()
 @click.option("--force", default=True, help="Force the data processing")
 @click.option("--hf", default=True, help="Save to Huggingface")
-def main(force=True, hf=True):
+def main_etl(force=True, hf=True):
     if force:
         # import data icpc2_preprocessed.csv
         data = pd.read_csv("data/icpc2_processed.csv")
@@ -227,4 +227,4 @@ def main(force=True, hf=True):
 
 
 if __name__ == "__main__":
-    main()
+    main_etl()

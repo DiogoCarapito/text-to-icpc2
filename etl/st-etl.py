@@ -2,7 +2,7 @@
 
 import streamlit as st
 import pandas as pd
-from etl import pre_train_prep
+from etl.etl import main_etl
 import plotly.express as px
 import numpy as np
 
@@ -34,7 +34,7 @@ def main():
     st.title("Processamento pré-treino")
 
     # load the pos-processed dataset
-    df_pre_train = pre_train_prep(force=False)
+    df_pre_train = main_etl(force=False)
 
     # filter section for exploration
     col_1, col_2, col_3, col_4 = st.columns(4)
