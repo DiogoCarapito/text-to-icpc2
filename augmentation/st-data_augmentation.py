@@ -4,6 +4,7 @@ import os
 import dotenv
 from openai import OpenAI
 import re
+import datetime
 
 # Set the page layout to wide mode
 st.set_page_config(layout="wide")
@@ -52,9 +53,6 @@ def update_dataset(new_data_to_uplaod):
     # save the new data
     data_augmentation.to_csv("data/data_augmentation.csv", index=False)
 
-    # run etl.py to update the dataset
-    os.system("python etl/etl.py --hf True")
-
     # show a success message
     st.toast("Data updated!", icon="🎉")
     
@@ -78,22 +76,22 @@ def process_icpc2_description_text(text):
 def chapters_substitution(label_with_chapter):
     correspondence = {
         "NE": "não especificada",
-        "(B)": "Sangue, órgãos hematopoiéticos e linfáticos",
-        "(D)": "Aparelho digestivo e Gastrenterologia",
-        "(F)": "Olhos e Oftalmologia",
-        "(H)": "Ouvidos e Otorrinolaringologia",
-        "(K)": "sistema cardiovascular e aparelho circulatório",
-        "(L)": "Sistema musculo-esquelético",
-        "(N)": "Sistema nervoso e Neurologia",
-        "(P)": "Piscologico e Psiquiátrico",
-        "(R)": "Aparelho respiratório e Penumologia",
-        "(S)": "Pele e Dermatologia",
-        "(T)": "Endócrino, metabólico e nutricional",
-        "(U)": "Aparelho urinário",
-        "(W)": "Gravidez e planeamento familiar",
-        "(X)": "Aparelho genital feminino (incluíndo mama)",
-        "(Y)": "Aparelho genital masculino",
-        "(Z)": "Problemas sociais ",
+        "(B)": "por Sangue, órgãos hematopoiéticos e linfáticos",
+        "(D)": "por Aparelho digestivo e Gastrenterologia",
+        "(F)": "por Olhos e Oftalmologia",
+        "(H)": "por Ouvidos e Otorrinolaringologia",
+        "(K)": "por sistema cardiovascular e aparelho circulatório",
+        "(L)": "por Sistema musculo-esquelético",
+        "(N)": "por Sistema nervoso e Neurologia",
+        "(P)": "por Piscologico e Psiquiátrico",
+        "(R)": "por Aparelho respiratório e Penumologia",
+        "(S)": "por Pele e Dermatologia",
+        "(T)": "por Endócrino, metabólico e nutricional",
+        "(U)": "por Aparelho urinário",
+        "(W)": "por Gravidez e planeamento familiar",
+        "(X)": "por Aparelho genital feminino (incluíndo mama)",
+        "(Y)": "por por Aparelho genital masculino",
+        "(Z)": "por por Problemas sociais ",
     }
     
     for key in correspondence.keys():
@@ -306,6 +304,23 @@ with col_22:
     if st.button("Gerar Sinónimos", type="primary", key="generate_synonyms"):
         # execute the prompt
         resultados, modelo = prompt_exec(prompt, context)
+        
+        # get the current date and time
+        current_datetime = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        
+        # log to data/data_augmentation_log.csv
+        data_to_log = {
+            "date": current_datetime,
+            "code": sleected_code,
+            "context": context,
+            "prompt": prompt,
+            "origin": modelo,
+            "text": resultados,
+        }
+        
+        #save to csv
+        log_df = pd.DataFrame(data_to_log, index=[0])
+        log_df.to_csv("data/data_augmentation_log.csv", mode='a', header=False, index=False)
 
         # remove the last . from the results if it exists
         if resultados.endswith("."):
@@ -319,7 +334,7 @@ with col_22:
         
         # remove duplicates
         lista_resultados = list(set(lista_resultados))
-    
+
 
         # Create a DataFrame from the list of results
         st.session_state["new_data"] = pd.DataFrame(
@@ -337,7 +352,7 @@ with col_22:
     new_data = st.data_editor(st.session_state["new_data"])
 
     if st.button(
-        "Push new data to the dataset!",
+        "Save new data to the data/data_augmentation.csv!",
         type="primary",
         key="update_dataset",
     ):
@@ -352,6 +367,19 @@ with col_22:
             )
             new_data = None
 
+    if st.button(
+        "Rerun etl/etl.py and push to HF",
+        type="primary",
+        key="upload"
+    ):    
+        # run etl.py to update the dataset
+        os.system("python etl/etl.py --hf True")    
+        
+        # show a success message
+        st.toast("Data pushed to HF!", icon="🤗")
+        print("Data pushed to HF!")
+        
+
 st.divider()
 
 st.write("### Data Augmentation Dataset Analysis")
@@ -364,10 +392,11 @@ col_41, col_42 = st.columns(2)
 # number of different codes
 codes_augmented = augmented_dataset["code"].nunique()
 number_of_descriptions = augmented_dataset.shape[0]
-accepted = augmented_dataset[augmented_dataset["include"] == True].shape[0]
+percentage_of_descriptions_accepted = round(100 * augmented_dataset[augmented_dataset["include"] == True].shape[0]/number_of_descriptions, 1)
+accepted_descriptions = augmented_dataset[augmented_dataset["include"] == True].shape[0]
 
 with col_31:
-    st.metric("Number of codes",codes_augmented)
+    st.metric("Number of codes",codes_augmented, delta=f"{round(100*codes_augmented/count,1)}%")
 
 # number of descriptions per code
 with col_32:
@@ -379,10 +408,7 @@ with col_41:
 
 # number of accepted descriptions
 with col_42:
-    st.metric("Number of accepted descriptions", accepted)
-
-
-
+    st.metric("Number of accepted descriptions", accepted_descriptions, f"{round(100*accepted_descriptions/number_of_descriptions,1)}%")
 
 st.write(augmented_dataset)
 
