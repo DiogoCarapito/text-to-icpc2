@@ -124,7 +124,7 @@ def main_etl(force=True, hf=True):
         # oder by code and reset index
         data = data.sort_values(by=["code"]).reset_index(drop=True)
 
-        #print(data.head(50))
+        # print(data.head(50))
 
         # create a new column with the chapter of the code
         data["chapter"] = data["code"].str[0]
