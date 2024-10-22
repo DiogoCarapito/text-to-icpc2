@@ -232,13 +232,13 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
     model_dir = "/tmp/saved_model"
     trainer.save_model(model_dir)
 
-    # show the model saved in model_dir
+    # Show the model saved in model_dir
     logging.info("Model saved in %s", model_dir)
 
-    # log the model as an artifact to W&B
+    # Log the model as an artifact to W&B
     logging.info("Logging the model as an artifact to W&B")
     artifact = wandb.Artifact(name=experiment_name, type="model")
-    artifact.add_dir(f"{model_dir}/model.safetensors")
+    artifact.add_file(f"{model_dir}/model.safetensors")
     run.log_artifact(artifact)
 
     # Save the model as a PyTorch model
@@ -246,15 +246,15 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
     pt_model_path = f"{model_dir}/model.pth"
     torch.save(trainer.model.state_dict(), pt_model_path)
 
-    # Log the model using W&B
-    logging.info("Logging the model to W&B")
-    artifact = wandb.Artifact(name=experiment_name, type="model")
-    artifact.add_file(pt_model_path)
-    run.log_artifact(artifact)
+    # Log the PyTorch model using W&B
+    logging.info("Logging the PyTorch model to W&B")
+    pt_artifact = wandb.Artifact(name=f"{experiment_name}-pytorch", type="model")
+    pt_artifact.add_file(pt_model_path)
+    run.log_artifact(pt_artifact)
 
-    # # Link the artifact to the model registry
+    # Link the artifact to the model registry
     run.link_artifact(
-        artifact=artifact,
+        artifact=pt_artifact,
         target_path=f"mgf_nlp/{experiment_name}/text-to-icpc2:latest",
         aliases=[model_name, size],
     )
