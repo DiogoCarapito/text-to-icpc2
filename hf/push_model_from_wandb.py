@@ -51,7 +51,8 @@ def push_model_from_wandb_to_hf(model="diogo-carapito/wandb-registry-model/text-
     
     # save the model to hugging face
     logging.info("Saving model to Hugging Face")
-    huggingface_api_token = os.getenv("huggingface_token")
+    #huggingface_api_token = os.getenv("huggingface_token")
+    huggingface_api_token = hf_token
     model.save_pretrained("text-to-icpc2-distilbert-base-uncased", push_to_hub=True, use_auth_token=huggingface_api_token)    
     
     logging.info("Model pushed to Hugging Face!")
