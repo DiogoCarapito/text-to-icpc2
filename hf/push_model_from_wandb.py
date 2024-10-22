@@ -15,7 +15,10 @@ import torch
               required=False,
               )
 def push_model_from_wandb_to_hf(model="mgf_nlp/text-to-icpc2/text-to-icpc2-distilbert-base-uncased-pytorch:v0"):
+    
+    # setting up logging
     logging.basicConfig(level=logging.INFO)
+    
     # Load the W&B API key from the environment
     logging.info("Loading W&B API key")
     load_dotenv()
@@ -28,27 +31,26 @@ def push_model_from_wandb_to_hf(model="mgf_nlp/text-to-icpc2/text-to-icpc2-disti
     artifact = run.use_artifact(model, type="model")
     artifact_dir = artifact.download()
     
-    # prepare the model to push to hugging face
-    logging.info("Preparing model to push to Hugging Face")
+    # load the model with pytorch
+    logging.info("Loading model with PyTorch")
     model_path = f"{artifact_dir}/model.pth"
-    model_name = "distilbert-base-uncased"
-    num_labels = 686
-    model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=num_labels)
+    
+    # save as safetensors
     state_dict = torch.load(model_path, map_location=torch.device("cpu"))
+    
+    # load the model
+    num_labels = 686
+    model_name = "distilbert-base-uncased"
+    model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=num_labels)
     model.load_state_dict(state_dict)
+    model.eval()
     
-    # get hugging face api token
-    logging.info("Pushing model to Hugging Face")
+    # save the model to hugging face
+    logging.info("Saving model to Hugging Face")
     huggingface_api_token = os.getenv("huggingface_token")
+    model.save_pretrained("text-to-icpc2-distilbert-base-uncased", push_to_hub=True, use_auth_token=huggingface_api_token)    
     
-    model.save_pretrained(
-        model_path,
-        push_to_hub=True,
-        repo_name="text-to-icpc2",
-        use_auth_token=huggingface_api_token,
-        )
-    
-    logging.info("Model pushed to Hugging Face")
+    logging.info("Model pushed to Hugging Face!")
     
     
 if __name__ == "__main__":
