@@ -11,10 +11,14 @@ import torch
 
 @click.command()
 @click.option("--model",
-              type=str,
-              required=False,
-              )
-def push_model_from_wandb_to_hf(model="mgf_nlp/text-to-icpc2/text-to-icpc2-distilbert-base-uncased-pytorch:v0"):
+    type=str,
+    required=False,
+    )
+@click.option("--hf_token",
+    type=str,
+    required=True,
+    )
+def push_model_from_wandb_to_hf(model="diogo-carapito/wandb-registry-model/text-to-icpc2:v1", hf_token=""):
     
     # setting up logging
     logging.basicConfig(level=logging.INFO)
