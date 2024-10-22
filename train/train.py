@@ -36,7 +36,7 @@ def experiment_size(size, model_name):
 )
 @click.option(
     "--model",
-    default="distilbert/distilbert-base-uncased",
+    default="google-bert/bert-base-uncased",
     help="model name",
     required=False,
 )
@@ -50,7 +50,7 @@ def experiment_size(size, model_name):
 #     "--hf", default=False, help="publish to huggingface model", required=False
 # )
 # @click.option("--val", default=False, help="perform validation", required=False)
-def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
+def main(size="small", model="google-bert/bert-base-uncased", dev="cuda"):
     # distilbert/distilbert-base-uncased
     # distilbert/distilbert-base-multilingual-cased
 
