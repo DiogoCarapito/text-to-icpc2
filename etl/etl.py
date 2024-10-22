@@ -102,6 +102,8 @@ def main_etl(force=True, hf=True):
 
         # substitute "-" by "A" in codes that start with "-"
         # data["code"] = data["code"].str.replace(r"^-", "A", regex=True)
+        # remove all codes that start with a "-"
+        data = data[~data["code"].str.startswith("-")]
 
         # add data from data augmentation csv
         data_aug = pd.read_csv("data/data_augmentation.csv")

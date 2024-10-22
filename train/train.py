@@ -139,9 +139,7 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
     test_size = 0.2
     stratify_by_column = "label"
     seed = 42
-    
-    print(tokenized_dataset.features["text"])
-    
+
     tokenized_dataset_split = tokenized_dataset.train_test_split(
         test_size=test_size,
         stratify_by_column=stratify_by_column,
