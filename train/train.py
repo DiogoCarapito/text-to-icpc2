@@ -127,7 +127,7 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
 
     def filter_chapter(example):
         if size == "medium":
-            return example["chapter"] == "K"
+            return example["chapter"] == "Z"
         else:
             return example
 
@@ -140,7 +140,7 @@ def main(size="small", model="distilbert/distilbert-base-uncased", dev="cuda"):
     stratify_by_column = "label"
     seed = 42
     
-    print(tokenized_dataset.features["label"])
+    print(tokenized_dataset.features["text"])
     
     tokenized_dataset_split = tokenized_dataset.train_test_split(
         test_size=test_size,
