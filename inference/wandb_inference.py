@@ -65,9 +65,9 @@ def wandb_inference(i_input="Hipertensão arterial", model_name=""):
     topk_labels = [label.replace("LABEL_", "") for label in topk_labels]
     
     # search for the code in the data and return the description and code
-    data = pd.read_csv("data/data_pre_train.csv")
+    #data = pd.read_csv("data/data_pre_train.csv")
     
-    topk_labels = [data[data["code"] == label][["code", "text"]] for label in topk_labels]
+    
 
     # Print the top 5 predictions
     print("Top 5 values:", topk_values)
