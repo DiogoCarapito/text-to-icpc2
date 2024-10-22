@@ -18,9 +18,10 @@ def wandb_inference(i_input="Hipertensão arterial", model_name=""):
     wandb.login(key=wandb_api_key)
 
     # Use the W&B API to download the artifact without creating a new run
-    api = wandb.Api()
-    artifact = api.artifact(
-        "diogo-carapito/wandb-registry-model/text-to-icpc2:v0", type="model"
+
+    run = wandb.init()
+    artifact = run.use_artifact(
+        "diogo-carapito/wandb-registry-model/text-to-icpc2:v1", type="model"
     )
     artifact_dir = artifact.download()
 
@@ -28,7 +29,7 @@ def wandb_inference(i_input="Hipertensão arterial", model_name=""):
     model_path = f"{artifact_dir}/model.pth"
 
     # Define the model architecture with the correct number of classes
-    num_labels = 5  # Change this to the correct number of classes
+    num_labels = 686  # Change this to the correct number of classes
     model_name = "distilbert-base-uncased"
     model = AutoModelForSequenceClassification.from_pretrained(
         model_name, num_labels=num_labels
