@@ -336,7 +336,7 @@ with col_22:
             resultados = resultados[:-1]
 
         # resultados = "Dor no peito NE; dor torácica indeterminada; dor no tórax NE; dor torácica generalizada; dor torácica não especificada; desconforto torácico NE; dor na região torácica NE; dor torácica inespecífica; dor torácica sem causa"
-        #st.write(resultados)
+        # st.write(resultados)
 
         # create list of the results where each element is separated by ;
         lista_resultados = resultados.split("; ")
