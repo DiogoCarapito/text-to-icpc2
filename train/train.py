@@ -187,7 +187,7 @@ def main(size="small", model="bert-base-uncased", dev="cuda"):
     if size == "small":
         n_epochs = 3
     else:
-        n_epochs = 10
+        n_epochs = 8
 
     # Checkpoints will be output to this `training_output_dir`.
     logging.info("Defining the training arguments")

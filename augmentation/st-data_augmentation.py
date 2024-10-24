@@ -325,11 +325,11 @@ with col_22:
             "text": resultados,
         }
 
-        # save to csv
-        log_df = pd.DataFrame(data_to_log, index=[0])
-        log_df.to_csv(
-            "data/data_augmentation_log.csv", mode="a", header=False, index=False
-        )
+        # # save to csv
+        # log_df = pd.DataFrame(data_to_log, index=[0])
+        # log_df.to_csv(
+        #     "data/data_augmentation_log.csv", mode="a", header=False, index=False
+        # )
 
         # remove the last . from the results if it exists
         if resultados.endswith("."):
