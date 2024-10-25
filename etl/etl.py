@@ -18,23 +18,23 @@ def download_excel(url, filename) -> pd.DataFrame:
     # create file path
     file_path = "data/" + filename
     filename_csv = file_path.replace(".xlsx", ".csv")
-    
-    logging.info(f"Checking if {filename_csv} already exists")
-    
-    #check if file already exists
+
+    logging.info("Checking if %s already exists", filename_csv)
+
+    # check if file already exists
     if os.path.exists(filename_csv):
         # read the file
-        logging.info(f"Reading file {filename_csv}")
+        logging.info("Reading file %s", filename_csv)
         return pd.read_csv(filename_csv)
     else:
-        #download the file
-        logging.info(f"Downloading file {filename}")
+        # download the file
+        logging.info("Downloading file %s", filename)
         r = requests.get(url, allow_redirects=True, timeout=100)
         df = pd.read_excel(io.BytesIO(r.content))
-        
-        #save the file as csv
+
+        # save the file as csv
         df.to_csv(filename_csv, index=False)
-        
+
         return df
 
 
