@@ -61,7 +61,7 @@ def push_model_from_wandb_to_hf(
     # huggingface_api_token = os.getenv("huggingface_token")
     huggingface_api_token = hf_token
     model.save_pretrained(
-        "text-to-icpc2-distilbert-base-uncased",
+        "text-to-icpc2_distilbert-base-uncased",
         push_to_hub=True,
         token=huggingface_api_token,
     )
