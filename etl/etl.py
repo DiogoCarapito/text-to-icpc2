@@ -331,8 +331,8 @@ def main_etl(hf=True):
     )
 
     # Get the dictionary of code, text (only icpc2_description), and label match and save as a CSV
-    code_text_label_df = data[data["origin"]=="icpc2_description"]
-    code_text_label_df = code_text_label_df.drop(columns = "origin")
+    code_text_label_df = data[data["origin"] == "icpc2_description"]
+    code_text_label_df = code_text_label_df.drop(columns="origin")
     code_text_label_df.to_csv("data/code_text_label.csv", index=False)
 
     # logging.info("Saved code_text_label dictionary as CSV")
@@ -370,15 +370,11 @@ def main_etl(hf=True):
     #         "validation": validation_dataset,
     #     }
     # )
-    
-   
-    
+
     dataset_dict = dataset
 
     # # sort by code
     # dataset_dict = dataset_dict.sort("code")
-
-    
 
     if hf:
         logging.info("Pushing to Hugging Face!")
