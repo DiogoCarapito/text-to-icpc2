@@ -39,28 +39,28 @@ def download_excel(url, filename) -> pd.DataFrame:
 
 
 # @st.cache_data
-def etl_icpc2(df) -> pd.DataFrame:
+def etl(icpc2, icd10) -> pd.DataFrame:
     # drop componente
-    df.drop("componente", axis=1, inplace=True)
+    logging.info("Droping 'componente' column")
+    df_icpc2 = icpc2.drop("componente", axis=1)
 
     # convert icd10 codes into a list
     # "H54.0; H54.1; H54.2; H54.3" into a list of strings ["H540", "H541", "H542", "H543"]
     # remove the .
-    df["ICD_10_new"] = (
-        df["icd10"]
+    logging.info(
+        "Creating a list of strings of ICD10 codes separated by ';', removing '.' to mach ICD-10 codes used"
+    )
+    df_icpc2["ICD_10_new"] = (
+        df_icpc2["icd10"]
         .str.replace(" ", "")
         .str.replace(";", " ")
         .str.replace(".", "")
         .str.split()
     )
 
-    return df
-
-
-# @st.cache_data
-def etl_icd10(df) -> pd.DataFrame:
-    # st.write(df.columns())
-    df = df[
+    # Reducing columns on ICD-10 file to necessary ones
+    logging.info("ICD-10 column reduction")
+    df_icd10 = icd10[
         [
             "Código ICD-10-CM",
             "Secção ICD-10-CM_Desc_PT",
@@ -68,15 +68,6 @@ def etl_icd10(df) -> pd.DataFrame:
             "Descrição PT_(Curta)",
         ]
     ]
-
-    return df
-
-
-# @st.cache_data
-def etl(icpc2, icd10) -> pd.DataFrame:
-    # individual ETLs
-    df_icpc2 = etl_icpc2(icpc2)
-    df_icd10 = etl_icd10(icd10)
 
     # create a new column and add an empty list to each row
     df_icpc2["ICD_10_list_description"] = [[] for _ in range(len(df_icpc2))]
@@ -339,6 +330,13 @@ def main_etl(hf=True):
         data[["code", "text", "origin", "chapter", "label"]], features=features
     )
 
+    # Get the dictionary of code, text (only icpc2_description), and label match and save as a CSV
+    code_text_label_df = data[data["origin"]=="icpc2_description"]
+    code_text_label_df = code_text_label_df.drop(columns = "origin")
+    code_text_label_df.to_csv("data/code_text_label.csv", index=False)
+
+    # logging.info("Saved code_text_label dictionary as CSV")
+
     # train_test_split = dataset.train_test_split(
     #     test_size=0.2,
     #     seed=42,
@@ -372,13 +370,15 @@ def main_etl(hf=True):
     #         "validation": validation_dataset,
     #     }
     # )
-
+    
+   
+    
     dataset_dict = dataset
 
     # # sort by code
     # dataset_dict = dataset_dict.sort("code")
 
-    print(data.head(50))
+    
 
     if hf:
         logging.info("Pushing to Hugging Face!")

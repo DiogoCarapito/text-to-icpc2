@@ -1,0 +1,687 @@
+code,text,chapter,label
+A01,Dor generalizada/múltiplos locais,A,0
+A02,Arrepios,A,1
+A03,Febre,A,2
+A04,Debilidade/cansaço geral,A,3
+A05,Sentir-se doente,A,4
+A06,Desmaio/síncope,A,5
+A07,Coma,A,6
+A08,Inchaço,A,7
+A09,Problema de sudorese,A,8
+A10,Sangramento/hemorragia NE,A,9
+A11,Dor torácica NE,A,10
+A13,Preocupação com/medo de tratamento médico,A,11
+A16,Bebé irritavél,A,12
+A18,Preocupação com a aparência,A,13
+A20,Pedido/discussão da eutanásia,A,14
+A21,Factor de risco para malignidade,A,15
+A23,Factor de risco NE,A,16
+A25,Medo da morte/de morrer,A,17
+A26,"Medo de cancro, NE",A,18
+A27,Medo de outra doença NE,A,19
+A28,Limitação funcional/incapacidade NE,A,20
+A29,Sintoma/queixa geral outro,A,21
+A70,Tuberculose,A,22
+A71,Sarampo,A,23
+A72,Varicela,A,24
+A73,Malária,A,25
+A74,Rubéola,A,26
+A75,Mononucleose infecciosa,A,27
+A76,Exantema viral outro,A,28
+A77,Doença viral outra/NE,A,29
+A78,Outra doença infecciosa/NE,A,30
+A79,Neoplasia maligna NE,A,31
+A80,Traumatismo/ferimento NE,A,32
+A81,Traumatismos/ferimentos múltiplos,A,33
+A82,Efeito secundário de traumatismo,A,34
+A84,Intoxicação por medicamento,A,35
+A85,Efeito adverso de um medicamento,A,36
+A86,Efeito tóxico de uma substância não-medicinal,A,37
+A87,Complicação de tratamento médico,A,38
+A88,Efeito adverso por factor físico,A,39
+A89,Efeito de uma prótese,A,40
+A90,Malformação congénita NE/múltipla,A,41
+A91,Investigação com resultado anormal NE,A,42
+A92,Alergia/reacção alérgica NE,A,43
+A93,Recém-nascido prematuro,A,44
+A94,Morbilidade perinatal outra,A,45
+A95,Mortalidade perinatal,A,46
+A96,Morte,A,47
+A97,Sem doença,A,48
+A98,Manutenção de saúde/medicina preventiva,A,49
+A99,Doença/condição de natureza/localização não especificada,A,50
+B02,Gânglio(s) linfático(s) aumentado(s) de volume/doloroso(s),B,51
+B04,Sintoma/queixa do sangue,B,52
+B25,Medo de SIDA/VIH,B,53
+B26,Medo de cancro do sangue/linfático,B,54
+B27,Medo de doença do sangue/linfática outra,B,55
+B28,Limitação funcional/incapacidade (B),B,56
+B29,Sintoma/queixa linfática/de mecanismo imunológico outro,B,57
+B70,Linfadenite aguda,B,58
+B71,Linfadenite crónica/inespecífica,B,59
+B72,Doença de Hodgkin/linfoma,B,60
+B73,Leucemia,B,61
+B74,Neoplasia maligna do sangue outra,B,62
+B75,Neoplasia benigna/não especificada do sangue ,B,63
+B76,Rotura do baço traumática,B,64
+B77,Lesão do sangue/linfa/baço outra,B,65
+B78,Anemia hemolítica hereditária,B,66
+B79,Malformação congénita do sangue/linfática outra,B,67
+B80,Anemia por deficiência de ferro,B,68
+B81,Anemia por deficiência de vit B12/folatos,B,69
+B82,Anemia outra/não especificada,B,70
+B83,Púrpura/defeito de coagulação,B,71
+B84,Glóbulos brancos anormais inexplicados,B,72
+B87,Esplenomegália,B,73
+B90,Infecção VIH/SIDA,B,74
+B99,Doença do sangue/linfa/baço outra,B,75
+D01,Dor/cólica abdominal generalizada,D,76
+D02,Dor abdominal epigástrica,D,77
+D03,Azia,D,78
+D04,Dor anal/rectal,D,79
+D05,Irritação perianal,D,80
+D06,Dor abdominal localizada outra,D,81
+D07,Dispepsia/indigestão,D,82
+D08,Flatulência/gases/eructação,D,83
+D09,Náusea,D,84
+D10,Vómito,D,85
+D11,Diarreia,D,86
+D12,Obstipação,D,87
+D13,Icterícia,D,88
+D14,Hematemese/vómito de sangue,D,89
+D15,Melena,D,90
+D16,Hemorragia rectal,D,91
+D17,Incontinência intestinal,D,92
+D18,Alteração nas fezes/movimentos intestinais,D,93
+D19,Sintoma/queixa dos dentes/gengivas,D,94
+D20,Sintoma/queixa da boca/língua/lábio,D,95
+D21,Problema de deglutição,D,96
+D23,Hepatomegália,D,97
+D24,Massa Abdominal NE,D,98
+D25,Distensão abdominal,D,99
+D26,Medo de cancro do sistema digestivo,D,100
+D27,Medo de doença do sistema digestivo outra,D,101
+D28,Limitação funcional/incapacidade (D),D,102
+D29,Sintoma/queixa digestivo outro,D,103
+D70,Infecção gastrointestinal,D,104
+D71,Papeira/parotidite epidémica,D,105
+D72,Hepatite viral,D,106
+D73,Gastroenterite com infecção presumível,D,107
+D74,Neoplasia maligna do estômago,D,108
+D75,Neoplasia maligna do cólon/recto,D,109
+D76,Neoplasia maligna do pâncreas,D,110
+D77,Neoplasia digestiva maligna outra/NE,D,111
+D78,Neoplasia do sistema digestivo benigna/não especificada,D,112
+D79,Corpo estranho no sistema digestivo,D,113
+D80,Lesão do sistema digestivo outra,D,114
+D81,Malformação congénita do sistema digestivo,D,115
+D82,Doença dos dentes/gengiva,D,116
+D83,Doença da boca/lingua/lábio,D,117
+D84,Doença do esófago,D,118
+D85,Úlcera duodenal,D,119
+D86,Úlcera péptica outra,D,120
+D87,Alteração funcional do estômago,D,121
+D88,Apendicite,D,122
+D89,Hérnia inguinal,D,123
+D90,Hérnia do hiato,D,124
+D91,Hérnia abdominal outra,D,125
+D92,Doença diverticular,D,126
+D93,Síndrome do cólon irritável,D,127
+D94,Enterite crónica/colite ulcerosa,D,128
+D95,Fissura anal/abcesso perianal,D,129
+D96,Lombrigas/outros parasitas,D,130
+D97,Doença de fígado NE,D,131
+D98,Colecistite/colelitíase,D,132
+D99,Doença do sistema digestivo outra,D,133
+F01,Dor no olho,F,134
+F02,Olho vermelho,F,135
+F03,Secreção ocular,F,136
+F04,Moscas volantes/manchas visuais,F,137
+F05,Perturbação visual outra,F,138
+F13,Sensação ocular anormal,F,139
+F14,Movimentos oculares anormais,F,140
+F15,Aparência anormal do olho,F,141
+F16,Sintoma/queixa da pálpebra,F,142
+F17,Sintoma/queixa relacionado com os óculos,F,143
+F18,Sintoma/queixa relacionado com as lentes de contacto,F,144
+F27,Medo de doença do olho,F,145
+F28,Limitação funcional/incapacidade (F),F,146
+F29,Sintoma/queixa ocular outro,F,147
+F70,Conjuntivite infecciosa,F,148
+F71,Conjuntivite alérgica,F,149
+F72,Blefarite/treçolho/calázio,F,150
+F73,Infecção/inflamação ocular outra,F,151
+F74,Neoplasia do olho/anexos,F,152
+F75,Contusão/hemorragia ocular,F,153
+F76,Corpo estranho ocular,F,154
+F79,Lesão traumática ocular outra,F,155
+F80,Obstrução do canal lacrimal da criança,F,156
+F81,Malformação congénita do olho outra,F,157
+F82,Descolamento da retina,F,158
+F83,Retinopatia,F,159
+F84,Degenerescência macular,F,160
+F85,Úlcera da córnea,F,161
+F86,Tracoma,F,162
+F91,Erro de refracção,F,163
+F92,Catarata,F,164
+F93,Glaucoma,F,165
+F94,Cegueira,F,166
+F95,Estrabismo,F,167
+F99,Doença ocular/anexos outra,F,168
+H01,Dor do ouvido,H,169
+H02,Queixa de audição,H,170
+H03,"Acufeno, zumbido/ruído no ouvido",H,171
+H04,Secreção do ouvido,H,172
+H05,Hemorragia do ouvido,H,173
+H13,Sensação de ouvido tapado,H,174
+H15,Preocupação com a aparência das orelhas,H,175
+H27,Medo de doença do ouvido,H,176
+H28,Limitação funcional/incapacidade (H),H,177
+H29,Sintoma/queixa do ouvido outro,H,178
+H70,Otite externa,H,179
+H71,Otite média aguda/miringite,H,180
+H72,Otite média serosa,H,181
+H73,Inflamação da trompa de eustáquio,H,182
+H74,Otite média crónica,H,183
+H75,Neoplasia do ouvido,H,184
+H76,Corpo estranho no ouvido,H,185
+H77,Perfuração do tímpano,H,186
+H78,Traumatismo superficial do ouvido,H,187
+H79,Traumatismo do ouvido outro,H,188
+H80,Malformação congénita do ouvido,H,189
+H81,Cerumen no ouvido em excesso,H,190
+H82,Síndrome vertiginosa,H,191
+H83,Otoesclerose,H,192
+H84,Presbiacusia,H,193
+H85,Lesão acústica,H,194
+H86,Surdez,H,195
+H99,Doença do ouvido/mastóide outra,H,196
+K01,Dor do coração,K,197
+K02,Pressão/aperto do coração,K,198
+K03,Dor cardiovascular NE,K,199
+K04,Palpitações/percepção do coração,K,200
+K05,Irregularidade do batimento cardíaco outra,K,201
+K06,Veias proeminentes,K,202
+K07,Tornozelos inchados/edema,K,203
+K22,Factor de risco para doença cardiovascular,K,204
+K24,Medo de doença cardíaca,K,205
+K25,Medo de hipertensão,K,206
+K27,Medo de doença cardiovascular outra,K,207
+K28,Limitação funcional/incapacidade (K),K,208
+K29,Sintoma/queixa cardiovascular outro,K,209
+K70,Infecção do aparelho circulatório,K,210
+K71,Febre/doença cardíaca reumática,K,211
+K72,Neoplasia cardiovascular,K,212
+K73,Malformação congénita cardiovascular,K,213
+K74,Doença cardiaca isquémica com angina,K,214
+K75,Enfarte agudo do miocárdio,K,215
+K76,Doença cardíaca isquémica sem angina,K,216
+K77,Insuficiência cardíaca,K,217
+K78,Fibrilhação/flutter auricular,K,218
+K79,Taquicardia paroxística,K,219
+K80,Arritmia cardíaca NE,K,220
+K81,Sopro cardíaco/arterial NE,K,221
+K82,Doença cardíaca pulmonar,K,222
+K83,Doença valvular cardíaca NE,K,223
+K84,Doença cardíaca outra,K,224
+K85,Pressão arterial elevada,K,225
+K86,Hipertensão sem complicações,K,226
+K87,Hipertensão com complicações,K,227
+K88,Hipotensão postural,K,228
+K89,Isquémia cerebral transitória,K,229
+K90,Trombose/acidente vascular cerebral,K,230
+K91,Doença vascular cerebral,K,231
+K92,Aterosclerose/doença vascular periférica,K,232
+K93,Embolia pulmonar,K,233
+K94,Flebite/tromboflebite,K,234
+K95,Veias varicosas da perna,K,235
+K96,Hemorróidas,K,236
+K99,Doença do aparelho circulatório outra,K,237
+L01,Sintoma/queixa do pescoço,L,238
+L02,Sintoma/queixa da região dorsal,L,239
+L03,Sintoma/queixa da região lombar,L,240
+L04,Sintoma/queixa do tórax,L,241
+L05,Sintoma/queixa do flanco/axila,L,242
+L07,Sintoma/queixa da mandíbula,L,243
+L08,Sintoma/queixa do ombro,L,244
+L09,Sintoma/queixa do braço,L,245
+L10,Sintoma/queixa do cotovelo,L,246
+L11,Sintoma/queixa do punho,L,247
+L12,Sintoma/queixa da mão/dedo da mão,L,248
+L13,Sintoma/queixa da anca,L,249
+L14,Sintoma/queixa da perna/coxa,L,250
+L15,Sintoma/queixa do joelho,L,251
+L16,Sintoma/queixa do tornozelo,L,252
+L17,Sintoma/queixa do pé/dedo do pé,L,253
+L18,Dor muscular,L,254
+L19,Sintoma/queixa muscular NE,L,255
+L20,Sintoma/queixa de articulação NE,L,256
+L26,Medo de cancro músculo-esquelético,L,257
+L27,Medo de doença músculo-esquelética outra,L,258
+L28,Limitação funcional/incapacidade (L),L,259
+L29,Sintoma/queixa músculo-esquelético outro,L,260
+L70,Infecção do sistema músculo-esquelético,L,261
+L71,Neoplasia maligna músculo-esquelética,L,262
+L72,Fractura: rádio/cúbito,L,263
+L73,Fractura: tíbia/peróneo,L,264
+L74,Fractura: osso da mão/pé,L,265
+L75,Fractura: fémur,L,266
+L76,Fractura: outra,L,267
+L77,Entorse/distensão do tornozelo,L,268
+L78,Entorse/distensão do joelho,L,269
+L79,Entorse/distensão de articulação NE,L,270
+L80,Luxação/subluxação,L,271
+L81,Traumatismo músculo-esquelético NE,L,272
+L82,Malformação congénita músculo-esquelética,L,273
+L83,Síndrome do pescoço,L,274
+L84,Síndrome da coluna sem irradiação de dor,L,275
+L85,Deformação adquirida da coluna,L,276
+L86,Síndrome da coluna com irradiação de dor,L,277
+L87,Bursite/tendinite/sinovite NE,L,278
+L88,Artrite reumatóide/seropositiva,L,279
+L89,Osteoartrose da anca,L,280
+L90,Osteoartrose do joelho,L,281
+L91,Osteoartrose outra,L,282
+L92,Síndrome do ombro doloroso,L,283
+L93,Cotovelo de tenista,L,284
+L94,Osteocondrose,L,285
+L95,Osteoporose,L,286
+L96,Lesão interna aguda do joelho,L,287
+L97,Neoplasia músculo-esquelética benigna/não especificada,L,288
+L98,Malformação adquirida de um membro,L,289
+L99,Doença do aparelho músculo-esquelético outra,L,290
+N01,Cefaleia,N,291
+N03,Dor da face,N,292
+N04,Pernas inquietas,N,293
+N05,Formigueiro nos dedos/mãos/pés,N,294
+N06,Alteração da sensibilidade outra,N,295
+N07,Convulsão/ataque,N,296
+N08,Movimentos involuntários anormais,N,297
+N16,Alteração do olfacto/gosto,N,298
+N17,Vertigem/tontura,N,299
+N18,Paralisia/fraqueza,N,300
+N19,Perturbação do discurso,N,301
+N26,Medo de cancro do sistema neurológico,N,302
+N27,Medo de doença neurológica outra,N,303
+N28,Limitação funcional/incapacidade (N),N,304
+N29,Sintoma/queixa neurológico outro,N,305
+N70,Poliomielite,N,306
+N71,Meningite/encefalite,N,307
+N72,Tétano,N,308
+N73,Infecção neurológica outra,N,309
+N74,Neoplasia maligna do sistema nervoso,N,310
+N75,Neoplasia benigna do sistema nervoso,N,311
+N76,Neoplasia não especificada do sistema nervoso,N,312
+N79,Concussão,N,313
+N80,Lesão craniana outra,N,314
+N81,Lesão do sistema nervoso outra,N,315
+N85,Malformação congénita neurológica,N,316
+N86,Esclerose múltipla,N,317
+N87,Parkinsonismo,N,318
+N88,Epilepsia,N,319
+N89,Enxaqueca,N,320
+N90,Cefaleia em cluster,N,321
+N91,Paralisia facial/paralisia de Bell,N,322
+N92,Nevralgia do trigémio,N,323
+N93,Síndrome do canal cárpico,N,324
+N94,Nevrite/neuropatia periférica,N,325
+N95,Cefaleia de tensão,N,326
+N99,Doença do sistema neurológico outra,N,327
+P01,Sensação de ansiedade/nervosismo/tensão,P,328
+P02,Reacção aguda ao stress,P,329
+P03,Sensação de depressão,P,330
+P04,Sentir-se/comportar-se de forma irritável/zangada,P,331
+P05,"Senilidade, sentir-se/comportar-se como velho",P,332
+P06,Perturbação do sono,P,333
+P07,Diminuição do desejo sexual,P,334
+P08,Diminuição da satisfação sexual,P,335
+P09,Preocupação com a preferência sexual,P,336
+P10,Gaguejar/balbuciar/tique,P,337
+P11,Problema de alimentação da criança,P,338
+P12,Molhar a cama/enurese,P,339
+P13,Encoprese/problema de treino do intestino,P,340
+P15,Abuso crónico do álcool,P,341
+P16,Abuso agudo do álcool,P,342
+P17,Abuso do tabaco,P,343
+P18,Abuso de medicação,P,344
+P19,Abuso de droga,P,345
+P20,Alteração da memória,P,346
+P22,Sintoma/queixa do comportamento da criança,P,347
+P23,Sintoma/queixa do comportamento do adolescente,P,348
+P24,Dificuldade específica de aprendizagem,P,349
+P25,Problema numa fase da vida de um adulto,P,350
+P27,Medo de perturbação mental,P,351
+P28,Limitação funcional/incapacidade (P),P,352
+P29,Sintoma/queixa psicológico outro,P,353
+P70,Demência,P,354
+P71,Psicose orgânica outra,P,355
+P72,Esquizofrenia,P,356
+P73,Psicose afectiva,P,357
+P74,Distúrbio ansioso/estado de ansiedade,P,358
+P75,Somatização,P,359
+P76,Perturbação depressiva,P,360
+P77,Suicídio/tentativa de suicídio,P,361
+P78,Neurastenia/surmenage,P,362
+P79,Fobia/perturbação compulsiva,P,363
+P80,Perturbação da personalidade,P,364
+P81,Perturbação hipercinética,P,365
+P82,Perturbação de stress pós-traumático,P,366
+P85,Atraso mental,P,367
+P86,Anorexia nervosa/bulimia,P,368
+P98,Psicose NE/outra,P,369
+P99,Perturbação psicológica outra,P,370
+R01,Dor aparelho respiratório,R,371
+R02,Dificuldade respiratória/dispneia,R,372
+R03,Pieira,R,373
+R04,Problema respiratório outro,R,374
+R05,Tosse,R,375
+R06,Hemorragia nasal/epistáxis,R,376
+R07,Espirro/congestão nasal,R,377
+R08,Sintoma/queixa nasal outro,R,378
+R09,Sintoma/queixa dos seios perinasais,R,379
+R21,Sinal/queixa da garganta,R,380
+R23,Sintoma/queixa da voz,R,381
+R24,Hemoptise,R,382
+R25,Expectoração/mucosidade anormal,R,383
+R26,Medo de cancro do sistema respiratório,R,384
+R27,Medo de doença respiratória outra,R,385
+R28,Limitação funcional/incapacidade (R),R,386
+R29,Sintoma/queixa do aparelho respiratório outro,R,387
+R71,Tosse convulsa,R,388
+R72,Infecção estreptocócica da garganta,R,389
+R73,Abcesso/furúnculo no nariz,R,390
+R74,Infecção respiratória superior aguda,R,391
+R75,Sinusite aguda/crónica,R,392
+R76,Amigdalite aguda,R,393
+R77,Laringite/traqueíte aguda,R,394
+R78,Bronquite/bronquiolite aguda,R,395
+R79,Bronquite crónica,R,396
+R80,Gripe,R,397
+R81,Pneumonia,R,398
+R82,Pleurisia/derrame pleural,R,399
+R83,Infecção respiratória outra,R,400
+R84,Neoplasia maligna do brônquio/pulmão,R,401
+R85,Neoplasia respiratória maligna outra,R,402
+R86,Neoplasia respiratória benigna,R,403
+R87,Corpo estranho no nariz/laringe/brônquio,R,404
+R88,Lesão respiratória outra,R,405
+R89,Malformação congénita respiratória,R,406
+R90,Hipertrofia das amígdalas/adenóides,R,407
+R92,Neoplasia respiratória não especificada,R,408
+R95,Doença pulmonar obstrutiva crónica,R,409
+R96,Asma,R,410
+R97,Rinite alérgica,R,411
+R98,Sindrome de hiperventilação,R,412
+R99,Doença respiratória outra,R,413
+S01,Dor/sensibilidade dolorosa da pele,S,414
+S02,Prurido,S,415
+S03,Verrugas,S,416
+S04,Tumor/massa localizada,S,417
+S05,Tumores/inchaços generalizados,S,418
+S06,Erupção cutânea localizada,S,419
+S07,Erupção cutânea generalizada,S,420
+S08,Alteração da cor da pele,S,421
+S09,Infecção do dedo da mão/pé,S,422
+S10,Furúnculo/antraz,S,423
+S11,Infecção pós-traumática da pele,S,424
+S12,Picada/mordedura de insecto,S,425
+S13,Mordedura animal/humana,S,426
+S14,Queimadura/escaldão,S,427
+S15,Corpo estranho na pele,S,428
+S16,Traumatismo/contusão,S,429
+S17,Abrasão/arranhão/bolha,S,430
+S18,Laceração/corte,S,431
+S19,Lesão cutânea outra,S,432
+S20,Calo/calosidade,S,433
+S21,Sintoma/queixa da textura da pele,S,434
+S22,Sintoma/queixa da unha,S,435
+S23,Queda de cabelo/calvície,S,436
+S24,Sintoma/queixa do cabelo/couro cabeludo outro,S,437
+S26,Medo de cancro da pele,S,438
+S27,Medo de doença da pele outra,S,439
+S28,Limitação funcional/incapacidade (S),S,440
+S29,Sintoma/queixa da pele outro,S,441
+S70,Herpes zoster,S,442
+S71,Herpes simplex,S,443
+S72,Escabiose/outra acaríase,S,444
+S73,Pediculose/infestação da pele outra,S,445
+S74,Dermatofitose,S,446
+S75,Monilíase/candidíase da pele,S,447
+S76,Infecção da pele outra,S,448
+S77,Neoplasia maligna da pele,S,449
+S78,Lipoma,S,450
+S79,Neoplasia cutânea benigna/não especificada,S,451
+S80,Queratose/queimadura solar,S,452
+S81,Hemangioma/linfangioma,S,453
+S82,Nevo/sinal da pele,S,454
+S83,Lesão congénita da pele outra,S,455
+S84,Impetigo,S,456
+S85,Quisto/fístula pilonidal,S,457
+S86,Dermatite seborreica,S,458
+S87,Dermatite/eczema atópico,S,459
+S88,Dermatite de contacto/alérgica,S,460
+S89,Eritema das fraldas,S,461
+S90,Pitiríase rosada,S,462
+S91,Psoríase,S,463
+S92,Doença das glândulas sudoríparas,S,464
+S93,Quisto sebáceo,S,465
+S94,Unha encravada,S,466
+S95,Molusco contagioso,S,467
+S96,Acne,S,468
+S97,Úlcera crónica da pele,S,469
+S98,Urticária,S,470
+S99,Doença da pele outra,S,471
+T01,Sede excessiva,T,472
+T02,Apetite excessivo,T,473
+T03,Perda de apetite,T,474
+T04,Problema alimentar do lactente/criança,T,475
+T05,Problema alimentar do adulto,T,476
+T07,Aumento de peso,T,477
+T08,Perda de peso,T,478
+T10,Atraso de crescimento,T,479
+T11,Desidratação,T,480
+T26,Medo de cancro do sistema endócrino,T,481
+T27,Medo de doença endócrina/metabólica outra,T,482
+T28,Limitação funcional/incapacidade (T),T,483
+T29,Sintoma/queixa do sistema endócrino/metabolico/nutricional outro,T,484
+T70,Infecção endócrina,T,485
+T71,Neoplasia maligna da tiróide,T,486
+T72,Neoplasia benigna da tiróide,T,487
+T73,Neoplasia endócrina não especificada/outra,T,488
+T78,Quisto/canal tireoglosso,T,489
+T80,Malformação congénita endócrina/metabólica,T,490
+T81,Bócio,T,491
+T82,Obesidade,T,492
+T83,Excesso de peso,T,493
+T85,Hipertiroidismo/tirotoxicose,T,494
+T86,Hipotiroidismo/mixedema,T,495
+T87,Hipoglicémia,T,496
+T89,Diabetes insulino-dependente,T,497
+T90,Diabetes não insulino-dependente,T,498
+T91,Deficiência vitamínica/nutricional,T,499
+T92,Gota,T,500
+T93,Alteração dos lípidos,T,501
+T99,Doença endócrina/metabólica/nutricional outra,T,502
+U01,Disúria/micção dolorosa,U,503
+U02,Micção frequente/urgente,U,504
+U04,Incontinência urinária,U,505
+U05,Problema com a micção outro,U,506
+U06,Hematúria,U,507
+U07,Sintoma/queixa da urina outro,U,508
+U08,Retenção urinária,U,509
+U13,Sintoma/queixa da bexiga outro,U,510
+U14,Sintoma/queixa do rim,U,511
+U26,Medo de cancro do aparelho urinário,U,512
+U27,Medo de doença urinária outra,U,513
+U28,Limitação funcional/incapacidade (U),U,514
+U29,Sintoma/queixa do aparelho urinário outro,U,515
+U70,Pielonefrite/pielite,U,516
+U71,Cistite/infecção urinária outra,U,517
+U72,Uretrite,U,518
+U75,Neoplasia maligna do rim,U,519
+U76,Neoplasia maligna da bexiga,U,520
+U77,Neoplasia maligna do aparelho urinário outra,U,521
+U78,Neoplasia benigna do aparelho urinário,U,522
+U79,Neoplasia do aparelho urinário não especificada,U,523
+U80,Lesão traumática do aparelho urinário,U,524
+U85,Malformação congénita do aparelho urinário,U,525
+U88,Glomerulonefrite/nefrose,U,526
+U90,Albuminúria/proteinúria ortostática,U,527
+U95,Cálculo urinário,U,528
+U98,Análise de urina anormal NE,U,529
+U99,Doença urinária outra,U,530
+W01,Suspeita de gravidez,W,531
+W02,Medo de estar grávida,W,532
+W03,Hemorragia antes do parto,W,533
+W05,Vómitos/náuseas na gravidez,W,534
+W10,Contracepção pós-coital,W,535
+W11,Contracepção oral,W,536
+W12,Contracepção intra-uterina,W,537
+W13,Esterilização feminina,W,538
+W14,Contracepção feminina outra,W,539
+W15,Infertilidade/subfertilidade feminina,W,540
+W17,Hemorragia pós-parto,W,541
+W18,Sintoma/queixa do pós-parto outro,W,542
+W19,Sintoma/queixa da lactação,W,543
+W21,Preocupação com a imagem corporal relacionada com a gravidez,W,544
+W27,Medo de complicações da gravidez,W,545
+W28,Limitação funcional/incapacidade (W),W,546
+W29,Sintoma/queixa da gravidez outro,W,547
+W70,Sépsis/infecção puerperal,W,548
+W71,Infecção que complica a gravidez/puerpério outra,W,549
+W72,Neoplasia maligna relacionada com a gravidez,W,550
+W73,Neoplasia benigna/incerta relacionada com a gravidez,W,551
+W75,Lesão traumática que complica a gravidez,W,552
+W76,Malformação congénita que complica a gravidez,W,553
+W78,Gravidez,W,554
+W79,Gravidez não desejada,W,555
+W80,Gravidez ectópica,W,556
+W81,Toxémia da gravidez,W,557
+W82,Aborto espontâneo,W,558
+W83,Aborto provocado,W,559
+W84,Gravidez de alto risco,W,560
+W85,Diabetes gestacional,W,561
+W90,Parto sem complicações de nado vivo,W,562
+W91,Parto sem complicações de nado morto,W,563
+W92,Parto com complicações de nado vivo,W,564
+W93,Parto com complicações de nado morto,W,565
+W94,Mastite puerperal,W,566
+W95,Problema da mama durante a gravidez/puerpério outro,W,567
+W96,Complicação do puerpério outra,W,568
+W99,Problema da gravidez/parto outro,W,569
+X01,Dor genital feminina,X,570
+X02,Dor menstrual,X,571
+X03,Dor intermenstrual,X,572
+X04,Relação sexual dolorosa feminina,X,573
+X05,Menstruação escassa/ausente,X,574
+X06,Menstruação excessiva,X,575
+X07,Menstruação irregular/frequente,X,576
+X08,Hemorragia inter-menstrual,X,577
+X09,Sintoma/queixa pré-menstrual,X,578
+X10,Desejo de alterar a data da menstruação,X,579
+X11,Sintoma/queixa da menopausa,X,580
+X12,Hemorragia pós-menopausa,X,581
+X13,Hemorragia pós-coito,X,582
+X14,Secreção vaginal,X,583
+X15,Sintoma/queixa da vagina outro,X,584
+X16,Sintoma/queixa da vulva,X,585
+X17,Sintoma/queixa da pélvis feminina,X,586
+X18,Dor na mama feminina,X,587
+X19,Tumor/nódulo da mama feminina,X,588
+X20,Sintoma/queixa do mamilo feminino,X,589
+X21,Sintoma/queixa da mama feminina outro,X,590
+X22,Preocupação com a aparência da mama feminina,X,591
+X23,Medo de deonça sexualmente transmissível na mulher,X,592
+X24,Medo de disfunção sexual feminina,X,593
+X25,Medo de cancro genital feminino,X,594
+X26,Medo de cancro da mama feminina,X,595
+X27,Medo de doença genital/da mama feminina outra,X,596
+X28,Limitação funcional/incapacidade (X),X,597
+X29,Sintoma/queixa do aparelho genital feminino outro,X,598
+X70,Sífilis feminina,X,599
+X71,Gonorreia feminina,X,600
+X72,Candidíase genital feminina,X,601
+X73,Tricomoníase genital feminina,X,602
+X74,Doença inflamatória pélvica,X,603
+X75,Neoplasia maligna do colo,X,604
+X76,Neoplasia maligna da mama feminina,X,605
+X77,Neoplasia maligna genital feminina outra,X,606
+X78,Fibromioma do útero,X,607
+X79,Neoplasia benigna da mama feminina,X,608
+X80,Neoplasia benigna genital feminina,X,609
+X81,Neoplasia genital feminina de natureza incerta/outra,X,610
+X82,Lesão traumática genital feminina,X,611
+X83,Malformação congénita genital feminina,X,612
+X84,Vaginite/vulvite NE,X,613
+X85,Doença do colo NE,X,614
+X86,Esfregaço de Papanicolau anormal,X,615
+X87,Prolapso útero-vaginal,X,616
+X88,Doença fibroquística da mama,X,617
+X89,Síndrome de tensão pré-menstrual,X,618
+X90,Herpes genital feminino,X,619
+X91,Condiloma acuminado feminino,X,620
+X92,Infecção genital por chlamydia,X,621
+X99,Doença genital feminino outra,X,622
+Y01,Dor no pénis,Y,623
+Y02,Dor no escroto/testículo,Y,624
+Y03,Corrimento uretral masculino,Y,625
+Y04,Sintoma/queixa do pénis outro,Y,626
+Y05,Sintoma/queixa do escroto/testículo outro,Y,627
+Y06,Sintoma/queixa da próstata,Y,628
+Y07,Impotência NE,Y,629
+Y08,Sintoma/queixa da função sexual masculina,Y,630
+Y10,Infertilidade/subfertilidade masculina,Y,631
+Y13,Esterilização masculina,Y,632
+Y14,Planeamento familiar no homem outro,Y,633
+Y16,Sintoma/queixa da mama masculina,Y,634
+Y24,Medo de disfunção sexual masculina,Y,635
+Y25,Medo de doença sexualmente transmissível masculina,Y,636
+Y26,Medo de cancro genital masculino,Y,637
+Y27,Medo de doença genital masculina outra,Y,638
+Y28,Limitação funcional/incapacidade (Y),Y,639
+Y29,Sintoma/queixa genital masculino outro,Y,640
+Y70,Sífilis masculina,Y,641
+Y71,Gonorreia masculina,Y,642
+Y72,Herpes genital masculino,Y,643
+Y73,Prostatite/vesiculite seminal,Y,644
+Y74,Orquite/epididimite,Y,645
+Y75,Balanite,Y,646
+Y76,Condiloma acuminado masculino,Y,647
+Y77,Neoplasia maligna da próstata,Y,648
+Y78,Neoplasia maligna genital masculina outra,Y,649
+Y79,Neoplasia benigna/incerta genital masculina,Y,650
+Y80,Traumatismo genital masculino,Y,651
+Y81,Fimose/prepúcio redundante,Y,652
+Y82,Hipospádias,Y,653
+Y83,Testículo não descido,Y,654
+Y84,Malformação congénita genital no homem outra,Y,655
+Y85,Hipertrofia prostática benigna,Y,656
+Y86,Hidrocelo,Y,657
+Y99,Doença genital masculina outra,Y,658
+Z01,Pobreza/problema económico,Z,659
+Z02,Problema com a água/alimentação,Z,660
+Z03,Problema de habitação/vizinhança,Z,661
+Z04,Problema sócio-cultural,Z,662
+Z05,Problema com o trabalho,Z,663
+Z06,Problema de desemprego,Z,664
+Z07,Problema com a educação,Z,665
+Z08,Problema com o sistema de segurança social,Z,666
+Z09,Problema legal,Z,667
+Z10,Problema com o sistema de saúde,Z,668
+Z11,Problema com o estar doente/adesão,Z,669
+Z12,Problema relacional com o parceiro,Z,670
+Z13,Problema comportamental do parceiro,Z,671
+Z14,Problema por doença do parceiro,Z,672
+Z15,Perda/falecimento do parceiro,Z,673
+Z16,Problema relacional com uma criança,Z,674
+Z18,Problema com uma criança doente,Z,675
+Z19,Perda/falecimento de uma criança,Z,676
+Z20,Problema relacional com pai/mãe/membro da família,Z,677
+Z21,Problema comportamental do pai/mãe/membro da familília,Z,678
+Z22,Problema por doença do pai/mãe/membro da familília,Z,679
+Z23,Perda/falecimento do pai/mãe/membro da familília,Z,680
+Z24,Problema relacional com amigo,Z,681
+Z25,Problema por agressão/acontecimento violento,Z,682
+Z27,Medo de problema social,Z,683
+Z28,Limitação funcional/incapacidade (Z),Z,684
+Z29,Problema social NE,Z,685
