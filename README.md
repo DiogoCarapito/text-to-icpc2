@@ -96,17 +96,17 @@ pip uninstall -y torch torchvision torchaudio
 pip install torch==2.1.1+cu121 torchaudio==2.1.1+cu121 torchvision==0.16.1+cu121 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 
-make all
-
-```bash
-make all
-```
-
-manually upgrade blinker if it gives error
+manually upgrade blinker (it prevents errors)
 
 ```bash
 pip install --upgrade --ignore-installed blinker
 pip show blinker
+```
+
+install the rest of requirements.txt
+
+```bash
+make all
 ```
 
 .sh file for setup automation (not working right now)

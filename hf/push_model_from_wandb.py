@@ -23,7 +23,7 @@ import torch
     required=True,
 )
 def push_model_from_wandb_to_hf(
-    model="diogo-carapito/wandb-registry-model/text-to-icpc2:v1", hf_token=""
+    model="diogo-carapito/wandb-registry-model/text-to-icpc2:v3", hf_token=""
 ):
     # setting up logging
     logging.basicConfig(level=logging.INFO)
