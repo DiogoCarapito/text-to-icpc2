@@ -240,15 +240,15 @@ def main(size="small", model="bert-base-uncased", dev="cuda"):
     run.log_artifact(artifact)
 
     # Save the model as a PyTorch model
-    logging.info("Saving the model as PyTorch")
-    pt_model_path = f"{model_dir}/model.pth"
-    torch.save(trainer.model.state_dict(), pt_model_path)
+    # logging.info("Saving the model as PyTorch")
+    # pt_model_path = f"{model_dir}/model.pth"
+    # torch.save(trainer.model.state_dict(), pt_model_path)
 
     # Log the PyTorch model using W&B
-    logging.info("Logging the PyTorch model to W&B")
-    pt_artifact = wandb.Artifact(name=f"{experiment_name}-pytorch", type="model")
-    pt_artifact.add_file(pt_model_path)
-    run.log_artifact(pt_artifact)
+    # logging.info("Logging the PyTorch model to W&B")
+    # pt_artifact = wandb.Artifact(name=f"{experiment_name}-pytorch", type="model")
+    # pt_artifact.add_file(pt_model_path)
+    # run.log_artifact(pt_artifact)
 
     # Link the artifact to the model registry
     run.link_artifact(
