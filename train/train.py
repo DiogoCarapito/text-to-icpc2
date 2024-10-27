@@ -37,7 +37,7 @@ def experiment_size(size, model_name):
 @click.option(
     "--model",
     default="bert-base-uncased",
-    help="model name",
+    help="pretraines model name",
     required=False,
 )
 @click.option(
@@ -85,9 +85,11 @@ def main(size="small", model="bert-base-uncased", dev="cuda"):
         dataset = load_dataset("diogocarapito/text-to-icpc2-nano")
     elif size == "medium" or size == "full":
         dataset = load_dataset("diogocarapito/text-to-icpc2")
-    logging.info("Getting the distribution of the labels")
+        
+    
 
     # get the distribution of the labels
+    logging.info("Getting the distribution of the labels")
     features = dataset["train"].features
 
     number_of_labels = len(features["label"].names)
@@ -251,12 +253,12 @@ def main(size="small", model="bert-base-uncased", dev="cuda"):
     # run.log_artifact(pt_artifact)
 
     # Link the artifact to the model registry
-    run.link_artifact(
-        artifact=pt_artifact,
-        target_path=f"mgf_nlp/{experiment_name}/text-to-icpc2:latest",
-        aliases=[model_name, size],
-    )
-    logging.info("Model logged to W&B model registry")
+    # run.link_artifact(
+    #     artifact=pt_artifact,
+    #     target_path=f"mgf_nlp/{experiment_name}/text-to-icpc2:latest",
+    #     aliases=[model_name, size],
+    # )
+    # logging.info("Model logged to W&B model registry")
 
     # # Define a class for the inference model
     # class ModelInference:
