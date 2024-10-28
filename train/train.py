@@ -46,11 +46,11 @@ def experiment_size(size, model_name):
     required=True,
     help="device to be used",
 )
-# @click.option(
-#     "--hf", default=False, help="publish to huggingface model", required=False
-# )
+@click.option(
+    "--hf", default=False, help="publish to huggingface model", required=False
+)
 # @click.option("--val", default=False, help="perform validation", required=False)
-def main(size="small", model="bert-base-uncased", dev="cuda"):
+def main(size="small", model="bert-base-uncased", dev="cuda", hf=False):
     # distilbert/distilbert-base-uncased
     # distilbert/distilbert-base-multilingual-cased
 
@@ -85,8 +85,6 @@ def main(size="small", model="bert-base-uncased", dev="cuda"):
         dataset = load_dataset("diogocarapito/text-to-icpc2-nano")
     elif size == "medium" or size == "full":
         dataset = load_dataset("diogocarapito/text-to-icpc2")
-        
-    
 
     # get the distribution of the labels
     logging.info("Getting the distribution of the labels")
@@ -100,6 +98,9 @@ def main(size="small", model="bert-base-uncased", dev="cuda"):
     # get the distribution of the labels as a dictionary id : label and  label : id
     id2label = {idx: features["label"].int2str(idx) for idx in range(number_of_labels)}
     lable2id = {v: k for k, v in id2label.items()}
+
+    print(id2label)
+    print(lable2id)
 
     # model name
     # model_name = "bert-base-uncased"
@@ -129,7 +130,7 @@ def main(size="small", model="bert-base-uncased", dev="cuda"):
 
     def filter_chapter(example):
         if size == "medium":
-            return example["chapter"] == "Z"
+            return example["chapter"] == "K"
         else:
             return example
 
@@ -227,6 +228,10 @@ def main(size="small", model="bert-base-uncased", dev="cuda"):
     eval_results = trainer.evaluate(tokenized_dataset)
     wandb.log(eval_results)
     logging.info("Accuracy: %s", eval_results["eval_accuracy"])
+
+    # push the model to huggingface
+    if hf:
+        trainer.push_to_hub()
 
     # Save the model
     model_dir = "/tmp/saved_model"
