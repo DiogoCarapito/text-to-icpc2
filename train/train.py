@@ -136,7 +136,7 @@ def main(size="small", model="bert-base-uncased", dev="cuda", hf=False):
     # Select a small subset of the data
     tokenized_dataset = tokenized_dataset["train"].filter(filter_chapter)
 
-    tokenize_dataset_validation = tokenized_dataset.copy()
+    tokenize_dataset_validation = tokenized_dataset
 
     # Split the dataset into training and evaluation
     logging.info("Splitting the dataset into training and evaluation")
