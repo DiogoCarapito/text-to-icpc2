@@ -195,7 +195,7 @@ def main(size="small", model="bert-base-uncased", dev="cuda", hf=False):
     if size == "small":
         n_epochs = 3
     else:
-        n_epochs = 8
+        n_epochs = 12
 
     # Checkpoints will be output to this `training_output_dir`.
     logging.info("Defining the training arguments")
@@ -228,8 +228,7 @@ def main(size="small", model="bert-base-uncased", dev="cuda", hf=False):
     trainer.train()
 
     # Evaluate the model by using on the full tokenized_dataset
-    logging.info("Evaluating the model")
-    print(tokenize_dataset_validation)
+    logging.info("Evaluating the model with the full dataset: %s", len(tokenize_dataset_validation))
     eval_results = trainer.evaluate(tokenize_dataset_validation)
     wandb.log(eval_results)
 
