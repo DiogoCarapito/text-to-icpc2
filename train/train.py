@@ -168,6 +168,7 @@ def main(size="small", model="bert-base-uncased", dev="cuda", hf=False):
         num_labels=number_of_labels,
         id2label=id2label,
         label2id=lable2id,
+        ignore_mismatched_sizes=True # warning supression: Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight'])
     )
 
     # Define the target optimization metric
@@ -232,7 +233,6 @@ def main(size="small", model="bert-base-uncased", dev="cuda", hf=False):
     eval_results = trainer.evaluate(tokenize_dataset_validation)
     wandb.log(eval_results)
 
-    
     logging.info("F1: %s", eval_results["eval_f1"])
     # logging.info("Accuracy: %s", eval_results["eval_accuracy"])
     # logging.info("Precision: %s", eval_results["eval_precision"])
