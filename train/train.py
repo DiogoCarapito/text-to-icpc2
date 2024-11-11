@@ -168,7 +168,7 @@ def main(size="small", model="bert-base-uncased", dev="cuda", hf=False):
         num_labels=number_of_labels,
         id2label=id2label,
         label2id=lable2id,
-        ignore_mismatched_sizes=True # warning supression: Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight'])
+        ignore_mismatched_sizes=True,  # warning supression: Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight'])
     )
 
     # Define the target optimization metric
@@ -183,8 +183,10 @@ def main(size="small", model="bert-base-uncased", dev="cuda", hf=False):
     def compute_metrics(eval_pred):
         logits, labels = eval_pred
         predictions = np.argmax(logits, axis=-1)
-        #return metric.compute(predictions=predictions, references=labels) #accuracy
-        return metric.compute(predictions=predictions, references=labels, average='macro') #f1 score
+        # return metric.compute(predictions=predictions, references=labels) #accuracy
+        return metric.compute(
+            predictions=predictions, references=labels, average="macro"
+        )  # f1 score
 
     logging.info("Setting up the training output directory")
     # if t == "full" and hf:
@@ -228,7 +230,10 @@ def main(size="small", model="bert-base-uncased", dev="cuda", hf=False):
     trainer.train()
 
     # Evaluate the model by using on the full tokenized_dataset
-    logging.info("Evaluating the model with the full dataset: %s", len(tokenize_dataset_validation))
+    logging.info(
+        "Evaluating the model with the full dataset: %s",
+        len(tokenize_dataset_validation),
+    )
     eval_results = trainer.evaluate(tokenize_dataset_validation)
     wandb.log(eval_results)
 
