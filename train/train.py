@@ -1,3 +1,5 @@
+# python train/train.py --size full --model bert-base-uncased --dev cuda --hf True
+
 import numpy as np
 from datasets import load_dataset
 from transformers import (
@@ -181,7 +183,8 @@ def main(size="small", model="bert-base-uncased", dev="cuda", hf=False):
     def compute_metrics(eval_pred):
         logits, labels = eval_pred
         predictions = np.argmax(logits, axis=-1)
-        return metric.compute(predictions=predictions, references=labels)
+        #return metric.compute(predictions=predictions, references=labels) #accuracy
+        return metric.compute(predictions=predictions, references=labels, average='macro') #f1 score
 
     logging.info("Setting up the training output directory")
     # if t == "full" and hf:
