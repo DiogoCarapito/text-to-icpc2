@@ -101,9 +101,6 @@ def main(size="small", model="bert-base-uncased", dev="cuda", hf=False):
     id2label = {idx: features["label"].int2str(idx) for idx in range(number_of_labels)}
     lable2id = {v: k for k, v in id2label.items()}
 
-    print(id2label)
-    print(lable2id)
-
     # model name
     # model_name = "bert-base-uncased"
     # model_name = "distilbert-base-uncased"
@@ -138,6 +135,8 @@ def main(size="small", model="bert-base-uncased", dev="cuda", hf=False):
 
     # Select a small subset of the data
     tokenized_dataset = tokenized_dataset["train"].filter(filter_chapter)
+
+    tokenize_dataset_validation = tokenized_dataset.copy()
 
     # Split the dataset into training and evaluation
     logging.info("Splitting the dataset into training and evaluation")
@@ -229,14 +228,15 @@ def main(size="small", model="bert-base-uncased", dev="cuda", hf=False):
 
     # Evaluate the model by using on the full tokenized_dataset
     logging.info("Evaluating the model")
-    # print(tokenized_dataset)
-    eval_results = trainer.evaluate(tokenized_dataset)
+    print(tokenize_dataset_validation)
+    eval_results = trainer.evaluate(tokenize_dataset_validation)
     wandb.log(eval_results)
 
-    logging.info("Accuracy: %s", eval_results["eval_accuracy"])
+    
     logging.info("F1: %s", eval_results["eval_f1"])
-    logging.info("Precision: %s", eval_results["eval_precision"])
-    logging.info("Recall: %s", eval_results["eval_recall"])
+    # logging.info("Accuracy: %s", eval_results["eval_accuracy"])
+    # logging.info("Precision: %s", eval_results["eval_precision"])
+    # logging.info("Recall: %s", eval_results["eval_recall"])
 
     # push the model to huggingface
     if hf:
