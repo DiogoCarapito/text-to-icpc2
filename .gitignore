@@ -174,3 +174,5 @@ mlruns/
 #ignore wandb folder
 wandb/
 artifacts/
+text-to-icpc2_distilbert-base-uncased_pipeline/
+logs/

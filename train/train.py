@@ -170,8 +170,10 @@ def main(size="small", model="bert-base-uncased", dev="cuda", hf=False):
     )
 
     # Define the target optimization metric
-    metric = evaluate.load("accuracy")
-    logging.info("Using the metric accuracy")
+    metric = evaluate.load("f1")
+    logging.info("Using the metric F1 score")
+    # metric = evaluate.load("accuracy")
+    # logging.info("Using the metric accuracy")
 
     # Define a function for calculating our defined target optimization metric during training
     logging.info("Defining the compute_metrics function")
@@ -227,7 +229,11 @@ def main(size="small", model="bert-base-uncased", dev="cuda", hf=False):
     # print(tokenized_dataset)
     eval_results = trainer.evaluate(tokenized_dataset)
     wandb.log(eval_results)
+
     logging.info("Accuracy: %s", eval_results["eval_accuracy"])
+    logging.info("F1: %s", eval_results["eval_f1"])
+    logging.info("Precision: %s", eval_results["eval_precision"])
+    logging.info("Recall: %s", eval_results["eval_recall"])
 
     # push the model to huggingface
     if hf:

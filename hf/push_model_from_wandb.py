@@ -6,7 +6,7 @@ import wandb
 import os
 from dotenv import load_dotenv
 import click
-from transformers import AutoModelForSequenceClassification  # , AutoTokenizer
+from transformers import AutoModelForSequenceClassification, AutoTokenizer, pipeline
 import logging
 import torch
 
@@ -42,7 +42,7 @@ def push_model_from_wandb_to_hf(
 
     # load the model with pytorch
     logging.info("Loading model with PyTorch")
-    model_path = f"{artifact_dir}/model.pth"
+    model_path = f"{artifact_dir}/model.safetensors"
 
     # save as safetensors
     state_dict = torch.load(model_path, map_location=torch.device("cpu"))
@@ -56,14 +56,30 @@ def push_model_from_wandb_to_hf(
     model.load_state_dict(state_dict)
     model.eval()
 
+    # Load the tokenizer
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+    # Create a pipeline
+    text_classification_pipeline = pipeline(
+        "text-classification", model=model, tokenizer=tokenizer
+    )
+
     # save the model to hugging face
     logging.info("Saving model to Hugging Face")
-    # huggingface_api_token = os.getenv("huggingface_token")
-    huggingface_api_token = hf_token
-    model.save_pretrained(
-        "text-to-icpc2_distilbert-base-uncased",
+    if hf_token == "":
+        huggingface_api_token = os.getenv("huggingface_token")
+    else:
+        huggingface_api_token = hf_token
+    # model.save_pretrained(
+    #     "text-to-icpc2_distilbert-base-uncased",
+    #     push_to_hub=True,
+    #     token=huggingface_api_token,
+    # )
+
+    text_classification_pipeline.save_pretrained(
+        "text-to-icpc2_distilbert-base-uncased_pipeline",
         push_to_hub=True,
-        token=huggingface_api_token,
+        use_auth_token=huggingface_api_token,
     )
 
     logging.info("Model pushed to Hugging Face!")

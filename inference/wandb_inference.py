@@ -1,9 +1,5 @@
 import wandb
 import torch
-
-# import pandas as pd
-
-# import onnxruntime as ort
 import os
 from dotenv import load_dotenv
 import click
@@ -14,6 +10,30 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 @click.option("--i_input", type=str, required=False)
 @click.option("--model_name", type=str, required=False)
 def wandb_inference(i_input="Hipertensão arterial", model_name=""):
+    # class ModelInference:
+    #     def __init__(self, model_dir):
+    #         # Load the tokenizer and model
+    #         self.tokenizer = AutoTokenizer.from_pretrained(model_dir)
+    #         self.model = AutoModelForSequenceClassification.from_pretrained(model_dir)
+    #         self.model.eval()  # Set the model to evaluation mode
+
+    #     def predict(self, text, top_k=5):
+    #         # Tokenize the input text
+    #         inputs = self.tokenizer(text, return_tensors="pt")
+
+    #         # Perform inference
+    #         with torch.no_grad():
+    #             outputs = self.model(**inputs)
+    #             probabilities = torch.nn.functional.softmax(outputs.logits, dim=-1)
+    #             topk_values, topk_indices = torch.topk(probabilities, k=top_k, dim=-1)
+
+    #         # Convert indices to labels
+    #         topk_labels = [
+    #             self.model.config.id2label[idx.item()] for idx in topk_indices[0]
+    #         ]
+
+    #         return topk_values[0], topk_labels
+
     # Load the W&B API key from the environment
     load_dotenv()
     wandb_api_key = os.getenv("WANDB_API_KEY")
