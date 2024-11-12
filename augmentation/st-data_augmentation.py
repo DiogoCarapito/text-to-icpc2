@@ -173,7 +173,7 @@ def prompt_exec(prompt_to_exec, context_to_exec, model="gpt-4o-mini"):
             },
         ],
         temperature=0.1,
-        max_tokens=256,
+        max_tokens=512,
         top_p=1,
     )
     result = response.choices[0].message.content

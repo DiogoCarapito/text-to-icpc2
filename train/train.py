@@ -172,10 +172,10 @@ def main(size="small", model="bert-base-uncased", dev="cuda", hf=False):
     )
 
     # Define the target optimization metric
-    metric = evaluate.load("f1")
-    logging.info("Using the metric F1 score")
-    # metric = evaluate.load("accuracy")
-    # logging.info("Using the metric accuracy")
+    # metric = evaluate.load("f1")
+    # logging.info("Using the metric F1 score")
+    metric = evaluate.load("accuracy")
+    logging.info("Using the metric accuracy")
 
     # Define a function for calculating our defined target optimization metric during training
     logging.info("Defining the compute_metrics function")
@@ -185,8 +185,10 @@ def main(size="small", model="bert-base-uncased", dev="cuda", hf=False):
         predictions = np.argmax(logits, axis=-1)
         # return metric.compute(predictions=predictions, references=labels) #accuracy
         return metric.compute(
-            predictions=predictions, references=labels, average="macro"
-        )  # f1 score
+            # predictions=predictions, references=labels, average="macro" # f1 score
+            predictions=predictions,
+            references=labels,  # accuracy
+        )
 
     logging.info("Setting up the training output directory")
     # if t == "full" and hf:
@@ -237,8 +239,8 @@ def main(size="small", model="bert-base-uncased", dev="cuda", hf=False):
     eval_results = trainer.evaluate(tokenize_dataset_validation)
     wandb.log(eval_results)
 
-    logging.info("F1: %s", eval_results["eval_f1"])
-    # logging.info("Accuracy: %s", eval_results["eval_accuracy"])
+    # logging.info("F1: %s", eval_results["eval_f1"])
+    logging.info("Accuracy: %s", eval_results["eval_accuracy"])
     # logging.info("Precision: %s", eval_results["eval_precision"])
     # logging.info("Recall: %s", eval_results["eval_recall"])
 
