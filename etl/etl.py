@@ -1,3 +1,5 @@
+# python etl/etl.py --hf False
+
 import pandas as pd
 from datasets import Dataset, Features, ClassLabel, Value  # , DatasetDict
 import click
@@ -284,6 +286,15 @@ def main_etl(hf=True):
 
     # reset index
     data = data.reset_index(drop=True)
+    # data["id"] = data.index
+
+    # # create a column to prepare the check if the code is included or was blacklisted
+    # data["include"] = True
+
+    # id_blacklist = pd.read_csv("data/id_blacklist.csv")
+
+    # # set the include column to False if the code is in the blacklist
+    # data.loc[data["id"].isin(id_blacklist["id"]), "include"] = False
 
     # create a new column with the label
     data["label"] = data["code"].astype("category").cat.codes
@@ -292,17 +303,15 @@ def main_etl(hf=True):
     logging.info("Saving the data as data/data_pre_train.csv")
     data.to_csv("data/data_pre_train.csv", index=False)
 
-    # create a jsonl file
-    # data.to_json(
-    #     "data/data_pre_train.jsonl", orient="records", lines=True, force_ascii=False
-    # )
+    # Get the dictionary of code, text (only icpc2_description), and label match and save as a CSV
+    code_text_label_df = data[data["origin"] == "icpc2_description"]
+    code_text_label_df = code_text_label_df.drop(columns="origin")
+    print(code_text_label_df)
+    code_text_label_df.to_csv("data/code_text_label.csv", index=False)
 
     # ClassLable creation
     logging.info("ClassLabel Creation")
     list_codes = data["code"].unique().tolist()
-
-    # # sort by code
-    # list_codes.sort()
 
     # get the number of codes
     n_codes = len(list_codes)
@@ -326,61 +335,12 @@ def main_etl(hf=True):
 
     # create a huggingface dataset
     logging.info("Creating a Hugging Face dataset structure")
-    dataset = Dataset.from_pandas(
-        data[["code", "text", "origin", "chapter", "label"]], features=features
-    )
-
-    # Get the dictionary of code, text (only icpc2_description), and label match and save as a CSV
-    code_text_label_df = data[data["origin"] == "icpc2_description"]
-    code_text_label_df = code_text_label_df.drop(columns="origin")
-    code_text_label_df.to_csv("data/code_text_label.csv", index=False)
-
-    # logging.info("Saved code_text_label dictionary as CSV")
-
-    # train_test_split = dataset.train_test_split(
-    #     test_size=0.2,
-    #     seed=42,
-    #     stratify_by_column="label",
-    # )
-
-    # list_codes_val = validation_data["code"].unique().tolist()
-    # n_codes_val = len(list_codes_val)
-
-    # print(list_codes_val)
-    # print(n_codes_val)
-
-    # class_labels_val = ClassLabel(
-    #     num_classes=n_codes_val,
-    #     names=list_codes_val,
-    # )
-    # features_val = Features(
-    #     {
-    #         "code": Value("string"),
-    #         "text": Value("string"),
-    #         "origin": Value("string"),
-    #         "chapter": Value("string"),
-    #         "label": class_labels_val,
-    #     }
-    # )
-
-    # dataset_dict = DatasetDict(
-    #     {
-    #         "train": train_test_split["train"],
-    #         "test": train_test_split["test"],
-    #         "validation": validation_dataset,
-    #     }
-    # )
-
-    dataset_dict = dataset
-
-    # # sort by code
-    # dataset_dict = dataset_dict.sort("code")
+    dataset = Dataset.from_pandas(data, features=features)
 
     if hf:
         logging.info("Pushing to Hugging Face!")
-        # print(dataset_dict)
-        dataset_dict.save_to_disk("data/data_pre_train_hf")
-        dataset_dict.push_to_hub(
+        dataset.save_to_disk("data/data_pre_train_hf")
+        dataset.push_to_hub(
             repo_id="diogocarapito/text-to-icpc2",
         )
 

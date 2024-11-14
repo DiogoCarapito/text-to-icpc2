@@ -1,4 +1,5 @@
 # script to push a new model to hugging face
+# python hf/push_model_from_wandb.py --model [model_name] --hf_token [token]
 
 import wandb
 
@@ -8,7 +9,9 @@ from dotenv import load_dotenv
 import click
 from transformers import AutoModelForSequenceClassification, AutoTokenizer, pipeline
 import logging
-import torch
+
+# import torch
+from safetensors.torch import load_file
 
 
 @click.command()
@@ -23,7 +26,7 @@ import torch
     required=True,
 )
 def push_model_from_wandb_to_hf(
-    model="diogo-carapito/wandb-registry-model/text-to-icpc2:v3", hf_token=""
+    model="diogo-carapito/wandb-registry-model/text-to-icpc2:v4", hf_token=""
 ):
     # setting up logging
     logging.basicConfig(level=logging.INFO)
@@ -45,11 +48,13 @@ def push_model_from_wandb_to_hf(
     model_path = f"{artifact_dir}/model.safetensors"
 
     # save as safetensors
-    state_dict = torch.load(model_path, map_location=torch.device("cpu"))
+    # state_dict = torch.load(model_path, map_location=torch.device("cpu"))
+    # state_dict = model.state_dict()
+    state_dict = load_file(model_path)
 
     # load the model
     num_labels = 686
-    model_name = "distilbert-base-uncased"
+    model_name = "bert-base-uncased"
     model = AutoModelForSequenceClassification.from_pretrained(
         model_name, num_labels=num_labels
     )
