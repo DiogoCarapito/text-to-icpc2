@@ -42,7 +42,7 @@ onnxruntime
 
 # MLOps libraries
 mlflow # used in local trains
-wandb==0.18.1 # used in cloud's gpu powered trains
+wandb==0.18.7 # used in cloud's gpu powered trains
 
 # huggingface API
 huggingface

@@ -23,24 +23,29 @@ from safetensors.torch import load_file
 @click.option(
     "--hf_token",
     type=str,
-    required=True,
+    required=False,
 )
 def push_model_from_wandb_to_hf(
+    #model="diogo-carapito/wandb-registry-model/text-to-icpc2:v4", hf_token=""
     model="diogo-carapito/wandb-registry-model/text-to-icpc2:v4", hf_token=""
 ):
     # setting up logging
     logging.basicConfig(level=logging.INFO)
 
-    # Load the W&B API key from the environment
-    logging.info("Loading W&B API key")
-    load_dotenv()
-    wandb_api_key = os.getenv("WANDB_API_KEY")
-    wandb.login(key=wandb_api_key)
+    # # Load the W&B API key from the environment
+    # logging.info("Loading W&B API key")
+    # load_dotenv()
+    # wandb_api_key = os.getenv("WANDB_API_KEY")
+    # wandb.login(key=wandb_api_key)
+    
 
     # download the model from wandb
     logging.info("Downloading model from W&B")
+    # run = wandb.init()
+    # artifact = run.use_artifact(model, type="model")
+    # artifact_dir = artifact.download()
     run = wandb.init()
-    artifact = run.use_artifact(model, type="model")
+    artifact = run.use_artifact('diogo-carapito/wandb-registry-model/text-to-icpc2:v4', type='model')
     artifact_dir = artifact.download()
 
     # load the model with pytorch
@@ -75,17 +80,17 @@ def push_model_from_wandb_to_hf(
         huggingface_api_token = os.getenv("huggingface_token")
     else:
         huggingface_api_token = hf_token
-    # model.save_pretrained(
-    #     "text-to-icpc2_distilbert-base-uncased",
-    #     push_to_hub=True,
-    #     token=huggingface_api_token,
-    # )
-
-    text_classification_pipeline.save_pretrained(
-        "text-to-icpc2_distilbert-base-uncased_pipeline",
+    model.save_pretrained(
+        "text-to-icpc2_bert-base-uncased",
         push_to_hub=True,
-        use_auth_token=huggingface_api_token,
+        token=huggingface_api_token,
     )
+
+    # text_classification_pipeline.save_pretrained(
+    #     "text-to-icpc2_bert-base-uncased",
+    #     push_to_hub=True,
+    #     use_auth_token=huggingface_api_token,
+    # )
 
     logging.info("Model pushed to Hugging Face!")
 

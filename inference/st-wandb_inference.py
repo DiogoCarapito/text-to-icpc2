@@ -1,68 +1,80 @@
 import streamlit as st
 
 # import wandb
-import os
-import torch
-from safetensors.torch import load_file
-from transformers import AutoModelForSequenceClassification, AutoTokenizer
-from datasets import load_dataset
+# import os
+# import torch
+# from safetensors.torch import load_file
+# from transformers import AutoModelForSequenceClassification, AutoTokenizer
+# from datasets import load_dataset
 
-# get the list of the folders inside artifacts folder and just list the names
-list_models = os.listdir("artifacts")
+from wandb_inference import inference
 
-# radio to pick the model
-choosen_model = st.radio("choose the model", list_models)
+text = st.text_input("texto")
 
-# get the model's name inside the folder
-model_name = os.listdir(f"artifacts/{choosen_model}")[0]
-
-# create the path to the model
-model_path = f"artifacts/{choosen_model}/{model_name}"
-
-# text input for inference
-text = st.text_input("Input text")
-
-state_dict = load_file(model_path)
-
-dataset = load_dataset("diogocarapito/text-to-icpc2")
-
-# get the distribution of the labels
-
-features = dataset["train"].features
-
-number_of_labels = len(features["label"].names)
-
-# get the distribution of the labels as a dictionary id : label and  label : id
-id2label = {idx: features["label"].int2str(idx) for idx in range(number_of_labels)}
-lable2id = {v: k for k, v in id2label.items()}
-
-# load the model
-num_labels = 686
-model_name = "bert-base-uncased"
-model = AutoModelForSequenceClassification.from_pretrained(
-    model_name,
-    num_labels=num_labels,
-    id2label=id2label,
-    label2id=lable2id,
+prediction = inference(
+    text_input="Hipertensão arterial",
+    k=5,
+    model_version="diogo-carapito/wandb-registry-model/text-to-icpc2:v4",
 )
 
-model.load_state_dict(state_dict)
-model.eval()
+st.write(prediction)
 
-# Load the tokenizer
-tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
+# # get the list of the folders inside artifacts folder and just list the names
+# list_models = os.listdir("artifacts")
 
-# amke an inference
-inputs = tokenizer(text, return_tensors="pt")
+# # radio to pick the model
+# choosen_model = st.radio("choose the model", list_models)
 
-with torch.no_grad():
-    outputs = model(**inputs)
-    probabilities = torch.nn.functional.softmax(outputs.logits, dim=-1)
-    topk_values, topk_indices = torch.topk(probabilities, k=5, dim=-1)
+# # get the model's name inside the folder
+# model_name = os.listdir(f"artifacts/{choosen_model}")[0]
 
-    topk_labels = [model.config.id2label[idx.item()] for idx in topk_indices[0]]
+# # create the path to the model
+# model_path = f"artifacts/{choosen_model}/{model_name}"
 
-st.write(topk_values[0], topk_labels)
+# # text input for inference
+# text = st.text_input("Input text")
+
+# state_dict = load_file(model_path)
+
+# dataset = load_dataset("diogocarapito/text-to-icpc2")
+
+# # get the distribution of the labels
+
+# features = dataset["train"].features
+
+# number_of_labels = len(features["label"].names)
+
+# # get the distribution of the labels as a dictionary id : label and  label : id
+# id2label = {idx: features["label"].int2str(idx) for idx in range(number_of_labels)}
+# lable2id = {v: k for k, v in id2label.items()}
+
+# # load the model
+# num_labels = 686
+# model_name = "bert-base-uncased"
+# model = AutoModelForSequenceClassification.from_pretrained(
+#     model_name,
+#     num_labels=num_labels,
+#     id2label=id2label,
+#     label2id=lable2id,
+# )
+
+# model.load_state_dict(state_dict)
+# model.eval()
+
+# # Load the tokenizer
+# tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
+
+# # amke an inference
+# inputs = tokenizer(text, return_tensors="pt")
+
+# with torch.no_grad():
+#     outputs = model(**inputs)
+#     probabilities = torch.nn.functional.softmax(outputs.logits, dim=-1)
+#     topk_values, topk_indices = torch.topk(probabilities, k=5, dim=-1)
+
+#     topk_labels = [model.config.id2label[idx.item()] for idx in topk_indices[0]]
+
+# st.write(topk_values[0], topk_labels)
 
 
 # wandb_api_key = os.getenv("WANDB_API_KEY")
