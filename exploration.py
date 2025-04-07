@@ -1,6 +1,7 @@
 import streamlit as st
 import re
 import pandas as pd
+from inference.wandb_inference import wandb_inference
 
 
 def check_if_chapter_or_code_exists(dict_chapter_code):
@@ -96,18 +97,16 @@ st.write(filtered_data)
 
 st.divider()
 
-from inference.wandb_inference import wandb_inference
-
 data_to_inference = filtered_data["text"].tolist()
 
-st.write(type(data_to_inference))
+# st.write(type(data_to_inference))
 
-if isinstance(data_to_inference, list) and all(isinstance(item, str) for item in data_to_inference):
+if isinstance(data_to_inference, list) and all(
+    isinstance(item, str) for item in data_to_inference
+):
     st.write("Data to inference is a list of strings")
-    
-    
+
 if st.button("Run Inference"):
-    
     prediction = wandb_inference(text_input=data_to_inference)
 
     # Flatten the prediction data
@@ -115,23 +114,26 @@ if st.button("Run Inference"):
     for pred in prediction:
         flattened_row = {
             "input": pred["input"],
-            #"model": pred["model"]
+            # "model": pred["model"]
         }
         for i, p in enumerate(pred["prediction"], start=1):
             flattened_row[f"prediction_{i}_code"] = p["code"]
             flattened_row[f"prediction_{i}_text"] = p["text"]
-            #flattened_row[f"prediction_{i}_label"] = p["label"]
+            # flattened_row[f"prediction_{i}_label"] = p["label"]
             flattened_row[f"prediction_{i}_value"] = p["value"]
         flattened_data.append(flattened_row)
 
     # Convert the flattened data to a DataFrame
     df = pd.DataFrame(flattened_data)
-    
+
     # merge the original data with the inference results
     df = pd.merge(filtered_data, df, left_on="text", right_on="input")
 
     # Display the DataFrame using Streamlit
     st.write(df)
-    
+
 if st.button("Save Inference Results"):
-    df.to_csv(f"validation/inference_results_{filter_by_code_or_chapter}.csv", index=False)
+    df.to_csv(
+        f"validation/inference_results_{filter_by_code_or_chapter}.csv", index=False
+    )
+    st.balloons()

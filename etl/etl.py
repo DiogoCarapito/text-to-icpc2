@@ -299,6 +299,15 @@ def main_etl(hf=True):
     # create a new column with the label
     data["label"] = data["code"].astype("category").cat.codes
 
+    # Replace empty strings with NaN
+    data.replace("", pd.NA, inplace=True)
+
+    # drop any row that has a NaN value
+    data = data.dropna()
+
+    # reset index
+    data = data.reset_index(drop=True)
+
     # save the data as csv
     logging.info("Saving the data as data/data_pre_train.csv")
     data.to_csv("data/data_pre_train.csv", index=False)

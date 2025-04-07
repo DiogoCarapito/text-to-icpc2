@@ -7,11 +7,13 @@ import streamlit as st
 # from transformers import AutoModelForSequenceClassification, AutoTokenizer
 # from datasets import load_dataset
 
-from wandb_inference import inference
+from inference.wandb_inference import wandb_inference
+
+# from wandb_inference import wandb_inference
 
 text = st.text_input("texto")
 
-prediction = inference(
+prediction = wandb_inference(
     text_input="Hipertensão arterial",
     k=5,
     model_version="diogo-carapito/wandb-registry-model/text-to-icpc2:v4",

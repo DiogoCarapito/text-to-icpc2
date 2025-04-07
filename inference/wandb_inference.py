@@ -1,13 +1,23 @@
+# pylint: disable=W1203
+
 # python inference/wandb_inference.py -i "hipertensão arterial"
 
 import wandb
 import torch
 import os
 from dotenv import load_dotenv
-import click
+
+# import click
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 from safetensors.torch import load_file
 import pandas as pd
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+)
 
 
 def match_top_labels_to_codes_text(input_list, model_version, topk_labels, topk_values):
@@ -54,43 +64,49 @@ def match_top_labels_to_codes_text(input_list, model_version, topk_labels, topk_
 # @click.option("-k", type=int, required=False, default=5)
 # @click.option("--model_version", type=str, required=False, default="diogo-carapito/wandb-registry-model/text-to-icpc2:v4")
 def wandb_inference(
-    # text_input=["Hipertensão arterial", "Diabetes Mellitus"],
-    text_input="Diabetes sem insulina",
+    text_input=None,
+    # text_input="Diabetes sem insulina",
     k=5,
     model_version="diogo-carapito/wandb-registry-model/text-to-icpc2:v4",
 ):
+    logging.info("Starting Running inference")
+
+    if text_input is None:
+        text_input = ["Hipertensão arterial", "Diabetes Mellitus"]
+
+    logging.info("Checking if text_input is a list")
     # check if text_input its a list
     if not isinstance(text_input, list):
         list_inputs = [text_input]
     else:
         list_inputs = list(text_input)
 
-    print(list_inputs)
-    
+    logging.info(f"Loading the model: {model_version}")
     # avoid downloading the model if its already downloaded
-    if model_version != "diogo-carapito/wandb-registry-model/text-to-icpc2:v4":
-        if not os.path.exists(
-            "artifacts/text-to-icpc2-bert-base-uncased:v2/model.safetensors"
-        ):
-            # Load the W&B API key from the environment
-            load_dotenv()
-            wandb_api_key = os.getenv("WANDB_API_KEY")
-            wandb.login(key=wandb_api_key)
+    # if model_version != "diogo-carapito/wandb-registry-model/text-to-icpc2:v4":
+    if not os.path.exists(f"artifacts/{model_version}/model.safetensors"):
+        logging.info("Model is not downloaded. Downloading it from wandb")
+        # Load the W&B API key from the environment
+        load_dotenv()
+        wandb_api_key = os.getenv("WANDB_API_KEY")
+        wandb.login(key=wandb_api_key)
 
-            # Use the W&B API to download the artifact without creating a new run
-            run = wandb.init()
-            artifact = run.use_artifact(
-                "diogo-carapito/wandb-registry-model/text-to-icpc2:v4", type="model"
-            )
-            artifact_dir = artifact.download()
+        # Use the W&B API to download the artifact without creating a new run
+        run = wandb.init(settings=wandb.Settings(init_timeout=240))
+        artifact = run.use_artifact(
+            "diogo-carapito/wandb-registry-model/text-to-icpc2:v4", type="model"
+        )
+        artifact_dir = artifact.download()
 
-            # load with pytorch and inference
-            model_path = f"{artifact_dir}/model.safetensors"
+        # load with pytorch and inference
+        model_path = f"{artifact_dir}/model.safetensors"
 
     else:
+        logging.info("Model is already downloaded")
         # model path if its already downloaded
-        model_path = "artifacts/text-to-icpc2-bert-base-uncased:v2/model.safetensors"
+        model_path = f"artifacts/{model_version}/model.safetensors"
 
+    logging.info("Preparing the model")
     # Define the model architecture with the correct number of classes
     num_labels = 686  # Change this to the correct number of classes
     model_name = "bert-base-uncased"
@@ -106,15 +122,18 @@ def wandb_inference(
     # Load the state dictionary into the model
     model.load_state_dict(state_dict)
 
+    logging.info("Set the model to evaluation mode")
     # Set the model to evaluation mode
     model.eval()
 
+    logging.info("Loading the tokenizer")
     # Load the tokenizer
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
     # Prepare input data
     inputs = tokenizer(list_inputs, return_tensors="pt", padding=True, truncation=True)
 
+    logging.info("Performing inference")
     # Perform inference
     with torch.no_grad():
         outputs = model(**inputs)
@@ -125,12 +144,13 @@ def wandb_inference(
     topk_indices_list = topk_indices.squeeze().tolist()
     top_values_list = topk_values.squeeze().tolist()
 
+    logging.info("Matching the top labels to the codes and text")
     # transform those lists into results
     results = match_top_labels_to_codes_text(
         list_inputs, model_version, topk_indices_list, top_values_list
     )
 
-    print(results)
+    logging.info("Inference finished successfully!")
 
     return results
 

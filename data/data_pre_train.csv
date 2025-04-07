@@ -25,7 +25,6 @@ A01,dor em múltiplas regiões,gpt-4o-mini,A,0
 A01,dor em várias zonas do corpo,gpt-4o-mini,A,0
 A01,Dor várias localizações,human-dc,A,0
 A01,dor em várias áreas do corpo,gpt-4o-mini,A,0
-A01,,icd10_description,A,0
 A01,dor em todo o organismo,gpt-4o-mini,A,0
 A01,dor crónica generalizada,icpc2_inclusion,A,0
 A01,dores múltiplas,icpc2_inclusion,A,0
@@ -184,7 +183,6 @@ A09,sudorese excessiva,gpt-4o-mini,A,8
 A09,sudorese anormal,gpt-4o-mini,A,8
 A09,sudorese intensa,gpt-4o-mini,A,8
 A09,sudorese patológica,gpt-4o-mini,A,8
-A09,,icd10_description,A,8
 A09,Excesso de transpiração,gpt-4o-mini,A,8
 A09,hiperhidrose primária,gpt-4o-mini,A,8
 A09,hiperhidrose secundária,gpt-4o-mini,A,8
@@ -221,7 +219,6 @@ A11,dor torácica generalizada,gpt-4o-mini,A,10
 A11,dor no tórax NE,gpt-4o-mini,A,10
 A11,dor torácica indeterminada,gpt-4o-mini,A,10
 A11,Dor no peito NE,gpt-4o-mini,A,10
-A11,,icd10_description,A,10
 A11,Dor torácica NE,icpc2_description,A,10
 A11,dor torácica sem causa,gpt-4o-mini,A,10
 A13,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,A,11
@@ -3720,7 +3717,6 @@ D73,infecção gastrointestinal,gpt-4o-mini,D,107
 D73,vómitos infecciosos,gpt-4o-mini,D,107
 D73,enterite infecciosa,gpt-4o-mini,D,107
 D73,infecção por salmonela,gpt-4o-mini,D,107
-D73,,icd10_description,D,107
 D73,infecção intestinal,gpt-4o-mini,D,107
 D73,gastroenterite por rotavírus,gpt-4o-mini,D,107
 D73,gastroenterite viral,gpt-4o-mini,D,107
@@ -7166,7 +7162,6 @@ K96,Hemorróidas,icpc2_description,K,236
 K96,Hemorróidas internas,gpt-4o-mini,K,236
 K96,pólipo cutâneo hemorroidal residual,icpc2_inclusion,K,236
 K96,inflamação hemorroidal,gpt-4o-mini,K,236
-K96,,icd10_description,K,236
 K96,hemorróidas internas com/sem complicações,icpc2_inclusion,K,236
 K96,hematoma perianal,icpc2_inclusion,K,236
 K96,hemorróidas externas trombosadas,icpc2_inclusion,K,236
@@ -10130,7 +10125,6 @@ P15,síndromes alcoólicas do cérebro,icpc2_inclusion,P,341
 P15,psicose alcoólica,icpc2_inclusion,P,341
 P15,alcoolismo,icpc2_inclusion,P,341
 P15,delirium tremens,icpc2_inclusion,P,341
-P16,,icd10_description,P,342
 P16,Abuso agudo do álcool,icpc2_description,P,342
 P16,embriaguez,icpc2_inclusion,P,342
 P16,consumo abusivo de álcool,gpt-4o-mini,P,342
@@ -10529,7 +10523,6 @@ P77,Suicídio/tentativa de suicídio,icpc2_description,P,361
 P77,tentativa sucedida,icpc2_inclusion,P,361
 P77,gesto suicida,icpc2_inclusion,P,361
 P78,Neurastenia com fadiga intensa,gpt-4o-mini_human-dc,P,362
-P78,,icd10_description,P,362
 P78,Neurastenia/surmenage,icpc2_description,P,362
 P78,Neurastenia com fadiga psicológica,gpt-4o-mini_human-dc,P,362
 P78,Neurastenia com fadiga mental,gpt-4o-mini_human-dc,P,362
@@ -10619,7 +10612,6 @@ P82,Consequências emocionais de um evento stressante,gpt-4o-mini_human-dc,P,366
 P82,Transtorno de adaptação ao trauma,gpt-4o-mini,P,366
 P82,Reação prolongada ao trauma,gpt-4o-mini,P,366
 P82,Consequências psicológicas de um evento traumático,gpt-4o-mini,P,366
-P85,,icd10_description,P,367
 P85,Transtorno do desenvolvimento,gpt-4o-mini,P,367
 P85,Comprometimento do desenvolvimento,gpt-4o-mini,P,367
 P85,Deficiência de aprendizagem,gpt-4o-mini,P,367
@@ -11899,7 +11891,6 @@ S11,infecção dérmica por trauma,gpt-4o-mini,S,424
 S11,infecção de pele após acidente,gpt-4o-mini,S,424
 S11,infecção cutânea pós-trauma,gpt-4o-mini,S,424
 S11,infecção de pele após trauma,gpt-4o-mini,S,424
-S11,,icd10_description,S,424
 S12,Escoriação do nariz,icd10_description,S,425
 S12,Escoriação da orelha,icd10_description,S,425
 S12,Outras lesões superficiais e lesões superficiais não especificadas da pálpebra e área periocular,icd10_description,S,425
@@ -11938,7 +11929,6 @@ S13,Lesão por ataque de animal,gpt-4o-mini,S,426
 S13,Lesão provocada por mordedura,gpt-4o-mini,S,426
 S13,Dano causado por mordedura,gpt-4o-mini,S,426
 S13,Mordedura animal/humana,icpc2_description,S,426
-S13,,icd10_description,S,426
 S13,Picada de animal/humano,gpt-4o-mini,S,426
 S13,Ferida provocada por mordedura,gpt-4o-mini,S,426
 S13,Ferida causada por mordedura,gpt-4o-mini,S,426
@@ -14615,7 +14605,6 @@ U90,proteinúria transitória,gpt-4o-mini,U,527
 U90,Albuminúria ortostática,gpt-4o-mini,U,527
 U90,proteinúria de origem postural,gpt-4o-mini,U,527
 U90,albuminúria postural,gpt-4o-mini,U,527
-U90,,icd10_description,U,527
 U90,albuminúria episódica,gpt-4o-mini,U,527
 U90,proteinúria postural,icpc2_inclusion,U,527
 U90,albuminúria sem doença renal,gpt-4o-mini,U,527
@@ -14789,7 +14778,6 @@ W05,Hiperêmese gravídica com distúrbio metabólico,icd10_description,W,534
 W05,Hiperêmese gravídica leve,icd10_description,W,534
 W05,hiperemese gravídica,icpc2_inclusion,W,534
 W05,Vómitos/náuseas na gravidez,icpc2_description,W,534
-W10,,icd10_description,W,535
 W10,pílula do dia seguinte,icpc2_inclusion,W,535
 W10,pílula pós-coital,gpt-4o-mini,W,535
 W10,contracepção após relação sexual,gpt-4o-mini,W,535
@@ -14848,7 +14836,6 @@ W12,contraceção de longa duração com DIU,gpt-4o-mini,W,537
 W12,planeamento familiar por meio de DIU,icpc2_inclusion,W,537
 W12,planeamento familiar com método intra-uterino,gpt-4o-mini,W,537
 W12,DIU como método de contracepção,gpt-4o-mini,W,537
-W12,,icd10_description,W,537
 W12,contracepção não hormonal com DIU,gpt-4o-mini,W,537
 W13,esterilização feminina por cirurgia ,gpt-4o-mini,W,538
 W13,opção de esterilização feminina,gpt-4o-mini,W,538
@@ -16938,7 +16925,6 @@ Y07,disfunção erétil orgânica,gpt-4o-mini,Y,629
 Y07,impotência de origem orgânica,icpc2_inclusion,Y,629
 Y07,Impotência NE,icpc2_description,Y,629
 Y07,disfunção erétil não especificada,gpt-4o-mini,Y,629
-Y07,,icd10_description,Y,629
 Y08,priapismo,icpc2_inclusion,Y,630
 Y08,Sintoma/queixa da função sexual masculina,icpc2_description,Y,630
 Y08,priapismo idiopático,gpt-4o-mini,Y,630

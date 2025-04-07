@@ -5,9 +5,12 @@ import wandb
 
 # import huggingface
 import os
-from dotenv import load_dotenv
+
+# from dotenv import load_dotenv
 import click
-from transformers import AutoModelForSequenceClassification, AutoTokenizer, pipeline
+from transformers import (
+    AutoModelForSequenceClassification,
+)  # , AutoTokenizer , pipeline
 import logging
 
 # import torch
@@ -26,8 +29,9 @@ from safetensors.torch import load_file
     required=False,
 )
 def push_model_from_wandb_to_hf(
-    #model="diogo-carapito/wandb-registry-model/text-to-icpc2:v4", hf_token=""
-    model="diogo-carapito/wandb-registry-model/text-to-icpc2:v4", hf_token=""
+    # model="diogo-carapito/wandb-registry-model/text-to-icpc2:v4", hf_token=""
+    model="diogo-carapito/wandb-registry-model/text-to-icpc2:v4",
+    hf_token="",
 ):
     # setting up logging
     logging.basicConfig(level=logging.INFO)
@@ -37,7 +41,6 @@ def push_model_from_wandb_to_hf(
     # load_dotenv()
     # wandb_api_key = os.getenv("WANDB_API_KEY")
     # wandb.login(key=wandb_api_key)
-    
 
     # download the model from wandb
     logging.info("Downloading model from W&B")
@@ -45,7 +48,9 @@ def push_model_from_wandb_to_hf(
     # artifact = run.use_artifact(model, type="model")
     # artifact_dir = artifact.download()
     run = wandb.init()
-    artifact = run.use_artifact('diogo-carapito/wandb-registry-model/text-to-icpc2:v4', type='model')
+    artifact = run.use_artifact(
+        "diogo-carapito/wandb-registry-model/text-to-icpc2:v4", type="model"
+    )
     artifact_dir = artifact.download()
 
     # load the model with pytorch
@@ -67,12 +72,12 @@ def push_model_from_wandb_to_hf(
     model.eval()
 
     # Load the tokenizer
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    # tokenizer = AutoTokenizer.from_pretrained(model_name)
 
     # Create a pipeline
-    text_classification_pipeline = pipeline(
-        "text-classification", model=model, tokenizer=tokenizer
-    )
+    # text_classification_pipeline = pipeline(
+    #     "text-classification", model=model, tokenizer=tokenizer
+    # )
 
     # save the model to hugging face
     logging.info("Saving model to Hugging Face")

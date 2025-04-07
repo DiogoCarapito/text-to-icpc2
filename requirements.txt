@@ -25,8 +25,13 @@ openpyxl==3.1.2
 # Machine learning libraries
 numpy==1.26.4
 scikit-learn
-transformers==4.44.2 # transformers version that works with cuda
-#transformers==4.44.0  # transformers version that works with apple silicon 'mps'
+ 
+# transformers version that works with cuda
+#transformers==4.44.2
+
+# transformers version that works with apple silicon 'mps'
+pyyaml>5.4.1
+transformers==4.44.0  
 
 # torch for cuda
 torch #==2.1.1+cu121 -f https://download.pytorch.org/whl/torch_stable.html
@@ -54,3 +59,6 @@ Jinja2
 sentencepiece
 txtai
 openai
+
+#paperspace ssh
+gradient

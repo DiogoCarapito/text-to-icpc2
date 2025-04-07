@@ -47,7 +47,7 @@ Demo available att [https://text-to-icpc2demo.streamlit.app](https://text-to-icp
 create and activate .venv
 
 ```bash
-python3.11 -m venv .venv
+python3.12 -m venv .venv &&
 source .venv/bin/activate
 ```
 
@@ -78,29 +78,25 @@ rm -rf *
 Clone git repo
 
 ```bash
-git clone https://github.com/DiogoCarapito/text-to-icpc2
-cd text-to-icpc2
+git clone https://github.com/DiogoCarapito/text-to-icpc2 && cd text-to-icpc2
 ```
 
 Create a virtual environment (python3.11)
 
 ```bash
-python3.11 -m venv .venv
-source .venv/bin/activate
+python3.11 -m venv .venv && source .venv/bin/activate
 ```
 
 install torch compatible with available gpu before make all
 
 ```bash
-pip uninstall -y torch torchvision torchaudio
-pip install torch==2.1.1+cu121 torchaudio==2.1.1+cu121 torchvision==0.16.1+cu121 -f https://download.pytorch.org/whl/torch_stable.html
+pip uninstall -y torch torchvision torchaudio && pip install torch==2.1.1+cu121 torchaudio==2.1.1+cu121 torchvision==0.16.1+cu121 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 
 manually upgrade blinker (it prevents errors)
 
 ```bash
-pip install --upgrade --ignore-installed blinker
-pip show blinker
+pip install --upgrade --ignore-installed blinker && pip show blinker
 ```
 
 install the rest of requirements.txt
@@ -135,4 +131,20 @@ Continuous NVIDIA monitor
 ```bash
 chmod +x train/monitor_gpu.sh
 ./monitor_gpu.sh
+```
+
+### paperspace single command
+
+```bash
+rm -rf * && \
+git clone https://github.com/DiogoCarapito/text-to-icpc2 && \
+cd text-to-icpc2 && \
+python3.11 -m venv .venv && \
+source .venv/bin/activate && \
+pip uninstall -y torch torchvision torchaudio && \
+pip install torch==2.1.1+cu121 torchaudio==2.1.1+cu121 torchvision==0.16.1+cu121 -f https://download.pytorch.org/whl/torch_stable.html && \
+pip install --upgrade --ignore-installed blinker && \
+pip show blinker && \
+make all && \
+python -c "import torch; print(torch.__version__)"
 ```
