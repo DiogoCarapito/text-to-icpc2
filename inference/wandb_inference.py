@@ -13,6 +13,8 @@ from safetensors.torch import load_file
 import pandas as pd
 import logging
 
+import click
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
@@ -59,10 +61,21 @@ def match_top_labels_to_codes_text(input_list, model_version, topk_labels, topk_
     return results
 
 
-# @click.command()
-# @click.option("--text_input", type=str, required=False, multiple=True, default=["Hipertensão arterial", "Diabetes Mellitus"])
-# @click.option("-k", type=int, required=False, default=5)
-# @click.option("--model_version", type=str, required=False, default="diogo-carapito/wandb-registry-model/text-to-icpc2:v4")
+@click.command()
+@click.option(
+    "--text_input",
+    type=str,
+    required=False,
+    multiple=True,
+    default=["Hipertensão arterial", "Diabetes Mellitus"],
+)
+@click.option("-k", type=int, required=False, default=5)
+@click.option(
+    "--model_version",
+    type=str,
+    required=False,
+    default="text-to-icpc2-bert-base-uncased:v3",
+)
 def wandb_inference(
     text_input=None,
     # text_input="Diabetes sem insulina",
@@ -149,14 +162,19 @@ def wandb_inference(
     results = match_top_labels_to_codes_text(
         list_inputs, model_version, topk_indices_list, top_values_list
     )
+    logging.info(results)
 
     logging.info("Inference finished successfully!")
 
     return results
 
 
-if "__main__" == __name__:
+def main():
     wandb_inference()
+
+
+if "__main__" == __name__:
+    main()
 
     # class ModelInference:
     #     def __init__(self, model_dir):
