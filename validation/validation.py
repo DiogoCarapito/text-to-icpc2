@@ -60,6 +60,8 @@ def match_top_labels_to_codes_text(input_list, topk_labels, topk_values):
             [df_results, pd.DataFrame([row_data])], ignore_index=True
         )
 
+        df_results.drop(columns=["input"], inplace=True)
+
     # # lets organize the top 5 result in a list of the 5 results, each eas a dictionary with label, code, text, and value given by the model)
     # results = []
     # for input_text, label_list, value_list in zip(input_list, topk_labels, topk_values):
@@ -96,6 +98,17 @@ def inference(
     model_version="text-to-icpc2-bert-base-uncased:v3",
 ):
     logging.info("Starting Running inference")
+
+    # Check if GPU is available
+    if torch.cuda.is_available():
+        device = torch.device("cuda")
+        logging.info("Using GPU for inference")
+    elif torch.backends.mps.is_available():
+        device = torch.device("mps")
+        logging.info("Using MPS for inference")
+    else:
+        device = torch.device("cpu")
+        logging.info("Using CPU for inference")
 
     if text_input is None:
         text_input = ["Hipertensão arterial", "Diabetes Mellitus"]
@@ -155,6 +168,9 @@ def inference(
     # Load the state dictionary into the model
     model.load_state_dict(state_dict)
 
+    # Move the model to the appropriate device
+    model = model.to(device)
+
     logging.info("Set the model to evaluation mode")
     # Set the model to evaluation mode
     model.eval()
@@ -163,25 +179,58 @@ def inference(
     # Load the tokenizer
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-    # Prepare input data
-    inputs = tokenizer(list_inputs, return_tensors="pt", padding=True, truncation=True)
+    # Prepare for batching
+    results = pd.DataFrame()
+    batch_size = 500
+    for i in range(0, len(list_inputs), batch_size):
+        batch_inputs = list_inputs[i : i + batch_size]
 
-    logging.info("Performing inference")
-    # Perform inference
-    with torch.no_grad():
-        outputs = model(**inputs)
-        probabilities = torch.nn.functional.softmax(outputs.logits, dim=-1)
-        topk_values, topk_indices = torch.topk(probabilities, k=k, dim=-1)
+        # Tokenize the batch
+        inputs = tokenizer(
+            batch_inputs, return_tensors="pt", padding=True, truncation=True
+        )
 
-    # convert tensors to a lists of lists (1st order of lists is each input and 2nd order is each is the listo of the top5 results for that input)
-    topk_indices_list = topk_indices.squeeze().tolist()
-    top_values_list = topk_values.squeeze().tolist()
+        # Move input tensors to the same device as the model
+        inputs = {key: value.to(device) for key, value in inputs.items()}
 
-    logging.info("Matching the top labels to the codes and text")
+        logging.info(f"Performing inference on batch {i // batch_size + 1}")
+        with torch.no_grad():
+            outputs = model(**inputs)
+            probabilities = torch.nn.functional.softmax(outputs.logits, dim=-1)
+            topk_values, topk_indices = torch.topk(probabilities, k=k, dim=-1)
+
+        # Convert tensors to lists
+        topk_indices_list = topk_indices.cpu().tolist()
+        top_values_list = topk_values.cpu().tolist()
+
+        # Append batch results
+        batch_results = match_top_labels_to_codes_text(
+            batch_inputs, topk_indices_list, top_values_list
+        )
+        results = pd.concat([results, batch_results], ignore_index=True)
+
+    # # Prepare input data
+    # inputs = tokenizer(list_inputs, return_tensors="pt", padding=True, truncation=True)
+
+    # # Move input tensors to the same device as the model
+    # inputs = {key: value.to(device) for key, value in inputs.items()}
+
+    # logging.info("Performing inference")
+    # # Perform inference
+    # with torch.no_grad():
+    #     outputs = model(**inputs)
+    #     probabilities = torch.nn.functional.softmax(outputs.logits, dim=-1)
+    #     topk_values, topk_indices = torch.topk(probabilities, k=k, dim=-1)
+
+    # # convert tensors to a lists of lists (1st order of lists is each input and 2nd order is each is the listo of the top5 results for that input)
+    # topk_indices_list = topk_indices.squeeze().tolist()
+    # top_values_list = topk_values.squeeze().tolist()
+
+    # logging.info("Matching the top labels to the codes and text")
     # transform those lists into results
-    results = match_top_labels_to_codes_text(
-        list_inputs, topk_indices_list, top_values_list
-    )
+    # results = match_top_labels_to_codes_text(
+    #     list_inputs, topk_indices_list, top_values_list
+    # )
 
     logging.info("Inference finished successfully!")
 
@@ -197,16 +246,14 @@ def validation(
     # dataset = load_dataset("diogocarapito/text-to-icpc2-nano")
 
     df_dataset = pd.DataFrame(dataset["train"])
-    print(df_dataset.head())
-    
-    df_dataset = df_dataset[df_dataset["chapter"]== "A"]
+
+    # df_dataset = df_dataset[df_dataset["chapter"] == "A"]
+    # df_dataset = df_dataset[df_dataset["code"] == "A25"]
 
     logging.info("Performing validation")
 
     results = inference(df_dataset["text"], model_version=model_version)
-    #results = inference(None, model_version=model_version)
-
-    print(results)
+    # results = inference(None, model_version=model_version)
 
     final_results = pd.merge(
         df_dataset,
@@ -246,7 +293,9 @@ def validation(
 
         df.to_csv(folder_name + "/metrics.csv", index=False)
 
-        logging.info(f"Validation metrics saved to {folder_name}")
+        final_results.to_csv(folder_name + "/results.csv", index=False)
+
+        logging.info(f"Validation metrics and results have been saved to {folder_name}")
 
 
 @click.command()
@@ -256,7 +305,13 @@ def validation(
     required=False,
     default="text-to-icpc2-bert-base-uncased:v3",
 )
-@click.option("--save", type=bool, required=False, default=False)
+@click.option(
+    "-s",
+    "--save",
+    is_flag=True,  # Makes this a boolean flag
+    default=False,  # Default is False
+    help="Save the validation results and metrics if this flag is passed.",
+)
 def main(model_version="text-to-icpc2-bert-base-uncased:v3", save=True):
     validation(
         model_version=model_version,
