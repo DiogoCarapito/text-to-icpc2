@@ -60,8 +60,6 @@ def match_top_labels_to_codes_text(input_list, topk_labels, topk_values):
             [df_results, pd.DataFrame([row_data])], ignore_index=True
         )
 
-        df_results.drop(columns=["input"], inplace=True)
-
     # # lets organize the top 5 result in a list of the 5 results, each eas a dictionary with label, code, text, and value given by the model)
     # results = []
     # for input_text, label_list, value_list in zip(input_list, topk_labels, topk_values):
@@ -262,6 +260,8 @@ def validation(
         right_on="input",
         how="left",
     )
+
+    final_results.drop(columns=["input"], inplace=True)
 
     print(final_results)
 
