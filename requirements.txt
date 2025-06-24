@@ -13,7 +13,7 @@ pyperclip==1.8.2
 blinker==1.8.2
 
 # Visualization libraries
-streamlit==1.37.0
+streamlit==1.45
 watchdog==4.0.0
 plotly
 

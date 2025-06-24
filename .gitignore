@@ -176,3 +176,6 @@ wandb/
 artifacts/
 text-to-icpc2_distilbert-base-uncased_pipeline/
 logs/
+
+y
+y.pub

@@ -163,12 +163,22 @@ def main(size="small", model="bert-base-uncased", dev="cuda", hf=False):
 
     # Load the model
     logging.info("Loading the model")
+    # model = AutoModelForSequenceClassification.from_pretrained(
+    #     model_name,
+    #     num_labels=number_of_labels,
+    #     id2label=id2label,
+    #     label2id=lable2id,
+    #     ignore_mismatched_sizes=True,  # warning supression: Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight'])
+    # )
+
+    # When loading the model, change the problem_type to 'multi_label_classification'
     model = AutoModelForSequenceClassification.from_pretrained(
         model_name,
         num_labels=number_of_labels,
         id2label=id2label,
         label2id=lable2id,
-        ignore_mismatched_sizes=True,  # warning supression: Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight'])
+        problem_type="multi_label_classification",  # Add this line
+        ignore_mismatched_sizes=True,
     )
 
     # Define the target optimization metric
@@ -191,77 +201,143 @@ def main(size="small", model="bert-base-uncased", dev="cuda", hf=False):
     #         predictions=predictions,
     #         references=labels,  # accuracy
     #     )
-    
 
     # Load your desired metrics.
     # For multi-label, you'll typically want f1, precision, and recall,
     # and potentially accuracy (exact match accuracy).
     # 'macro' average is often preferred for imbalanced datasets,
     # or 'weighted' if you want to account for support.
-    f1_metric = evaluate.load("f1")
-    precision_metric = evaluate.load("precision")
-    recall_metric = evaluate.load("recall")
-    accuracy_metric = evaluate.load("accuracy") # For exact match accuracy
+    # f1_metric = evaluate.load("f1")
+    # precision_metric = evaluate.load("precision")
+    # recall_metric = evaluate.load("recall")
+    # accuracy_metric = evaluate.load("accuracy") # For exact match accuracy
 
+    # def compute_metrics(eval_pred):
+    #     logits, labels = eval_pred # logits are the raw outputs from the model
+
+    #     # 1. Apply Sigmoid to convert logits to probabilities
+    #     #    Hugging Face models often return logits directly.
+    #     #    You'll need to use a sigmoid function.
+    #     #    For numpy, you can define it:
+    #     def sigmoid(x):
+    #         return 1 / (1 + np.exp(-x))
+
+    #     probabilities = sigmoid(logits)
+
+    #     # 2. Apply a threshold to get binary predictions
+    #     #    0.5 is a common starting point, but you might want to tune this.
+    #     #    For your case, where "multiple labels can be compatible," this is crucial.
+    #     threshold = 0.5
+    #     predictions = (probabilities >= threshold).astype(int) # Convert boolean to 0/1 integers
+
+    #     # Ensure labels are also integers (they usually are, but good to be sure)
+    #     labels = labels.astype(int)
+
+    #     # 3. Compute metrics
+    #     #    For multi-label, metrics like F1, precision, recall require
+    #     #    specifying the 'average' parameter. 'macro' or 'weighted' are common.
+    #     #    'micro' is also an option.
+
+    #     metrics = {}
+
+    #     # F1 Score
+    #     # 'macro' F1: Calculate F1 for each label, then average (unweighted). Good for imbalance.
+    #     metrics.update(f1_metric.compute(predictions=predictions, references=labels, average="macro"))
+    #     metrics['f1_macro'] = metrics.pop('f1') # Rename for clarity if needed
+
+    #     # 'weighted' F1: Calculate F1 for each label, then average weighted by support.
+    #     metrics.update(f1_metric.compute(predictions=predictions, references=labels, average="weighted"))
+    #     metrics['f1_weighted'] = metrics.pop('f1')
+
+    #     # Precision
+    #     metrics.update(precision_metric.compute(predictions=predictions, references=labels, average="macro"))
+    #     metrics['precision_macro'] = metrics.pop('precision')
+
+    #     metrics.update(precision_metric.compute(predictions=predictions, references=labels, average="weighted"))
+    #     metrics['precision_weighted'] = metrics.pop('precision')
+
+    #     # Recall
+    #     metrics.update(recall_metric.compute(predictions=predictions, references=labels, average="macro"))
+    #     metrics['recall_macro'] = metrics.pop('recall')
+
+    #     metrics.update(recall_metric.compute(predictions=predictions, references=labels, average="weighted"))
+    #     metrics['recall_weighted'] = metrics.pop('recall')
+
+    #     # Exact Match Accuracy (Subset Accuracy)
+    #     # This is often very low for multi-label, but useful to track how often
+    #     # *all* predicted labels match *all* true labels exactly.
+    #     metrics.update(accuracy_metric.compute(predictions=predictions, references=labels))
+    #     metrics['exact_match_accuracy'] = metrics.pop('accuracy')
+
+    #     return metrics
+
+    # Then modify the compute_metrics function to handle multi-label classification
     def compute_metrics(eval_pred):
-        logits, labels = eval_pred # logits are the raw outputs from the model
-        
-        # 1. Apply Sigmoid to convert logits to probabilities
-        #    Hugging Face models often return logits directly.
-        #    You'll need to use a sigmoid function.
-        #    For numpy, you can define it:
-        def sigmoid(x):
-            return 1 / (1 + np.exp(-x))
-        
-        probabilities = sigmoid(logits)
-        
-        # 2. Apply a threshold to get binary predictions
-        #    0.5 is a common starting point, but you might want to tune this.
-        #    For your case, where "multiple labels can be compatible," this is crucial.
-        threshold = 0.5 
-        predictions = (probabilities >= threshold).astype(int) # Convert boolean to 0/1 integers
+        logits, labels = eval_pred
 
-        # Ensure labels are also integers (they usually are, but good to be sure)
-        labels = labels.astype(int)
+        # Convert single-label integer references to one-hot encoded format
+        # This is necessary because your references are integers (single-label format)
+        # but we need them in multi-label format for comparison
+        num_labels = logits.shape[1]
+        labels_one_hot = np.zeros((labels.shape[0], num_labels))
+        for i, label in enumerate(labels):
+            labels_one_hot[i, label] = 1
 
-        # 3. Compute metrics
-        #    For multi-label, metrics like F1, precision, recall require
-        #    specifying the 'average' parameter. 'macro' or 'weighted' are common.
-        #    'micro' is also an option.
-        
+        # Apply sigmoid to convert logits to probabilities
+        sigmoid = lambda x: 1 / (1 + np.exp(-x))
+        probs = sigmoid(logits)
+
+        # Apply threshold to get binary predictions
+        threshold = 0.5
+        predictions = (probs >= threshold).astype(int)
+
+        # Calculate metrics using the one-hot encoded labels
         metrics = {}
-        
-        # F1 Score
-        # 'macro' F1: Calculate F1 for each label, then average (unweighted). Good for imbalance.
-        metrics.update(f1_metric.compute(predictions=predictions, references=labels, average="macro"))
-        metrics['f1_macro'] = metrics.pop('f1') # Rename for clarity if needed
 
-        # 'weighted' F1: Calculate F1 for each label, then average weighted by support.
-        metrics.update(f1_metric.compute(predictions=predictions, references=labels, average="weighted"))
-        metrics['f1_weighted'] = metrics.pop('f1')
+        # Load metrics
+        f1_metric = evaluate.load("f1")
+        precision_metric = evaluate.load("precision")
+        recall_metric = evaluate.load("recall")
+        # accuracy_metric = evaluate.load("accuracy")
+
+        # For multi-label metrics, we need to flatten the arrays
+        # This treats each label prediction as a separate binary classification
+        predictions_flat = predictions.flatten()
+        labels_flat = labels_one_hot.flatten()
+
+        # F1 Score
+        metrics.update(
+            f1_metric.compute(
+                predictions=predictions_flat, references=labels_flat, average="binary"
+            )
+        )
+        metrics["f1_binary"] = metrics.pop("f1")
 
         # Precision
-        metrics.update(precision_metric.compute(predictions=predictions, references=labels, average="macro"))
-        metrics['precision_macro'] = metrics.pop('precision')
-        
-        metrics.update(precision_metric.compute(predictions=predictions, references=labels, average="weighted"))
-        metrics['precision_weighted'] = metrics.pop('precision')
+        metrics.update(
+            precision_metric.compute(
+                predictions=predictions_flat, references=labels_flat, average="binary"
+            )
+        )
+        metrics["precision_binary"] = metrics.pop("precision")
 
         # Recall
-        metrics.update(recall_metric.compute(predictions=predictions, references=labels, average="macro"))
-        metrics['recall_macro'] = metrics.pop('recall')
+        metrics.update(
+            recall_metric.compute(
+                predictions=predictions_flat, references=labels_flat, average="binary"
+            )
+        )
+        metrics["recall_binary"] = metrics.pop("recall")
 
-        metrics.update(recall_metric.compute(predictions=predictions, references=labels, average="weighted"))
-        metrics['recall_weighted'] = metrics.pop('recall')
-        
-        # Exact Match Accuracy (Subset Accuracy)
-        # This is often very low for multi-label, but useful to track how often
-        # *all* predicted labels match *all* true labels exactly.
-        metrics.update(accuracy_metric.compute(predictions=predictions, references=labels))
-        metrics['exact_match_accuracy'] = metrics.pop('accuracy')
+        # Exact match accuracy (all labels must match exactly)
+        exact_match = np.all(predictions == labels_one_hot, axis=1).mean()
+        metrics["exact_match_accuracy"] = exact_match
+
+        # Subset accuracy (from sklearn.metrics import accuracy_score)
+        # This is the same as exact match for multi-label
+        metrics["subset_accuracy"] = exact_match
 
         return metrics
-    
 
     logging.info("Setting up the training output directory")
     # if t == "full" and hf:

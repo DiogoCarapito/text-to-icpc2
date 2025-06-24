@@ -38,7 +38,6 @@ A02,tremedeira,gpt-4o-mini,A,1
 A02,sensação de arrepio,gpt-4o-mini,A,1
 A02,tremores involuntários,gpt-4o-mini,A,1
 A02,Arrepios,icpc2_description,A,1
-A02,calafrios,icpc2_inclusion,A,1
 A02,resposta ao frio,gpt-4o-mini,A,1
 A02,tremores,icpc2_inclusion,A,1
 A02,Outros sintomas e sinais gerais,icd10_description,A,1
@@ -75,7 +74,6 @@ A05,sensação de fraqueza física,gpt-4o-mini,A,4
 A05,falta de energia,gpt-4o-mini,A,4
 A05,sensação de doença,gpt-4o-mini,A,4
 A05,fadiga crónica,gpt-4o-mini,A,4
-A05,letargia,gpt-4o-mini,A,4
 A05,Fadiga,human-dc,A,4
 A05,desconforto,gpt-4o-mini,A,4
 A05,falta de disposição,gpt-4o-mini,A,4
@@ -86,7 +84,6 @@ A05,cansaço,gpt-4o-mini,A,4
 A05,indisposição,gpt-4o-mini,A,4
 A05,mal-estar geral,gpt-4o-mini,A,4
 A05,mal-estar,icpc2_inclusion,A,4
-A05,"Mal estar, fadiga",icd10_description,A,4
 A05,desconforto físico,gpt-4o-mini,A,4
 A05,fraqueza,gpt-4o-mini,A,4
 A05,debilidade,gpt-4o-mini,A,4
@@ -115,7 +112,6 @@ A06,síncope transitória,gpt-4o-mini,A,5
 A06,perda de consciência temporária,gpt-4o-mini,A,5
 A06,síncope reflexa,gpt-4o-mini,A,5
 A06,Desmaio/síncope,icpc2_description,A,5
-A06,crise vasovagal,icpc2_inclusion,A,5
 A07,letargia profunda,gpt-4o-mini,A,6
 A07,estado de prostração,gpt-4o-mini,A,6
 A07,Sonolência,icd10_description,A,6
@@ -125,7 +121,6 @@ A07,Estupor,icd10_description,A,6
 A07,estupor,icpc2_inclusion,A,6
 A07,estado de inércia,gpt-4o-mini,A,6
 A07,estado de letargia,gpt-4o-mini,A,6
-A07,Coma,icpc2_description,A,6
 A07,Estado de inconsciência,gpt-4o-mini,A,6
 A07,estado de inatividade,gpt-4o-mini,A,6
 A07,coma profundo,gpt-4o-mini,A,6
@@ -143,7 +138,6 @@ A08,aumento de massa,gpt-4o-mini,A,7
 A08,inchaço periférico,gpt-4o-mini,A,7
 A08,alto,icpc2_inclusion,A,7
 A08,massa NE,icpc2_inclusion,A,7
-A08,Outros sintomas e sinais gerais,icd10_description,A,7
 A08,edema tecidual,gpt-4o-mini,A,7
 A08,inchaço abdominal,gpt-4o-mini,A,7
 A08,inchaço dos joelhos,gpt-4o-mini,A,7
@@ -418,7 +412,6 @@ A23,Vacinacão não realizada por razao não especificada,icd10_description,A,16
 A23,"Contacto com e exposição (suspeita) a pediculose [piolhos], acaríase [ácaros] e outras infestações",icd10_description,A,16
 A25,Fobia da morte,gpt-4o-mini,A,17
 A25,Medo de morrer/da morte,icpc2_short,A,17
-A25,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,A,17
 A25,Apreensão sobre a morte,gpt-4o-mini,A,17
 A25,Receio de morrer,gpt-4o-mini,A,17
 A25,Medo de falecer,gpt-4o-mini,A,17
@@ -444,7 +437,6 @@ A26,medo de neoplasias,gpt-4o-mini,A,18
 A26,temor de cancro não especificado,gpt-4o-mini,A,18
 A26,receio de doenças oncológicas,gpt-4o-mini,A,18
 A26,apreensão sobre a saúde em relação ao cancro,gpt-4o-mini,A,18
-A26,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,A,18
 A26,medo de cancro não diagnosticado,gpt-4o-mini,A,18
 A26,temor de ter cancro,gpt-4o-mini,A,18
 A26,fobia de cancro,gpt-4o-mini,A,18
@@ -452,7 +444,6 @@ A26,Medo de cancro NE,icpc2_short,A,18
 A26,temor de doenças oncológicas,gpt-4o-mini,A,18
 A26,receio de doenças cancerígenas,gpt-4o-mini,A,18
 A27,Medo de condições médicas,gpt-4o-mini,A,19
-A27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,A,19
 A27,Preocupação com diagnósticos não confirmados,gpt-4o-mini,A,19
 A27,Medo de enfermidades não diagnosticadas,gpt-4o-mini,A,19
 A27,Medo de enfermidades,gpt-4o-mini,A,19
@@ -488,7 +479,6 @@ A29,sinais e sintomas adicionais,gpt-4o-mini,A,21
 A29,sintomas não específicos,gpt-4o-mini,A,21
 A29,Sintoma/queixa geral outro,icpc2_description,A,21
 A29,sinais gerais de desconforto,gpt-4o-mini,A,21
-A29,Outros sintomas e sinais gerais,icd10_description,A,21
 A70,Sequelas de tuberculose de outros órgãos,icd10_description,A,22
 A70,Sequelas de tuberculose respiratória e tuberculose não especificada,icd10_description,A,22
 A70,Tuberculose,icpc2_description,A,22
@@ -1072,14 +1062,12 @@ A80,Outra lesão de região não especificada do corpo,icd10_description,A,32
 A80,"Lesão, sem outra especificação",icd10_description,A,32
 A80,Queimadura de outros órgãos internos e de órgão internos não especificados,icd10_description,A,32
 A80,Corrosões de outros órgãos internos e de órgãos internos não especificados,icd10_description,A,32
-A81,"Lesão, sem outra especificação, do abdómen, região lombar, pélvis e órgãos genitais externos",icd10_description,A,33
 A81,ferimentos internos múltiplos NE,icpc2_inclusion,A,33
 A81,Traumatismos/ferimentos múltiplos,icpc2_description,A,33
 A81,Lesão por esmagamento da laringe e traqueia,icd10_description,A,33
 A81,Lesão por esmagamento de outras partes especificadas do pescoço,icd10_description,A,33
 A81,"Lesão por esmagamento do pescoço, parte não especificada",icd10_description,A,33
 A81,Outras lesões especificadas do pescoço,icd10_description,A,33
-A81,"Outras lesões especificadas do abdómen, região lombar, pélvis e órgãos genitais externos",icd10_description,A,33
 A81,Esmagamento do tórax,icd10_description,A,33
 A81,"Lesão, sem outra especificação, do pescoço",icd10_description,A,33
 A81,Lesão de músculo e de tendão ao nível tóracico,icd10_description,A,33
@@ -1088,7 +1076,6 @@ A81,"Lesão, sem outra especificação, do tórax",icd10_description,A,33
 A81,Lesão de outros órgãos intra-abdominais,icd10_description,A,33
 A81,Lesão de outros órgãos urinários e pélvicos,icd10_description,A,33
 A81,"Lesões múltiplas, sem outra especificação",icd10_description,A,33
-A81,"Lesão do músculo, fáscia e tendão do abdómen, região lombar e pélvis",icd10_description,A,33
 A81,"Amputação traumática (parcial) de parte do tórax, excluindo mama",icd10_description,A,33
 A82,Embolia gasosa (traumática),icd10_description,A,34
 A82,Embolia gorda (traumática),icd10_description,A,34
@@ -1338,7 +1325,6 @@ A86,Efeito tóxico de outros álcoois,icd10_description,A,37
 A86,"Efeito tóxico de álcool, sem outra especificação",icd10_description,A,37
 A86,Efeitos tóxicos de produtos do petróleo,icd10_description,A,37
 A86,"Efeito tóxico do zinco e seus compostos, não determinado, admissão subsequente",icd10_description,A,37
-A86,Anemia sideroblástica secundária ao uso de drogas e a toxinas,icd10_description,A,37
 A86,Efeitos tóxicos de homólogos do benzeno,icd10_description,A,37
 A86,Efeitos tóxicos de glicóis,icd10_description,A,37
 A86,Efeitos tóxicos de cetonas,icd10_description,A,37
@@ -1990,7 +1976,6 @@ A94,Hipotonia congénita,icd10_description,A,45
 A94,Hipertonia congénita,icd10_description,A,45
 A94,Miastenia grave neonatal transitória,icd10_description,A,45
 A94,"Problema de alimentação do recém-nascido, não especificado",icd10_description,A,45
-A94,Reações e intoxicações devidas a drogas administradas ao feto e ao recém-nascido,icd10_description,A,45
 A94,Outros problemas de alimentação do recém-nascido,icd10_description,A,45
 A94,Dificuldade neonatal na amamentação no peito,icd10_description,A,45
 A94,Outras patologias do tónus muscular do recém-nascido,icd10_description,A,45
@@ -2358,7 +2343,6 @@ A99,Episódio para supervisão de saúde e assistência a crianças saudáveis,i
 A99,Portador de infeçõescom modo de transmissão predominantemente sexual,icd10_description,A,50
 A99,Supervisão do estado de saúde de criança abandonada,icd10_description,A,50
 A99,Aconselhamento não especificado,icd10_description,A,50
-A99,Admissão para aconselhamento especificado NCOP,icd10_description,A,50
 A99,Admissão para aconselhamento sobre vírus da imunodeficiência humana [VIH],icd10_description,A,50
 A99,Aconselhamento por abuso de tabaco,icd10_description,A,50
 A99,Neoplasia benigna de outros órgãos intratorácicos especificados,icd10_description,A,50
@@ -2435,7 +2419,6 @@ B02,Gânglios linfáticos com alteração,gpt-4o-mini,B,51
 B02,Gânglio linfático aumentado/doloroso,icpc2_short,B,51
 B02,Gânglios linfáticos inflamados,gpt-4o-mini,B,51
 B02,Gânglio(s) linfático(s) aumentado(s) de volume/doloroso(s),icpc2_description,B,51
-B04,Outros sintomas e sinais gerais,icd10_description,B,52
 B04,sinais gerais de mal-estar,gpt-4o-mini,B,52
 B04,sinais de anomalias hematológicas,gpt-4o-mini,B,52
 B04,queixas de alterações no sangue,gpt-4o-mini,B,52
@@ -2452,7 +2435,6 @@ B04,Sintoma/queixa do sangue,icpc2_description,B,52
 B04,alterações no sangue,gpt-4o-mini,B,52
 B25,Temor de contrair SIDA,gpt-4o-mini,B,53
 B25,Receio de infecção por HIV,gpt-4o-mini,B,53
-B25,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,B,53
 B25,Ansiedade sobre a infecção por HIV,gpt-4o-mini,B,53
 B25,Medo de contágio sexual por HIV,gpt-4o-mini,B,53
 B25,Medo de SIDA/VIH,icpc2_description,B,53
@@ -2488,7 +2470,6 @@ B26,Receio de cancro hematológico,gpt-4o-mini,B,54
 B26,Receio de neoplasias do sistema linfático,gpt-4o-mini,B,54
 B26,Medo de linfoma não diagnosticado,gpt-4o-mini,B,54
 B26,Preocupação com a possibilidade de cancro do sangue,gpt-4o-mini,B,54
-B26,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,B,54
 B26,Medo de cancro não especificado do sangue,gpt-4o-mini,B,54
 B26,Temor de doenças oncológicas do sangue,gpt-4o-mini,B,54
 B26,Temor de linfoma,gpt-4o-mini,B,54
@@ -2505,10 +2486,8 @@ B27,Receio de doenças hematológicas,gpt-4o-mini,B,55
 B27,Medo de patologias hematológicas,gpt-4o-mini,B,55
 B27,Temor de doenças relacionadas ao sangue,gpt-4o-mini,B,55
 B27,Temor de doenças do sistema linfático,gpt-4o-mini,B,55
-B27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,B,55
 B27,Medo de doenças hematológicas não diagnosticadas,gpt-4o-mini,B,55
 B27,Temor de distúrbios hematológicos,gpt-4o-mini,B,55
-B28,Limites impostos às atividades por invalidez,icd10_description,B,56
 B28,incapacidade devido a distúrbios sanguíneos,gpt-4o-mini,B,56
 B28,Limitação funcional por doenças hematológicas,gpt-4o-mini,B,56
 B28,dificuldades funcionais por anomalias sanguíneas,gpt-4o-mini,B,56
@@ -2529,7 +2508,6 @@ B28,limitação de função devido a problemas linfáticos,gpt-4o-mini,B,56
 B28,Limitação funcional/incapacidade (B),icpc2_description,B,56
 B29,Sintoma/queixa linfática/de mecanismo imunológico outro,icpc2_description,B,57
 B29,Sinto/queixa linfát/mecan imun outro,icpc2_short,B,57
-B29,Outros sintomas e sinais gerais,icd10_description,B,57
 B29,Sintomas de comprometimento imunológico,gpt-4o-mini,B,57
 B29,Sinais de disfunção imunológica,gpt-4o-mini,B,57
 B29,Sinais de alteração linfática,gpt-4o-mini,B,57
@@ -2706,14 +2684,10 @@ B76,Rutura do baço em contexto traumático,gpt-4o-mini,B,64
 B76,NE do baço,gpt-4o-mini,B,64
 B77,Lesão do sistema de defesa,gpt-4o-mini,B,65
 B77,Lesão do sistema de filtragem sanguínea,gpt-4o-mini,B,65
-B77,Lesão esplénica,gpt-4o-mini,B,65
 B77,Lesão hematológica,gpt-4o-mini,B,65
-B77,Lesão do baço,gpt-4o-mini,B,65
 B77,Alteração do sangue,gpt-4o-mini,B,65
-B77,"Lesão, sem outra especificação",icd10_description,B,65
 B77,Alteração da linfa,gpt-4o-mini,B,65
 B77,Problema no baço,gpt-4o-mini,B,65
-B77,Lesão do baço não especificada,gpt-4o-mini,B,65
 B77,Anomalia hematológica,gpt-4o-mini,B,65
 B77,Lesão do baço sem especificação,gpt-4o-mini,B,65
 B77,Lesão do sistema linfático,gpt-4o-mini,B,65
@@ -3084,7 +3058,6 @@ D03,azia gástrica,gpt-4o-mini,D,78
 D03,Azia,icd10_description,D,78
 D03,desconforto após refeições,gpt-4o-mini,D,78
 D03,ardor após a refeição,gpt-4o-mini,D,78
-D03,Azia,icpc2_description,D,78
 D03,ardor estomacal,gpt-4o-mini,D,78
 D03,síndrome de azia,gpt-4o-mini,D,78
 D03,pirose,icpc2_inclusion,D,78
@@ -3148,9 +3121,6 @@ D06,dor no abdómen lateral,gpt-4o-mini,D,81
 D06,dor no abdómen inferior direito,gpt-4o-mini,D,81
 D06,dor no hipogástrio,gpt-4o-mini,D,81
 D06,dor abdominal inferior,gpt-4o-mini,D,81
-D06,Dor localizada em outras partes do abdómen inferior,icd10_description,D,81
-D06,Dor pélvica e perineal,icd10_description,D,81
-D06,Dor localizada no abdómen superior,icd10_description,D,81
 D06,dor do cólon,icpc2_inclusion,D,81
 D07,Má digestão,gpt-4o-mini,D,82
 D07,Dispepsia funcional,icd10_description,D,82
@@ -3190,9 +3160,7 @@ D08,estômago inchado,icpc2_inclusion,D,83
 D08,eructação frequente,gpt-4o-mini,D,83
 D08,gases e inchaço,gpt-4o-mini,D,83
 D08,eructação e flatulência,gpt-4o-mini,D,83
-D08,desconforto abdominal,gpt-4o-mini,D,83
 D08,produção de gases,gpt-4o-mini,D,83
-D08,inchaço abdominal,gpt-4o-mini,D,83
 D08,Flatulência/gases/eructação,icpc2_description,D,83
 D08,distensão intestinal,gpt-4o-mini,D,83
 D08,flatulência e sintomas associados,gpt-4o-mini,D,83
@@ -3237,7 +3205,6 @@ D10,vômito crónico,gpt-4o-mini,D,85
 D10,refluxo,gpt-4o-mini,D,85
 D10,hiperemese,icpc2_inclusion,D,85
 D10,esforço de vómito,icpc2_inclusion,D,85
-D10,Náusea e vómitos,icd10_description,D,85
 D10,Vómitos,icpc2_short,D,85
 D10,emese,icpc2_inclusion,D,85
 D11,diarreia severa,gpt-4o-mini,D,86
@@ -3269,7 +3236,6 @@ D11,diarreia de origem desconhecida,gpt-4o-mini,D,86
 D12,dificuldade em eliminar fezes,gpt-4o-mini,D,87
 D12,Obstipação,icd10_description,D,87
 D12,"Oclusão intestinal por empactação, não classificada em outra parte",icd10_description,D,87
-D12,distúrbio de evacuação,gpt-4o-mini,D,87
 D12,impactação fecal,icpc2_inclusion,D,87
 D12,intestino preso,gpt-4o-mini,D,87
 D12,dificuldade em evacuar,gpt-4o-mini,D,87
@@ -3283,7 +3249,6 @@ D12,evacuação difícil,gpt-4o-mini,D,87
 D12,retenção fecal,gpt-4o-mini,D,87
 D12,dificuldade de evacuação,gpt-4o-mini,D,87
 D12,obstrução intestinal,gpt-4o-mini,D,87
-D12,Obstipação,icpc2_description,D,87
 D13,icterícia crónica,gpt-4o-mini,D,88
 D13,icterícia em adultos,gpt-4o-mini,D,88
 D13,icterícia por doenças genéticas,gpt-4o-mini,D,88
@@ -3474,7 +3439,6 @@ D23,Hepatomegalia aguda,gpt-4o-mini,D,97
 D23,Hepatomegalia com esplenomegalia,gpt-4o-mini,D,97
 D23,Fígado aumentado,gpt-4o-mini,D,97
 D23,Hepatomegalia não especificada,gpt-4o-mini,D,97
-D23,"Hepatomegalia com esplenomegalia, não classificada noutra parte",icd10_description,D,97
 D23,Hepatomegalia com outras condições,gpt-4o-mini,D,97
 D23,Hepatomegalia e insuficiência hepática,gpt-4o-mini_human-dc,D,97
 D23,"Hepatomegalia, não classificada noutra parte",icd10_description,D,97
@@ -3485,7 +3449,6 @@ D23,Hepatomegalia e distúrbios hematológicos,gpt-4o-mini,D,97
 D23,Hepatomegalia severa,gpt-4o-mini,D,97
 D24,protuberância no abdómen,gpt-4o-mini,D,98
 D24,alto no abdómen,icpc2_inclusion,D,98
-D24,distensão abdominal,gpt-4o-mini,D,98
 D24,anomalia na cavidade abdominal,gpt-4o-mini,D,98
 D24,protuberância abdominal não especificada,gpt-4o-mini,D,98
 D24,aumento abdominal,gpt-4o-mini,D,98
@@ -3509,13 +3472,11 @@ D25,abdómen inchado sem massa,icpc2_inclusion,D,99
 D25,abdómen distendido,gpt-4o-mini,D,99
 D25,aumento do volume abdominal,gpt-4o-mini,D,99
 D25,abdómen volumoso,gpt-4o-mini,D,99
-D25,"Edema, massa ou protuberância abdominal e pélvica",icd10_description,D,99
 D25,distensão do abdómen,gpt-4o-mini,D,99
 D25,inchaço do abdómen,gpt-4o-mini,D,99
 D25,Distensão abdominal,icpc2_description,D,99
 D25,aumento do abdómen,gpt-4o-mini,D,99
 D25,abdómen com aumento de volume,gpt-4o-mini,D,99
-D25,Inchaço abdominal,gpt-4o-mini,D,99
 D25,abdómen com distensão,gpt-4o-mini,D,99
 D26,Receio de problemas malignos no sistema digestivo,gpt-4o-mini,D,100
 D26,Insegurança sobre cancro digestivo,gpt-4o-mini_human-dc,D,100
@@ -3536,7 +3497,6 @@ D26,Preocupação com a possibilidade de cancro digestivo,gpt-4o-mini_human-dc,D
 D26,Temor de doenças oncológicas do sistema digestivo,gpt-4o-mini,D,100
 D26,Medo de cancro do sistema digestivo,icpc2_description,D,100
 D26,Preocupação com cancro digestivo,gpt-4o-mini_human-dc,D,100
-D26,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,D,100
 D27,medo de doença celíaca,gpt-4o-mini,D,101
 D27,receio de ter flatulência excessiva,gpt-4o-mini,D,101
 D27,medo de hemorroidas,gpt-4o-mini,D,101
@@ -3576,7 +3536,6 @@ D27,Medo de doença do sistema digestivo outra,icpc2_description,D,101
 D27,receio de ter pancreatite,gpt-4o-mini,D,101
 D27,receio de ter intolerância à lactose,gpt-4o-mini,D,101
 D27,medo de colite,gpt-4o-mini,D,101
-D27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,D,101
 D27,medo de constipação intestinal,gpt-4o-mini,D,101
 D28,Dificuldades de execução de tarefas por doença gastrointestinal,gpt-4o-mini_human-dc,D,102
 D28,Comprometimento funcional por doença gastrointestinal,gpt-4o-mini_human-dc,D,102
@@ -3592,7 +3551,6 @@ D28,Limitação de capacidades por doença gastrointestinal,gpt-4o-mini_human-dc
 D28,Restrição de atividades por doença gastrointestinal,gpt-4o-mini_human-dc,D,102
 D28,Incapacidade funcional por doença gastrointestinal,gpt-4o-mini_human-dc,D,102
 D28,Dificuldade funcional por doença gastrointestinal,gpt-4o-mini_human-dc,D,102
-D28,Limites impostos às atividades por invalidez,icd10_description,D,102
 D28,Limitação de atividades por doença gastrointestinal,gpt-4o-mini_human-dc,D,102
 D28,Dificuldades de funcionamento por doença gastrointestinal,gpt-4o-mini_human-dc,D,102
 D28,Dificuldades de execução,gpt-4o-mini_human-dc,D,102
@@ -3726,7 +3684,6 @@ D73,infecção do trato digestivo,gpt-4o-mini,D,107
 D73,infecção digestiva aguda,gpt-4o-mini,D,107
 D73,infecção por E. coli,gpt-4o-mini,D,107
 D73,infecção por clostrídios,gpt-4o-mini,D,107
-D73,diarreia infecciosa,gpt-4o-mini,D,107
 D73,Gastroenterite com infecção presumível,icpc2_description,D,107
 D73,diarreia/vómitos presumivelmente infecciosos,icpc2_inclusion,D,107
 D73,gastroenterite por vírus,gpt-4o-mini,D,107
@@ -4074,7 +4031,6 @@ D82,Formação anormal de tecido duro na polpa [dentária],icd10_description,D,1
 D82,Outras patologias especificadas da gengiva e do rebordo alveolar sem dentes,icd10_description,D,116
 D82,Atrofia do rebordo alveolar sem dentes,icd10_description,D,116
 D82,Raiz dentária retida,icd10_description,D,116
-D82,Outras patologias especificadas dos dentes e das estruturas de sustentação,icd10_description,D,116
 D82,Doenças e afeções dos dentes e de suas estruturas de sustentacão SOE,icd10_description,D,116
 D82,Quistos odontogénicos de desenvolvimento,icd10_description,D,116
 D82,quistos de desenvolvimento (não-odontogênicos) da região bucal,icd10_description,D,116
@@ -4106,9 +4062,7 @@ D83,Mucosite oral (ulcerativa),icd10_description,D,117
 D83,"Leucoplasia e outras afeções do epitélio oral, inclui da língua",icd10_description,D,117
 D83,Hiperplasia irritativa da mucosa oral,icd10_description,D,117
 D83,Lesões granulomatosas e granulomatóides da mucosa oral,icd10_description,D,117
-D83,Outras lesões e lesões não especificadas da mucosa oral,icd10_description,D,117
 D83,Glossite,icd10_description,D,117
-D83,Glossite romboide médiana,icd10_description,D,117
 D83,Hipertrofia das papilas linguais,icd10_description,D,117
 D83,Atrofia das papilas linguais,icd10_description,D,117
 D83,Outras doenças da língua,icd10_description,D,117
@@ -4154,7 +4108,6 @@ D84,síndrome de Mallory-Weiss,icpc2_inclusion,D,118
 D84,divertículo esofágico,icpc2_inclusion,D,118
 D84,esofagite,icpc2_inclusion,D,118
 D84,ulceração esofágica,icpc2_inclusion,D,118
-D84,refluxo,icpc2_inclusion,D,118
 D84,Doença do esófago,icpc2_description,D,118
 D84,Esofagite,icd10_description,D,118
 D84,acalasia,icpc2_inclusion,D,118
@@ -4297,7 +4250,6 @@ D90,hérnia diafragmática com refluxo,gpt-4o-mini,D,124
 D90,hérnia diafragmática com esofagite,gpt-4o-mini,D,124
 D90,hérnia diafragmática com gangrena,gpt-4o-mini_human-dc,D,124
 D90,hérnia diafragmática com sinais endoscópicos,gpt-4o-mini,D,124
-D90,hérnia diafragmática,icpc2_inclusion,D,124
 D90,hérnia diafragmática sintomática,gpt-4o-mini,D,124
 D90,Hérnia diafragmatica com gangrena,icd10_description,D,124
 D91,Hérnia abdominal outra,icpc2_description,D,125
@@ -4600,7 +4552,6 @@ D99,"Íleo paralítico, sem outra especificação",icd10_description,D,133
 D99,Doença do sistema digestivo outra,icpc2_description,D,133
 D99,Colite indeterminada,icd10_description,D,133
 D99,"Outras gastroenterites e colites especificadas, não-infecciosas",icd10_description,D,133
-D99,"Gastroenterite e colite não-infecciosas, sem outra especificação",icd10_description,D,133
 D99,Insuficiência vascular aguda do intestino,icd10_description,D,133
 D99,Insuficiência vascular crónica do intestino,icd10_description,D,133
 D99,Angiodisplasia do cólon,icd10_description,D,133
@@ -4622,7 +4573,6 @@ D99,doença celíaca,icpc2_inclusion,D,133
 D99,síndrome do esvaziamento rápido (dumping),icpc2_inclusion,D,133
 D99,intolerância alimentar,icpc2_inclusion,D,133
 D99,íleo,icpc2_inclusion,D,133
-D99,obstrução intestinal,icpc2_inclusion,D,133
 D99,Gastroenterite e colite tóxicas,icd10_description,D,133
 D99,"Doença do apêndice, sem outra especificação",icd10_description,D,133
 D99,Outras doenças especificadas do apêndice,icd10_description,D,133
@@ -4655,7 +4605,6 @@ F01,Dor na região ocular,gpt-4o-mini,F,134
 F01,Dor ocular,icd10_description,F,134
 F01,Dor ocular crónica,gpt-4o-mini,F,134
 F01,Dor nos olhos,gpt-4o-mini,F,134
-F01,Dor ocular,gpt-4o-mini,F,134
 F02,"Outras patologias do olho e anexos, não classificadas noutra parte",icd10_description,F,135
 F02,inflamação ocular,gpt-4o-mini,F,135
 F02,alergia ocular,gpt-4o-mini,F,135
@@ -4716,7 +4665,6 @@ F04,perturbações visuais fixas,gpt-4o-mini_human-dc,F,137
 F04,anomalias visuais,gpt-4o-mini,F,137
 F05,Disturbios visuais SOE,icd10_description,F,138
 F05,cegueira temporária NE,icpc2_inclusion,F,138
-F05,Distúrbios visuais subjetivos,icd10_description,F,138
 F05,Diplopia,icd10_description,F,138
 F05,Outras patologias da visão binocular,icd10_description,F,138
 F05,visão desfocada,icpc2_inclusion,F,138
@@ -4736,7 +4684,6 @@ F13,Sensação ocular anormal,icpc2_description,F,139
 F13,secura ocular,gpt-4o-mini,F,139
 F13,sensações anormais nos olhos,gpt-4o-mini,F,139
 F13,prurido ocular,gpt-4o-mini,F,139
-F13,irritação ocular,gpt-4o-mini,F,139
 F13,problemas oculares não especificados,gpt-4o-mini,F,139
 F13,lacrimejamento excessivo,gpt-4o-mini,F,139
 F13,sintomas oculares diversos,gpt-4o-mini,F,139
@@ -4747,7 +4694,6 @@ F13,irritação nos olhos,gpt-4o-mini,F,139
 F13,anormalidades oculares,gpt-4o-mini,F,139
 F13,ardor/secura/prurido no olho,icpc2_inclusion,F,139
 F13,Sensação estranha nos olhos,gpt-4o-mini,F,139
-F13,"Outras patologias do olho e anexos, não classificadas noutra parte",icd10_description,F,139
 F13,desconforto ocular,gpt-4o-mini,F,139
 F13,desconforto visual,gpt-4o-mini,F,139
 F13,sensação de corpo estranho no olho,gpt-4o-mini,F,139
@@ -4779,7 +4725,6 @@ F14,anomalias nos movimentos oculares,gpt-4o-mini,F,140
 F14,nistagmo e outros movimentos oculares irregulares,gpt-4o-mini,F,140
 F14,nistagmo horizontal,gpt-4o-mini,F,140
 F14,movimentos oculares descontrolados,gpt-4o-mini,F,140
-F14,nistagmo,icpc2_inclusion,F,140
 F14,Nistagmo e outros movimentos irregulares do olho,icd10_description,F,140
 F14,movimentos oculares não coordenados,gpt-4o-mini,F,140
 F15,Aparência anormal do olho,icpc2_description,F,141
@@ -4793,8 +4738,6 @@ F15,alterações visíveis no olho,gpt-4o-mini,F,141
 F15,olho com aparência irregular,gpt-4o-mini,F,141
 F15,alteração na coloração ocular,gpt-4o-mini,F,141
 F15,anomalia ocular,gpt-4o-mini,F,141
-F15,problemas oculares não especificados,gpt-4o-mini,F,141
-F15,"Outras patologias do olho e anexos, não classificadas noutra parte",icd10_description,F,141
 F15,condições oculares diversas,gpt-4o-mini,F,141
 F15,desvio na aparência do olho,gpt-4o-mini,F,141
 F15,olho com coloração anormal,gpt-4o-mini,F,141
@@ -4836,7 +4779,6 @@ F17,dificuldades visuais relacionadas com óculos,gpt-4o-mini,F,143
 F17,efeitos dos óculos na saúde ocular,gpt-4o-mini,F,143
 F17,complicações oculares devido a óculos,gpt-4o-mini,F,143
 F18,Sintoma/queixa relaci c/ lentes cont,icpc2_short,F,144
-F18,Colocação e ajuste de óculos e lentes de contato,icd10_description,F,144
 F18,"problemas devido às lentes de contacto afectando a estrutura, função ou sensações do(s) olho(s)",icpc2_inclusion,F,144
 F18,Sintoma/queixa relacionado com as lentes de contacto,icpc2_description,F,144
 F18,problemas de saúde ocular por lentes de contacto,gpt-4o-mini,F,144
@@ -4896,10 +4838,8 @@ F27,receio de ter estrabismo,gpt-4o-mini,F,145
 F27,receio de ter astigmatismo,gpt-4o-mini,F,145
 F27,medo de perda de visão,gpt-4o-mini,F,145
 F27,medo de ceratocone,gpt-4o-mini,F,145
-F27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,F,145
 F27,receio de ter uveíte,gpt-4o-mini,F,145
 F27,receio de ter opacidade do cristalino,gpt-4o-mini,F,145
-F27,medo de cegueira,icpc2_inclusion,F,145
 F27,medo de doenças da retina,gpt-4o-mini,F,145
 F27,receio de ter degeneração macular,gpt-4o-mini,F,145
 F27,receio de ter retinopatia,gpt-4o-mini,F,145
@@ -4915,7 +4855,6 @@ F28,Limitação funcional por conjuntivite,gpt-4o-mini,F,146
 F28,Limitação funcional por glaucoma,gpt-4o-mini,F,146
 F28,Incapacidade por uveíte,gpt-4o-mini,F,146
 F28,"Diminuição acuidade visual, um olho",icd10_description,F,146
-F28,Limites impostos às atividades por invalidez,icd10_description,F,146
 F28,"Perda de visão não qualificada, num olho",icd10_description,F,146
 F28,Amaurose num olho,icd10_description,F,146
 F28,Limitação funcional por uveíte,gpt-4o-mini,F,146
@@ -4941,7 +4880,6 @@ F29,Distúrbio não classificado do olho,gpt-4o-mini,F,147
 F29,Problema ocular,gpt-4o-mini,F,147
 F29,Queixa ocular inespecifica,gpt-4o-mini_human-dc,F,147
 F29,Alteração não classificada do olho,gpt-4o-mini,F,147
-F29,"Outras patologias do olho e anexos, não classificadas noutra parte",icd10_description,F,147
 F29,"Patologia, sem outra especificação, do olho e anexos",icd10_description,F,147
 F29,Sintoma/queixa ocular outro,icpc2_description,F,147
 F29,Condição não classificada do olho,gpt-4o-mini,F,147
@@ -5100,7 +5038,6 @@ F76,Corpo estranho em partes do olho externo,gpt-4o-mini,F,154
 F76,Corpo estranho em outros locais e em partes múltiplas do olho externo,icd10_description,F,154
 F76,Corpo estranho ocular,icpc2_description,F,154
 F76,Corpo estranho em múltiplas áreas oculares,gpt-4o-mini,F,154
-F76,Corpo estranho ocular,gpt-4o-mini,F,154
 F76,Corpo estranho no saco conjuntival,icd10_description,F,154
 F76,Corpo estranho no olho,gpt-4o-mini,F,154
 F76,Corpo estranho em áreas oculares,gpt-4o-mini,F,154
@@ -5123,7 +5060,6 @@ F79,Ferida aberta da pálpebra e área periocular,icd10_description,F,155
 F79,Outras lesões superficiais e lesões superficiais não especificadas da pálpebra e área periocular,icd10_description,F,155
 F79,"Corpo estranho (antigo) retido intra-ocular, não magnético",icd10_description,F,155
 F79,"Corpo estranho (antigo) retido intra-ocular, magnético",icd10_description,F,155
-F79,Outras Queratites superficiais sem conjuntivite,icd10_description,F,155
 F79,Ferimento penetrante sem corpo estranho do globo ocular,icd10_description,F,155
 F79,Avulsão do olho,icd10_description,F,155
 F79,Laceração ocular sem prolapso ou perda de tecido intra-ocular,icd10_description,F,155
@@ -5270,10 +5206,8 @@ F85,Úlcera da córnea,icd10_description,F,161
 F85,úlcera dendrítica,icpc2_inclusion,F,161
 F85,úlcera na córnea,gpt-4o-mini,F,161
 F85,Úlcera corneal,gpt-4o-mini,F,161
-F85,Úlcera da córnea,icpc2_description,F,161
 F85,queratite epitelial,gpt-4o-mini,F,161
 F85,úlcera corneal por herpes,gpt-4o-mini,F,161
-F85,queratite,gpt-4o-mini,F,161
 F85,úlcera superficial da córnea,gpt-4o-mini,F,161
 F85,úlcera da superfície corneal,gpt-4o-mini,F,161
 F85,úlcera infectada da córnea,gpt-4o-mini,F,161
@@ -5493,9 +5427,7 @@ F99,Ambliopia por anopsia,icd10_description,F,168
 F99,Defeitos do campo visual,icd10_description,F,168
 F99,Deficiências da visão cromática,icd10_description,F,168
 F99,Cegueira noturna,icd10_description,F,168
-F99,Outros distúrbios visuais,icd10_description,F,168
 F99,Anomalias da função pupilar,icd10_description,F,168
-F99,"Outras patologias do olho e anexos, não classificadas noutra parte",icd10_description,F,168
 F99,Separação das camadas da retina,icd10_description,F,168
 F99,esclerite,icpc2_inclusion,F,168
 F99,pterígio,icpc2_inclusion,F,168
@@ -5621,7 +5553,6 @@ H04,Otorreia,gpt-4o-mini,H,172
 H04,Secreção do ouvido médio,gpt-4o-mini,H,172
 H04,Secreção auricular,gpt-4o-mini,H,172
 H04,Otorreia purulenta,gpt-4o-mini,H,172
-H04,Otorreia,icd10_description,H,172
 H04,Secreção do ouvido,icpc2_description,H,172
 H04,Secreção otorrinolaringológica,gpt-4o-mini,H,172
 H04,Exsudato do canal auditivo,gpt-4o-mini,H,172
@@ -5659,7 +5590,6 @@ H13,Sensação de ouvido tapado,icpc2_description,H,174
 H13,ouvido bloqueado,gpt-4o-mini,H,174
 H13,sensação de abafamento no ouvido,gpt-4o-mini,H,174
 H13,sensação de orelha entupida,gpt-4o-mini,H,174
-H15,Outros sintomas e sinais envolvendo a aparência e o comportamento,icd10_description,H,175
 H15,Preocupação com a aparência das orelhas,icpc2_description,H,175
 H15,Preocupações com a estética auricular,gpt-4o-mini,H,175
 H15,Sintomas de insatisfação com a estética das orelhas,gpt-4o-mini,H,175
@@ -5673,7 +5603,6 @@ H15,Questões de imagem pessoal ligadas às orelhas,gpt-4o-mini,H,175
 H15,Preocupação com aparência orelhas,icpc2_short,H,175
 H15,Questões estéticas das orelhas,gpt-4o-mini,H,175
 H15,Alterações na percepção da aparência das orelhas,gpt-4o-mini,H,175
-H27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,H,176
 H27,Medo de doença do ouvido,icpc2_description,H,176
 H27,medo de otite,gpt-4o-mini,H,176
 H27,medo de surdez,icpc2_inclusion,H,176
@@ -5696,7 +5625,6 @@ H27,receio de ter amigdalite,gpt-4o-mini,H,176
 H27,receio de ter faringite,gpt-4o-mini,H,176
 H27,receio de ter laringite,gpt-4o-mini,H,176
 H27,receio de ter otosclerose,gpt-4o-mini,H,176
-H27,medo de surdez,gpt-4o-mini,H,176
 H27,receio de ter surdez,gpt-4o-mini,H,176
 H27,medo de otosclerose,gpt-4o-mini,H,176
 H27,receio de ter rinite,gpt-4o-mini,H,176
@@ -5705,7 +5633,6 @@ H27,medo de zumbido,gpt-4o-mini,H,176
 H28,Limitação funcional por otite,gpt-4o-mini,H,177
 H28,limitação funcional por labirintite,gpt-4o-mini,H,177
 H28,limitação funcional por síndrome de Ménière,gpt-4o-mini,H,177
-H28,Limites impostos às atividades por invalidez,icd10_description,H,177
 H28,limitação funcional por zumbido,gpt-4o-mini,H,177
 H28,incapacidade por barotrauma,gpt-4o-mini,H,177
 H28,limitação funcional por hipoacusia,gpt-4o-mini,H,177
@@ -5722,7 +5649,6 @@ H28,incapacidade por otosclerose,gpt-4o-mini,H,177
 H28,surdez temporária,icpc2_inclusion,H,177
 H28,incapacidade por síndrome de Ménière,gpt-4o-mini,H,177
 H29,sensação de pressão nos ouvidos,gpt-4o-mini,H,178
-H29,Outras patologias especificadas do ouvido,icd10_description,H,178
 H29,prurido auricular,gpt-4o-mini,H,178
 H29,sensação de eco nos ouvidos,gpt-4o-mini,H,178
 H29,estalido auricular,gpt-4o-mini,H,178
@@ -5799,7 +5725,6 @@ H73,distúrbios da trompa de Eustáquio,gpt-4o-mini,H,182
 H73,patologia da trompa auditiva,gpt-4o-mini,H,182
 H73,Inflamação da trompa auditiva,gpt-4o-mini,H,182
 H73,problemas na trompa de Eustáquio,gpt-4o-mini,H,182
-H74,"Otite média, sem outra especificação",icd10_description,H,183
 H74,Outra otite média supurativa crónica,icd10_description,H,183
 H74,Otite média ático-antral crónica supurativa,icd10_description,H,183
 H74,Otite média tubotimpanica crónica supurativa,icd10_description,H,183
@@ -5839,7 +5764,6 @@ H76,Corpo estranho auditivo,gpt-4o-mini,H,185
 H76,Objeto estranho no ouvido,gpt-4o-mini,H,185
 H76,Corpo estranho no canal auditivo,gpt-4o-mini,H,185
 H76,Corpo estranho no ouvido,icpc2_description,H,185
-H76,Corpo estranho no ouvido,icd10_description,H,185
 H77,"Perfuração, sem outra especificação, da membrana do tímpano",icd10_description,H,186
 H77,Perfuração ática da membrana do tímpano,icd10_description,H,186
 H77,Perfuração timpânica,gpt-4o-mini,H,186
@@ -6012,7 +5936,6 @@ H84,Perda auditiva progressiva,gpt-4o-mini,H,193
 H84,Surdez gradual,gpt-4o-mini,H,193
 H84,Presbiacusia,icd10_description,H,193
 H84,Surdez por envelhecimento,gpt-4o-mini,H,193
-H84,Presbiacusia,icpc2_description,H,193
 H84,Deficiência auditiva por envelhecimento,gpt-4o-mini,H,193
 H84,Surdez presbiátrica,gpt-4o-mini,H,193
 H85,surdez por ruído,icpc2_inclusion,H,194
@@ -6072,8 +5995,6 @@ H99,Outras doenças especificadas do ouvido interno,icd10_description,H,196
 H99,"Doença, sem outra especificação, do ouvido interno",icd10_description,H,196
 H99,Patologias degenerativos e vasculares do ouvido,icd10_description,H,196
 H99,patologias do nervo acustico,icd10_description,H,196
-H99,Outras patologias especificadas do ouvido,icd10_description,H,196
-H99,"Patologia, sem outra especificação, do ouvido",icd10_description,H,196
 H99,Outras patologias especificadas do ouvido em doenças classificadas noutra parte,icd10_description,H,196
 H99,"Patologia, sem outra especificação, da membrana do tímpano",icd10_description,H,196
 H99,Outras patologias especificadas do ouvido médio e da mastóide,icd10_description,H,196
@@ -6102,7 +6023,6 @@ K01,dor precordial,gpt-4o-mini,K,197
 K02,Pressão/aperto do coração,icpc2_description,K,198
 K02,pressão na região do coração,gpt-4o-mini,K,198
 K02,desconforto cardíaco,gpt-4o-mini,K,198
-K02,Dor precordial,icd10_description,K,198
 K02,sensação de peso no coração,gpt-4o-mini,K,198
 K02,opressão torácica,gpt-4o-mini,K,198
 K02,pressão no peito,gpt-4o-mini_human-dc,K,198
@@ -6141,7 +6061,6 @@ K04,diminuição da frequência cardíaca,gpt-4o-mini,K,200
 K04,palpitações do coração,gpt-4o-mini,K,200
 K04,coração a abrandar,gpt-4o-mini,K,200
 K04,percepção de aceleração cardíaca,gpt-4o-mini,K,200
-K04,sensação de pressão no peito,gpt-4o-mini,K,200
 K04,percepção de desaceleração cardíaca,gpt-4o-mini,K,200
 K04,sensação de coração acelerado,gpt-4o-mini,K,200
 K04,coração a disparar,gpt-4o-mini,K,200
@@ -6259,7 +6178,6 @@ K24,medo de arritmias,gpt-4o-mini,K,205
 K24,medo de embolia pulmonar,gpt-4o-mini,K,205
 K24,medo de insuficiência cardíaca,gpt-4o-mini,K,205
 K24,medo de doença arterial coronária,gpt-4o-mini,K,205
-K24,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,K,205
 K24,medo de aterosclerose,gpt-4o-mini,K,205
 K24,Medo de doença cardíaca,icpc2_description,K,205
 K24,medo de ataque cardíaco,icpc2_inclusion,K,205
@@ -6276,7 +6194,6 @@ K24,medo de insuficiência vascular,gpt-4o-mini,K,205
 K24,receio de ter cardiomiopatia,gpt-4o-mini,K,205
 K24,medo de angina,gpt-4o-mini,K,205
 K24,medo de hipertensão,gpt-4o-mini,K,205
-K24,medo de ataque cardíaco,gpt-4o-mini,K,205
 K24,receio de ter embolia pulmonar,gpt-4o-mini,K,205
 K24,medo de doença cardíaca isquémica,gpt-4o-mini,K,205
 K24,receio de ter doença arterial coronária,gpt-4o-mini,K,205
@@ -6292,7 +6209,6 @@ K25,Medo de hipertensão,icpc2_description,K,206
 K25,Preocupação excessiva com a pressão arterial,gpt-4o-mini,K,206
 K25,Medo de ser diagnosticado com hipertensão,gpt-4o-mini,K,206
 K25,Receio de um diagnóstico de hipertensão,gpt-4o-mini,K,206
-K25,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,K,206
 K25,Medo de hipertensâo,icpc2_short,K,206
 K25,Preocupação com a pressão arterial,gpt-4o-mini,K,206
 K27,Temor de enfermidades circulatórias,gpt-4o-mini,K,207
@@ -6315,13 +6231,11 @@ K27,Temor de problemas de circulação,gpt-4o-mini,K,207
 K27,Receio de problemas cardiovasculares,gpt-4o-mini,K,207
 K27,Ansiedade em relação a doenças do coração,gpt-4o-mini,K,207
 K27,Medo de doença cardiovascular outra,icpc2_description,K,207
-K27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,K,207
 K27,Ansiedade em relação a problemas circulatórios,gpt-4o-mini,K,207
 K27,Ansiedade por doenças do sistema circulatório,gpt-4o-mini,K,207
 K28,Limitação funcional/incapacidade (K),icpc2_description,K,208
 K28,Restrições funcionais por problemas cardíacos,gpt-4o-mini,K,208
 K28,Dificuldades nas atividades devido a problemas circulatórios,gpt-4o-mini,K,208
-K28,Limites impostos às atividades por invalidez,icd10_description,K,208
 K28,Incapacidade resultante de doenças do aparelho circulatório,gpt-4o-mini,K,208
 K28,Impedimentos relacionados com a função cardíaca,gpt-4o-mini,K,208
 K28,Dificuldades nas atividades diárias por problemas circulatórios,gpt-4o-mini,K,208
@@ -6348,7 +6262,6 @@ K29,coração fraco,icpc2_inclusion,K,209
 K29,hipotensão,gpt-4o-mini,K,209
 K29,pressão arterial reduzida,gpt-4o-mini,K,209
 K29,sinais de insuficiência respiratória,gpt-4o-mini,K,209
-K29,Outros sintomas e sinais especificados envolvendo os aparelhos circulatório e respiratório,icd10_description,K,209
 K29,sintomas de líquido nos pulmões,gpt-4o-mini,K,209
 K29,fraqueza cardíaca,gpt-4o-mini,K,209
 K29,queixas de cansaço cardíaco,gpt-4o-mini,K,209
@@ -6408,7 +6321,6 @@ K71,Estenose aórtica reumática,icd10_description,K,211
 K72,Neoplasia do coração,gpt-4o-mini,K,212
 K72,Neoplasia do tecido cardíaco,gpt-4o-mini,K,212
 K72,Neoplasia do pericárdio,gpt-4o-mini,K,212
-K72,Neoplasia de comportamento incerto de outras localizações especificadas,icd10_description,K,212
 K72,Neoplasia do músculo cardíaco,gpt-4o-mini,K,212
 K72,Neoplasia do sistema cardiovascular central,gpt-4o-mini,K,212
 K72,Tumor do coração,gpt-4o-mini,K,212
@@ -6691,7 +6603,6 @@ K81,sopro inocente em crianças,gpt-4o-mini,K,221
 K81,Sopros cardíacos benignos ou inocentes,icd10_description,K,221
 K81,"Sopro cardíaco, sem outra especificação",icd10_description,K,221
 K81,Outros sons cardíacos,icd10_description,K,221
-K81,Outros sintomas e sinais especificados envolvendo os aparelhos circulatório e respiratório,icd10_description,K,221
 K82,Doença cardíaca pulmonar,icpc2_description,K,222
 K82,Doenças circulacão pulmonar SOE,icd10_description,K,222
 K82,cor pulmonale crónico,icpc2_inclusion,K,222
@@ -7151,7 +7062,6 @@ K96,prolapso hemorroidal,gpt-4o-mini,K,236
 K96,sintomas hemorroidários,gpt-4o-mini,K,236
 K96,tratamento para hemorróidas,gpt-4o-mini,K,236
 K96,hemorróidas agudas,gpt-4o-mini,K,236
-K96,hemorragia anal,gpt-4o-mini,K,236
 K96,diagnóstico de hemorróidas,gpt-4o-mini,K,236
 K96,hemorróidas externas,gpt-4o-mini,K,236
 K96,complicações hemorroidárias,gpt-4o-mini,K,236
@@ -7217,7 +7127,6 @@ K99,Poliarterite nodosa,icd10_description,K,237
 K99,Choque cardiogénico,icd10_description,K,237
 K99,Choque hipovolémico,icd10_description,K,237
 K99,Patologia venoso não especificado,icd10_description,K,237
-K99,Outras patologias especificadas das veias,icd10_description,K,237
 K99,"Arterite, sem outra especificação",icd10_description,K,237
 K99,Outras alterações especificadas das artérias e das arteríolas,icd10_description,K,237
 K99,"Doenças das artérias e das arteríolas, não especificadas",icd10_description,K,237
@@ -7293,7 +7202,6 @@ L02,dor nas costas ao levantar,gpt-4o-mini,L,239
 L02,Dor nas costas,gpt-4o-mini,L,239
 L02,dor torácica dorsal,icpc2_inclusion,L,239
 L02,Sintoma/queixa da região dorsal,icpc2_description,L,239
-L02,Paniculite atingindo regiões do pescoço e do dorso,icd10_description,L,239
 L02,Outra dorsalgia,icd10_description,L,239
 L02,Dorsalgia não especificada,icd10_description,L,239
 L02,Dorsalgia,icd10_description,L,239
@@ -7302,7 +7210,6 @@ L03,coccidinia,icpc2_inclusion,L,240
 L03,dor de costas (lombares/sacroilíacas),icpc2_inclusion,L,240
 L03,lombalgia,icpc2_inclusion,L,240
 L03,lumbago,icpc2_inclusion,L,240
-L03,Paniculite atingindo regiões do pescoço e do dorso,icd10_description,L,240
 L03,Lombalgia,icd10_description,L,240
 L03,Patologias sacroccígeos não classificados em outra parte,icd10_description,L,240
 L04,dor na região clavicular,gpt-4o-mini,L,241
@@ -7316,8 +7223,6 @@ L04,dor referida na região torácica,gpt-4o-mini,L,241
 L04,dor torácica não cardíaca,gpt-4o-mini,L,241
 L04,dor na parede torácica,gpt-4o-mini,L,241
 L04,dor torácica associada ao sistema músculo-esquelético,gpt-4o-mini_human-dc,L,241
-L04,dor torácica não especificada,gpt-4o-mini,L,241
-L04,desconforto torácico,gpt-4o-mini,L,241
 L04,dor na região subcostal,gpt-4o-mini,L,241
 L04,dor torácica atribuída ao sistema músculo-esquelético,icpc2_inclusion,L,241
 L04,dor muscular no tórax,gpt-4o-mini,L,241
@@ -7337,7 +7242,6 @@ L05,sinais de dor no flanco,gpt-4o-mini,L,242
 L05,dor irradiada para a axila,gpt-4o-mini,L,242
 L05,dor na articulação do quadril,gpt-4o-mini,L,242
 L05,dor na parte lateral do corpo,gpt-4o-mini,L,242
-L05,Outros sintomas e sinais relativos aos sistemas nervoso e osteomuscular e os não especificados,icd10_description,L,242
 L05,Sintoma/queixa do flanco/axila,icpc2_description,L,242
 L05,Dor no flanco,gpt-4o-mini,L,242
 L05,dor no quadril,icpc2_inclusion,L,242
@@ -7368,7 +7272,6 @@ L07,Sintoma/queixa da mandíbula,icpc2_description,L,243
 L07,Derrame articular,icd10_description,L,243
 L07,Dor em articulação,icd10_description,L,243
 L07,sinais de dor na mandíbula,gpt-4o-mini,L,243
-L07,Outros sintomas e sinais relativos aos sistemas nervoso e osteomuscular e os não especificados,icd10_description,L,243
 L07,queixas articulares da ATM,gpt-4o-mini_human-dc,L,243
 L07,"Rigidez articular, não classificado noutra parte",icd10_description,L,243
 L07,queixas de dor orofacial,gpt-4o-mini,L,243
@@ -7385,13 +7288,10 @@ L08,Problemas no ombro,gpt-4o-mini,L,244
 L08,Dor ao mover o ombro,gpt-4o-mini,L,244
 L08,Queixas de dor no ombro,gpt-4o-mini,L,244
 L08,Queixa no ombro,gpt-4o-mini,L,244
-L08,Dor em articulação,icd10_description,L,244
 L08,Dor localizada no ombro,gpt-4o-mini,L,244
 L08,Dificuldade em mover o ombro,gpt-4o-mini,L,244
-L08,"Rigidez articular, não classificado noutra parte",icd10_description,L,244
 L08,Sensação de peso no ombro,gpt-4o-mini,L,244
 L08,Sintoma/queixa do ombro,icpc2_description,L,244
-L08,Derrame articular,icd10_description,L,244
 L08,Sintomas de tendinite no ombro,gpt-4o-mini,L,244
 L08,Sensibilidade no ombro,gpt-4o-mini,L,244
 L08,Desconforto no ombro,gpt-4o-mini,L,244
@@ -7413,7 +7313,6 @@ L09,rigidez no braço,gpt-4o-mini,L,245
 L09,"Dor em membro, mão, pé, dedos da mão e dedos do pé",icd10_description,L,245
 L09,sensação de desconforto no membro superior,gpt-4o-mini,L,245
 L09,sensação de queimação no braço,gpt-4o-mini,L,245
-L09,Outros sintomas e sinais relativos aos sistemas nervoso e osteomuscular e os não especificados,icd10_description,L,245
 L09,alteração na mobilidade do braço,gpt-4o-mini,L,245
 L09,Sintoma/queixa do braço,icpc2_description,L,245
 L09,fraqueza no braço,gpt-4o-mini,L,245
@@ -7439,10 +7338,7 @@ L10,Sintomas de inflamação do cotovelo,gpt-4o-mini,L,246
 L10,Dor e inchaço no cotovelo,gpt-4o-mini,L,246
 L10,Sintomas articulares no cotovelo,gpt-4o-mini,L,246
 L10,Dor no cotovelo,gpt-4o-mini,L,246
-L10,Derrame articular,icd10_description,L,246
 L10,Sintoma/queixa do cotovelo,icpc2_description,L,246
-L10,Dor em articulação,icd10_description,L,246
-L10,"Rigidez articular, não classificado noutra parte",icd10_description,L,246
 L10,Inchaço do cotovelo,gpt-4o-mini,L,246
 L10,Inflamação do cotovelo,gpt-4o-mini,L,246
 L10,Sintomas de dor no cotovelo,gpt-4o-mini,L,246
@@ -7464,14 +7360,11 @@ L10,Sintomas de dor articular no cotovelo,gpt-4o-mini,L,246
 L10,Sintomas de dor e inchaço no cotovelo,gpt-4o-mini,L,246
 L10,Desconforto no cotovelo,gpt-4o-mini,L,246
 L10,Dor articular no cotovelo,gpt-4o-mini,L,246
-L11,Derrame articular,icd10_description,L,247
 L11,Queixa de rigidez no punho,gpt-4o-mini,L,247
 L11,Sintoma no punho,gpt-4o-mini,L,247
 L11,Sintomas articulares do punho,gpt-4o-mini,L,247
 L11,Sintoma/queixa do punho,icpc2_description,L,247
 L11,Limitação de movimento no punho,gpt-4o-mini,L,247
-L11,Dor em articulação,icd10_description,L,247
-L11,"Rigidez articular, não classificado noutra parte",icd10_description,L,247
 L11,Sintoma de derrame articular no punho,gpt-4o-mini,L,247
 L11,Queixa de dor no punho,gpt-4o-mini,L,247
 L11,Desconforto no punho,gpt-4o-mini,L,247
@@ -7500,15 +7393,10 @@ L12,Inflamação na articulação do dedo,gpt-4o-mini,L,248
 L12,Inflamação na articulação da mão,gpt-4o-mini,L,248
 L12,Dor articular na mão,gpt-4o-mini,L,248
 L12,Dificuldade de movimento no dedo,gpt-4o-mini,L,248
-L12,Outros sintomas e sinais relativos aos sistemas nervoso e osteomuscular e os não especificados,icd10_description,L,248
-L12,"Dor em membro, mão, pé, dedos da mão e dedos do pé",icd10_description,L,248
 L12,Queimação no dedo,gpt-4o-mini,L,248
-L12,Dor em articulação,icd10_description,L,248
-L12,Derrame articular,icd10_description,L,248
 L12,Dificuldade de movimento na mão,gpt-4o-mini,L,248
 L12,Alterações na mobilidade da mão,gpt-4o-mini,L,248
 L12,Dor nas articulações do dedo,gpt-4o-mini,L,248
-L12,"Rigidez articular, não classificado noutra parte",icd10_description,L,248
 L12,Queixa no dedo,gpt-4o-mini,L,248
 L12,Rigidez na articulação do dedo,gpt-4o-mini,L,248
 L12,Sensação de peso no dedo,gpt-4o-mini,L,248
@@ -7544,9 +7432,6 @@ L13,Dor ao caminhar na anca,gpt-4o-mini,L,249
 L13,Dor referida na anca,gpt-4o-mini,L,249
 L13,Queixas articulares da anca,gpt-4o-mini,L,249
 L13,Problemas na articulação da anca,gpt-4o-mini,L,249
-L13,Derrame articular,icd10_description,L,249
-L13,Dor em articulação,icd10_description,L,249
-L13,"Rigidez articular, não classificado noutra parte",icd10_description,L,249
 L13,Inflamação da anca,gpt-4o-mini,L,249
 L13,Sintoma/queixa da anca,icpc2_description,L,249
 L13,Rigidez matinal da anca,gpt-4o-mini,L,249
@@ -7570,8 +7455,6 @@ L13,Sensibilidade na anca,gpt-4o-mini,L,249
 L13,Dor na articulação da anca,gpt-4o-mini,L,249
 L14,cãibras na perna,icpc2_inclusion,L,250
 L14,Dor na perna/coxa,gpt-4o-mini,L,250
-L14,"Dor em membro, mão, pé, dedos da mão e dedos do pé",icd10_description,L,250
-L14,Outros sintomas e sinais relativos aos sistemas nervoso e osteomuscular e os não especificados,icd10_description,L,250
 L14,Sintoma/queixa da perna/coxa,icpc2_description,L,250
 L14,espasmos na perna/coxa,gpt-4o-mini,L,250
 L14,dor localizada na perna/coxa,gpt-4o-mini,L,250
@@ -7596,9 +7479,6 @@ L15,Dor ao subir escadas no joelho,gpt-4o-mini,L,251
 L15,Limitação de movimento no joelho,gpt-4o-mini,L,251
 L15,Queixa articular do joelho,gpt-4o-mini,L,251
 L15,Problemas no joelho,gpt-4o-mini,L,251
-L15,"Rigidez articular, não classificado noutra parte",icd10_description,L,251
-L15,Dor em articulação,icd10_description,L,251
-L15,Derrame articular,icd10_description,L,251
 L15,Dor articular no joelho,gpt-4o-mini,L,251
 L15,Inchaço no joelho,gpt-4o-mini,L,251
 L15,Desconforto no joelho,gpt-4o-mini,L,251
@@ -7631,9 +7511,7 @@ L16,Inchaço articular do tornozelo,gpt-4o-mini,L,252
 L16,Dor e inchaço no tornozelo,gpt-4o-mini,L,252
 L16,Rigidez no tornozelo,gpt-4o-mini,L,252
 L16,Sensibilidade no tornozelo,gpt-4o-mini,L,252
-L16,"Rigidez articular, não classificado noutra parte",icd10_description,L,252
 L16,Queixa no tornozelo,gpt-4o-mini,L,252
-L16,Derrame articular,icd10_description,L,252
 L16,Sintoma/queixa do tornozelo,icpc2_description,L,252
 L16,Dor no tornozelo,gpt-4o-mini,L,252
 L16,Limitação de movimento no tornozelo,gpt-4o-mini,L,252
@@ -7643,7 +7521,6 @@ L16,Sintoma de inflamação do tornozelo,gpt-4o-mini,L,252
 L16,Dificuldade de movimento no tornozelo,gpt-4o-mini,L,252
 L16,Dor articular no tornozelo,gpt-4o-mini,L,252
 L16,Sintomas de dor no tornoz,gpt-4o-mini,L,252
-L16,Dor em articulação,icd10_description,L,252
 L16,Desconforto no tornozelo,gpt-4o-mini,L,252
 L16,Derrame sinovial do tornozelo,gpt-4o-mini,L,252
 L16,Dor nas articulações do tornozelo,gpt-4o-mini,L,252
@@ -7653,20 +7530,14 @@ L16,Inchaço do tornozelo,gpt-4o-mini,L,252
 L16,Queixa de dor no tornozelo,gpt-4o-mini,L,252
 L16,Desconforto articular do tornozelo,gpt-4o-mini,L,252
 L16,Sintoma no tornozelo,gpt-4o-mini,L,252
-L17,"Dor em membro, mão, pé, dedos da mão e dedos do pé",icd10_description,L,253
 L17,metatarsalgia,icpc2_inclusion,L,253
-L17,Outros sintomas e sinais relativos aos sistemas nervoso e osteomuscular e os não especificados,icd10_description,L,253
 L17,Sintoma/queixa do pé/dedo do pé,icpc2_description,L,253
-L17,"Rigidez articular, não classificado noutra parte",icd10_description,L,253
-L17,Dor em articulação,icd10_description,L,253
-L17,Derrame articular,icd10_description,L,253
 L17,Metatarsalgia,icd10_description,L,253
 L18,Fibromialgia,icd10_description,L,254
 L18,mialgia,icpc2_inclusion,L,254
 L18,paniculite,icpc2_inclusion,L,254
 L18,reumatismo,icpc2_inclusion,L,254
 L18,Cãibras e espasmos,icd10_description,L,254
-L18,"Dor em membro, mão, pé, dedos da mão e dedos do pé",icd10_description,L,254
 L18,Miosite intersticial,icd10_description,L,254
 L18,Mialgia,icd10_description,L,254
 L18,Reumatismo não especificado e fibrosite,icd10_description,L,254
@@ -7720,9 +7591,6 @@ L20,artralgia,icpc2_inclusion,L,256
 L20,derrame/edema articular,icpc2_inclusion,L,256
 L20,dor/rigidez/fraqueza articular,icpc2_inclusion,L,256
 L20,"Patologia articular, sem outra especificação",icd10_description,L,256
-L20,Derrame articular,icd10_description,L,256
-L20,Dor em articulação,icd10_description,L,256
-L20,"Rigidez articular, não classificado noutra parte",icd10_description,L,256
 L20,Outras patologias articulares especificadas,icd10_description,L,256
 L26,Ansiedade relacionada com cancro nos músculos e articulações,gpt-4o-mini,L,257
 L26,Preocupação com cancro nos músculos e ossos,gpt-4o-mini,L,257
@@ -7733,7 +7601,6 @@ L26,Medo de malignidade músculo-esquelética,gpt-4o-mini,L,257
 L26,Receio de problemas malignos no sistema músculo-esquelético,gpt-4o-mini,L,257
 L26,Insegurança sobre a saúde músculo-esquelética,gpt-4o-mini,L,257
 L26,Preocupação excessiva com cancro músculo-esquelético,gpt-4o-mini,L,257
-L26,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,L,257
 L26,Temor de neoplasia músculo-esquelética,gpt-4o-mini,L,257
 L26,Ansiedade por cancro músculo-esquelético,gpt-4o-mini,L,257
 L26,Temor de cancro nos tecidos musculares e ósseos,gpt-4o-mini,L,257
@@ -7781,7 +7648,6 @@ L27,receio de ter bursite,gpt-4o-mini,L,258
 L27,medo de espondilite,gpt-4o-mini,L,258
 L27,Medo doença músculo-esquelét outra,icpc2_short,L,258
 L27,medo de artrite,gpt-4o-mini,L,258
-L27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,L,258
 L28,Incapacidade por dor lombar,gpt-4o-mini,L,259
 L28,Limitação funcional por síndrome da dor miofascial,gpt-4o-mini,L,259
 L28,Incapacidade por lesão no joelho,gpt-4o-mini,L,259
@@ -7807,7 +7673,6 @@ L28,Dificuldade em deambular,icd10_description,L,259
 L28,Limitação funcional por tendinite,gpt-4o-mini,L,259
 L28,Limitação funcional por bursite,gpt-4o-mini,L,259
 L28,Incapacidade por fibromialgia,gpt-4o-mini,L,259
-L28,Limites impostos às atividades por invalidez,icd10_description,L,259
 L28,Incapacidade por dor cervical,gpt-4o-mini,L,259
 L28,Limitação funcional por artrite,gpt-4o-mini,L,259
 L28,Limitação funcional por osteoporose,gpt-4o-mini,L,259
@@ -7842,7 +7707,6 @@ L29,queixas de postura,gpt-4o-mini,L,260
 L29,distúrbios de marcha,gpt-4o-mini,L,260
 L29,anomalias na marcha,gpt-4o-mini,L,260
 L29,problemas de desenvolvimento motor,gpt-4o-mini,L,260
-L29,Outros sintomas e sinais relativos aos sistemas nervoso e osteomuscular e os não especificados,icd10_description,L,260
 L29,Sintoma/queixa músculo-esquel outro,icpc2_short,L,260
 L29,dores articulares na infância,gpt-4o-mini,L,260
 L29,Sintoma/queixa músculo-esquelético outro,icpc2_description,L,260
@@ -7901,7 +7765,6 @@ L71,"Neoplasia maligna das costelas, do externo e da clavícula",icd10_descripti
 L71,"Neoplasia maligna dos ossos da pélvis, do sacro e do coccix",icd10_description,L,262
 L71,"Neoplasia maligna dos ossos e das cartilagens articulares, sem outra especificação",icd10_description,L,262
 L71,Sarcoma de Kaposi de tecido mole,icd10_description,L,262
-L71,"Neoplasia maligna do tecido conjuntivo e tecidos moles da cabeça, face e pescoço",icd10_description,L,262
 L71,"Neoplasia maligna da coluna vertebral, excepto o sacro e coccix",icd10_description,L,262
 L72,Fractura: rádio/cúbito,icpc2_description,L,263
 L72,fractura de Colles,icpc2_inclusion,L,263
@@ -7993,7 +7856,6 @@ L77,Lesão do ligamento do tornozelo,gpt-4o-mini,L,268
 L77,Estiramento traumático do tornozelo,gpt-4o-mini,L,268
 L77,Entorse do pé,gpt-4o-mini,L,268
 L77,Entorse ligamentar,gpt-4o-mini,L,268
-L77,Dor no tornozelo,gpt-4o-mini,L,268
 L77,Estiramento do tornozelo,gpt-4o-mini,L,268
 L77,Entorse/distensão do tornozelo,icpc2_description,L,268
 L77,Estiramento ligamentar,gpt-4o-mini,L,268
@@ -8024,13 +7886,11 @@ L78,Lesão do joelho por impacto,gpt-4o-mini,L,269
 L78,Entorse da articulação do joelho,gpt-4o-mini,L,269
 L78,Lesão do joelho por movimento brusco,gpt-4o-mini,L,269
 L78,Lesão ligamentar do joelho,gpt-4o-mini,L,269
-L78,Dor no joelho,gpt-4o-mini,L,269
 L78,Lesão por distensão do joelho,gpt-4o-mini,L,269
 L78,Estiramento do joelho,gpt-4o-mini,L,269
 L78,Lesão do joelho,gpt-4o-mini,L,269
 L79,Entorse de dedo do pé,icd10_description,L,270
 L79,Entorse da mandíbula,icd10_description,L,270
-L79,Entorse do pé,icd10_description,L,270
 L79,Outra entorse e entorse não especificada do(s) dedo(s) da mão,icd10_description,L,270
 L79,Rotura traumática de ligamento da articulação metacarpofalângica e interfalângica de dedo da mão,icd10_description,L,270
 L79,Rotura traumática de ligamento do punho,icd10_description,L,270
@@ -8129,7 +7989,6 @@ L81,"Lesão de músculo, fáscia e tendão não especificado ao nível do punho 
 L81,"Lesão de outro músculo extensor, fáscia e tendão ao nível do antebraço",icd10_description,L,272
 L81,Outras lesões especificadas da anca e coxa,icd10_description,L,272
 L81,Amputação traumática pelo nível entre a anca e o joelho,icd10_description,L,272
-L81,"Lesão, sem outra especificação, do abdómen, região lombar, pélvis e órgãos genitais externos",icd10_description,L,272
 L81,Contusão do ombro e braço,icd10_description,L,272
 L81,Lesão do(s) músculo(s) e tendão(ões) da coifa dos rotadores do ombro,icd10_description,L,272
 L81,"Lesão do músculo, fáscia e tendão da porção longa do bicípete braquial",icd10_description,L,272
@@ -8138,7 +7997,6 @@ L81,"Lesão do músculo, fáscia e tendão do tricípete braquial",icd10_descrip
 L81,"Lesão de outros músculos, fáscias e tendões ao nível do ombro e braço",icd10_description,L,272
 L81,"Lesão de músculo, fáscia e tendão não especificado ao nível do ombro e do braço",icd10_description,L,272
 L81,Lesão por esmagamento do ombro e braço,icd10_description,L,272
-L81,"Outras lesões especificadas do abdómen, região lombar, pélvis e órgãos genitais externos",icd10_description,L,272
 L81,Amputação traumática pela articulação do ombro,icd10_description,L,272
 L81,"Amputação traumática do ombro e braço, por nível não especificado",icd10_description,L,272
 L81,Outras lesões especificadas do ombro e braço,icd10_description,L,272
@@ -8150,7 +8008,6 @@ L81,"Lesão do músculo flexor, fáscia e tendão de outro dedo da mão e dedo d
 L81,"Lesão de outro músculo flexor, fáscia e tendão ao nível do antebraço",icd10_description,L,272
 L81,"Lesão do músculo extensor ou abdutor, fáscia e tendões do polegar ao nível do antebraço",icd10_description,L,272
 L81,Amputação traumática pelo nível entre o ombro e o cotovelo,icd10_description,L,272
-L81,"Lesão do músculo, fáscia e tendão do abdómen, região lombar e pélvis",icd10_description,L,272
 L81,Rotura traumática da sínfise púbica,icd10_description,L,272
 L81,Contusão da parede abdominal,icd10_description,L,272
 L81,hemartrose traumática,icpc2_inclusion,L,272
@@ -8348,25 +8205,11 @@ L83,Espondilopatia traumática,icd10_description,L,274
 L83,Fratura de vértebra por stress,icd10_description,L,274
 L83,"Vértebra colapsada, não classificada noutra parte",icd10_description,L,274
 L83,torcicolo com/sem irradiação de dor,icpc2_inclusion,L,274
-L84,"Vértebra colapsada, não classificada noutra parte",icd10_description,L,275
-L84,Fratura de vértebra por stress,icd10_description,L,275
-L84,Espondilopatia traumática,icd10_description,L,275
-L84,Espondilose interespinhosa (kissing spine),icd10_description,L,275
-L84,Hiperostose anquilosante [Forestier],icd10_description,L,275
-L84,Estenose da coluna vertebral,icd10_description,L,275
-L84,"Espondilose, sem outra especificação",icd10_description,L,275
-L84,Outras espondiloses,icd10_description,L,275
-L84,Espondilolistese,icd10_description,L,275
 L84,"Espondilopatia inflamatória, sem outra especificação",icd10_description,L,275
 L84,Outras espondilopatias inflamatórias especificadas,icd10_description,L,275
 L84,Sacro-Ileite NCOP,icd10_description,L,275
-L84,Entesopatia da coluna vertebral,icd10_description,L,275
 L84,Outra subluxação vertebral recidivante,icd10_description,L,275
-L84,Espondilólise,icd10_description,L,275
-L84,Outras espondilopatias especificadas,icd10_description,L,275
 L84,Síndromes de compressão da artéria espinhal anterior e vertebral anterior,icd10_description,L,275
-L84,"Espondilopatia, sem outra especificação",icd10_description,L,275
-L84,Patologias sacroccígeos não classificados em outra parte,icd10_description,L,275
 L84,Outra degeneração especificada de disco intervertebral,icd10_description,L,275
 L84,"Outro deslocamento discal intervertebral torácico, toraco-lombar e lombossagrado",icd10_description,L,275
 L84,espondilose,icpc2_inclusion,L,275
@@ -8405,18 +8248,11 @@ L85,Deformação adquirida da coluna,icpc2_description,L,276
 L85,"Escoliose, sem outra especificação",icd10_description,L,276
 L85,Outra cifose e cifose não especificada,icd10_description,L,276
 L86,Síndrome coluna c/ irradiação de dor,icpc2_short,L,277
-L86,Outras espondiloses com radiculopatias,icd10_description,L,277
 L86,"Patologias dos discos intervertebrais torácicos, toraco-lombares e lombosagrados com mielopatia",icd10_description,L,277
 L86,"Patologias dos discos intervertebrais torácicos, toraco-lombares e lombosagrados com radiculopatia",icd10_description,L,277
-L86,Outra degeneração especificada de disco intervertebral,icd10_description,L,277
-L86,Nódulos de Schmorl,icd10_description,L,277
-L86,Outras patologias especificadas de discos intervertebrais,icd10_description,L,277
-L86,"Patologia de disco intervertebral torácica, toraco-lombar e lombossagrada, sem outra especificação",icd10_description,L,277
 L86,Ciatalgia,icd10_description,L,277
 L86,Lombalgia com ciatalgia,icd10_description,L,277
-L86,Outras espondiloses com mielopatia,icd10_description,L,277
 L86,Síndrome da coluna com irradiação de dor,icpc2_description,L,277
-L86,"Outro deslocamento discal intervertebral torácico, toraco-lombar e lombossagrado",icd10_description,L,277
 L86,ciática,icpc2_inclusion,L,277
 L86,prolapso/degenerescência do disco,icpc2_inclusion,L,277
 L87,Tendinite aquileana,icd10_description,L,278
@@ -8550,14 +8386,10 @@ L92,Outras lesões do ombro,icd10_description,L,283
 L92,"Lesão do ombro, sem outra especificação",icd10_description,L,283
 L92,Síndrome do ombro doloroso,icpc2_description,L,283
 L92,Capsulite adesiva do ombro,icd10_description,L,283
-L92,Artrose não especificada,icd10_description,L,283
 L92,tendinite abarticular do ombro,icpc2_inclusion,L,283
-L92,Artrose pós-traumática de outras articulações,icd10_description,L,283
-L92,"Artroses secundárias, outras articulações",icd10_description,L,283
 L92,ombro congelado,icpc2_inclusion,L,283
 L92,bursite do ombro,icpc2_inclusion,L,283
 L92,osteoartrose/sinovite do ombro,icpc2_inclusion,L,283
-L92,Artrose primária de outras articulações,icd10_description,L,283
 L93,Cotovelo de tenista,icpc2_description,L,284
 L93,Epicondilite do tenista,gpt-4o-mini,L,284
 L93,inflamação do tendão do cotovelo,gpt-4o-mini,L,284
@@ -8646,7 +8478,6 @@ L96,lesão do joelho com inflamação,gpt-4o-mini,L,287
 L96,lesão do joelho com limitação de movimento,gpt-4o-mini,L,287
 L96,lesão do joelho por esforço,gpt-4o-mini,L,287
 L96,ruptura do menisco,gpt-4o-mini,L,287
-L96,Lesão aguda do joelho,gpt-4o-mini,L,287
 L96,lesão aguda do joelho com dor,gpt-4o-mini,L,287
 L96,ruptura da cartilagem do joelho,gpt-4o-mini,L,287
 L96,lesão do joelho com fraqueza,gpt-4o-mini,L,287
@@ -8682,7 +8513,6 @@ L97,Neoplasia benigna do osso da mandíbula,icd10_description,L,288
 L97,Neoplasia benigna do ossos do crânio e da face,icd10_description,L,288
 L97,Neoplasia benigna dos ossos curtos do membro inferior,icd10_description,L,288
 L97,"Neoplasia benigna do tecido conjuntivo e tecidos moles do membro superior, inclui ombro",icd10_description,L,288
-L97,"Neoplasia benigna do tecido conjuntivo e tecidos moles da cabeça, face e pescoço",icd10_description,L,288
 L97,"Neoplasia benigna de osso e cartilagem articular, sem outra especificação",icd10_description,L,288
 L97,neoplasia músculo-esquelética não especificada como benigna ou maligna/quando não existe histologia disponível,icpc2_inclusion,L,288
 L97,Neoplasia músculo-esquelética benigna/não especificada,icpc2_description,L,288
@@ -8773,7 +8603,6 @@ L99,Artropatia pós-reumática crónica [Jaccoud],icd10_description,L,290
 L99,Doença de Kaschin-Beck,icd10_description,L,290
 L99,Reumatismo palindrómico,icd10_description,L,290
 L99,Outras instabilidades articulares,icd10_description,L,290
-L99,Outras patologias articulares especificadas,icd10_description,L,290
 L99,Deformidade adquirida do tórax e costelas,icd10_description,L,290
 L99,Osteopatia em doenças classificadas noutra parte,icd10_description,L,290
 L99,Osteíte deformante em doenças neoplásicas,icd10_description,L,290
@@ -8865,7 +8694,6 @@ L99,Lúpus eritematoso disseminado [sistêmico] não especificado,icd10_descript
 L99,Outras formas de lúpus eritematoso disseminado [sistêmico],icd10_description,L,290
 L99,Lúpus eritematoso disseminado [sistêmico] com comprometimento de outros órgãos e sistemas,icd10_description,L,290
 L99,Lúpus eritematoso disseminado [sistêmico] induzido por drogas,icd10_description,L,290
-L99,"Patologia articular, sem outra especificação",icd10_description,L,290
 L99,"Esclerose sistémica, sem outra especificação",icd10_description,L,290
 L99,Doenças sistémicas do tecido conjuntivo em outras doenças classificadas em outra parte,icd10_description,L,290
 L99,Outra dermatomiosite ,icd10_description,L,290
@@ -8915,10 +8743,8 @@ N01,cefaleia com dor no pescoço,gpt-4o-mini,N,291
 N01,cefaleia com sonolência,gpt-4o-mini,N,291
 N01,cefaleia em episódios,gpt-4o-mini,N,291
 N01,Outras síndromes de cefaleia especificadas,icd10_description,N,291
-N01,Cefaleia,icd10_description,N,291
 N01,Cefaleia crónica pós-traumática,icd10_description,N,291
 N01,cefaleia associada a trauma,gpt-4o-mini,N,291
-N03,Cefaleia,icd10_description,N,292
 N03,Dor facial persistente,gpt-4o-mini,N,292
 N03,Dor na pele da face,gpt-4o-mini,N,292
 N03,Dor facial episódica,gpt-4o-mini,N,292
@@ -9055,7 +8881,6 @@ N08,Fasciculação,icd10_description,N,297
 N08,Outros movimentos involuntários anormais e os não especificados,icd10_description,N,297
 N08,Tetania,icd10_description,N,297
 N08,Tiques induzidos por droga e outros tipos de origem orgânica,icd10_description,N,297
-N08,Outras patologias especificadas extrapiramidais e dos movimentos,icd10_description,N,297
 N08,espasmo,icpc2_inclusion,N,297
 N08,Movimentos involuntários anormais,icpc2_description,N,297
 N08,movimentos distónicos,icpc2_inclusion,N,297
@@ -9171,9 +8996,7 @@ N26,Medo de cancro do sistema neurológico,icpc2_description,N,302
 N26,Temor de problemas oncológicos no sistema nervoso,gpt-4o-mini,N,302
 N26,Temor de neoplasia no sistema nervoso,gpt-4o-mini,N,302
 N26,Receio de tumor cerebral,gpt-4o-mini,N,302
-N26,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,N,302
 N27,Medo de doença neurológica outra,icpc2_description,N,303
-N27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,N,303
 N27,Temor de doenças neurodegenerativas,gpt-4o-mini,N,303
 N27,Preocupação com a saúde do sistema nervoso,gpt-4o-mini,N,303
 N27,Medo de transtornos neurológicos,gpt-4o-mini,N,303
@@ -9213,7 +9036,6 @@ N28,Comprometimento neurológico,gpt-4o-mini,N,304
 N28,Problemas de mobilidade por doença neurologica,gpt-4o-mini_human-dc,N,304
 N28,Incapacidade por doença neurologica,gpt-4o-mini,N,304
 N28,Incapacidade motora por doença neurologica,gpt-4o-mini,N,304
-N28,Limites impostos às atividades por invalidez,icd10_description,N,304
 N28,Dificuldades de desempenho por doença neurologica,gpt-4o-mini_human-dc,N,304
 N28,Problemas de coordenação por doença neurologica,gpt-4o-mini_human-dc,N,304
 N28,Dificuldades motoras,gpt-4o-mini,N,304
@@ -9222,14 +9044,11 @@ N29,ataxia,icpc2_inclusion,N,305
 N29,marcha anormal,icpc2_inclusion,N,305
 N29,meningismo,icpc2_inclusion,N,305
 N29,Outras perturbações da coordenação,icd10_description,N,305
-N29,Tetania,icd10_description,N,305
 N29,Marcha parética,icd10_description,N,305
 N29,Marcha atáxica,icd10_description,N,305
 N29,Nevralgia e neurite não especificadas,icd10_description,N,305
 N29,Meningismo,icd10_description,N,305
 N29,Reflexo anormal,icd10_description,N,305
-N29,Outros sintomas e sinais relativos aos sistemas nervoso e osteomuscular e os não especificados,icd10_description,N,305
-N29,Outras anomalias da marcha e da mobilidade e as não especificadas,icd10_description,N,305
 N29,"Ataxia, sem outra especificação",icd10_description,N,305
 N29,Sintoma/queixa neurológico outro,icpc2_description,N,305
 N70,Poliomielite,icpc2_description,N,306
@@ -9305,10 +9124,7 @@ N72,Tétano traumático,gpt-4o-mini,N,308
 N72,Tétano neonatal,gpt-4o-mini,N,308
 N72,Tétano obstétrico,gpt-4o-mini,N,308
 N72,Tétano associado a ferimentos,gpt-4o-mini,N,308
-N72,Tétano,icpc2_description,N,308
 N72,Outros tétanos,icd10_description,N,308
-N72,Tétano obstétrico,icd10_description,N,308
-N72,Tétano neonatal,icd10_description,N,308
 N72,Tétano e espasticidade,gpt-4o-mini,N,308
 N73,Flebites e tromboflebites dos seios venosos intracranianos,icd10_description,N,309
 N73,Abcesso e granuloma intracranianos e intraspinais em doenças classificadas noutra parte,icd10_description,N,309
@@ -9400,27 +9216,22 @@ N79,contusão cerebral,gpt-4o-mini,N,313
 N79,comprometimento cognitivo pós-traumático,gpt-4o-mini,N,313
 N79,sintomas pós-concussão,gpt-4o-mini,N,313
 N80,Outras lesões especificadas da cabeça,icd10_description,N,314
-N80,"Lesão, sem outra especificação, da face e cabeça",icd10_description,N,314
 N80,"Lesão intracraniana, sem outra especificação",icd10_description,N,314
 N80,Lesão craniana outra,icpc2_description,N,314
 N80,"Lesão dos vasos sanguíneos da cabeça, não classificados noutra parte",icd10_description,N,314
 N80,Amputação traumática de outras partes da cabeça,icd10_description,N,314
 N80,Avulsão do escalpe,icd10_description,N,314
 N80,"Lesão por esmagamento da cabeça, parte não especificada, localização não especificada",icd10_description,N,314
-N80,Lesão por esmagamento de outras partes da cabeça,icd10_description,N,314
 N80,Lesão por esmagamento do crânio,icd10_description,N,314
 N80,Lesão por esmagamento da face,icd10_description,N,314
 N80,Outras lesões intracranianas especificadas,icd10_description,N,314
-N80,Fratura de ossos não especificados do crânio e da face,icd10_description,N,314
 N80,Hemorragia subdural traumática,icd10_description,N,314
-N80,contusão cerebral,icpc2_inclusion,N,314
 N80,hemorragia subaracnoideia traumática,icd10_description,N,314
 N80,lesão cerebral com/sem fractura craniana,icpc2_inclusion,N,314
 N80,hematoma subdural,icpc2_inclusion,N,314
 N80,hemorragia intracerebral traumática,icpc2_inclusion,N,314
 N80,Fratura da abóbada do crânio,icd10_description,N,314
 N80,hematoma extradural,icpc2_inclusion,N,314
-N80,Fraturas de outros ossos especificados do crânio e da face,icd10_description,N,314
 N80,Edema cerebral traumático,icd10_description,N,314
 N80,Lesão cerebral traumática difusa,icd10_description,N,314
 N80,Traumatismo cerebral focal,icd10_description,N,314
@@ -9438,7 +9249,6 @@ N81,Lesão do sistema nervoso outra,icpc2_description,N,315
 N81,Lesão de nervos periféricos do tórax,icd10_description,N,315
 N81,Lesão de outros nervos cranianos,icd10_description,N,315
 N81,Contusão e edema da medula cervical,icd10_description,N,315
-N81,"Lesão, sem outra especificação, da face e cabeça",icd10_description,N,315
 N81,"Lesão de nervo craniano, sem outra especificação",icd10_description,N,315
 N81,Lesão do nervo acessório,icd10_description,N,315
 N81,Lesão do nervo acústico,icd10_description,N,315
@@ -9547,7 +9357,6 @@ N86,esclerose múltipla com sintomas variados,gpt-4o-mini,N,317
 N86,esclerose múltipla secundária progressiva,gpt-4o-mini,N,317
 N86,esclerose múltipla com manifestações neurológicas,gpt-4o-mini,N,317
 N86,Esclerose múltipla,icpc2_description,N,317
-N86,esclerose disseminada,gpt-4o-mini,N,317
 N86,esclerose múltipla com sintomas visuais,gpt-4o-mini,N,317
 N86,esclerose múltipla com sintomas cognitivos,gpt-4o-mini,N,317
 N86,esclerose múltipla com remissões,gpt-4o-mini,N,317
@@ -9559,7 +9368,6 @@ N86,esclerose múltipla com surtos,gpt-4o-mini,N,317
 N86,doença desmielinizante,gpt-4o-mini,N,317
 N86,esclerose múltipla com défices neurológicos,gpt-4o-mini,N,317
 N86,esclerose múltipla agressiva,gpt-4o-mini,N,317
-N86,Esclerose múltipla,icd10_description,N,317
 N87,Parkinsonismo secundário não especificado,icd10_description,N,318
 N87,Outras formas de parkinsonismo secundário,icd10_description,N,318
 N87,Doença de Parkinson,icd10_description,N,318
@@ -9592,7 +9400,6 @@ N89,cefaleia com aura motora,gpt-4o-mini,N,320
 N89,enxaqueca episódica,gpt-4o-mini,N,320
 N89,"Enxaqueca, sem outra especificação",icd10_description,N,320
 N89,"Cefaleia vascular, não classificada noutra parte",icd10_description,N,320
-N89,dor de cabeça,gpt-4o-mini,N,320
 N89,Enxaqueca,icpc2_description,N,320
 N89,Enxaqueca com aura,icd10_description,N,320
 N89,cefaleia vascular com/sem aura,icpc2_inclusion,N,320
@@ -9631,7 +9438,6 @@ N92,dor do nervo trigémeo,gpt-4o-mini,N,323
 N92,Nevralgia do trigémio,icpc2_description,N,323
 N92,Nevralgia do trigémio com dor em queimação,gpt-4o-mini,N,323
 N92,"Afecões especificadas do nervo trigémeo, NCOP",icd10_description,N,323
-N92,Nevralgia do trigémio,icd10_description,N,323
 N92,dor facial do trigémio,gpt-4o-mini,N,323
 N92,Nevralgia do trigémio com dor ao palpar,gpt-4o-mini,N,323
 N92,Nevralgia do trigémio aguda e episódica,gpt-4o-mini_human-dc,N,323
@@ -9666,7 +9472,6 @@ N93,Síndrome do túnel cárpico,icd10_description,N,324
 N93,Síndrome do túnel carpiano,gpt-4o-mini,N,324
 N94,Doença de Refsum,icd10_description,N,325
 N94,Neuropatia associada a ataxia hereditária,icd10_description,N,325
-N94,Nevralgia e neurite não especificadas,icd10_description,N,325
 N94,Outras neuropatias hereditárias e idiopáticas,icd10_description,N,325
 N94,Neuropatia hereditária e idiopática não especificada,icd10_description,N,325
 N94,Polineurite infecciosa aguda,icd10_description,N,325
@@ -9704,7 +9509,6 @@ N94,Patologias do plexo braquial,icd10_description,N,325
 N94,"Patologias das raizes e plexos nervosos, não classificadas em outra parte",icd10_description,N,325
 N94,membro fantasma,icpc2_inclusion,N,325
 N94,Outras mononeuropatias especificadas do membro inferior,icd10_description,N,325
-N94,lesão de nervo,icpc2_inclusion,N,325
 N94,Mononeurite múltipla,icd10_description,N,325
 N94,Neuropatia intercostal,icd10_description,N,325
 N94,"Mononeuropatia, sem outra especificação, do membro inferior",icd10_description,N,325
@@ -9719,7 +9523,6 @@ N94,Lesão do nervo femoral,icd10_description,N,325
 N94,síndrome de Guillain-Barré,icpc2_inclusion,N,325
 N95,Cefaleia de tensão e stress,gpt-4o-mini,N,326
 N95,Cefaleia de tensão,icpc2_description,N,326
-N95,Cefaleia de tensão,icd10_description,N,326
 N95,Cefaleia de tensão e fadiga,gpt-4o-mini,N,326
 N95,Dor de cabeça relacionada ao stress,gpt-4o-mini,N,326
 N95,Cefaleia de tensão e desconforto,gpt-4o-mini,N,326
@@ -9854,9 +9657,7 @@ N99,Doença do sistema neurológico outra,icpc2_description,N,327
 N99,"Doença degenerativa dos gânglios da base, sem outra especificação",icd10_description,N,327
 N99,Neuropatia autonómica em perturbações classificadas noutra parte,icd10_description,N,327
 N99,Outras patologias especificadas do sistema nervoso em doenças classificadas noutra parte,icd10_description,N,327
-N99,Nevralgia e neurite não especificadas,icd10_description,N,327
 N99,Presenca de dispositivo para drenagem de liquido cefalorraquidiano,icd10_description,N,327
-N99,Outras patologias do sistema nervoso não classificados em outra parte,icd10_description,N,327
 N99,Patologia não especificada do sistema nervoso central,icd10_description,N,327
 N99,Outras patologias especificadas do sistema nervoso central,icd10_description,N,327
 N99,"Patologias das meninges, não classificadas em outra parte",icd10_description,N,327
@@ -10202,9 +10003,6 @@ P18,Abuso de outra substância psicoativa,icd10_description,P,344
 P18,"Abuso associado a sedativo, hipnótico ou ansiolítico",icd10_description,P,344
 P18,"Dependência associada a sedativo, hipnótico ou ansiolítico",icd10_description,P,344
 P19,Abuso de outro estimulante,icd10_description,P,345
-P19,"Uso de outra substância psicoativa, sem outra especificação",icd10_description,P,345
-P19,Dependência de outra substância psicoativa,icd10_description,P,345
-P19,Abuso de outra substância psicoativa,icd10_description,P,345
 P19,"Uso de inalante, sem outra especificação",icd10_description,P,345
 P19,Abuso de opióide,icd10_description,P,345
 P19,Dependência de inalante,icd10_description,P,345
@@ -10216,9 +10014,6 @@ P19,"Uso de opióide, sem outra especificação",icd10_description,P,345
 P19,Abuso de canábis,icd10_description,P,345
 P19,Dependência de canábis,icd10_description,P,345
 P19,"Uso de outro estimulante, sem outra especificação",icd10_description,P,345
-P19,"Abuso associado a sedativo, hipnótico ou ansiolítico",icd10_description,P,345
-P19,"Dependência associada a sedativo, hipnótico ou ansiolítico",icd10_description,P,345
-P19,"Uso, sem outra especificação, associado a sedativo, hipnótico ou ansiolítico",icd10_description,P,345
 P19,Abuso de cocaína,icd10_description,P,345
 P19,Dependência de cocaína,icd10_description,P,345
 P19,"Uso de cocaína, sem outra especificação",icd10_description,P,345
@@ -10261,21 +10056,8 @@ P22,Outras perturbações de conduta,icd10_description,P,347
 P22,Patologia reativo de vinculação da infância,icd10_description,P,347
 P22,criança super-activa,icpc2_inclusion,P,347
 P22,"Distúrbios comportamentais e emocionais, sem outra especificação, com início habitualmente na infância ou adolescência",icd10_description,P,347
-P23,"Distúrbios de comportamento, sem outra especificação",icd10_description,P,348
 P23,delinquência,icpc2_inclusion,P,348
-P23,"Perturbação conduta, instalação na adolescência",icd10_description,P,348
-P23,Patologia oposicional de desafio,icd10_description,P,348
-P23,Outras perturbações de conduta,icd10_description,P,348
-P23,"Perturbação conduta, restrita ao contexto familiar",icd10_description,P,348
-P23,Mutismo seletivo,icd10_description,P,348
 P23,Sintoma/queixa do comportamento do adolescente,icpc2_description,P,348
-P23,Patologia reativo de vinculação da infância,icd10_description,P,348
-P23,"Patologia de fixação da infância, com desinibição",icd10_description,P,348
-P23,Outras patologias do funcionamento social na infância,icd10_description,P,348
-P23,"Perturbação do funcionamento social da infância, sem outra especificação",icd10_description,P,348
-P23,Outras perturbações comportamentais e emocionais especificados com início habitualmente na infância ou adolescência,icd10_description,P,348
-P23,"Distúrbios comportamentais e emocionais, sem outra especificação, com início habitualmente na infância ou adolescência",icd10_description,P,348
-P23,"Perturbação conduta, instalação na infância",icd10_description,P,348
 P23,Sintoma/queixa comportam adolescente,icpc2_short,P,348
 P24,Outras patologias do desenvolvimento das competências escolares,icd10_description,P,349
 P24,dislexia,icpc2_inclusion,P,349
@@ -10329,11 +10111,9 @@ P27,medo de ansiedade,gpt-4o-mini,P,351
 P27,receio de ter esquizofrenia,gpt-4o-mini,P,351
 P27,medo de tentativa de suicídio,icpc2_inclusion,P,351
 P27,preocupação com doença mental,icpc2_inclusion,P,351
-P27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,P,351
 P27,Medo de perturbação mental,icpc2_description,P,351
 P27,receio de ter transtorno bipolar,gpt-4o-mini,P,351
 P27,medo de transtorno de personalidade,gpt-4o-mini,P,351
-P28,Limites impostos às atividades por invalidez,icd10_description,P,352
 P28,Limitação funcional por esquizofrenia,gpt-4o-mini,P,352
 P28,Limitação funcional por transtorno de déficit de atenção e hiperatividade,gpt-4o-mini,P,352
 P28,Incapacidade por transtorno obsessivo-compulsivo,gpt-4o-mini,P,352
@@ -10361,7 +10141,6 @@ P29,Nível de higiene pessoal muito baixo,icd10_description,P,353
 P29,Outros sintomas e sinais envolvendo o estadio emocional,icd10_description,P,353
 P29,"Estado de choque emocional e tensão, não especificado",icd10_description,P,353
 P29,Outros sintomas e sinais especificados relativos às sensações e perceções gerais,icd10_description,P,353
-P29,Outros sintomas e sinais envolvendo a aparência e o comportamento,icd10_description,P,353
 P29,Comportamento estranho e inexplicável,icd10_description,P,353
 P29,Hiperatividade,icd10_description,P,353
 P29,Lentidão e baixa reatividade,icd10_description,P,353
@@ -10385,8 +10164,6 @@ P29,desconfiança,icpc2_inclusion,P,353
 P29,Outros distúrbios alimentares,icd10_description,P,353
 P29,Padrão comportamental de tipo A,icd10_description,P,353
 P29,Tricotilomania,icd10_description,P,353
-P29,Outras perturbações comportamentais e emocionais especificados com início habitualmente na infância ou adolescência,icd10_description,P,353
-P29,"Distúrbios comportamentais e emocionais, sem outra especificação, com início habitualmente na infância ou adolescência",icd10_description,P,353
 P29,comportamentos estranhos,icpc2_inclusion,P,353
 P29,Stress não classificado em outra parte,icd10_description,P,353
 P70,Outras formas de Doença de Alzheimer,icd10_description,P,354
@@ -10518,7 +10295,6 @@ P77,autolesão,gpt-4o-mini,P,361
 P77,tentativa de autoeliminação,gpt-4o-mini,P,361
 P77,autoagressão,gpt-4o-mini,P,361
 P77,transtorno suicida,gpt-4o-mini,P,361
-P77,História pessoal de auto-agressão,icd10_description,P,361
 P77,Suicídio/tentativa de suicídio,icpc2_description,P,361
 P77,tentativa sucedida,icpc2_inclusion,P,361
 P77,gesto suicida,icpc2_inclusion,P,361
@@ -10661,10 +10437,8 @@ P86,Distúrbio alimentar,gpt-4o-mini,P,368
 P86,Padrão de alimentação desordenada,gpt-4o-mini,P,368
 P86,Transtorno de imagem corporal,gpt-4o-mini,P,368
 P86,Vómitos autoinduzidos,gpt-4o-mini,P,368
-P86,Bulimia nervosa,gpt-4o-mini,P,368
 P86,Obsessão pelo peso,gpt-4o-mini,P,368
 P86,Transtorno de bulimia,gpt-4o-mini,P,368
-P86,Anorexia nervosa,gpt-4o-mini,P,368
 P86,Bulimia,gpt-4o-mini,P,368
 P86,Transtorno de anorexia,gpt-4o-mini,P,368
 P86,Distúrbio de alimentação,gpt-4o-mini,P,368
@@ -10775,7 +10549,6 @@ R03,hipersensibilidade das vias aéreas,gpt-4o-mini,R,373
 R03,Respiração sibilante,icd10_description,R,373
 R04,apneia,icpc2_inclusion,R,374
 R04,respiração anormal,icpc2_inclusion,R,374
-R04,dificuldade respiratória,icpc2_inclusion,R,374
 R04,Outras anomalias e as não especificadas da respiração,icd10_description,R,374
 R04,Respiração pela boca,icd10_description,R,374
 R04,ressonar,icpc2_inclusion,R,374
@@ -10788,7 +10561,6 @@ R04,interrupção da respiração,icpc2_inclusion,R,374
 R04,Respiração de Cheyne-Stokes,icd10_description,R,374
 R05,tosse (seca ou húmida),icpc2_inclusion,R,375
 R05,Tosse,icd10_description,R,375
-R05,Tosse,icpc2_description,R,375
 R05,tosse após exercício,gpt-4o-mini,R,375
 R05,tosse em doentes com DPOC,gpt-4o-mini,R,375
 R05,tosse desencadeada por fumo,gpt-4o-mini,R,375
@@ -10859,7 +10631,6 @@ R08,sensação de pressão no nariz,gpt-4o-mini,R,378
 R08,alteração do olfato,gpt-4o-mini,R,378
 R08,nariz avermelhado,gpt-4o-mini,R,378
 R08,queixa nasal,gpt-4o-mini,R,378
-R08,desconforto nasal,gpt-4o-mini,R,378
 R08,queixa de dor nasal,gpt-4o-mini,R,378
 R08,inchaço nasal,gpt-4o-mini,R,378
 R08,Outras patologias especificadas do nariz e seios nasais,icd10_description,R,378
@@ -10882,7 +10653,6 @@ R09,seio perinasal congestionado,icpc2_inclusion,R,379
 R09,Sintoma/queixa dos seios perinasais,icpc2_description,R,379
 R09,seio perinasal obstruído,icpc2_inclusion,R,379
 R09,sintomas sinusais,gpt-4o-mini,R,379
-R09,Outras patologias especificadas do nariz e seios nasais,icd10_description,R,379
 R09,dor/pressão de seio perinasal,icpc2_inclusion,R,379
 R09,dor nos seios nasais,gpt-4o-mini,R,379
 R09,seios nasais congestionados,gpt-4o-mini,R,379
@@ -10892,7 +10662,6 @@ R09,irritação dos seios nasais,gpt-4o-mini,R,379
 R09,pressão nos seios nasais,gpt-4o-mini,R,379
 R09,desconforto nos seios perinasais,gpt-4o-mini,R,379
 R09,distúrbios perinasais,gpt-4o-mini,R,379
-R21,sensação de aperto na garganta,gpt-4o-mini,R,380
 R21,dor na região da garganta,gpt-4o-mini,R,380
 R21,sintomas de congestão na garganta,gpt-4o-mini,R,380
 R21,sensação de secura na garganta,gpt-4o-mini,R,380
@@ -10910,7 +10679,6 @@ R21,sensação de corpo estranho na garganta,gpt-4o-mini,R,380
 R21,irritação na garganta,gpt-4o-mini,R,380
 R21,nó na garganta,icpc2_inclusion,R,380
 R21,queixa de irritação na garganta,gpt-4o-mini,R,380
-R21,Outros sintomas e sinais especificados envolvendo os aparelhos circulatório e respiratório,icd10_description,R,380
 R21,Dor de garganta,icd10_description,R,380
 R21,inflamação dos tecidos da garganta,gpt-4o-mini,R,380
 R21,dor amigdalina,icpc2_inclusion,R,380
@@ -10949,7 +10717,6 @@ R24,Expectoração com hemorragia,gpt-4o-mini,R,382
 R24,Hemorragia na expectoração,gpt-4o-mini,R,382
 R24,Hemorragia nas vias respiratórias,gpt-4o-mini,R,382
 R24,Sangue na expectoração,gpt-4o-mini,R,382
-R24,Hemoptise,icpc2_description,R,382
 R24,Sangue na tosse,gpt-4o-mini,R,382
 R25,Muco anormal na tosse,gpt-4o-mini,R,383
 R25,Produção excessiva de muco,gpt-4o-mini,R,383
@@ -10972,14 +10739,12 @@ R26,receio de patologia neoplásica respiratória,gpt-4o-mini,R,384
 R26,medo de diagnóstico de neoplasia respiratória,gpt-4o-mini,R,384
 R26,medo de doenças malignas do pulmão,gpt-4o-mini,R,384
 R26,receio de cancro no sistema respiratório,gpt-4o-mini,R,384
-R26,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,R,384
 R26,preocupação com a possibilidade de cancro pulmonar,gpt-4o-mini,R,384
 R26,receio de tumor no sistema respiratório,gpt-4o-mini,R,384
 R26,preocupação com cancro respiratório,gpt-4o-mini,R,384
 R26,temor de diagnóstico de cancro pulmonar,gpt-4o-mini,R,384
 R26,receio de cancro do trato respiratório,gpt-4o-mini,R,384
 R27,Medo de doença respiratória outra,icpc2_description,R,385
-R27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,R,385
 R27,temor de doenças respiratórias não diagnosticadas,gpt-4o-mini,R,385
 R27,preocupação com sintomas respiratórios,gpt-4o-mini,R,385
 R27,receio de condições respiratórias,gpt-4o-mini,R,385
@@ -11001,7 +10766,6 @@ R28,incapacidade devida a redução da função pulmonar,icpc2_inclusion,R,386
 R28,incapacidade devida a hipóxia,icpc2_inclusion,R,386
 R28,incapacidade devida a hipercapnia,icpc2_inclusion,R,386
 R28,incapacidade devida a doença do nariz/laringe/garganta,icpc2_inclusion,R,386
-R28,Limites impostos às atividades por invalidez,icd10_description,R,386
 R28,Limitação funcional/incapacidade (R),icpc2_description,R,386
 R28,incapacidade devida a doença respiratória,icpc2_inclusion,R,386
 R29,Paragem respiratória [Falência respiratória],icd10_description,R,387
@@ -11010,7 +10774,6 @@ R29,congestão dos pulmões,icpc2_inclusion,R,387
 R29,soluços,icpc2_inclusion,R,387
 R29,fluidos nos pulmões,icpc2_inclusion,R,387
 R29,sensação de tórax apertado,icpc2_inclusion,R,387
-R29,Outros sintomas e sinais especificados envolvendo os aparelhos circulatório e respiratório,icd10_description,R,387
 R29,Asfixia e hipoxemia,icd10_description,R,387
 R29,Solucos,icd10_description,R,387
 R29,Sintoma/queixa aparelho respir outro,icpc2_short,R,387
@@ -11102,7 +10865,6 @@ R74,rinite aguda,icpc2_inclusion,R,391
 R74,coriza,icpc2_inclusion,R,391
 R74,infecção do trato respiratório superior/infecção respiratória superior,icpc2_inclusion,R,391
 R74,faringite,icpc2_inclusion,R,391
-R74,Gengivoestomatite e faringoamigdalite pelo vírus Herpes,icd10_description,R,391
 R74,nasofaringite,icpc2_inclusion,R,391
 R74,resfriado,icpc2_inclusion,R,391
 R74,Infecção respiratória superior aguda,icpc2_description,R,391
@@ -11294,7 +11056,6 @@ R84,"Neoplasia maligna de lobo inferior, brônquio ou pulmão",icd10_description
 R84,Neoplasia maligna de localizações contíguas do brônquio e pulmão,icd10_description,R,401
 R84,Neoplasia maligna da traqueia,icd10_description,R,401
 R84,Neoplasia maligna de parte não especificada de brônquio ou pulmão,icd10_description,R,401
-R84,Mesotelioma de outras localizações,icd10_description,R,401
 R84,Neoplasia maligna de brônquio principal,icd10_description,R,401
 R84,"Neoplasia maligna de lobo superior, brônquio ou pulmão",icd10_description,R,401
 R84,malignidade da traqueia/brônquio/pulmão,icpc2_inclusion,R,401
@@ -11307,7 +11068,6 @@ R85,Neoplasia maligna do seio etmoidal,icd10_description,R,402
 R85,Neoplasia maligna do seio frontal,icd10_description,R,402
 R85,Neoplasia maligna do seio esfenoidal,icd10_description,R,402
 R85,Neoplasia maligna de localizações contíguas de seios acessórios  [peri-nasais],icd10_description,R,402
-R85,Mesotelioma de outras localizações,icd10_description,R,402
 R85,Mesotelioma da pleura,icd10_description,R,402
 R85,Neoplasia maligna do mediastino posterior,icd10_description,R,402
 R85,"Neoplasia maligna do trato respiratório inferior, parte não especificada",icd10_description,R,402
@@ -11365,8 +11125,6 @@ R86,"Neoplasia benigna do sistema respiratório, sem especificação",gpt-4o-min
 R86,Neoplasia benigna do tecido mesotelial da pleura,icd10_description,R,403
 R86,"Neoplasia benigna do aparelho respiratório, sem outra especificação",icd10_description,R,403
 R86,Neoplasia benigna do sistema respiratório inferior,gpt-4o-mini,R,403
-R86,Neoplasia benigna da traqueia,icd10_description,R,403
-R86,"Neoplasia benigna do ouvido médio, cavidades nasais e seios acessórios",icd10_description,R,403
 R86,Tumor benigno do aparelho respiratório,gpt-4o-mini,R,403
 R86,Neoplasia benigna do sistema respiratório central,gpt-4o-mini,R,403
 R86,Neoplasia benigna do tecido mesotelial,gpt-4o-mini,R,403
@@ -11390,15 +11148,12 @@ R87,Corpo estranho no brônquio,icd10_description,R,404
 R87,Corpo estranho em outras partes do trato respiratório,icd10_description,R,404
 R87,"Corpo estranho no trato respiratório, parte não especificada",icd10_description,R,404
 R87,Corpo estranho na narina,icd10_description,R,404
-R88,Lesão por esmagamento da laringe e traqueia,icd10_description,R,405
 R88,Escoriação do nariz,icd10_description,R,405
 R88,Ferida aberta do nariz,icd10_description,R,405
 R88,Luxação da cartilagem do septo nasal,icd10_description,R,405
 R88,Sinusite barotraumática,icd10_description,R,405
 R88,lesão/traumatismo do nariz/do aparelho respiratório,icpc2_inclusion,R,405
-R88,Contusão da garganta,icd10_description,R,405
 R88,Lesão respiratória outra,icpc2_description,R,405
-R88,Outras lesões especificadas do pescoço,icd10_description,R,405
 R88,"Corrosão do trato respiratório, parte não especificada",icd10_description,R,405
 R88,Pneumotórax traumático,icd10_description,R,405
 R88,Hemotórax traumático,icd10_description,R,405
@@ -11447,8 +11202,6 @@ R89,Outras malformações congénitas dos brônquios,icd10_description,R,406
 R89,Estenose congénita dos brônquios,icd10_description,R,406
 R89,Bronquiectasias congénitas,icd10_description,R,406
 R89,Quisto congénito do mediastino,icd10_description,R,406
-R90,amigdalite crónica,icpc2_inclusion,R,407
-R90,Outras patologias especificadas do nariz e seios nasais,icd10_description,R,407
 R90,Amigdalite e adenoidite crónicas,icd10_description,R,407
 R90,Hipertrofia das amígdalas,icd10_description,R,407
 R90,"Doença crónica das amígdalas e adenóides, sem outra especificação",icd10_description,R,407
@@ -11466,7 +11219,6 @@ R92,Neoplasia de comportamento incerto do timo,icd10_description,R,408
 R92,"Neoplasia de comportamento incerto da traqueia, brônquios e pulmão",icd10_description,R,408
 R92,Neoplasia de comportamento incerto da laringe,icd10_description,R,408
 R92,"Carcinoma in situ do aparelho respiratório, sem outra especificação",icd10_description,R,408
-R92,Carcinoma in situ de outras partes do aparelho respiratório,icd10_description,R,408
 R92,Carcinoma in situ dos brônquios e do pulmão,icd10_description,R,408
 R92,Carcinoma in situ da traqueia,icd10_description,R,408
 R92,Carcinoma in situ da laringe,icd10_description,R,408
@@ -11496,7 +11248,6 @@ R96,asma de início tardio,gpt-4o-mini,R,410
 R96,síndrome asmática,gpt-4o-mini,R,410
 R96,asma atópica,gpt-4o-mini,R,410
 R96,asma noturna,gpt-4o-mini,R,410
-R96,crise asmática,gpt-4o-mini,R,410
 R96,síndrome de hiperreactividade brônquica,gpt-4o-mini,R,410
 R96,condição asmática,gpt-4o-mini,R,410
 R96,asma intermitente,gpt-4o-mini,R,410
@@ -11626,13 +11377,11 @@ R99,Outros abcessos da faringe,icd10_description,R,413
 R99,Abcesso retrofaríngeo e parafaríngeo,icd10_description,R,413
 R99,Outras doenças da laringe,icd10_description,R,413
 R99,Estenose da laringe,icd10_description,R,413
-R99,Espasmo da laringe,icd10_description,R,413
 R99,Edema da laringe,icd10_description,R,413
 R99,Outras doenças das cordas vocais,icd10_description,R,413
 R99,Nódulos das cordas vocais,icd10_description,R,413
 R99,Pólipo das cordas vocais e da laringe,icd10_description,R,413
 R99,Paralisia das cordas vocais e laringe,icd10_description,R,413
-R99,Outras patologias especificadas do nariz e seios nasais,icd10_description,R,413
 R99,Hipertrofia dos cornetos nasais,icd10_description,R,413
 R99,Desvio do septo nasal,icd10_description,R,413
 R99,Quisto e mucocelo do nariz e dos seios paranasais,icd10_description,R,413
@@ -11671,9 +11420,7 @@ S01,dor na epiderme,gpt-4o-mini,S,414
 S01,dor associada à pele,gpt-4o-mini,S,414
 S01,dor e desconforto na pele,gpt-4o-mini,S,414
 S01,dor na pele,gpt-4o-mini,S,414
-S01,hipersensibilidade cutânea,gpt-4o-mini,S,414
 S01,ardor na pele,gpt-4o-mini,S,414
-S01,sensação de ardor,icpc2_inclusion,S,414
 S01,lesão ou erupção cutânea dolorosa,icpc2_inclusion,S,414
 S01,pele dolorida,icpc2_inclusion,S,414
 S01,lesão cutânea dolorosa,gpt-4o-mini,S,414
@@ -11690,7 +11437,6 @@ S01,distúrbios da dor cutânea,gpt-4o-mini,S,414
 S01,ardência cutânea,gpt-4o-mini,S,414
 S01,Dor/sensibilidade dolorosa da pele,icpc2_description,S,414
 S01,irritação sensitiva da pele,gpt-4o-mini,S,414
-S01,Outros distúrbios da sensibilidade da pele,icd10_description,S,414
 S02,prurido neuropático,gpt-4o-mini,S,415
 S02,prurido induzido,gpt-4o-mini,S,415
 S02,prurido crónico,gpt-4o-mini,S,415
@@ -11763,7 +11509,6 @@ S05,elevações na pele,gpt-4o-mini,S,418
 S05,tumefações cutâneas,gpt-4o-mini,S,418
 S05,alterações superficiais da pele,gpt-4o-mini,S,418
 S05,nódulos variados na pele,gpt-4o-mini,S,418
-S05,Outras alterações da pele e as não especificadas,icd10_description,S,418
 S05,edema cutâneo,gpt-4o-mini,S,418
 S05,inchaços na pele,gpt-4o-mini,S,418
 S05,pápulas inflamatórias,gpt-4o-mini,S,418
@@ -11776,7 +11521,6 @@ S06,Eritema e outra erupção não especificada da pele,icd10_description,S,419
 S06,dermatite,gpt-4o-mini,S,419
 S06,eritema intertriginoso,gpt-4o-mini,S,419
 S06,erupção exantematosa,gpt-4o-mini,S,419
-S06,irritação da pele,gpt-4o-mini,S,419
 S06,erupção papulosa,gpt-4o-mini,S,419
 S06,erupção cutânea,gpt-4o-mini,S,419
 S06,Afecões eritematosas SOE,icd10_description,S,419
@@ -11813,8 +11557,6 @@ S07,erupção cutânea múltipla,gpt-4o-mini,S,420
 S07,eritema e exantema,gpt-4o-mini,S,420
 S07,manchas vermelhas na pele,gpt-4o-mini,S,420
 S07,manchas/eritema/vermelhidão em múltiplos locais,icpc2_inclusion,S,420
-S07,Afecões eritematosas SOE,icd10_description,S,420
-S07,Eritema e outra erupção não especificada da pele,icd10_description,S,420
 S07,lesões cutâneas eritematosas difusas,gpt-4o-mini,S,420
 S08,palidez,icpc2_inclusion,S,421
 S08,rubor,icpc2_inclusion,S,421
@@ -11891,10 +11633,6 @@ S11,infecção dérmica por trauma,gpt-4o-mini,S,424
 S11,infecção de pele após acidente,gpt-4o-mini,S,424
 S11,infecção cutânea pós-trauma,gpt-4o-mini,S,424
 S11,infecção de pele após trauma,gpt-4o-mini,S,424
-S12,Escoriação do nariz,icd10_description,S,425
-S12,Escoriação da orelha,icd10_description,S,425
-S12,Outras lesões superficiais e lesões superficiais não especificadas da pálpebra e área periocular,icd10_description,S,425
-S12,Escoriação do lábio e cavidade oral,icd10_description,S,425
 S12,Escoriação de outras partes da cabeça,icd10_description,S,425
 S12,Escoriação do escalpe,icd10_description,S,425
 S12,Outros traumatismos superficiais da garganta e os não especificados,icd10_description,S,425
@@ -12019,102 +11757,26 @@ S14,Queimadura de terceiro grau do tornozelo e pé,icd10_description,S,427
 S14,Queimadura de segundo grau do tornozelo e pé,icd10_description,S,427
 S14,Queimadura de primeiro grau do tornozelo e pé,icd10_description,S,427
 S14,Queimadura de grau não especificado do tornozelo e pé,icd10_description,S,427
-S15,"Outras escoriações, antebraço",icd10_description,S,428
-S15,"Escoriação, sem outra especificação, do abdómen, região lombar, pélvis e órgãos genitais externos",icd10_description,S,428
-S15,"Outras escoriações, braço",icd10_description,S,428
-S15,"Outras escoriações, punho",icd10_description,S,428
-S15,"Outras escoriações do abdómen, região lombar, pélvis e órgãos genitais externos",icd10_description,S,428
-S15,"Outras escoriações, pé",icd10_description,S,428
 S15,Corpo estranho na pele,icpc2_description,S,428
 S15,corpo estranho sob a unha,icpc2_inclusion,S,428
-S15,Outros traumatismos superficiais da parede posterior do tórax,icd10_description,S,428
-S15,"Outras escoriações, perna",icd10_description,S,428
-S15,Outros traumatismos superficiais da parede anterior do tórax,icd10_description,S,428
-S15,Escoriação da orelha,icd10_description,S,428
-S15,Escoriação de parte não especificada do pescoço,icd10_description,S,428
-S15,Outras lesões superficiais e lesões superficiais não especificadas da pálpebra e área periocular,icd10_description,S,428
-S15,Escoriação de outras partes especificadas do pescoço,icd10_description,S,428
-S15,Outros traumatismos superficiais da garganta e os não especificados,icd10_description,S,428
-S15,Escoriação de parte não especificada da cabeça,icd10_description,S,428
-S15,Escoriação de outras partes da cabeça,icd10_description,S,428
-S15,Escoriação do lábio e cavidade oral,icd10_description,S,428
-S15,Escoriação do escalpe,icd10_description,S,428
-S15,Outros traumatismos superficiais da mama e os não especificados,icd10_description,S,428
-S15,Escoriação do nariz,icd10_description,S,428
 S16,"Escoriação, sem outra especificação, do punho, mão e dedos da mão",icd10_description,S,429
-S16,Contusão de dedo com lesão da unha,icd10_description,S,429
-S16,Contusão do punho e mão,icd10_description,S,429
-S16,Contusão da anca,icd10_description,S,429
-S16,Contusão de dedo sem lesão da unha,icd10_description,S,429
-S16,"Outras escoriações, punho",icd10_description,S,429
-S16,Contusão da coxa,icd10_description,S,429
-S16,"Outras escoriações, perna",icd10_description,S,429
-S16,Contusão do joelho,icd10_description,S,429
-S16,Contusão da perna,icd10_description,S,429
 S16,"Escoriação, sem outra especificação, do joelho e perna",icd10_description,S,429
-S16,Contusão do tornozelo,icd10_description,S,429
-S16,"Contusão de dedo do pé, sem lesão da unha",icd10_description,S,429
-S16,"Contusão de dedo do pé, com lesão da unha",icd10_description,S,429
 S16,"Escoriação, sem outra especificação, do cotovelo e antebraço",icd10_description,S,429
-S16,Contusão do pé,icd10_description,S,429
 S16,"Escoriação, sem outra especificação, da anca e coxa",icd10_description,S,429
-S16,"Outras escoriações, antebraço",icd10_description,S,429
-S16,Outros traumatismos superficiais da garganta e os não especificados,icd10_description,S,429
-S16,Contusão do cotovelo,icd10_description,S,429
-S16,"Outras escoriações, pé",icd10_description,S,429
-S16,Escoriação do escalpe,icd10_description,S,429
-S16,Escoriação de outras partes da cabeça,icd10_description,S,429
 S16,Traumatismo/contusão,icpc2_description,S,429
-S16,Escoriação de parte não especificada da cabeça,icd10_description,S,429
-S16,Escoriação de outras partes especificadas do pescoço,icd10_description,S,429
-S16,Escoriação de parte não especificada do pescoço,icd10_description,S,429
-S16,Contusão do antebraço,icd10_description,S,429
 S16,Contusão da mama,icd10_description,S,429
-S16,Contusão do tórax,icd10_description,S,429
-S16,Outros traumatismos superficiais da parede anterior do tórax,icd10_description,S,429
-S16,Contusão da região lombar e pélvis,icd10_description,S,429
-S16,Contusão da parede abdominal,icd10_description,S,429
-S16,Contusão do ombro e braço,icd10_description,S,429
-S16,"Outras escoriações, braço",icd10_description,S,429
 S16,"Escoriação, sem outra especificação, do ombro e braço",icd10_description,S,429
-S16,Outros traumatismos superficiais da mama e os não especificados,icd10_description,S,429
 S16,"Escoriação, sem outra especificação, do tornozelo, pé e dedo do pé",icd10_description,S,429
-S16,Outros traumatismos superficiais da parede posterior do tórax,icd10_description,S,429
 S16,hematoma,icpc2_inclusion,S,429
 S16,equimose,icpc2_inclusion,S,429
-S17,"Escoriação, sem outra especificação, da anca e coxa",icd10_description,S,430
 S17,esfoladela,icpc2_inclusion,S,430
-S17,"Escoriação, sem outra especificação, do ombro e braço",icd10_description,S,430
-S17,"Outras escoriações, braço",icd10_description,S,430
-S17,"Escoriação, sem outra especificação, do abdómen, região lombar, pélvis e órgãos genitais externos",icd10_description,S,430
-S17,"Outras escoriações do abdómen, região lombar, pélvis e órgãos genitais externos",icd10_description,S,430
-S17,Outros traumatismos superficiais da parede posterior do tórax,icd10_description,S,430
-S17,Outros traumatismos superficiais da parede anterior do tórax,icd10_description,S,430
-S17,Outros traumatismos superficiais da mama e os não especificados,icd10_description,S,430
-S17,Escoriação de parte não especificada do pescoço,icd10_description,S,430
-S17,Escoriação de outras partes especificadas do pescoço,icd10_description,S,430
-S17,Escoriação de parte não especificada da cabeça,icd10_description,S,430
-S17,"Escoriação, sem outra especificação, do cotovelo e antebraço",icd10_description,S,430
-S17,Escoriação de outras partes da cabeça,icd10_description,S,430
-S17,Escoriação do escalpe,icd10_description,S,430
-S17,"Escoriação, sem outra especificação, do tornozelo, pé e dedo do pé",icd10_description,S,430
-S17,"Outras escoriações, pé",icd10_description,S,430
-S17,Contusão do pé,icd10_description,S,430
-S17,"Escoriação, sem outra especificação, do joelho e perna",icd10_description,S,430
-S17,"Outras escoriações, perna",icd10_description,S,430
-S17,"Escoriação, sem outra especificação, do punho, mão e dedos da mão",icd10_description,S,430
 S17,contusão se houver solução de continuidade,icpc2_inclusion,S,430
-S17,Outros traumatismos superficiais da garganta e os não especificados,icd10_description,S,430
-S17,"Outras escoriações, punho",icd10_description,S,430
-S17,"Outras escoriações, antebraço",icd10_description,S,430
 S17,Abrasão/arranhão/bolha,icpc2_description,S,430
-S18,Ferida aberta da glândula tiróide,icd10_description,S,431
 S18,"Ferida aberta de dedo do pé, com dano na unha",icd10_description,S,431
 S18,"Ferida aberta de dedo do pé, sem dano na unha",icd10_description,S,431
 S18,Ferida aberta de parte não especificada da cabeça,icd10_description,S,431
 S18,Ferida aberta de outras partes da cabeça,icd10_description,S,431
 S18,Ferida aberta da região malar e temporomandibular,icd10_description,S,431
-S18,Ferida aberta do nariz,icd10_description,S,431
 S18,Ferida aberta do escalpe,icd10_description,S,431
 S18,"Ferida aberta de dedo polegar, com dano na unha",icd10_description,S,431
 S18,Ferida aberta da anca,icd10_description,S,431
@@ -12126,46 +11788,16 @@ S18,"Ferida aberta de dedo polegar, sem dano na unha",icd10_description,S,431
 S18,Ferida aberta do cotovelo,icd10_description,S,431
 S18,Ferida aberta do antebraço,icd10_description,S,431
 S18,Ferida aberta do ombro,icd10_description,S,431
-S18,Ferida aberta da laringe e traqueia,icd10_description,S,431
 S18,Ferida aberta do pé,icd10_description,S,431
 S18,Laceração/corte,icpc2_description,S,431
-S18,Ferida aberta da faringe e do esófago cervical,icd10_description,S,431
-S18,Ferida aberta de outras partes especificadas do pescoço,icd10_description,S,431
 S18,Ferida aberta do braço,icd10_description,S,431
-S18,Ferida aberta da mama,icd10_description,S,431
-S18,Ferida aberta de parte não especificada do pescoço,icd10_description,S,431
-S18,"Ferida aberta da parede posterior do tórax, sem penetração da cavidade toráxica",icd10_description,S,431
-S18,Ferida aberta de parte não especificada do tórax,icd10_description,S,431
 S18,Ferida aberta da região lombar e pélvis,icd10_description,S,431
 S18,"Ferida aberta da parede abdominal, sem penetração na cavidade peritoneal",icd10_description,S,431
 S18,"Ferida aberta de outras partes do abdómen, região lombar e pélvis",icd10_description,S,431
-S18,"Ferida aberta da parede anterior do tórax, sem penetração na cavidade toráxica",icd10_description,S,431
 S18,laceração/corte da pele/tecidos subcutâneos,icpc2_inclusion,S,431
-S19,"Escoriação, sem outra especificação, do tornozelo, pé e dedo do pé",icd10_description,S,432
-S19,"Outras escoriações, pé",icd10_description,S,432
-S19,Outros traumatismos superficiais da mama e os não especificados,icd10_description,S,432
 S19,Lesão cutânea outra,icpc2_description,S,432
-S19,Outros traumatismos superficiais da parede anterior do tórax,icd10_description,S,432
 S19,picada com uma agulha,icpc2_inclusion,S,432
-S19,Escoriação de parte não especificada da cabeça,icd10_description,S,432
-S19,Outros traumatismos superficiais da garganta e os não especificados,icd10_description,S,432
-S19,Escoriação de outras partes especificadas do pescoço,icd10_description,S,432
-S19,Escoriação de parte não especificada do pescoço,icd10_description,S,432
-S19,"Escoriação, sem outra especificação, do joelho e perna",icd10_description,S,432
-S19,"Outras escoriações, perna",icd10_description,S,432
-S19,"Escoriação, sem outra especificação, da anca e coxa",icd10_description,S,432
-S19,Escoriação de outras partes da cabeça,icd10_description,S,432
-S19,"Escoriação, sem outra especificação, do punho, mão e dedos da mão",icd10_description,S,432
-S19,"Escoriação, sem outra especificação, do cotovelo e antebraço",icd10_description,S,432
-S19,"Outras escoriações, antebraço",icd10_description,S,432
-S19,"Escoriação, sem outra especificação, do ombro e braço",icd10_description,S,432
-S19,"Outras escoriações, braço",icd10_description,S,432
 S19,avulsão da unha,icpc2_inclusion,S,432
-S19,"Outras escoriações do abdómen, região lombar, pélvis e órgãos genitais externos",icd10_description,S,432
-S19,Outros traumatismos superficiais da parede posterior do tórax,icd10_description,S,432
-S19,"Outras escoriações, punho",icd10_description,S,432
-S19,Escoriação do escalpe,icd10_description,S,432
-S19,"Escoriação, sem outra especificação, do abdómen, região lombar, pélvis e órgãos genitais externos",icd10_description,S,432
 S19,punctura,icpc2_inclusion,S,432
 S20,Calo por atrito,gpt-4o-mini,S,433
 S20,Calo por pressão,gpt-4o-mini,S,433
@@ -12281,7 +11913,6 @@ S24,"Anomalias da cor e do pedículo dos cabelos e dos pelos, não especificadas
 S24,Outras anomalias da cor e do pedículo dos cabelos ou pelos,icd10_description,S,437
 S24,Variações da cor do cabelo,icd10_description,S,437
 S24,Tricorrexis nodosa,icd10_description,S,437
-S26,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,S,438
 S26,Medo de cancro da pele,icpc2_description,S,438
 S26,Preocupação com a possibilidade de cancro de pele,gpt-4o-mini_human-dc,S,438
 S26,Receio de cancro da pele,gpt-4o-mini,S,438
@@ -12298,7 +11929,6 @@ S26,Receio de doenças malignas da pele,gpt-4o-mini,S,438
 S26,Preocupação com o risco de cancro da pele,gpt-4o-mini,S,438
 S26,Temor de diagnóstico de cancro da pele,gpt-4o-mini_human-dc,S,438
 S27,Receio de problemas de pele não identificados,gpt-4o-mini,S,439
-S27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,S,439
 S27,Medo de problemas dermatológicos,gpt-4o-mini,S,439
 S27,Receio de doenças cutâneas,gpt-4o-mini,S,439
 S27,Preocupação excessiva com problemas cutâneos,gpt-4o-mini,S,439
@@ -12329,7 +11959,6 @@ S28,Restrições de atividade por condições de pele,gpt-4o-mini,S,440
 S28,Dificuldades funcionais por problemas cutâneos,gpt-4o-mini,S,440
 S28,Dificuldades nas atividades diárias por problemas de pele,gpt-4o-mini,S,440
 S28,Limitação funcional por problemas dermatológicos,gpt-4o-mini,S,440
-S28,Limites impostos às atividades por invalidez,icd10_description,S,440
 S28,Limitação funcional por condições dermatológicas,gpt-4o-mini,S,440
 S28,Restrições funcionais devido a doenças de pele,gpt-4o-mini,S,440
 S28,Restrições funcionais por condições dermatológicas,gpt-4o-mini,S,440
@@ -12344,7 +11973,6 @@ S29,petéquias,icpc2_inclusion,S,441
 S29,Sintoma/queixa da pele outro,icpc2_description,S,441
 S29,problemas do umbigo,icpc2_inclusion,S,441
 S29,Equimoses espontâneas,icd10_description,S,441
-S29,Outras alterações da pele e as não especificadas,icd10_description,S,441
 S70,Herpes zoster sem complicações,icd10_description,S,442
 S70,Herpes zoster,icpc2_description,S,442
 S70,Meningite pelo vírus Herpes zoster,icd10_description,S,442
@@ -12380,7 +12008,6 @@ S71,Herpes com lesões,gpt-4o-mini,S,443
 S71,Herpes mucocutâneo,gpt-4o-mini,S,443
 S71,Herpes com história de recorrência,gpt-4o-mini,S,443
 S71,Eczema herpético,gpt-4o-mini,S,443
-S71,Eczema herpético,icd10_description,S,443
 S71,Dermatite vesícular pelo vírus Herpes,icd10_description,S,443
 S71,Outras formas de infeção pelo vírus Herpes,icd10_description,S,443
 S71,"Infeção pelo vírus Herpes, sem outra especificação",icd10_description,S,443
@@ -12500,7 +12127,6 @@ S76,Gomas e úlceras da bouba,icd10_description,S,448
 S76,dermatite a estreptococco,icpc2_inclusion,S,448
 S76,piodermia,icpc2_inclusion,S,448
 S76,erisipela,icpc2_inclusion,S,448
-S76,celulite,icpc2_inclusion,S,448
 S76,Infecção da pele outra,icpc2_description,S,448
 S76,"Pinta, não especificada",icd10_description,S,448
 S76,Outras lesões cutâneas precoces da bouba,icd10_description,S,448
@@ -12511,7 +12137,6 @@ S77,Melanoma invasivo de localizações contíguas da pele,icd10_description,S,4
 S77,"Melanoma da pele, sem outra especificação",icd10_description,S,449
 S77,Neoplasia maligna da pele,icpc2_description,S,449
 S77,"Outra neoplasia maligna e neoplasia maligna não especificada da pele da pálpebra, inclui as comissuras palpebrais",icd10_description,S,449
-S77,Outra neoplasia maligna ou neoplasia maligna não especificada da pele da orelha e canal auditivo externo,icd10_description,S,449
 S77,Outra neoplasia maligna ou neoplasia maligna não especificada da pele de outras partes e partes não especificadas da face,icd10_description,S,449
 S77,Outra neoplasia maligna ou neoplasia maligna não especificada da pele do lábio,icd10_description,S,449
 S77,"Melanoma do membro inferior, inclui anca",icd10_description,S,449
@@ -12558,8 +12183,6 @@ S79,Neoplasia de comportamento incerto da pele,icd10_description,S,451
 S79,"Outra neoplasia benigna da pele, sem outra especificação",icd10_description,S,451
 S79,Outra neoplasia benigna da pele de outras partes e partes não especificadas da face,icd10_description,S,451
 S79,Carcinoma in situ da pele do escalpe e pescoço,icd10_description,S,451
-S79,Outra neoplasia benigna da pele da orelha e canal auditivo externo,icd10_description,S,451
-S79,Carcinoma in situ da pele da orelha e canal auditivo externo,icd10_description,S,451
 S79,quisto dermóide,icpc2_inclusion,S,451
 S79,neoplasia benigna da pele,icpc2_inclusion,S,451
 S79,Neoplasia cutânea benigna/não especificada,icpc2_description,S,451
@@ -12777,7 +12400,6 @@ S87,dermatite com crostas,gpt-4o-mini,S,459
 S87,dermatite inflamatória,gpt-4o-mini,S,459
 S87,eczema em áreas sensíveis,gpt-4o-mini,S,459
 S87,eczema crónico,gpt-4o-mini,S,459
-S87,dermatite escamosa,gpt-4o-mini,S,459
 S87,dermatite atópica em crianças,gpt-4o-mini,S,459
 S87,eczema das mãos,gpt-4o-mini,S,459
 S87,dermatite irritativa,gpt-4o-mini,S,459
@@ -12868,7 +12490,6 @@ S90,Pitiríase rósea,gpt-4o-mini,S,462
 S90,Pitiríase do tronco,gpt-4o-mini,S,462
 S90,Pitiríase,gpt-4o-mini,S,462
 S90,Pitiríase em tronco,gpt-4o-mini,S,462
-S90,Pitiríase rosada,icpc2_description,S,462
 S91,Outras psoríases,icd10_description,S,463
 S91,Psoríase,icpc2_description,S,463
 S91,Psoríase pustulosa generalizada,icd10_description,S,463
@@ -12932,7 +12553,6 @@ S94,unha encarnada do dedo do pé,human-dc,S,466
 S94,unha encarnada do pé,human-dc,S,466
 S94,unha encarnada,human-dc,S,466
 S94,Unha encravada,icpc2_description,S,466
-S94,Unha encravada,icd10_description,S,466
 S95,Doença de molusco,gpt-4o-mini,S,467
 S95,Lesões cutâneas por molusco,gpt-4o-mini,S,467
 S95,Doença do molusco,gpt-4o-mini,S,467
@@ -12941,10 +12561,8 @@ S95,Molusco na pele,gpt-4o-mini,S,467
 S95,Molusco cutâneo,gpt-4o-mini,S,467
 S95,Molusco contagioso cutâneo,gpt-4o-mini,S,467
 S95,Lesões por molusco contagioso,gpt-4o-mini,S,467
-S95,Molusco contagioso,icpc2_description,S,467
 S95,Molusco viral,gpt-4o-mini,S,467
 S95,Infecção por molusco contagioso,gpt-4o-mini,S,467
-S95,Molusco contagioso,icd10_description,S,467
 S96,Acne vulgar,icd10_description,S,468
 S96,Acne varioliforme,icd10_description,S,468
 S96,Acne tropical,icd10_description,S,468
@@ -13207,7 +12825,6 @@ T03,diminuição do desejo alimentar,gpt-4o-mini,T,474
 T03,diminuição da ingestão alimentar,gpt-4o-mini,T,474
 T03,Perda de apetite,icpc2_description,T,474
 T03,anorexia,icpc2_inclusion,T,474
-T03,Anorexia,icd10_description,T,474
 T03,apetite fraco,gpt-4o-mini,T,474
 T03,desinteresse por refeições,gpt-4o-mini,T,474
 T04,Problema alimentar lactente/criança,icpc2_short,T,475
@@ -13218,7 +12835,6 @@ T04,desafios nutricionais em crianças,gpt-4o-mini,T,475
 T04,desafios na nutrição de bebés,gpt-4o-mini,T,475
 T04,problemas de nutrição em crianças,gpt-4o-mini,T,475
 T04,desafios na alimentação de lactentes,gpt-4o-mini,T,475
-T04,problemas de alimentação em crianças,gpt-4o-mini,T,475
 T04,dificuldade na amamentação,human-dc,T,475
 T04,problemas de alimentação na infância,gpt-4o-mini,T,475
 T04,dificuldades em nutrir lactentes,gpt-4o-mini,T,475
@@ -13257,8 +12873,6 @@ T05,dificuldades em adquirir nutrientes,gpt-4o-mini,T,476
 T05,dificuldades em seguir uma dieta,gpt-4o-mini,T,476
 T05,problemas de consumo alimentar,gpt-4o-mini,T,476
 T05,problemas de nutrição em adultos,gpt-4o-mini,T,476
-T05,problemas de ingestão alimentar,gpt-4o-mini,T,476
-T05,Dificuldades de alimentação,icd10_description,T,476
 T05,problema em como alimentar um adulto,icpc2_inclusion,T,476
 T07,Aumento de peso,icpc2_description,T,477
 T07,Ganho anormal de peso,icd10_description,T,477
@@ -13374,7 +12988,6 @@ T26,inquietação sobre a possibilidade de cancro endócrino,gpt-4o-mini,T,481
 T26,temor de ser diagnosticado com cancro endócrino,gpt-4o-mini,T,481
 T26,Medo de cancro do sistema endócrino,icpc2_description,T,481
 T26,receio de tumor do sistema endócrino,gpt-4o-mini,T,481
-T26,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,T,481
 T26,temor de neoplasia endócrina,gpt-4o-mini,T,481
 T27,Receio de diabetes,gpt-4o-mini,T,482
 T27,Medo de síndrome de Turner,gpt-4o-mini,T,482
@@ -13396,7 +13009,6 @@ T27,Medo de obesidade,gpt-4o-mini,T,482
 T27,Medo de hiperparatiroidismo,gpt-4o-mini,T,482
 T27,medo de diabetes,icpc2_inclusion,T,482
 T27,Receio de hipotiroidismo,gpt-4o-mini,T,482
-T27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,T,482
 T27,Medo de doença de Graves,gpt-4o-mini,T,482
 T27,Receio de feocromocitoma,gpt-4o-mini,T,482
 T27,Receio de acromegalia,gpt-4o-mini,T,482
@@ -13417,7 +13029,6 @@ T28,Limitação de atividades por insuficiência nutricional,gpt-4o-mini,T,483
 T28,Dificuldades funcionais por condições endócrinas,gpt-4o-mini,T,483
 T28,Impedimentos funcionais por problemas endócrinos,gpt-4o-mini,T,483
 T28,Incapacidade devido a problemas metabólicos,gpt-4o-mini,T,483
-T28,Limites impostos às atividades por invalidez,icd10_description,T,483
 T28,Limitação funcional/incapacidade (T),icpc2_description,T,483
 T28,Limitação de atividades por problemas metabólicos,gpt-4o-mini,T,483
 T28,Incapacidade por disfunções endócrinas,gpt-4o-mini,T,483
@@ -13440,7 +13051,6 @@ T29,desejo de comer determinado alimento,icpc2_inclusion,T,484
 T29,peso inferior ao normal,icpc2_inclusion,T,484
 T29,Sintoma/queixa do sistema (T) outro,icpc2_short,T,484
 T29,apetite por determinado alimento,gpt-4o-mini,T,484
-T29,polifagia,gpt-4o-mini,T,484
 T29,Sintoma do sistema endócrino,gpt-4o-mini,T,484
 T70,Tiroidite aguda,icd10_description,T,485
 T70,Infecção da tireoide,gpt-4o-mini,T,485
@@ -13554,7 +13164,6 @@ T80,"Síndrome da deficiência congénita de iodo, não especificada",icd10_desc
 T80,cretinismo,icpc2_inclusion,T,490
 T80,Malformacoes congénitas de  glândula suprarrenal,icd10_description,T,490
 T80,Patologias adrenogenitais congénitos associados à deficiência enzimática,icd10_description,T,490
-T80,Malformacoes congénitas de glândulas endocrinas NCOP,icd10_description,T,490
 T81,Bócio não-tóxico difuso,icd10_description,T,491
 T81,Bócio não tóxico uninodular,icd10_description,T,491
 T81,Bócio multinodular não tóxico ,icd10_description,T,491
@@ -13592,11 +13201,7 @@ T82,Outra obesidade,icd10_description,T,492
 T82,Obesidade e estilo de vida,gpt-4o-mini,T,492
 T82,Obesidade infantil,gpt-4o-mini,T,492
 T83,Excesso de peso,icpc2_description,T,493
-T83,Obesidade mórbida (grave) com hipoventilação alveolar,icd10_description,T,493
-T83,Outra obesidade,icd10_description,T,493
 T83,Peso em excesso,gpt-4o-mini,T,493
-T83,"Obesidade, sem outra especificação",icd10_description,T,493
-T83,Obesidade induzida por drogas,icd10_description,T,493
 T83,Sobrepeso,gpt-4o-mini,T,493
 T83,Peso acima do normal,gpt-4o-mini,T,493
 T83,Aumento de índice de massa corporal,gpt-4o-mini,T,493
@@ -13604,7 +13209,6 @@ T83,Peso elevado,gpt-4o-mini,T,493
 T83,Sobrepeso leve,gpt-4o-mini,T,493
 T83,Excesso de peso leve,gpt-4o-mini,T,493
 T83,Peso acima do saudável,gpt-4o-mini,T,493
-T83,Aumento de peso,gpt-4o-mini,T,493
 T83,Excesso de massa corporal,gpt-4o-mini,T,493
 T83,Peso excessivo,gpt-4o-mini,T,493
 T83,Excesso de peso corporal,gpt-4o-mini,T,493
@@ -13612,7 +13216,6 @@ T83,Sobrepeso moderado,gpt-4o-mini,T,493
 T83,Sobrepeso não obesidade,gpt-4o-mini,T,493
 T83,Acúmulo de peso,gpt-4o-mini,T,493
 T83,Excesso de gordura corporal,gpt-4o-mini,T,493
-T83,Obesidade devida a excesso de calorias,icd10_description,T,493
 T83,Excesso de peso saudável,gpt-4o-mini,T,493
 T83,Índice de massa corporal elevado,gpt-4o-mini,T,493
 T83,Peso acima do ideal,gpt-4o-mini,T,493
@@ -13659,7 +13262,6 @@ T89,DM tipo 1 com complicações renais,gpt-4o-mini,T,497
 T89,DM tipo 1 com complicações oculares,gpt-4o-mini,T,497
 T89,Diabetes insulino-dependente,icpc2_description,T,497
 T89,diabetes juvenil,icpc2_inclusion,T,497
-T89,diabetes do tipo 1,icpc2_inclusion,T,497
 T89,DM tipo 1 com cetoacidose,gpt-4o-mini,T,497
 T89,DM tipo 1 com complicações dermatológicas,gpt-4o-mini,T,497
 T89,diabetes tipo 1 com síndrome metabólica,gpt-4o-mini,T,497
@@ -13693,7 +13295,6 @@ T89,Diabetes mellitus tipo 1 com outras complicações especificadas,icd10_descr
 T89,Diabetes mellitus tipo 1 com complicações circulatórias,icd10_description,T,497
 T89,Diabetes mellitus tipo 1 com complicações neurológicas,icd10_description,T,497
 T89,diabetes tipo 1 com pé diabético,gpt-4o-mini,T,497
-T89,Diabetes insulino-dependente,gpt-4o-mini,T,497
 T89,DM tipo 1 sem complicações,gpt-4o-mini,T,497
 T89,diabetes tipo 1 com descompensação,gpt-4o-mini,T,497
 T89,Diabetes mellitus tipo 1 com complicações oftalmológicas,icd10_description,T,497
@@ -14210,7 +13811,6 @@ U06,Hematúria recidivante e persistente - glomerulonefrite difusa em crescente,
 U06,Hematúria recidivante e persistente - Doença de depósito denso,icd10_description,U,507
 U06,Hematúria,icpc2_description,U,507
 U06,Hematúria recidivante e persistente - não especificada,icd10_description,U,507
-U06,Hematúria,icd10_description,U,507
 U06,Hematúria recidivante e persistente - anormalidade glomerular minor,icd10_description,U,507
 U06,sangue na urina,icpc2_inclusion,U,507
 U07,queixas urinárias,gpt-4o-mini,U,508
@@ -14224,7 +13824,6 @@ U07,urina com alteração de cor,gpt-4o-mini,U,508
 U07,urina com presença de sedimentos,gpt-4o-mini,U,508
 U07,urina com mau odor,icpc2_inclusion,U,508
 U07,alteração na urina,gpt-4o-mini,U,508
-U07,desconforto urinário,gpt-4o-mini,U,508
 U07,Sintoma/queixa da urina outro,icpc2_description,U,508
 U07,urina escura,icpc2_inclusion,U,508
 U07,urina com odor doce,gpt-4o-mini,U,508
@@ -14232,7 +13831,6 @@ U07,urina com cheiro forte,gpt-4o-mini,U,508
 U07,urina com presença de proteínas,gpt-4o-mini,U,508
 U07,urina com espuma,gpt-4o-mini,U,508
 U08,Dificuldade em esvaziar a bexiga,gpt-4o-mini,U,509
-U08,Dificuldade em urinar,gpt-4o-mini,U,509
 U08,Retenção urinária aguda,gpt-4o-mini,U,509
 U08,Obstrução urinária,gpt-4o-mini,U,509
 U08,Dificuldades na eliminação urinária,gpt-4o-mini,U,509
@@ -14248,7 +13846,6 @@ U08,Incapacidade de urinar,gpt-4o-mini,U,509
 U08,Problemas de retenção urinária,gpt-4o-mini,U,509
 U08,Retenção vesical,gpt-4o-mini,U,509
 U08,Retenção urinária crónica,gpt-4o-mini,U,509
-U08,Retenção urinária,icd10_description,U,509
 U13,sinais de irritação vesical,gpt-4o-mini,U,510
 U13,irritação da bexiga,gpt-4o-mini,U,510
 U13,hipersensibilidade da bexiga,gpt-4o-mini,U,510
@@ -14259,10 +13856,8 @@ U13,alterações na função da bexiga,gpt-4o-mini,U,510
 U13,bexiga irritável,icpc2_inclusion,U,510
 U13,distúrbios da bexiga,gpt-4o-mini,U,510
 U13,Sintoma da bexiga,gpt-4o-mini,U,510
-U13,dor na bexiga,icpc2_inclusion,U,510
 U13,Extravazamento de urina,icd10_description,U,510
 U13,Sintoma/queixa da bexiga outro,icpc2_description,U,510
-U13,Outros sintomas e sinais envolvendo o aparelho genitourinário,icd10_description,U,510
 U13,problemas de armazenamento urinário,gpt-4o-mini,U,510
 U13,desconforto na bexiga,gpt-4o-mini,U,510
 U14,"Cólica renal, sem outra especificação",icd10_description,U,511
@@ -14292,7 +13887,6 @@ U14,problemas com o rim,icpc2_inclusion,U,511
 U14,dor nos órgãos renais,gpt-4o-mini,U,511
 U26,receio de cancro no trato urinário,gpt-4o-mini,U,512
 U26,ansiedade sobre a possibilidade de cancro urinário,gpt-4o-mini,U,512
-U26,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,U,512
 U26,Medo de cancro do aparelho urinário,icpc2_description,U,512
 U26,receio de problemas oncológicos urinários,gpt-4o-mini,U,512
 U26,receio de diagnóstico oncológico urinário,gpt-4o-mini,U,512
@@ -14315,7 +13909,6 @@ U27,Medo de infeções urinárias,gpt-4o-mini,U,513
 U27,Receio de litíase renal,gpt-4o-mini,U,513
 U27,Medo de síndrome da bexiga dolorosa,gpt-4o-mini,U,513
 U27,Receio de síndrome da bexiga dolorosa,gpt-4o-mini,U,513
-U27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,U,513
 U27,Receio de cistite,gpt-4o-mini,U,513
 U27,Medo de pielonefrite,gpt-4o-mini,U,513
 U27,Medo de hiperplasia benigna da próstata,gpt-4o-mini,U,513
@@ -14335,7 +13928,6 @@ U28,limitações funcionais por doença renal,gpt-4o-mini,U,514
 U28,dependência causada por  terapia de substituição renal,gpt-4o-mini_human-dc,U,514
 U28,limitação de atividades por problemas urinários,gpt-4o-mini,U,514
 U28,Limitação funcional/incapacidade (U),icpc2_description,U,514
-U28,Limites impostos às atividades por invalidez,icd10_description,U,514
 U28,Dependência de diálise renal,icd10_description,U,514
 U28,transplante renal,icpc2_inclusion,U,514
 U28,fluxo reduzido,icpc2_inclusion,U,514
@@ -14360,7 +13952,6 @@ U29,Queixas do sistema urinário,gpt-4o-mini,U,515
 U29,Sinais do sistema urinário,gpt-4o-mini,U,515
 U29,Sintomas do aparelho urinário,gpt-4o-mini,U,515
 U29,Sintoma/queixa aparelho urinár outro,icpc2_short,U,515
-U29,Outros sintomas e sinais envolvendo o aparelho genitourinário,icd10_description,U,515
 U70,Abcesso renal e peri-renal,icd10_description,U,516
 U70,Doença renal túbulo-Intersticial não especificada,icd10_description,U,516
 U70,Pielonefrite não obstrutiva crónica associada a refluxo,icd10_description,U,516
@@ -14745,7 +14336,6 @@ W01,Episódio para teste de gravidez,icd10_description,W,531
 W01,sintomas sugestivos de gravidez,icpc2_inclusion,W,531
 W01,sinais de gestação,gpt-4o-mini,W,531
 W01,sinais de possível gravidez,gpt-4o-mini,W,531
-W02,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,W,532
 W02,preocupação com a possibilidade de estar grávida,gpt-4o-mini,W,532
 W02,Medo de estar grávida,icpc2_description,W,532
 W02,angústia por causa de uma possível gravidez,gpt-4o-mini,W,532
@@ -14869,7 +14459,6 @@ W13,cirurgia de controle de natalidade,gpt-4o-mini,W,538
 W13,controle da natalidade por laqueação,gpt-4o-mini,W,538
 W13,Episódio para esterilização,icd10_description,W,538
 W13,planeamento familiar por esterilização feminina,icpc2_inclusion,W,538
-W13,Esterilização feminina,icpc2_description,W,538
 W13,esterilização cirúrgica,gpt-4o-mini,W,538
 W14,Procedimentos anticoncepcionais SOE,icd10_description,W,539
 W14,Outro procedimento anticoncepcional,icd10_description,W,539
@@ -14978,7 +14567,6 @@ W19,Produção excessiva de leite,gpt-4o-mini,W,543
 W19,interrupção da amamentação,gpt-4o-mini,W,543
 W19,problemas de amamentação,gpt-4o-mini,W,543
 W19,alteração na produção de leite,gpt-4o-mini,W,543
-W19,dificuldade na amamentação,gpt-4o-mini,W,543
 W19,secreção mamária excessiva,gpt-4o-mini,W,543
 W19,galactorreia,icpc2_inclusion,W,543
 W19,supressão da lactação,icpc2_inclusion,W,543
@@ -14995,7 +14583,6 @@ W21,Preocupação com a imagem corporal associada à gravidez,gpt-4o-mini,W,544
 W21,Sinais de preocupação com a estética durante a gestação,gpt-4o-mini,W,544
 W21,Questões de imagem pessoal durante a gravidez,gpt-4o-mini,W,544
 W21,Preocupação com a imagem corporal relacionada com a gravidez,icpc2_description,W,544
-W21,Outros sintomas e sinais envolvendo a aparência e o comportamento,icd10_description,W,544
 W21,Alterações comportamentais relacionadas com a aparência na gravidez,gpt-4o-mini,W,544
 W21,Sintomas de insegurança sobre a aparência na gestação,gpt-4o-mini,W,544
 W21,Preocupações com a forma física durante a gravidez,gpt-4o-mini,W,544
@@ -15032,7 +14619,6 @@ W27,Receio de cesariana,gpt-4o-mini,W,545
 W27,Medo de aborto,gpt-4o-mini,W,545
 W27,Medo de complicações da gravidez,icpc2_description,W,545
 W27,Receio de problemas de placenta,gpt-4o-mini,W,545
-W27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,W,545
 W27,receio de malformações congénitas no bebé,icpc2_inclusion,W,545
 W27,Receio de pré-eclâmpsia,gpt-4o-mini,W,545
 W27,Medo de parto prematuro,gpt-4o-mini,W,545
@@ -15041,7 +14627,6 @@ W27,Receio de depressão pós-parto,gpt-4o-mini,W,545
 W27,Receio de parto prematuro,gpt-4o-mini,W,545
 W28,Limitação funcional por parto prematuro,gpt-4o-mini,W,546
 W28,Incapacidade por diabetes gestacional,gpt-4o-mini,W,546
-W28,Limites impostos às atividades por invalidez,icd10_description,W,546
 W28,Limitação funcional por cesariana de emergência,gpt-4o-mini,W,546
 W28,instabilidade pélvica,icpc2_inclusion,W,546
 W28,Incapacidade por problemas de placenta,gpt-4o-mini,W,546
@@ -15184,7 +14769,6 @@ W75,Lesão traumática na gravidez,gpt-4o-mini,W,552
 W75,complicações de lesões durante a gestação,gpt-4o-mini,W,552
 W75,complicações traumáticas na gestação,gpt-4o-mini,W,552
 W75,trauma durante a gestação,gpt-4o-mini,W,552
-W75,"Lesão, sem outra especificação",icd10_description,W,552
 W75,consequências de traumatismos que interferem com a gravidez,icpc2_inclusion,W,552
 W75,trauma que impacta a gravidez,gpt-4o-mini,W,552
 W75,lesão durante a gravidez,gpt-4o-mini,W,552
@@ -15235,7 +14819,6 @@ W79,Gravidez não desejada em jovens,gpt-4o-mini,W,555
 W79,Gravidez não desejada em adolescentes,gpt-4o-mini,W,555
 W79,Situações de gravidez não desejada,gpt-4o-mini,W,555
 W79,Gravidez não planeada,gpt-4o-mini,W,555
-W79,Gravidez não desejada,icpc2_description,W,555
 W79,Gravidez não intencional,gpt-4o-mini,W,555
 W79,Gravidez indesejada,gpt-4o-mini,W,555
 W80,Gravidez ectópica,icpc2_description,W,556
@@ -15341,7 +14924,6 @@ W84,"Doenças endócrinas, nutricionais e metabólicas complicando a gravidez, o
 W84,"Doenças do aparelho digestivo complicando a gravidez, o parto e o puerpério",icd10_description,W,560
 W84,"Doenças do aparelho circulatório complicando a gravidez, o parto e o puerpério",icd10_description,W,560
 W84,"Doenças do aparelho respiratório complicando a gravidez, o parto e o puerpério",icd10_description,W,560
-W84,"Outras doenças e condições especificadas complicando a gravidez, o parto e o puerpério",icd10_description,W,560
 W84,"Doenças da pele e tecido subcutâneo complicando a gravidez, o parto e o puerpério",icd10_description,W,560
 W84,Placenta prévia completa sem hemorragia,icd10_description,W,560
 W84,"Patologias mentais e doenças do sistema nervoso complicando a gravidez, o parto e o puerpério",icd10_description,W,560
@@ -15484,11 +15066,9 @@ W91,Parto sem complicações de nado morto,gpt-4o-mini,W,563
 W91,Parto de feto único sem vida,gpt-4o-mini,W,563
 W91,Produto do parto: criança unica nascida morta,icd10_description,W,563
 W91,Parto de feto sem vida,gpt-4o-mini,W,563
-W91,"Produto do parto, sem outra especificação",icd10_description,W,563
 W91,Nascimento de feto morto,gpt-4o-mini,W,563
 W91,Nascimento de feto sem vida,gpt-4o-mini,W,563
 W91,Nascimento de recém-nascido morto,gpt-4o-mini,W,563
-W91,Parto sem complicações de nado morto,icpc2_description,W,563
 W92,Sofrimento materno durante trabalho de parto e parto,icd10_description,W,564
 W92,"Retenção de partes da placenta ou das membranas, sem hemorragia",icd10_description,W,564
 W92,Retenção da placenta sem hemorragia,icd10_description,W,564
@@ -15507,21 +15087,8 @@ W92,Laceração de períneo de quarto grau durante o parto,icd10_description,W,5
 W92,Laceração de períneo de terceiro grau durante o parto,icd10_description,W,564
 W92,Choque durante ou subsequente a trabalho de parto e parto,icd10_description,W,564
 W92,Inversão do útero pós-parto,icd10_description,W,564
-W92,"Gémeo vivo, nascido fora de hospital",icd10_description,W,564
 W92,Demora do parto após Rotura artificial das membranas,icd10_description,W,564
 W92,Laceração de períneo de primeiro grau durante o parto,icd10_description,W,564
-W92,Assistência e exame seguimento de rotina após parto,icd10_description,W,564
-W92,Assistência e exame a mae a amamentar,icd10_description,W,564
-W92,Assistência e exame imediatamente pós-parto,icd10_description,W,564
-W92,"Outros nascimentos múltiplos, não especificado quanto ao local de nascimento",icd10_description,W,564
-W92,"Outros nascimentos múltiplos, fora de hospital",icd10_description,W,564
-W92,"Outros nascimentos múltiplos, em hospital",icd10_description,W,564
-W92,"Gémeos, não especificados quanto ao local de nascimento",icd10_description,W,564
-W92,"Gémeo vivo, nascido em hospital",icd10_description,W,564
-W92,"Criança única, não especificado quanto ao local de nascimento",icd10_description,W,564
-W92,"Criança única, nascida fora do hospital",icd10_description,W,564
-W92,"Criança única, nascida em hospital",icd10_description,W,564
-W92,"Produto do parto, sem outra especificação",icd10_description,W,564
 W92,"Outros nascimentos múltiplos, todos nado-vivos",icd10_description,W,564
 W92,"Gémeos, ambos nascidos vivos",icd10_description,W,564
 W92,"Complicação do trabalho de parto e do parto, sem outra especificação",icd10_description,W,564
@@ -15590,92 +15157,9 @@ W92,"Obstrução do trabalho de parto devida a desproporção feto-pélvica, sem
 W93,"Outros nascimentos múltiplos, alguns nado-vivos",icd10_description,W,565
 W93,"nado morto após parto complicado: extracção assistida, parto pélvico, cesariana, distócia, parto induzido, lesões causadas pelo parto, placenta prévia durante o parto, versão",icpc2_inclusion,W,565
 W93,"Gémeos, ambos nascidos mortos",icd10_description,W,565
-W93,Obstrução do trabalho de parto devida a apresentação de face,icd10_description,W,565
-W93,"Trabalho de parto prolongado, sem outra especificação",icd10_description,W,565
-W93,Obstrução do trabalho de parto devida a rotação incompleta do polo cefálico fetal,icd10_description,W,565
-W93,Obstrução do trabalho de parto devida a apresentação pélvica,icd10_description,W,565
-W93,"Produto do parto, sem outra especificação",icd10_description,W,565
-W93,Obstrução do trabalho de parto devida a apresentação de fronte,icd10_description,W,565
-W93,Obstrução do trabalho de parto devida a apresentação de ombro,icd10_description,W,565
-W93,Obstrução do trabalho de parto devida a apresentação complexa,icd10_description,W,565
-W93,Obstrução do trabalho de parto devida a outra má-posição e má-apresentação,icd10_description,W,565
-W93,"Obstrução do trabalho de parto devida a má-posição e má-apresentação, sem outra especificação",icd10_description,W,565
-W93,Obstrução do trabalho de parto devida a pélvis deformada,icd10_description,W,565
-W93,Obstrução do trabalho de parto devida a pélvis contraída na generalidade,icd10_description,W,565
-W93,Obstrução do trabalho de parto devida a contração pélvica superior,icd10_description,W,565
-W93,Obstrução do trabalho de parto devida a contração pélvica inferior ou da cavidade média,icd10_description,W,565
-W93,"Obstrução do trabalho de parto devida a desproporção feto-pélvica, sem outra especificação",icd10_description,W,565
-W93,Obstrução do trabalho de parto devida a alteração dos órgãos pélvicos maternos,icd10_description,W,565
-W93,Obstrução do trabalho de parto devida a outras anomalias pélvicas maternas,icd10_description,W,565
-W93,"Obstrução do trabalho de parto devida a anomalia pélvica materna, sem outra especificação",icd10_description,W,565
-W93,"Parto retardado do segundo gémeo, do terceiro gémeo etc",icd10_description,W,565
-W93,Prolongamento do segundo estadio (do trabalho de parto),icd10_description,W,565
-W93,Prolongamento do primeiro estadio (de trabalho de parto),icd10_description,W,565
-W93,"Anomalias da contração uterina, não especificadas",icd10_description,W,565
-W93,"Falha na indução do trabalho de parto, sem outra especificação",icd10_description,W,565
-W93,Outras formas de falha na indução do trabalho de parto,icd10_description,W,565
-W93,Falha na indução instrumental do trabalho de parto,icd10_description,W,565
-W93,Falha na indução médica do trabalho de parto,icd10_description,W,565
-W93,Trabalho de parto pré-termo com parto a termo,icd10_description,W,565
-W93,Trabalho de parto pré-termo com parto prematuro,icd10_description,W,565
-W93,"Descolamento prematuro da placenta, sem outra especificação",icd10_description,W,565
-W93,Outro descolamento prematuro da placenta,icd10_description,W,565
-W93,Contrações iniciais inadequadas,icd10_description,W,565
-W93,Descolamento prematuro da placenta com défice de coagulação,icd10_description,W,565
-W93,"Rotura prematura de membranas, com início do trabalho de parto depois das primeiras 24 horas",icd10_description,W,565
-W93,"Rotura prematura de membranas, com início do trabalho de parto dentro das primeiras 24 horas",icd10_description,W,565
 W93,Parto com complicações de nado morto,icpc2_description,W,565
 W93,"Outros nascimentos múltiplos, todos nascidos mortos",icd10_description,W,565
-W93,Outras formas de inércia uterina,icd10_description,W,565
-W93,Trabalho de parto precipitado,icd10_description,W,565
-W93,"Contrações uterinas hipertónicas, descoordenadas ou prolongadas",icd10_description,W,565
-W93,Outras anomalias da contração uterina,icd10_description,W,565
-W93,"Rotura prematura de membranas, não especificado quanto à duração de tempo entre rotura de membranas e início de trabalho de parto",icd10_description,W,565
-W93,Obstrução do trabalho de parto devida a encaixe do mento dos gémeos (locked twins),icd10_description,W,565
-W93,Obstrução do trabalho de parto devida a distócia de ombro,icd10_description,W,565
-W93,Obstrução do trabalho de parto devido a outras anomalias do feto,icd10_description,W,565
-W93,Obstrução do trabalho de parto devida a feto invulgarmente grande,icd10_description,W,565
-W93,Laceração obstétrica do colo do útero,icd10_description,W,565
-W93,"Laceração vaginal alta isolada, de origem obstétrica",icd10_description,W,565
-W93,Outras lesões obstétricas aos órgãos pélvicos,icd10_description,W,565
-W93,Lesão obstétrica de articulações e ligamentos pélvicos,icd10_description,W,565
-W93,Hematoma obstétrico da pélvis,icd10_description,W,565
-W93,Outros traumatismos obstétricos especificados,icd10_description,W,565
-W93,"Traumatismo obstétrico, sem outra especificação",icd10_description,W,565
-W93,Rotura do útero durante o trabalho de parto,icd10_description,W,565
-W93,Retenção da placenta sem hemorragia,icd10_description,W,565
-W93,Sofrimento materno durante trabalho de parto e parto,icd10_description,W,565
-W93,Choque durante ou subsequente a trabalho de parto e parto,icd10_description,W,565
-W93,Outras complicações de procedimentos ou de cirurgia obstétrica,icd10_description,W,565
-W93,Demora do parto após Rotura artificial das membranas,icd10_description,W,565
-W93,Outras complicações especificadas do trabalho de parto e do parto,icd10_description,W,565
-W93,"Complicação do trabalho de parto e do parto, sem outra especificação",icd10_description,W,565
-W93,Produto do parto: criança unica nascida morta,icd10_description,W,565
 W93,"Gémeos, um nado-vivo e um nado morto",icd10_description,W,565
-W93,"Retenção de partes da placenta ou das membranas, sem hemorragia",icd10_description,W,565
-W93,Rotura do útero (espontânea) antes do início do trabalho de parto,icd10_description,W,565
-W93,Inversão do útero pós-parto,icd10_description,W,565
-W93,Laceração de períneo de quarto grau durante o parto,icd10_description,W,565
-W93,Tentativa malograda de trabalho de parto,icd10_description,W,565
-W93,Falha de aplicação de fórceps e ventosa,icd10_description,W,565
-W93,"Outras formas de obstrução do trabalho de parto, especificadas",icd10_description,W,565
-W93,"Obstrução do trabalho de parto, sem outra especificação",icd10_description,W,565
-W93,Hemorragia em contexto de parto com défice de coagulação,icd10_description,W,565
-W93,Outra hemorragia intraparto,icd10_description,W,565
-W93,"Hemorragia em contexto de parto, sem outra especificação",icd10_description,W,565
-W93,Trabalho de parto e parto complicados por prolapso do cordão,icd10_description,W,565
-W93,"Trabalho de parto e parto complicados por cordão à volta do pescoço, com compressão",icd10_description,W,565
-W93,"Trabalho de parto e parto complicados por outro emaranhamento do cordão, com compressão",icd10_description,W,565
-W93,"Laceração de períneo durante o parto, sem outra especificação",icd10_description,W,565
-W93,Trabalho de parto e parto complicados por cordão curto,icd10_description,W,565
-W93,Trabalho de parto e parto complicados por lesão vascular do cordão,icd10_description,W,565
-W93,Trabalho de parto e parto complicados por outras complicações do cordão,icd10_description,W,565
-W93,"Trabalho de parto e parto complicados por complicação do cordão, sem outra especificação",icd10_description,W,565
-W93,Laceração de períneo de primeiro grau durante o parto,icd10_description,W,565
-W93,Laceração de períneo de segundo grau durante o parto,icd10_description,W,565
-W93,Laceração de períneo de terceiro grau durante o parto,icd10_description,W,565
-W93,Trabalho de parto e parto complicados por vasa praevia,icd10_description,W,565
-W93,Inércia uterina secundária,icd10_description,W,565
 W94,abcesso na mama,icpc2_inclusion,W,566
 W94,infecção da mama durante a lactação,gpt-4o-mini,W,566
 W94,Mastite puerperal,icpc2_description,W,566
@@ -15712,7 +15196,6 @@ W95,Problema da mama durante a gravidez/puerpério outro,icpc2_description,W,567
 W95,mamilo gretado,icpc2_inclusion,W,567
 W95,problema da mama no puerpério,icpc2_inclusion,W,567
 W96,Complicação do puerpério outra,icpc2_description,W,568
-W96,"Complicação do puerpério, sem outra especificação",icd10_description,W,568
 W96,"Outras complicações do puerpério, não classificadas noutra parte",icd10_description,W,568
 W96,Insuficiência renal aguda do pós-parto,icd10_description,W,568
 W96,Outras complicações venosas no puerpério,icd10_description,W,568
@@ -15773,7 +15256,6 @@ W99,Achados cromossómicos e genéticos anormais do rastreio antenatal da mãe,i
 W99,Trombose venosa cerebral na gravidez,icd10_description,W,569
 X01,dor ginecológica crónica,gpt-4o-mini,X,570
 X01,Outras condições especificadas associadas aos órgãos genitais femininos e ciclo menstrual,icd10_description,X,570
-X01,Dor pélvica e perineal,icd10_description,X,570
 X01,Dor genital feminina,gpt-4o-mini,X,570
 X01,dor na área vulvar,gpt-4o-mini,X,570
 X01,dor vulvar crónica,gpt-4o-mini,X,570
@@ -15788,7 +15270,6 @@ X01,dor pélvica,icpc2_inclusion,X,570
 X01,dor na vagina,gpt-4o-mini,X,570
 X01,dor vulvar,icpc2_inclusion,X,570
 X01,dor relacionada com o ciclo menstrual,gpt-4o-mini,X,570
-X01,Dor genital feminina,icpc2_description,X,570
 X01,dor na região genital feminina,gpt-4o-mini,X,570
 X02,dor menstrual leve,gpt-4o-mini,X,571
 X02,Dismenorreia secundária,icd10_description,X,571
@@ -15835,7 +15316,6 @@ X03,dor ovulatória,gpt-4o-mini,X,572
 X03,dor intermitente na ovulação,gpt-4o-mini,X,572
 X03,dor na ovulação intensa,gpt-4o-mini,X,572
 X03,dor associada à ovulação,gpt-4o-mini,X,572
-X03,dor menstrual intermitente,gpt-4o-mini,X,572
 X03,dor pélvica intermenstrual,gpt-4o-mini,X,572
 X03,dor na ovulação,gpt-4o-mini,X,572
 X03,dor intermenstrual crónica,gpt-4o-mini,X,572
@@ -15853,7 +15333,6 @@ X04,hipersensibilidade vaginal,gpt-4o-mini,X,573
 X04,desconforto durante a relação,gpt-4o-mini,X,573
 X04,espasmo vaginal,gpt-4o-mini,X,573
 X04,dor genital durante o ato sexual,gpt-4o-mini,X,573
-X04,aversão ao sexo,gpt-4o-mini,X,573
 X04,dor vaginal durante a relação,gpt-4o-mini,X,573
 X04,dor na penetração,gpt-4o-mini,X,573
 X04,dor feminina associada ao sexo,gpt-4o-mini,X,573
@@ -15870,7 +15349,6 @@ X05,oligomenorreia,icpc2_inclusion,X,574
 X05,Oligomenorréia secundária,icd10_description,X,574
 X05,amenorreia,icpc2_inclusion,X,574
 X05,Menstruação escassa/ausente,icpc2_description,X,574
-X05,atraso menstrual,icpc2_inclusion,X,574
 X05,"Oligomenorreia, sem outra especificação",icd10_description,X,574
 X05,"Amenorréia, não especificada",icd10_description,X,574
 X05,Amenorréia secundária,icd10_description,X,574
@@ -15918,7 +15396,6 @@ X07,Menstruação com intervalos curtos,gpt-4o-mini,X,576
 X07,Menstruação com irregularidades,gpt-4o-mini,X,576
 X07,Menstruação não regular,gpt-4o-mini,X,576
 X07,"Menstruação irregular, não especificada",icd10_description,X,576
-X07,Menstruação excessiva e frequente com ciclo regular,icd10_description,X,576
 X07,Menstruação irregular/frequente,icpc2_description,X,576
 X07,Menstruação com duração variável,gpt-4o-mini,X,576
 X07,Menstruação excessiva e frequente com ciclo irregular,icd10_description,X,576
@@ -15945,7 +15422,6 @@ X09,Sintomas pré-menstruais,gpt-4o-mini,X,578
 X09,Sintomas relacionados com a menstruação,gpt-4o-mini,X,578
 X09,Afeções não especificadas associadas com os órgãos genitais femininos e com o ciclo menstrual,icd10_description,X,578
 X10,Métodos para alterar a menstruação,gpt-4o-mini,X,579
-X10,Procedimentos anticoncepcionais SOE,icd10_description,X,579
 X10,Controle da menstruação,gpt-4o-mini,X,579
 X10,Modificação do período menstrual,gpt-4o-mini,X,579
 X10,Terapia para alteração do ciclo menstrual,gpt-4o-mini,X,579
@@ -15983,7 +15459,6 @@ X12,Hemorragia pós-menopausa,icpc2_description,X,581
 X12,Sangramento vaginal anormal pós-menopausa,gpt-4o-mini,X,581
 X12,Sangramento pós-menopáusico,gpt-4o-mini,X,581
 X12,Hemorragia após a menopausa,gpt-4o-mini,X,581
-X12,Hemorragia genital pós-menopáusica,icd10_description,X,581
 X12,Sangramento pós-menopausa,gpt-4o-mini,X,581
 X12,Hemorragia Uterina Anomomala pós-menopausa,gpt-4o-mini_human-dc,X,581
 X12,Sangramento uterino persistente após menopausa,gpt-4o-mini,X,581
@@ -16000,7 +15475,6 @@ X12,Hemorragia uterina pós-menopausa,gpt-4o-mini,X,581
 X13,hemorragia pós-intimidade,gpt-4o-mini,X,582
 X13,Hemorragia pós-coito,icd10_description,X,582
 X13,hemorragia de contacto,icpc2_inclusion,X,582
-X13,Hemorragia pós-coito,icpc2_description,X,582
 X13,sangramento após o ato sexual,gpt-4o-mini,X,582
 X13,hemorragia vaginal pós-coito,gpt-4o-mini,X,582
 X13,hemorragia pós-relacionamento,gpt-4o-mini,X,582
@@ -16087,7 +15561,6 @@ X17,Sintomas relacionados com a pélvis,gpt-4o-mini,X,586
 X17,Afeções do sistema reprodutivo feminino,gpt-4o-mini,X,586
 X17,Queixa pélvica feminina,gpt-4o-mini_human-dc,X,586
 X17,Queixas relacionadas com a pélvis feminina,gpt-4o-mini_human-dc,X,586
-X17,Afeções não especificadas associadas com os órgãos genitais femininos e com o ciclo menstrual,icd10_description,X,586
 X17,Sintomas pélvicos femininos,gpt-4o-mini,X,586
 X17,Sintomas não especificados da pélvis feminina,gpt-4o-mini,X,586
 X17,Sintomas pélvicos,gpt-4o-mini,X,586
@@ -16143,14 +15616,12 @@ X20,secreção mamilar,icpc2_inclusion,X,589
 X20,"Sinal ou sintoma na mama, NCOP",icd10_description,X,589
 X21,Sintoma/queixa da mama feminina outro,icpc2_description,X,590
 X21,mastopatia,icpc2_inclusion,X,590
-X21,galactorreia,icpc2_inclusion,X,590
 X21,mastite (sem lactação),icpc2_inclusion,X,590
 X21,Doença da mama não especificada,icd10_description,X,590
 X21,Galactorreia não associada a amamentacao,icd10_description,X,590
 X21,Sintoma/queixa mama feminina outro,icpc2_short,X,590
 X21,Doença inflamatória da mama,icd10_description,X,590
 X21,Hipertrofia da mama,icd10_description,X,590
-X21,"Sinal ou sintoma na mama, NCOP",icd10_description,X,590
 X22,Preocupação com aparência mama femin,icpc2_short,X,591
 X22,Dúvidas sobre a saúde estética das mamas feminina,gpt-4o-mini,X,591
 X22,Alterações na percepção da aparência das mamas,gpt-4o-mini,X,591
@@ -16159,7 +15630,6 @@ X22,Questões relacionadas à imagem corporal das mamas feminina,gpt-4o-mini,X,5
 X22,Comportamentos de verificação da aparência mamária feminina,gpt-4o-mini,X,591
 X22,Sintomas associados à estética mamária feminina,gpt-4o-mini,X,591
 X22,Sinais de preocupação com a forma física das mamas,gpt-4o-mini,X,591
-X22,Outros sintomas e sinais envolvendo a aparência e o comportamento,icd10_description,X,591
 X22,Alterações na autoestima devido à aparência das mamas feminina,gpt-4o-mini,X,591
 X22,Sinais de insatisfação com a forma das mamas feminina,gpt-4o-mini,X,591
 X22,Ansiedade sobre a saúde das mamas feminina,gpt-4o-mini,X,591
@@ -16170,7 +15640,6 @@ X22,Sintomas de desconforto com a aparência mamária feminina,gpt-4o-mini,X,591
 X22,Insegurança sobre a aparência das mamas feminina,gpt-4o-mini,X,591
 X22,Sintomas de insatisfação corporal relacionados às mamas feminina,gpt-4o-mini,X,591
 X22,Preocupação com a simetria mamária feminina,gpt-4o-mini,X,591
-X23,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,X,592
 X23,Medo doença sexualm transm na mulher,icpc2_short,X,592
 X23,Receio de doenças venéreas na mulher,gpt-4o-mini,X,592
 X23,Medo de doenças infecciosas sexualmente transmissíveis na mulher,gpt-4o-mini,X,592
@@ -16191,7 +15660,6 @@ X23,Medo de consequências de doenças sexualmente transmissíveis  na mulher,gp
 X23,Medo de infeção sexualmente transmissível na mulher,gpt-4o-mini,X,592
 X23,Ansiedade por possíveis infeções venéreas na mulher,gpt-4o-mini,X,592
 X23,Medo de DST na mulher,human-dc,X,592
-X24,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,X,593
 X24,Insegurança sobre a saúde sexual feminina,gpt-4o-mini,X,593
 X24,Medo de complicações sexuais femininas,gpt-4o-mini,X,593
 X24,Inquietação sobre a saúde sexual feminina,gpt-4o-mini,X,593
@@ -16214,7 +15682,6 @@ X24,Temor de problemas de intimidade feminina,gpt-4o-mini,X,593
 X24,Temor de disfunção sexual em mulheres,gpt-4o-mini,X,593
 X24,Temor de disfunções na sexualidade feminina,gpt-4o-mini,X,593
 X24,Preocupação com a sexualidade feminina,gpt-4o-mini,X,593
-X24,Medo de disfunção sexual feminina,icpc2_description,X,593
 X25,Preocupação com neoplasias femininas,gpt-4o-mini,X,594
 X25,Temor de neoplasia genital feminina,gpt-4o-mini,X,594
 X25,Medo de cancro genital na mulher,icpc2_short,X,594
@@ -16225,14 +15692,12 @@ X25,Receio de cancro vaginal,gpt-4o-mini,X,594
 X25,Medo de cancro ginecológico,gpt-4o-mini,X,594
 X25,Receio de problemas oncológicos no aparelho reprodutor feminino,gpt-4o-mini,X,594
 X25,Insegurança em relação ao cancro do útero,gpt-4o-mini,X,594
-X25,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,X,594
 X25,Medo de tumor ginecológico,gpt-4o-mini,X,594
 X25,Medo de cancro genital feminino,icpc2_description,X,594
 X25,Insegurança sobre a saúde ginecológica,gpt-4o-mini,X,594
 X25,Temor de cancro ovariano,gpt-4o-mini,X,594
 X26,inquietação sobre cancro da mama na mulher,gpt-4o-mini,X,595
 X26,medo de desenvolver cancro da mama feminino,gpt-4o-mini,X,595
-X26,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,X,595
 X26,preocupação com a saúde mamária na mulher,gpt-4o-mini,X,595
 X26,preocupação excessiva com cancro da mama na mulher,gpt-4o-mini,X,595
 X26,medo de sintomas de cancro da mama na mulher,gpt-4o-mini,X,595
@@ -16268,14 +15733,11 @@ X27,Medo de infeções vaginais,gpt-4o-mini,X,596
 X27,Medo de hiperplasia mamária feminina,gpt-4o-mini_human-dc,X,596
 X27,Medo de doenças inflamatórias pélvicas,gpt-4o-mini,X,596
 X27,Medo de prolapsos ginecologico,gpt-4o-mini_human-dc,X,596
-X27,Medo de disfunção sexual feminina,gpt-4o-mini,X,596
-X27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,X,596
 X27,Medo de outra doença (X),icpc2_short,X,596
 X27,Receio de dor pélvica crónica,gpt-4o-mini,X,596
 X27,Receio de alterações menstruais,gpt-4o-mini,X,596
 X28,Limitação funcional/incapacidade (X),icpc2_description,X,597
 X28,Ausência adquirida de órgão(s) genital(is),icd10_description,X,597
-X28,Limites impostos às atividades por invalidez,icd10_description,X,597
 X28,Dificuldades funcionais no aparelho reprodutor feminino,gpt-4o-mini,X,597
 X28,Problemas de saúde que afetam o aparelho genital feminino,gpt-4o-mini,X,597
 X28,Incapacidade devido a patologias do aparelho genital feminino,gpt-4o-mini,X,597
@@ -16305,7 +15767,6 @@ X29,queixas relacionadas com a menstruação,gpt-4o-mini,X,598
 X29,Corrimento uretral,icd10_description,X,598
 X29,Sintoma/queixa apar genit fem outro,icpc2_short,X,598
 X29,Sintoma do sistema reprodutor feminino,gpt-4o-mini,X,598
-X29,Afeções não especificadas associadas com os órgãos genitais femininos e com o ciclo menstrual,icd10_description,X,598
 X29,secreção uretral feminina,icpc2_inclusion,X,598
 X29,Sintoma/queixa do aparelho genital feminino outro,icpc2_description,X,598
 X70,Sífilis precoce latente,icd10_description,X,599
@@ -16348,7 +15809,6 @@ X71,"Infeção gonocócica do trato genitourinário inferior, com abcesso periur
 X71,gonorreia em qualquer localização,icpc2_inclusion,X,600
 X71,Infeção gonocócica do sistema músculoesquelético,icd10_description,X,600
 X72,Candidiase da vulva e vagina,icd10_description,X,601
-X72,Candidiase de outros locais urogenitais,icd10_description,X,601
 X72,candidíase da mucosa genital feminina,gpt-4o-mini,X,601
 X72,candidíase urogenital feminina,gpt-4o-mini,X,601
 X72,infecção vaginal por Candida,gpt-4o-mini,X,601
@@ -16381,7 +15841,6 @@ X73,Tricomoníase e corrimento na mulher,gpt-4o-mini,X,602
 X73,Tricomoníase vaginal,gpt-4o-mini,X,602
 X73,Trichomonas vaginalis,gpt-4o-mini,X,602
 X73,Tricomoníase feminina,gpt-4o-mini,X,602
-X73,Tricomoníase genital feminina,gpt-4o-mini,X,602
 X73,Tricomoníase urogenital feminina,gpt-4o-mini,X,602
 X73,Tricomoníase assintomática feminina,gpt-4o-mini,X,602
 X73,Infecção por Trichomonas vaginalis na mulher,gpt-4o-mini,X,602
@@ -16545,14 +16004,10 @@ X82,Ferida aberta da vagina e vulva,icd10_description,X,611
 X82,Ferida aberta de órgãos genitais externos não especificados,icd10_description,X,611
 X82,Episódio para circuncisão de rotina ou ritual,icd10_description,X,611
 X82,Lesão traumática genital feminina,icpc2_description,X,611
-X82,Corrosão de órgãos genitourinários internos,icd10_description,X,611
 X82,Corpo estranho no útero,icd10_description,X,611
 X82,Corpo estranho na vulva e vagina,icd10_description,X,611
-X82,"Lesão, sem outra especificação, do abdómen, região lombar, pélvis e órgãos genitais externos",icd10_description,X,611
-X82,"Outras lesões especificadas do abdómen, região lombar, pélvis e órgãos genitais externos",icd10_description,X,611
 X82,Amputação traumática de órgãos genitais externos,icd10_description,X,611
 X82,Lesão por esmagamento dos órgãos genitais externos,icd10_description,X,611
-X82,Queimadura de órgãos genitourinários internos,icd10_description,X,611
 X83,"Pseudo-hermafroditismo feminino, não classificado noutra parte",icd10_description,X,612
 X83,"Pseudo-hermafroditismo masculino, não classificado noutra parte",icd10_description,X,612
 X83,Hermafroditismo não classificado noutra parte,icd10_description,X,612
@@ -16666,16 +16121,12 @@ X89,Síndrome de tensão pré-menstrual,icd10_description,X,618
 X89,Síndrome de desconforto menstrual,gpt-4o-mini,X,618
 X89,Distúrbios emocionais do ciclo menstrual,gpt-4o-mini,X,618
 X89,Síndrome de tensão antes da menstruação,gpt-4o-mini,X,618
-X89,Síndrome de tensão pré-menstrual,icpc2_description,X,618
-X89,Sintomas pré-menstruais,gpt-4o-mini,X,618
 X89,Síndrome da tensão pré-menstrual,gpt-4o-mini,X,618
 X89,Síndrome de tensão hormonal,gpt-4o-mini,X,618
-X89,Alterações pré-menstruais,gpt-4o-mini,X,618
 X89,Distúrbio pré-menstrual,gpt-4o-mini,X,618
 X89,Síndrome de sensibilidade mamária pré-menstrual,gpt-4o-mini,X,618
 X89,Síndrome de dor de cabeça pré-menstrual,gpt-4o-mini,X,618
 X89,Problemas emocionais do ciclo menstrual,gpt-4o-mini,X,618
-X89,Desconforto pré-menstrual,gpt-4o-mini,X,618
 X89,Sintomas emocionais pré-menstruais,gpt-4o-mini,X,618
 X89,Sintomas de tensão menstrual,gpt-4o-mini,X,618
 X89,Problemas pré-menstruais,gpt-4o-mini,X,618
@@ -16732,7 +16183,6 @@ X91,verrugas venéreas femininas,gpt-4o-mini,X,620
 X91,Condiloma acuminado em mulheres,gpt-4o-mini,X,620
 X92,Infeção por clamídia em mulheres grávidas,gpt-4o-mini,X,621
 X92,Infeção por Clamídia do pelviperitoneu e de outros órgãos genitourinários,icd10_description,X,621
-X92,Infeções por Clamídia do trato genitourinário inferior,icd10_description,X,621
 X92,Infeção da faringe por Clamídia,icd10_description,X,621
 X92,Infeção por clamídia em mulheres sexualmente,gpt-4o-mini,X,621
 X92,Infeção por clamídia no sistema reprodutivo feminino,gpt-4o-mini,X,621
@@ -16742,7 +16192,6 @@ X92,Infecção por clamídia em mulheres jovens,gpt-4o-mini,X,621
 X92,Infeção por clamídia em mulheres,gpt-4o-mini,X,621
 X92,Infeção de outras localizações por Clamídia transmitida por via sexual,icd10_description,X,621
 X92,Infeção genital por chlamydia em mulheres,gpt-4o-mini,X,621
-X92,"Infeção por Clamídia do trato genitourinário, não especificada",icd10_description,X,621
 X92,Infecção genital por chlamydia,icpc2_description,X,621
 X92,Infecção por clamídia em mulheres,gpt-4o-mini,X,621
 X92,Infeção do ânus e do reto por Clamídia,icd10_description,X,621
@@ -16762,7 +16211,6 @@ X99,Quisto do ovário do folículo de Graaf,icd10_description,X,622
 X99,"Fístula do trato genital feminino, não especificada",icd10_description,X,622
 X99,Hematoma do ligamento largo do ovário,icd10_description,X,622
 X99,"Pólipo do trato genital feminino, sem outra especificação",icd10_description,X,622
-X99,"Alteracões não inflamatórias da vagina, NCOP",icd10_description,X,622
 X99,Hipertrofia do útero,icd10_description,X,622
 X99,Anel himenal apertado,icd10_description,X,622
 X99,Estreitamento e Atrésia da vagina,icd10_description,X,622
@@ -16786,10 +16234,7 @@ X99,Linfogranuloma (venéreo) por Clamídia,icd10_description,X,622
 X99,Hipertrofia da vulva,icd10_description,X,622
 X99,Outras fístulas genito-Intestinais femininas,icd10_description,X,622
 X99,patologias não inflamatórias da vulva e perineo não classificadas em outra parte,icd10_description,X,622
-X99,Outras condições especificadas associadas aos órgãos genitais femininos e ciclo menstrual,icd10_description,X,622
-X99,Afeções não especificadas associadas com os órgãos genitais femininos e com o ciclo menstrual,icd10_description,X,622
 X99,Ausência adquirida de mama e mamilo,icd10_description,X,622
-X99,Ausência adquirida de órgão(s) genital(is),icd10_description,X,622
 X99,Doença genital feminino outra,icpc2_description,X,622
 X99,quisto funcional do ovário,icpc2_inclusion,X,622
 X99,síndrome da congestão pélvica,icpc2_inclusion,X,622
@@ -16804,7 +16249,6 @@ X99,Neoplasia vulvar intraepitelial i [vin i],icd10_description,X,622
 X99,Cancro mole,icd10_description,X,622
 X99,Granuloma inguinal,icd10_description,X,622
 X99,Quisto vulvar,icd10_description,X,622
-X99,Doença inflamatória da mama,icd10_description,X,622
 X99,Fístula vagina-Intestino delgado,icd10_description,X,622
 X99,Outras fístulas do trato geniturinário feminino,icd10_description,X,622
 X99,Fístula vesicovaginal,icd10_description,X,622
@@ -16835,7 +16279,6 @@ Y01,Sintomas dolorosos no pénis,gpt-4o-mini,Y,623
 Y01,Queixas dolorosas no pénis,gpt-4o-mini_human-dc,Y,623
 Y01,Dor genital masculina,gpt-4o-mini,Y,623
 Y01,Dor no pénis,icpc2_description,Y,623
-Y02,Dor pélvica e perineal,icd10_description,Y,624
 Y02,dor na região escrotal,gpt-4o-mini,Y,624
 Y02,Dor no escroto/testículos,icpc2_short,Y,624
 Y02,Dor escrotal,gpt-4o-mini,Y,624
@@ -16857,7 +16300,6 @@ Y03,Corrimento urinário masculino,gpt-4o-mini,Y,625
 Y03,Infecção uretral masculina,gpt-4o-mini_human-dc,Y,625
 Y03,Sintoma de secreção uretral,gpt-4o-mini,Y,625
 Y03,Secreção uretral masculina,gpt-4o-mini,Y,625
-Y03,Corrimento uretral,icd10_description,Y,625
 Y03,Corrimento genital,gpt-4o-mini,Y,625
 Y03,Perda uretral,gpt-4o-mini,Y,625
 Y03,Fluído uretral masculino,gpt-4o-mini,Y,625
@@ -16932,7 +16374,6 @@ Y08,priapismo secundário,gpt-4o-mini,Y,630
 Y08,dificuldade em manter a ereção,gpt-4o-mini,Y,630
 Y08,queixas sexuais masculinas,gpt-4o-mini,Y,630
 Y08,Priapismo,icd10_description,Y,630
-Y08,Doenças do pénis SOE,icd10_description,Y,630
 Y08,ereção involuntária,gpt-4o-mini,Y,630
 Y08,erecção dolorosa,icpc2_inclusion,Y,630
 Y08,condição de ereção dolorosa,gpt-4o-mini,Y,630
@@ -16942,17 +16383,11 @@ Y08,ereção persistente,gpt-4o-mini,Y,630
 Y08,distúrbio da ereção,gpt-4o-mini,Y,630
 Y08,Sintoma/queixa função sexual mascul,icpc2_short,Y,630
 Y10,Infertilidade/subfertilidade mascul,icpc2_short,Y,631
-Y10,Procedimentos relativos a procriacão não especificados,icd10_description,Y,631
-Y10,Episódio para outra medida relativa à procriação,icd10_description,Y,631
-Y10,Aconselhamento geral sobre a procriação,icd10_description,Y,631
-Y10,Investigação e testes em relação com procriação,icd10_description,Y,631
-Y10,Reconstituicao plástica Trompas de Falópio ou canais deferentes após esterilização,icd10_description,Y,631
 Y10,Infertilidade/subfertilidade masculina,icpc2_description,Y,631
 Y10,Infertilidade masculina,icd10_description,Y,631
 Y13,alternativa de planeamento familiar masculino,gpt-4o-mini,Y,632
 Y13,Esterilização masculina,icpc2_description,Y,632
 Y13,planeamento familiar envolvendo esterilização masculina,icpc2_inclusion,Y,632
-Y13,Episódio para esterilização,icd10_description,Y,632
 Y13,vasectomia como método contraceptivo,gpt-4o-mini,Y,632
 Y13,vasectomia,gpt-4o-mini,Y,632
 Y13,esterilização voluntária do homem,gpt-4o-mini,Y,632
@@ -16964,19 +16399,14 @@ Y13,procedimento de vasectomia,gpt-4o-mini,Y,632
 Y13,esterilização cirúrgica masculina,gpt-4o-mini,Y,632
 Y13,escolha de esterilização masculina,gpt-4o-mini,Y,632
 Y14,estratégias de contracepção para homens,gpt-4o-mini,Y,633
-Y14,contracepção NE,icpc2_inclusion,Y,633
-Y14,planeamento familiar NE,icpc2_inclusion,Y,633
 Y14,contracepção masculina,gpt-4o-mini,Y,633
 Y14,informação sobre contracepção para homens,gpt-4o-mini,Y,633
 Y14,métodos contraceptivos para homens,gpt-4o-mini,Y,633
 Y14,educação sobre contracepção masculina,gpt-4o-mini,Y,633
-Y14,Aconselhamento geral sobre contraceção,icd10_description,Y,633
 Y14,serviços de planeamento familiar masculino,gpt-4o-mini,Y,633
 Y14,Planeamento familiar masculino,gpt-4o-mini,Y,633
 Y14,opções de contracepção para homens,gpt-4o-mini,Y,633
 Y14,Planeamento familiar no homem outro,icpc2_description,Y,633
-Y14,Procedimentos anticoncepcionais SOE,icd10_description,Y,633
-Y14,Outro procedimento anticoncepcional,icd10_description,Y,633
 Y14,métodos de controlo da natalidade masculino,gpt-4o-mini,Y,633
 Y14,aconselhamento sobre contracepção masculina,gpt-4o-mini,Y,633
 Y16,massa mamária em homens,gpt-4o-mini,Y,634
@@ -16996,11 +16426,8 @@ Y16,Aumento da mama masculina,gpt-4o-mini,Y,634
 Y16,desenvolvimento mamário em homens,gpt-4o-mini,Y,634
 Y16,protuberância mamária masculina,gpt-4o-mini,Y,634
 Y16,alteração mamária masculina,gpt-4o-mini,Y,634
-Y16,Hipertrofia da mama,icd10_description,Y,634
 Y16,nódulo na região mamária masculina,gpt-4o-mini,Y,634
-Y16,"Sinal ou sintoma na mama, NCOP",icd10_description,Y,634
 Y16,anormalidade na mama masculina,gpt-4o-mini,Y,634
-Y16,Protuberância ou massa na mama,icd10_description,Y,634
 Y16,ginecomastia,icpc2_inclusion,Y,634
 Y16,nódulo na mama masculina,icpc2_inclusion,Y,634
 Y24,Medo de disfunção sexual masculina,icpc2_description,Y,635
@@ -17010,7 +16437,6 @@ Y24,Medo de impotência,gpt-4o-mini,Y,635
 Y24,Temor de disfunção erétil,gpt-4o-mini,Y,635
 Y24,Receio de dificuldades sexuais no homem,gpt-4o-mini_human-dc,Y,635
 Y24,Preocupação com a função erétil,gpt-4o-mini,Y,635
-Y24,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,Y,635
 Y24,Medo de disfunção sexual no homem,icpc2_short,Y,635
 Y24,Temor de disfunção sexual no homem,gpt-4o-mini_human-dc,Y,635
 Y25,Medo doença sexualm transmis homem,icpc2_short,Y,636
@@ -17026,7 +16452,6 @@ Y25,Preocupação com a possibilidade de doenças venéreas em homens,gpt-4o-min
 Y25,Insegurança sobre saúde sexual masculina,gpt-4o-mini,Y,636
 Y25,Medo de contágio de infecções venéreas em homens,gpt-4o-mini,Y,636
 Y25,Medo de doenças transmissíveis em homens,gpt-4o-mini,Y,636
-Y25,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,Y,636
 Y25,Receio de doenças venéreas em homens,gpt-4o-mini,Y,636
 Y25,Medo de doenças infecciosas sexualmente transmissíveis em homens,gpt-4o-mini,Y,636
 Y25,Medo de infecções sexuais em indivíduos masculinos,gpt-4o-mini,Y,636
@@ -17049,7 +16474,6 @@ Y26,temor de um diagnóstico de cancro,gpt-4o-mini,Y,637
 Y26,medo de cancro da prostata,human-dc,Y,637
 Y26,Medo de cancro genital masculino,icpc2_description,Y,637
 Y26,medo de diagnóstico de cancro genital masculino,gpt-4o-mini,Y,637
-Y26,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,Y,637
 Y27,receio de ter problemas de fertilidade,gpt-4o-mini,Y,638
 Y27,receio de ter alterações hormonais,gpt-4o-mini,Y,638
 Y27,medo de epididimite,gpt-4o-mini,Y,638
@@ -17077,7 +16501,6 @@ Y27,medo de problemas de fertilidade,gpt-4o-mini,Y,638
 Y27,receio de ter ejaculação precoce,gpt-4o-mini,Y,638
 Y27,Medo de doença genital masculina outra,icpc2_description,Y,638
 Y27,receio de ter orquite,gpt-4o-mini,Y,638
-Y27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,Y,638
 Y27,medo de prostatite,gpt-4o-mini,Y,638
 Y28,Incapacidade por disfunção erétil,gpt-4o-mini,Y,639
 Y28,Limitação funcional por síndrome de Peyronie,gpt-4o-mini,Y,639
@@ -17093,8 +16516,6 @@ Y28,Limitação funcional por infecção urinária,gpt-4o-mini,Y,639
 Y28,Limitação funcional/incapacidade (Y),icpc2_description,Y,639
 Y28,Limitação funcional por impotência sexual,gpt-4o-mini,Y,639
 Y28,Incapacidade por infecção urinária,gpt-4o-mini,Y,639
-Y28,Ausência adquirida de órgão(s) genital(is),icd10_description,Y,639
-Y28,Limites impostos às atividades por invalidez,icd10_description,Y,639
 Y28,Limitação funcional por ejaculação precoce,gpt-4o-mini,Y,639
 Y28,Limitação funcional por disfunção erétil,gpt-4o-mini,Y,639
 Y28,Limitação funcional por fimose,gpt-4o-mini,Y,639
@@ -17107,52 +16528,14 @@ Y29,Sintoma urológico masculino,gpt-4o-mini,Y,640
 Y29,Queixa de saúde genital masculina,gpt-4o-mini,Y,640
 Y29,Sintoma não especificado dos órgãos genitais masculinos,gpt-4o-mini,Y,640
 Y29,Sintoma/queixa genital mascul outro,icpc2_short,Y,640
-Y29,Sintoma genital masculino,gpt-4o-mini,Y,640
 Y29,Problema de saúde urogenital masculino,gpt-4o-mini,Y,640
 Y29,Sintoma relacionado com a saúde genital masculina,gpt-4o-mini,Y,640
 Y29,Sintoma/queixa genital masculino outro,icpc2_description,Y,640
 Y29,Queixa urogenital masculina,gpt-4o-mini,Y,640
-Y29,Patologia não especificada dos órgãos genitais masculinos,icd10_description,Y,640
-Y70,Neurossífilis sintomática,icd10_description,Y,641
-Y70,Sífilis cardiovascular e cerebrovascular,icd10_description,Y,641
-Y70,Sífilis tardia latente,icd10_description,Y,641
-Y70,Outras sífilis sintomática tardia,icd10_description,Y,641
-Y70,"Neurossífilis, não especificada",icd10_description,Y,641
-Y70,Neurossífilis assintomática,icd10_description,Y,641
-Y70,"Sífilis precoce, não especificada",icd10_description,Y,641
-Y70,Sífilis precoce latente,icd10_description,Y,641
-Y70,Outra sifilis secundária,icd10_description,Y,641
-Y70,Sífilis secundária da pele e das membranas mucosas,icd10_description,Y,641
-Y70,Sífilis primária de outras localizações,icd10_description,Y,641
-Y70,Sífilis anal primária,icd10_description,Y,641
-Y70,Sífilis genital primária,icd10_description,Y,641
-Y70,"Sífilis congénita, não especificada",icd10_description,Y,641
-Y70,"Sífilis congénita tardia, não especificada",icd10_description,Y,641
-Y70,Sífilis congénita tardia latente,icd10_description,Y,641
 Y70,sífilis qualquer que seja a sua localização,icpc2_inclusion,Y,641
-Y70,Outras sífilis congénita tardia sintomática,icd10_description,Y,641
-Y70,Neurossífilis congénita tardia [neurossífilis juvenil],icd10_description,Y,641
-Y70,Oculopatia sifilítica congénita tardia,icd10_description,Y,641
-Y70,"Sífilis congénita precoce, não especificada",icd10_description,Y,641
-Y70,Sífilis congénita precoce latente,icd10_description,Y,641
-Y70,Sífilis congénita precoce sintomática,icd10_description,Y,641
-Y70,"Sífilis latente, não especificada como precoce ou tardia",icd10_description,Y,641
-Y70,"Sífilis, sem outra especificação",icd10_description,Y,641
-Y70,"Sífilis tardia, sem outra especificação",icd10_description,Y,641
 Y70,Sífilis masculina,icpc2_description,Y,641
-Y70,Sífilis não-venérea,icd10_description,Y,641
-Y71,Outras infeções gonocócicas,icd10_description,Y,642
-Y71,"Infeção gonocócica, não especificada",icd10_description,Y,642
-Y71,Infeção gonocócica do ânus ou do reto,icd10_description,Y,642
-Y71,Faringite gonocócica,icd10_description,Y,642
-Y71,Infeção gonocócica do sistema músculoesquelético,icd10_description,Y,642
-Y71,Infeção gonocócica do olho,icd10_description,Y,642
-Y71,Pelviperitonite gonocócica e Outras infeções genitourinárias gonocócicas,icd10_description,Y,642
-Y71,"Infeção gonocócica do trato genitourinário inferior, sem abcesso periuretral ou das glândulas acessórias",icd10_description,Y,642
 Y71,Gonorreia masculina,icpc2_description,Y,642
-Y71,"Infeção gonocócica do trato genitourinário inferior, com abcesso periuretral ou das glândulas acessórias",icd10_description,Y,642
 Y71,gonorreia qualquer que seja a sua localização,icpc2_inclusion,Y,642
-Y72,"Infeção anogenital pelo vírus Herpes, não especificada",icd10_description,Y,643
 Y72,vesículas herpéticas genitais masculina,gpt-4o-mini_human-dc,Y,643
 Y72,herpes genital em homens,gpt-4o-mini,Y,643
 Y72,herpes na região genital masculina,gpt-4o-mini_human-dc,Y,643
@@ -17160,8 +16543,6 @@ Y72,herpes nos órgãos genitais masculinos,gpt-4o-mini_human-dc,Y,643
 Y72,infeção herpética genital masculina,gpt-4o-mini_human-dc,Y,643
 Y72,herpes genital masculino,gpt-4o-mini,Y,643
 Y72,Herpes genital masculino,icpc2_description,Y,643
-Y72,Infeção da pele perianal e do reto pelo vírus Herpes,icd10_description,Y,643
-Y72,Infeção dos órgãos genitais e do trato genitourinário pelo vírus Herpes,icd10_description,Y,643
 Y72,herpes simples genital  masculino,gpt-4o-mini_human-dc,Y,643
 Y72,infecção por herpes simples,gpt-4o-mini,Y,643
 Y72,lesões herpéticas genitais no homem,gpt-4o-mini,Y,643
@@ -17171,7 +16552,6 @@ Y72,herpes genital masculino não especificado,gpt-4o-mini_human-dc,Y,643
 Y73,"Prostatite, não especificada",icd10_description,Y,644
 Y73,Vesiculite seminal,icd10_description,Y,644
 Y73,Prostatite/vesiculite seminal,icpc2_description,Y,644
-Y73,Tricomoníase urogenital,icd10_description,Y,644
 Y73,Prostatite aguda,icd10_description,Y,644
 Y73,Prostatite crónica,icd10_description,Y,644
 Y73,Abcesso da próstata,icd10_description,Y,644
@@ -17193,8 +16573,6 @@ Y74,Orquite,gpt-4o-mini,Y,645
 Y74,Epididimite,gpt-4o-mini,Y,645
 Y74,Epididimite não específica,gpt-4o-mini,Y,645
 Y74,Epididimite crónica,gpt-4o-mini,Y,645
-Y74,Infeção por Clamídia do pelviperitoneu e de outros órgãos genitourinários,icd10_description,Y,645
-Y75,Candidiase de outros locais urogenitais,icd10_description,Y,646
 Y75,Balanite,icd10_description,Y,646
 Y75,balanite candidiásica,gpt-4o-mini,Y,646
 Y75,balanite fúngica,gpt-4o-mini,Y,646
@@ -17204,24 +16582,19 @@ Y75,candidíase genital masculina,gpt-4o-mini,Y,646
 Y75,candidíase peniana,gpt-4o-mini,Y,646
 Y75,candidíase do prepúcio,gpt-4o-mini,Y,646
 Y75,candidíase do pênis,gpt-4o-mini,Y,646
-Y75,Balanite,gpt-4o-mini,Y,646
 Y75,infecção por fungos na glande,gpt-4o-mini,Y,646
 Y75,infecção urogenital,gpt-4o-mini,Y,646
 Y75,inflamação da glande,gpt-4o-mini,Y,646
 Y75,balanite inflamatória,gpt-4o-mini,Y,646
-Y75,Balanite,icpc2_description,Y,646
 Y75,candidíase da glande peniana,icpc2_inclusion,Y,646
 Y76,papilomas na pele genital  no homem,gpt-4o-mini,Y,647
 Y76,Condiloma acuminado masculino,icpc2_description,Y,647
-Y76,verrugas venéreas,icpc2_inclusion,Y,647
-Y76,infecção pelo vírus papiloma humano,icpc2_inclusion,Y,647
 Y76,Condiloma acuminado,icpc2_short,Y,647
 Y76,infecção venérea por HPV no homem,gpt-4o-mini,Y,647
 Y76,lesões venéreas no homem,gpt-4o-mini,Y,647
 Y76,lesões características de HPV  no homem,gpt-4o-mini,Y,647
 Y76,infecção genital por HPV  no homem,gpt-4o-mini,Y,647
 Y76,papilomas anogenitais  no homem,gpt-4o-mini,Y,647
-Y76,Verrugas anogenitais (venéreas),icd10_description,Y,647
 Y76,infecção por vírus do papiloma  no homem,gpt-4o-mini,Y,647
 Y76,verrugas do tipo condiloma no homem,gpt-4o-mini,Y,647
 Y76,Condiloma acuminado em homens,gpt-4o-mini,Y,647
@@ -17233,7 +16606,6 @@ Y76,infecção por HPV em homens,gpt-4o-mini,Y,647
 Y77,Carcinoma da próstata,gpt-4o-mini,Y,648
 Y77,Neoplasia maligna da próstata,icpc2_description,Y,648
 Y77,Neoplasia maligna prostática,gpt-4o-mini,Y,648
-Y77,Neoplasia maligna da próstata,icd10_description,Y,648
 Y77,Carcinoma maligno da próstata,gpt-4o-mini,Y,648
 Y77,Tumor canceroso da próstata,gpt-4o-mini,Y,648
 Y77,Tumor maligno prostático,gpt-4o-mini,Y,648
@@ -17257,31 +16629,18 @@ Y78,Neoplasia maligna do epidídimo,icd10_description,Y,649
 Y78,"Neoplasia maligna do pénis, sem outra especificação",icd10_description,Y,649
 Y78,carcinoma do testículo/seminoma,icpc2_inclusion,Y,649
 Y78,Neoplasia maligna do corpo do pénis,icd10_description,Y,649
-Y78,Neoplasia maligna da mama de localização não especificada,icd10_description,Y,649
-Y78,Neoplasia maligna de localizações contíguas da mama,icd10_description,Y,649
-Y78,Neoplasia maligna da porção axilar da mama,icd10_description,Y,649
 Y78,Neoplasia maligna de localizações contíguas do pénis,icd10_description,Y,649
-Y78,Neoplasia maligna do quadrante superior externo da mama,icd10_description,Y,649
-Y78,Neoplasia maligna do quadrante inferior interno da mama,icd10_description,Y,649
-Y78,Neoplasia maligna do quadrante inferior externo da mama,icd10_description,Y,649
-Y78,Neoplasia maligna da porção central da mama,icd10_description,Y,649
-Y78,Neoplasia maligna do mamilo e auréola,icd10_description,Y,649
 Y78,Neoplasia maligna genit mascul outro,icpc2_short,Y,649
 Y78,Neoplasia maligna do prepúcio,icd10_description,Y,649
 Y78,Neoplasia maligna da glande do pénis,icd10_description,Y,649
-Y78,Neoplasia maligna do quadrante superior interno da mama,icd10_description,Y,649
-Y79,Carcinoma lobular in situ da mama,icd10_description,Y,650
 Y79,neoplasia genital não especificada como benigna ou maligna/quando a histologia não está disponível,icpc2_inclusion,Y,650
 Y79,fibroma,icpc2_inclusion,Y,650
 Y79,carcinoma in situ,icpc2_inclusion,Y,650
-Y79,Carcinoma intraductal in situ da mama,icd10_description,Y,650
 Y79,Carcinoma in situ do pénis,icd10_description,Y,650
 Y79,neoplasia benigna da mama masculina,icpc2_inclusion,Y,650
 Y79,Neoplasia de comportamento incerto do testiculo,icd10_description,Y,650
 Y79,"Neoplasia de comportamento incerto de órgão genital masculino, sem outra especificação",icd10_description,Y,650
-Y79,Neoplasia de comportamento incerto da mama,icd10_description,Y,650
 Y79,Displasia da próstata,icd10_description,Y,650
-Y79,"Carcinoma in situ, de tipo não especificado, da mama",icd10_description,Y,650
 Y79,Neoplasia benig/incerta genit mascul,icpc2_short,Y,650
 Y79,Neoplasia de comportamento incerto da próstata,icd10_description,Y,650
 Y79,"Neoplasia benigna do órgão genital masculino, sem outra especificação",icd10_description,Y,650
@@ -17290,18 +16649,10 @@ Y79,Neoplasia benigna do epidídimo,icd10_description,Y,650
 Y79,neoplasia genital benigna,icpc2_inclusion,Y,650
 Y79,Neoplasia benigna da próstata,icd10_description,Y,650
 Y79,Neoplasia benigna do pénis,icd10_description,Y,650
-Y79,Neoplasia benigna da mama,icd10_description,Y,650
 Y79,Neoplasia benigna/incerta genital masculina,icpc2_description,Y,650
 Y79,Carcinoma in situ de outros órgãos genitais masculinos e órgãos genitais masculinos não especificados,icd10_description,Y,650
 Y79,Carcinoma in situ da próstata,icd10_description,Y,650
 Y79,Neoplasia benigna do testículo,icd10_description,Y,650
-Y80,Episódio para circuncisão de rotina ou ritual,icd10_description,Y,651
-Y80,Corrosão de órgãos genitourinários internos,icd10_description,Y,651
-Y80,Queimadura de órgãos genitourinários internos,icd10_description,Y,651
-Y80,Amputação traumática de órgãos genitais externos,icd10_description,Y,651
-Y80,Lesão por esmagamento dos órgãos genitais externos,icd10_description,Y,651
-Y80,Ferida aberta de órgãos genitais externos não especificados,icd10_description,Y,651
-Y80,Contusão de órgãos genitais externos,icd10_description,Y,651
 Y80,Ferida aberta do pénis,icd10_description,Y,651
 Y80,Traumatismo genital masculino,icpc2_description,Y,651
 Y80,Traumatismo genital masculino outro,icpc2_short,Y,651
@@ -17330,7 +16681,6 @@ Y81,dificuldade de retracção do prepúcio,gpt-4o-mini,Y,652
 Y81,prepúcio com problemas de retracção,gpt-4o-mini,Y,652
 Y81,prepúcio excessivo,gpt-4o-mini,Y,652
 Y81,prepúcio inflexível,gpt-4o-mini,Y,652
-Y81,parafimose,gpt-4o-mini,Y,652
 Y81,prepúcio com dificuldade de deslizamento,gpt-4o-mini,Y,652
 Y81,prepúcio com dificuldade de exposição da glande,gpt-4o-mini,Y,652
 Y82,"Hipospádias, sem outra especificação",icd10_description,Y,653
@@ -17375,30 +16725,18 @@ Y83,testículo não descido bilateral,gpt-4o-mini,Y,654
 Y83,testículo não descido em criança,gpt-4o-mini,Y,654
 Y83,testículo não descido sem especificação,gpt-4o-mini,Y,654
 Y83,Testículo não descido,icpc2_description,Y,654
-Y84,Outras malformações congénitas da mama,icd10_description,Y,655
-Y84,Malformação congénita não especificada da mama,icd10_description,Y,655
 Y84,Outras malformações congénitas especificadas dos órgãos genitais masculinos,icd10_description,Y,655
 Y84,Outras malformações congénitas do pénis,icd10_description,Y,655
 Y84,Ausência e aplasia congénitas do pénis,icd10_description,Y,655
 Y84,Atrésia do canal deferente,icd10_description,Y,655
-Y84,Mama supranumerária,icd10_description,Y,655
 Y84,Malformação congénita não especificada dos órgãos genitais masculinos,icd10_description,Y,655
-Y84,Hermafroditismo não classificado noutra parte,icd10_description,Y,655
-Y84,"Pseudo-hermafroditismo masculino, não classificado noutra parte",icd10_description,Y,655
-Y84,Mamilo supranumerário,icd10_description,Y,655
-Y84,Ausência de mamilo,icd10_description,Y,655
-Y84,Ausência congénita da mama com ausência do mamilo,icd10_description,Y,655
-Y84,"Sexo indeterminado, não especificado",icd10_description,Y,655
 Y84,Malformação congénita genital no homem outra,icpc2_description,Y,655
 Y84,Outras malformações congénitas do(s) testículo(s) e do escroto,icd10_description,Y,655
 Y84,"Outras malformações congénitas do canal deferente, do epidídimo, das vesículas seminais e da próstata",icd10_description,Y,655
 Y84,Ausência e aplasia do testículo,icd10_description,Y,655
 Y84,Malformação congén genit homem outra,icpc2_short,Y,655
 Y84,testiculo retráctil,icpc2_inclusion,Y,655
-Y84,hermafroditismo,icpc2_inclusion,Y,655
-Y84,"Pseudo-hermafroditismo, sem outra especificação",icd10_description,Y,655
 Y84,Hipoplasia do(s) testículo(s) e do escroto,icd10_description,Y,655
-Y84,"Pseudo-hermafroditismo feminino, não classificado noutra parte",icd10_description,Y,655
 Y85,próstata alargada,gpt-4o-mini,Y,656
 Y85,crescimento benigno da próstata,gpt-4o-mini,Y,656
 Y85,prostatomegália,icpc2_inclusion,Y,656
@@ -17453,10 +16791,6 @@ Y86,Hidrocelo infetado,icd10_description,Y,657
 Y86,Hidrocelo enquistado,icd10_description,Y,657
 Y86,Hidrocelo,icpc2_description,Y,657
 Y86,Hidrocele unilateral,gpt-4o-mini,Y,657
-Y99,Patologia não especificada dos órgãos genitais masculinos,icd10_description,Y,658
-Y99,Ausência adquirida de órgão(s) genital(is),icd10_description,Y,658
-Y99,Outras patologias especificadas da mama,icd10_description,Y,658
-Y99,"Alteracões especificadas dos órgãos genitais masculinos, NCOP",icd10_description,Y,658
 Y99,Doença genital masculina outra,icpc2_description,Y,658
 Y99,Atrofia do testículo,icd10_description,Y,658
 Y99,Patologia inflamatório do escroto,icd10_description,Y,658
@@ -17470,25 +16804,13 @@ Y99,torção do testículo,icpc2_inclusion,Y,658
 Y99,"Doenças vasculares dos órgãos genitais masculinos, NCOP",icd10_description,Y,658
 Y99,"Patologias inflamatórios do cordão espermático, túnica vaginal e vasos deferentes",icd10_description,Y,658
 Y99,Doenças inflamatórias do pénis NCOP,icd10_description,Y,658
-Y99,Outras patologias especificadas do pénis,icd10_description,Y,658
-Y99,Linfogranuloma (venéreo) por Clamídia,icd10_description,Y,658
-Y99,Infeção por Clamídia do pelviperitoneu e de outros órgãos genitourinários,icd10_description,Y,658
-Y99,Infeção do ânus e do reto por Clamídia,icd10_description,Y,658
-Y99,Infeção da faringe por Clamídia,icd10_description,Y,658
-Y99,Infeção de outras localizações por Clamídia transmitida por via sexual,icd10_description,Y,658
-Y99,Cancro mole,icd10_description,Y,658
-Y99,Doenças do pénis SOE,icd10_description,Y,658
-Y99,Outras doenças especificadas de transmissão predominantemente sexual,icd10_description,Y,658
 Y99,Cálculo da próstata,icd10_description,Y,658
 Y99,Congestão e hemorragia da próstata,icd10_description,Y,658
 Y99,Outras patologias especificadas da próstata,icd10_description,Y,658
-Y99,Granuloma inguinal,icd10_description,Y,658
 Y99,Espermatocelo do epidídimo,icd10_description,Y,658
 Y99,Patologias não inflamatórias dos testículos,icd10_description,Y,658
-Y99,Doença da mama não especificada,icd10_description,Y,658
 Y99,Leucoplasia do penis,icd10_description,Y,658
 Y99,Úlcera do pénis,icd10_description,Y,658
-Y99,"Afeções da próstata, sem outra especificação",icd10_description,Y,658
 Y99,Induratio penis plástica,icd10_description,Y,658
 Z01,Pobreza extrema,icd10_description,Z,659
 Z01,Dificuldades económicas,gpt-4o-mini,Z,659
@@ -17544,7 +16866,6 @@ Z02,Falta de alimentação adequada,icd10_description,Z,660
 Z03,Situação de sem-abrigo,gpt-4o-mini,Z,661
 Z03,Problema de habitação/vizinhança,icpc2_description,Z,661
 Z03,Situação de vulnerabilidade habitacional,gpt-4o-mini,Z,661
-Z03,Inadequação habitacional,gpt-4o-mini,Z,661
 Z03,Dificuldades em encontrar habitação,gpt-4o-mini,Z,661
 Z03,Questões de habitação e pobreza,gpt-4o-mini,Z,661
 Z03,Conflitos de vizinhança,gpt-4o-mini,Z,661
@@ -17555,8 +16876,6 @@ Z03,Dificuldades financeiras relacionadas com a habitação,gpt-4o-mini,Z,661
 Z03,Questões de habitação social,gpt-4o-mini,Z,661
 Z03,Problemas de alojamento,gpt-4o-mini,Z,661
 Z03,Problemas de estabilidade habitacional,gpt-4o-mini,Z,661
-Z03,"Problema relacionado com habitação e circunstâncias económicas, sem outra especificação",icd10_description,Z,661
-Z03,Dificuldades habitacionais,gpt-4o-mini,Z,661
 Z03,Dificuldades de acesso à habitação,gpt-4o-mini,Z,661
 Z03,Dificuldades em residências assistidas,gpt-4o-mini,Z,661
 Z03,Desafios habitacionais,gpt-4o-mini,Z,661
@@ -17575,7 +16894,6 @@ Z03,Habitação inadequada,icd10_description,Z,661
 Z03,Condição de sem-abrigo,icd10_description,Z,661
 Z03,"Desacordo com vizinhos, locatários e proprietários",icd10_description,Z,661
 Z03,Problemas relacionados com residencia em instituição residencial,icd10_description,Z,661
-Z03,Outros problemas relacionados com a habitação e com as circunstâncias económicas,icd10_description,Z,661
 Z04,Outros problemas relacionados com o meio social,icd10_description,Z,662
 Z04,Problema não especificado relacionado com o meio social,icd10_description,Z,662
 Z04,Exclusão e rejeição sociais,icd10_description,Z,662
@@ -17628,7 +16946,6 @@ Z07,Reprovação em exames escolares,icd10_description,Z,665
 Z07,Maus resultados escolares,icd10_description,Z,665
 Z07,Problema com a educação,icpc2_description,Z,665
 Z08,Insuficiência de medidas sociais,gpt-4o-mini,Z,666
-Z08,Seguro social e medidas de bem-estar social insuficientes,icd10_description,Z,666
 Z08,Probl relacion com sist segur social,icpc2_short,Z,666
 Z08,Problema com o sistema de segurança social,icpc2_description,Z,666
 Z08,Problemas no sistema de proteção social,gpt-4o-mini,Z,666
@@ -17693,15 +17010,7 @@ Z10,Problema não especificado relacionado com facilidades médicas e com outros
 Z10,Problema com o sistema de saúde,icpc2_description,Z,668
 Z10,Desacordo com conselheiros,icd10_description,Z,668
 Z11,baixa adesão,icpc2_inclusion,Z,669
-Z11,Outras dificuldades especificadas relacionadas com facilidades médicas e com outros cuidados de saúde,icd10_description,Z,669
-Z11,Outras organizações de cuidados não disponíveis ou não acessíveis,icd10_description,Z,669
-Z11,Estabelecimentos de saúde não disponíveis ou não acessíveis,icd10_description,Z,669
-Z11,Outro período de espera para investigação e tratamento,icd10_description,Z,669
-Z11,Cuidados em periodo de ferias implicando Contacto com  servicos de saude,icd10_description,Z,669
-Z11,Problema não especificado relacionado com facilidades médicas e com outros cuidados de saúde,icd10_description,Z,669
 Z11,Problema com o estar doente,icpc2_short,Z,669
-Z11,Pessoa à espera de admissão noutra instituição adequada,icd10_description,Z,669
-Z11,Serviços médicos não disponíveis em casa,icd10_description,Z,669
 Z11,Problema com o estar doente/adesão,icpc2_description,Z,669
 Z12,Problema relacional com o parceiro,icpc2_description,Z,670
 Z12,conflitos de casal,gpt-4o-mini,Z,670
@@ -17732,7 +17041,6 @@ Z12,abuso emocional,icpc2_inclusion,Z,670
 Z12,"negligência emocional, confirmada",gpt-4o-mini,Z,670
 Z12,falta de comunicação no relacionamento,gpt-4o-mini,Z,670
 Z12,relações problemáticas com o parceiro,gpt-4o-mini,Z,670
-Z13,Problemas nas relações com cônjuge ou parceiro,icd10_description,Z,671
 Z13,infidelidade,icpc2_inclusion,Z,671
 Z13,abuso físico,icpc2_inclusion,Z,671
 Z13,deslealdade do parceiro,gpt-4o-mini,Z,671
@@ -17746,7 +17054,6 @@ Z13,traição,gpt-4o-mini,Z,671
 Z13,violência física do parceiro,gpt-4o-mini,Z,671
 Z13,conflitos nas relações com o cônjuge,gpt-4o-mini,Z,671
 Z13,infidelidade conjugal,gpt-4o-mini,Z,671
-Z13,problemas de comunicação com o cônjuge,gpt-4o-mini,Z,671
 Z13,Dificuldades comportamentais do parceiro,gpt-4o-mini,Z,671
 Z13,instabilidade nas relações com o cônjuge,gpt-4o-mini,Z,671
 Z14,Doença de um cônjuge,gpt-4o-mini,Z,672
@@ -17800,9 +17107,7 @@ Z16,Educação numa instituição,icd10_description,Z,674
 Z16,Superproteção por parte dos pais,icd10_description,Z,674
 Z16,Supervisão e controlo parental inadequado,icd10_description,Z,674
 Z16,Outros problemas especificados relacionados com a educação dos filhos,icd10_description,Z,674
-Z16,"Negligência ou abandono, confirmado",icd10_description,Z,674
 Z16,abuso de criança (emocional),icpc2_inclusion,Z,674
-Z16,"Abuso psicológico, confirmado",icd10_description,Z,674
 Z18,Cuidado a uma criança doente,gpt-4o-mini,Z,675
 Z18,Criança com condições de saúde,gpt-4o-mini,Z,675
 Z18,Dificuldade com uma criança enferma,gpt-4o-mini,Z,675
@@ -17814,7 +17119,6 @@ Z18,Criança com diagnóstico de doença,gpt-4o-mini_human-dc,Z,675
 Z18,Residente com enfermidade,gpt-4o-mini,Z,675
 Z18,Criança com necessidade de tratamento,gpt-4o-mini,Z,675
 Z18,Criança com dificuldades de saúde,gpt-4o-mini,Z,675
-Z18,"Parente dependente de cuidados, residente no domicílio",icd10_description,Z,675
 Z18,Criança com necessidade de apoio,gpt-4o-mini,Z,675
 Z18,Criança com necessidade de cuidados,gpt-4o-mini,Z,675
 Z18,Cuidado de um criança doente,gpt-4o-mini_human-dc,Z,675
@@ -17830,7 +17134,6 @@ Z18,Criança com doença,gpt-4o-mini,Z,675
 Z18,Criança com limitações de saúde,gpt-4o-mini,Z,675
 Z18,Familiar com condição de saúde,gpt-4o-mini,Z,675
 Z18,Criança com condição médica,gpt-4o-mini,Z,675
-Z19,Desaparecimento e falecimento de um membro da família,icd10_description,Z,676
 Z19,Perda ou falecimento de uma criança,icpc2_short,Z,676
 Z19,Perda/falecimento de uma criança,icpc2_description,Z,676
 Z19,Desaparecimento de um filho,gpt-4o-mini,Z,676
@@ -17849,13 +17152,11 @@ Z20,relações conflituosas com os sogros,gpt-4o-mini,Z,677
 Z20,dificuldades de interação com membros da família,gpt-4o-mini,Z,677
 Z20,dificuldades de apoio emocional na família,gpt-4o-mini,Z,677
 Z20,conflitos de autoridade familiar,gpt-4o-mini,Z,677
-Z20,"Negligência ou abandono, confirmado",icd10_description,Z,677
 Z20,problemas de confiança com os pais,gpt-4o-mini,Z,677
 Z20,problemas de convivência familiar,gpt-4o-mini,Z,677
 Z20,desavenças entre irmãos,gpt-4o-mini,Z,677
 Z20,conflitos com irmãos,gpt-4o-mini,Z,677
 Z20,problemas de respeito nas relações familiares,gpt-4o-mini,Z,677
-Z20,Outros problemas especificados relacionados com o grupo primário de suporte,icd10_description,Z,677
 Z20,dificuldades de relacionamento intergeracional,gpt-4o-mini,Z,677
 Z20,problemas de afeto na família,gpt-4o-mini,Z,677
 Z20,problema relacional com pais/irmão adulto/outro elemento da família,icpc2_inclusion,Z,677
@@ -17883,9 +17184,7 @@ Z21,Questões de comportamento na parentalidade,gpt-4o-mini,Z,678
 Z21,Problema comport pai/mãe/membro fam,icpc2_short,Z,678
 Z21,Problema comportamental do pai/mãe/membro da familília,icpc2_description,Z,678
 Z21,Dificuldades nas relações interpessoais familiares,gpt-4o-mini,Z,678
-Z21,Problemas nas relações com os pais ou com os sogros,icd10_description,Z,678
 Z22,Problemas de saúde na família,gpt-4o-mini,Z,679
-Z22,"Parente dependente de cuidados, residente no domicílio",icd10_description,Z,679
 Z22,Desafios de cuidar de um parente doente,gpt-4o-mini,Z,679
 Z22,Situação de vulnerabilidade familiar,gpt-4o-mini,Z,679
 Z22,Doença crónica de um parente,gpt-4o-mini,Z,679
@@ -17932,7 +17231,6 @@ Z23,Falecimento de um familiar,gpt-4o-mini,Z,680
 Z23,Desaparecimento de um parente,gpt-4o-mini,Z,680
 Z23,Falecimento de um familiar próximo,gpt-4o-mini,Z,680
 Z23,Perda/falecimento pai/mãe/membro fam,icpc2_short,Z,680
-Z23,Desaparecimento e falecimento de um membro da família,icd10_description,Z,680
 Z23,Luto pela morte do pai,gpt-4o-mini,Z,680
 Z23,Falecimento de um parente,gpt-4o-mini,Z,680
 Z23,Perda de um progenitor,gpt-4o-mini,Z,680
@@ -17955,7 +17253,6 @@ Z23,Luto pela morte de um familiar,gpt-4o-mini,Z,680
 Z24,Desentendimento com amigo,gpt-4o-mini,Z,681
 Z24,Dificuldade de relacionamento com amigo,gpt-4o-mini,Z,681
 Z24,Problema de ligação com amigo,gpt-4o-mini,Z,681
-Z24,Problema não especificado relacionado com o grupo primário de suporte,icd10_description,Z,681
 Z24,Conflito com amigo,gpt-4o-mini,Z,681
 Z24,Dificuldade de comunicação com amigo,gpt-4o-mini,Z,681
 Z24,Problema interpessoal com amigo,gpt-4o-mini,Z,681
@@ -17984,7 +17281,6 @@ Z27,medo de criminalidade,gpt-4o-mini,Z,683
 Z27,receio de marginalização,gpt-4o-mini,Z,683
 Z27,medo de discriminação,gpt-4o-mini,Z,683
 Z27,Medo de problema social,icpc2_description,Z,683
-Z27,Individuo com queixa de saúde receada em quem nenhum diagnostico foi feito,icd10_description,Z,683
 Z27,preocupação com/medo de vir a ter um problema social,icpc2_inclusion,Z,683
 Z27,medo de dependência,gpt-4o-mini,Z,683
 Z27,medo de bullying,gpt-4o-mini,Z,683
@@ -18016,7 +17312,6 @@ Z28,Inaptidão social,gpt-4o-mini,Z,684
 Z28,Problemas de convivência social,gpt-4o-mini,Z,684
 Z28,Desvantagens sociais,gpt-4o-mini,Z,684
 Z28,Inabilidade social,gpt-4o-mini,Z,684
-Z28,Exclusão social,gpt-4o-mini,Z,684
 Z28,Dificuldades de convivência,gpt-4o-mini,Z,684
 Z28,Problemas de convivência,gpt-4o-mini,Z,684
 Z28,Dificuldades de integração,gpt-4o-mini,Z,684
@@ -18028,17 +17323,12 @@ Z28,Barreiras à participação,gpt-4o-mini,Z,684
 Z28,Solidão,gpt-4o-mini,Z,684
 Z28,Isolamento social,gpt-4o-mini,Z,684
 Z28,Dificuldades de adaptação,gpt-4o-mini,Z,684
-Z28,Desigualdade social,gpt-4o-mini,Z,684
 Z28,Dificuldades de interação,gpt-4o-mini,Z,684
-Z28,Limites impostos às atividades por invalidez,icd10_description,Z,684
 Z28,Competências sociais inadequadas não classificadas noutra parte,icd10_description,Z,684
 Z28,Limitação de interação social,gpt-4o-mini,Z,684
-Z29,Outros problemas especificados relacionados com o grupo primário de suporte,icd10_description,Z,685
 Z29,Problema social NE,icpc2_description,Z,685
-Z29,Outros acontecimentos difíceis da vida afetando a família e o lar,icd10_description,Z,685
 Z29,Ausência de membro da família,icd10_description,Z,685
 Z29,Outros problemas relacionados com o ambiente físico,icd10_description,Z,685
-Z29,Problema não especificado relacionado com o grupo primário de suporte,icd10_description,Z,685
 Z29,simulação de doença,icpc2_inclusion,Z,685
 Z29,Outros problemas especificados relacionados com circunstâncias psicossociais,icd10_description,Z,685
 Z29,Problemas relacionados com circunstâncias psicossociais não especificadas,icd10_description,Z,685
