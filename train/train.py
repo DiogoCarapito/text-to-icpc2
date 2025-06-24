@@ -124,6 +124,20 @@ def main(size="small", model="bert-base-uncased", dev="cuda", hf=False):
     logging.info("Tokenize the data")
     tokenized_dataset = dataset.map(tokenize_function, batched=True)
 
+    # One-hot encode the labels for multi-label classification.
+    # The loss function for multi_label_classification (BCEWithLogitsLoss)
+    # expects labels to be in a one-hot encoded format of float type.
+    logging.info("One-hot encoding labels for multi-label classification")
+
+    def one_hot_encode_labels(examples):
+        labels = np.array(examples["label"])
+        one_hot_labels = np.zeros((len(labels), number_of_labels), dtype=np.float32)
+        one_hot_labels[np.arange(len(labels)), labels] = 1.0
+        examples["label"] = one_hot_labels.tolist()
+        return examples
+
+    tokenized_dataset = tokenized_dataset.map(one_hot_encode_labels, batched=True)
+
     # Define the filter function
     logging.info("Applying the filter function for smaller size dataset")
 
@@ -274,14 +288,8 @@ def main(size="small", model="bert-base-uncased", dev="cuda", hf=False):
     # Then modify the compute_metrics function to handle multi-label classification
     def compute_metrics(eval_pred):
         logits, labels = eval_pred
-
-        # Convert single-label integer references to one-hot encoded format
-        # This is necessary because your references are integers (single-label format)
-        # but we need them in multi-label format for comparison
-        num_labels = logits.shape[1]
-        labels_one_hot = np.zeros((labels.shape[0], num_labels))
-        for i, label in enumerate(labels):
-            labels_one_hot[i, label] = 1
+        # The 'labels' are already one-hot encoded from our preprocessing step.
+        # They are of shape (batch_size, num_labels).
 
         # Apply sigmoid to convert logits to probabilities
         sigmoid = lambda x: 1 / (1 + np.exp(-x))
@@ -303,7 +311,7 @@ def main(size="small", model="bert-base-uncased", dev="cuda", hf=False):
         # For multi-label metrics, we need to flatten the arrays
         # This treats each label prediction as a separate binary classification
         predictions_flat = predictions.flatten()
-        labels_flat = labels_one_hot.flatten()
+        labels_flat = labels.flatten()
 
         # F1 Score
         metrics.update(
@@ -330,7 +338,7 @@ def main(size="small", model="bert-base-uncased", dev="cuda", hf=False):
         metrics["recall_binary"] = metrics.pop("recall")
 
         # Exact match accuracy (all labels must match exactly)
-        exact_match = np.all(predictions == labels_one_hot, axis=1).mean()
+        exact_match = np.all(predictions == labels, axis=1).mean()
         metrics["exact_match_accuracy"] = exact_match
 
         # Subset accuracy (from sklearn.metrics import accuracy_score)
@@ -389,7 +397,7 @@ def main(size="small", model="bert-base-uncased", dev="cuda", hf=False):
     wandb.log(eval_results)
 
     # logging.info("F1: %s", eval_results["eval_f1"])
-    logging.info("Accuracy: %s", eval_results["eval_accuracy"])
+    logging.info("Exact Match Accuracy: %s", eval_results["eval_exact_match_accuracy"])
     # logging.info("Precision: %s", eval_results["eval_precision"])
     # logging.info("Recall: %s", eval_results["eval_recall"])
 
