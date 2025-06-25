@@ -182,3 +182,6 @@ pp.pub
 
 rp
 rp.pub
+
+validation/validation_runs/
+data/data_pre_train_hf/
