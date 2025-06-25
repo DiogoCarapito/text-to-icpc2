@@ -5,6 +5,7 @@ A03,Febre,A,2
 A04,Debilidade/cansaço geral,A,3
 A05,Sentir-se doente,A,4
 A06,Desmaio/síncope,A,5
+A07,Coma,A,6
 A08,Inchaço,A,7
 A09,Problema de sudorese,A,8
 A10,Sangramento/hemorragia NE,A,9
@@ -76,6 +77,7 @@ B90,Infecção VIH/SIDA,B,74
 B99,Doença do sangue/linfa/baço outra,B,75
 D01,Dor/cólica abdominal generalizada,D,76
 D02,Dor abdominal epigástrica,D,77
+D03,Azia,D,78
 D04,Dor anal/rectal,D,79
 D05,Irritação perianal,D,80
 D06,Dor abdominal localizada outra,D,81
@@ -84,6 +86,7 @@ D08,Flatulência/gases/eructação,D,83
 D09,Náusea,D,84
 D10,Vómito,D,85
 D11,Diarreia,D,86
+D12,Obstipação,D,87
 D13,Icterícia,D,88
 D14,Hematemese/vómito de sangue,D,89
 D15,Melena,D,90
@@ -157,6 +160,7 @@ F81,Malformação congénita do olho outra,F,157
 F82,Descolamento da retina,F,158
 F83,Retinopatia,F,159
 F84,Degenerescência macular,F,160
+F85,Úlcera da córnea,F,161
 F86,Tracoma,F,162
 F91,Erro de refracção,F,163
 F92,Catarata,F,164
@@ -188,6 +192,7 @@ H80,Malformação congénita do ouvido,H,189
 H81,Cerumen no ouvido em excesso,H,190
 H82,Síndrome vertiginosa,H,191
 H83,Otoesclerose,H,192
+H84,Presbiacusia,H,193
 H85,Lesão acústica,H,194
 H86,Surdez,H,195
 H99,Doença do ouvido/mastóide outra,H,196
@@ -302,6 +307,7 @@ N28,Limitação funcional/incapacidade (N),N,304
 N29,Sintoma/queixa neurológico outro,N,305
 N70,Poliomielite,N,306
 N71,Meningite/encefalite,N,307
+N72,Tétano,N,308
 N73,Infecção neurológica outra,N,309
 N74,Neoplasia maligna do sistema nervoso,N,310
 N75,Neoplasia benigna do sistema nervoso,N,311
@@ -368,12 +374,14 @@ R01,Dor aparelho respiratório,R,371
 R02,Dificuldade respiratória/dispneia,R,372
 R03,Pieira,R,373
 R04,Problema respiratório outro,R,374
+R05,Tosse,R,375
 R06,Hemorragia nasal/epistáxis,R,376
 R07,Espirro/congestão nasal,R,377
 R08,Sintoma/queixa nasal outro,R,378
 R09,Sintoma/queixa dos seios perinasais,R,379
 R21,Sinal/queixa da garganta,R,380
 R23,Sintoma/queixa da voz,R,381
+R24,Hemoptise,R,382
 R25,Expectoração/mucosidade anormal,R,383
 R26,Medo de cancro do sistema respiratório,R,384
 R27,Medo de doença respiratória outra,R,385
@@ -453,10 +461,12 @@ S86,Dermatite seborreica,S,458
 S87,Dermatite/eczema atópico,S,459
 S88,Dermatite de contacto/alérgica,S,460
 S89,Eritema das fraldas,S,461
+S90,Pitiríase rosada,S,462
 S91,Psoríase,S,463
 S92,Doença das glândulas sudoríparas,S,464
 S93,Quisto sebáceo,S,465
 S94,Unha encravada,S,466
+S95,Molusco contagioso,S,467
 S96,Acne,S,468
 S97,Úlcera crónica da pele,S,469
 S98,Urticária,S,470
@@ -527,6 +537,7 @@ W05,Vómitos/náuseas na gravidez,W,534
 W10,Contracepção pós-coital,W,535
 W11,Contracepção oral,W,536
 W12,Contracepção intra-uterina,W,537
+W13,Esterilização feminina,W,538
 W14,Contracepção feminina outra,W,539
 W15,Infertilidade/subfertilidade feminina,W,540
 W17,Hemorragia pós-parto,W,541
@@ -543,6 +554,7 @@ W73,Neoplasia benigna/incerta relacionada com a gravidez,W,551
 W75,Lesão traumática que complica a gravidez,W,552
 W76,Malformação congénita que complica a gravidez,W,553
 W78,Gravidez,W,554
+W79,Gravidez não desejada,W,555
 W80,Gravidez ectópica,W,556
 W81,Toxémia da gravidez,W,557
 W82,Aborto espontâneo,W,558
@@ -550,12 +562,14 @@ W83,Aborto provocado,W,559
 W84,Gravidez de alto risco,W,560
 W85,Diabetes gestacional,W,561
 W90,Parto sem complicações de nado vivo,W,562
+W91,Parto sem complicações de nado morto,W,563
 W92,Parto com complicações de nado vivo,W,564
 W93,Parto com complicações de nado morto,W,565
 W94,Mastite puerperal,W,566
 W95,Problema da mama durante a gravidez/puerpério outro,W,567
 W96,Complicação do puerpério outra,W,568
 W99,Problema da gravidez/parto outro,W,569
+X01,Dor genital feminina,X,570
 X02,Dor menstrual,X,571
 X03,Dor intermenstrual,X,572
 X04,Relação sexual dolorosa feminina,X,573
@@ -567,6 +581,7 @@ X09,Sintoma/queixa pré-menstrual,X,578
 X10,Desejo de alterar a data da menstruação,X,579
 X11,Sintoma/queixa da menopausa,X,580
 X12,Hemorragia pós-menopausa,X,581
+X13,Hemorragia pós-coito,X,582
 X14,Secreção vaginal,X,583
 X15,Sintoma/queixa da vagina outro,X,584
 X16,Sintoma/queixa da vulva,X,585
@@ -577,6 +592,7 @@ X20,Sintoma/queixa do mamilo feminino,X,589
 X21,Sintoma/queixa da mama feminina outro,X,590
 X22,Preocupação com a aparência da mama feminina,X,591
 X23,Medo de deonça sexualmente transmissível na mulher,X,592
+X24,Medo de disfunção sexual feminina,X,593
 X25,Medo de cancro genital feminino,X,594
 X26,Medo de cancro da mama feminina,X,595
 X27,Medo de doença genital/da mama feminina outra,X,596
@@ -601,6 +617,7 @@ X85,Doença do colo NE,X,614
 X86,Esfregaço de Papanicolau anormal,X,615
 X87,Prolapso útero-vaginal,X,616
 X88,Doença fibroquística da mama,X,617
+X89,Síndrome de tensão pré-menstrual,X,618
 X90,Herpes genital feminino,X,619
 X91,Condiloma acuminado feminino,X,620
 X92,Infecção genital por chlamydia,X,621
@@ -628,6 +645,7 @@ Y71,Gonorreia masculina,Y,642
 Y72,Herpes genital masculino,Y,643
 Y73,Prostatite/vesiculite seminal,Y,644
 Y74,Orquite/epididimite,Y,645
+Y75,Balanite,Y,646
 Y76,Condiloma acuminado masculino,Y,647
 Y77,Neoplasia maligna da próstata,Y,648
 Y78,Neoplasia maligna genital masculina outra,Y,649

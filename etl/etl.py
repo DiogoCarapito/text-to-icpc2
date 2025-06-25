@@ -305,9 +305,6 @@ def main_etl(hf=True):
     # drop any row that has a NaN value
     data = data.dropna()
 
-    # drop duplicates on text
-    data = data.drop_duplicates(subset=["text"])
-
     # reset index
     data = data.reset_index(drop=True)
 
